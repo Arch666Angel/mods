@@ -29,7 +29,7 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
     OV.global_replace_item("solid-tungsten-oxide", "tungsten-oxide")
     angelsmods.functions.add_flag("solid-tungsten-oxide", "hidden")
     angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "d")
-    data.raw["item"]["tungsten-oxide"].icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png"
+    data.raw["item"]["tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
     data.raw["item"]["tungsten-oxide"].icon_size = 32
     data.raw["item"]["tungsten-oxide"].icon_mipmaps = 1
     data.raw["item"]["tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
@@ -40,7 +40,7 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
     OV.global_replace_item("powder-tungsten", "powdered-tungsten")
     angelsmods.functions.add_flag("powder-tungsten", "hidden")
     angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
-    data.raw["item"]["powdered-tungsten"].icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
+    data.raw["item"]["powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
     data.raw["item"]["powdered-tungsten"].icon_size = 64
     data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
     data.raw["item"]["powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
@@ -66,7 +66,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     OV.global_replace_item("angels-plate-tungsten", "tungsten-plate")
     angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")
     angelsmods.functions.move_item("tungsten-plate", "angels-tungsten-casting", "j")
-    data.raw["item"]["tungsten-plate"].icon = "__angelssmelting__/graphics/icons/plate-tungsten.png"
+    data.raw["item"]["tungsten-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tungsten.png"
     data.raw["item"]["tungsten-plate"].icon_size = 32
     data.raw["item"]["tungsten-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-tungsten-plate" })

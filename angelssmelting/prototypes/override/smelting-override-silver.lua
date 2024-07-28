@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
     angelsmods.functions.add_flag("solid-silver-nitrate", "hidden")
     angelsmods.functions.move_item("silver-nitrate", "angels-silver", "d")
-    data.raw["item"]["silver-nitrate"].icon = "__angelssmelting__/graphics/icons/solid-silver-nitrate.png"
+    data.raw["item"]["silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
     data.raw["item"]["silver-nitrate"].icon_size = 32
     data.raw["item"]["silver-nitrate"].icon_mipmaps = 1
     OV.disable_recipe({ "silver-nitrate", "silver-from-lead" })
@@ -33,7 +33,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     OV.add_prereq("battery-3", "powder-metallurgy-4")
 
     angelsmods.functions.move_item("silver-oxide", "angels-silver", "e")
-    data.raw.item["silver-oxide"].icon = "__angelssmelting__/graphics/icons/solid-silver-oxide.png"
+    data.raw.item["silver-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-oxide.png"
     data.raw.item["silver-oxide"].icon_size = 32
     OV.patch_recipes({
       { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]", category = "powder-mixing-3" },
@@ -77,7 +77,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
     OV.global_replace_item("angels-plate-silver", "silver-plate")
     angelsmods.functions.add_flag("angels-plate-silver", "hidden")
     angelsmods.functions.move_item("silver-plate", "angels-silver-casting", "m")
-    data.raw["item"]["silver-plate"].icon = "__angelssmelting__/graphics/icons/plate-silver.png"
+    data.raw["item"]["silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
     data.raw["item"]["silver-plate"].icon_size = 32
     data.raw["item"]["silver-plate"].icon_mipmaps = 1
 
@@ -93,10 +93,10 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         },
         icons = {
           {
-            icon = "__angelssmelting__/graphics/icons/plate-silver.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/ore-silver.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },

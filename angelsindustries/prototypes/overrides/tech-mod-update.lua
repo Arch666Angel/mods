@@ -33,7 +33,7 @@ if angelsmods.industries.tech then
     name = "science-gravitational-analyzer",
     amount = 1000,
   }
-  data.raw.technology["space-science-pack"].icon = "__angelsindustries__/graphics/technology/tech-white.png"
+  data.raw.technology["space-science-pack"].icon = "__angelsindustriesgraphics__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128
   data.raw.technology["space-science-pack"].icon_mipmaps = 1
   data.raw.technology["space-science-pack"].localised_name = { "technology-name.tech-white-packs" }

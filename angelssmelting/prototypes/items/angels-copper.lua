@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "processed-copper",
-    icon = "__angelssmelting__/graphics/icons/processed-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-copper",
-    icon = "__angelssmelting__/graphics/icons/pellet-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "anode-copper",
-    icon = "__angelssmelting__/graphics/icons/anode-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/anode-copper.png",
     icon_size = 32,
     subgroup = "angels-copper",
     order = "d",
@@ -35,7 +35,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-copper",
-    icon = "__angelssmelting__/graphics/icons/ingot-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper",
@@ -45,7 +45,7 @@ data:extend({
   {
     type = "item",
     name = "powder-copper",
-    icon = "__angelssmelting__/graphics/icons/powder-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper",
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-copper",
-    icon = "__angelssmelting__/graphics/icons/molten-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-copper",
-    icon = "__angelssmelting__/graphics/icons/roll-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-coil-copper",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-copper-casting",
@@ -92,7 +92,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-copper",
-    icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "j",
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-copper",
-    icon = "__angelssmelting__/graphics/icons/wire-copper.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
     icon_size = 32,
     subgroup = "angels-copper-casting",
     order = "k",

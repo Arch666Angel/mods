@@ -4,7 +4,7 @@ data:extend({
     name = "washing-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/washing-plant-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "washing-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/washing-plant-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -49,7 +49,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/washing-plant/washing-plant.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/washing-plant/washing-plant.png",
           width = 224,
           height = 224,
           line_length = 5,
@@ -57,7 +57,7 @@ data:extend({
           shift = { 0, 0 },
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
@@ -100,7 +100,7 @@ data:extend({
     name = "washing-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/washing-plant-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -115,7 +115,7 @@ data:extend({
     name = "washing-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/washing-plant-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -144,7 +144,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/washing-plant/washing-plant.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/washing-plant/washing-plant.png",
           width = 224,
           height = 224,
           line_length = 5,
@@ -152,7 +152,7 @@ data:extend({
           shift = { 0, 0 },
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,

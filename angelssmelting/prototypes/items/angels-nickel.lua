@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "nickel-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-nickel",
-    icon = "__angelssmelting__/graphics/icons/processed-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-nickel",
-    icon = "__angelssmelting__/graphics/icons/pellet-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "cathode-nickel",
-    icon = "__angelssmelting__/graphics/icons/cathode-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cathode-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "solid-nickel-carbonyl",
-    icon = "__angelssmelting__/graphics/icons/solid-nickel-carbonyl.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-nickel-carbonyl.png",
     icon_size = 32,
     subgroup = "angels-nickel",
     order = "e",
@@ -52,7 +52,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-nickel",
-    icon = "__angelssmelting__/graphics/icons/ingot-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel",
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "item",
     name = "powder-nickel",
-    icon = "__angelssmelting__/graphics/icons/powder-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-nickel",
-    icon = "__angelssmelting__/graphics/icons/molten-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel-casting",
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-nickel",
-    icon = "__angelssmelting__/graphics/icons/roll-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-nickel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-nickel-casting",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-nickel",
-    icon = "__angelssmelting__/graphics/icons/plate-nickel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel-casting",
     order = "j",

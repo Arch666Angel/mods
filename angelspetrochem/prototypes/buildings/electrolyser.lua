@@ -4,7 +4,7 @@ data:extend({
     name = "angels-electrolyser",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "angels-electrolyser",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -49,7 +49,7 @@ data:extend({
     ingredient_count = 3,
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -58,7 +58,7 @@ data:extend({
         animation_speed = 0.5,
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -67,7 +67,7 @@ data:extend({
         animation_speed = 0.5,
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -76,7 +76,7 @@ data:extend({
         animation_speed = 0.5,
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -87,7 +87,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -130,7 +130,7 @@ data:extend({
     name = "angels-electrolyser-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -145,7 +145,7 @@ data:extend({
     name = "angels-electrolyser-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -175,7 +175,7 @@ data:extend({
     ingredient_count = 3,
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -184,7 +184,7 @@ data:extend({
         animation_speed = 0.5,
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -193,7 +193,7 @@ data:extend({
         animation_speed = 0.5,
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -202,7 +202,7 @@ data:extend({
         animation_speed = 0.5,
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -213,7 +213,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -256,7 +256,7 @@ data:extend({
     name = "angels-electrolyser-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -271,7 +271,7 @@ data:extend({
     name = "angels-electrolyser-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -301,7 +301,7 @@ data:extend({
     ingredient_count = 3,
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -310,7 +310,7 @@ data:extend({
         animation_speed = 0.5,
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -319,7 +319,7 @@ data:extend({
         animation_speed = 0.5,
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -328,7 +328,7 @@ data:extend({
         animation_speed = 0.5,
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -339,7 +339,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -382,7 +382,7 @@ data:extend({
     name = "angels-electrolyser-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -397,7 +397,7 @@ data:extend({
     name = "angels-electrolyser-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electrolyser.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -426,7 +426,7 @@ data:extend({
     ingredient_count = 3,
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -435,7 +435,7 @@ data:extend({
         animation_speed = 0.5,
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -444,7 +444,7 @@ data:extend({
         animation_speed = 0.5,
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-north.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-north.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -453,7 +453,7 @@ data:extend({
         animation_speed = 0.5,
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/electrolyser-east.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/electrolyser-east.png",
         width = 224,
         height = 224,
         frame_count = 36,
@@ -464,7 +464,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

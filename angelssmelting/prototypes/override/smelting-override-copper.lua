@@ -57,7 +57,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       },
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
         },
         {
           icon = "__base__/graphics/icons/copper-ore.png",
@@ -83,12 +83,12 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       "copper-plate",
     },
   })
-  data.raw["item"]["copper-plate"].icon = "__angelssmelting__/graphics/icons/plate-copper.png"
+  data.raw["item"]["copper-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png"
   data.raw["item"]["copper-plate"].icon_size = 32
   data.raw["item"]["copper-plate"].icon_mipmaps = 1
   OV.global_replace_icon(
     "__base__/graphics/icons/plate/copper-plate.png",
-    "__angelssmelting__/graphics/icons/plate-copper.png"
+    "__angelssmeltinggraphics__/graphics/icons/plate-copper.png"
   )
 
   if angelsmods.refining then
@@ -133,10 +133,10 @@ if angelsmods.trigger.smelting_products["copper"].wire then
       allow_decomposition = false,
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/wire-copper.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
         },
         {
-          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -150,12 +150,12 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   OV.global_replace_item("angels-wire-copper", "copper-cable")
   angelsmods.functions.add_flag("angels-wire-copper", "hidden")
   angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
-  data.raw["item"]["copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-copper.png"
+  data.raw["item"]["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png"
   data.raw["item"]["copper-cable"].icon_size = 32
   data.raw["item"]["copper-cable"].icon_mipmaps = 1
   OV.global_replace_icon(
     "__base__/graphics/icons/plate/copper-cable.png",
-    "__angelssmelting__/graphics/icons/wire-copper.png"
+    "__angelssmeltinggraphics__/graphics/icons/wire-copper.png"
   )
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then

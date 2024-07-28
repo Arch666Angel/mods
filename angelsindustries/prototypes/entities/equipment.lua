@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "angels-burner-generator-vequip",
-    icon = "__angelsindustries__/graphics/icons/burner-generator-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/burner-generator-ico.png",
     icon_size = 32,
     placed_as_equipment_result = "angels-burner-generator-vequip",
     subgroup = "angels-vehicle-equipment",
@@ -15,7 +15,7 @@ data:extend({
     type = "generator-equipment",
     name = "angels-burner-generator-vequip",
     sprite = {
-      filename = "__angelsindustries__/graphics/equipment/burner-generator-vequip.png",
+      filename = "__angelsindustriesgraphics__/graphics/equipment/burner-generator-vequip.png",
       width = 64,
       height = 96,
       priority = "medium",
@@ -128,7 +128,7 @@ data:extend({
   {
     type = "item",
     name = "angels-construction-roboport-vequip",
-    icon = "__angelsindustries__/graphics/icons/construction-roboport-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/construction-roboport-ico.png",
     icon_size = 32,
     placed_as_equipment_result = "angels-construction-roboport-vequip",
     subgroup = "angels-vehicle-equipment",
@@ -140,7 +140,7 @@ data:extend({
     type = "roboport-equipment",
     name = "angels-construction-roboport-vequip",
     sprite = {
-      filename = "__angelsindustries__/graphics/equipment/construction-roboport-vequip.png",
+      filename = "__angelsindustriesgraphics__/graphics/equipment/construction-roboport-vequip.png",
       width = 96,
       height = 96,
       priority = "medium",
@@ -219,7 +219,7 @@ data:extend({
   {
     type = "item",
     name = "angels-rocket-defense-equipment-vequip",
-    icon = "__angelsindustries__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
     icon_size = 32,
     placed_as_equipment_result = "angels-rocket-defense-equipment-vequip",
     subgroup = "angels-vehicle-equipment",
@@ -230,7 +230,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "angels-rocket-defense-equipment-vequip",
     sprite = {
-      filename = "__angelsindustries__/graphics/equipment/rocket-launcher-equip.png",
+      filename = "__angelsindustriesgraphics__/graphics/equipment/rocket-launcher-equip.png",
       width = 96,
       height = 96,
       priority = "medium",

@@ -5,7 +5,7 @@ data:extend({
     type = "item",
     name = "bio-tile",
     localised_description = { "item-description.bio-tile", string.format("%.6f", pollution_absorption_per_second) },
-    icon = "__angelsbioprocessing__/graphics/icons/bio-tile.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-tile.png",
     icon_size = 64,
     subgroup = "angels-stone",
     order = "f",
@@ -30,38 +30,38 @@ data:extend({
     variants = {
       main = {
         {
-          picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-small.png",
+          picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-small.png",
           count = 16,
           scale = 0.5,
           size = 1,
         },
       },
       inner_corner = {
-        picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
+        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
         width = 128,
         height = 128,
         scale = 0.5,
         count = 1,
       },
       outer_corner = {
-        picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
+        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
         width = 128,
         height = 128,
         scale = 0.5,
         count = 1,
       },
       side = {
-        picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-side.png",
+        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-side.png",
         scale = 0.5,
         count = 4,
       },
       u_transition = {
-        picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-u.png",
+        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-u.png",
         scale = 0.5,
         count = 1,
       },
       o_transition = {
-        picture = "__angelsbioprocessing__/graphics/entity/tile-bio/bio-tile-corner-o.png",
+        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-o.png",
         scale = 0.5,
         count = 1,
       },

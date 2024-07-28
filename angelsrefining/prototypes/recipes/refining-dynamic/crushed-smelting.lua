@@ -12,14 +12,14 @@ data:extend({
     allow_decomposition = false,
     icons = {
       mods["angelssmelting"] and {
-        icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
       } or {
         icon = "__base__/graphics/icons/iron-plate.png",
         icon_size = 64,
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/angels-ore1-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
         scale = 0.4,
         shift = { -10, -10 },
       },
@@ -39,14 +39,14 @@ data:extend({
     allow_decomposition = false,
     icons = {
       mods["angelssmelting"] and {
-        icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
       } or {
         icon = "__base__/graphics/icons/copper-plate.png",
         icon_size = 64,
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/angels-ore3-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
         scale = 0.4,
         shift = { -10, -10 },
       },

@@ -24,7 +24,7 @@ if not angelsmods.trigger.sintering_tech then
   }) do
     local tech = data.raw.technology[tech_name]
     if tech then
-      tech.icon = "__angelssmelting__/graphics/technology/powder-mixer-tech.png"
+      tech.icon = "__angelssmeltinggraphics__/graphics/technology/powder-mixer-tech.png"
     end
   end
   OV.remove_prereq("powder-metallurgy-2", "powder-metallurgy-1")
@@ -58,7 +58,7 @@ elseif not angelsmods.trigger.early_sintering_oven then
   }) do
     local tech = data.raw.technology[tech_name]
     if tech then
-      tech.icon = "__angelssmelting__/graphics/technology/powder-mixer-tech.png"
+      tech.icon = "__angelssmeltinggraphics__/graphics/technology/powder-mixer-tech.png"
     end
   end
   OV.remove_prereq("powder-metallurgy-2", "powder-metallurgy-1")
@@ -76,7 +76,7 @@ elseif not angelsmods.trigger.early_sintering_oven then
   }) do
     data.raw[update.type][update.name].icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -107,7 +107,7 @@ else
   -- update numbers (name and icon)
   data.raw["item"]["angels-chemical-furnace-2"].icons = angelsmods.functions.add_number_icon_layer({
     {
-      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
@@ -115,7 +115,7 @@ else
   }, 1, angelsmods.smelting.number_tint)
   data.raw["item"]["angels-chemical-furnace-3"].icons = angelsmods.functions.add_number_icon_layer({
     {
-      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,
@@ -123,7 +123,7 @@ else
   }, 2, angelsmods.smelting.number_tint)
   data.raw["item"]["angels-chemical-furnace-4"].icons = angelsmods.functions.add_number_icon_layer({
     {
-      icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
       icon_mipmaps = 4,
       scale = 0.5,

@@ -188,7 +188,7 @@ if data.raw.item["y-res1"] then
         { type = "item", name = "y-res1", amount = 6 },
       },
       icons = {
-        { icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32 },
+        { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
         { icon = "__Yuoki__/graphics/icons/uni-com-pur.png", icon_size = 32, scale = 0.5, shift = { 10, 10 } },
       },
       order = "c-i-g[angelsore-chunk-mix-yi1-processing]",
@@ -209,7 +209,7 @@ if data.raw.item["y-res1"] then
         { type = "item", name = "y-res2", amount = 6 },
       },
       icons = {
-        { icon = "__angelsrefining__/graphics/icons/sort-icon.png", icon_size = 32 },
+        { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
         { icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png", icon_size = 32, scale = 0.5, shift = { 10, 10 } },
       },
       crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
@@ -233,7 +233,7 @@ if data.raw.item["y-res1"] then
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "y-con_water",
         "water-purified",
-        mods["angelspetrochem"] and { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 } or "sulfur",
+        mods["angelspetrochem"] and { "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png", 32 } or "sulfur",
       }, "WsSS"), --
       order = "a[yellow-waste-water-purification-yi]",
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -304,7 +304,7 @@ if data.raw.item["uraninite"] then
         { type = "item", name = "uraninite", amount_min = 1, amount_max = 5, probability = 0.05 },
         { type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.05 },
       },
-      icon = "__angelsrefining__/graphics/icons/slag-processing-up.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/slag-processing-up.png",
       icon_size = 32,
       order = "a-a [slag-processing-up]",
     },
@@ -324,7 +324,7 @@ if data.raw.item["uraninite"] then
       results = {
         { type = "item", name = "uraninite", amount_min = 1, amount_max = 1, probability = 0.46 },
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up1-sorting.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-ore-mix-up1-sorting.png",
       icon_size = 32,
       order = "c-i-g[angelsore-crystal-mix-up1-processing]",
     },
@@ -344,7 +344,7 @@ if data.raw.item["uraninite"] then
       results = {
         { type = "item", name = "fluorite", amount_min = 1, amount_max = 1, probability = 0.1 },
       },
-      icon = "__angelsrefining__/graphics/icons/angels-ore-mix-up2-sorting.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-ore-mix-up2-sorting.png",
       icon_size = 32,
       order = "c-i-g[angelsore-crystal-mix-up2-processing]",
     },
@@ -395,7 +395,7 @@ end
 -- {
 -- {type="item", name="uranium-ore", amount=1, probability=0.8},
 -- },
--- icon = "__angelsrefining__/graphics/icons/slag-processing-nuc.png",
+-- icon = "__angelsrefininggraphics__/graphics/icons/slag-processing-nuc.png",
 -- order = "a-a [slag-processing-nuc]",
 -- },
 -- {
@@ -415,7 +415,7 @@ end
 -- {
 -- {type="item", name="uranium-ore", amount=6},
 -- },
--- icon = "__angelsrefining__/graphics/icons/angels-ore-mix-nuc-sorting.png",
+-- icon = "__angelsrefininggraphics__/graphics/icons/angels-ore-mix-nuc-sorting.png",
 -- order = "c-i-g[angelsore-crystal-mix-nuc-processing]",
 -- },
 -- })

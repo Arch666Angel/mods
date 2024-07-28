@@ -6,7 +6,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-grey-board",
-      icon = "__angelsindustries__/graphics/icons/grey-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grey-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "f[grey-board]",
@@ -15,7 +15,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-red-board",
-      icon = "__angelsindustries__/graphics/icons/red-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/red-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "a[red-board]",
@@ -24,7 +24,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-green-board",
-      icon = "__angelsindustries__/graphics/icons/green-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/green-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "b[green-board]",
@@ -33,7 +33,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-orange-board",
-      icon = "__angelsindustries__/graphics/icons/orange-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/orange-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "c[orange-board]",
@@ -42,7 +42,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-blue-board",
-      icon = "__angelsindustries__/graphics/icons/blue-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/blue-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "d[blue-board]",
@@ -51,7 +51,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-yellow-board",
-      icon = "__angelsindustries__/graphics/icons/yellow-board.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/yellow-board.png",
       icon_size = 32,
       subgroup = "angels-board",
       order = "e[yellow-board]",
@@ -63,7 +63,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-grey",
-      icon = "__angelsindustries__/graphics/icons/grey-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grey-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "f[grey-circuit]",
@@ -72,7 +72,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-red",
-      icon = "__angelsindustries__/graphics/icons/red-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/red-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "a[red-circuit]",
@@ -81,7 +81,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-green",
-      icon = "__angelsindustries__/graphics/icons/green-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/green-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "b[green-circuit]",
@@ -90,7 +90,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-orange",
-      icon = "__angelsindustries__/graphics/icons/orange-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/orange-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "c[orange-circuit]",
@@ -99,7 +99,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-blue",
-      icon = "__angelsindustries__/graphics/icons/blue-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/blue-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "d[blue-circuit]",
@@ -108,7 +108,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-yellow",
-      icon = "__angelsindustries__/graphics/icons/yellow-circuit.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/yellow-circuit.png",
       icon_size = 32,
       subgroup = "angels-circuit-board",
       order = "e[yellow-circuit]",
@@ -120,7 +120,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-red-loaded",
-      icon = "__angelsindustries__/graphics/icons/red-circuit-full.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/red-circuit-full.png",
       icon_size = 32,
       subgroup = "angels-loaded-circuit-board",
       order = "a[red-circuit-full]",
@@ -129,7 +129,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-green-loaded",
-      icon = "__angelsindustries__/graphics/icons/green-circuit-full.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/green-circuit-full.png",
       icon_size = 32,
       subgroup = "angels-loaded-circuit-board",
       order = "b[green-circuit-full]",
@@ -138,7 +138,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-orange-loaded",
-      icon = "__angelsindustries__/graphics/icons/orange-circuit-full.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/orange-circuit-full.png",
       icon_size = 32,
       subgroup = "angels-loaded-circuit-board",
       order = "c[orange-circuit-full]",
@@ -147,7 +147,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-blue-loaded",
-      icon = "__angelsindustries__/graphics/icons/blue-circuit-full.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/blue-circuit-full.png",
       icon_size = 32,
       subgroup = "angels-loaded-circuit-board",
       order = "d[blue-circuit-full]",
@@ -156,7 +156,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-yellow-loaded",
-      icon = "__angelsindustries__/graphics/icons/yellow-circuit-full.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/yellow-circuit-full.png",
       icon_size = 32,
       subgroup = "angels-loaded-circuit-board",
       order = "e[yellow-circuit-full]",
@@ -168,7 +168,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-resistor",
-      icon = "__angelsindustries__/graphics/icons/resistor.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/resistor.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "a",
@@ -177,7 +177,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-transistor",
-      icon = "__angelsindustries__/graphics/icons/transistor.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/transistor.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "b",
@@ -186,7 +186,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-microchip",
-      icon = "__angelsindustries__/graphics/icons/chip.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/chip.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "c",
@@ -195,7 +195,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-transformer",
-      icon = "__angelsindustries__/graphics/icons/spool.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/spool.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "d",
@@ -204,7 +204,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "circuit-cpu",
-      icon = "__angelsindustries__/graphics/icons/cpu.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cpu.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "e",
@@ -214,7 +214,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "electronic-parts",
-      icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
       icon_size = 32,
       subgroup = "angels-circuit-components",
       order = "f",

@@ -1,0 +1,162 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: ???
+  Changes:
+    - Updated for Factorio 2.0 (994)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.16
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.15
+Date: 22.12.2023
+  Changes:
+    - Added "Thorvin" bicycle; credits to the TurboBike mod for the graphics (790)
+    - Spitters are back doing acid splash instead of their bio splash
+    - Scarab start spawning at 15% evolution rather than 10%
+    - First (partial) rework on artifact drop rates (748)
+  Bugfixes:
+    - Fixed the native inhabitants tips and tricks could not become visible
+    - Fixed incomplete tips and tricks localisation for the enemy spawners
+---------------------------------------------------------------------------------------------------
+Version: 0.3.14
+Date: 06.06.2022
+  Changes:
+    - Added small description to the gathering turret
+  Bugfixes:
+    - Fixed crash when adding a newer version of this mod to an existing save while other mods are
+      (wrongfully) placing entities while the configuration changes are being executed...
+    - Fixed crash related to biter tips and tricks when playing with other biter mods
+---------------------------------------------------------------------------------------------------
+Version: 0.3.13
+Date: 23.12.2021
+  Bugfixes:
+    - Fixed crash when the bob enemies do not drop artifacts (setting disabled)
+    - Fixed crash when there are too many types of spawners or biters/spawner (737)
+    - Fixed crash when a spawner spawns something else than a unit (737)
+    - Fixed gathering turrets would remain idle after they all deactivated
+    - Fixed incorrect tips and tricks information when bob enemies do not drop artifacts
+    - Fixed crash when tips and tricks localisation would be too long
+    - Fixed crash when AAI is processing configuration changes when exploration is not initialized
+---------------------------------------------------------------------------------------------------
+Version: 0.3.12
+Date: 19.12.2021
+  Changes:
+    - Merged the vanilla crafting tab "combat" with angels exploration tab (699)
+    - Always enables bobs artifacts when playing with bobenemies
+    - Enemies will now only drop small alien artifacts (only if they drop artifacts)
+    - Added proof of concept for the gathering turret. Any feedback is welcome! (612)
+      - Gathering cycle of the turret (triggered by any unit dying within range)
+      - Emptying of turret by inserters
+      - Gathering of different types of loot drops (also gated some behind research)
+  Bugfixes:
+    - Fixed laser turrets depended on laser riffle when playing with bobs warfare
+    - Fixed psykers did show up as a bonus upgrade effect in the technology tree (712)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+Date: 10.08.2021
+  Changes:
+    - Balancing iteration of the spawn probabilities of enemies
+    - Reduced evolution due to killing enemy bases even further
+    - Tweaked enemy spawn rate and armour to be more forgiving in the early game
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 26.05.2021
+  Bugfixes:
+    - Fixed collision box and drawing box of the mammoth heavy tank (476)
+    - Fixed that turret technology did not depend on military (549)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 26.11.2020
+  Changes:
+    - Migrate to factorio version 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 29.10.2020
+  Changes:
+    - Moved explosive cannon turret shells research from Military 3 to Military 4 research due to
+      recipe prerequisites (395)
+    - Some minor localisation changes to unify angels localisation across mods (372)
+  Bugfixes:
+    - Mammoth heavy tank was not immune to trees and rocks (374)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+  Bugfixes:
+    - Fixed crash due to base game changes in version 0.18.36 (343)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 10.07.2020
+  Changes:
+    - Updated graphics of the Peztilence Ammo, Gun and Spreader Turret (311)
+    - Cannon turrets now use shotgun shells (310)
+    - Biter balance: (291)
+      - Biter evolution is now not affected by time or pollution (just by killing bases now)
+      - Pollution absorbtion by trees and tiles is increased to make pollution cloud smaller
+      - Biters will expand slower and require more pollution absorbtion to create biters
+  Bugfixes:
+    - Check if resistances is defined for spawner (290)
+    - Tweaked collision and selection boxes for scarabs and psykers (280)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result prototypes
+    - Consistency in assigning angelsmods in data stage
+  Bugfixes:
+    - Added missing call to OV.execute() in data-updates
+    - MP safer method of requiring files (check inside the file instead of around)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 12.04.2020
+  Changes:
+    - Added in a lower tier wall (no gates)
+    - The new wall is made from stone and wood and has 2/3 the health of the vanilla wall (same resistances)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 20.03.2020
+  Changes:
+    - Added technology for bonus damage on the pez ammo
+  Bugfixes:
+    - Fixed spykers were showing up in bonus gui
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 22.02.2020
+  Bugfixes:
+    - Fixed spitters were dealing too much damage (600+/s)
+    - Fixed some guns recipes that were not in the correct spot
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 12.02.2020
+  Bugfixes:
+    - Fixed checking if items exist before ordering them to prevent crashes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 09.02.2020
+  Changes:
+    - update to 0.18
+    - updated biter graphics to align with 0.17+ biter animations
+    - fixed icon_size errors
+    - added recipes and technology for bio-gun and bio-ammo
+    - updated spawners to spawn all variants (colossal biters/spitters)
+    - applied a compatibility with some biter mods
+    - localisation fixes
+    - minor code clean-ups
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 20.03.2020
+  Changes:
+    - update to 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 10.10.2018
+  Changes:
+    - some-change
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 10.10.2017
+  Changes:
+    - first release for 0.14

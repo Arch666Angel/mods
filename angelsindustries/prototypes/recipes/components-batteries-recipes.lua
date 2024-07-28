@@ -140,10 +140,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           tint = { r = 66 / 255, g = 67 / 255, b = 78 / 255 },
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },
@@ -244,10 +244,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           tint = { r = 100 / 255, g = 100 / 255, b = 100 / 255 },
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },
@@ -390,10 +390,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           tint = { r = 159 / 255, g = 148 / 255, b = 78 / 255 },
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },
@@ -496,10 +496,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           --tint = {r=1,g=1,b=1},
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },
@@ -602,10 +602,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           tint = { r = 117 / 255, g = 138 / 255, b = 134 / 255 },
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },
@@ -709,10 +709,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/battery-casing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery-casing.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/battery_component_frame.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/battery_component_frame.png",
           tint = { r = 72 / 255, g = 68 / 255, b = 45 / 255 },
           scale = 0.4375 * 0.5,
           shift = { -10, -10 },

@@ -40,7 +40,7 @@ data:extend({
   {
     type = "item",
     name = "solid-resin",
-    icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-resin.png",
     icon_size = 32,
     subgroup = "petrochem-solids",
     order = "a[petrochem-solids]-b[resin]",
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "item",
     name = "solid-rubber",
-    icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
     icon_size = 32,
     subgroup = "petrochem-solids",
     order = "a[petrochem-solids]-c[rubber]",
@@ -58,7 +58,7 @@ data:extend({
   {
     type = "item",
     name = "fluorite-ore",
-    icon = "__angelspetrochem__/graphics/icons/ore-fluorite.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/ore-fluorite.png",
     icon_size = 32,
     subgroup = "petrochem-sulfur",
     order = "a[sulfer]-b[fluorite]",
@@ -68,7 +68,7 @@ data:extend({
   {
     type = "item",
     name = "solid-calcium-chloride",
-    icon = "__angelspetrochem__/graphics/icons/solid-calcium-chloride.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-calcium-chloride.png",
     icon_size = 32,
     subgroup = "petrochem-sulfur",
     order = "c[solid-calcium-chloride]",
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "item",
     name = "solid-oil-residual",
-    icon = "__angelspetrochem__/graphics/icons/solid-oil-residual.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-oil-residual.png",
     icon_size = 32,
     subgroup = "petrochem-carbon-oil-feed",
     order = "a[solid-oil-residual]",
@@ -87,7 +87,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "a[sodium]",
@@ -96,7 +96,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-hydroxide",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-hydroxide.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-hydroxide.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "c[sodium-hydroxide]",
@@ -105,7 +105,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-carbonate",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-carbonate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-carbonate.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "b[sodium]-a[sodium-carbonate]",
@@ -114,7 +114,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-hypochlorite",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-hypochlorite.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-hypochlorite.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "f[liquid-sodium-hydroxide]-a[sodium-hypochlorite]",
@@ -123,7 +123,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-cyanide",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-cyanide.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cyanide.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "b[sodium]-b[solid-sodium-cyanide]",
@@ -132,7 +132,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-nitrate",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-nitrate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-nitrate.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "b[sodium]-c[solid-sodium-nitrate]",
@@ -154,7 +154,7 @@ data:extend({
   {
     type = "item",
     name = "catalyst-metal-carrier",
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-carrier.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-carrier.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "c[catalyst-metal]-a[carrier]",
@@ -163,7 +163,7 @@ data:extend({
   {
     type = "item",
     name = "catalyst-metal-red",
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-red.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-red.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "c[catalyst-metal]-b[red]",
@@ -172,7 +172,7 @@ data:extend({
   {
     type = "item",
     name = "catalyst-metal-green",
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-green.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-green.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "c[catalyst-metal]-c[green]",
@@ -181,7 +181,7 @@ data:extend({
   {
     type = "item",
     name = "catalyst-metal-blue",
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-blue.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-blue.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "c[catalyst-metal]-d[blue]",
@@ -190,7 +190,7 @@ data:extend({
   {
     type = "item",
     name = "catalyst-metal-yellow",
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-yellow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-yellow.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "c[catalyst-metal]-e[yellow]",
@@ -199,7 +199,7 @@ data:extend({
   {
     type = "item",
     name = "angels-electrode",
-    icon = "__angelspetrochem__/graphics/icons/solid-electrode.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-electrode.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "a[electrode]-a[new]",
@@ -208,7 +208,7 @@ data:extend({
   {
     type = "item",
     name = "angels-electrode-used",
-    icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-electrode-used.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "a[electrode]-b[used]",
@@ -218,7 +218,7 @@ data:extend({
   {
     type = "item",
     name = "coal-crushed",
-    icon = "__angelspetrochem__/graphics/icons/coal-crushed.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/coal-crushed.png",
     icon_size = 32,
     subgroup = "petrochem-coal",
     order = "a[carbon]-b",
@@ -229,7 +229,7 @@ data:extend({
   {
     type = "item",
     name = "solid-coke",
-    icon = "__angelspetrochem__/graphics/icons/solid-coke.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-coke.png",
     icon_size = 32,
     subgroup = "petrochem-coal",
     order = "a[carbon]-c",
@@ -240,7 +240,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-coke",
-    icon = "__angelspetrochem__/graphics/icons/pellet-coke.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/pellet-coke.png",
     icon_size = 32,
     subgroup = "petrochem-coal",
     order = "b[coke]",
@@ -251,7 +251,7 @@ data:extend({
   {
     type = "item",
     name = "solid-carbon",
-    icon = "__angelspetrochem__/graphics/icons/solid-carbon.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-carbon.png",
     icon_size = 32,
     subgroup = "petrochem-coal",
     order = "a[carbon]-d",
@@ -263,7 +263,7 @@ data:extend({
   {
     type = "item",
     name = "solid-ammonium-nitrate",
-    icon = "__angelspetrochem__/graphics/icons/solid-ammonium-nitrate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-ammonium-nitrate.png",
     icon_size = 32,
     subgroup = "petrochem-nitrogen",
     order = "a",
@@ -272,7 +272,7 @@ data:extend({
   {
     type = "item",
     name = "solid-ammonium-perchlorate",
-    icon = "__angelspetrochem__/graphics/icons/solid-ammonium-perchlorate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-ammonium-perchlorate.png",
     icon_size = 32,
     subgroup = "petrochem-nitrogen",
     order = "a",
@@ -282,7 +282,7 @@ data:extend({
   {
     type = "item",
     name = "rocket-fuel-capsule",
-    icon = "__angelspetrochem__/graphics/icons/rocket-fuel-capsule.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/rocket-fuel-capsule.png",
     icon_size = 32,
     subgroup = "petrochem-fuel",
     order = "b[rocket-fuel]-b",
@@ -291,7 +291,7 @@ data:extend({
   {
     type = "item",
     name = "rocket-oxidizer-capsule",
-    icon = "__angelspetrochem__/graphics/icons/rocket-oxidizer-capsule.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/rocket-oxidizer-capsule.png",
     icon_size = 32,
     subgroup = "petrochem-fuel",
     order = "b[rocket-fuel]-a",
@@ -300,7 +300,7 @@ data:extend({
   {
     type = "item",
     name = "rocket-booster",
-    icon = "__angelspetrochem__/graphics/icons/rocket-booster.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/rocket-booster.png",
     icon_size = 32,
     subgroup = "petrochem-fuel",
     order = "c[rocket-booster]",

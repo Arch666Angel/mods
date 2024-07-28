@@ -6,7 +6,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "grate-iron",
-      icon = "__angelsindustries__/graphics/icons/grate-iron.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grate-iron.png",
       icon_size = 32,
       subgroup = "angels-construction-grates",
       order = "a",
@@ -15,7 +15,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "grate-steel",
-      icon = "__angelsindustries__/graphics/icons/grate-steel.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grate-steel.png",
       icon_size = 32,
       subgroup = "angels-construction-grates",
       order = "b",
@@ -24,7 +24,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "grate-aluminium",
-      icon = "__angelsindustries__/graphics/icons/grate-aluminium.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grate-aluminium.png",
       icon_size = 32,
       subgroup = "angels-construction-grates",
       order = "c",
@@ -33,7 +33,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "grate-titanium",
-      icon = "__angelsindustries__/graphics/icons/grate-titanium.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grate-titanium.png",
       icon_size = 32,
       subgroup = "angels-construction-grates",
       order = "d",
@@ -42,7 +42,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "grate-tungsten",
-      icon = "__angelsindustries__/graphics/icons/grate-tungsten.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/grate-tungsten.png",
       icon_size = 32,
       subgroup = "angels-construction-grates",
       order = "e",
@@ -54,7 +54,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-frame-1",
-      icon = "__angelsindustries__/graphics/icons/construction-frame-1.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-frame-1.png",
       icon_size = 32,
       subgroup = "angels-construction-frames",
       order = "a",
@@ -63,7 +63,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-frame-2",
-      icon = "__angelsindustries__/graphics/icons/construction-frame-2.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-frame-2.png",
       icon_size = 32,
       subgroup = "angels-construction-frames",
       order = "b",
@@ -72,7 +72,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-frame-3",
-      icon = "__angelsindustries__/graphics/icons/construction-frame-3.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-frame-3.png",
       icon_size = 32,
       subgroup = "angels-construction-frames",
       order = "c",
@@ -81,7 +81,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-frame-4",
-      icon = "__angelsindustries__/graphics/icons/construction-frame-4.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-frame-4.png",
       icon_size = 32,
       subgroup = "angels-construction-frames",
       order = "d",
@@ -90,7 +90,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-frame-5",
-      icon = "__angelsindustries__/graphics/icons/construction-frame-5.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-frame-5.png",
       icon_size = 32,
       subgroup = "angels-construction-frames",
       order = "e",
@@ -102,7 +102,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-girder",
-      icon = "__angelsindustries__/graphics/icons/girder.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/girder.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "a",
@@ -111,7 +111,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rivet",
-      icon = "__angelsindustries__/graphics/icons/rivet.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rivet.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "b",
@@ -120,7 +120,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-bracket",
-      icon = "__angelsindustries__/graphics/icons/bracket.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/bracket.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "c",
@@ -129,7 +129,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-plating",
-      icon = "__angelsindustries__/graphics/icons/plating.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/plating.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "d",
@@ -138,7 +138,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-strut",
-      icon = "__angelsindustries__/graphics/icons/strut.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/strut.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "e",
@@ -150,7 +150,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "construction-components",
-      icon = "__angelsindustries__/graphics/icons/construction-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/construction-components.png",
       icon_size = 32,
       subgroup = "angels-construction-components",
       order = "f",

@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-crushing",
-    icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/mechanical-refining.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -75,7 +75,7 @@ data:extend({
   {
     type = "technology",
     name = "advanced-ore-refining-1",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -121,7 +121,7 @@ data:extend({
   {
     type = "technology",
     name = "geode-processing-1",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-red.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-red.png",
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
@@ -177,7 +177,7 @@ data:extend({
   {
     type = "technology",
     name = "slag-processing-1",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
       "ore-crushing",
@@ -248,7 +248,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-floatation",
-    icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -324,7 +324,7 @@ data:extend({
   {
     type = "technology",
     name = "advanced-ore-refining-2",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -390,7 +390,7 @@ data:extend({
   {
     type = "technology",
     name = "geode-processing-2",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-green.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-green.png",
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
@@ -439,7 +439,7 @@ data:extend({
   {
     type = "technology",
     name = "slag-processing-2",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
       "slag-processing-1",
@@ -506,7 +506,7 @@ data:extend({
   {
     type = "technology",
     name = "slag-processing-3",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
       "advanced-electronics-2",
@@ -554,7 +554,7 @@ data:extend({
   {
     type = "technology",
     name = "thermal-water-extraction",
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
       "water-treatment-2",
@@ -578,7 +578,7 @@ data:extend({
   {
     type = "technology",
     name = "thermal-water-extraction-2",
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
       "thermal-water-extraction",
@@ -604,7 +604,7 @@ data:extend({
   {
     type = "technology",
     name = "thermal-water-processing",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
       "thermal-water-extraction",
@@ -635,7 +635,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-leaching",
-    icon = "__angelsrefining__/graphics/technology/chemical-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/chemical-refining.png",
     icon_size = 128,
     prerequisites = {
       "ore-floatation",
@@ -711,7 +711,7 @@ data:extend({
   {
     type = "technology",
     name = "advanced-ore-refining-3",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -773,7 +773,7 @@ data:extend({
   {
     type = "technology",
     name = "geode-processing-3",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-yellow.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-yellow.png",
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
@@ -805,7 +805,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-refining",
-    icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-refining.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -883,7 +883,7 @@ data:extend({
   {
     type = "technology",
     name = "advanced-ore-refining-4",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -939,7 +939,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-advanced-crushing",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
       "ore-crushing",
@@ -974,7 +974,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-powderizer",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
       "ore-advanced-crushing",
@@ -1025,7 +1025,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-advanced-floatation",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
       "ore-powderizer",
@@ -1076,7 +1076,7 @@ data:extend({
   {
     type = "technology",
     name = "ore-electro-whinning-cell",
-    icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/electro-whinning-cell-tech.png",
     icon_size = 128,
     prerequisites = {
       "ore-leaching",

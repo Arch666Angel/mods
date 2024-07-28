@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "tin-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png",
     icon_size = 32,
     subgroup = "angels-tin",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-tin",
-    icon = "__angelssmelting__/graphics/icons/processed-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-tin",
-    icon = "__angelssmelting__/graphics/icons/pellet-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin",
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-tin",
-    icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin",
@@ -44,7 +44,7 @@ data:extend({
   {
     type = "item",
     name = "powder-tin",
-    icon = "__angelssmelting__/graphics/icons/powder-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin",
@@ -55,7 +55,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-tin",
-    icon = "__angelssmelting__/graphics/icons/molten-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
@@ -70,7 +70,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-tin",
-    icon = "__angelssmelting__/graphics/icons/roll-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
@@ -80,7 +80,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-coil-tin",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-tin-casting",
@@ -91,7 +91,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-tin",
-    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "i",
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-tin",
-    icon = "__angelssmelting__/graphics/icons/wire-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "j",

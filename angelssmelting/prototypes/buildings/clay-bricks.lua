@@ -12,7 +12,7 @@ data:extend({
     variants = {
       main = {
         {
-          picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-small.png",
+          picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-small.png",
           count = 16,
           scale = 0.5,
           size = 1,
@@ -31,17 +31,17 @@ data:extend({
         -- },
       },
       inner_corner = {
-        picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-inner.png",
+        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-inner.png",
         scale = 0.5,
         count = 8,
       },
       outer_corner = {
-        picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-outer.png",
+        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-outer.png",
         scale = 0.5,
         count = 1,
       },
       side = {
-        picture = "__angelssmelting__/graphics/entity/tiles/clay-bricks-side.png",
+        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-side.png",
         scale = 0.5,
         count = 8,
       },

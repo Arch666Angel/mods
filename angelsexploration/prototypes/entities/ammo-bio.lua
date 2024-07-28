@@ -93,7 +93,7 @@ data:extend({
     burnt_patch_lifetime = 0,
     pictures = {
       {
-        filename = "__angelsexploration__/graphics/entity/bio-projectile/splash-1.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-projectile/splash-1.png",
         line_length = 5,
         width = 199,
         height = 159,
@@ -101,7 +101,7 @@ data:extend({
         shift = { 0.484375, -0.171875 },
       },
       {
-        filename = "__angelsexploration__/graphics/entity/bio-projectile/splash-2.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-projectile/splash-2.png",
         line_length = 5,
         width = 238,
         height = 157,
@@ -109,7 +109,7 @@ data:extend({
         shift = { 0.8125, -0.15625 },
       },
       {
-        filename = "__angelsexploration__/graphics/entity/bio-projectile/splash-3.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-projectile/splash-3.png",
         line_length = 5,
         width = 240,
         height = 162,
@@ -117,7 +117,7 @@ data:extend({
         shift = { 0.71875, -0.09375 },
       },
       {
-        filename = "__angelsexploration__/graphics/entity/bio-projectile/splash-4.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-projectile/splash-4.png",
         line_length = 5,
         width = 241,
         height = 146,
@@ -227,7 +227,7 @@ data:extend({
       },
     },
     spine_animation = {
-      filename = "__angelsexploration__/graphics/entity/bio-projectile/bio-projectile.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-projectile/bio-projectile.png",
       line_length = 5,
       width = 16,
       height = 18,
@@ -249,7 +249,7 @@ data:extend({
       shift = { -0.09, 0.395 },
     },
     particle = {
-      filename = "__angelsexploration__/graphics/entity/blank.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/blank.png",
       priority = "extra-high",
       width = 1,
       height = 1,
@@ -260,7 +260,7 @@ data:extend({
   {
     type = "ammo",
     name = "bio-ammo",
-    icon = "__angelsexploration__/graphics/icons/bio-ammo.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/bio-ammo.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {},

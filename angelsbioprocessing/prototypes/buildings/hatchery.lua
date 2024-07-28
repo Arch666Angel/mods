@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "bio-hatchery",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-hatchery.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-hatchery.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "c",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "furnace",
     name = "bio-hatchery",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-hatchery.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-hatchery.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "bio-hatchery" },
@@ -50,7 +50,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-hatchery/bio-hatchery-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-hatchery/bio-hatchery-shadow.png",
           width = 160,
           height = 160,
           frame_count = 1,
@@ -59,7 +59,7 @@ data:extend({
           --animation_speed = 0.5
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-hatchery/bio-hatchery-off.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-hatchery/bio-hatchery-off.png",
           width = 160,
           height = 160,
           frame_count = 1,
@@ -72,7 +72,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-hatchery/bio-hatchery-animation.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-hatchery/bio-hatchery-animation.png",
           width = 160,
           height = 160,
           line_length = 5,

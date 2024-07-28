@@ -19,8 +19,8 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
     }, "ClHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-hydrogen", "water-saline", "gas-chlorine" }),
     order = "a[water-saline-separation]",
@@ -41,7 +41,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
     }, "ClClH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-hydrogen-chloride", "gas-hydrogen", "gas-chlorine" }),
     order = "c[gas-hydrogen-chloride]",
@@ -62,8 +62,8 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
     }, "ClClH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-hydrogen-chloride", "gas-chlorine", "gas-hydrogen" }),
     order = "d[gas-hydrogen-chloride]",
@@ -84,7 +84,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/chloromethane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chloromethane.png", 72 },
     }, "CClH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-chlor-methane", "gas-methane", "gas-chlorine" }),
     order = "e[gas-chlor-methane]",
@@ -105,7 +105,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
     }, "ClHO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-hydrochloric-acid",
@@ -131,7 +131,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
     }, "ClHO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-hydrchloric-acid",
@@ -157,7 +157,7 @@ data:extend({
     },
     main_product = "liquid-ferric-chloride-solution",
     always_show_products = true,
-    --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
+    --icon = "__angelspetrochemgraphics__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-ferric-chloride-solution",
@@ -182,7 +182,7 @@ data:extend({
     },
     main_product = "liquid-cupric-chloride-solution",
     always_show_products = true,
-    --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-21.png",
+    --icon = "__angelspetrochemgraphics__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-cupric-chloride-solution",
@@ -208,7 +208,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/allyl-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/allyl-chloride.png", 72 },
     }, "CClH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "lgas-allylchlorid",
@@ -235,7 +235,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72 },
     }, "CClC"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-epichlorhydrin",
@@ -260,7 +260,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({ "liquid-glycerol", "gas-epichlorhydrin", "water-purified" }),
     order = "j[liquid-glycerol]",
@@ -281,7 +281,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/perchloric-acid.png", 72 },
     }, "ClHO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-perchloric-acid",
@@ -307,7 +307,7 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/phosgene.png", 72 },
     }, "CClC"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-phosgene",

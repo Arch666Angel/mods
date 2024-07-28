@@ -9,7 +9,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "N[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64 },
       "NNN"
     ),
     --icon_size = 32,
@@ -29,7 +29,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "NH[font=default-tiny-bold]3[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
       "NHH"
     ),
     --icon_size = 32,
@@ -47,7 +47,7 @@ data:extend({
     name = "gas-nitrogen-monoxide",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "NO" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
       "NNO"
     ),
     --icon_size = 32,
@@ -67,7 +67,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "NO[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
       "NOO"
     ),
     --icon_size = 32,
@@ -88,7 +88,7 @@ data:extend({
       "N[font=default-tiny-bold]2[/font]O[font=default-tiny-bold]4[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 },
       "NNO"
     ),
     --icon_size = 32,
@@ -108,7 +108,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "ClH[font=default-tiny-bold]4[/font]N" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonium-chloride.png", 72 },
       "NHCl"
     ),
     --icon_size = 32,
@@ -129,7 +129,7 @@ data:extend({
       "CH[font=default-tiny-bold]4[/font]N[font=default-tiny-bold]2[/font]O",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/urea.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/urea.png", 72 },
       "CNO"
     ),
     --icon_size = 32,
@@ -150,7 +150,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]N[font=default-tiny-bold]6[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/melamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/melamine.png", 72 },
       "CHN"
     ),
     --icon_size = 32,
@@ -170,7 +170,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "HNO[font=default-tiny-bold]3[/font]" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png", 72 },
       "NOH"
     ),
     --icon_size = 32,
@@ -190,7 +190,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "NH[font=default-tiny-bold]2[/font]Cl" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chloramine.png", 72 },
       "NHCl"
     ),
     --icon_size = 32,
@@ -211,7 +211,7 @@ data:extend({
       "N[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrazine.png", 72 },
       "NHH"
     ),
     --icon_size = 32,
@@ -231,7 +231,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]5[/font]N" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methylamine.png", 72 },
       "CHN"
     ),
     --icon_size = 32,
@@ -252,7 +252,7 @@ data:extend({
       "(CH[font=default-tiny-bold]3[/font])[font=default-tiny-bold]2[/font]NH",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylamine.png", 72 },
       "CHN"
     ),
     --icon_size = 32,
@@ -273,7 +273,7 @@ data:extend({
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]8[/font]N[font=default-tiny-bold]2[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
       "CHN"
     ),
     --icon_size = 32,

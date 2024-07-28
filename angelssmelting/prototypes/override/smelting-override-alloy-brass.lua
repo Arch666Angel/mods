@@ -14,7 +14,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "fluid",
         name = "liquid-molten-brass",
-        icon = "__angelssmelting__/graphics/icons/molten-brass.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-brass.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
@@ -117,7 +117,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "technology",
         name = "angels-brass-smelting-1",
-        icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -147,7 +147,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "technology",
         name = "angels-brass-smelting-2",
-        icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -175,7 +175,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "technology",
         name = "angels-brass-smelting-3",
-        icon = "__angelssmelting__/graphics/technology/casting-brass-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -203,7 +203,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       },
     })
     angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
-    data.raw["item"]["brass-alloy"].icon = "__angelssmelting__/graphics/icons/plate-brass.png"
+    data.raw["item"]["brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
     data.raw["item"]["brass-alloy"].icon_size = 32
     data.raw["item"]["brass-alloy"].icon_mipmaps = 1
     OV.disable_recipe({ "brass-alloy" })

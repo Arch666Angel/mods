@@ -149,8 +149,8 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
-      { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-      { icon = "__angelsrefining__/graphics/icons/angels-ore8-dust.png", scale = 0.5, shift = { -10, 10 } },
+      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png" },
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore8-dust.png", scale = 0.5, shift = { -10, 10 } },
     },
     icon_size = 32,
     order = "h",
@@ -170,8 +170,8 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icons = {
-      { icon = "__angelsrefining__/graphics/icons/sort-icon.png" },
-      { icon = "__angelsrefining__/graphics/icons/angels-ore9-dust.png", scale = 0.5, shift = { -10, 10 } },
+      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png" },
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore9-dust.png", scale = 0.5, shift = { -10, 10 } },
     },
     icon_size = 32,
     order = "j",

@@ -4,7 +4,7 @@ data:extend({
     name = "ore-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "ore-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -49,13 +49,13 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-base.png",
           priority = "extra-high",
           width = 221,
           height = 256,
           shift = util.by_pixel(0, -16),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
             priority = "extra-high",
             width = 440,
             height = 509,
@@ -64,7 +64,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
           priority = "extra-high",
           width = 261,
           height = 170,
@@ -72,7 +72,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
                 priority = "extra-high",
                 width = 522,
                 height = 340,
@@ -86,7 +86,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-refinery.ogg", volume = 0.7 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-refinery.ogg", volume = 0.7 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -96,7 +96,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-lights.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-lights.png",
           priority = "extra-high",
           width = 221,
           height = 256,
@@ -105,7 +105,7 @@ data:extend({
           blend_mode = "additive-soft",
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
                 priority = "extra-high",
                 width = 440,
                 height = 509,
@@ -185,14 +185,14 @@ data:extend({
         apply_recipe_tint = "primary",
         render_layer = "wires",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/stack-patch-overlay.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/stack-patch-overlay.png",
           priority = "extra-high",
           width = 22,
           height = 12,
           shift = util.by_pixel(-30, -123),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
                 priority = "extra-high",
                 width = 46,
                 height = 25,
@@ -209,7 +209,7 @@ data:extend({
     name = "ore-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -224,7 +224,7 @@ data:extend({
     name = "ore-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-refinery.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -253,13 +253,13 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-base.png",
           priority = "extra-high",
           width = 221,
           height = 256,
           shift = util.by_pixel(0, -16),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-base.png",
             priority = "extra-high",
             width = 440,
             height = 509,
@@ -268,7 +268,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-shadow.png",
           priority = "extra-high",
           width = 261,
           height = 170,
@@ -276,7 +276,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-shadow.png",
                 priority = "extra-high",
                 width = 522,
                 height = 340,
@@ -290,7 +290,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-refinery.ogg", volume = 0.7 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-refinery.ogg", volume = 0.7 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -300,7 +300,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/ore-refinery-lights.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/ore-refinery-lights.png",
           priority = "extra-high",
           width = 221,
           height = 256,
@@ -309,7 +309,7 @@ data:extend({
           blend_mode = "additive-soft",
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-ore-refinery-lights.png",
                 priority = "extra-high",
                 width = 440,
                 height = 509,
@@ -388,14 +388,14 @@ data:extend({
         always_draw = true,
         render_layer = "wires",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-refinery/stack-patch-overlay.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/stack-patch-overlay.png",
           priority = "extra-high",
           width = 22,
           height = 12,
           shift = util.by_pixel(-30, -123),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-refinery/hr-stack-patch-overlay.png",
                 priority = "extra-high",
                 width = 46,
                 height = 25,

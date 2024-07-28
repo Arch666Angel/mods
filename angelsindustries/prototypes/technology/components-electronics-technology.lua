@@ -19,7 +19,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-red-circuit",
-      icon = "__angelsindustries__/graphics/technology/red-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/red-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-solder-smelting-basic",
@@ -63,7 +63,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-green-circuit",
-      icon = "__angelsindustries__/graphics/technology/green-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/green-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-red-circuit",
@@ -112,7 +112,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-orange-circuit",
-      icon = "__angelsindustries__/graphics/technology/orange-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/orange-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-circuit",
@@ -160,7 +160,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-blue-circuit",
-      icon = "__angelsindustries__/graphics/technology/blue-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/blue-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-circuit",
@@ -208,7 +208,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-yellow-circuit",
-      icon = "__angelsindustries__/graphics/technology/yellow-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/yellow-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-blue-circuit",

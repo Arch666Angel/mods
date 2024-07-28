@@ -18,10 +18,10 @@ data:extend({
     order = "a",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/liquid-fermentation-raw.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/liquid-fermentation-raw.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-corn.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-corn.png",
         scale = 0.4375,
         shift = { -10, -10 },
       },
@@ -52,10 +52,10 @@ data:extend({
     order = "b",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/liquid-fermentation-raw.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/liquid-fermentation-raw.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-fruit.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-fruit.png",
         scale = 0.4375,
         shift = { -10, -10 },
       },
@@ -85,7 +85,7 @@ data:extend({
     main_product = "liquid-acetic-acid",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-acid.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-acetic-acid",
@@ -113,7 +113,7 @@ data:extend({
     main_product = "gas-ethanol",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-ethanol.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-ethanol",
@@ -141,7 +141,7 @@ data:extend({
     main_product = "gas-ethylene",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-ethylene",
@@ -172,7 +172,7 @@ data:extend({
     main_product = "liquid-acetic-acid",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-acetic-acid.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-acid.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-acetic-acid",
@@ -200,7 +200,7 @@ data:extend({
     main_product = "liquid-acetic-anhydride",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-acetic-anhydride.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-anhydride.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-acetic-anhydride",
@@ -254,7 +254,7 @@ data:extend({
     main_product = "liquid-cellulose-acetate",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-cellulose-acetate.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-cellulose-acetate.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-cellulose-acetate",
@@ -311,7 +311,7 @@ data:extend({
     main_product = "liquid-propionic-acid",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelsbioprocessing__/graphics/icons/molecule-propionic-acid.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-propionic-acid.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "liquid-propionic-acid",

@@ -83,7 +83,7 @@ data:extend({
   --[[{
       type = "recipe",
       name = "circuit-wood-fiber-board",
-      icon = "__angelsbioprocessing__/graphics/icons/wood-fiber-board.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-fiber-board.png",
       category = "advanced-crafting",
       subgroup = "bio-processing-brown",
       enabled = false,
@@ -119,7 +119,7 @@ data:extend({
     },
     icons = AF.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-green.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -142,7 +142,7 @@ data:extend({
     },
     icons = AF.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-green.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -162,7 +162,7 @@ data:extend({
     results = {
       { type = "item", name = "cellulose-fiber", amount = 5 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/cellulose-fiber-algae.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/cellulose-fiber-algae.png",
     icon_size = 32,
     order = "b[cellulose-fiber-algae]",
   },
@@ -181,7 +181,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_fluid_recipe_tint("gas-methanol"),
     order = "k[gas-methanol-from-wood]",
@@ -201,7 +201,7 @@ data:extend({
     results = {
       { type = "item", name = "algae-blue", amount = 40 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/algae-blue.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-blue.png",
     icon_size = 32,
     order = "a[algae-blue]",
   },
@@ -218,7 +218,7 @@ data:extend({
     results = {
       { type = "item", name = "blue-cellulose-fiber", amount = 5 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/blue-cellulose-fiber.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/blue-cellulose-fiber.png",
     icon_size = 32,
     order = "b[blue-fiber-algae]",
   },
@@ -237,7 +237,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
     }, "NHH"),
     crafting_machine_tint = AF.get_fluid_recipe_tint("gas-ammonia"),
     order = "c[gas-ammonia-from-blue-fiber]",
@@ -257,7 +257,7 @@ data:extend({
     results = {
       { type = "item", name = "algae-red", amount = 40 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/algae-red.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-red.png",
     icon_size = 32,
     order = "a[algae-red]",
   },
@@ -274,7 +274,7 @@ data:extend({
     results = {
       { type = "item", name = "red-cellulose-fiber", amount = 5 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/red-cellulose-fiber.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/red-cellulose-fiber.png",
     icon_size = 32,
     order = "b[red-fiber-algae]",
   },
@@ -291,7 +291,7 @@ data:extend({
     results = {
       { type = "item", name = "solid-calcium-carbonate", amount = 5 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       tints["solid-calcium-carbonate"],

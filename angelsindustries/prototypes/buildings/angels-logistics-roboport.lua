@@ -6,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "cargo-roboport",
-    icon = "__angelsindustries__/graphics/icons/cargo-roboport.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-roboport.png",
     icon_size = 32,
     subgroup = "angels-cargo-ports",
     order = "a[roboport]-a",
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "roboport",
     name = "cargo-roboport",
-    icon = "__angelsindustries__/graphics/icons/cargo-roboport.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-roboport.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "cargo-roboport" },
@@ -48,13 +48,13 @@ data:extend({
       { 1.5, -4 },
     },
     base = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport.png",
       width = 320,
       height = 320,
       shift = { 1, -1 },
     },
     base_patch = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-patch.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-patch.png",
       priority = "medium",
       width = 96,
       height = 96,
@@ -62,7 +62,7 @@ data:extend({
       shift = { 46 / 32, -13 / 32 },
     },
     base_animation = {
-      filename = "__angelsindustries__/graphics/entity/empty.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       priority = "medium",
       width = 1,
       height = 1,
@@ -70,7 +70,7 @@ data:extend({
       shift = { 0, 0 },
     },
     door_animation_up = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -78,7 +78,7 @@ data:extend({
       shift = { 1.5, -1 },
     },
     door_animation_down = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -86,7 +86,7 @@ data:extend({
       shift = { 1.5, 0 },
     },
     recharging_animation = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
       priority = "high",
       width = 74,
       height = 70,
@@ -129,7 +129,7 @@ data:extend({
   {
     type = "item",
     name = "cargo-hub",
-    icon = "__angelsindustries__/graphics/icons/cargo-hub.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-hub.png",
     icon_size = 32,
     subgroup = "angels-cargo-ports",
     order = "a[roboport]-c",
@@ -139,7 +139,7 @@ data:extend({
   {
     type = "roboport",
     name = "cargo-hub",
-    icon = "__angelsindustries__/graphics/icons/cargo-hub.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-hub.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "cargo-hub" },
@@ -173,13 +173,13 @@ data:extend({
       { -1.5, -3 },
     },
     base = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-hub.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-hub.png",
       width = 320,
       height = 320,
       shift = { 0.5, -0.25 },
     },
     base_patch = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-hub-patch.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-hub-patch.png",
       priority = "medium",
       width = 96,
       height = 96,
@@ -187,7 +187,7 @@ data:extend({
       shift = { 0, -0.25 },
     },
     base_animation = {
-      filename = "__angelsindustries__/graphics/entity/empty.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       priority = "medium",
       width = 1,
       height = 1,
@@ -195,7 +195,7 @@ data:extend({
       shift = { 0, 0 },
     },
     door_animation_up = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -203,7 +203,7 @@ data:extend({
       shift = { 0, -1 },
     },
     door_animation_down = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -211,7 +211,7 @@ data:extend({
       shift = { 0, 0 },
     },
     recharging_animation = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
       priority = "high",
       width = 74,
       height = 70,
@@ -254,7 +254,7 @@ data:extend({
   {
     type = "item",
     name = "cargo-box",
-    icon = "__angelsindustries__/graphics/icons/cargo-box-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-box-icon.png",
     icon_size = 32,
     subgroup = "angels-cargo-ports",
     order = "a[roboport]-b",
@@ -264,7 +264,7 @@ data:extend({
   {
     type = "roboport",
     name = "cargo-box",
-    icon = "__angelsindustries__/graphics/icons/cargo-box-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-box-icon.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "cargo-box" },
@@ -294,13 +294,13 @@ data:extend({
       { 1.5, -2.25 },
     },
     base = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-box.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-box.png",
       width = 192,
       height = 192,
       shift = { 0, -0.75 },
     },
     base_patch = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-box-patch.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-box-patch.png",
       priority = "medium",
       width = 96,
       height = 96,
@@ -308,7 +308,7 @@ data:extend({
       shift = { 0, -0.75 },
     },
     base_animation = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-box-animation.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-box-animation.png",
       priority = "medium",
       width = 32,
       height = 32,
@@ -318,7 +318,7 @@ data:extend({
       animation_speed = 0.5,
     },
     door_animation_up = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-up.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -326,7 +326,7 @@ data:extend({
       shift = { 0, -40 / 32 },
     },
     door_animation_down = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargo-roboport-door-down.png",
       priority = "medium",
       width = 64,
       height = 32,
@@ -334,7 +334,7 @@ data:extend({
       shift = { 0, -8 / 32 },
     },
     recharging_animation = {
-      filename = "__angelsindustries__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-roboport/cargoroboport-recharging.png",
       priority = "high",
       width = 74,
       height = 70,

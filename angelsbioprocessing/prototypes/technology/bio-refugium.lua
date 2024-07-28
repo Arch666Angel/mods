@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-fish-1",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-fish-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-fish-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -47,7 +47,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-fish-2",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-fish-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-fish-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -86,7 +86,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-hatchery",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-hatchery-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-hatchery-tech.png",
     icon_size = 160,
     order = "c-a",
     prerequisites = {
@@ -133,7 +133,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-puffer-1",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-puffer-2",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -232,7 +232,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-puffer-3",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -275,7 +275,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-puffer-4",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -318,7 +318,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-biter-1",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -378,7 +378,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-biter-2",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -426,7 +426,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-biter-3",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-biter-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -475,7 +475,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-hogger",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     hidden = true,
     enabled = false,
@@ -562,7 +562,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-butchery-1",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-butchery-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-butchery-tech.png",
     icon_size = 160,
     order = "c-a",
     prerequisites = {
@@ -606,7 +606,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-refugium-butchery-2",
-    icon = "__angelsbioprocessing__/graphics/technology/bio-refugium-butchery-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-butchery-tech.png",
     icon_size = 160,
     order = "c-a",
     prerequisites = {

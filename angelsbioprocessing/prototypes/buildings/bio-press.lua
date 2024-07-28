@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "bio-press",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-press.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-press.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-b",
     order = "d",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-press",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-press.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-press.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-press" },
@@ -36,7 +36,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/bio-press/bio-press.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-press/bio-press.png",
       width = 160,
       height = 160,
       line_length = 5,

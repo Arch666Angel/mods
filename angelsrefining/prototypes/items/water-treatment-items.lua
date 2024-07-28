@@ -26,7 +26,7 @@ data:extend({
   {
     type = "item",
     name = "solid-mud",
-    icon = "__angelsrefining__/graphics/icons/solid-mud.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-mud.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "item",
     name = "solid-limestone",
-    icon = "__angelsrefining__/graphics/icons/solid-limestone.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sand",
-    icon = "__angelsrefining__/graphics/icons/solid-sand.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-sand.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -50,7 +50,7 @@ data:extend({
   {
     type = "item",
     name = "solid-clay",
-    icon = "__angelsrefining__/graphics/icons/solid-clay.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-clay.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "item",
     name = "solid-salt",
-    icon = "__angelsrefining__/graphics/icons/solid-salt.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-salt.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "item",
     name = "solid-lithium",
-    icon = "__angelsrefining__/graphics/icons/solid-lithium.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-lithium.png",
     icon_size = 32,
     subgroup = "water-salination",
     stack_size = 200,
@@ -257,18 +257,18 @@ data:extend({
     name = "water-void",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/icons/angels-gas/gas-recipe-mid.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-recipe-mid.png",
         icon_size = 750,
         scale = 32 / 750,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/clarifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.7 * 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 0.4,
         shift = { 9.6, 9.6 },

@@ -75,7 +75,7 @@ data:extend({
       },
       { type = "fluid", name = "gas-acid", amount = 220 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
     icon_size = 32,
     order = "aa",
   },
@@ -105,7 +105,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20 },
       { type = "fluid", name = "gas-raw-1", amount = 200 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
     icon_size = 32,
     order = "ab",
   },
@@ -135,7 +135,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20 },
       { type = "fluid", name = "gas-urea", amount = 200 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
     icon_size = 32,
     order = "ac",
   },
@@ -165,7 +165,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20 },
       { type = "fluid", name = "gas-synthesis", amount = 200 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-4-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-icon.png",
     icon_size = 32,
     order = "ad",
   },
@@ -195,7 +195,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20 },
       { type = "fluid", name = "gas-hydrazine", amount = 200 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-5-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-icon.png",
     icon_size = 32,
     order = "ae",
   },
@@ -246,15 +246,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/empty_icon.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -300,15 +300,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/empty_icon.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -354,15 +354,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/empty_icon.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -408,15 +408,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/empty_icon.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-4-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -462,15 +462,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/empty_icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/empty_icon.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-5-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -529,10 +529,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
       },
     },
     icon_size = 32,
@@ -586,10 +586,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
       },
     },
     icon_size = 32,
@@ -643,10 +643,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
       },
     },
     icon_size = 32,
@@ -700,10 +700,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-4-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-icon.png",
       },
     },
     icon_size = 32,
@@ -757,10 +757,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-5-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-icon.png",
       },
     },
     icon_size = 32,
@@ -791,15 +791,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -829,15 +829,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -867,15 +867,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -905,15 +905,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-4-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -943,15 +943,15 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
         shift = { -5, 5 },
         scale = 0.75,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/puffer-5-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-icon.png",
         shift = { 5, -5 },
         scale = 0.75,
       },
@@ -978,7 +978,7 @@ data:extend({
       { type = "item", name = "bio-puffer-1", amount = 1, probability = 0.95 },
       { type = "item", name = "bio-puffer-2", amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-1-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-egg.png",
     icon_size = 32,
     order = "aa",
   },
@@ -998,7 +998,7 @@ data:extend({
       { type = "item", name = "bio-puffer-2", amount = 1, probability = 0.8 },
       { type = "item", name = "bio-puffer-1", amount = 1, probability = 0.2, show_details_in_recipe_tooltip = false },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-2-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-egg.png",
     icon_size = 32,
     order = "ab",
   },
@@ -1018,7 +1018,7 @@ data:extend({
       { type = "item", name = "bio-puffer-3", amount = 1, probability = 0.7 },
       { type = "item", name = "bio-puffer-1", amount = 1, probability = 0.3, show_details_in_recipe_tooltip = false },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-3-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-egg.png",
     icon_size = 32,
     order = "ac",
   },
@@ -1038,7 +1038,7 @@ data:extend({
       { type = "item", name = "bio-puffer-4", amount = 1, probability = 0.6 },
       { type = "item", name = "bio-puffer-1", amount = 1, probability = 0.4, show_details_in_recipe_tooltip = false },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-4-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-egg.png",
     icon_size = 32,
     order = "ad",
   },
@@ -1058,7 +1058,7 @@ data:extend({
       { type = "item", name = "bio-puffer-5", amount = 1, probability = 0.5 },
       { type = "item", name = "bio-puffer-1", amount = 1, probability = 0.5, show_details_in_recipe_tooltip = false },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-5-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-egg.png",
     icon_size = 32,
     order = "ae",
   },
@@ -1079,7 +1079,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "aa",
   },
@@ -1097,7 +1097,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ab",
   },
@@ -1115,7 +1115,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ac",
   },
@@ -1133,7 +1133,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ad",
   },
@@ -1151,7 +1151,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ae",
   },

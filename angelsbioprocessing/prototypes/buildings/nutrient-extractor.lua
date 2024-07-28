@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "nutrient-extractor",
-    icon = "__angelsbioprocessing__/graphics/icons/nutrient-extractor.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/nutrient-extractor.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-b",
     order = "d",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nutrient-extractor",
-    icon = "__angelsbioprocessing__/graphics/icons/nutrient-extractor.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/nutrient-extractor.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "nutrient-extractor" },
@@ -37,7 +37,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/nutrient-extractor/nutrient-extractor.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/nutrient-extractor/nutrient-extractor.png",
       width = 160,
       height = 160,
       line_length = 5,

@@ -4,7 +4,7 @@ data:extend({
     name = "casting-machine",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "casting-machine",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -52,7 +52,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
           priority = "high",
           width = 104,
           height = 123,
@@ -62,7 +62,7 @@ data:extend({
           shift = util.by_pixel(1, -2),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-base.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -75,7 +75,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
           priority = "high",
           width = 125,
           height = 104,
@@ -86,7 +86,7 @@ data:extend({
           shift = util.by_pixel(12, 9),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
                 priority = "high",
                 width = 248,
                 height = 206,
@@ -136,7 +136,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
           priority = "high",
           width = 111,
           height = 104,
@@ -144,7 +144,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -157,7 +157,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/casting-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -168,7 +168,7 @@ data:extend({
     name = "casting-machine-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -184,7 +184,7 @@ data:extend({
     name = "casting-machine-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -216,7 +216,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
           priority = "high",
           width = 104,
           height = 123,
@@ -226,7 +226,7 @@ data:extend({
           shift = util.by_pixel(1, -2),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-base.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -239,7 +239,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
           priority = "high",
           width = 125,
           height = 104,
@@ -250,7 +250,7 @@ data:extend({
           shift = util.by_pixel(12, 9),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
                 priority = "high",
                 width = 248,
                 height = 206,
@@ -300,7 +300,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
           priority = "high",
           width = 111,
           height = 104,
@@ -308,7 +308,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -321,7 +321,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/casting-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -332,7 +332,7 @@ data:extend({
     name = "casting-machine-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -348,7 +348,7 @@ data:extend({
     name = "casting-machine-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -380,7 +380,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
           priority = "high",
           width = 104,
           height = 123,
@@ -390,7 +390,7 @@ data:extend({
           shift = util.by_pixel(1, -2),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-base.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -403,7 +403,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
           priority = "high",
           width = 125,
           height = 104,
@@ -414,7 +414,7 @@ data:extend({
           shift = util.by_pixel(12, 9),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
                 priority = "high",
                 width = 248,
                 height = 206,
@@ -464,7 +464,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
           priority = "high",
           width = 111,
           height = 104,
@@ -472,7 +472,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -485,7 +485,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/casting-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -496,7 +496,7 @@ data:extend({
     name = "casting-machine-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -512,7 +512,7 @@ data:extend({
     name = "casting-machine-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -543,7 +543,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
           priority = "high",
           width = 104,
           height = 123,
@@ -553,7 +553,7 @@ data:extend({
           shift = util.by_pixel(1, -2),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-base.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -566,7 +566,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
           priority = "high",
           width = 125,
           height = 104,
@@ -577,7 +577,7 @@ data:extend({
           shift = util.by_pixel(12, 9),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-shadow.png",
                 priority = "high",
                 width = 248,
                 height = 206,
@@ -627,7 +627,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting__/graphics/entity/casting-machine/casting-machine-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
           priority = "high",
           width = 111,
           height = 104,
@@ -635,7 +635,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/casting-machine/hr-casting-machine-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/hr-casting-machine-light.png",
                 priority = "high",
                 width = 205,
                 height = 244,
@@ -648,7 +648,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/casting-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

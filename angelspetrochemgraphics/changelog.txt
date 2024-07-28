@@ -1,0 +1,749 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: ???
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
+    - Updated for Factorio 2.0 (994)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.26
+Date: 21.02.2024
+  Changes:
+    - Removed dependencies that are no longer relevant (975)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.25
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+    - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)
+    - Combined techs Oil Steam cracking and Gas Steam Cracking (951)
+  Bugfixes:
+    - Fixed recipe order of carbon products to correctly display in helmod
+    - Fixed fertiliser not being craftable in mod configurations (924)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.24
+Date: 23.02.2023
+  Bugfixes:
+    - Fixed Nitroglycerin and explosives 2 and 3 could not be crafted in any machine (888)
+    - Fixed Bob's fertilizer could not be crafted in any machine (bob greenhouses) (888)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.23
+Date: 01.01.2023
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Advance chemical plant 1
+      - Advanced gas refinery 4
+      - Air filter 1
+      - Chemical plant
+      - Flare stack
+      - Oil refinery 1
+      - Petrochem small inline tank
+      - Steam cracker 1
+    - Made Chemical plants unlock earlier in tech tree
+    - Moved Red metal catalyst to Basic chemistry 3
+    - Moved Ammonia synthesis recipe to Nitrogen processing 2
+    - Changed the science pack tier of some techs
+      - Advanced chemistry 2
+      - Flare stack tech
+      - Rubber
+    - Removed liquification category from chemplants & adv. chemplants (854)
+    - Removed chemistry category from adv. chemplants (854)
+    - Changed which building some recipes require (802)
+      - Atomic bomb moved from Assembling machine to Advanced chemical plant
+      - Cupric chloride solution moved from Chemical plant to Liquefier
+      - Ferric chloride solution moved from Chemical plant to Liquefier
+      - Hydrochloric acid from salt moved from Chemical plant to Liquefier
+      - Hydrofluoric acid synthesis moved from Chemical plant to Liquefier
+      - Monochloramine gas moved from Chemical plant to Liquefier
+      - Nitric acid from Sodium nitrate moved from Chemical plant to Liquefier
+      - Sodium cyanide moved from Liquefier to Chemical plant
+      - Sodium perchlorate moved from Liquefier to Chemical plant
+      - Solid fuel recipes moved from Liquefier to Chemical plant
+      - Sulfur dioxide gas moved from Chemical plant to Liquefier
+    - Split tech Advanced chemistry 3 (805)
+    - Added Air filter 3 (853)
+      - Reduced module slots of Air filter 1 (2 -> 0) and Air filter 2 (2 -> 1)
+      - Reduced speed of Air filter 2 to 1.5
+    - Aligned refining and fractioning inputs, outputs and icons (863)
+      - Oil Refining now only uses a single input pipe, the same pipe used in the advanced refining recipes
+        (Advanced light oil refining, Oil and condensates refining, Advanced heavy oil refining)
+      - Gas fractioning now only uses a single input pipe, the same pipe used in the advanced fractioning recipes
+        (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
+      - Gas fractioning now only uses the first three output pipes, the same pipes used in the advanced fractioning recipes
+        (Advanced heavy gas refining, Advanced light gas refining, Advanced medium gas refining)
+      - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
+    - Updated sound volume of the following buildings: (482)
+      - Chemical plant, Advanced chemical plant
+      - Air filter
+      - Electric boiler
+      - Electrolyser
+      - Oil refinery
+      - Gas separator, Steam cracker
+  Bugfixes:
+    - Fixed machine output arrows (839)
+    - Make Oil refineries scale their recipe icons to match vanilla (874)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.22
+Date: 06.06.2022
+  Changes:
+    - Removed excessive logging entries from the log file (743)
+    - Lowered the fuel value of crude to 35% to be more inline with the other fuels
+    - Hid Ammonium chloride recycling recipe from Bob's revamp (769)
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.21
+Date: 19.12.2021
+  Changes:
+    - Added HQ graphics to the following machines, and tweaked their sounds:
+      - Flare stack
+      - Petrochem gas tank, Petrochem oil tank, Petrochem inline tank
+      - Gas refinery, Advanced gas refinery
+    - Dynamically disable Resin and Rubber when required
+    - Updated Hydrazine recipe to take Blue metal catalyst instead of Green (692)
+    - Added ingredient Yellow metal catalyst to Dinitrogen tetroxide recipe (692)
+    - Moved Dinitrogen tetroxide recipe from Liquefier to Chemical plant (692)
+    - Tweaked some technology tree prerequisites (724)
+    - Removed the oxygen from the products of sodium hydroxide electrolysis to prevent excess oxygen in cyclic recipe (698)
+  Bugfixes:
+    - Fixed some technologies still depended on electrolysis 1 and 2 in some configurations (665)
+    - Fixed bug where oil separators could not be upgraded with the upgrade planner (677)
+    - Fixed bug where gas refinery 3 could not be upgraded with the upgrade planner (677)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.20
+Date: 10.08.2021
+  Bugfixes:
+    - Changed prerequisites of plastic before advanced electronics technology
+    - Fixed emissions_multiplier were not applied correctly
+    - Fixed bobs chemical plant 1, distillery 1 and electrolyser 1 were not unlocked correctly
+    - Fixed heavy water separation did not enforce the fluid temperature constraint correctly
+    - Added some tips-and-tricks for new players (around air separation, more to come)
+    - Cleaned up old migrations
+    - Rebalanced rubber usage in insuated wire recipes depending on rubber from wood ratio (606)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.19
+Date: 31.05.2021
+  Bugfixes:
+    - Changed prerequisites of plastic before advanced electronics technology
+---------------------------------------------------------------------------------------------------
+Version: 0.9.18
+Date: 26.05.2021
+  Changes:
+    - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled bobs valve as angels valves have an identical purpose with more features
+    - Added fuel values for vanilla fuels (for compatibility) (494)
+    - Removed obsolete inventory slots in the flare stack and converter valve
+    - Added fuel value containing fluids to the flamethrower turret accepted fluids
+      - Damage multiplier is a function of fuel value ratio with methane for "new" fuels
+    - Changed and expanded locale strings and text descriptions (489)
+  Bugfixes:
+    - Fixed that the converter valve could not be disabled (507)
+    - Fixed a crash in a very old migration script (535)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.17
+Date: 26.11.2020
+  Changes:
+    - Updated to factorio version 1.1
+    - Reviewed crude oil fuel value (its fine) 
+---------------------------------------------------------------------------------------------------
+Version: 0.9.16
+Date: 16.11.2020
+  Changes:
+    - Swapped the gas technology icons over to use the angels lib common icons
+    - Removed obsolete icons from mod folder
+    - Seperated fluor processing from sulfur processing 2 technology (428)
+  Bugfixes:
+    - Slightly increased power of electric boiler to prevent perpetual energy generation (423)
+    - Fixed fluid color of enriched water fluids
+    - Fixed pipe and animation of gasses were showing liquids
+    - Revised many inconsistencies in technology dependencies (428)
+    - Moved Calcium chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
+    - Fixed Cupric chloride solution did not have a voiding recipe (439)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.15
+Date: 29.10.2020
+  Changes:
+    - Added Ethylene oxide gas and Ethylene carbonate liquid when playing with angels industries
+      and component mode is enabled (397)
+    - Migrated valve-check to valve-inspector and updated localisations (399)
+    - Some minor localisation changes to unify angels localisation across mods (372)
+    - Removed obsolete Chemical plant research from bobrevamp when disabling bobs chem plants (335)
+  Bugfixes:
+    - Fixed Solid resin item localisation (364)
+    - Fixed Liquid rubber fluid color (409)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.14
+Date: 20.08.2020
+  Changes:
+    - Updated to base game 1.0
+    - Lubricant is now green science when needed
+    - Several fluids have had their state changed to be more appropriate (323)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.13
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+  Bugfixes:
+    - Fixed platinum would be enabled without any use. This might have an influence on your
+      catalyst recipes requiring different ores!
+---------------------------------------------------------------------------------------------------
+Version: 0.9.12
+Date: 10.07.2020
+  Changes:
+    - Rockets now require rocket boosters as ingredients (309)
+    - Added recipe to revert Hydrofluoric Acid to Hydrogen Fluoride Gas (319)
+    - Added support for the new bob salt recipes (313)
+    - Moved chlorine processing 2 to green science (required for bobwarfare)
+    - Nitroglycering now takes nitric and sulfuric acid directly instead of a mixture of both
+    - Added setting to disable bobs distilleries (322)
+    - Added setting to disable base game chemical plant (236)
+  Bugfixes:
+    - Altered the localisation (and icons) for the sulfur scrubbing recipes for convenience (320)
+    - Fixed the Oil Well was still called Crude Oil
+    - Fixed bobs version of liquid fuel barreling recipe was still available
+    - Fixed missing dependency of nitroglycerin processing on sulfur processing
+    - Fixed bobs air compressors were hidden, but the items were still showing
+    - Added some missing dependencies on technologies
+    - Fixed accidently enabling platinum ore when angels industries is not present (287)
+    - Fixed incorrect behaviour of the converter valve setting and improved implementation
+    - Shifted the flame on top of the flare stack so it's centered on the flare tower
+---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 05.06.2020
+  Bugfixes:
+    - Fixed bobs carbon dioxide got replaced with the wrong angels fluid (was hydrogen sulfide)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.10
+Date: 01.06.2020
+  Bugfixes:
+    - Enriched Fuel Block from bobs added to unlocks (#261)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.9
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+    - Moved productivity from solid rubber to liquid rubber so it is similar to plastic and resin
+    - Enable deuterium when playing with angels industry overhaul
+    - Introduced Hydrogen Fluoride Gas as intermediate of Hydrofluoric Acid
+  Bugfixes:
+    - Fixed some wrong colors on fluid recipe icons of Epichlorohydrin Gas and Phosgene Gas
+    - Hidden some unused bob technologies related to deuterium
+    - Fixed typo in Allyl Chloride Gas localisation
+    - MP safer method of requiring files (check inside the file instead of around)
+    - Fixed barreling of heavy and semi heavy water, now only possible at 25°
+    - Fixed Base Mineral Oil Catalysation was listed as chemistry instead of advanced chemistry (244)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: 20.04.2020
+  Bugfixes:
+    - Fixed bobs revamp hardmode startup
+---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 12.04.2020
+  Changes:
+    - Rebalanced bobs liquid fuel (energy value) and
+    - Rebalanced bobs enriched fuel block recipe to need more liquid fuel
+    - Prefer the new solid resin recipe from bio over bob mods
+  Bugfixes:
+    - Fixed typo on liquid fuel oil's fuel_value (#167)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: 02.04.2020
+  Changes:
+    - Excluded Chemical Plant recipe from marathon mode when it is required for science packs
+    - Remove tech for electrolyser/chem plant 2+ when its disabled #132
+  Bugfixes:
+    - Fixed oil refinery didn't have fast_replaceable_group set
+    - Fixed crash when bob pure water was disabled
+    - Fixed missing localisation for heavy water separation recipes
+    - Fixed failed attempt (in 0.9.5) on re-enabling rocket-fuel on existing saves
+    - Fixed higher tier boilers required multiple of the previous tier with ingredient multiplier
+    - Fixed startup error with bobrevamp and missing bobplates
+---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 24.03.2020
+  Changes:
+    - Make buildings upgradeable #119
+  Bugfixes:
+    - Fixed production science pack required bobs chemical plant instead of angels version
+    - Re-enable rocket-fuel on existing saves.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.4
+Date: 20.03.2020
+  Changes:
+    - Chemical recipes now always show the result products for lookup convenience
+    - Added high resolution gas and liquid icons, including higher resolution molecules
+    - Moved bobplates overrides in separate file
+    - Added bobs electrolysis to angels electrolysers #56
+    - Added option to disable bobs electrolysers #56
+    - Added option to disable bobs chemical plants #56
+    - Merged the rocket-fuel recipes #66
+    - Removed separate solid fuel check completely #66
+    - Added nuclear fuel tech since requirements for rocket fuel is different #66
+    - Disabled coal liquefaction
+    - Fully replaced Bob's Lithium Chloride with Angels Lithia Salt #71
+    - Replaced oil in flamethrower and ammo for naptha/fuel-oil #88
+    - Changed used electrode recipe to use purified water
+    - Added Sodium Nitrate and related recipes
+    - Added Saline Water from Water & Salt recipe
+    - Moved solid fuels for bobrevamps
+    - Added processing cycle for deuterium when it is present
+    - Added multiple tiers for electric boilers
+    - Separated tech for boilers, included recipe for steam
+  Bugfixes:
+    - Fixed crashes when bobs assembly was enabled with electrolysers disabled
+    - Added missing (water) void recipe for Sodium Hydroxide Solution
+---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: 22.02.2020
+  Bugfixes:
+    - Fixed crashes related to playing without angelssmelting
+---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 22.02.2020
+  Changes:
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
+    - Updated fuel values to be based on volume not mass (and globally balanced down) GH#38
+      - For reference Hydrogen is only 33kJ now
+  Bugfixes:
+    - Fixes incorrect presets for natural-gas
+    - Marked the Metal Catalyst Carrier result in recipes as a catalyst ingredient
+    - Added all bobs electrolysers to include the angels recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 12.02.2020
+  Changes:
+    - Changed richness multiplier of natural-gas so its more in line with crude-oil
+  Bugfixes:
+    - Fixed error on override on (bobs) chemical plants (and electrolysers) when they where not available
+---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 09.02.2020
+  Changes:
+    - Updated to 0.18
+    - Added missing localisations
+    - Organised the recipes a bit to be found easier
+    - Cleaned up fluid signals if conversion recipes are disabled
+    - Added fuel values to various fluids if bobs mods is active
+    - Liquid fuel requires additional Residual gas
+    - Removed some obsolete localisations on the petrochem tanks
+    - If bobs mods are activated, increases the storage capacity of the petrochem tanks
+  Bugfixes:
+    - Fixed changelog not showing up
+    - Fixed Ferrous/Cupric Anode Sludge required the wrong Chloride solution
+---------------------------------------------------------------------------------------------------
+Version: 0.8.6
+Date: 11.06.2019
+  Changes:
+    - changed fast replace for gas refinery
+    - collected tanks in their own group in fluid handling tab
+---------------------------------------------------------------------------------------------------
+Version: 0.8.5
+Date: 31.05.2019
+  Changes:
+    - changed tech requirements for flare stack
+---------------------------------------------------------------------------------------------------
+Version: 0.8.4
+Date: 31.05.2019
+  Changes:
+    - update to localization
+    - tweak to use of electrodes
+    - merge for bobs hydrogen sulfide
+---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 26.04.2019
+  Changes:
+    - update to several icons
+    - added basic chemistry 3
+    - added electrolyser electrodes
+    - added tier 2 electrolyser recipes
+    - changed carbon recipe
+    - added sodium hydroxide solution
+    - added sodium hydroxide solution handling recipes
+    - adjusted rocket booster fuel value to 10 MJ
+---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+  Changes:
+    - update for the resource system
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+  Bugfixes:
+    - fixed a recipe mixup
+    - changed some overrides to use a function
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+  Changes:
+    - update to 0.17
+    - slight reduction in ammonia usage for rocket fuel
+---------------------------------------------------------------------------------------------------
+Version: 0.7.13
+  Bugfixes:
+    - added additional checks for special bob options
+---------------------------------------------------------------------------------------------------
+Version: 0.7.12
+  Changes:
+    - decreased amount of hydrogen chloride from hydrazine recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.7.11
+  Bugfixes:
+    - fixed an error
+---------------------------------------------------------------------------------------------------
+Version: 0.7.10
+  Changes:
+    - changed rubber chains to be analog to plastic and resin chains
+  Bugfixes:
+    - fixed porous-lime-filter error
+---------------------------------------------------------------------------------------------------
+Version: 0.7.9
+  Changes:
+    - added sulfur scrubbing recipes
+    - added sulfur processing 3
+---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+  Changes:
+    - balance pass on sulfur related recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+  Changes:
+    - added override for infinite uranium patches
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+  Changes:
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
+    - moved liquifiers to the correct subgroup
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
+  Changes:
+    - adjusted tech prerequisites to adjust for the tech shift in refining
+---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+  Changes:
+    - adjusted melamine and urea recipes to use less methane
+  Bugfixes:
+    - added missing localization strings
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+  Changes:
+    - added converter recipes for ferric chloride solution
+---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+  Bugfixes:
+    - building recipe fixes
+    - fix to electric boiler not outputting steam
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+  Bugfixes:
+    - building recipe fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+  Changes:
+    - update to 0.16
+    - added water-gas-shift and reverse-water-gas-shift reaction recipes
+    - added reskin for chemical plant
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+  Changes:
+    - added resin 3 recipe and precursor chemicals (phosgene and bisphenol-a)
+    - added additional sodium-sulfate recipes
+    - moved gas-well generation inside the mod
+    - consolidated explosive recipes to one category
+---------------------------------------------------------------------------------------------------
+Version: 0.5.14
+  Changes:
+    - increased power consumption for the electric boiler
+    - decreased pollution production for the electric boiler
+---------------------------------------------------------------------------------------------------
+Version: 0.5.13
+  Bugfixes:
+    - fixed crafting time for updated recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.5.12
+  Changes:
+    - tweaked some recipes for buildings
+    - added expensive recipes for all buildings
+    - adjusted electric boiler efficiency down to 80%
+    - adjusted bob wood to resin recipe to use 5 wood and take 5 seconds
+    - added expensive recipes for separation, plastic, resin and rubber
+---------------------------------------------------------------------------------------------------
+Version: 0.5.11
+  Changes:
+    - added electric boiler
+  Bugfixes:
+    - fixed animation on small gas refinery
+---------------------------------------------------------------------------------------------------
+Version: 0.5.10
+  Changes:
+    - added small inline storage tank
+    - added explosives technology and advanced explosives production recipes
+    - added rocket boosters, they work as fuel containers with speed boost for now
+    - added toluene processing as requirement for advanced explosives
+---------------------------------------------------------------------------------------------------
+Version: 0.5.9
+  Changes:
+    - added advanced gas processing tech
+    - added advanced gas refining with condensates recipe
+    - added advanced gas refining with syngas recipe
+    - added advanced oil refining with residual gas recipe
+    - increased storage tank density per tile to 500 (oil tank - 80k, gas tank 125k)
+    - split gas refinery to small and advanced variants
+    - disabled fluid splitters
+    - changed plastic production to use smelting mechanics: chemicals produce liquid plastic which is cast into bars, allows for easier expansion of plastic production
+  Bugfixes:
+    - added missing catalyst carrier to nitrogen-monoxide recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.5.8
+  Changes:
+    - adjusted to recent changes with bobs revamp
+    - added rocket fuel capsule and rocket oxidizer capsule
+    - replaced rocket fuel ingredients by fuel capsule and oxidizer capsule
+    - added nitrogen monoxide
+    - added dinitrogen tetroxide
+    - added option to disable converter recipes completely
+---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+  Bugfixes:
+    - fixed typo in acid override check that prevented new acids being added to rubyte and bobmonium
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+  Changes:
+    - changed steam cracking recipes to use steam instead of purified water
+  Bugfixes:
+    - added missing localization key
+    - added missing acid override for regular uranium ore
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+  Changes:
+    - adjusted fluid box for flare-stack
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+  Changes:
+    - removed the code to disable the crude oil barreling recipes.
+    - disabled double barreling recipes for overridden bobs and vanilla chemicals
+    - added migration for lubricant and ferric chloride barrels
+  Bugfixes:
+    - added fix for valve rotation
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+  Bugfixes:
+    - fixed acid override option
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+  Changes:
+    - moved heavy pump entity to refining
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+  Changes:
+    - update to 0.15
+    - converted trigger mods to mod options
+---------------------------------------------------------------------------------------------------
+Version: 0.4.9
+  Changes:
+    - removed double recipe unlock for hydrochloric acid
+  Bugfixes:
+    - internal fix for flare-stack not crafting with handyhands mod
+---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+  Changes:
+    - added productivity for plastic, resin and rubber recipes
+    - added coal processing prerequisites to sodium processing
+---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+  Changes:
+    - added fluorite override for UP
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+  Changes:
+    - added sodium sulfate separation recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+  Bugfixes:
+    - fix for empty barrel recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+  Bugfixes:
+    - small fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+  Changes:
+    - added sodium processing tech and recipes
+    - added support for smelting 0.2
+    - replaced some gfx with high-res variants
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+  Changes:
+    - added recipe for separating HCl into H + Cl
+    - increased chlorine amount produced by molten salt electrolysis to 20
+    - increased output of compressed air by the air filter to 20
+    - changed rocket fuel recipe to 30 hydrazine, 30 dimethylhydrazine, 10 nitric acid
+    - changed/buffed solid fuel recipes
+    - added crude oil barrel empty/fill recipes
+    - removed vanilla crude oil empty/fill recipes
+    - added vanilla mode (dependencies: angelsinfiniteores, angelsrefining)
+  Bugfixes:
+    - fixed icon for dimethylhydrazine
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+  Changes:
+    - converter recipes "converted" to using functions
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - added ferric chloride barrel
+    - fixed grouping order for some recipes
+    - moved refineries and chemical plants to the petrochem tab
+    - small internal restructure to be in line with refining
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+  Changes:
+    - changed sulfuric acid recipes to use purified water instead of hydrogen (that was an error)
+    - adjusted fluid colors
+    - fixed the order for some recipes in the crafting menu
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+  Changes:
+    - changed machine for the lubricant recipe from steam-cracker to chemical plant
+    - added module slots to flare stack
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+  Bugfixes:
+    - migration fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Bugfixes:
+    - migration fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Bugfixes:
+    - migration fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - added barreling
+    - moved fluid control and tanks group to new barreling and fluid control tab
+    - added molten salt electrolysis recipe
+    - tweaked solid fuel recipes
+    - added oil residual to oil-refinery recipes
+    - added heavy-pump back in as barreling machine
+  Bugfixes:
+    - fixed coke to carbon recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+  Changes:
+    - added description to tanks
+    - renamed air filter internally to fix a conflict with air filtering mod
+    - increased crafting time for compressed air
+    - added residual gas to additional steam cracking recipes, also added oil residual to oil processing
+  Bugfixes:
+    - fixed barrel stack sizes
+    - added missing flare stack/void recipe for crude oil
+    - fixed missing shadow for oil-tank
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+  Changes:
+    - added trigger to disable the acid override for refining
+    - added basic chemistry 2
+    - added chemical plant unlock to basic chemistry 2
+    - moved water electrolysis to basic chemistry 2
+    - moved purified water synthesis to basic chemistry 2
+    - moved calcium chloride recipe to basic chemistry 2
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - increased sulfur from hydrogen sulfide recipe
+    - added tie in for refining to use the other acids available with petrochem
+    - added earlier recipe for yellow waste water from crushed coal
+---------------------------------------------------------------------------------------------------
+Version: 0.1.15
+  Changes:
+    - moved catalyst recipes to tech unlocks
+    - added recipe products to localization strings of multiple output recipes
+    - added dirt water electrolysis recipe
+    - added sulfur processing 2 technology
+    - changed requirement for sulfur processing 1 to red science
+    - added recipe chain to produce perchloric acid (no use yet)
+    - added chlorine processing 3
+    - changed requirements for chlorine processing 1 and 2
+  Bugfixes:
+    - fixed a typo
+---------------------------------------------------------------------------------------------------
+Version: 0.1.14
+  Changes:
+    - added dependency for bobelectronics because of issues with carbon recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.13
+  Changes:
+    - added coal processing 2 technology
+    - moved coke pellet recipe to coal processing 2
+    - moved carbon-monoxide recipe to coal processing 2
+    - removed global override for lubricant, lubricant has to be mad from mineral oil again
+---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+  Changes:
+    - added bobgreenhouse as optional dependency
+    - added a dedicated lubricant recipe to oil processing
+    - change catalysts to be 4 generic ones, which have to be refilled after use
+---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+  Changes:
+    - replaced bobs liquid-air with petrochem compressed air
+    - removed bobs air to nitrogen recipe
+    - re-ordered placement of building recipes in the crafting menu
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+  Changes:
+    - changed optional dependency on angels refining and bob plates to fixed dependency
+    - added optional dependency for bio industries and marathon to fix issues with load order and overrides
+    - added aluminium catalyst recipe back in
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+  Changes:
+    - moved liquifier mk2 to advanced chemistry tech
+    - dded unlocks for liquifier mk3 and mk4
+  Bugfixes:
+    - fixed an override issue
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+  Changes:
+    - added rocket fuel chain and solid fuel from hydrazine
+    - changed production times (increased, 2 sec basic chemistry, 4 sec advanced chemistry and cracking, 6 sec fractioning and refining) on most recipes from the setup value of (1)
+    - overrides should now be complete
+    - updated splitter and flare stack recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+  Changes:
+    - added solid fuel recipes
+    - added purified water from hydrogen and oxygen recipe
+    - added synthesis gas from hydrogen and carbon-monoxide recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+  Changes:
+    - added specific icons for glycerol recipes
+    - changed another override
+    - added missing recipes to flare stack
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+  Bugfixes:
+    - fixed an error with the overrides it produced because of replacing sulfur processing
+    - added more localization strings
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+  Changes:
+    - added overrides to bobs
+    - moved heavy-pump to addon mod along with the full barrel recipes
+    - added small coal processing line
+    - added electrolyser
+    - added new recipes along the bob override
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+  Changes:
+    - added technologies
+    - added heavy-pump
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+  Changes:
+    - changed splitter to work in stop mode
+    - added temporary barrel recipes for all fluids
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+  Changes:
+    - initial release

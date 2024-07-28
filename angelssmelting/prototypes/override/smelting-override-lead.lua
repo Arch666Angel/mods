@@ -25,7 +25,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")
     angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
     angelsmods.functions.move_item("lead-oxide", "angels-lead", "d")
-    data.raw["item"]["lead-oxide"].icon = "__angelssmelting__/graphics/icons/solid-lead-oxide.png"
+    data.raw["item"]["lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
     data.raw["item"]["lead-oxide"].icon_size = 32
     data.raw["item"]["lead-oxide"].icon_mipmaps = 1
     OV.hide_recipe({ "bob-lead-plate", "lead-oxide", "lead-oxide-2" })
@@ -82,7 +82,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
     OV.global_replace_item("angels-plate-lead", "lead-plate")
     angelsmods.functions.add_flag("angels-plate-lead", "hidden")
     angelsmods.functions.move_item("lead-plate", "angels-lead-casting", "k")
-    data.raw["item"]["lead-plate"].icon = "__angelssmelting__/graphics/icons/plate-lead.png"
+    data.raw["item"]["lead-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png"
     data.raw["item"]["lead-plate"].icon_size = 32
     data.raw["item"]["lead-plate"].icon_mipmaps = 1
 
@@ -100,10 +100,10 @@ if angelsmods.trigger.smelting_products["lead"].plate then
         },
         icons = {
           {
-            icon = "__angelssmelting__/graphics/icons/plate-lead.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/ore-lead.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },

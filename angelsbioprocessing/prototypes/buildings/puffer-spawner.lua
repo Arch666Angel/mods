@@ -5,7 +5,7 @@ data:extend({
     type = "simple-entity-with-force",
     name = "puffer-egg",
     render_layer = "object",
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-1-egg.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-egg.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     order = "s-e-w-f",
@@ -15,7 +15,7 @@ data:extend({
     collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     picture = {
-      filename = "__angelsbioprocessing__/graphics/icons/puffer-1-egg.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-egg.png",
       priority = "extra-high",
       width = 32,
       height = 32,
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "unit-spawner",
     name = "biter-spawner",
-    icon = "__angelsbioprocessing__/graphics/icons/puffer-nest.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
     icon_size = 32,
     flags = { "placeable-player", "placeable-enemy", "not-repairable" },
     max_health = 350,
@@ -80,7 +80,7 @@ data:extend({
       {
         layers = {
           {
-            filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/puffer-nest-1-shadow.png",
+            filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/puffer-nest-1-shadow.png",
             width = 192,
             height = 192,
             line_length = 1,
@@ -88,7 +88,7 @@ data:extend({
             shift = def_shift,
           },
           {
-            filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/puffer-nest-1.png",
+            filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/puffer-nest-1.png",
             width = 192,
             height = 192,
             line_length = 1,
@@ -100,7 +100,7 @@ data:extend({
       {
         layers = {
           {
-            filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/puffer-nest-2-shadow.png",
+            filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/puffer-nest-2-shadow.png",
             width = 192,
             height = 192,
             line_length = 1,
@@ -108,7 +108,7 @@ data:extend({
             shift = def_shift,
           },
           {
-            filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/puffer-nest-2.png",
+            filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/puffer-nest-2.png",
             width = 192,
             height = 192,
             line_length = 1,

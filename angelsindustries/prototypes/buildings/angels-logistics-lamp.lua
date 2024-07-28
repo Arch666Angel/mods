@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "angels-lamp",
-    icon = "__angelsindustries__/graphics/icons/angels-lamp-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/angels-lamp-icon.png",
     icon_size = 64,
     subgroup = "circuit-network",
     order = "a[light]-a[small-lamp]-a[angels]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "lamp",
     name = "angels-lamp",
-    icon = "__angelsindustries__/graphics/icons/angels-lamp-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/angels-lamp-icon.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.1, result = "angels-lamp" },
@@ -33,7 +33,7 @@ data:extend({
     glow_size = 6,
     glow_color_intensity = 0.135,
     picture_off = {
-      filename = "__angelsindustries__/graphics/entity/lamp/lamp-off.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/lamp/lamp-off.png",
       priority = "high",
       width = 96,
       height = 96,
@@ -44,7 +44,7 @@ data:extend({
       scale = 0.5,
     },
     picture_on = {
-      filename = "__angelsindustries__/graphics/entity/lamp/lamp-on.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/lamp/lamp-on.png",
       priority = "high",
       width = 96,
       height = 96,

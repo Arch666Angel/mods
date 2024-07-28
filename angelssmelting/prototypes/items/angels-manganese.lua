@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "manganese-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-manganese",
-    icon = "__angelssmelting__/graphics/icons/processed-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-manganese",
-    icon = "__angelssmelting__/graphics/icons/pellet-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "solid-manganese-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-manganese-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-manganese-oxide.png",
     icon_size = 32,
     subgroup = "angels-manganese",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "cathode-manganese",
-    icon = "__angelssmelting__/graphics/icons/cathode-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cathode-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
     order = "e",
@@ -52,7 +52,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-manganese",
-    icon = "__angelssmelting__/graphics/icons/ingot-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese",
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "item",
     name = "powder-manganese",
-    icon = "__angelssmelting__/graphics/icons/powder-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-manganese",
-    icon = "__angelssmelting__/graphics/icons/molten-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese-casting",
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-manganese",
-    icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-manganese.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-manganese-casting",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-manganese",
-    icon = "__angelssmelting__/graphics/icons/plate-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese-casting",
     order = "j",

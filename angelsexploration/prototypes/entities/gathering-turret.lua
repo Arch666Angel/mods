@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "angels-gathering-turret",
-    icon = "__angelsexploration__/graphics/icons/gathering-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-electric-a",
@@ -21,7 +21,7 @@ data:extend({
     type = "container",
     name = "angels-gathering-turret-base",
 
-    icon = "__angelsexploration__/graphics/icons/gathering-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
 
@@ -74,7 +74,7 @@ data:extend({
     type = "electric-turret",
     name = "angels-gathering-turret",
 
-    icon = "__angelsexploration__/graphics/icons/gathering-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
 

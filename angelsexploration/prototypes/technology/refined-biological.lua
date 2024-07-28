@@ -4,7 +4,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-1",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -34,7 +34,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-2",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -64,7 +64,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-3",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -98,7 +98,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-4",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -133,7 +133,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-5",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -165,7 +165,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-6",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
@@ -197,7 +197,7 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-7",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",

@@ -238,10 +238,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/weapon-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/weapon-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/trigger.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/trigger.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -264,10 +264,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/weapon-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/weapon-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/explosion-chamber.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/explosion-chamber.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -290,10 +290,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/weapon-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/weapon-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/fluid-chamber.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/fluid-chamber.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -316,10 +316,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/weapon-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/weapon-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/energy-chamber.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/energy-chamber.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -342,10 +342,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/weapon-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/weapon-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/accelerator-coil.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/accelerator-coil.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },

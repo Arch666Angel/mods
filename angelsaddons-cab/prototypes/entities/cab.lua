@@ -48,7 +48,7 @@ data:extend({
       -- sound =
       -- {
       -- {
-      -- filename = "__angelsexploration__/sound/tank-cannon.ogg",
+      -- filename = "__angelsexplorationgraphics__/sound/tank-cannon.ogg",
       -- volume = 1.0
       -- }
       -- },
@@ -74,7 +74,7 @@ data:extend({
       -- sound =
       -- {
       -- {
-      -- filename = "__angelsexploration__/sound/tank-cannon.ogg",
+      -- filename = "__angelsexplorationgraphics__/sound/tank-cannon.ogg",
       -- volume = 1.0
       -- }
       -- },

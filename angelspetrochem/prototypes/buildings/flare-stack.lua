@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "angels-flare-stack",
-    icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "petrochem-buildings-steam",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "furnace",
     name = "angels-flare-stack",
-    icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -62,14 +62,14 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
             width = 71,
             height = 215,
             frame_count = 1,
             shift = util.by_pixel(-0.5, -64),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack.png",
               priority = "extra-high",
               frame_count = 1,
               width = 142,
@@ -80,7 +80,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
             width = 193,
             height = 69,
@@ -88,7 +88,7 @@ data:extend({
             shift = util.by_pixel(61.5, 10.5),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               draw_as_shadow = true,
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
               priority = "extra-high",
               width = 382,
               height = 135,
@@ -102,7 +102,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
             width = 71,
             height = 215,
@@ -110,7 +110,7 @@ data:extend({
             frame_count = 1,
             shift = util.by_pixel(-0.5, -64),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack.png",
               priority = "extra-high",
               width = 142,
               height = 429,
@@ -122,7 +122,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
             width = 193,
             height = 69,
@@ -131,7 +131,7 @@ data:extend({
             shift = util.by_pixel(61.5, 10.5),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               draw_as_shadow = true,
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
               priority = "extra-high",
               width = 382,
               height = 135,
@@ -146,7 +146,7 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
             width = 71,
             height = 215,
@@ -154,7 +154,7 @@ data:extend({
             frame_count = 1,
             shift = util.by_pixel(-0.5, -64),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack.png",
               priority = "extra-high",
               width = 142,
               height = 429,
@@ -166,7 +166,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
             width = 193,
             height = 69,
@@ -175,7 +175,7 @@ data:extend({
             shift = util.by_pixel(61.5, 10.5),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               draw_as_shadow = true,
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
               priority = "extra-high",
               width = 382,
               height = 135,
@@ -190,7 +190,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
             priority = "extra-high",
             width = 71,
             height = 215,
@@ -198,7 +198,7 @@ data:extend({
             frame_count = 1,
             shift = util.by_pixel(-0.5, -64),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack.png",
               priority = "extra-high",
               width = 142,
               height = 429,
@@ -210,7 +210,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
             priority = "extra-high",
             width = 193,
             height = 69,
@@ -219,7 +219,7 @@ data:extend({
             shift = util.by_pixel(61.5, 10.5),
             hr_version = angelsmods.trigger.enable_hq_graphics and {
               draw_as_shadow = true,
-              filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-shadow.png",
               priority = "extra-high",
               width = 382,
               height = 135,
@@ -263,7 +263,7 @@ data:extend({
       {
         fadeout = true,
         north_animation = {
-          filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
           width = 71,
           height = 215,
@@ -272,7 +272,7 @@ data:extend({
           blend_mode = "additive-soft",
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-light.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-light.png",
             priority = "extra-high",
             width = 142,
             height = 429,
@@ -284,7 +284,7 @@ data:extend({
           } or nil,
         },
         east_animation = {
-          filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
           width = 71,
           height = 215,
@@ -294,7 +294,7 @@ data:extend({
           blend_mode = "additive-soft",
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-light.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-light.png",
             priority = "extra-high",
             width = 142,
             height = 429,
@@ -307,7 +307,7 @@ data:extend({
           } or nil,
         },
         south_animation = {
-          filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
           width = 71,
           height = 215,
@@ -317,7 +317,7 @@ data:extend({
           blend_mode = "additive-soft",
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-light.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-light.png",
             priority = "extra-high",
             width = 142,
             height = 429,
@@ -330,7 +330,7 @@ data:extend({
           } or nil,
         },
         west_animation = {
-          filename = "__angelspetrochem__/graphics/entity/flare-stack/flare-stack-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-light.png",
           priority = "extra-high",
           width = 71,
           height = 215,
@@ -340,7 +340,7 @@ data:extend({
           blend_mode = "additive-soft",
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelspetrochem__/graphics/entity/flare-stack/hr-flare-stack-light.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/hr-flare-stack-light.png",
             priority = "extra-high",
             width = 142,
             height = 429,

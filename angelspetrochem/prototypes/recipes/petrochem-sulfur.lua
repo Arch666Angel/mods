@@ -21,9 +21,9 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
     }, "SHH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-hydrogen-sulfide",
@@ -49,7 +49,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/solid-sulfur.png", 32 },
+      { "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png", 32 },
     }, "SSS"),
     crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color("S"), "gas-hydrogen-sulfide", "gas-oxygen" }),
     order = "b[solid-sulfur]",
@@ -70,7 +70,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
     }, "SOO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-sulfur-dioxide", "gas-oxygen", AF.fluid_color("S") }),
     order = "ca[gas-sulfur-dioxide]",
@@ -92,7 +92,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
     }, "SOO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-sulfur-dioxide",
@@ -117,7 +117,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfuric-acid.png", 72 },
     }, "SHO"),
     crafting_machine_tint = AF.get_recipe_tints({ "liquid-sulfuric-acid", "gas-sulfur-dioxide", "water-purified" }),
     order = "d[liquid-sulfuric-acid]",
@@ -140,7 +140,7 @@ data:extend({
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+        { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
       },
       "FHH",
       {
@@ -175,7 +175,7 @@ data:extend({
     show_amount_in_title = false,
     icons = AF.create_liquid_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+        { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
       },
       "FHH",
       {
@@ -207,7 +207,7 @@ data:extend({
     main_product = "gas-hydrogen-fluoride",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
     }, "FHH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-hydrogen-fluoride",
@@ -230,7 +230,7 @@ data:extend({
     results = {
       { type = "item", name = "filter-lime", amount = 1 },
     },
-    --icon = "__angelspetrochem__/graphics/icons/inter-chemistry-10.png",
+    --icon = "__angelspetrochemgraphics__/graphics/icons/inter-chemistry-10.png",
     icon_size = 32,
     order = "b[filter-lime]",
   },
@@ -297,7 +297,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
     }, "SWsWs"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-enriched-hydrogen-sulfide",

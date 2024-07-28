@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "rocket-booster-1",
-    icon = "__angelspetrochem__/graphics/technology/booster-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/booster-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-nitrogen-processing-2",
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "technology",
     name = "rocket-booster-2",
-    icon = "__angelspetrochem__/graphics/technology/booster-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/booster-tech.png",
     icon_size = 128,
     prerequisites = {
       "rocket-booster-1",
@@ -61,7 +61,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-explosives-1",
-    icon = "__angelspetrochem__/graphics/technology/tnt-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/tnt-tech.png",
     icon_size = 128,
     prerequisites = {
       "explosives",
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-explosives-2",
-    icon = "__angelspetrochem__/graphics/technology/tnt-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/tnt-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-explosives-1",

@@ -4,7 +4,7 @@ data:extend({
     name = "steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -50,7 +50,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelspetrochem__/graphics/entity/steam-cracker/steam-cracker.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/steam-cracker.png",
           priority = "extra-high",
           width = 512,
           height = 512,
@@ -59,7 +59,7 @@ data:extend({
           shift = { 0.5, -0.5 },
         },
         -- {
-        -- filename = "__angelspetrochem__/graphics/entity/steam-cracker/5x5-overlay.png",
+        -- filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/5x5-overlay.png",
         -- tint = {r = 0.8, g = 0, b = 0},
         -- width = 160,
         -- height = 160,
@@ -113,7 +113,7 @@ data:extend({
     -- },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -156,7 +156,7 @@ data:extend({
     name = "steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -171,7 +171,7 @@ data:extend({
     name = "steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -202,7 +202,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelspetrochem__/graphics/entity/steam-cracker/steam-cracker.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/steam-cracker.png",
           priority = "extra-high",
           width = 512,
           height = 512,
@@ -211,7 +211,7 @@ data:extend({
           shift = { 0.5, -0.5 },
         },
         -- {
-        -- filename = "__angelspetrochem__/graphics/entity/steam-cracker/5x5-overlay.png",
+        -- filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/5x5-overlay.png",
         -- tint = {r = 0.8, g = 0, b = 0},
         -- width = 160,
         -- height = 160,
@@ -249,7 +249,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -292,7 +292,7 @@ data:extend({
     name = "steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -307,7 +307,7 @@ data:extend({
     name = "steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -338,7 +338,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelspetrochem__/graphics/entity/steam-cracker/steam-cracker.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/steam-cracker.png",
           priority = "extra-high",
           width = 512,
           height = 512,
@@ -347,7 +347,7 @@ data:extend({
           shift = { 0.5, -0.5 },
         },
         -- {
-        -- filename = "__angelspetrochem__/graphics/entity/steam-cracker/5x5-overlay.png",
+        -- filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/5x5-overlay.png",
         -- tint = {r = 0.8, g = 0, b = 0},
         -- width = 160,
         -- height = 160,
@@ -385,7 +385,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -428,7 +428,7 @@ data:extend({
     name = "steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -443,7 +443,7 @@ data:extend({
     name = "steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/steam-cracker.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -473,7 +473,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelspetrochem__/graphics/entity/steam-cracker/steam-cracker.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/steam-cracker.png",
           priority = "extra-high",
           width = 512,
           height = 512,
@@ -482,7 +482,7 @@ data:extend({
           shift = { 0.5, -0.5 },
         },
         -- {
-        -- filename = "__angelspetrochem__/graphics/entity/steam-cracker/5x5-overlay.png",
+        -- filename = "__angelspetrochemgraphics__/graphics/entity/steam-cracker/5x5-overlay.png",
         -- tint = {r = 0.8, g = 0, b = 0},
         -- width = 160,
         -- height = 160,
@@ -520,7 +520,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelspetrochem__/sound/steam-cracker.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

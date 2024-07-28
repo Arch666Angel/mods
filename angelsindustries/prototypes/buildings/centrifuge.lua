@@ -144,7 +144,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsindustries__/graphics/entity/centrifuge/centrifuge-A-light.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-A-light.png",
           priority = "high",
           blend_mode = "additive",
           line_length = 8,
@@ -154,7 +154,7 @@ for _, centrifuge_name in pairs({
           shift = util.by_pixel(-23.5, -2),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/centrifuge/hr-centrifuge-A-light.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/hr-centrifuge-A-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive",
@@ -173,7 +173,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsindustries__/graphics/entity/centrifuge/centrifuge-B-light.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-B-light.png",
           priority = "high",
           blend_mode = "additive",
           line_length = 8,
@@ -183,7 +183,7 @@ for _, centrifuge_name in pairs({
           shift = util.by_pixel(16.5, 0.5),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/centrifuge/hr-centrifuge-B-light.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/hr-centrifuge-B-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive",
@@ -202,7 +202,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "tertiary",
         animation = {
-          filename = "__angelsindustries__/graphics/entity/centrifuge/centrifuge-C-light.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-C-light.png",
           priority = "high",
           blend_mode = "additive",
           line_length = 8,
@@ -212,7 +212,7 @@ for _, centrifuge_name in pairs({
           shift = util.by_pixel(0, -27),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/centrifuge/hr-centrifuge-C-light.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/hr-centrifuge-C-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive",

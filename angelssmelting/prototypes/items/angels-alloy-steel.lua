@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-steel",
-    icon = "__angelssmelting__/graphics/icons/ingot-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-steel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-iron",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "item",
     name = "powder-steel",
-    icon = "__angelssmelting__/graphics/icons/powder-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-steel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-iron",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-steel",
-    icon = "__angelssmelting__/graphics/icons/molten-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-steel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-steel-casting",
@@ -40,7 +40,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-steel",
-    icon = "__angelssmelting__/graphics/icons/roll-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-steel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-steel-casting",
@@ -50,7 +50,7 @@ data:extend({
   {
     type = "item",
     name = "angels-rod-stack-steel",
-    icon = "__angelssmelting__/graphics/icons/rod-stack-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/rod-stack-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
     order = "k",
@@ -60,7 +60,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-steel",
-    icon = "__angelssmelting__/graphics/icons/plate-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
     order = "lb",
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "angels-rod-steel",
-    icon = "__angelssmelting__/graphics/icons/rod-steel.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/rod-steel.png",
     icon_size = 32,
     subgroup = "angels-steel-casting",
     order = "m",

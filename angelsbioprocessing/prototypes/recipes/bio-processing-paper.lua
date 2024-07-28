@@ -16,7 +16,7 @@ data:extend({
     },
     always_show_products = true,
     show_amount_in_title = false,
-    icon = "__angelsbioprocessing__/graphics/icons/cellulose-fiber-raw-wood.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/cellulose-fiber-raw-wood.png",
     icon_size = 32,
     order = "b",
   },
@@ -33,7 +33,7 @@ data:extend({
     results = {
       { type = "item", name = "wood-pellets", amount = 2 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/wood-pellets.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-pellets.png",
     icon_size = 32,
     order = "c",
   },
@@ -50,7 +50,7 @@ data:extend({
     results = {
       { type = "item", name = "wood-bricks", amount = 4 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/wood-bricks.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-bricks.png",
     icon_size = 32,
     order = "d",
   },
@@ -71,7 +71,7 @@ data:extend({
     always_show_products = true,
     show_amount_in_title = false,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
     }, "COcOc"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-carbon-dioxide",
@@ -186,10 +186,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-sulfate.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/liquid-brown-liquor.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/liquid-brown-liquor.png",
         scale = 0.4375,
         shift = { -10, -10 },
       },

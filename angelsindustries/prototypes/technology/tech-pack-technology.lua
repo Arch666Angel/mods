@@ -6,7 +6,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-red-packs",
-      icon = "__angelsindustries__/graphics/technology/tech-red.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tech-red.png",
       icon_size = 128,
       prerequisites = {
         "tech-red-circuit",
@@ -35,7 +35,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-green-packs",
-      icon = "__angelsindustries__/graphics/technology/tech-green.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tech-green.png",
       icon_size = 128,
       prerequisites = {
         "tech-red-packs",
@@ -70,7 +70,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-orange-packs",
-      icon = "__angelsindustries__/graphics/technology/tech-orange.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tech-orange.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -102,7 +102,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-blue-packs",
-      icon = "__angelsindustries__/graphics/technology/tech-blue.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tech-blue.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -139,7 +139,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-yellow-packs",
-      icon = "__angelsindustries__/graphics/technology/tech-yellow.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tech-yellow.png",
       icon_size = 128,
       prerequisites = {
         "tech-blue-packs",

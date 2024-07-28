@@ -14,7 +14,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
       {
         type = "fluid",
         name = "liquid-molten-nitinol",
-        icon = "__angelssmelting__/graphics/icons/molten-nitinol.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-nitinol.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
@@ -66,7 +66,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
       {
         type = "technology",
         name = "angels-nitinol-smelting-1",
-        icon = "__angelssmelting__/graphics/technology/casting-nitinol-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-nitinol-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -98,7 +98,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
       },
     })
     angelsmods.functions.move_item("nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
-    data.raw["item"]["nitinol-alloy"].icon = "__angelssmelting__/graphics/icons/plate-nitinol.png"
+    data.raw["item"]["nitinol-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png"
     data.raw["item"]["nitinol-alloy"].icon_size = 32
     data.raw["item"]["nitinol-alloy"].icon_mipmaps = 1
     OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-processing-brown",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-processing-green",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -78,7 +78,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-processing-red",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -117,7 +117,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-processing-blue",
-    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {

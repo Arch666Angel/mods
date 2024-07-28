@@ -4,7 +4,7 @@ data:extend({
     name = "liquifier",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "liquifier",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -49,7 +49,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,
@@ -58,7 +58,7 @@ data:extend({
           animation_speed = 0.5,
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
@@ -96,7 +96,7 @@ data:extend({
     name = "liquifier-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -111,7 +111,7 @@ data:extend({
     name = "liquifier-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -141,7 +141,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,
@@ -150,7 +150,7 @@ data:extend({
           animation_speed = 0.75,
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
@@ -188,7 +188,7 @@ data:extend({
     name = "liquifier-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -203,7 +203,7 @@ data:extend({
     name = "liquifier-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -233,7 +233,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,
@@ -242,7 +242,7 @@ data:extend({
           animation_speed = 0.75,
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,
@@ -280,7 +280,7 @@ data:extend({
     name = "liquifier-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -295,7 +295,7 @@ data:extend({
     name = "liquifier-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/liquifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -324,7 +324,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/liquifier/liquifier.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/liquifier/liquifier.png",
           width = 160,
           height = 160,
           line_length = 10,
@@ -333,7 +333,7 @@ data:extend({
           animation_speed = 0.75,
         },
         -- {
-        -- filename = "__angelsrefining__/graphics/entity/7x7-overlay.png",
+        -- filename = "__angelsrefininggraphics__/graphics/entity/7x7-overlay.png",
         -- tint = {r=1, g=0, b=0},
         -- width = 224,
         -- height = 224,

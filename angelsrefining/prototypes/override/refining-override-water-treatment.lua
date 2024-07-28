@@ -189,7 +189,7 @@ if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_cons
             { type = "fluid", name = "chlorine", amount = 20 },
             { type = "fluid", name = "hydrogen", amount = 20 },
           },
-          --icon = "__angelsrefining__/graphics/icons/electrolysis-salt-water.png",
+          --icon = "__angelsrefininggraphics__/graphics/icons/electrolysis-salt-water.png",
           --icon_size = 32,
           icons = angelsmods.functions.create_viscous_liquid_recipe_icon({
             "chlorine",
@@ -275,7 +275,7 @@ if mods["bobplates"] then
         { type = "fluid", name = "lithia-water", amount = 40 },
         { type = "fluid", name = "water-purified", amount = 60 },
       },
-      --icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
+      --icon = "__angelsrefininggraphics__/graphics/icons/water-thermal-lithia.png",
       --icon_size = 32,
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "lithia-water",

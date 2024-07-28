@@ -14,7 +14,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "fluid",
         name = "liquid-molten-bronze",
-        icon = "__angelssmelting__/graphics/icons/molten-bronze.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-bronze.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
@@ -117,7 +117,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "technology",
         name = "angels-bronze-smelting-1",
-        icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -146,7 +146,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "technology",
         name = "angels-bronze-smelting-2",
-        icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -173,7 +173,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "technology",
         name = "angels-bronze-smelting-3",
-        icon = "__angelssmelting__/graphics/technology/casting-bronze-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -200,7 +200,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       },
     })
     angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
-    data.raw["item"]["bronze-alloy"].icon = "__angelssmelting__/graphics/icons/plate-bronze.png"
+    data.raw["item"]["bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
     data.raw["item"]["bronze-alloy"].icon_size = 32
     data.raw["item"]["bronze-alloy"].icon_mipmaps = 1
     OV.disable_recipe({ "bronze-alloy" })

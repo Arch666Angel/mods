@@ -8,7 +8,7 @@ data:extend({
     heat_capacity = "1KJ",
     base_color = { r = 0.572, g = 0.392, b = 0.894 },
     flow_color = { r = 0.572, g = 0.392, b = 0.894 },
-    icon = "__angelsbioprocessing__/graphics/icons/alien-spores.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-spores.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-a[spores]",
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "item",
     name = "alien-bacteria",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-bacteria.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-bacteria.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-b[bacteria]",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "petri-dish",
-    icon = "__angelsbioprocessing__/graphics/icons/petri-dish.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/petri-dish.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-a[petri]",
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "item",
     name = "substrate-dish",
-    icon = "__angelsbioprocessing__/graphics/icons/substrate-dish.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/substrate-dish.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-b[substrate]",
@@ -60,7 +60,7 @@ data:extend({
   {
     type = "item",
     name = "seeded-dish",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-c[seeded]",
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "crystal-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-seed.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/crystal-seed.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-d[seed]-a[crystal]",
@@ -78,7 +78,7 @@ data:extend({
   {
     type = "item",
     name = "egg-shell-seed",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-shell-seed.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/egg-shell-seed.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "b[dish]-d[seed]-b[egg-shell]",
@@ -89,7 +89,7 @@ data:extend({
   {
     type = "item",
     name = "crystal-enhancer",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-enhancer.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/crystal-enhancer.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "c[crystal]-a[enhancer]",
@@ -98,7 +98,7 @@ data:extend({
   {
     type = "item",
     name = "crystal-grindstone",
-    icon = "__angelsbioprocessing__/graphics/icons/crystal-grindstone.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/crystal-grindstone.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "c[crystal]-b[grindstone]",

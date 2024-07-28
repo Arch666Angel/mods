@@ -121,15 +121,15 @@ data:extend({
     main_product = "biter-small-egg",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
         tint = { r = 0.75, g = 0.75, b = 0.75 },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-small.png",
         tint = { r = 1, g = 1, b = 1, a = 0.75 },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.4,
         shift = { 7.3, -9.5 },
@@ -174,13 +174,13 @@ data:extend({
     main_product = "biter-medium-egg",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-medium.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.45,
         shift = { 8, -11 },
@@ -219,13 +219,13 @@ data:extend({
     main_product = "biter-big-egg",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-big.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-big.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/biter-crown.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-crown.png",
         icon_size = 15,
         scale = 0.5,
         shift = { 9, -12 },
@@ -254,7 +254,7 @@ data:extend({
       { type = "item", name = "biter-queen-small", amount = 1, probability = 0.05 },
     },
     main_product = "biter-small",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-small.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/egg-small.png",
     icon_size = 32,
     order = "a[small]-b[hatching]",
   },
@@ -275,7 +275,7 @@ data:extend({
       { type = "item", name = "biter-queen-medium", amount = 1, probability = 0.025 },
     },
     main_product = "biter-medium",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-medium.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/egg-medium.png",
     icon_size = 32,
     order = "b[medium]-b[hatching]",
   },
@@ -296,7 +296,7 @@ data:extend({
       { type = "item", name = "biter-queen-big", amount = 1, probability = 0.01 },
     },
     main_product = "biter-big",
-    icon = "__angelsbioprocessing__/graphics/icons/egg-large.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/egg-large.png",
     icon_size = 32,
     order = "c[big]-b[hatching]",
   },
@@ -329,7 +329,7 @@ data:extend({
       { type = "item", name = "crystal-splinter-raw", amount = 4 },
     },
     main_product = "crystal-splinter-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-small.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-small.png",
     icon_size = 32,
     order = "a[small]-a[keeping]",
   },
@@ -359,7 +359,7 @@ data:extend({
       { type = "item", name = "crystal-shard-raw", amount = 4 },
     },
     main_product = "crystal-shard-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-medium.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-medium.png",
     icon_size = 32,
     order = "b[medium]-a[keeping]",
   },
@@ -389,7 +389,7 @@ data:extend({
       { type = "item", name = "crystal-full-raw", amount = 4 },
     },
     main_product = "crystal-full-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/biter-big.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/biter-big.png",
     icon_size = 32,
     order = "c[big]-a[keeping]",
   },

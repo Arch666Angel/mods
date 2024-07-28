@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "algae-brown",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-brown.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-brown.png",
     icon_size = 32,
     subgroup = "bio-processing-brown",
     order = "a[algae-brown]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "item",
     name = "solid-alginic-acid",
-    icon = "__angelsbioprocessing__/graphics/icons/solid-alginic-acid.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-alginic-acid.png",
     icon_size = 32,
     subgroup = "bio-processing-brown",
     order = "b[solid-alginic-acid]",
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "item",
     name = "algae-green",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-green.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-green.png",
     icon_size = 32,
     subgroup = "bio-processing-green",
     order = "a[algae-green]",
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "item",
     name = "paste-cellulose",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-cellulose.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-cellulose.png",
     icon_size = 32,
     subgroup = "bio-processing-green",
     order = "c[paste-cellulose]",
@@ -41,7 +41,7 @@ data:extend({
   {
     type = "item",
     name = "algae-blue",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-blue.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-blue.png",
     icon_size = 32,
     subgroup = "bio-processing-blue",
     order = "a[algae-blue]",
@@ -50,7 +50,7 @@ data:extend({
   {
     type = "item",
     name = "blue-cellulose-fiber",
-    icon = "__angelsbioprocessing__/graphics/icons/blue-cellulose-fiber.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/blue-cellulose-fiber.png",
     icon_size = 32,
     subgroup = "bio-processing-blue",
     order = "b[blue-cellulose-fiber]",
@@ -60,7 +60,7 @@ data:extend({
   {
     type = "item",
     name = "algae-red",
-    icon = "__angelsbioprocessing__/graphics/icons/algae-red.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-red.png",
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "a[algae-red]",
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "red-cellulose-fiber",
-    icon = "__angelsbioprocessing__/graphics/icons/red-cellulose-fiber.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/red-cellulose-fiber.png",
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "b[red-cellulose-fiber]",
@@ -78,7 +78,7 @@ data:extend({
   {
     type = "item",
     name = "solid-calcium-carbonate",
-    icon = "__angelsbioprocessing__/graphics/icons/solid-calcium-carbonate.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
     subgroup = "bio-processing-red",
     order = "c[solid-calcium-carbonate]",

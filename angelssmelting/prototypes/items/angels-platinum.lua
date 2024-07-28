@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "platinum-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "processed-platinum",
-    icon = "__angelssmelting__/graphics/icons/processed-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-platinum",
-    icon = "__angelssmelting__/graphics/icons/pellet-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum",
@@ -54,7 +54,7 @@ data:extend({
   {
     type = "item",
     name = "solid-ammonium-chloroplatinate",
-    icon = "__angelssmelting__/graphics/icons/solid-ammonium-chloroplatinate.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-ammonium-chloroplatinate.png",
     icon_size = 32,
     subgroup = "angels-platinum",
     order = "e",
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-platinum",
-    icon = "__angelssmelting__/graphics/icons/ingot-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum",
@@ -74,7 +74,7 @@ data:extend({
   {
     type = "item",
     name = "powder-platinum",
-    icon = "__angelssmelting__/graphics/icons/powder-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum",
@@ -85,7 +85,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-platinum",
-    icon = "__angelssmelting__/graphics/icons/molten-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-platinum",
-    icon = "__angelssmelting__/graphics/icons/roll-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
@@ -110,7 +110,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-coil-platinum",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-platinum.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-platinum-casting",
@@ -121,7 +121,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-platinum",
-    icon = "__angelssmelting__/graphics/icons/plate-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum-casting",
     order = "k",
@@ -130,7 +130,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-platinum",
-    icon = "__angelssmelting__/graphics/icons/wire-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum-casting",
     order = "l",

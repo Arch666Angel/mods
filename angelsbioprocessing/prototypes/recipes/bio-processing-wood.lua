@@ -87,12 +87,12 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-tree.png",
         icon_size = 64,
         scale = 0.5,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.32,
         shift = { -12, -12 },
       },
@@ -397,12 +397,12 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
         icon_size = 64,
         scale = 0.5,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.32,
         shift = { -12, -12 },
       },
@@ -658,12 +658,12 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
         icon_size = 64,
         scale = 0.5,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.32,
         shift = { -12, -12 },
       },
@@ -870,12 +870,12 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",
         icon_size = 64,
         scale = 0.5,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.32,
         shift = { -12, -12 },
       },

@@ -48,7 +48,7 @@ data:extend({
   {
     type = "ammo",
     name = "cannon-turret-shell-1",
-    icon = "__angelsexploration__/graphics/icons/turret-shell-1.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-1.png",
     icon_size = 32,
     flags = {},
     ammo_type = {
@@ -123,7 +123,7 @@ data:extend({
   {
     type = "ammo",
     name = "cannon-turret-shell-2",
-    icon = "__angelsexploration__/graphics/icons/turret-shell-2.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-2.png",
     icon_size = 32,
     flags = {},
     ammo_type = {
@@ -198,7 +198,7 @@ data:extend({
   {
     type = "ammo",
     name = "cannon-turret-shell-3",
-    icon = "__angelsexploration__/graphics/icons/turret-shell-3.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-3.png",
     icon_size = 32,
     flags = {},
     ammo_type = {

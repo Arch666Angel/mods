@@ -21,10 +21,10 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
@@ -53,7 +53,7 @@ data:extend({
     main_product = "temperate-garden",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     --icon_size = 32,
     order = "ba",
   },
@@ -76,38 +76,38 @@ data:extend({
       { type = "item", name = "temperate-4-seed", amount = 5, probability = 0.1 },
       { type = "item", name = "temperate-5-seed", amount = 5, probability = 0.05 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { 0, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -133,33 +133,33 @@ data:extend({
       { type = "item", name = "temperate-4-seed", amount = 5, probability = 0.2 },
       { type = "item", name = "temperate-5-seed", amount = 5, probability = 0.1 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -187,10 +187,10 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
@@ -219,7 +219,7 @@ data:extend({
     main_product = "desert-garden",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     --icon_size = 32,
     order = "ba",
   },
@@ -242,38 +242,38 @@ data:extend({
       { type = "item", name = "desert-4-seed", amount = 5, probability = 0.1 },
       { type = "item", name = "desert-5-seed", amount = 5, probability = 0.05 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { 0, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -299,33 +299,33 @@ data:extend({
       { type = "item", name = "desert-4-seed", amount = 5, probability = 0.2 },
       { type = "item", name = "desert-5-seed", amount = 5, probability = 0.1 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -353,10 +353,10 @@ data:extend({
     show_amount_in_title = false,
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
@@ -385,7 +385,7 @@ data:extend({
     main_product = "swamp-garden",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     --icon_size = 32,
     order = "ba",
   },
@@ -408,38 +408,38 @@ data:extend({
       { type = "item", name = "swamp-4-seed", amount = 5, probability = 0.1 },
       { type = "item", name = "swamp-5-seed", amount = 5, probability = 0.05 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         scale = 0.35,
         shift = { 0, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -465,33 +465,33 @@ data:extend({
       { type = "item", name = "swamp-4-seed", amount = 5, probability = 0.2 },
       { type = "item", name = "swamp-5-seed", amount = 5, probability = 0.1 },
     },
-    --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    --icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-1-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-1-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-2-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-2-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, -seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-3-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-3-seed.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-4-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-4-seed.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-5-seed.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-5-seed.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },
@@ -663,7 +663,7 @@ data:extend({
   --    {type = "item", name = "temperate-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "temperate-garden",
-  --  --icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+  --  --icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
   --  --icon_size = 32,
   --  order = "be"
   --},
@@ -687,7 +687,7 @@ data:extend({
   --    {type = "item", name = "temperate-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "temperate-garden",
-  --  icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+  --  icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
   --  icon_size = 32,
   --  order = "be"
   --},
@@ -711,7 +711,7 @@ data:extend({
   --    {type = "item", name = "swamp-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "swamp-garden",
-  --  --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+  --  --icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
   --  --icon_size = 32,
   --  order = "be"
   --},
@@ -735,7 +735,7 @@ data:extend({
   --    {type = "item", name = "swamp-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "swamp-garden",
-  --  icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+  --  icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
   --  icon_size = 32,
   --  order = "be"
   --},
@@ -759,7 +759,7 @@ data:extend({
   --    {type = "item", name = "desert-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "desert-garden",
-  --  --icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+  --  --icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
   --  --icon_size = 32,
   --  order = "be"
   --}
@@ -783,7 +783,7 @@ data:extend({
   --    {type = "item", name = "desert-tree", amount = 1, probability = 0.001}
   --  },
   --  main_product = "desert-garden",
-  --  icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+  --  icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
   --  icon_size = 32,
   --  order = "be"
   --},
@@ -807,22 +807,22 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/token-bio.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
         --scale = 0.5,
         --shift = {0,-5}
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
         scale = 0.35,
         shift = { -seed_icon_shift, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
         scale = 0.35,
         shift = { 0, seed_icon_shift },
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
         scale = 0.35,
         shift = { seed_icon_shift, seed_icon_shift },
       },

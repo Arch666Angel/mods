@@ -187,10 +187,10 @@ data:extend({
     --allow_decomposition = false,
     --icons = {
     --  {
-    --    icon = "__angelsindustries__/graphics/icons/motor-casing-1.png"
+    --    icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-1.png"
     --  },
     --  {
-    --    icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+    --    icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
     --    scale = 0.4375,
     --    shift = {-10, -10}
     --  }
@@ -217,10 +217,10 @@ data:extend({
     icon_size = 32,
     icons = {
       {
-        icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
       },
       {
-        icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
         scale = 0.4375,
         shift = { 10, -10 },
       },
@@ -245,12 +245,12 @@ data:extend({
     main_product = "mold-non-expendable",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
       {
-        icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
         icon_size = 32,
         icon_mipmaps = 1,
         scale = 0.4375,
@@ -276,12 +276,12 @@ data:extend({
     },
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png",
         icon_size = 72,
         scale = 32 / 72 * 0.4375,
         shift = { 10, -10 },

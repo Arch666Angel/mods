@@ -4,7 +4,7 @@ data:extend({
     name = "clarifier",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/icons/clarifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "clarifier",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/icons/clarifier.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -68,7 +68,7 @@ data:extend({
     },
     energy_usage = "30kW",
     animation = {
-      filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-base.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-base.png",
       priority = "extra-high",
       frame_count = 64,
       line_length = 8,
@@ -77,7 +77,7 @@ data:extend({
       height = 184,
       shift = util.by_pixel(9.5, 1),
       hr_version = angelsmods.trigger.enable_hq_graphics and {
-        filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-base.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-base.png",
         priority = "extra-high",
         frame_count = 64,
         line_length = 8,
@@ -96,7 +96,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -106,7 +106,7 @@ data:extend({
           frame_count = 1,
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-shadow.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -119,7 +119,7 @@ data:extend({
           } or nil,
         },
         east_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -129,7 +129,7 @@ data:extend({
           frame_count = 1,
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-shadow.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -142,7 +142,7 @@ data:extend({
           } or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -152,7 +152,7 @@ data:extend({
           frame_count = 1,
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-shadow.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -165,7 +165,7 @@ data:extend({
           } or nil,
         },
         west_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-shadow.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -175,7 +175,7 @@ data:extend({
           y = 0,
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-shadow.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -191,7 +191,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -200,7 +200,7 @@ data:extend({
           y = 0,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -212,7 +212,7 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -221,7 +221,7 @@ data:extend({
           y = 0,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -237,7 +237,7 @@ data:extend({
         always_draw = true,
         render_layer = "higher-object-under",
         east_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -313,7 +313,7 @@ data:extend({
           shift = util.by_pixel(9.5, 1),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -392,7 +392,7 @@ data:extend({
             or nil,
         },
         west_animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-pipe-connections.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-pipe-connections.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -468,7 +468,7 @@ data:extend({
           shift = util.by_pixel(9.5, 1),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-pipe-connections.png",
                 priority = "extra-high",
                 width = 374,
                 height = 365,
@@ -551,7 +551,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/clarifier/clarifier-recipe-mask.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-recipe-mask.png",
           priority = "extra-high",
           width = 189,
           height = 184,
@@ -561,7 +561,7 @@ data:extend({
           shift = util.by_pixel(9.5, 1),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
             animation_speed = 0.5,
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-clarifier-recipe-mask.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-clarifier-recipe-mask.png",
             priority = "extra-high",
             width = 374,
             height = 365,
@@ -576,14 +576,14 @@ data:extend({
         always_draw = true,
         south_animation = {
           draw_as_shadow = true,
-          filename = "__angelsrefining__/graphics/entity/clarifier/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/clarifier/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
           repeat_count = 36,
           hr_version = angelsmods.trigger.enable_hq_graphics and {
             draw_as_shadow = true,
-            filename = "__angelsrefining__/graphics/entity/clarifier/hr-vertical-pipe-shadow-patch.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/clarifier/hr-vertical-pipe-shadow-patch.png",
             priority = "high",
             width = 128,
             height = 128,

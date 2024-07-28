@@ -97,7 +97,7 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/solid-resin.png",
         icon_size = 32,
       },
     },
@@ -183,7 +183,7 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelspetrochem__/graphics/icons/solid-rubber.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
         icon_size = 32,
       },
     },
@@ -229,7 +229,7 @@ data:extend({
   -- {
   --   {type="item", name="solid-glas", amount=4},
   -- },
-  -- icon = "__angelspetrochem__/graphics/icons/solid-glas.png",
+  -- icon = "__angelspetrochemgraphics__/graphics/icons/solid-glas.png",
   -- icon_size = 32,
   -- order = "i",
   -- },
@@ -249,7 +249,7 @@ data:extend({
       { type = "item", name = "solid-fuel", amount = 2 },
     },
     icons = AF.create_solid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
     }, "solid-fuel"),
     crafting_machine_tint = AF.get_recipe_tints({ { r = 1, g = 1, b = 1 }, "gas-methane" }),
     order = "a[solid-fuel-methane]",
@@ -340,7 +340,7 @@ data:extend({
       { type = "item", name = "solid-fuel", amount = 2 },
     },
     icons = AF.create_solid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrazine.png", 72 },
     }, "solid-fuel"),
     crafting_machine_tint = AF.get_recipe_tints({ { r = 105 / 255, g = 105 / 255, b = 105 / 255 }, "gas-hydrazine" }),
     order = "e[solid-fuel-hydrazine]",
@@ -359,7 +359,7 @@ data:extend({
     results = {
       { type = "item", name = "catalyst-metal-carrier", amount = 10 },
     },
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-carrier.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-carrier.png",
     icon_size = 32,
     order = "c[catalyst-metal]-a[carrier]",
   },
@@ -378,7 +378,7 @@ data:extend({
     results = {
       { type = "item", name = "catalyst-metal-red", amount = 10 },
     },
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-red.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-red.png",
     icon_size = 32,
     order = "c[catalyst-metal]-b[red]",
   },
@@ -397,7 +397,7 @@ data:extend({
     results = {
       { type = "item", name = "catalyst-metal-green", amount = 10 },
     },
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-green.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-green.png",
     icon_size = 32,
     order = "c[catalyst-metal]-c[green]",
   },
@@ -416,7 +416,7 @@ data:extend({
     results = {
       { type = "item", name = "catalyst-metal-blue", amount = 10 },
     },
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-blue.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-blue.png",
     icon_size = 32,
     order = "c[catalyst-metal]-d[blue]",
   },
@@ -435,7 +435,7 @@ data:extend({
     results = {
       { type = "item", name = "catalyst-metal-yellow", amount = 10 },
     },
-    icon = "__angelspetrochem__/graphics/icons/catalyst-metal-yellow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-yellow.png",
     icon_size = 32,
     order = "c[catalyst-metal]-e[yellow]",
   },
@@ -473,7 +473,7 @@ data:extend({
       { type = "fluid", name = "water-mineralized", amount = 10 },
       { type = "fluid", name = "water", amount = 40 },
     },
-    icon = "__angelspetrochem__/graphics/icons/solid-electrode-used.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-electrode-used.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({ "water-mineralized", "water-purified", "water" }),
     order = "a[electrode]-b[recycle]",

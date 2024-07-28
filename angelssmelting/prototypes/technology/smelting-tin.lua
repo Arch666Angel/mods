@@ -4,7 +4,7 @@ data:extend({
     name = "angels-tin-smelting-1",
     localised_name = { "technology-name.angels-tin-metallurgy" },
     localised_description = { "technology-description.angels-tin-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-tin-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -36,7 +36,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tin-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-tin-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-tin-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tin-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-tin-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tin-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-tin-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-tin-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -144,7 +144,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tin-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-tin-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

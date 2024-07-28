@@ -108,7 +108,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-1.png",
     icon_size = 32,
     order = "ab",
   },
@@ -136,7 +136,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-2.png",
     icon_size = 32,
     order = "ac",
   },
@@ -164,7 +164,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-3.png",
     icon_size = 32,
     order = "ad",
   },
@@ -190,7 +190,7 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
         icon_size = 32,
       },
       {
@@ -220,10 +220,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-1.png",
       },
     },
     icon_size = 32,
@@ -248,10 +248,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-2.png",
       },
     },
     icon_size = 32,
@@ -276,10 +276,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-3.png",
       },
     },
     icon_size = 32,
@@ -301,7 +301,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1, probability = 0.5 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "aa",
   },
@@ -318,7 +318,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ab",
   },
@@ -335,7 +335,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ac",
   },
@@ -352,7 +352,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 2 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "ad",
   },

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-plutonium-power",
-    icon = "__angelsindustries__/graphics/technology/plutonium-processing.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/plutonium-processing.png",
     icon_size = 128,
     prerequisites = {
       "nuclear-fuel-reprocessing",
@@ -44,7 +44,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-thorium-power",
-    icon = "__angelsindustries__/graphics/technology/thorium-processing.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/thorium-processing.png",
     icon_size = 128,
     prerequisites = {
       "angels-plutonium-power",
@@ -93,7 +93,7 @@ data:extend({
     icons = angelsmods.functions.add_icon_layer(
       { -- bottom placeholder layer
         {
-          icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
         },
       },
       angelsmods.functions.add_icon_layer(
@@ -104,10 +104,10 @@ data:extend({
         ),
         {
           {
-            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
           },
           {
-            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
           },
         }
       )
@@ -151,7 +151,7 @@ data:extend({
     icons = angelsmods.functions.add_icon_layer(
       { -- bottom placeholder layer
         {
-          icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
         },
       },
       angelsmods.functions.add_icon_layer(
@@ -162,10 +162,10 @@ data:extend({
         ),
         {
           {
-            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
           },
           {
-            icon = "__angelsindustries__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
           },
         }
       )

@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "gold-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "processed-gold",
-    icon = "__angelssmelting__/graphics/icons/processed-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-gold",
-    icon = "__angelssmelting__/graphics/icons/pellet-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold",
@@ -35,7 +35,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-gold-cyanide",
-    icon = "__angelssmelting__/graphics/icons/solid-sodium-gold-cyanide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-gold-cyanide.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "d",
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "item",
     name = "cathode-gold",
-    icon = "__angelssmelting__/graphics/icons/cathode-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cathode-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "f",
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-gold",
-    icon = "__angelssmelting__/graphics/icons/ingot-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "item",
     name = "powder-gold",
-    icon = "__angelssmelting__/graphics/icons/powder-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold",
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-gold",
-    icon = "__angelssmelting__/graphics/icons/molten-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold-casting",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-gold",
-    icon = "__angelssmelting__/graphics/icons/roll-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold-casting",
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-coil-gold",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-gold.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-gold-casting",
@@ -129,7 +129,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-gold",
-    icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "l",
@@ -138,7 +138,7 @@ data:extend({
   {
     type = "item",
     name = "angels-wire-gold",
-    icon = "__angelssmelting__/graphics/icons/wire-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "m",

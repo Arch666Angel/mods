@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "sea-pump",
-    icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     subgroup = "washing-building",
     order = "f",
@@ -17,7 +17,7 @@ data:extend({
     name = "sea-pump-placeable",
     localised_name = { "entity-name.sea-pump" },
     localised_description = { "entity-description.sea-pump" },
-    icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
     collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
@@ -57,14 +57,14 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
       north = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 0, -1 },
         width = 160,
         height = 160,
       },
       east = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 1, 0 },
         x = 160,
@@ -72,7 +72,7 @@ data:extend({
         height = 160,
       },
       south = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 0, 1 },
         x = 320,
@@ -80,7 +80,7 @@ data:extend({
         height = 160,
       },
       west = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { -1, 0 },
         x = 480,
@@ -155,7 +155,7 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/empty.png",
         priority = "extra-high",
         width = 1,
         height = 1,
@@ -163,7 +163,7 @@ data:extend({
         variation_count = 1,
         shift = util.by_pixel(0, 0),
         hr_version = {
-          filename = "__angelsrefining__/graphics/entity/sea-pump/empty.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/empty.png",
           priority = "extra-high",
           width = 1,
           height = 1,
@@ -182,7 +182,7 @@ data:extend({
     name = "sea-pump",
     localised_name = { "entity-name.sea-pump" },
     localised_description = { "entity-description.sea-pump" },
-    icon = "__angelsrefining__/graphics/icons/sea-pump-ico.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     icon_mipmaps = 1,
     flags = { "placeable-neutral", "player-creation" },
@@ -232,14 +232,14 @@ data:extend({
     --base_render_layer = "lower-object-above-shadow",
     base_picture = {
       north = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 0, -1 },
         width = 160,
         height = 160,
       },
       east = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 1, 0 },
         x = 160,
@@ -247,7 +247,7 @@ data:extend({
         height = 160,
       },
       south = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { 0, 1 },
         x = 320,
@@ -255,7 +255,7 @@ data:extend({
         height = 160,
       },
       west = {
-        filename = "__angelsrefining__/graphics/entity/sea-pump/sea-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/sea-pump/sea-pump.png",
         priority = "high",
         shift = { -1, 0 },
         x = 480,

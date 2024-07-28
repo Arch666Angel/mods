@@ -94,7 +94,7 @@ if angelsmods.industries.components then
   -------------------------------------------------------------------------------
   local rocket = data.raw.item["rocket-part"]
   if rocket then
-    rocket.icon = "__angelsindustries__/graphics/icons/rocket.png"
+    rocket.icon = "__angelsindustriesgraphics__/graphics/icons/rocket.png"
     rocket.icon_size = 64
     rocket.icon_mipmaps = 1
     rocket.icons = nil

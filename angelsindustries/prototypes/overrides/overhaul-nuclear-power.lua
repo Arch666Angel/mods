@@ -75,24 +75,24 @@ if angelsmods.industries.overhaul then
       },
       icons = {
         { -- need to have something as bottom layer
-          icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/reprocessing_arrow.png",
           icon_size = 64,
           scale = 32 / 64,
         },
         {
-          icon = "__angelsindustries__/graphics/icons/used-up-uranium-fuel-cell.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/used-up-uranium-fuel-cell.png",
           icon_size = 64,
           scale = 32 / 64 * 45 / 64,
           shift = { -7, -5 },
         },
         {
-          icon = "__angelsindustries__/graphics/icons/uranium-238.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/uranium-238.png",
           icon_size = 64,
           scale = 32 / 64 * 2 / 3,
           shift = { 5, 7 },
         },
         {
-          icon = "__angelsindustries__/graphics/icons/reprocessing_arrow.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/reprocessing_arrow.png",
           icon_size = 64,
           scale = 32 / 64,
         },

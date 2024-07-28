@@ -1,13 +1,13 @@
 if data.raw["reactor"]["nuclear-reactor"] then
   data.raw["reactor"]["nuclear-reactor"].working_light_picture = {
-    filename = "__angelsindustries__/graphics/entity/nuclear-reactor/reactor-lights-color.png",
+    filename = "__angelsindustriesgraphics__/graphics/entity/nuclear-reactor/reactor-lights-color.png",
     blend_mode = "additive",
     draw_as_glow = true,
     width = 160,
     height = 160,
     shift = { -0.03125, -0.1875 },
     hr_version = {
-      filename = "__angelsindustries__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png",
       blend_mode = "additive",
       draw_as_glow = true,
       width = 320,

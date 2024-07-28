@@ -1,0 +1,503 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: ???
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Added item description to Gravitational analyzer (984)
+    - Adjusted the recipes and science packs for Bob's Assembling Machines when Components or Technology Overhauls are enabled (985)
+    - Tech Overhaul: Hid Steam science pack from Bob's Technology mod (986)
+    - Adjust ingredients and tech prerequisites for Power armor and equipment when using Bob's mods (989)
+    - Updated for Factorio 2.0 (994)
+  Bugfixes:
+    - Fixed potential softlock with Tech Overhaul and Bob's Technology mod (986)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.21
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+  Bugfixes:
+    - Science mode:
+      - Sodium Processing 1 tech now uses green analyzers rather than blue so Paper making 2 can be used (966)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.20
+Date: 04.01.2024
+  Changes:
+    - Compatibility changes for YAFC when Components or Technology Overhauls are enabled (962)
+    - Science mode:
+      - Added AAI Loaders compatibility #963
+  Bugfixes:
+    - Fixed soft lock when using Components Overhaul (955)
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.19
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+  Bugfixes:
+    - Component mode:
+      - Fixed the regular recipe for fiber board was still available when playing with bobs mods
+---------------------------------------------------------------------------------------------------
+Version: 0.4.18
+Date: 23.02.2023
+  Bugfixes:
+    - Regular mode:
+      - Fixed Item Subgroup of Heat Exchanger 4 from Bob's Power (887)
+    - Component mode:
+      - Fixed splitter circuit board tiers (636)
+      - Fixed the silver-zinc battery did not require a battery casing (886)
+      - Fixed ingredients and tech prerequisites of radar from Bob's Warfare (889)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.17
+Date: 01.01.2023
+  Changes:
+    - Changed which building some recipes require (802)
+      - Atomic bomb 1 & 2 moved from Assembling machine to Advanced chemical plant
+      - Deuterium fuel cell moved from Chemical plant to Centrifuge
+    - Science mode:
+      - Changed technologies that are researched in tech Tech archive to ignore tech cost modifier (820)
+      - Removed Alien plant-life sample from technologies Fermentation processes and Temperate arboretum 1 (820)
+      - Added Miniloader support (820)
+      - Made Nanobots available sooner (820)
+      - When Bob's Assembling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation (820)
+      - Added support for Bob's steam power phase (864)
+    - Changed Atomic artillery shells from Bob's Warfare to take Plutonium instead of Uranium (881)
+    - Plutonium and Deuterium recipes require higher tiers of centrifuge when they are available from Bob's Assembling Machines mod (881)
+  Bugfixes:
+    - Fixed error with modded centrifuges (836)
+    - Fixed machine output arrows (839)
+    - Fixed science overhaul lab input descriptions (843)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.16
+Date: 06.06.2022
+  Changes:
+    - Added support for separate techs for barrels, gas bottles, and fluid canisters added by
+      Bob's Metals, Chemicals and Intermediates mod (769)
+    - Added tiered centrifuge requirements for all nuclear fuel recipes
+  Bugfixes:
+    - Regular mode:
+      - Fixed centrifuges did not have their customizable lights enabled as intended (772)
+      - Fixed centrifuges did not have a fluid inbox to craft the advanced deuterium reprocessing
+        recipe (759)
+    - Component mode:
+      - Fixed bobs personal roboport mk2 depended on battery 5 (761)
+    - Science mode:
+      - Fixed science tiers of inserter stack size bonusses (740)
+      - Fixed exploration tech lab 2 did not accept bio tokens (745)
+      - Added some basic compatibility for Nanobots (741)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.15
+Date: 19.12.2021
+  Bugfixes:
+    - Regular mode:
+      - Slight rebalance of some higher tier nuclear recipes to hopefully reduce the dependance on previous tiers
+      - Fixed an issue with the recipe for the burner reactor not having the correct ingredients
+    - Component mode:
+      - Fixed some unused components were incorrectly hidden in pure angels configuration
+      - Fixed battery and its components could not accept productivity modules (680)
+      - Fixed bob battery tech 2 and 3 were still visible but obsolete (625)
+      - Ensured that bobs laser riffle ammo uses each tier of batteries now (699)
+      - Ensured that bobs laser turrets uses each tier of batteries now (699)
+      - Ensured that bobs plasma turrets uses each tier of batteries now (699)
+      - Bob's boiler 2 technology now depends on construction components (733)
+    - Science mode:
+      - Fixed crash when player dies (664)
+      - Fixed that bobs lab mk2, module lab and alien lab required the hidden base game lab (670)
+      - Tweaked bobs laser riffle ammo technologies to be inline with their requirements (699)
+      - Fixed beacons were only accessible at yellow science when playing with bob modules (671)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.14
+Date: 10.08.2021
+  Changes:
+    - Regular mode:
+      - Thorium fuel cells value dropped considerably, some recipes faster to compensate
+      - Added burner reactor that uses up fuel cells at a faster rate but less heat output
+        - BIG THANKS to Kirazy and kingarthur91 for putting this together
+      - Adjusted nuclear reactor glow tints and color
+    - Component mode:
+      - Ensured that bobmodules uses each tier of electronic now
+      - Reduced lithia salt requirement on battery 5 (647)
+      - Fixed bobs miners using incorrect electronic block
+    - Science mode:
+      - Fixed an issue with an incorrect tag being given to the regular lab, causing a crash
+      - Fixed some techs could not be researched due to wrong combination of science packs (643)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.13
+Date: 31.05.2021
+  Bugfixes:
+    - Component mode:
+      - Fixed ingredient tier of puffer and biter refugium
+      - Fixed tin plate could not be inserted into the filter inserter recipe
+      - Fixed glass plate could not be inserted into any solar recipe
+      - Fixed bobs recipe for the superiour circuit board was not hidden correctly
+---------------------------------------------------------------------------------------------------
+Version: 0.4.12
+Date: 26.05.2021
+  Changes:
+    - Regular mode:
+      - Ordered vehicle belt immunity equipment (477)
+      - Integrated bobs plutonium nucleosynthesis (486)
+      - Unlock red and green wires with the (previously empty) electronics technology
+      - Moved Bio-tile data to angelsbioprocessing
+      - Changed and expanded locale strings and text descriptions (489)
+    - Component mode:
+      - Partially integrated bobs locomotives, cargo and fluid wagons (not artillery) a bit (478)
+      - Added custom recipes for solar panel and accumulator recipes (base game and bobs mods)
+      - Added custom recipes for assemblers (base game and bobs mods, incl. electronic assemblers)
+    - Science mode:
+      - Moved solar panels from orange to green science tier
+  Bugfixes:
+    - Regular mode:
+      - Fixed the ordering of bobs vehicle roboport antenna (480)
+      - Fixed the vehicle repair roboport would unlock after the vehicle construction port (500)
+    - Component mode:
+      - Fixed that some science technologies would unlock block components
+      - Fixed boblogistics (inserter overhaul off) recipes to use angels components, not bobs (526)
+      - Fixed boblogistics (w/out bobplates) calling the wrong tin plate (453)
+        - Thanks to @lavafl0w on git for the partial fix which i built off
+      - Fixed battery 6 use and tech when not active under some conditions (453)
+      - Fixed lab not being craftable without science mode.
+      - Fixed that boblogistics' tier 1 robots did not use their appropriate intermediates (532)
+      - Fixed that not all bob train recipes did not require their previous tier s ingredient (537)
+    - Science mode:
+      - Fixed the technologies from the storage addon had the wrong data core
+      - Fixed the base game lab was visible in the bonus UI (505)
+      - Fixed science tiers on steam engines and boilers of bobs power (519)
+      - Fixed science tiers on heat pipes and heat sources of bobs power (519)
+      - Fixed science tiers on fluid burning generators of bobs power (502)
+      - Fixed science tiers on bobs solar panel and accumulator researches
+      - Fixed science tiers on power pole and substation researches
+      - Fixed the selection and collision box of the main lab did not align (539)
+      - Fixed that speed, productivity, effectivity, and agriculture module 3 couldnt be researched due
+        to no lab taking all required science packs. removed Yellow science analyzer from required packs.
+      - Fixed locale on the space science research
+---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: 11.01.2021
+  Bugfixes:
+    - Fixed crash related to ghosting tech unlocks not conforming to standards (516)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.10
+Date: 26.11.2020
+  Bugfixes:
+    - Fixed crash caused by missing crash site lab sprites
+---------------------------------------------------------------------------------------------------
+Version: 0.4.9
+Date: 26.11.2020
+  Changes:
+    - Updated for factorio version 1.1
+    - Fixed technology icon sizes
+---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+Date: 16.11.2020
+  Bugfixes:
+    - Regular mode:
+      - Changed locales for settings and their description to make them more explicit
+      - Tweaked localisation of welcome message info (427)
+    - Component mode:
+      - Fixed localisation error on the rocket reactor (425)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+Date: 29.10.2020
+  Changes:
+    - Regular mode:
+      - Some minor localisation changes to unify angels localisation across mods (372)
+    - Component mode:
+      - Added a new battery component with intermediate parts (397)
+      - Added new rocket recipe with new intermediate components
+      - Integrated deuterium fuel cell 2 to have a stable infinite nuclear fuel cell (386)
+      - Components will now show their total raw (352)
+      - Streamlined smelting building ingredients with the tiers they represent
+      - Updated the module recipes to utilize the different tiers of circuits better
+    - Science mode:
+      - Increased research times to cope with the slower progression rate
+      - Changed ordening of datacores and analysers because of how the tech tree ordening works
+  Bugfixes:
+    - Regular mode:
+      - Fixed silver wire recipe would unlock while it has no use in this mode (not even with bobs)
+    - Component mode:
+      - Possible fix for multiplayer mod mismatch detected, even when they are identical (402)
+      - Fixed that there would be two grey board recipes from paper when playing with bob
+        electronics mod (403)
+      - Fixed some inconsistencies with tier 2 components and their prerequisites
+      - Fixed that some components could not be made in assembling machine 1
+      - Fixed that the unused advanced blocks were still visible in the item select menu
+      - Fixed the regular lab would require electronics block 1 instead of 0 (416)
+    - Science mode:
+      - Fixed that science pack were not replaced in recipe ingredients (400)
+      - Fixed that the unused science datacores were visible in the item select menu
+      - Fixed automation 1 was locked too far when playing with bobs assemblers
+      - Fixed Geode processing 2 having a green and orange analyzer (414)
+      - Fixed Bobs logistics 3 research depended on blue analyzers instead of orange (417)
+      - Fixed inconsistency of Bobs toolbelt 3 research not using the enhancement datacores (417)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 20.08.2020
+  Changes:
+    - Updated to base game 1.0
+    - Component mode:
+      - Mold creation now requires a resin casing instead of the iron casing (356)
+  Bugfixes:
+    - Science mode:
+      - Fixed that new games in base game v1.0.0 did not receive a tech archive at the start
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+    - Increased stack size of the angel lamp from 10 to 50 (353)
+  Bugfixes:
+    - Overhaul mode:
+      - Disable platinum as it is not usefull without component or science mode
+      - Tweaked crafting times on nuclear fuel creation and reprocessing recipes (339)
+    - Component mode:
+      - Clarifier now requires Electronic Block 0's instead of Electronic Block 1's
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 10.07.2020
+  Changes:
+    - Science mode:
+      - Added an early tech to use in the tech archive to unlock datacores (314)
+      - Changed graphics for ghosting technology (274)
+  Bugfixes:
+    - Regular mode:
+      - Changed energy source on the expanders to void when they don't use power (317)
+      - Fixed selection box on te cargo roboport
+      - Make sure only one of the ghosting techs is available for research (274)
+    - Overhaul mode:
+      - Added translation for hidden ghosting tech (288)
+      - Check for item existence with bobinserters (299)
+    - Component mode:
+      - Changed Thermal Water bore did require too high tech blocks (281)
+      - Fixed bobs ingredient limit was blocking progression into tier 2 blocks (336)
+    - Science mode:
+      - Added token-bio to exploration lab (277)
+      - Moved rocket booster 1 technology (from orange) to green science (309)
+  Modding:
+    - Make use of full IngredientPrototype instead of shorthand
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 05.06.2020
+  Bugfixes:
+    - Fixed petri dishes requiring glass
+    - Added fuel glow color to nuclear fuel (273)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 01.06.2020
+  Changes:
+    - Reduced the construction range (5 -> 3) of angels vehicle repair equipment
+    - Added ghost unlocks for angels construction robots
+    - Angels robots unlocks the shortcuts as well
+    - Removed crawler train from dependencies (since we moved it to a seperate mod a while ago)
+  Bugfixes:
+    - Special vanilla mode:
+      - Fixed nuclear overhaul recipes and items were visible (267)
+    - Overhaul mode:
+      - Fixed error in migration not migrating all cases, rerunning same migration script
+        to get the other cases (271)
+      - Fixed Uranium-235 Fuel cell required 10 iron plates/lead plates instead of 15 iron plates (267)
+    - Science mode:
+      - Fixed that you could not get liquid resin before green science (268)
+      - Fixed that the special tree generation was locked behind orange science
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+    - Added large logistic zone entities (241)
+      - Added large logistic zone expander
+        - Consumes no power
+        - Expands logistic zone by 30x30
+      - Added large Construction zone expander
+        - Expands construction zone by 125x125
+        - Connects up to 60 tiles distance (30 tile radius)
+        - Has 1 recharge port with a recharge rate of 200kW
+      - Added large Remote Relay station
+        - Equivalent logistic zone of 30x30 and connecion up to 60 tiles distance
+        - Has 4 recharge port with a recharge rate of 200kW each
+        - Has 1 inventory space to store robots
+        - Has 1 inventory space to store repair packs
+      - Slightly altered the existing crawler logistics recipes
+      - Increased recharge rate on the charging basestation
+    - Fixed charging issues on the relay stations
+    - Added a crawler themed lamp
+    - Overhaul mode:
+      - Added angels nuclear fuel processes
+    - Component mode:
+      - Blocks have a configurable stack size (default 1000) (222)
+      - Block tiers 0 and 1 have lower crafting times for faster progression (222)
+      - Blocks tier 3, 4 and 5 have increased crafting times due to lower amounts of use (222)
+      - All machines that use blocks as a recipe now have an instant crafting time (222)
+      - Added better recipes for inserters to use components better
+  Bugfixes:
+    - MP safer method of requiring files (check inside the file instead of around)
+    - Component mode:
+      - Fixed that the manual craftable blocks would be decomposed for total raw calculation (222)
+    - Science mode:
+      - Fixed rocket silo would only give 200 Gravitational Analyzers instead of 1000 (stack size)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 20.04.2020
+  Changes:
+    - Renamed transistor to capacitor
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 12.04.2020
+  Bugfixes:
+    - With bobs burner phase allow steam science in the basic lab.. not main lab #169
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 12.04.2020
+  Bugfixes:
+    - With bobs burner phase allow steam science in the main lab #169
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 12.04.2020
+  Changes:
+    - General:
+      - Reduced the collision box so you can walk past them (#163)
+        - Reduced collision box of the Construction and Zone expanders to the size of a medium power pole
+        - Reduced collsion box of the Recharge Stations to the size of a big power pole
+      - Increased connection distance for Construction Zone Expanders and Remote Charging Station MK2 to fit with big power poles
+      - Increased construction area on Construction Zone Expanders to fit with big power poles
+      - Removed the logistics zone on the Construction Zone Expanders as these are obsolete in 0.18
+      - Removed the logistics zone on the Charging Basestation as these are obsolete in 0.18
+      - Reduced animation speed on the Logistic Zone Expander
+    - Component mode:
+      - Electronics can now be made in electronic assembler when playing with bobassembly
+      - Updated sintering oven to be craftable with components turned on to make motor casings
+      - All tech labs now require previous tier as an ingredient
+      - Integrated components into crawler robots and base game robotics
+      - Added basic military as a prereq for exploration-1 #169
+    - Science mode:
+      - Made crawler construction bots available in red science
+      - Proper datacores for tech in bobs burner phase #169
+      - Removed red science pack when bobs burner phase is enabled #169
+  Bugfixes:
+    - General:
+      - Fixed circuit network connector sprites on the big chests
+      - Fixed the drawing box was too small on the Zone Expanders and Recharge Stations
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 02.04.2020
+  Changes:
+    - Removed Crawler Train - moved to separate mod #124
+    - Component mode:
+      - Stone wall now require only 1 Construction Block 2 instead of 5
+      - Fixed recipes would use the unobtainable advanced processing blocks
+      - Changed Grey Circuit Board hand crafting to use the Circuit Board from wood instead of paper
+      - Added new recipes to create molds for Motor Casting
+  Bugfixes:
+    - General:
+      - Fixed iron stick/rod in wrong mode to be shown (including cleanup) #154
+    - Component mode:
+      - Fixed Submachine Gun was unlocking with Turrets instead of Basic Military technology
+      - Fixed Automation 2 did not depend on Construction Components 2
+    - Science mode:
+      - Fixed Assembling Machine 1 was locked when playing with bobs Burner Assemblers disabled
+      - Fixed some labs would require the base game Lab as ingredient instead of angels variant
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 24.03.2020
+  Changes:
+    - Added dedicated graphic to the weapon trigger (it was the same as Gear before)
+  Bugfixes:
+    - Overhaul mode:
+      - Fixed production science packs require bobs chemical plants instead of angels version
+    - Component mode:
+      - Fixed that some recipes would use iron sticks and iron gear wheels instead of Angels alternative
+      - Added alternative Grey Board recipe unlock to Paper Making 1
+      - Added missing prerequisite of Paper Making 1 to Red Circuits
+    - Science mode:
+      - Fixed when playing with bobs that assembling machines 1 and logistics 1 were locked behind basic labs
+      - Fixed that gun turrets technology was locked behind red science (military) instead of grey (basic-military)
+      - Fixed that the vanilla lab was not hidden when playing pure angels
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 21.03.2020
+  Changes:
+    - Components:
+      - assembling-machine-1 in vanilla requires Electronic block 0 instead of 1 #109
+      - Added a setting to return the building return to vanilla style
+    - Science:
+      - Allow productivity on (all) analyzers and datacores
+  Bugfixes:
+    - Offshore pump returned Electronic block 1 while using block 0 for making
+    - With bobs assembly, assembling machine 2 returned Electronic block 1 while using block 2 for making
+    - Fixed crash related to recipe ingredient list having empty fields due to other filthy mods
+    - Fixed crash related to technologies using count_formula instead of count for none-infinite tech
+    - Fixed typo in the description of the main lab
+    - Fixed angels space lab research had a ridiculous research time, compensated with packs
+    - Disable unused bobs advanced logistic science research when playing angel science mode
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 21.03.2020
+  Changes:
+    - Fixed an error relating to composite entities which don't have a minable property
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 20.03.2020
+  Changes:
+    - Added dedicated icon to the Electronics Block 0
+    - Added dedicated researched to unlock the components
+    - Added dedicated researched for the specialised labs
+    - Changed Electronics Board ingredients to use Cupric instead of Ferrous Chloride Solution
+    - Changed Solder amount on Electronics Boards to the amount of components that are needed
+    - Changed the Lab Archive icon and added different tiers to speed up research process
+    - Allow productivity modules on components
+    - Changed ratios between component ingredients to bring diversity between tiers
+    - Updated the replace_con_mats function to also update minable results to the ingredients
+    - Some small changes to what is unlocked at certain points
+    - Added a new tier of labs for infinite research
+    - Added white research for infinite research
+    - Fully integrated bobs into angels tech tree
+    - Fully replaced bobs electronics with angels variants
+  Bugfixes:
+    - Extra check if recipe ingredients exists #52
+    - Allow robot deployment when in automatic mode #48
+    - Fixed Microchip requiring liquid plastic as ingredient
+    - Fixed that the Lab Archive was unobtainable when enabling angels science mid-game
+    - Science pack for datacores for angels rocket fuel fixed to default rocket fuel #66
+    - Enforces single main-lab to exist
+    - Fixed that yellow board was not craftable (now made in a chemical plant)
+    - Various bobs group and tech clean-ups
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 22.02.2020
+  Changes:
+    - Dependent on bioprocessing 0.7.3 for new lab triggers
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
+    - Automated component replacement script if components is activated
+      - Works with Vanilla, Angels and Bobs (default, normal and expensive)
+      - All buildings require blocks
+      - Other recipes changed to take angels components
+      - Hides bobs electronic(finals) to use angels electronics
+      - Still uses bobs electronic paths for modules (for now)
+      - Warning: Does not need overhaul=true to work
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 09.02.2020
+  Changes:
+    - Update to 0.18
+    - Updated recipe interaction
+    - Added settings and activation clauses (currently forcing off pending further testing)
+    - Tested early functionality
+    - Allowed basic blocks to be handcrafted so technology can progress
+    - Integrated bio-tokens into the production lab
+    - Small tweaks
+    - Added a new generic lab to allow flexibility
+    - Changed the weight of the crawler train wagon and robot wagon
+  Bugfixes:
+    - Fixed icons
+    - Fixed localisations (technologies still need updating)
+    - Fixed that the logistics storage silo did not have a filter slot
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 29.03.2019
+  Changes:
+    - update to 0.17
+    - reduced size of zone expander hitboxes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 01.04.2018
+  Changes:
+    - merged mods and first release

@@ -4,7 +4,7 @@ data:extend({
     name = "powder-mixer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "powder-mixer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
           priority = "high",
           width = 71,
           height = 87,
@@ -60,7 +60,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0, -10),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
             priority = "high",
             width = 138,
             height = 170,
@@ -72,7 +72,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
           priority = "high",
           width = 93,
           height = 51,
@@ -82,7 +82,7 @@ data:extend({
           shift = util.by_pixel(13.5, 9.5),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
                 priority = "high",
                 width = 183,
                 height = 99,
@@ -98,7 +98,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/ore-processing-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -109,7 +109,7 @@ data:extend({
     name = "powder-mixer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -125,7 +125,7 @@ data:extend({
     name = "powder-mixer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -156,7 +156,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
           priority = "high",
           width = 71,
           height = 87,
@@ -165,7 +165,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0, -10),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
             priority = "high",
             width = 138,
             height = 170,
@@ -177,7 +177,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
           priority = "high",
           width = 93,
           height = 51,
@@ -187,7 +187,7 @@ data:extend({
           shift = util.by_pixel(13.5, 9.5),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
                 priority = "high",
                 width = 183,
                 height = 99,
@@ -203,7 +203,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/ore-processing-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -214,7 +214,7 @@ data:extend({
     name = "powder-mixer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -230,7 +230,7 @@ data:extend({
     name = "powder-mixer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -261,7 +261,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
           priority = "high",
           width = 71,
           height = 87,
@@ -270,7 +270,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0, -10),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
             priority = "high",
             width = 138,
             height = 170,
@@ -282,7 +282,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
           priority = "high",
           width = 93,
           height = 51,
@@ -292,7 +292,7 @@ data:extend({
           shift = util.by_pixel(13.5, 9.5),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
                 priority = "high",
                 width = 183,
                 height = 99,
@@ -308,7 +308,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/ore-processing-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -319,7 +319,7 @@ data:extend({
     name = "powder-mixer-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -335,7 +335,7 @@ data:extend({
     name = "powder-mixer-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -365,7 +365,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
           priority = "high",
           width = 71,
           height = 87,
@@ -374,7 +374,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0, -10),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-base.png",
             priority = "high",
             width = 138,
             height = 170,
@@ -386,7 +386,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
           priority = "high",
           width = 93,
           height = 51,
@@ -396,7 +396,7 @@ data:extend({
           shift = util.by_pixel(13.5, 9.5),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/hr-powder-mixer-shadow.png",
                 priority = "high",
                 width = 183,
                 height = 99,
@@ -412,7 +412,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/ore-processing-machine.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/ore-processing-machine.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

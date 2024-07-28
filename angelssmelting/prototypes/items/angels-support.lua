@@ -3,7 +3,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-coolant",
-    icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant.png",
     icon_size = 32,
     subgroup = "water-treatment-fluid",
     order = "fa",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-coolant-used",
-    icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant-used.png",
     icon_size = 32,
     subgroup = "water-treatment-fluid",
     order = "fb",
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "item",
     name = "motor-casing-0",
-    icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "a[positive-mold]",
@@ -38,7 +38,7 @@ data:extend({
   {
     type = "item",
     name = "mold-expendable",
-    icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "b[expendable]",
@@ -47,7 +47,7 @@ data:extend({
   {
     type = "item",
     name = "mold-non-expendable",
-    icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-a[new]",
@@ -57,8 +57,8 @@ data:extend({
     type = "item",
     name = "spent-mold-non-expendable",
     icons = {
-      { icon = "__angelssmelting__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32 },
-      --{ icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
+      { icon = "__angelssmeltinggraphics__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32 },
+      --{ icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
     },
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-b[used]",

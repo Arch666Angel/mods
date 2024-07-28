@@ -34,7 +34,7 @@ local bio_turret_gun_center_base = math3d.vector2.sub({ 0, -0.725 }, bio_turret_
 
 local indicator_pictures = {
   north = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-north.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-north.png",
     line_length = 2,
     width = 4,
     height = 10,
@@ -43,7 +43,7 @@ local indicator_pictures = {
     direction_count = 1,
     shift = util.by_pixel(8, 20),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-north.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-north.png",
       line_length = 2,
       width = 10,
       height = 18,
@@ -55,7 +55,7 @@ local indicator_pictures = {
     },
   },
   east = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-east.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-east.png",
     line_length = 2,
     width = 12,
     height = 6,
@@ -64,7 +64,7 @@ local indicator_pictures = {
     direction_count = 1,
     shift = util.by_pixel(-34, -6),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-east.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-east.png",
       line_length = 2,
       width = 18,
       height = 8,
@@ -76,7 +76,7 @@ local indicator_pictures = {
     },
   },
   south = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-south.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-south.png",
     line_length = 2,
     width = 4,
     height = 12,
@@ -85,7 +85,7 @@ local indicator_pictures = {
     direction_count = 1,
     shift = util.by_pixel(-8, -46),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-south.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-south.png",
       line_length = 2,
       width = 8,
       height = 18,
@@ -97,7 +97,7 @@ local indicator_pictures = {
     },
   },
   west = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-west.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/bio-turret-led-indicator-west.png",
     line_length = 2,
     width = 10,
     height = 10,
@@ -106,7 +106,7 @@ local indicator_pictures = {
     direction_count = 1,
     shift = util.by_pixel(32, -22),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-west.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/led-indicator/hr-bio-turret-led-indicator-west.png",
       line_length = 2,
       width = 20,
       height = 10,
@@ -125,7 +125,7 @@ local bio_turret_extension_animation = function(shft, opts)
   local ret_layers = {
     -- diffuse
     {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-extension.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-extension.png",
       priority = "medium",
       frame_count = opts and opts.frame_count or m_frame_count,
       line_length = opts and opts.line_length or m_line_length,
@@ -136,7 +136,7 @@ local bio_turret_extension_animation = function(shft, opts)
       axially_symmetrical = false,
       shift = util.by_pixel(-2, -26),
       hr_version = {
-        filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension.png",
         priority = "medium",
         frame_count = opts and opts.frame_count or m_frame_count,
         line_length = opts and opts.line_length or m_line_length,
@@ -151,7 +151,7 @@ local bio_turret_extension_animation = function(shft, opts)
     },
     -- mask
     {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-extension-mask.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-extension-mask.png",
       flags = { "mask" },
       frame_count = opts and opts.frame_count or m_frame_count,
       line_length = opts and opts.line_length or m_line_length,
@@ -163,7 +163,7 @@ local bio_turret_extension_animation = function(shft, opts)
       shift = util.by_pixel(-2, -26),
       apply_runtime_tint = true,
       hr_version = {
-        filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension-mask.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension-mask.png",
         flags = { "mask" },
         frame_count = opts and opts.frame_count or m_frame_count,
         line_length = opts and opts.line_length or m_line_length,
@@ -179,7 +179,7 @@ local bio_turret_extension_animation = function(shft, opts)
     },
     -- shadow
     {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-extension-shadow.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-extension-shadow.png",
       frame_count = opts and opts.frame_count or m_frame_count,
       line_length = opts and opts.line_length or m_line_length,
       run_mode = opts and opts.run_mode or "forward",
@@ -190,7 +190,7 @@ local bio_turret_extension_animation = function(shft, opts)
       shift = util.by_pixel(32, -2),
       draw_as_shadow = true,
       hr_version = {
-        filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension-shadow.png",
+        filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-extension-shadow.png",
         frame_count = opts and opts.frame_count or m_frame_count,
         line_length = opts and opts.line_length or m_line_length,
         run_mode = opts and opts.run_mode or "forward",
@@ -236,7 +236,7 @@ end
 
 local bio_turret_prepared_animation = function(shft, opts)
   local diffuse_layer = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun.png",
     priority = "medium",
     counterclockwise = true,
     line_length = 8,
@@ -247,7 +247,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     direction_count = 64,
     shift = util.by_pixel(-2, -26),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun.png",
       priority = "medium",
       counterclockwise = true,
       line_length = 8,
@@ -261,7 +261,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     },
   }
   local glow_layer = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-active.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-active.png",
     counterclockwise = true,
     line_length = 8,
     width = 82,
@@ -273,7 +273,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     tint = bio_turret_make_color(1, 1, 1, 0.5),
     blend_mode = "additive",
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-active.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-active.png",
       counterclockwise = true,
       line_length = 8,
       width = 158,
@@ -288,7 +288,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     },
   }
   local mask_layer = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-mask.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-mask.png",
     flags = { "mask" },
     counterclockwise = true,
     line_length = 8,
@@ -300,7 +300,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     shift = util.by_pixel(-2, -28),
     apply_runtime_tint = true,
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-mask.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-mask.png",
       flags = { "mask" },
       counterclockwise = true,
       line_length = 8,
@@ -315,7 +315,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     },
   }
   local shadow_layer = {
-    filename = "__angelsexploration__/graphics/entity/bio-turret/gun/bio-turret-gun-shadow.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/bio-turret-gun-shadow.png",
     counterclockwise = true,
     line_length = 8,
     width = 90,
@@ -326,7 +326,7 @@ local bio_turret_prepared_animation = function(shft, opts)
     shift = util.by_pixel(32, 0),
     draw_as_shadow = true,
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-shadow.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/gun/hr-bio-turret-gun-shadow.png",
       counterclockwise = true,
       line_length = 8,
       width = 182,
@@ -408,7 +408,7 @@ data:extend({
   {
     type = "item",
     name = "angels-bio-turret",
-    icon = "__angelsexploration__/graphics/icons/bio-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/bio-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-fire",
@@ -419,7 +419,7 @@ data:extend({
   {
     type = "corpse",
     name = "bio-turret-remnants",
-    icon = "__angelsexploration__/graphics/icons/bio-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/bio-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "not-on-map" },
@@ -435,7 +435,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsexploration__/graphics/entity/bio-turret/remnants/bio-turret-remnants.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/remnants/bio-turret-remnants.png",
           line_length = 1,
           width = 152,
           height = 164,
@@ -445,7 +445,7 @@ data:extend({
           direction_count = 4,
           shift = util.by_pixel(-1, -4),
           hr_version = {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/remnants/hr-bio-turret-remnants.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/remnants/hr-bio-turret-remnants.png",
             line_length = 1,
             width = 302,
             height = 326,
@@ -459,7 +459,7 @@ data:extend({
         },
         {
           priority = "low",
-          filename = "__angelsexploration__/graphics/entity/bio-turret/remnants/mask/bio-turret-remnants-mask.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/remnants/mask/bio-turret-remnants-mask.png",
           width = 82,
           height = 82,
           frame_count = 1,
@@ -469,7 +469,7 @@ data:extend({
           shift = util.by_pixel(0, -4),
           hr_version = {
             priority = "low",
-            filename = "__angelsexploration__/graphics/entity/bio-turret/remnants/mask/hr-bio-turret-remnants-mask.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/remnants/mask/hr-bio-turret-remnants-mask.png",
             width = 164,
             height = 164,
             frame_count = 1,
@@ -486,7 +486,7 @@ data:extend({
   {
     type = "fluid-turret",
     name = "angels-bio-turret",
-    icon = "__angelsexploration__/graphics/icons/bio-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/bio-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -548,7 +548,7 @@ data:extend({
         layers = {
           -- diffuse
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-north.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-north.png",
             line_length = 1,
             width = 80,
             height = 96,
@@ -557,7 +557,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(-2, 14),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-north.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-north.png",
               line_length = 1,
               width = 158,
               height = 196,
@@ -570,7 +570,7 @@ data:extend({
           },
           -- mask
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-north-mask.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-north-mask.png",
             flags = { "mask" },
             line_length = 1,
             width = 36,
@@ -581,7 +581,7 @@ data:extend({
             shift = util.by_pixel(0, 32),
             apply_runtime_tint = true,
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-north-mask.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-north-mask.png",
               flags = { "mask" },
               line_length = 1,
               width = 74,
@@ -596,7 +596,7 @@ data:extend({
           },
           -- shadow
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-north-shadow.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-north-shadow.png",
             draw_as_shadow = true,
             line_length = 1,
             width = 70,
@@ -606,7 +606,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(2, 14),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-north-shadow.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-north-shadow.png",
               draw_as_shadow = true,
               line_length = 1,
               width = 134,
@@ -624,7 +624,7 @@ data:extend({
         layers = {
           -- diffuse
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-east.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-east.png",
             line_length = 1,
             width = 106,
             height = 72,
@@ -633,7 +633,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(-6, 2),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-east.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-east.png",
               line_length = 1,
               width = 216,
               height = 146,
@@ -646,7 +646,7 @@ data:extend({
           },
           -- mask
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-east-mask.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-east-mask.png",
             flags = { "mask" },
             apply_runtime_tint = true,
             line_length = 1,
@@ -657,7 +657,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(-32, 0),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-east-mask.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-east-mask.png",
               flags = { "mask" },
               apply_runtime_tint = true,
               line_length = 1,
@@ -672,7 +672,7 @@ data:extend({
           },
           -- shadow
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-east-shadow.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-east-shadow.png",
             draw_as_shadow = true,
             line_length = 1,
             width = 72,
@@ -682,7 +682,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(14, 8),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-east-shadow.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-east-shadow.png",
               draw_as_shadow = true,
               line_length = 1,
               width = 144,
@@ -700,7 +700,7 @@ data:extend({
         layers = {
           -- diffuse
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-south.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-south.png",
             line_length = 1,
             width = 64,
             height = 84,
@@ -709,7 +709,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(0, -8),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-south.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-south.png",
               line_length = 1,
               width = 128,
               height = 166,
@@ -722,7 +722,7 @@ data:extend({
           },
           -- mask
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-south-mask.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-south-mask.png",
             flags = { "mask" },
             apply_runtime_tint = true,
             line_length = 1,
@@ -733,7 +733,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(0, -32),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-south-mask.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-south-mask.png",
               flags = { "mask" },
               apply_runtime_tint = true,
               line_length = 1,
@@ -748,7 +748,7 @@ data:extend({
           },
           -- shadow
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-south-shadow.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-south-shadow.png",
             draw_as_shadow = true,
             line_length = 1,
             width = 70,
@@ -758,7 +758,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(2, 8),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-south-shadow.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-south-shadow.png",
               draw_as_shadow = true,
               line_length = 1,
               width = 134,
@@ -776,7 +776,7 @@ data:extend({
         layers = {
           -- diffuse
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-west.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-west.png",
             line_length = 1,
             width = 100,
             height = 74,
@@ -785,7 +785,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(8, -2),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-west.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-west.png",
               line_length = 1,
               width = 208,
               height = 144,
@@ -798,7 +798,7 @@ data:extend({
           },
           -- mask
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-west-mask.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-west-mask.png",
             flags = { "mask" },
             apply_runtime_tint = true,
             line_length = 1,
@@ -809,7 +809,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(32, -2),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-west-mask.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-west-mask.png",
               flags = { "mask" },
               apply_runtime_tint = true,
               line_length = 1,
@@ -824,7 +824,7 @@ data:extend({
           },
           -- shadow
           {
-            filename = "__angelsexploration__/graphics/entity/bio-turret/base/bio-turret-base-west-shadow.png",
+            filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/bio-turret-base-west-shadow.png",
             draw_as_shadow = true,
             line_length = 1,
             width = 104,
@@ -834,7 +834,7 @@ data:extend({
             direction_count = 1,
             shift = util.by_pixel(14, 4),
             hr_version = {
-              filename = "__angelsexploration__/graphics/entity/bio-turret/base/hr-bio-turret-base-west-shadow.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/base/hr-bio-turret-base-west-shadow.png",
               draw_as_shadow = true,
               line_length = 1,
               width = 206,
@@ -850,7 +850,7 @@ data:extend({
       },
     },
     muzzle_animation = {
-      filename = "__angelsexploration__/graphics/entity/bio-turret/bio-turret-muzzle-fire.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/bio-turret/bio-turret-muzzle-fire.png",
       line_length = 8,
       width = 17,
       height = 41,

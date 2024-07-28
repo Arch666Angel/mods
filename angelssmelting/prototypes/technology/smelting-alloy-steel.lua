@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-steel-smelting-1",
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -35,7 +35,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-steel-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -89,7 +89,7 @@ data:extend({
     type = "technology",
     name = "angels-steel-smelting-3",
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 3" },
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -127,7 +127,7 @@ data:extend({
     type = "technology",
     name = "angels-steel-smelting-4",
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 4" },
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

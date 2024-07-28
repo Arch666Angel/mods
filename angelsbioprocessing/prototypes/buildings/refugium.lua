@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "bio-refugium-fish",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-fish.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-fish.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-refugium-fish",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-fish.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-fish.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-refugium-fish" },
@@ -40,7 +40,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-fish-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish-shadow.png",
           width = 288,
           height = 288,
           line_length = 1,
@@ -48,7 +48,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-fish-off.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish-off.png",
           width = 288,
           height = 288,
           line_length = 1,
@@ -60,7 +60,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-fish.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-fish.png",
           width = 288,
           height = 288,
           line_length = 7,
@@ -73,7 +73,7 @@ data:extend({
     match_animation_speed_to_activity = false,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsbioprocessing__/sound/aquarium.ogg", volume = 0.8 },
+      sound = { filename = "__angelsbioprocessinggraphics__/sound/aquarium.ogg", volume = 0.8 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
@@ -106,7 +106,7 @@ data:extend({
   {
     type = "item",
     name = "bio-refugium-puffer",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-puffer.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-puffer.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "d",
@@ -116,7 +116,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-refugium-puffer",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-refugium-puffer.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-refugium-puffer.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-refugium-puffer" },
@@ -141,7 +141,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer-off.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-puffer-off.png",
       width = 224,
       height = 256,
       line_length = 1,
@@ -152,7 +152,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
           width = 224,
           height = 256,
           line_length = 6,
@@ -167,11 +167,11 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__angelsbioprocessing__/sound/fart_1.ogg",
+          filename = "__angelsbioprocessinggraphics__/sound/fart_1.ogg",
           volume = 1,
         },
         {
-          filename = "__angelsbioprocessing__/sound/fart_2.ogg",
+          filename = "__angelsbioprocessinggraphics__/sound/fart_2.ogg",
           volume = 1,
         },
       },
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "item",
     name = "bio-refugium-biter",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-farm.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "e",
@@ -231,7 +231,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-refugium-biter",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-farm.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-refugium-biter" },
@@ -255,7 +255,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-biter-off.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-biter-off.png",
       width = 288,
       height = 288,
       line_length = 1,
@@ -266,7 +266,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-biter.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-biter.png",
           width = 288,
           height = 288,
           line_length = 4,
@@ -305,7 +305,7 @@ data:extend({
   {
     type = "item",
     name = "bio-refugium-hogger",
-    icon = "__angelsbioprocessing__/graphics/icons/void.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/void.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "f",
@@ -315,7 +315,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-refugium-hogger",
-    icon = "__angelsbioprocessing__/graphics/icons/void.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/void.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-refugium-hogger" },
@@ -340,7 +340,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/7x7.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/7x7.png",
       width = 288,
       height = 288,
       line_length = 1,
@@ -350,7 +350,7 @@ data:extend({
     },
     -- working_visualisation=
     -- {
-    -- filename = "__angelsbioprocessing__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
+    -- filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-puffer.png",
     -- width = 224,
     -- height = 256,
     -- line_length = 6,

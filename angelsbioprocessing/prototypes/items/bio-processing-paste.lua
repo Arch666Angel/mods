@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "paste-cobalt",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-cobalt.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-cobalt.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-cobalt]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "item",
     name = "paste-copper",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-copper.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-copper.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-copper]",
@@ -21,7 +21,7 @@ data:extend({
   {
     type = "item",
     name = "paste-gold",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-gold.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-gold.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-gold]",
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "item",
     name = "paste-iron",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-iron.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-iron.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-iron]",
@@ -39,7 +39,7 @@ data:extend({
   {
     type = "item",
     name = "paste-silver",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-silver.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-silver.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-silver]",
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "item",
     name = "paste-titanium",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-titanium.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-titanium.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-titanium]",
@@ -57,7 +57,7 @@ data:extend({
   {
     type = "item",
     name = "paste-tungsten",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-tungsten.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-tungsten.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-tungsten]",
@@ -66,7 +66,7 @@ data:extend({
   {
     type = "item",
     name = "paste-zinc",
-    icon = "__angelsbioprocessing__/graphics/icons/paste-zinc.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-zinc.png",
     icon_size = 32,
     subgroup = "bio-processing-paste",
     order = "a[paste-zinc]",

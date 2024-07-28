@@ -6,7 +6,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-shielding-1",
-      icon = "__angelsindustries__/graphics/icons/cable-shield-1.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-shield-1.png",
       icon_size = 32,
       subgroup = "angels-cable-shielding",
       order = "a",
@@ -15,7 +15,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-shielding-2",
-      icon = "__angelsindustries__/graphics/icons/cable-shield-2.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-shield-2.png",
       icon_size = 32,
       subgroup = "angels-cable-shielding",
       order = "b",
@@ -24,7 +24,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-shielding-3",
-      icon = "__angelsindustries__/graphics/icons/cable-shield-3.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-shield-3.png",
       icon_size = 32,
       subgroup = "angels-cable-shielding",
       order = "c",
@@ -33,7 +33,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-shielding-4",
-      icon = "__angelsindustries__/graphics/icons/cable-shield-4.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-shield-4.png",
       icon_size = 32,
       subgroup = "angels-cable-shielding",
       order = "d",
@@ -42,7 +42,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-shielding-5",
-      icon = "__angelsindustries__/graphics/icons/cable-shield-5.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-shield-5.png",
       icon_size = 32,
       subgroup = "angels-cable-shielding",
       order = "e",
@@ -54,7 +54,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-harness-1",
-      icon = "__angelsindustries__/graphics/icons/cable-harness-1.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-harness-1.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "a",
@@ -63,7 +63,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-harness-2",
-      icon = "__angelsindustries__/graphics/icons/cable-harness-2.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-harness-2.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "b",
@@ -72,7 +72,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-harness-3",
-      icon = "__angelsindustries__/graphics/icons/cable-harness-3.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-harness-3.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "c",
@@ -81,7 +81,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-harness-4",
-      icon = "__angelsindustries__/graphics/icons/cable-harness-4.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-harness-4.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "d",
@@ -90,7 +90,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "cable-harness-5",
-      icon = "__angelsindustries__/graphics/icons/cable-harness-5.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cable-harness-5.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "e",
@@ -102,7 +102,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-cabling",
-      icon = "__angelsindustries__/graphics/icons/cabling.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/cabling.png",
       icon_size = 32,
       subgroup = "angels-cable-harness",
       order = "f",
@@ -114,7 +114,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-servo-motor-1",
-      icon = "__angelsindustries__/graphics/icons/servo-motor-1.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/servo-motor-1.png",
       icon_size = 32,
       subgroup = "angels-servo-motor",
       order = "a",
@@ -123,7 +123,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-servo-motor-2",
-      icon = "__angelsindustries__/graphics/icons/servo-motor-2.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/servo-motor-2.png",
       icon_size = 32,
       subgroup = "angels-servo-motor",
       order = "b",
@@ -132,7 +132,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-servo-motor-3",
-      icon = "__angelsindustries__/graphics/icons/servo-motor-3.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/servo-motor-3.png",
       icon_size = 32,
       subgroup = "angels-servo-motor",
       order = "c",
@@ -141,7 +141,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-servo-motor-4",
-      icon = "__angelsindustries__/graphics/icons/servo-motor-4.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/servo-motor-4.png",
       icon_size = 32,
       subgroup = "angels-servo-motor",
       order = "d",
@@ -150,7 +150,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-servo-motor-5",
-      icon = "__angelsindustries__/graphics/icons/servo-motor-5.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/servo-motor-5.png",
       icon_size = 32,
       subgroup = "angels-servo-motor",
       order = "e",

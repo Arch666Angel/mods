@@ -303,6 +303,6 @@ if mods["bobplates"] then
   if data.raw.recipe["pure-water-pump"] then
     data.raw.recipe["pure-water-pump"].icon = nil
     data.raw.recipe["pure-water-pump"].icon_size = 32
-    data.raw.recipe["pure-water-pump"].icons = { { icon = "__angelsrefining__/graphics/icons/water-purified.png" } }
+    data.raw.recipe["pure-water-pump"].icons = { { icon = "__angelsrefininggraphics__/graphics/icons/water-purified.png" } }
   end
 end

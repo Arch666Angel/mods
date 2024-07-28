@@ -14,12 +14,12 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     OV.global_replace_item("angels-solder", "solder")
     angelsmods.functions.add_flag("angels-solder", "hidden")
     angelsmods.functions.move_item("solder", "angels-solder-casting", "d")
-    data.raw["item"]["solder"].icon = "__angelssmelting__/graphics/icons/solder.png"
+    data.raw["item"]["solder"].icon = "__angelssmeltinggraphics__/graphics/icons/solder.png"
     data.raw["item"]["solder"].icon_size = 32
     data.raw["item"]["solder"].icon_mipmaps = 1
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/solder.png",
-      "__angelssmelting__/graphics/icons/solder.png"
+      "__angelssmeltinggraphics__/graphics/icons/solder.png"
     )
     OV.remove_unlock("electronics", "solder")
 

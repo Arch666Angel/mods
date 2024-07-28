@@ -4,7 +4,7 @@ data:extend({
     name = "pellet-press",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "pellet-press",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-base.png",
           priority = "high",
           width = 102,
           height = 101,
@@ -60,7 +60,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0.5, 0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-base.png",
             priority = "high",
             width = 200,
             height = 199,
@@ -72,7 +72,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-shadow.png",
           priority = "high",
           width = 125,
           height = 68,
@@ -83,7 +83,7 @@ data:extend({
           shift = util.by_pixel(12, 17),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                 priority = "high",
                 width = 246,
                 height = 132,
@@ -111,7 +111,7 @@ data:extend({
     name = "pellet-press-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -127,7 +127,7 @@ data:extend({
     name = "pellet-press-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -158,7 +158,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-base.png",
           priority = "high",
           width = 102,
           height = 101,
@@ -167,7 +167,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0.5, 0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-base.png",
             priority = "high",
             width = 200,
             height = 199,
@@ -179,7 +179,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-shadow.png",
           priority = "high",
           width = 125,
           height = 68,
@@ -190,7 +190,7 @@ data:extend({
           shift = util.by_pixel(12, 17),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                 priority = "high",
                 width = 246,
                 height = 132,
@@ -218,7 +218,7 @@ data:extend({
     name = "pellet-press-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -234,7 +234,7 @@ data:extend({
     name = "pellet-press-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -265,7 +265,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-base.png",
           priority = "high",
           width = 102,
           height = 101,
@@ -274,7 +274,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0.5, 0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-base.png",
             priority = "high",
             width = 200,
             height = 199,
@@ -286,7 +286,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-shadow.png",
           priority = "high",
           width = 125,
           height = 68,
@@ -297,7 +297,7 @@ data:extend({
           shift = util.by_pixel(12, 17),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                 priority = "high",
                 width = 246,
                 height = 132,
@@ -325,7 +325,7 @@ data:extend({
     name = "pellet-press-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -341,7 +341,7 @@ data:extend({
     name = "pellet-press-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/pellet-press.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -371,7 +371,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-base.png",
           priority = "high",
           width = 102,
           height = 101,
@@ -380,7 +380,7 @@ data:extend({
           animation_speed = 0.5,
           shift = util.by_pixel(0.5, 0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-base.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-base.png",
             priority = "high",
             width = 200,
             height = 199,
@@ -392,7 +392,7 @@ data:extend({
           } or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/pellet-press/pellet-press-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/pellet-press-shadow.png",
           priority = "high",
           width = 125,
           height = 68,
@@ -403,7 +403,7 @@ data:extend({
           shift = util.by_pixel(12, 17),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/pellet-press/hr-pellet-press-shadow.png",
                 priority = "high",
                 width = 246,
                 height = 132,

@@ -4,7 +4,7 @@ data:extend({
     name = "algae-farm",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "algae-farm",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -47,7 +47,7 @@ data:extend({
     energy_usage = "100kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/algae-farm.png",
       width = 288,
       height = 288,
       line_length = 6,
@@ -58,7 +58,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
           frame_count = 10,
           width = 92,
@@ -99,7 +99,7 @@ data:extend({
     name = "algae-farm-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -114,7 +114,7 @@ data:extend({
     name = "algae-farm-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -142,7 +142,7 @@ data:extend({
     energy_usage = "125kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/algae-farm.png",
       width = 288,
       height = 288,
       line_length = 6,
@@ -153,7 +153,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
           frame_count = 10,
           width = 92,
@@ -194,7 +194,7 @@ data:extend({
     name = "algae-farm-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -209,7 +209,7 @@ data:extend({
     name = "algae-farm-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -237,7 +237,7 @@ data:extend({
     energy_usage = "150kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/algae-farm.png",
       width = 288,
       height = 288,
       line_length = 6,
@@ -248,7 +248,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
           frame_count = 10,
           width = 92,
@@ -289,7 +289,7 @@ data:extend({
     name = "algae-farm-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -304,7 +304,7 @@ data:extend({
     name = "algae-farm-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsbioprocessing__/graphics/icons/algae-farm.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -331,7 +331,7 @@ data:extend({
     energy_usage = "175kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/algae-farm/algae-farm.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/algae-farm.png",
       width = 288,
       height = 288,
       line_length = 6,
@@ -342,7 +342,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/algae-farm/water-splash.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/algae-farm/water-splash.png",
           line_length = 5,
           frame_count = 10,
           width = 92,

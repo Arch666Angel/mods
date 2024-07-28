@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-construction-robots",
-    icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/construction-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "engine",
@@ -46,7 +46,7 @@ data:extend({
   {
     type = "technology",
     name = "cargo-robots",
-    icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/cargo-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-construction-robots",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-construction-robots-2",
-    icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/construction-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-construction-robots",
@@ -115,7 +115,7 @@ data:extend({
   {
     type = "technology",
     name = "cargo-robots-2",
-    icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/cargo-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "cargo-robots",
@@ -148,7 +148,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-construction-robots-3",
-    icon = "__angelsindustries__/graphics/technology/construction-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/construction-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-construction-robots-2",
@@ -179,7 +179,7 @@ data:extend({
   {
     type = "technology",
     name = "cargo-robots-3",
-    icon = "__angelsindustries__/graphics/technology/cargo-robot-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/cargo-robot-tech.png",
     icon_size = 128,
     prerequisites = {
       "cargo-robots-2",
@@ -220,7 +220,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-crawler",
-    icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/technology/crawler-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-vequipment-1",
@@ -249,7 +249,7 @@ data:extend({
   -- {
   -- type = "technology",
   -- name = "angels-yellow-loader",
-  -- icon = "__angelsindustries__/graphics/technology/yellow-loader-tech.png",
+  -- icon = "__angelsindustriesgraphics__/graphics/technology/yellow-loader-tech.png",
   -- icon_size = 128,
   -- prerequisites =
   -- {
@@ -274,7 +274,7 @@ data:extend({
   -- {
   -- type = "technology",
   -- name = "angels-red-loader",
-  -- icon = "__angelsindustries__/graphics/technology/red-loader-tech.png",
+  -- icon = "__angelsindustriesgraphics__/graphics/technology/red-loader-tech.png",
   -- icon_size = 128,
   -- prerequisites =
   -- {
@@ -300,7 +300,7 @@ data:extend({
   -- {
   -- type = "technology",
   -- name = "angels-blue-loader",
-  -- icon = "__angelsindustries__/graphics/technology/blue-loader-tech.png",
+  -- icon = "__angelsindustriesgraphics__/graphics/technology/blue-loader-tech.png",
   -- icon_size = 128,
   -- prerequisites =
   -- {

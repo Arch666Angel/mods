@@ -4,7 +4,7 @@ data:extend({
     name = "filtration-unit",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "filtration-unit",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -48,7 +48,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/filtration-unit/filtration-unit.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/filtration-unit.png",
           width = 224,
           height = 224,
           frame_count = 1,
@@ -100,7 +100,7 @@ data:extend({
     name = "filtration-unit-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -115,7 +115,7 @@ data:extend({
     name = "filtration-unit-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -144,7 +144,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/filtration-unit/filtration-unit.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/filtration-unit.png",
           width = 224,
           height = 224,
           frame_count = 1,
@@ -196,7 +196,7 @@ data:extend({
     name = "filtration-unit-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -211,7 +211,7 @@ data:extend({
     name = "filtration-unit-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/filtration-unit.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/filtration-unit.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -239,7 +239,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/filtration-unit/filtration-unit.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/filtration-unit.png",
           width = 224,
           height = 224,
           frame_count = 1,

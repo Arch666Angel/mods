@@ -12,7 +12,7 @@ data:extend({
   {
     type = "item",
     name = "ground-water-pump",
-    icon = "__angelsrefining__/graphics/icons/water-pump.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/water-pump.png",
     icon_size = 48,
     subgroup = "washing-building",
     order = "e",
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "offshore-pump",
     name = "ground-water-pump",
-    icon = "__angelsrefining__/graphics/icons/water-pump.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/water-pump.png",
     icon_size = 48,
     icon_mipmaps = 1,
     flags = { "placeable-neutral", "player-creation" },
@@ -97,7 +97,7 @@ data:extend({
           layers = {
             {
               stripes = create_static_stripes({
-                filename = "__angelsrefining__/graphics/entity/water-pump/down-pipe-north.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/water-pump/down-pipe-north.png",
                 width_in_frames = 1,
                 height_in_frames = 1,
               }, 16),
@@ -110,7 +110,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__angelsrefining__/graphics/entity/water-pump/pump-north.png",
+              filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-north.png",
               priority = "high",
               line_length = 4,
               frame_count = 16,
@@ -125,7 +125,7 @@ data:extend({
           layers = {
             {
               stripes = create_static_stripes({
-                filename = "__angelsrefining__/graphics/entity/water-pump/down-pipe-east.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/water-pump/down-pipe-east.png",
                 width_in_frames = 1,
                 height_in_frames = 1,
               }, 16),
@@ -138,7 +138,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__angelsrefining__/graphics/entity/water-pump/pump-east.png",
+              filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-east.png",
               priority = "high",
               line_length = 4,
               frame_count = 16,
@@ -152,7 +152,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__angelsrefining__/graphics/entity/water-pump/pump-south.png",
+              filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-south.png",
               priority = "high",
               line_length = 4,
               frame_count = 16,
@@ -163,7 +163,7 @@ data:extend({
             },
             {
               stripes = create_static_stripes({
-                filename = "__angelsrefining__/graphics/entity/water-pump/down-pipe-south.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/water-pump/down-pipe-south.png",
                 width_in_frames = 1,
                 height_in_frames = 1,
               }, 16),
@@ -181,7 +181,7 @@ data:extend({
           layers = {
             {
               stripes = create_static_stripes({
-                filename = "__angelsrefining__/graphics/entity/water-pump/down-pipe-west.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/water-pump/down-pipe-west.png",
                 width_in_frames = 1,
                 height_in_frames = 1,
               }, 16),
@@ -194,7 +194,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__angelsrefining__/graphics/entity/water-pump/pump-west.png",
+              filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-west.png",
               priority = "high",
               line_length = 4,
               frame_count = 16,

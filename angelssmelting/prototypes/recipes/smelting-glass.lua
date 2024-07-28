@@ -235,7 +235,7 @@ data:extend({
     },
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
       },
     }, 1, angelsmods.smelting.number_tint),

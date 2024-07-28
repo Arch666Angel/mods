@@ -1,0 +1,506 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: ???
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Rebalance Tungsten Smelting Recipes (980)
+    - Adjusted the recipes for Bob's Assembling Machines (985)
+    - Moved Cement Processing techs up a science pack tier so Clay Bricks are not available so early in the game (991)
+    - Updated for Factorio 2.0 (994)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.23
+Date: 21.02.2024
+  Changes:
+    - Steel casting does not need to force enable all iron ore products
+---------------------------------------------------------------------------------------------------
+Version: 0.6.22
+Date: 22.12.2023
+  Changes:
+    - Increased the tech and required machine tier of Chrome and Platinum (909)
+    - Allow Fibreglass boards to be made in Bob's Electronics assembling machines (921)
+    - Enabled productivity modules for Glass, Glass fiber, and Fibreglass recipes (929)
+    - Added water to recipe Glass fiber casting 1. Added new recipe Glass fiber casting 2 (939)
+  Bugfixes:
+    - Another attempt at fixed smoke on the blast furnace
+    - Fixed names and descriptions of Bronze processing and Brass processing techs from Bob's MCI mod (926)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.21
+Date: 23.02.2023
+  Changes:
+    - Glass fiber now requires Strand Casting Machine 2 (unless Angel's Industries Components Overhaul is enabled) (890)
+    - Added missing prerequisites. Some recipes could be researched before a machine for it was unlocked (890)
+    - Changed recipes to require Crystallizer rather than Crystallizer 2 (890)
+      - Crystal catalyst
+      - Gem ores
+      - Raw crystal splinter
+    - Used coolant coal filtering now requires Filtration Unit 2 (903)
+    - Used cooland ceramic filtering now requires Filtration Unit 3 (903)
+    - Changed the iron hydroxide recycling recipe name and icon
+  Bugfixes:
+    - Fixed Air Filter 3's sort order and icon numeral (893)
+    - Fixed Bob's Oil Processing recipe not being correctly hidden in some configurations (894)
+    - Fixed the recipe icon of the manganese oxide recipe in case there is only one recipe to make oxide
+    - Disabled unused iron casting 4 technology in special vanilla mode
+    - Fixed smoke on the blast furnace
+---------------------------------------------------------------------------------------------------
+Version: 0.6.20
+Date: 01.01.2023
+  Changes:
+    - Changed the ingredient tier of some buildings (674)
+      - Blast furnace 1, 2
+      - Casting machine 1, 2
+      - Chemical furnace 1
+      - Induction furnace 1, 2
+      - Ore processing machine
+      - Pellet press
+      - Powder mixer
+    - Removed Glowing hot iron plates
+    - Disabled Solder mixture, unless using Component overhaul from Angel's Industries
+    - Changed the science pack tier of some techs
+      - Advanced steel smelting and casting 1 - 3
+      - Advanced tungsten smelting and casting 1 - 2
+    - Split techs Advanced iron casting 3 (805)
+    - Split tech Advanced steel casting 3
+    - Changed smelting tech tiers (841)
+      - Nitinol moved up
+      - Nickel moved up
+      - Silicon moved up
+      - Manganese moved down
+    - Set minimum building tiers for all recipes (841)
+    - Added Sintering oven 5 (841)
+    - Hid Chemical furnace 1 in Special vanilla mode (841)
+    - Hid Sintering overn 1 - 3 when not using Components overhaul (841)
+    - Standardized science pack counts for smelting techs (841)
+    - Removed empty Chemical Processing techs from Bob's (550)
+  Bugfixes:
+    - Fixed tech prerequisites for Batteries 3 tech from bobplates (799)
+    - Moved the silver oxide recipe to be used in a powder mixer
+    - Fixed machine output arrows (839)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.19
+Date: 06.06.2022
+  Changes:
+    - Removed the obsolete ingredient_count limitation on all smelting buildings (763)
+    - Disabled Ammonium chloride gas when platinum is disabled (769)
+    - Added build and mining sounds to concrete brick tiles (776)
+    - Streamlined steel smelting technology (779, 780)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.18
+Date: 19.12.2021
+  Changes:
+    - Changed recipe categories to appropriate powder mixing tier requirements (673)
+  Bugfixes:
+    - Fixed bug with Iron hot plate was not a 1:1 ratio to Iron plate with bobs mods (666)
+    - Fixed Tungsten Oxide used the wrong icon when bobs mods are present (688)
+    - Fixed Lead sheet roll casting 2 had 2 technologies unlocking it (700)
+    - Hide Sintering Ovens when they are unused (691)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.17
+Date: 10.08.2021
+  Bugfixes:
+    - Fixed iron and copper ore could not be smelted to plates directly in special vanilla mode
+    - Fixed iron casting prerequisites in special vanilla mode (614)
+    - Fixed tier numbers cobalt oxide recipes were misaligned in some configurations
+    - Fixed tier numbers on zinc oxide recipes were incorrect and obsolete in some configurations
+    - Tweaked coolant filtering crafting times to help differentiate the two paths more (568)
+    - Balanced chrome smelting ratio's to not be sodium/sulfur positive (579)
+    - Fixed stack size of silicon powder when bobs mods are enabled (642)
+    - Removed productivity and reduced crafting time of the silicon powder recipe when playing
+      with bobs mods (642)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.16
+Date: 31.05.2021
+  Bugfixes:
+    - Fixed bobs electronic circuit board did not use silver wire
+    - Various instances of recipes calling for hidden angels plate versions instead of bobs
+    - Hide silver direct smelting from silver ore (not used at the game start)
+    - Moved glass fiber coil to glass smelting 2 in some cases
+---------------------------------------------------------------------------------------------------
+Version: 0.6.15
+Date: 26.05.2021
+  Changes:
+    - Split smelting technologies in two parts: (498)
+      - Smelting to ingots, faster tech progress to allow additional mid-tier improvements
+      - Casting to usable products (plates, wires, rods), similar tech progress as before
+    - Added new graphics to
+      - technology,
+      - processed metals, pellets, powder,
+      - ingots, molted metals,
+      - metal rolls and metal wire coils.
+    - Tweaked some technology tree prerequisites as cleanup (428)
+    - Disabled some ore to plate smelting recipes to enforce angels metallurgy smelting (456, 329)
+    - Updated electronics to not rely on steel processing if bobs is installed (550, 583)
+    - Changed and expanded locale strings and text descriptions (489)
+    - Removed angels iron rod (in favour of the vanilla iron stick) (484,485)
+    - Moved Bobs advanced alloys into angels smelting buildings and removed bobs chemical furnaces (328)(334)
+    - Red/green wires now use Tin wire instead of Copper wire when possible (115)
+    - Circuits now require silver/gold when applicable (115)
+  Bugfixes:
+    - Fixed rod stack converting recipes could not use productivity modules
+    - Fixed bronze and brass smelting missed some prerequisites (551)
+    - Fixed stack size of iron, copper and steel plates
+---------------------------------------------------------------------------------------------------
+Version: 0.6.14
+Date: 26.11.2020
+  Changes:
+    - Updated to factorio version 1.1
+    - Kirazy's rework of lighting for smelting structures (465)
+  Bugfixes:
+    - Technology icon size updates
+---------------------------------------------------------------------------------------------------
+Version: 0.6.13
+Date: 16.11.2020
+  Changes:
+    - Heat shielding tiles from bob revamp are now made in sintering oven
+  Bugfixes:
+    - Fixed blue circuits depended on purple science (424)
+    - Revised many inconsistencies in technology dependencies (428)
+    - Fixed some technologies had hidden prerequisites in special vanilla mode (442)
+    - Fixed thorium ore on belts did have the wrong color when playing with bobs mods (436)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.12
+Date: 29.10.2020
+  Changes:
+    - Added Cobalt oxide from Cobalt ore (397)
+    - Added Zinc oxide from Zinc ore (397)
+    - Added Manganese oxide from Processed manganese (397)
+    - Added HQ graphics to the following machines, and tweaked their sounds: (404)
+      - Ore processor, Pellet press, Powder mixer, Blast furnace, Chemical furnace
+      - Induction furnace, Casting machine, Strand casting machine, Sintering oven
+      - Cooling tower
+    - Added early game steel recipe that does not require oxygen (321)
+  Bugfixes:
+    - Increased base_area on the fluid output of the casting machines (362)
+    - Added some missing tech prerequisites and science tier upgrades (410)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.11
+Date: 20.08.2020
+  Changes:
+    - Updated to base game 1.0
+    - Mold creation now use a resin dummy instead of the iron motor casing (356)
+  Bugfixes:
+    - Fixed steel smelting 2 could not be researched in some cases
+---------------------------------------------------------------------------------------------------
+Version: 0.6.10
+Date: 17.07.2020
+  Changes:
+    - Made localisation conform with base game (342)
+    - Some work on tiles:
+      - Renamed the clay (cardboard) tile to "Clay path" instead of "Clay brick"
+      - Lowered the walking boost on clay brick tile from 130% (equivalent to stone) to 125%
+      - Renamed the concrete brick tile (tutorial grid) to "Concrete slab (grid)"
+      - Added a walking boost of 155% (slightly more than concrete) on rhz concrete brick tiles
+      - Reinforced concrete bricks will guaranteed clear all decorations underneath, while the
+        regular version only has a chance of doing so, similar to the concrete flooring in the
+        base game.
+  Bugfixes:
+    - Induction furnace will now always show the tinting on the ingots, even when it is idling
+---------------------------------------------------------------------------------------------------
+Version: 0.6.9
+Date: 10.07.2020
+  Changes:
+    - Tweaked limit temperatures on coolant cooling so any coolant temperature can be cooled,
+      it should still work the same, but in cases you accidently mix fluids, you can now
+      cool any temperature down.
+  Bugfixes:
+    - Fixed drawing box of the cooling tower being too small (282)
+    - Fixed smelting showed a lot of useless ores in special vanilla (294)
+    - Fixed the Fouled Reusable Mold was visible when it was not used
+    - Fixed bobs version of tunstic acid barreling recipe was still available
+    - Fixed disabled fluids would still have barreling recipes
+    - Added some missing key technology prerequisites
+---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+Date: 01.06.2020
+  Bugfixes:
+    - Fixed silicon/quartz ore was enabled when bob electronics is enabled without bobplates (257)
+    - Fixed tinned copper wire was enabled when bob electronics is enabled without bobplates (257)
+    - Fixed gilded copper wire was enabled when bob electronics is enabled without bobplates (257)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.7
+Date: 29.05.2020
+  Changes:
+    - Properly use name, amount in result and ingredient prototypes
+    - Removed productivity from copper wire, as productivity is achieved by making cable coils
+    - Fixed reuseable mold cleaning recipe was unlocked when not playing with the components
+---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: 20.04.2020
+  Bugfixes:
+    - Replaced the tutorial grid with the duplicated concrete brick tiles #198 (tutorial grid
+      doesn't remember hidden tiles, so now underlying tile is grass-1)
+    - Special vanilla:
+      - Fixed steel processing tech research
+---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 12.04.2020
+  Changes:
+    - Swapped the Iron Hydroxide out in the single-use mold to give slag instead, Iron Hydroxide
+      is not returnable to iron ingots till production science (or blue tech) so it would be a
+      new mid game sodium hydroxide
+    - Concrete Brick and Reinforced Concrete Brick now lay tutorial grid tiles
+  Bugfixes:
+    - Fixed cycle in steel molding production
+---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 02.04.2020
+  Changes:
+    - Changed the name from Non Expendable mold to Reusable Mold
+    - Added basic recipe tints to the induction furnace + recipes
+    - Changed stack size of pavement items to use refinings setting (was 1000, now 200 by default)
+  Bugfixes:
+    - Fixed Concrete Brick and Reinforced Concrete Brick couldn't be placed next to water
+    - Ensures iron-rods are properly updated/disabled when need be #154
+---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: 24.03.2020
+  Changes:
+    - Make buildings upgradeable #119
+  Bugfixes:
+    - Fixed wire recipes from plates could not be made in bobs electronics assembler
+    - Fixed temperatures on molten liquids
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+Date: 20.03.2020
+  Changes:
+    - Moved the unlocks for the molds further away:
+      - Expendable Mold from Metallurgy 1 to Stone Smelting 1
+      - Non-expendable Mold from Metallurgy 2 to Stone Smelting 2
+    - Steel smelting 1 now prerequisites on steel processing
+    - Added higher quality fluid icons
+    - Moved angels glass fiber coil unlock from glass 3 to glass 1 tech
+  Bugfixes:
+    - Fixed solder mixture was unlocked from the start
+    - Fixed tungsten smelting 1 and 2 did not have cobalt and nickel smelting prerequisites
+    - Reinforced concrete bricks use steel rods when these are present (used steel plates before)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 22.02.2020
+  Changes:
+    - Updated emission data, so it now shows in the ingame tooltips (and activates)
+    - Changes the smelting recipe generation to be more flexible and dynamic
+    - Added powder recipe for Aluminium, Gold, Lead, Manganese, Platinum, Silver, Tin, Titanium, Zinc
+    - Added roll recipes for Chrome, Cobalt, Gold, Lead, Manganese, Nickel, Platinum, Silver, Tin
+    - Changed bobs powdered silicon icon for angels version for consistency
+    - Updated bobs silver oxide icon to be consistent with angels icons
+    - Renamed Powdered Tungsten to Tungsten Powder to be in line with other angel powders
+    - Added a steel rod from steel plate recipe and moved steel rod stacks further down the tech tree
+    - Added silicon wafer item and recipe, also affects bobs silicon wafer yield to be consistent
+    - Added a basic solder wire recipe to counteract the need of oxygen to make solder early game
+    - Added separate solder smelting technology icon (was using the one from zinc smelting before)
+  Bugfixes:
+    - Fixed the icon on the gold wire recipe
+    - Fixed missing localisation on steel rod stack (recipe)
+    - Fixed casting machine tiers 2..4 not having an output fluid box
+    - Fixed missing recipes for the molds
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 09.02.2020
+  Changes:
+    - updated to 0.18
+    - disabled bobs silver nitrate recipe
+    - added a distinguishable icon for tungsten powder mixture versus the tungsten powder itself
+    - replaces the solder (bob electronics) from solder plate with angels equivalent of solder
+  Bugfixes:
+    - fixed missing localisation on iron rod stack (recipe)
+    - fixed recipe icon for fiberglass board
+---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+Date: 26.04.2019
+  Changes:
+    - removed brass smelting as prerequisite to alloy processing
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+  Bugfixes:
+    - temporary fix to an error with bobs mods
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 26.04.2019
+  Changes:
+    - moved mono silicon 2 to casting machine and changed input from ingot to fluid silicon to be in line with the rest
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+  Bugfixes:
+    - removed an now superfluous override causing an error
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+  Bugfixes:
+    - moved silicon disabling code to the right place
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+  Bugfixes:
+    - another fix to vanilla mode tech related
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+  Bugfixes:
+    - fixed vanilla mode bug
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+  Changes:
+    - updated to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+  Bugfixes:
+    - fixed vanilla mode bug
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+  Changes:
+    - buffed glass smelting chains
+    - buffed cooling tower recipes
+  Bugfixes:
+    - fixed vanilla mode not working
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+  Changes:
+    - changed output amounts for solder to 1.5 per 10 molten (increased from 1 per 10 for regular casting and down from 2 per 10 for strand)
+    - removed electrum recipes and techs because of changes to bobsplates
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+  Bugfixes:
+    - removed upgrade from copper-smelting-1
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+  Changes:
+    - added ingame changelog re-fromating the old changelog (thanks to vas for the hint and Warrie for reformatting them)
+    - added item hide for wires not used with bobs only
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+  Bugfixes:
+    - bugfixes
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+  Changes:
+    - update to 0.16
+---------------------------------------------------------------------------------------------------
+Version: 0.3.12
+  Changes:
+    - shifted productivity for coils from strand casting to converting/cutting
+    - strand casting with coolant received small productivity boost
+    - shifted plate and wire items to the matching smelting tabs
+    - changed nickel cathode recipe to chemical furnace
+    - added recipe to void coolant to clarifier
+---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+  Changes:
+    - changed coolant cycle: removed one intermediate recipe (will break current setups)
+    - shifted metal mixing furnace to electronics tech
+    - hide extra solder item if not used
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+  Changes:
+    - added recipe for cooling down steam to water
+    - changed crafting category for convertig cable coils to bobs electronic machines
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+  Changes:
+    - added variable to coil to cable conversion recipe to not use it for handcrafting
+    - changed steam temperature from cooling tower to 125, 150, 175 degrees
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+  Changes:
+    - added coil to wire recipes to electronic assembly machines
+  Bugfixes:
+    - fixed an error in expensive strand casting recipes mk2
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+  Bugfixes:
+    - fixed crafting time for updated recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+  Changes:
+    - added productivity limitations to additional recipes
+    - removed bobs advanced solder recipe
+    - converted recipes for buildings to use dynamic item progression
+    - tweaked some recipes for buildings
+    - added expensive recipes for all buildings
+    - added expensive recipes for casting
+    - adjusted vanilla-ish plate recipes to 4:3 ratio (iron, copper, lead, tin, glass, silver)
+    - adjusted fluid colors to match plate colors
+    - added solder coil
+  Bugfixes:
+    - fixed typo in brass and bronze recipe
+    - removed double entries from technologies
+    - fixed an error in one of the coolant recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+  Changes:
+    - removed barreling recipes for used and clean coolant
+    - adjusted temperature windows for cooling recipes to be bigger
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+  Changes:
+    - removed advanced metallurgy techs
+    - added strand casting tech
+    - added strand casting machine
+    - added pulver metallurgy tech
+    - added recipes for bob bronze, brass, electrum, invar, nitinol, cobalt-steel
+    - added overrides for bobs smelting techs
+    - added tier 2 strand casting (increased speed)
+    - added cooling tower
+    - added coolant tech
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+  Bugfixes:
+    - minor bug fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Changes:
+    - increased compression of all pellets to be equal to 3 unprocessed ores
+    - changed recipes to match changed pellet compression
+    - doubled the compression of cable coils, changed recipes to match that
+    - added cement processing
+    - added glass processing
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Changes:
+    - changed crafting category for titanium rolls to the casting machine
+    - added hard dependency to bobplates
+  Bugfixes:
+    - fixed that the mod stopped listening to bobs cheaper steel with 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - update to 0.15
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+  Changes:
+    - added tech prerequisites (from petrochem and refining)
+    - hid additional items when used with bobs
+  Bugfixes:
+    - fixed blast furnace 1 and 2 recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+  Changes:
+    - changed plate icons
+  Bugfixes:
+    - added some missing powder recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+  Changes:
+    - changed all coil cutting recipes to only craftable in an assembler
+    - added powder mixer machine
+    - tweaking the chains and changed some recipes to different machines
+  Bugfixes:
+    - added localization string for steel, solder technologies, chemical furnace
+    - fixed some of the recipes mentioned here
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+  Changes:
+    - changed the overrides for the plates back
+    - added recipes for coils to plates
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - rework to 0.2
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+  Bugfixes:
+    - small fix to make it work with latest refining/petrochem
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+  Changes:
+    - tweaked numbers for the recipes to be more like a 1 to 1 resource conversion
+    - decreased power usage for blast furnace
+    - increase pollution for blast furnace
+  Bugfixes:
+    - fixed silica smelting chain

@@ -6,7 +6,7 @@ if angelsmods.industries.overhaul then
     {
       type = "reactor",
       name = "angels-burner-reactor",
-      icon = "__angelsindustries__/graphics/icons/fast-reactor-icon.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/fast-reactor-icon.png",
       icon_size = 64,
       icon_mipmaps = 4,
       flags = { "placeable-neutral", "player-creation" },
@@ -41,12 +41,12 @@ if angelsmods.industries.overhaul then
       picture = {
         layers = {
           {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor.png",
             width = 304,
             height = 319,
             shift = util.by_pixel(3, -0.5),
             hr_version = {
-              filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor.png",
               width = 608,
               height = 638,
               shift = util.by_pixel(3, -0.5),
@@ -54,13 +54,13 @@ if angelsmods.industries.overhaul then
             },
           },
           {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-shadow.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-shadow.png",
             width = 305,
             height = 293,
             shift = util.by_pixel(7.5, 3.5),
             draw_as_shadow = true,
             hr_version = {
-              filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-shadow.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-shadow.png",
               width = 610,
               height = 586,
               scale = 0.5,
@@ -72,14 +72,14 @@ if angelsmods.industries.overhaul then
       },
 
       working_light_picture = {
-        filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-lights.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-lights.png",
         blend_mode = "additive",
         draw_as_glow = true,
         width = 304,
         height = 319,
         shift = util.by_pixel(3, -0.5),
         hr_version = {
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-lights.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-lights.png",
           blend_mode = "additive",
           draw_as_glow = true,
           width = 608,
@@ -118,12 +118,12 @@ if angelsmods.industries.overhaul then
         },
 
         heat_picture = apply_heat_pipe_glow({
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-heated.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-heated.png",
           width = 304,
           height = 319,
           shift = util.by_pixel(3, -0.5),
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-heated.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-heated.png",
             width = 608,
             height = 638,
             shift = util.by_pixel(3, -0.5),
@@ -134,12 +134,12 @@ if angelsmods.industries.overhaul then
 
       connection_patches_connected = {
         sheet = {
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-connect-patches.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-connect-patches.png",
           width = 41,
           height = 41,
           variation_count = 16,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches.png",
             width = 82,
             height = 82,
             variation_count = 16,
@@ -150,13 +150,13 @@ if angelsmods.industries.overhaul then
 
       connection_patches_disconnected = {
         sheet = {
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-connect-patches.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-connect-patches.png",
           width = 41,
           height = 41,
           variation_count = 16,
           y = 41,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches.png",
             width = 82,
             height = 82,
             variation_count = 16,
@@ -168,12 +168,12 @@ if angelsmods.industries.overhaul then
 
       heat_connection_patches_connected = {
         sheet = apply_heat_pipe_glow({
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-connect-patches-heated.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-connect-patches-heated.png",
           width = 32,
           height = 32,
           variation_count = 16,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches-heated.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches-heated.png",
             width = 64,
             height = 64,
             variation_count = 16,
@@ -184,13 +184,13 @@ if angelsmods.industries.overhaul then
 
       heat_connection_patches_disconnected = {
         sheet = apply_heat_pipe_glow({
-          filename = "__angelsindustries__/graphics/entity/fast-reactor/fast-reactor-connect-patches-heated.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/fast-reactor-connect-patches-heated.png",
           width = 32,
           height = 32,
           variation_count = 16,
           y = 32,
           hr_version = {
-            filename = "__angelsindustries__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches-heated.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/fast-reactor/hr-fast-reactor-connect-patches-heated.png",
             width = 64,
             height = 64,
             variation_count = 16,

@@ -3,7 +3,7 @@ data:extend({
     type = "technology",
     name = "angels-manganese-smelting-1",
     localised_description = { "technology-description.angels-manganese-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-manganese-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-manganese-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-manganese-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-manganese-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-manganese-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-manganese-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -113,7 +113,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-manganese-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-manganese-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-manganese-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-manganese-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-manganese-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-manganese-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

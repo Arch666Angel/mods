@@ -4,7 +4,7 @@ data:extend({
     name = "angels-zinc-smelting-1",
     localised_name = { "technology-name.angels-zinc-metallurgy" },
     localised_description = { "technology-description.angels-zinc-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-zinc-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -44,7 +44,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-zinc-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-zinc-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-zinc-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-zinc-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -113,7 +113,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-zinc-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-zinc-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -155,7 +155,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-zinc-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-zinc-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

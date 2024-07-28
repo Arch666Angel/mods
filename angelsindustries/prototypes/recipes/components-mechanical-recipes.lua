@@ -19,10 +19,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/motor-casing-1.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-1.png",
         },
         {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -93,10 +93,10 @@ if angelsmods.industries.components then
         },
         icons = {
           {
-            icon = "__angelsindustries__/graphics/icons/motor-casing-" .. num .. ".png",
+            icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-" .. num .. ".png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -126,10 +126,10 @@ if angelsmods.industries.components then
         },
         icons = {
           {
-            icon = "__angelsindustries__/graphics/icons/motor-casing-" .. num .. ".png",
+            icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-" .. num .. ".png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -158,10 +158,10 @@ if angelsmods.industries.components then
       main_product = "motor-casing-5",
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-5.png",
         },
         {
-          icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -187,11 +187,11 @@ if angelsmods.industries.components then
       main_product = "motor-casing-5-green",
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-5.png",
           tint = { r = 0.7, g = 0.7, b = 0.7 },
         },
         {
-          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -215,10 +215,10 @@ if angelsmods.industries.components then
       main_product = "motor-casing-5",
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/motor-casing-5.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-5.png",
         },
         {
-          icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -475,10 +475,10 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/mechanical-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/mechanical-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/gear.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/gear.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -501,10 +501,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/mechanical-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/mechanical-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/axle.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/axle.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -527,10 +527,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/mechanical-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/mechanical-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/roller-chain.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/roller-chain.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -553,10 +553,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/mechanical-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/mechanical-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/spring.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/spring.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -579,10 +579,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/mechanical-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/mechanical-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/bearing.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/bearing.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },

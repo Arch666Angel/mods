@@ -779,7 +779,7 @@ data:extend({
   {
     type = "technology",
     name = "sodium-processing-1",
-    icon = "__angelspetrochem__/graphics/technology/sodium-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-sulfur-processing-1",
@@ -818,7 +818,7 @@ data:extend({
   {
     type = "technology",
     name = "sodium-processing-2",
-    icon = "__angelspetrochem__/graphics/technology/sodium-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     icon_size = 128,
     prerequisites = {
       "chlorine-processing-3",

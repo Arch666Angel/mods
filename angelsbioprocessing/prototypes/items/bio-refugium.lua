@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "bio-raw-meat",
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     subgroup = "bio-fish",
     order = "ca",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "item",
     name = "bio-alien-processed-meat",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-processed-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-processed-meat.png",
     icon_size = 32,
     subgroup = "bio-processing-alien-intermediate",
     order = "a[alien]-d[processed-meat]",

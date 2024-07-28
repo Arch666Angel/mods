@@ -2,7 +2,7 @@ data:extend({
   {
     type = "gun",
     name = "bio-gun",
-    icon = "__angelsexploration__/graphics/icons/bio-gun.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/bio-gun.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {},

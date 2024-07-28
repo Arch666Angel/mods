@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "plastic-1",
-    icon = "__angelspetrochem__/graphics/technology/plastic-1-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-1-tech.png",
     icon_size = 128,
     prerequisites = {
       "steam-cracking-1",
@@ -27,7 +27,7 @@ data:extend({
   {
     type = "technology",
     name = "plastic-2",
-    icon = "__angelspetrochem__/graphics/technology/plastic-2-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-2-tech.png",
     icon_size = 128,
     prerequisites = {
       "plastic-1",
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "technology",
     name = "plastic-3",
-    icon = "__angelspetrochem__/graphics/technology/plastic-3-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-3-tech.png",
     icon_size = 128,
     prerequisites = {
       "plastic-2",
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "technology",
     name = "resins",
-    icon = "__angelspetrochem__/graphics/technology/resins-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/resins-tech.png",
     icon_size = 128,
     prerequisites = {
       "resin-1",
@@ -105,7 +105,7 @@ data:extend({
   {
     type = "technology",
     name = "resin-1",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-1",
@@ -130,7 +130,7 @@ data:extend({
   {
     type = "technology",
     name = "resin-2",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       "resin-1",
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "technology",
     name = "resin-3",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       "resin-2",
@@ -185,7 +185,7 @@ data:extend({
   {
     type = "technology",
     name = "rubbers",
-    icon = "__angelspetrochem__/graphics/technology/rubbers-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/rubbers-tech.png",
     icon_size = 128,
     prerequisites = {
       "rubber",
@@ -210,7 +210,7 @@ data:extend({
   {
     type = "technology",
     name = "rubber",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       --"steam-cracking-1",
@@ -238,7 +238,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-nuclear-fuel",
-    icon = "__angelspetrochem__/graphics/technology/nuclear-fuel.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/nuclear-fuel.png",
     icon_size = 128,
     icon_mipmaps = 1,
     prerequisites = {

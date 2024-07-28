@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "oil-gas-extraction",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       "basic-chemistry-3",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "technology",
     name = "gas-processing",
-    icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/gas-refinery-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -145,7 +145,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-gas-processing",
-    icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-gas-refinery-tech.png",
     icon_size = 256,
     icon_mipmaps = 2,
     prerequisites = {
@@ -183,7 +183,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-flare-stack",
-    icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -207,7 +207,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-chemistry-1",
-    icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       --"basic-chemistry-3",
@@ -256,7 +256,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-chemistry-2",
-    icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-1",
@@ -317,7 +317,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-chemistry-3",
-    icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-2",
@@ -358,7 +358,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-chemistry-4",
-    icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-3",
@@ -418,7 +418,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-advanced-chemistry-5",
-    icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-4",
@@ -523,7 +523,7 @@ data:extend({
   {
     type = "technology",
     name = "steam-cracking-1",
-    icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/steam-cracker-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-1",
@@ -581,7 +581,7 @@ data:extend({
   {
     type = "technology",
     name = "steam-cracking-2",
-    icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/steam-cracker-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-2",
@@ -627,7 +627,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-electric-boiler",
-    icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
     icon_size = 128,
     prerequisites = {
       "steam-cracking-1",
@@ -655,7 +655,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-electric-boiler-2",
-    icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-electric-boiler",
@@ -685,7 +685,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-electric-boiler-3",
-    icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-electric-boiler-2",

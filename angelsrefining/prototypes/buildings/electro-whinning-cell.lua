@@ -4,7 +4,7 @@ data:extend({
     name = "electro-whinning-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "electro-whinning-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -47,7 +47,7 @@ data:extend({
     energy_usage = "200kW",
     ingredient_count = 3,
     animation = {
-      filename = "__angelsrefining__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",
       priority = "extra-high",
       width = 224,
       height = 224,
@@ -57,7 +57,7 @@ data:extend({
       animation_speed = 0.5,
       -- hr_version =
       -- {
-      -- filename = "__angelsrefining__/graphics/entity/electro-whinning-cell/1electro-whinning-cell.png",
+      -- filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/1electro-whinning-cell.png",
       -- priority = "extra-high",
       -- width = 192,
       -- height = 192,
@@ -70,7 +70,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
@@ -112,7 +112,7 @@ data:extend({
     name = "electro-whinning-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -127,7 +127,7 @@ data:extend({
     name = "electro-whinning-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/electro-whinning-cell-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -154,7 +154,7 @@ data:extend({
     energy_usage = "250kW",
     ingredient_count = 3,
     animation = {
-      filename = "__angelsrefining__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",
       priority = "extra-high",
       width = 224,
       height = 224,
@@ -164,7 +164,7 @@ data:extend({
       animation_speed = 0.5,
       -- hr_version =
       -- {
-      -- filename = "__angelsrefining__/graphics/entity/electro-whinning-cell/1electro-whinning-cell.png",
+      -- filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/1electro-whinning-cell.png",
       -- priority = "extra-high",
       -- width = 192,
       -- height = 192,
@@ -177,7 +177,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
