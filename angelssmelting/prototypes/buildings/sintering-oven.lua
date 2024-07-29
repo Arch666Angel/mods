@@ -4,7 +4,7 @@ data:extend({
     name = "sintering-oven",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "sintering-oven",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -51,14 +51,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
           width = 165,
           height = 177,
           shift = util.by_pixel(-1, -7),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -68,7 +68,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
           width = 213,
           height = 115,
@@ -76,7 +76,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "high",
                 width = 424,
                 height = 227,
@@ -94,7 +94,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -103,7 +103,7 @@ data:extend({
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -119,7 +119,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -127,7 +127,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -140,7 +140,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -151,7 +151,7 @@ data:extend({
     name = "sintering-oven-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -167,7 +167,7 @@ data:extend({
     name = "sintering-oven-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -198,14 +198,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
           width = 165,
           height = 177,
           shift = util.by_pixel(-1, -7),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -215,7 +215,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
           width = 213,
           height = 115,
@@ -223,7 +223,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "high",
                 width = 424,
                 height = 227,
@@ -241,7 +241,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -250,7 +250,7 @@ data:extend({
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -266,7 +266,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -274,7 +274,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -287,7 +287,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -298,7 +298,7 @@ data:extend({
     name = "sintering-oven-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -314,7 +314,7 @@ data:extend({
     name = "sintering-oven-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -345,14 +345,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
           width = 165,
           height = 177,
           shift = util.by_pixel(-1, -7),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -362,7 +362,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
           width = 213,
           height = 115,
@@ -370,7 +370,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "high",
                 width = 424,
                 height = 227,
@@ -388,7 +388,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -397,7 +397,7 @@ data:extend({
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -413,7 +413,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -421,7 +421,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -434,7 +434,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -445,7 +445,7 @@ data:extend({
     name = "sintering-oven-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -461,7 +461,7 @@ data:extend({
     name = "sintering-oven-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -492,14 +492,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
           width = 165,
           height = 177,
           shift = util.by_pixel(-1, -7),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -509,7 +509,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
           width = 213,
           height = 115,
@@ -517,7 +517,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "high",
                 width = 424,
                 height = 227,
@@ -535,7 +535,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -544,7 +544,7 @@ data:extend({
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -560,7 +560,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -568,7 +568,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -581,7 +581,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -592,7 +592,7 @@ data:extend({
     name = "sintering-oven-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -608,7 +608,7 @@ data:extend({
     name = "sintering-oven-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/sintering-oven.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -638,14 +638,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-base.png",
           priority = "high",
           width = 165,
           height = 177,
           shift = util.by_pixel(-1, -7),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-base.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -655,7 +655,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-shadow.png",
           priority = "high",
           width = 213,
           height = 115,
@@ -663,7 +663,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-shadow.png",
                 priority = "high",
                 width = 424,
                 height = 227,
@@ -681,7 +681,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-glow.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -690,7 +690,7 @@ data:extend({
           draw_as_glow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-glow.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -706,7 +706,7 @@ data:extend({
         fadeout = true,
         effect = "uranium-glow",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/sintering-oven/sintering-oven-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/sintering-oven-light.png",
           priority = "high",
           width = 165,
           height = 177,
@@ -714,7 +714,7 @@ data:extend({
           draw_as_light = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/sintering-oven/hr-sintering-oven-light.png",
                 priority = "high",
                 width = 326,
                 height = 350,
@@ -727,7 +727,7 @@ data:extend({
       },
     },
     working_sound = {
-      sound = { filename = "__angelssmelting__/sound/sintering-oven.ogg", volume = 0.45 },
+      sound = { filename = "__angelssmeltinggraphics__/sound/sintering-oven.ogg", volume = 0.45 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

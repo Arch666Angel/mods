@@ -18,7 +18,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "angels-crawler",
-    icon = "__angelsindustries__/graphics/icons/crawler-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/crawler-icon.png",
     icon_size = 32,
     subgroup = "angels-vehicle-car",
     order = "b[crawlers]-a",
@@ -28,7 +28,7 @@ data:extend({
   {
     type = "car",
     name = "angels-crawler",
-    icon = "__angelsindustries__/graphics/icons/crawler-icon.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/crawler-icon.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
     minable = { mining_time = 1, result = "angels-crawler" },
@@ -135,42 +135,42 @@ data:extend({
           max_advance = 1,
           stripes = {
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-1.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-1.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-2.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-2.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-3.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-3.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-4.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-4.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-5.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-5.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-6.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-6.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-7.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-7.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-8.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-8.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
@@ -187,42 +187,42 @@ data:extend({
           line_length = 2,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-1.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-2.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-3.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-4.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-5.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-6.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-7.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-mask-8.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-mask-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -238,42 +238,42 @@ data:extend({
           max_advance = 1,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-1.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-2.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-3.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-4.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-5.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-6.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-7.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsindustries__/graphics/entity/crawler/base-shadow-8.png",
+              filename = "__angelsindustriesgraphics__/graphics/entity/crawler/base-shadow-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -303,15 +303,15 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
-        filename = "__angelsindustries__/sound/crawler-run.ogg",
+        filename = "__angelsindustriesgraphics__/sound/crawler-run.ogg",
         volume = 1,
       },
       activate_sound = {
-        filename = "__angelsindustries__/sound/crawler-start.ogg",
+        filename = "__angelsindustriesgraphics__/sound/crawler-start.ogg",
         volume = 1,
       },
       deactivate_sound = {
-        filename = "__angelsindustries__/sound/crawler-off.ogg",
+        filename = "__angelsindustriesgraphics__/sound/crawler-off.ogg",
         volume = 1,
       },
       match_speed_to_activity = true,

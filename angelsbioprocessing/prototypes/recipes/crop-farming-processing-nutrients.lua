@@ -157,7 +157,7 @@ data:extend({
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "liquid-fuel-oil",
       "gas-synthesis",
-      { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
     }, { { 214, 146, 040 }, { 169, 130, 039 }, { 120, 083, 004 } }),
     order = "b[nutrient-processing]-a",
   },
@@ -180,7 +180,7 @@ data:extend({
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "liquid-fuel-oil",
       --"gas-synthesis",
-      { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
     }, { { 214, 146, 040 }, { 169, 130, 039 }, { 120, 083, 004 } }),
     order = "b[nutrient-processing]-b",
   },
@@ -201,9 +201,9 @@ data:extend({
     },
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
-      { "__angelsbioprocessing__/graphics/icons/molecule-ethanol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
+      { "__angelsbioprocessinggraphics__/graphics/icons/molecule-ethanol.png", 72 },
     }, { { 214, 146, 040 }, { 169, 130, 039 }, { 120, 083, 004 } }),
     order = "b[nutrient-processing]-c",
   },

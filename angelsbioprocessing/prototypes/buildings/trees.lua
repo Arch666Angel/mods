@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "temperate-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
     icon_size = 64,
     subgroup = "bio-arboretum-temperate",
     order = "b",
@@ -11,7 +11,7 @@ data:extend({
   {
     type = "tree",
     name = "temperate-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-temperate.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -46,19 +46,19 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-1-a.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-1-a.png",
         width = 256,
         height = 256,
         shift = { 0.5, -1.5 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-1-b.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-1-b.png",
         width = 256,
         height = 256,
         shift = { 0.5, -1.5 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-1-c.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-1-c.png",
         width = 256,
         height = 256,
         shift = { 0.5, -1.5 },
@@ -68,7 +68,7 @@ data:extend({
   {
     type = "item",
     name = "swamp-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
     icon_size = 64,
     subgroup = "bio-arboretum-temperate",
     order = "c",
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "tree",
     name = "swamp-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-swamp.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -112,25 +112,25 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-2-a.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-2-a.png",
         width = 256,
         height = 256,
         shift = { 1, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-2-b.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-2-b.png",
         width = 256,
         height = 256,
         shift = { 1, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-2-c.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-2-c.png",
         width = 256,
         height = 256,
         shift = { 1, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-2-d.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-2-d.png",
         width = 256,
         height = 256,
         shift = { 1, -2 },
@@ -140,7 +140,7 @@ data:extend({
   {
     type = "item",
     name = "desert-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",
     icon_size = 64,
     subgroup = "bio-arboretum-temperate",
     order = "d",
@@ -149,7 +149,7 @@ data:extend({
   {
     type = "tree",
     name = "desert-tree",
-    icon = "__angelsbioprocessing__/graphics/icons/tree-desert.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -184,31 +184,31 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-3-a.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-a.png",
         width = 256,
         height = 256,
         shift = { 0.5, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-3-b.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-b.png",
         width = 256,
         height = 256,
         shift = { 1.5, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-3-c.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-c.png",
         width = 256,
         height = 256,
         shift = { 0.25, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-3-d.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-d.png",
         width = 256,
         height = 256,
         shift = { 0.5, -2 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/trees/tree-3-e.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-e.png",
         width = 256,
         height = 256,
         shift = { 0.5, -2 },

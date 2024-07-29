@@ -7,7 +7,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-2",
-      icon = "__angelsindustries__/graphics/technology/steel-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/steel-components.png",
       icon_size = 128,
       prerequisites = {
         "steel-processing",
@@ -47,7 +47,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-3",
-      icon = "__angelsindustries__/graphics/technology/aluminium-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/aluminium-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-2",
@@ -97,7 +97,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-4",
-      icon = "__angelsindustries__/graphics/technology/titanium-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/titanium-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-3",
@@ -141,7 +141,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-5",
-      icon = "__angelsindustries__/graphics/technology/tungsten-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tungsten-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-4",

@@ -108,12 +108,12 @@ if angelsmods.trigger.smelting_products["steel"].plate then
       "steel-plate",
     },
   })
-  data.raw["item"]["steel-plate"].icon = "__angelssmelting__/graphics/icons/plate-steel.png"
+  data.raw["item"]["steel-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-steel.png"
   data.raw["item"]["steel-plate"].icon_size = 32
   data.raw["item"]["steel-plate"].icon_mipmaps = 1
   OV.global_replace_icon(
     "__base__/graphics/icons/plate/steel-plate.png",
-    "__angelssmelting__/graphics/icons/plate-steel.png"
+    "__angelssmeltinggraphics__/graphics/icons/plate-steel.png"
   )
 else
   angelsmods.functions.add_flag("angels-plate-steel", "hidden")

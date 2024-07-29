@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "solid-glass-mixture",
-    icon = "__angelssmelting__/graphics/icons/glass-mixture.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/glass-mixture.png",
     icon_size = 32,
     subgroup = "angels-glass",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-glass",
-    icon = "__angelssmelting__/graphics/icons/molten-glass.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-glass.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-glass-casting",
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "item",
     name = "angels-coil-glass-fiber",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-glass.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-glass-casting",
@@ -41,7 +41,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-glass",
-    icon = "__angelssmelting__/graphics/icons/plate-glass.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png",
     icon_size = 32,
     subgroup = "angels-glass-casting",
     order = "d",

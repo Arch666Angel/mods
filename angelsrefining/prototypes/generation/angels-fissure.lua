@@ -14,7 +14,7 @@ data:extend({
   {
     type = "resource",
     name = "angels-fissure",
-    icon = "__angelsrefining__/graphics/icons/fissure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral" },
@@ -68,7 +68,7 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/patches/fissure.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure.png",
         tint = { r = 0.65, g = 0.4, b = 0.15 },
         priority = "extra-high",
         width = 256,
@@ -79,7 +79,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/patches/fissure-glow.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure-glow.png",
         tint = { r = 1, g = 0.3, b = 0.1 },
         priority = "extra-high",
         width = 256,

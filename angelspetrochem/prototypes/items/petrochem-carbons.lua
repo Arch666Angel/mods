@@ -10,7 +10,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]4[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/methane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -31,7 +31,7 @@ data:extend({
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]6[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ethane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethane.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -52,7 +52,7 @@ data:extend({
       "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]10[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/butane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -73,7 +73,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/propene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -131,7 +131,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]3[/font]OH" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/methanol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -152,7 +152,7 @@ data:extend({
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -173,7 +173,7 @@ data:extend({
       "C[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]6[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/benzene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -232,7 +232,7 @@ data:extend({
       "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]6[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/butadiene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/butadiene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -253,7 +253,7 @@ data:extend({
       "C[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]6[/font]O",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/phenol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/phenol.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -273,7 +273,7 @@ data:extend({
       "C[font=default-tiny-bold]8[/font]H[font=default-tiny-bold]10[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ethylbenzene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylbenzene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -293,7 +293,7 @@ data:extend({
       "C[font=default-tiny-bold]8[/font]H[font=default-tiny-bold]8[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/styrene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/styrene.png", 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -312,7 +312,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]2[/font]O" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/formaldehyde.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/formaldehyde.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -333,7 +333,7 @@ data:extend({
       "(C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font])[font=default-tiny-bold]n[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 },
       "CHH"
     ),
     --icon_size = 32,
@@ -353,7 +353,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]8[/font]O[font=default-tiny-bold]3[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -373,7 +373,7 @@ data:extend({
       "C[font=default-tiny-bold]15[/font]H[font=default-tiny-bold]16[/font]O[font=default-tiny-bold]2[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/bisphenol_a.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/bisphenol_a.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -393,7 +393,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]O",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/acetone.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -414,7 +414,7 @@ data:extend({
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]O",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ethylene-oxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene-oxide.png", 72 },
       "COH"
     ),
     --icon_size = 32,
@@ -435,7 +435,7 @@ data:extend({
       "(CH[font=default-tiny-bold]2[/font]O)[font=default-tiny-bold]2[/font]CO",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/ethylene-carbonate.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene-carbonate.png", 72 },
       "COH"
     ),
     --icon_size = 32,

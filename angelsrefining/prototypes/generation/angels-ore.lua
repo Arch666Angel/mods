@@ -10,7 +10,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore1",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore1.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1.png",
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore1"].value,
     --resource_index = 21,
@@ -32,7 +32,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore2",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore2.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2.png",
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore2"].value,
     --resource_index = 22,
@@ -45,10 +45,10 @@ angelsmods.functions.add_resource("make", {
 local ore_3_icon
 local ore_3_icon_size
 if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
-  ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3.png"
+  ore_3_icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3.png"
   ore_3_icon_size = 32
 else
-  ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3-HR.png"
+  ore_3_icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-HR.png"
   ore_3_icon_size = 64
 end
 angelsmods.functions.add_resource("make", {
@@ -86,7 +86,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore4",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore4.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4.png",
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore4"].value,
     --resource_index = 24,
@@ -108,7 +108,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore5",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore5.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5.png",
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore5"].value,
     --resource_index = 25,
@@ -130,7 +130,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore6",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore6.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6.png",
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore6"].value,
     --resource_index = 26,
@@ -157,7 +157,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "thermal-water",
   output_min = 20,
   output_max = 20,
-  icon = "__angelsrefining__/graphics/icons/fissure.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",
   icon_size = 64,
   icon_mipmaps = 4,
   autoplace = {

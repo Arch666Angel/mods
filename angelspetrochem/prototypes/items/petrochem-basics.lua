@@ -26,7 +26,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
       "HHH"
     ),
     --icon_size = 32,
@@ -46,7 +46,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "O[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
       "OOO"
     ),
     --icon_size = 32,
@@ -67,7 +67,7 @@ data:extend({
       "H[font=default-tiny-bold]2[/font]O[font=default-tiny-bold]2[/font]",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-peroxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-peroxide.png", 72 },
       "OOH"
     ),
     --icon_size = 32,
@@ -85,7 +85,7 @@ data:extend({
     name = "gas-carbon-monoxide",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "CO" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 },
       "CCOc"
     ),
     --icon_size = 32,
@@ -105,7 +105,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CO[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/carbon-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
       "COcOc"
     ),
     --icon_size = 32,
@@ -123,7 +123,7 @@ data:extend({
     name = "gas-hydrogen-fluoride",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "HF" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
       "FHH"
     ),
     --icon_size = 32,
@@ -141,7 +141,7 @@ data:extend({
     name = "liquid-hydrofluoric-acid",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "HF" } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
       "FHH"
     ),
     --icon_size = 32,
@@ -159,7 +159,7 @@ data:extend({
     name = "liquid-water-semiheavy-1",
     localised_name = { "fluid-name.liquid-water-semiheavy", "7.5" },
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/semiheavy-water.png", 72 },
       "OHdH"
     ),
     subgroup = "water-enrichment",
@@ -175,7 +175,7 @@ data:extend({
     name = "liquid-water-semiheavy-2",
     localised_name = { "fluid-name.liquid-water-semiheavy", "12.5" },
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/semiheavy-water.png", 72 },
       "OHdH"
     ),
     subgroup = "water-enrichment",
@@ -191,7 +191,7 @@ data:extend({
     name = "liquid-water-semiheavy-3",
     localised_name = { "fluid-name.liquid-water-semiheavy", "15" },
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/semiheavy-water.png", 72 },
       "OHdH"
     ),
     subgroup = "water-enrichment",
@@ -209,7 +209,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "D[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/heavy-water.png", 64 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/heavy-water.png", 64 },
       "OHdHd"
     ),
     subgroup = "water-enrichment",
@@ -227,7 +227,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "D[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/deuterium.png", 64 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/deuterium.png", 64 },
       "HdHdHd"
     ),
     subgroup = "petrochem-basic-fluids",
@@ -245,12 +245,12 @@ data:extend({
     name = "chemical-void",
     icons = {
       {
-        icon = "__angelspetrochem__/graphics/icons/flare-stack.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 0.4,
         shift = { 9.6, 9.6 },

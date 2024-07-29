@@ -37,8 +37,8 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/nitrogen.png", 64 },
-      { "__angelspetrochem__/graphics/icons/molecules/oxygen.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
     }, "NNO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-nitrogen", "gas-compressed-air", "gas-oxygen" }),
     order = "b[air]-a[separation]",
@@ -60,8 +60,8 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 },
-      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
     }, "NNO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-nitrogen-monoxide",
@@ -89,7 +89,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/nitric-oxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
     }, "NOO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-nitrogen-monoxide", "gas-ammonia", "gas-oxygen" }),
     order = "c[gas-nitrogen-dioxide]",
@@ -110,7 +110,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
     }, "NOO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-nitrogen-dioxide", "gas-oxygen", "gas-nitrogen-monoxide" }),
     order = "d",
@@ -133,7 +133,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/ammonia.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
     }, "NHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-ammonia", "gas-nitrogen", "gas-hydrogen" }),
     order = "e",
@@ -154,7 +154,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/ammonium-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonium-chloride.png", 72 },
     }, "NHCl"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-ammonium-chloride", "gas-ammonia", "gas-hydrogen-chloride" }),
     order = "f",
@@ -176,7 +176,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/urea.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/urea.png", 72 },
       "water-purified",
     }, "CNO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-urea", "gas-ammonia", "water-purified", "gas-carbon-dioxide" }),
@@ -199,11 +199,11 @@ data:extend({
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 },
+        { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png", 72 },
       },
       "NOH",
       {
-        { "__angelspetrochem__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
+        { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
       }
     ),
     crafting_machine_tint = AF.get_recipe_tints({ "liquid-nitric-acid", "gas-nitrogen-dioxide", "water-purified" }),
@@ -226,7 +226,7 @@ data:extend({
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
-        { "__angelspetrochem__/graphics/icons/molecules/nitric-acid.png", 72 },
+        { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png", 72 },
       },
       "NOH",
       {
@@ -257,7 +257,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/melamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/melamine.png", 72 },
     }, "CHN"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-melamine", "gas-urea" }),
     order = "i",
@@ -279,7 +279,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/chloramine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chloramine.png", 72 },
     }, "NHCl"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-monochloramine", "gas-ammonia", AF.fluid_color("NaOCl") }),
     order = "a",
@@ -303,7 +303,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/hydrazine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrazine.png", 72 },
     }, "NHH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "gas-hydrazine",
@@ -330,7 +330,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/methylamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/methylamine.png", 72 },
       "water-purified",
     }, "CHN"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-methylamine", "gas-methanol", "water-purified", "gas-ammonia" }),
@@ -353,7 +353,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/dimethylamine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylamine.png", 72 },
       "water-purified",
     }, "CHN"),
     crafting_machine_tint = AF.get_recipe_tints({
@@ -381,7 +381,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
       "water-purified",
     }, "CHN"),
     crafting_machine_tint = AF.get_recipe_tints({
@@ -410,7 +410,7 @@ data:extend({
     always_show_products = true,
     main_product = "gas-dinitrogen-tetroxide",
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 },
     }, "NOO"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-dinitrogen-tetroxide", "gas-nitrogen-dioxide" }),
     order = "f",

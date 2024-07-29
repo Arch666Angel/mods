@@ -4,7 +4,7 @@ data:extend({
     name = "ore-sorting-facility",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "ore-sorting-facility",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -49,7 +49,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
           width = 224,
           height = 230,
@@ -59,7 +59,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -72,7 +72,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
           width = 265,
           height = 179,
@@ -82,7 +82,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,
@@ -98,7 +98,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -109,7 +109,7 @@ data:extend({
     name = "ore-sorting-facility-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -124,7 +124,7 @@ data:extend({
     name = "ore-sorting-facility-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -154,7 +154,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
           width = 224,
           height = 230,
@@ -164,7 +164,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -177,7 +177,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
           width = 265,
           height = 179,
@@ -187,7 +187,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,
@@ -203,7 +203,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -214,7 +214,7 @@ data:extend({
     name = "ore-sorting-facility-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -229,7 +229,7 @@ data:extend({
     name = "ore-sorting-facility-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -259,7 +259,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
           width = 224,
           height = 230,
@@ -269,7 +269,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -282,7 +282,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
           width = 265,
           height = 179,
@@ -292,7 +292,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,
@@ -308,7 +308,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -319,7 +319,7 @@ data:extend({
     name = "ore-sorting-facility-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -334,7 +334,7 @@ data:extend({
     name = "ore-sorting-facility-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -364,7 +364,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
           width = 224,
           height = 230,
@@ -374,7 +374,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -387,7 +387,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
           width = 265,
           height = 179,
@@ -397,7 +397,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,
@@ -413,7 +413,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -424,7 +424,7 @@ data:extend({
     name = "ore-sorting-facility-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -439,7 +439,7 @@ data:extend({
     name = "ore-sorting-facility-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-sorting-facility.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -467,7 +467,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-base.png",
           priority = "extra-high",
           width = 224,
           height = 230,
@@ -477,7 +477,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-base.png",
                 priority = "extra-high",
                 width = 449,
                 height = 458,
@@ -490,7 +490,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/ore-sorting-facility-shadow.png",
           priority = "extra-high",
           width = 265,
           height = 179,
@@ -500,7 +500,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-sorting-facility/hr-ore-sorting-facility-shadow.png",
                 priority = "extra-high",
                 width = 528,
                 height = 356,
@@ -516,7 +516,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-sorting-facility.ogg", volume = 0.5 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-sorting-facility.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

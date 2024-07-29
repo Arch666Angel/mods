@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "cooling-tower",
-    icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "boiler-building",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cooling-tower",
-    icon = "__angelssmelting__/graphics/icons/cooling-tower.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -79,7 +79,7 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             x = 0,
             y = 0,
@@ -90,7 +90,7 @@ data:extend({
             scale = 1,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower.png",
                   priority = "high",
                   x = 0,
                   y = 0,
@@ -103,7 +103,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             x = 0,
             y = 0,
@@ -114,7 +114,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
                   priority = "high",
                   x = 0,
                   y = 0,
@@ -132,7 +132,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             x = 108,
             y = 0,
@@ -143,7 +143,7 @@ data:extend({
             scale = 1,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower.png",
                   priority = "high",
                   x = 213,
                   y = 0,
@@ -156,7 +156,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             x = 160,
             y = 0,
@@ -167,7 +167,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
                   priority = "high",
                   x = 320,
                   y = 0,
@@ -185,7 +185,7 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             x = 216,
             y = 0,
@@ -196,7 +196,7 @@ data:extend({
             scale = 1,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower.png",
                   priority = "high",
                   x = 426,
                   y = 0,
@@ -209,7 +209,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             x = 320,
             y = 0,
@@ -220,7 +220,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
                   priority = "high",
                   x = 640,
                   y = 0,
@@ -238,7 +238,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower.png",
             priority = "high",
             x = 324,
             y = 0,
@@ -249,7 +249,7 @@ data:extend({
             scale = 1,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower.png",
                   priority = "high",
                   x = 639,
                   y = 0,
@@ -262,7 +262,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/cooling-tower-shadow.png",
             priority = "high",
             x = 480,
             y = 0,
@@ -273,7 +273,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
+                  filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-cooling-tower-shadow.png",
                   priority = "high",
                   x = 960,
                   y = 0,
@@ -294,13 +294,13 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelssmelting__/graphics/entity/cooling-tower/fan-animation.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/fan-animation.png",
           priority = "high",
           width = 36,
           height = 32,
           shift = util.by_pixel(0, -74),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-fan-animation.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-fan-animation.png",
             priority = "high",
             width = 69,
             height = 60,
@@ -311,7 +311,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelssmelting__/graphics/entity/cooling-tower/fan-animation.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/fan-animation.png",
           priority = "high",
           width = 36,
           height = 32,
@@ -321,7 +321,7 @@ data:extend({
           shift = util.by_pixel(0, -74),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-fan-animation.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-fan-animation.png",
                 priority = "high",
                 width = 69,
                 height = 60,
@@ -337,7 +337,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelssmelting__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -346,7 +346,7 @@ data:extend({
           shift = { 1, -1 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -358,7 +358,7 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelssmelting__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -367,7 +367,7 @@ data:extend({
           shift = { 1, -1 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/cooling-tower/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/cooling-tower/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,

@@ -11,7 +11,7 @@ data:extend({
     name = "angels-electric-boiler",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -26,7 +26,7 @@ data:extend({
     name = "angels-electric-boiler",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -56,28 +56,28 @@ data:extend({
     energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 1),
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -86,28 +86,28 @@ data:extend({
     },
     idle_animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -162,7 +162,7 @@ data:extend({
     name = "angels-electric-boiler-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -177,7 +177,7 @@ data:extend({
     name = "angels-electric-boiler-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -210,28 +210,28 @@ data:extend({
     ),
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -240,28 +240,28 @@ data:extend({
     },
     idle_animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -316,7 +316,7 @@ data:extend({
     name = "angels-electric-boiler-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -331,7 +331,7 @@ data:extend({
     name = "angels-electric-boiler-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/electric-boiler.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/electric-boiler.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -360,28 +360,28 @@ data:extend({
     energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 2),
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-on.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-on.png",
         frame_count = 1,
         width = 160,
         height = 160,
@@ -390,28 +390,28 @@ data:extend({
     },
     idle_animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-north-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-north-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-east-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-east-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-south-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-south-off.png",
         frame_count = 1,
         width = 160,
         height = 160,
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/electric-boiler/boiler-west-off.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electric-boiler/boiler-west-off.png",
         frame_count = 1,
         width = 160,
         height = 160,

@@ -14,7 +14,7 @@ if angelsmods.trigger.artifacts["red"] then
       {
         type = "item",
         name = "alien-pre-artifact-red",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-red.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-red.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "a[red]",
@@ -35,7 +35,7 @@ if angelsmods.trigger.artifacts["red"] then
         results = {
           { type = "item", name = "alien-pre-artifact-red", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-red.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-red.png",
         icon_size = 32,
         order = "a[red]",
       },
@@ -88,7 +88,7 @@ if angelsmods.trigger.artifacts["red"] then
       {
         type = "item",
         name = "small-alien-artifact-red",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-red-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-red-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "a[red]",
@@ -98,7 +98,7 @@ if angelsmods.trigger.artifacts["red"] then
       {
         type = "item",
         name = "alien-artifact-red",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-red.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-red.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "a[red]",
@@ -162,7 +162,7 @@ if angelsmods.trigger.artifacts["yellow"] then
       {
         type = "item",
         name = "alien-pre-artifact-yellow",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-yellow.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-yellow.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "b[yellow]",
@@ -183,7 +183,7 @@ if angelsmods.trigger.artifacts["yellow"] then
         results = {
           { type = "item", name = "alien-pre-artifact-yellow", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-yellow.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-yellow.png",
         icon_size = 32,
         order = "b[yellow]",
       },
@@ -236,7 +236,7 @@ if angelsmods.trigger.artifacts["yellow"] then
       {
         type = "item",
         name = "small-alien-artifact-yellow",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-yellow-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-yellow-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "b[yellow]",
@@ -246,7 +246,7 @@ if angelsmods.trigger.artifacts["yellow"] then
       {
         type = "item",
         name = "alien-artifact-yellow",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-yellow.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-yellow.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "b[yellow]",
@@ -310,7 +310,7 @@ if angelsmods.trigger.artifacts["orange"] then
       {
         type = "item",
         name = "alien-pre-artifact-orange",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-orange.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-orange.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "c[orange]",
@@ -331,7 +331,7 @@ if angelsmods.trigger.artifacts["orange"] then
         results = {
           { type = "item", name = "alien-pre-artifact-orange", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-orange.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-orange.png",
         icon_size = 32,
         order = "c[orange]",
       },
@@ -384,7 +384,7 @@ if angelsmods.trigger.artifacts["orange"] then
       {
         type = "item",
         name = "small-alien-artifact-orange",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-orange-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-orange-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "c[orange]",
@@ -394,7 +394,7 @@ if angelsmods.trigger.artifacts["orange"] then
       {
         type = "item",
         name = "alien-artifact-orange",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-orange.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-orange.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "c[orange]",
@@ -458,7 +458,7 @@ if angelsmods.trigger.artifacts["blue"] then
       {
         type = "item",
         name = "alien-pre-artifact-blue",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-blue.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-blue.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "d[blue]",
@@ -479,7 +479,7 @@ if angelsmods.trigger.artifacts["blue"] then
         results = {
           { type = "item", name = "alien-pre-artifact-blue", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-blue.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-blue.png",
         icon_size = 32,
         order = "d[blue]",
       },
@@ -532,7 +532,7 @@ if angelsmods.trigger.artifacts["blue"] then
       {
         type = "item",
         name = "small-alien-artifact-blue",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-blue-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "d[blue]",
@@ -542,7 +542,7 @@ if angelsmods.trigger.artifacts["blue"] then
       {
         type = "item",
         name = "alien-artifact-blue",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-blue.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "d[blue]",
@@ -606,7 +606,7 @@ if angelsmods.trigger.artifacts["purple"] then
       {
         type = "item",
         name = "alien-pre-artifact-purple",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-purple.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-purple.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "e[purple]",
@@ -627,7 +627,7 @@ if angelsmods.trigger.artifacts["purple"] then
         results = {
           { type = "item", name = "alien-pre-artifact-purple", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-purple.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-purple.png",
         icon_size = 32,
         order = "e[purple]",
       },
@@ -680,7 +680,7 @@ if angelsmods.trigger.artifacts["purple"] then
       {
         type = "item",
         name = "small-alien-artifact-purple",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-purple-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-purple-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "e[purple]",
@@ -690,7 +690,7 @@ if angelsmods.trigger.artifacts["purple"] then
       {
         type = "item",
         name = "alien-artifact-purple",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-purple.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-purple.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "e[purple]",
@@ -754,7 +754,7 @@ if angelsmods.trigger.artifacts["green"] then
       {
         type = "item",
         name = "alien-pre-artifact-green",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-green.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-green.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "f[green]",
@@ -775,7 +775,7 @@ if angelsmods.trigger.artifacts["green"] then
         results = {
           { type = "item", name = "alien-pre-artifact-green", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-green.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-green.png",
         icon_size = 32,
         order = "f[green]",
       },
@@ -828,7 +828,7 @@ if angelsmods.trigger.artifacts["green"] then
       {
         type = "item",
         name = "small-alien-artifact-green",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-green-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-green-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "f[green]",
@@ -838,7 +838,7 @@ if angelsmods.trigger.artifacts["green"] then
       {
         type = "item",
         name = "alien-artifact-green",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-green.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-green.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "f[green]",
@@ -902,7 +902,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
       {
         type = "item",
         name = "alien-pre-artifact-base",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-base.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-base.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-pre",
         order = "g[base]",
@@ -922,7 +922,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
         results = {
           { type = "item", name = "alien-pre-artifact-base", amount = 1 },
         },
-        icon = "__angelsbioprocessing__/graphics/icons/alien-pre-artifact-base.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-base.png",
         icon_size = 32,
         order = "g[base]",
       },
@@ -969,7 +969,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
       {
         type = "item",
         name = "small-alien-artifact",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact-small.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-small.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-small",
         order = "g[base]",
@@ -979,7 +979,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
       {
         type = "item",
         name = "alien-artifact",
-        icon = "__angelsbioprocessing__/graphics/icons/alien-artifact.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact.png",
         icon_size = 32,
         subgroup = "bio-processing-alien-large",
         order = "g[base]",

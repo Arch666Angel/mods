@@ -1,28 +1,28 @@
 local function floatationpipepictures()
   return {
     north = {
-      filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/pipe-north.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/pipe-north.png",
       priority = "extra-high",
       width = 48,
       height = 48,
       shift = { 0.01, 0.95 },
     },
     east = {
-      filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/pipe-east.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/pipe-east.png",
       priority = "extra-high",
       width = 40,
       height = 45,
       shift = { -0.71875, 0.1 },
     },
     south = {
-      filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/pipe-south.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/pipe-south.png",
       priority = "extra-high",
       width = 34,
       height = 39,
       shift = { 0, -0.75 },
     },
     west = {
-      filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/pipe-west.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/pipe-west.png",
       priority = "extra-high",
       width = 40,
       height = 45,
@@ -37,7 +37,7 @@ data:extend({
     name = "ore-floatation-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -52,7 +52,7 @@ data:extend({
     name = "ore-floatation-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -83,14 +83,14 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -100,7 +100,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -108,7 +108,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -123,7 +123,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -131,7 +131,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -142,7 +142,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -151,7 +151,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -167,14 +167,14 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -184,7 +184,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -192,7 +192,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -207,7 +207,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -215,7 +215,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -226,7 +226,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -235,7 +235,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -251,7 +251,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-floatation-cell.ogg", volume = 1 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 3,
@@ -260,7 +260,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -269,7 +269,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -284,7 +284,7 @@ data:extend({
       {
         fadeout = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -293,7 +293,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -309,7 +309,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -318,7 +318,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -334,7 +334,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -343,7 +343,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -359,14 +359,14 @@ data:extend({
         always_draw = true,
         render_layer = "higher-object-under",
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -376,7 +376,7 @@ data:extend({
             or nil,
         },
         east_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -384,7 +384,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -395,14 +395,14 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -412,7 +412,7 @@ data:extend({
             or nil,
         },
         west_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -420,7 +420,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -434,7 +434,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -443,7 +443,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -455,7 +455,7 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -464,7 +464,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -500,7 +500,7 @@ data:extend({
     name = "ore-floatation-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -515,7 +515,7 @@ data:extend({
     name = "ore-floatation-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -546,14 +546,14 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -563,7 +563,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -571,7 +571,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -586,7 +586,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -594,7 +594,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -605,7 +605,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -614,7 +614,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -630,14 +630,14 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -647,7 +647,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -655,7 +655,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -670,7 +670,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -678,7 +678,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -689,7 +689,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -698,7 +698,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -714,7 +714,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-floatation-cell.ogg", volume = 1 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 3,
@@ -723,7 +723,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -732,7 +732,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -747,7 +747,7 @@ data:extend({
       {
         fadeout = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -756,7 +756,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -772,7 +772,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -781,7 +781,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -797,7 +797,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -806,7 +806,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -822,14 +822,14 @@ data:extend({
         always_draw = true,
         render_layer = "higher-object-under",
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -839,7 +839,7 @@ data:extend({
             or nil,
         },
         east_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -847,7 +847,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -858,14 +858,14 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -875,7 +875,7 @@ data:extend({
             or nil,
         },
         west_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -883,7 +883,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -897,7 +897,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -906,7 +906,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -918,7 +918,7 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -927,7 +927,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -963,7 +963,7 @@ data:extend({
     name = "ore-floatation-cell-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -978,7 +978,7 @@ data:extend({
     name = "ore-floatation-cell-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-floatation-cell.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -1008,14 +1008,14 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -1025,7 +1025,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -1033,7 +1033,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -1048,7 +1048,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -1056,7 +1056,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -1067,7 +1067,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -1076,7 +1076,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -1092,14 +1092,14 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -1109,7 +1109,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -1117,7 +1117,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -1132,7 +1132,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-base.png",
             priority = "extra-high",
             width = 168,
             height = 182,
@@ -1140,7 +1140,7 @@ data:extend({
             shift = util.by_pixel(0, 0),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-base.png",
                   priority = "extra-high",
                   width = 333,
                   height = 363,
@@ -1151,7 +1151,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-shadow.png",
             priority = "extra-high",
             width = 196,
             height = 164,
@@ -1160,7 +1160,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-shadow.png",
                   priority = "extra-high",
                   width = 390,
                   height = 326,
@@ -1176,7 +1176,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-floatation-cell.ogg", volume = 1 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 3,
@@ -1185,7 +1185,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-idle.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -1194,7 +1194,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-idle.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -1209,7 +1209,7 @@ data:extend({
       {
         fadeout = true,
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-base.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -1218,7 +1218,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-base.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -1234,7 +1234,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-water-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -1243,7 +1243,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-water-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -1259,7 +1259,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-animation-froth-tintable.png",
           priority = "extra-high",
           width = 82,
           height = 58,
@@ -1268,7 +1268,7 @@ data:extend({
           shift = util.by_pixel(31, 3),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-animation-froth-tintable.png",
                 priority = "extra-high",
                 width = 166,
                 height = 117,
@@ -1284,14 +1284,14 @@ data:extend({
         always_draw = true,
         render_layer = "higher-object-under",
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -1301,7 +1301,7 @@ data:extend({
             or nil,
         },
         east_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -1309,7 +1309,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -1320,14 +1320,14 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -1337,7 +1337,7 @@ data:extend({
             or nil,
         },
         west_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/ore-flotation-cell-pipe-cover-overlays.png",
           priority = "extra-high",
           width = 168,
           height = 182,
@@ -1345,7 +1345,7 @@ data:extend({
           shift = util.by_pixel(0, 0),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-ore-flotation-cell-pipe-cover-overlays.png",
                 priority = "extra-high",
                 width = 333,
                 height = 363,
@@ -1359,7 +1359,7 @@ data:extend({
       {
         always_draw = true,
         north_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -1368,7 +1368,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,
@@ -1380,7 +1380,7 @@ data:extend({
             or nil,
         },
         south_animation = {
-          filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/vertical-pipe-shadow-patch.png",
           priority = "high",
           width = 64,
           height = 64,
@@ -1389,7 +1389,7 @@ data:extend({
           shift = { 0, -2 },
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/hr-vertical-pipe-shadow-patch.png",
                 priority = "high",
                 width = 128,
                 height = 128,

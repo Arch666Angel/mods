@@ -4,7 +4,7 @@ data:extend({
     name = "angels-air-filter",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "angels-air-filter",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -47,7 +47,7 @@ data:extend({
     },
     energy_usage = "150kW",
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
       width = 256,
       height = 256,
       frame_count = 36,
@@ -85,7 +85,7 @@ data:extend({
     name = "angels-air-filter-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -100,7 +100,7 @@ data:extend({
     name = "angels-air-filter-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -128,7 +128,7 @@ data:extend({
     },
     energy_usage = "175kW",
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
       width = 256,
       height = 256,
       frame_count = 36,
@@ -166,7 +166,7 @@ data:extend({
     name = "angels-air-filter-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -181,7 +181,7 @@ data:extend({
     name = "angels-air-filter-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/air-filter.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/air-filter.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -208,7 +208,7 @@ data:extend({
     },
     energy_usage = "225kW",
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
       width = 256,
       height = 256,
       frame_count = 36,

@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "angels-cannon-turret",
-    icon = "__angelsexploration__/graphics/icons/cannon-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/cannon-turret.png",
     icon_size = 32,
     flags = {},
     subgroup = "angels-physical-ba",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "ammo-turret",
     name = "angels-cannon-turret",
-    icon = "__angelsexploration__/graphics/icons/cannon-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/cannon-turret.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-cannon-turret" },
@@ -33,7 +33,7 @@ data:extend({
     folded_animation = {
       layers = {
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension.png",
           priority = "medium",
           width = 160,
           height = 160,
@@ -45,7 +45,7 @@ data:extend({
           axially_symmetrical = false,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-mask.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-mask.png",
           flags = { "mask" },
           width = 160,
           height = 160,
@@ -58,7 +58,7 @@ data:extend({
           apply_runtime_tint = true,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
           width = 160,
           height = 160,
           direction_count = 4,
@@ -74,7 +74,7 @@ data:extend({
     preparing_animation = {
       layers = {
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension.png",
           priority = "medium",
           width = 160,
           height = 160,
@@ -86,7 +86,7 @@ data:extend({
           axially_symmetrical = false,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-mask.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-mask.png",
           flags = { "mask" },
           width = 160,
           height = 160,
@@ -99,7 +99,7 @@ data:extend({
           apply_runtime_tint = true,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
           width = 160,
           height = 160,
           direction_count = 4,
@@ -123,32 +123,32 @@ data:extend({
           shift = { 0, -11 / 32 },
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-1.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-2.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-3.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-4.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-5.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-6.png",
               width_in_frames = 1,
               height_in_frames = 4,
             },
@@ -164,32 +164,32 @@ data:extend({
           apply_runtime_tint = true,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-3.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-4.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-5.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-6.png",
               width_in_frames = 1,
               height_in_frames = 4,
             },
@@ -205,32 +205,32 @@ data:extend({
           draw_as_shadow = true,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-1.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-2.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-3.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-4.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-5.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-6.png",
               width_in_frames = 1,
               height_in_frames = 4,
             },
@@ -249,32 +249,32 @@ data:extend({
           shift = { 0, -11 / 32 },
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-1.png",
               width_in_frames = 2,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-2.png",
               width_in_frames = 2,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-3.png",
               width_in_frames = 2,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-4.png",
               width_in_frames = 2,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-5.png",
               width_in_frames = 2,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-6.png",
               width_in_frames = 2,
               height_in_frames = 4,
             },
@@ -290,32 +290,32 @@ data:extend({
           apply_runtime_tint = true,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-3.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-4.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-5.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-mask-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-mask-6.png",
               width_in_frames = 1,
               height_in_frames = 4,
             },
@@ -331,32 +331,32 @@ data:extend({
           draw_as_shadow = true,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-1.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-2.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-3.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-4.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-5.png",
               width_in_frames = 1,
               height_in_frames = 12,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-shadow-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-shadow-6.png",
               width_in_frames = 1,
               height_in_frames = 4,
             },
@@ -367,7 +367,7 @@ data:extend({
     folding_animation = {
       layers = {
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension.png",
           priority = "medium",
           width = 160,
           height = 160,
@@ -379,7 +379,7 @@ data:extend({
           axially_symmetrical = false,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-mask.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-mask.png",
           flags = { "mask" },
           width = 160,
           height = 160,
@@ -392,7 +392,7 @@ data:extend({
           apply_runtime_tint = true,
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/cannon-turret-extension-shadow.png",
           width = 160,
           height = 160,
           direction_count = 4,
@@ -408,7 +408,7 @@ data:extend({
     base_picture = {
       layers = {
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/turret-base.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/turret-base.png",
           priority = "high",
           width = 160,
           height = 160,
@@ -418,7 +418,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsexploration__/graphics/entity/turrets/turret-base-mask.png",
+          filename = "__angelsexplorationgraphics__/graphics/entity/turrets/turret-base-mask.png",
           flags = { "mask" },
           line_length = 1,
           width = 160,

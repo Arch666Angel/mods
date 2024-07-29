@@ -99,7 +99,7 @@ local function generate_gas_canister_icons(fluid)
   else
     --something is wrong here but we need to return something
     return {
-      { icon = "__angelsrefining__/graphics/icons/void.png", icon_size = 32 },
+      { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 },
     }
   end
 end
@@ -114,7 +114,7 @@ local function generate_liquid_canister_icons(fluid)
   else
     --something is wrong here but we need to return something
     return {
-      { icon = "__angelsrefining__/graphics/icons/void.png", icon_size = 32 },
+      { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 },
     }
   end
 end

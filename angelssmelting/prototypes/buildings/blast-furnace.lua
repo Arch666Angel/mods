@@ -4,7 +4,7 @@ data:extend({
     name = "blast-furnace",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -20,7 +20,7 @@ data:extend({
     name = "blast-furnace",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -71,14 +71,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-base.png",
           priority = "high",
           width = 164,
           height = 189,
           shift = util.by_pixel(0, -14),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
                 priority = "high",
                 width = 328,
                 height = 376,
@@ -88,7 +88,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 124,
@@ -96,7 +96,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
                 priority = "high",
                 width = 445,
                 height = 245,
@@ -117,7 +117,7 @@ data:extend({
         south_position = { 0, 0 },
         west_position = { 0, 0 },
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-fire.png",
           priority = "high",
           width = 12,
           height = 25,
@@ -127,7 +127,7 @@ data:extend({
           shift = util.by_pixel(4, 29),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
             priority = "high",
             width = 23,
             height = 50,
@@ -148,7 +148,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-glow.png",
           priority = "high",
           width = 60,
           height = 43,
@@ -166,7 +166,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
           priority = "high",
           width = 164,
           height = 189,
@@ -174,7 +174,7 @@ data:extend({
           shift = util.by_pixel(0, -14),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
             priority = "high",
             width = 328,
             height = 376,
@@ -214,7 +214,7 @@ data:extend({
     name = "blast-furnace-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -230,7 +230,7 @@ data:extend({
     name = "blast-furnace-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -281,14 +281,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-base.png",
           priority = "high",
           width = 164,
           height = 189,
           shift = util.by_pixel(0, -14),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
                 priority = "high",
                 width = 328,
                 height = 376,
@@ -298,7 +298,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 124,
@@ -306,7 +306,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
                 priority = "high",
                 width = 445,
                 height = 245,
@@ -327,7 +327,7 @@ data:extend({
         south_position = { 0, 0 },
         west_position = { 0, 0 },
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-fire.png",
           priority = "high",
           width = 12,
           height = 25,
@@ -337,7 +337,7 @@ data:extend({
           shift = util.by_pixel(4, 29),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
             priority = "high",
             width = 23,
             height = 50,
@@ -358,7 +358,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-glow.png",
           priority = "high",
           width = 60,
           height = 43,
@@ -376,7 +376,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
           priority = "high",
           width = 164,
           height = 189,
@@ -384,7 +384,7 @@ data:extend({
           shift = util.by_pixel(0, -14),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
             priority = "high",
             width = 328,
             height = 376,
@@ -424,7 +424,7 @@ data:extend({
     name = "blast-furnace-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -440,7 +440,7 @@ data:extend({
     name = "blast-furnace-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -491,14 +491,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-base.png",
           priority = "high",
           width = 164,
           height = 189,
           shift = util.by_pixel(0, -14),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
                 priority = "high",
                 width = 328,
                 height = 376,
@@ -508,7 +508,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 124,
@@ -516,7 +516,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
                 priority = "high",
                 width = 445,
                 height = 245,
@@ -537,7 +537,7 @@ data:extend({
         south_position = { 0, 0 },
         west_position = { 0, 0 },
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-fire.png",
           priority = "high",
           width = 12,
           height = 25,
@@ -547,7 +547,7 @@ data:extend({
           shift = util.by_pixel(4, 29),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
             priority = "high",
             width = 23,
             height = 50,
@@ -568,7 +568,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-glow.png",
           priority = "high",
           width = 60,
           height = 43,
@@ -586,7 +586,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
           priority = "high",
           width = 164,
           height = 189,
@@ -594,7 +594,7 @@ data:extend({
           shift = util.by_pixel(0, -14),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
             priority = "high",
             width = 328,
             height = 376,
@@ -634,7 +634,7 @@ data:extend({
     name = "blast-furnace-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -650,7 +650,7 @@ data:extend({
     name = "blast-furnace-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelssmelting__/graphics/icons/blast-furnace.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.5,
@@ -700,14 +700,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-base.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-base.png",
           priority = "high",
           width = 164,
           height = 189,
           shift = util.by_pixel(0, -14),
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-base.png",
                 priority = "high",
                 width = 328,
                 height = 376,
@@ -717,7 +717,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-shadow.png",
           priority = "high",
           width = 224,
           height = 124,
@@ -725,7 +725,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
+                filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-shadow.png",
                 priority = "high",
                 width = 445,
                 height = 245,
@@ -746,7 +746,7 @@ data:extend({
         south_position = { 0, 0 },
         west_position = { 0, 0 },
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-fire.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-fire.png",
           priority = "high",
           width = 12,
           height = 25,
@@ -756,7 +756,7 @@ data:extend({
           shift = util.by_pixel(4, 29),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-fire.png",
             priority = "high",
             width = 23,
             height = 50,
@@ -777,7 +777,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-glow.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-glow.png",
           priority = "high",
           width = 60,
           height = 43,
@@ -795,7 +795,7 @@ data:extend({
         west_position = { 0, 0 },
         effect = "flicker",
         animation = {
-          filename = "__angelssmelting__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
+          filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/blast-furnace-working-light.png",
           priority = "high",
           width = 164,
           height = 189,
@@ -803,7 +803,7 @@ data:extend({
           shift = util.by_pixel(0, -14),
           draw_as_glow = true,
           hr_version = {
-            filename = "__angelssmelting__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
+            filename = "__angelssmeltinggraphics__/graphics/entity/blast-furnace/hr-blast-furnace-working-light.png",
             priority = "high",
             width = 328,
             height = 376,

@@ -58,7 +58,7 @@ if angelsmods.trigger.smelting_products["silicon"].mono then
     OV.global_replace_item("silicon", "angels-mono-silicon")
     angelsmods.functions.add_flag("silicon", "hidden")
     --angelsmods.functions.move_item("silicon", "angels-silicon-casting", "k")
-    --data.raw["item"]["silicon"].icon = "__angelssmelting__/graphics/icons/plate-silicon.png"
+    --data.raw["item"]["silicon"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silicon.png"
     --data.raw["item"]["silicon"].icon_size = 32
     --data.raw["item"]["silicon"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-silicon-plate" })
@@ -119,7 +119,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
     OV.disable_recipe({ "powder-silicon" })
 
     angelsmods.functions.move_item("silicon-powder", "angels-silicon", "g")
-    data.raw.item["silicon-powder"].icon = "__angelssmelting__/graphics/icons/powder-silica.png"
+    data.raw.item["silicon-powder"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png"
     data.raw.item["silicon-powder"].icon_size = 64
     data.raw.item["silicon-powder"].localised_name = { "item-name.powder-silicon" }
     OV.patch_recipes({

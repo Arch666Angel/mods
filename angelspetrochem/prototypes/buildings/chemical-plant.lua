@@ -4,7 +4,7 @@ data:extend({
     name = "angels-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "angels-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -47,7 +47,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
       width = 160,
       height = 160,
       frame_count = 1,
@@ -58,7 +58,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -69,7 +69,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -81,7 +81,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -92,7 +92,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -158,7 +158,7 @@ data:extend({
     name = "angels-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -173,7 +173,7 @@ data:extend({
     name = "angels-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -201,7 +201,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
       width = 160,
       height = 160,
       frame_count = 1,
@@ -212,7 +212,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -223,7 +223,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -235,7 +235,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -246,7 +246,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -312,7 +312,7 @@ data:extend({
     name = "angels-chemical-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -327,7 +327,7 @@ data:extend({
     name = "angels-chemical-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -355,7 +355,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
       width = 160,
       height = 160,
       frame_count = 1,
@@ -366,7 +366,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -377,7 +377,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -389,7 +389,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -400,7 +400,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -466,7 +466,7 @@ data:extend({
     name = "angels-chemical-plant-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -481,7 +481,7 @@ data:extend({
     name = "angels-chemical-plant-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -508,7 +508,7 @@ data:extend({
     },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
+      filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
       width = 160,
       height = 160,
       frame_count = 1,
@@ -519,7 +519,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -530,7 +530,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -542,7 +542,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
           line_length = 6,
           frame_count = 36,
           width = 160,
@@ -553,7 +553,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
           line_length = 6,
           frame_count = 36,
           width = 160,

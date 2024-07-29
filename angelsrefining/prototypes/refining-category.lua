@@ -49,13 +49,13 @@ data:extend({
     order = "la[angels]-a[refining]-a",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+        icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
         icon_size = 256,
         icon_mipmaps = 4,
         scale = 0.25,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -237,13 +237,13 @@ data:extend({
     order = "la[angels]-c[petrochem]-a",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+        icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
         icon_size = 256,
         icon_mipmaps = 4,
         scale = 64 / 256,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -335,12 +335,12 @@ data:extend({
     order = "la[angels]-c[petrochem]-c",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/item-group/barreling-group.png",
+        icon = "__angelsrefininggraphics__/graphics/item-group/barreling-group.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -372,12 +372,12 @@ data:extend({
     order = "la[angels]-c[petrochem]-d",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/item-group/converter-group.png",
+        icon = "__angelsrefininggraphics__/graphics/item-group/converter-group.png",
         icon_size = 64,
         scale = 1,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -391,13 +391,13 @@ data:extend({
     order = "la[angels]-z[void]-a",
     icons = {
       {
-        icon = "__angelsrefining__/graphics/item-group/void-group.png",
+        icon = "__angelsrefininggraphics__/graphics/item-group/void-group.png",
         icon_size = 128,
         scale = 0.5,
         icon_mipmaps = 2,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },

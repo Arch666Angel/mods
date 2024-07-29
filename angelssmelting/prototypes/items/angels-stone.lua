@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "solid-lime",
-    icon = "__angelssmelting__/graphics/icons/solid-lime.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-lime.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "b",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "item",
     name = "solid-cement",
-    icon = "__angelssmelting__/graphics/icons/solid-cement.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-cement.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "c",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "clay-brick-raw",
-    icon = "__angelssmelting__/graphics/icons/brick-clay-raw.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay-raw.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "d",
@@ -32,7 +32,7 @@ data:extend({
   {
     type = "item",
     name = "clay-brick",
-    icon = "__angelssmelting__/graphics/icons/brick-clay.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "e",
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-concrete",
-    icon = "__angelssmelting__/graphics/icons/molten-concrete.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-concrete.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-stone-casting",
@@ -65,7 +65,7 @@ data:extend({
   {
     type = "item",
     name = "concrete-brick",
-    icon = "__angelssmelting__/graphics/icons/brick-concrete.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/brick-concrete.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "i",
@@ -80,7 +80,7 @@ data:extend({
   {
     type = "item",
     name = "reinforced-concrete-brick",
-    icon = "__angelssmelting__/graphics/icons/brick-reinforced.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/brick-reinforced.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "j",

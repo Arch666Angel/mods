@@ -107,10 +107,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/resistor.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/resistor.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -133,10 +133,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/transistor.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/transistor.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -159,10 +159,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/chip.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/chip.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -185,10 +185,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/spool.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/spool.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -211,10 +211,10 @@ if angelsmods.industries.components then
       },
       icons = {
         {
-          icon = "__angelsindustries__/graphics/icons/electronic-parts.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/electronic-parts.png",
         },
         {
-          icon = "__angelsindustries__/graphics/icons/cpu.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/cpu.png",
           scale = 0.4375,
           shift = { -10, -10 },
         },

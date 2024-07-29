@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "chrome-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-chrome",
-    icon = "__angelssmelting__/graphics/icons/processed-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-chrome",
-    icon = "__angelssmelting__/graphics/icons/pellet-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "solid-chromate",
-    icon = "__angelssmelting__/graphics/icons/solid-chromate.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-chromate.png",
     icon_size = 32,
     subgroup = "angels-chrome",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "solid-dichromate",
-    icon = "__angelssmelting__/graphics/icons/solid-dichromate.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-dichromate.png",
     icon_size = 32,
     subgroup = "angels-chrome",
     order = "e",
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "item",
     name = "solid-chrome-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-chrome-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-chrome-oxide.png",
     icon_size = 32,
     subgroup = "angels-chrome",
     order = "f",
@@ -61,7 +61,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-chrome",
-    icon = "__angelssmelting__/graphics/icons/ingot-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome",
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "item",
     name = "powder-chrome",
-    icon = "__angelssmelting__/graphics/icons/powder-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-chrome",
-    icon = "__angelssmelting__/graphics/icons/molten-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome-casting",
@@ -97,7 +97,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-chrome",
-    icon = "__angelssmelting__/graphics/icons/roll-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-chrome.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-chrome-casting",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-chrome",
-    icon = "__angelssmelting__/graphics/icons/plate-chrome.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome-casting",
     order = "k",

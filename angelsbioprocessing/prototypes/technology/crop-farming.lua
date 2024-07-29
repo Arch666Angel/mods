@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-composting",
-    icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -39,7 +39,7 @@ data:extend({
   {
     type = "technology",
     name = "gardens",
-    icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -75,7 +75,7 @@ data:extend({
   {
     type = "technology",
     name = "gardens-2",
-    icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "technology",
     name = "gardens-3",
-    icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -141,7 +141,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-farm-1",
-    icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -170,7 +170,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-farm-2",
-    icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -196,7 +196,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-farm-alien",
-    icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -238,7 +238,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-temperate-farming-1",
-    icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -297,7 +297,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-temperate-farming-2",
-    icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -343,7 +343,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-temperate-farm",
-    icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -379,7 +379,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-desert-farming-1",
-    icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -438,7 +438,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-desert-farming-2",
-    icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -484,7 +484,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-desert-farm",
-    icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -520,7 +520,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-swamp-farming-1",
-    icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -579,7 +579,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-swamp-farming-2",
-    icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -625,7 +625,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-swamp-farm",
-    icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -661,7 +661,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-nutrient-paste",
-    icon = "__angelsbioprocessing__/graphics/technology/nutrient-extractor-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/nutrient-extractor-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -722,7 +722,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-pressing-1",
-    icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -769,7 +769,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-pressing-2",
-    icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -796,7 +796,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-pressing-fish-1",
-    icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -848,7 +848,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-pressing-fish-2",
-    icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -879,7 +879,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-fermentation",
-    icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -925,7 +925,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-plastic-1",
-    icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -968,7 +968,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-plastic-2",
-    icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -1000,7 +1000,7 @@ data:extend({
   --  type = "technology",
   --  name = "angels-garden-mutations",
   --  icons = {
-  --    {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
+  --    {icon = "__angelsbioprocessinggraphics__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
   --  },
   --  icon_size = 128,
   --  order = "c-a",

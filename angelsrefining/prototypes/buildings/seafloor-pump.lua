@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "seafloor-pump",
-    icon = "__angelsrefining__/graphics/icons/seafloor-pump-ico.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/seafloor-pump-ico.png",
     icon_size = 32,
     subgroup = "washing-building",
     order = "a",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "offshore-pump",
     name = "seafloor-pump",
-    icon = "__angelsrefining__/graphics/icons/seafloor-pump-ico.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/seafloor-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
     collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
@@ -52,14 +52,14 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
       north = {
-        filename = "__angelsrefining__/graphics/entity/seafloor-pump/seafloor-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/seafloor-pump/seafloor-pump.png",
         priority = "high",
         shift = { 0, -1 },
         width = 160,
         height = 160,
       },
       east = {
-        filename = "__angelsrefining__/graphics/entity/seafloor-pump/seafloor-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/seafloor-pump/seafloor-pump.png",
         priority = "high",
         shift = { 1, 0 },
         x = 160,
@@ -67,7 +67,7 @@ data:extend({
         height = 160,
       },
       south = {
-        filename = "__angelsrefining__/graphics/entity/seafloor-pump/seafloor-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/seafloor-pump/seafloor-pump.png",
         priority = "high",
         shift = { 0, 1 },
         x = 320,
@@ -75,7 +75,7 @@ data:extend({
         height = 160,
       },
       west = {
-        filename = "__angelsrefining__/graphics/entity/seafloor-pump/seafloor-pump.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/seafloor-pump/seafloor-pump.png",
         priority = "high",
         shift = { -1, 0 },
         x = 480,

@@ -15,7 +15,7 @@ angelsmods.functions.add_resource("make", {
   output_name = "gas-natural-1",
   output_min = 20,
   output_max = 20,
-  icon = "__angelspetrochem__/graphics/icons/gas.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/gas.png",
   icon_size = 64,
   icon_mipmaps = 1,
   stage_counts = { 0 },
@@ -103,7 +103,7 @@ angelsmods.functions.add_resource("make", {
 -- {
 -- sheet =
 -- {
--- filename = "__angelspetrochem__/graphics/entity/patches/gas.png",
+-- filename = "__angelspetrochemgraphics__/graphics/entity/patches/gas.png",
 -- tint = {r = 0.70, g = 0.90, b = 0.60},
 -- priority = "extra-high",
 -- width = 64,

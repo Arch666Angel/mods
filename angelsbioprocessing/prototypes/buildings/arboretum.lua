@@ -5,7 +5,7 @@ data:extend({
     name = "bio-generator-temperate-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-temperate-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
       },
     },
     icon_size = 32,
@@ -19,7 +19,7 @@ data:extend({
     name = "bio-generator-temperate-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-temperate-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
       },
     },
     icon_size = 32,
@@ -48,7 +48,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-shadow.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -56,7 +56,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-base.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -64,7 +64,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-pipes.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -72,7 +72,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-1.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-1.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -80,7 +80,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -92,7 +92,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top-on.png",
           priority = "high",
           width = 160,
           height = 160,
@@ -131,7 +131,7 @@ data:extend({
     name = "bio-generator-swamp-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-swamp-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-swamp-generator.png",
       },
     },
     icon_size = 32,
@@ -145,7 +145,7 @@ data:extend({
     name = "bio-generator-swamp-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-swamp-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-swamp-generator.png",
       },
     },
     icon_size = 32,
@@ -174,7 +174,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-shadow.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -182,7 +182,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-base.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -190,7 +190,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-pipes.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -198,7 +198,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-2.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-2.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -206,7 +206,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -218,7 +218,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top-on.png",
           priority = "high",
           width = 160,
           height = 160,
@@ -257,7 +257,7 @@ data:extend({
     name = "bio-generator-desert-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-desert-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-desert-generator.png",
       },
     },
     icon_size = 32,
@@ -271,7 +271,7 @@ data:extend({
     name = "bio-generator-desert-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-desert-generator.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-desert-generator.png",
       },
     },
     icon_size = 32,
@@ -300,7 +300,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-shadow.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -308,7 +308,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-base.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -316,7 +316,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-pipes.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -324,7 +324,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-3.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-3.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -332,7 +332,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top.png",
           width = 160,
           height = 160,
           line_length = 1,
@@ -344,7 +344,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-generator-top-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-generator-top-on.png",
           priority = "high",
           width = 160,
           height = 160,
@@ -385,7 +385,7 @@ data:extend({
     name = "bio-arboretum-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
       },
     },
     icon_size = 32,
@@ -399,7 +399,7 @@ data:extend({
     name = "bio-arboretum-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/bio-arboretum.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
       },
     },
     icon_size = 32,
@@ -428,7 +428,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-shadow.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-shadow.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -436,7 +436,7 @@ data:extend({
           shift = { 0, -0.50 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-base.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -444,7 +444,7 @@ data:extend({
           shift = { 0, -0.50 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-pipes.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-pipes.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -452,7 +452,7 @@ data:extend({
           shift = { 0, -0.50 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-off.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-off.png",
           width = 224,
           height = 256,
           line_length = 1,
@@ -465,7 +465,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/trees/bio-arboretum-on.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/bio-arboretum-on.png",
           blend_mode = "additive",
           width = 224,
           height = 256,

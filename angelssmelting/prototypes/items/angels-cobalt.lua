@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "cobalt-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-cobalt.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-cobalt",
-    icon = "__angelssmelting__/graphics/icons/processed-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-cobalt",
-    icon = "__angelssmelting__/graphics/icons/pellet-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "solid-cobalt-hydroxide",
-    icon = "__angelssmelting__/graphics/icons/solid-cobalt-hydroxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "solid-cobalt-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
     order = "e",
@@ -52,7 +52,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-cobalt",
-    icon = "__angelssmelting__/graphics/icons/ingot-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt",
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "item",
     name = "powder-cobalt",
-    icon = "__angelssmelting__/graphics/icons/powder-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-cobalt",
-    icon = "__angelssmelting__/graphics/icons/molten-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt-casting",
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-cobalt",
-    icon = "__angelssmelting__/graphics/icons/roll-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-cobalt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-cobalt-casting",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-cobalt",
-    icon = "__angelssmelting__/graphics/icons/plate-cobalt.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png",
     icon_size = 32,
     subgroup = "angels-cobalt-casting",
     order = "j",

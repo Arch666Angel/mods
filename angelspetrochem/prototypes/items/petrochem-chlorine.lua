@@ -9,7 +9,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "Cl[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
       "ClClCl"
     ),
     --icon_size = 32,
@@ -27,7 +27,7 @@ data:extend({
     name = "gas-hydrogen-chloride",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "HCl" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
       "ClClH"
     ),
     --icon_size = 32,
@@ -47,7 +47,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "HCl[font=default-tiny-bold](aq)[/font]" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
       "ClHO"
     ),
     --icon_size = 32,
@@ -68,7 +68,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]ClO",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/allyl-chloride.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/allyl-chloride.png", 72 },
       "CClH"
     ),
     --icon_size = 32,
@@ -89,7 +89,7 @@ data:extend({
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]Cl",
     } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/epichlorohydrin.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72 },
       "CHCl"
     ),
     --icon_size = 32,
@@ -109,7 +109,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]3[/font]Cl" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/chloromethane.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chloromethane.png", 72 },
       "CClH"
     ),
     --icon_size = 32,
@@ -125,7 +125,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-chlorate",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-chlorate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-chlorate.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "f[liquid-sodium-hydroxide]-b[solid-sodium-chlorate]",
@@ -134,7 +134,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-perchlorate",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-perchlorate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-perchlorate.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]",
@@ -147,7 +147,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "HClO[font=default-tiny-bold]4[/font]" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/perchloric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/perchloric-acid.png", 72 },
       "ClHO"
     ),
     --icon_size = 32,
@@ -166,7 +166,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "COCl[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/phosgene.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/phosgene.png", 72 },
       "CClO"
     ),
     --icon_size = 32,

@@ -4,7 +4,7 @@ data:extend({
     name = "crystallizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "crystallizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -49,13 +49,13 @@ data:extend({
       layers = {
         -- Base
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
           priority = "extra-high",
           width = 195,
           height = 163,
           shift = util.by_pixel(15.5, -0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer.png",
             priority = "extra-high",
             width = 390,
             height = 326,
@@ -65,7 +65,7 @@ data:extend({
         },
         -- Shadow
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
           priority = "extra-high",
           width = 195,
           height = 163,
@@ -73,7 +73,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
                 priority = "extra-high",
                 width = 390,
                 height = 326,
@@ -98,14 +98,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_picture = {
           north = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 0,
             shift = { 0, 1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 0,
@@ -115,14 +115,14 @@ data:extend({
               or nil,
           },
           east = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 64,
             shift = { -1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 128,
@@ -132,14 +132,14 @@ data:extend({
               or nil,
           },
           south = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 128,
             shift = { 0, -1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 256,
@@ -149,14 +149,14 @@ data:extend({
               or nil,
           },
           west = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 192,
             shift = { 1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 384,
@@ -184,7 +184,7 @@ data:extend({
     name = "crystallizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -199,7 +199,7 @@ data:extend({
     name = "crystallizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -229,13 +229,13 @@ data:extend({
       layers = {
         -- Base
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
           priority = "extra-high",
           width = 195,
           height = 163,
           shift = util.by_pixel(15.5, -0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer.png",
             priority = "extra-high",
             width = 390,
             height = 326,
@@ -245,7 +245,7 @@ data:extend({
         },
         -- Shadow
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
           priority = "extra-high",
           width = 195,
           height = 163,
@@ -253,7 +253,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
                 priority = "extra-high",
                 width = 390,
                 height = 326,
@@ -278,14 +278,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_picture = {
           north = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 0,
             shift = { 0, 1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 0,
@@ -295,14 +295,14 @@ data:extend({
               or nil,
           },
           east = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 64,
             shift = { -1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 128,
@@ -312,14 +312,14 @@ data:extend({
               or nil,
           },
           south = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 128,
             shift = { 0, -1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 256,
@@ -329,14 +329,14 @@ data:extend({
               or nil,
           },
           west = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 192,
             shift = { 1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 384,
@@ -364,7 +364,7 @@ data:extend({
     name = "crystallizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -379,7 +379,7 @@ data:extend({
     name = "crystallizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -408,13 +408,13 @@ data:extend({
       layers = {
         -- Base
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
           priority = "extra-high",
           width = 195,
           height = 163,
           shift = util.by_pixel(15.5, -0.5),
           hr_version = angelsmods.trigger.enable_hq_graphics and {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer.png",
             priority = "extra-high",
             width = 390,
             height = 326,
@@ -424,7 +424,7 @@ data:extend({
         },
         -- Shadow
         {
-          filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
           priority = "extra-high",
           width = 195,
           height = 163,
@@ -432,7 +432,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-shadow.png",
                 priority = "extra-high",
                 width = 390,
                 height = 326,
@@ -457,14 +457,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_picture = {
           north = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 0,
             shift = { 0, 1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 0,
@@ -474,14 +474,14 @@ data:extend({
               or nil,
           },
           east = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 64,
             shift = { -1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 128,
@@ -491,14 +491,14 @@ data:extend({
               or nil,
           },
           south = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 128,
             shift = { 0, -1 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 256,
@@ -508,14 +508,14 @@ data:extend({
               or nil,
           },
           west = {
-            filename = "__angelsrefining__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
             priority = "extra-high",
             size = 64,
             x = 192,
             shift = { 1, 0 },
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelsrefining__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
+                  filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/hr-crystallizer-pipe-connection.png",
                   priority = "extra-high",
                   size = 128,
                   x = 384,

@@ -4,7 +4,7 @@ data:extend({
     name = "angels-iron-smelting-1",
     localised_name = { "technology-name.angels-iron-metallurgy" },
     localised_description = { "technology-description.angels-iron-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -36,7 +36,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-iron-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-iron-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -117,7 +117,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-iron-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -150,7 +150,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-iron-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -188,7 +188,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-iron-casting-4",
-    icon = "__angelssmelting__/graphics/technology/casting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

@@ -4,7 +4,7 @@ data:extend({
     name = "angels-silicon-smelting-1",
     localised_name = { "technology-name.angels-silicon-metallurgy" },
     localised_description = { "technology-description.angels-silicon-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-silicon-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-silicon-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -47,7 +47,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-silicon-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silicon-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-silicon-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silicon-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -126,7 +126,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-silicon-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-silicon-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-silicon-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

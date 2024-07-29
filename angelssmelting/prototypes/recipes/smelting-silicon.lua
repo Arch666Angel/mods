@@ -52,7 +52,7 @@ data:extend({
     main_product = "liquid-trichlorosilane",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
-      { "__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-trichlorosilane.png", 72 },
     }, "SiHCl"),
     order = "d[liquid-trichlorosilane]",
   },
@@ -75,7 +75,7 @@ data:extend({
     main_product = "gas-silane",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelssmelting__/graphics/icons/molecule-silane.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-silane.png", 72 },
     }, "SiHH"),
     order = "e[gas-silane]",
   },

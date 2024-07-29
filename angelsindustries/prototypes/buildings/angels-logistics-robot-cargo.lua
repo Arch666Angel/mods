@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "cargo-robot",
-    icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "b[angels-logistics-robot]-a[cargo-robot]",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "logistic-robot",
     name = "cargo-robot",
-    icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "cargo-robot" },
@@ -30,7 +30,7 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     idle = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -42,7 +42,7 @@ data:extend({
       y = 128,
     },
     idle_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -54,7 +54,7 @@ data:extend({
       direction_count = 16,
     },
     in_motion = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -67,7 +67,7 @@ data:extend({
       y = 384,
     },
     in_motion_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -80,7 +80,7 @@ data:extend({
       y = 256,
     },
     shadow_idle = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -90,7 +90,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_idle_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -100,7 +100,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_in_motion = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -110,7 +110,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_in_motion_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -125,7 +125,7 @@ data:extend({
   {
     type = "item",
     name = "cargo-robot-2",
-    icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "b[angels-logistics-robot]-b[cargo-robot-2]",
@@ -135,7 +135,7 @@ data:extend({
   {
     type = "logistic-robot",
     name = "cargo-robot-2",
-    icon = "__angelsindustries__/graphics/icons/cargo-robot.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/cargo-robot.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "cargo-robot-2" },
@@ -151,7 +151,7 @@ data:extend({
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     idle = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -163,7 +163,7 @@ data:extend({
       y = 128,
     },
     idle_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -175,7 +175,7 @@ data:extend({
       direction_count = 16,
     },
     in_motion = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -188,7 +188,7 @@ data:extend({
       y = 384,
     },
     in_motion_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -201,7 +201,7 @@ data:extend({
       y = 256,
     },
     shadow_idle = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -211,7 +211,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_idle_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -221,7 +221,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_in_motion = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -231,7 +231,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_in_motion_with_cargo = {
-      filename = "__angelsindustries__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/cargo-robot/cargo-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,

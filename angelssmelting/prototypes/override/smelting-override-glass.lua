@@ -38,7 +38,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     OV.global_replace_item("angels-plate-glass", "glass")
     angelsmods.functions.add_flag("angels-plate-glass", "hidden")
     angelsmods.functions.move_item("glass", "angels-glass-casting", "d")
-    data.raw["item"]["glass"].icon = "__angelssmelting__/graphics/icons/plate-glass.png"
+    data.raw["item"]["glass"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png"
     data.raw["item"]["glass"].icon_size = 32
     data.raw["item"]["glass"].icon_mipmaps = 1
 
@@ -57,10 +57,10 @@ if angelsmods.trigger.smelting_products["glass"].plate then
         },
         icons = {
           {
-            icon = "__angelssmelting__/graphics/icons/plate-glass.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/ore-silica.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -105,7 +105,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
             scale = 32 / 128,
           },
           {
-            icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-glass.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.4375 * 0.5,

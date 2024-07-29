@@ -44,7 +44,7 @@ if mods["bobgreenhouse"] then
       --},
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsbioprocessing__/graphics/icons/tree.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/tree.png",
           icon_size = 64,
           scale = 0.5,
         },
@@ -68,7 +68,7 @@ if mods["bobgreenhouse"] then
       --},
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsbioprocessing__/graphics/icons/tree.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/tree.png",
           icon_size = 64,
           scale = 0.5,
         },
@@ -98,12 +98,12 @@ if mods["bobgreenhouse"] then
       order = "b[arboretum]-b[tree-generation]-c",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-tree.png",
           icon_size = 64,
           scale = 0.5,
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-seed.png",
           icon_size = 32,
           shift = { -12, 12 },
           scale = 0.35,
@@ -115,12 +115,12 @@ if mods["bobgreenhouse"] then
       order = "b[arboretum]-b[tree-generation]-d",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-tree.png",
           icon_size = 64,
           scale = 0.5,
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-seed.png",
           icon_size = 32,
           shift = { -12, 12 },
           scale = 0.35,
@@ -132,12 +132,12 @@ if mods["bobgreenhouse"] then
       order = "b[arboretum]-b[tree-generation]-e",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsbioprocessing__/graphics/icons/solid-tree.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-tree.png",
           icon_size = 64,
           scale = 0.5,
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/tree-seed.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-seed.png",
           icon_size = 32,
           shift = { -12, 12 },
           scale = 0.35,
@@ -181,7 +181,7 @@ if mods["bobgreenhouse"] then
           scale = 0.5,
         },
         {
-          icon = "__angelsbioprocessing__/graphics/icons/hand.png",
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/hand.png",
           scale = 0.35,
           shift = { -12, -12 },
         },

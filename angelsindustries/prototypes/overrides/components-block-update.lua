@@ -22,7 +22,7 @@ if angelsmods.industries.components then
       {
         type = "technology",
         name = "angels-basic-blocks-1",
-        icon = "__angelsindustries__/graphics/technology/components-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/components-tech.png",
         icon_size = 64,
         prerequisites = {
           "tech-red-circuit",
@@ -74,7 +74,7 @@ if angelsmods.industries.components then
       {
         type = "technology",
         name = "angels-basic-blocks-2",
-        icon = "__angelsindustries__/graphics/technology/components-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/components-tech.png",
         icon_size = 64,
         prerequisites = {
           "angels-basic-blocks-1",
@@ -131,7 +131,7 @@ if angelsmods.industries.components then
       {
         type = "technology",
         name = "angels-basic-blocks-3",
-        icon = "__angelsindustries__/graphics/technology/components-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/components-tech.png",
         icon_size = 64,
         prerequisites = {
           "angels-basic-blocks-2",
@@ -191,7 +191,7 @@ if angelsmods.industries.components then
       {
         type = "technology",
         name = "angels-advanced-blocks-1",
-        icon = "__angelsindustries__/graphics/technology/components-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/components-tech.png",
         icon_size = 64,
         prerequisites = {
           "angels-basic-blocks-3",
@@ -252,7 +252,7 @@ if angelsmods.industries.components then
       {
         type = "technology",
         name = "angels-advanced-blocks-2",
-        icon = "__angelsindustries__/graphics/technology/components-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/components-tech.png",
         icon_size = 64,
         prerequisites = {
           "angels-advanced-blocks-1",

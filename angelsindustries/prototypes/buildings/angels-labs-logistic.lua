@@ -14,7 +14,7 @@ if angelsmods.industries.tech then
       name = "angels-logistic-lab-1",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -43,7 +43,7 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -57,7 +57,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -66,7 +66,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,
@@ -103,7 +103,7 @@ if angelsmods.industries.tech then
       name = "angels-logistic-lab-2",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -131,7 +131,7 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -145,7 +145,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -154,7 +154,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,
@@ -183,7 +183,7 @@ if angelsmods.industries.tech then
       name = "angels-logistic-lab-3",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -210,7 +210,7 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/logistic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/logistic-lab-ico.png",
           icon_size = 32,
           icon_mipmaps = 1,
         },
@@ -224,7 +224,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -233,7 +233,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/logistic-lab/logistic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/logistic-lab/logistic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,

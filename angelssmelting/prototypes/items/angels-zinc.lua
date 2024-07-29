@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "zinc-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-zinc",
-    icon = "__angelssmelting__/graphics/icons/processed-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-zinc",
-    icon = "__angelssmelting__/graphics/icons/pellet-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "solid-zinc-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-zinc-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-zinc-oxide.png",
     icon_size = 32,
     subgroup = "angels-zinc",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "cathode-zinc",
-    icon = "__angelssmelting__/graphics/icons/cathode-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cathode-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc",
     order = "e",
@@ -52,7 +52,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-zinc",
-    icon = "__angelssmelting__/graphics/icons/ingot-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc",
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "item",
     name = "powder-zinc",
-    icon = "__angelssmelting__/graphics/icons/powder-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-zinc",
-    icon = "__angelssmelting__/graphics/icons/molten-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc-casting",
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-zinc",
-    icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-zinc.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-zinc-casting",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-zinc",
-    icon = "__angelssmelting__/graphics/icons/plate-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc-casting",
     order = "j",

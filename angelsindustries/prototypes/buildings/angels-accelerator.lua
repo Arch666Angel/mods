@@ -4,7 +4,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-cyclotron",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -14,7 +14,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-cyclotron",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-cyclotron" },
@@ -32,7 +32,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "assembling-machine-small",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -42,7 +42,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -52,7 +52,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -62,7 +62,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -123,7 +123,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-oneway",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -133,7 +133,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-oneway",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-oneway" },
@@ -151,7 +151,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "angels-accelerator-oneway",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy1x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy1x3.png",
           priority = "high",
           width = 32,
           height = 96,
@@ -161,7 +161,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x1.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x1.png",
           priority = "high",
           width = 96,
           height = 32,
@@ -171,7 +171,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy1x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy1x3.png",
           priority = "high",
           width = 32,
           height = 96,
@@ -181,7 +181,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x1.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x1.png",
           priority = "high",
           width = 96,
           height = 32,
@@ -236,7 +236,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-oneway-curvea",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -246,7 +246,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-oneway-curvea",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-oneway-curvea" },
@@ -264,7 +264,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "angels-accelerator-oneway",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -274,7 +274,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -284,7 +284,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -294,7 +294,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -349,7 +349,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-oneway-curveb",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -359,7 +359,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-oneway-curveb",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-oneway-curveb" },
@@ -377,7 +377,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "angels-accelerator-oneway",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -387,7 +387,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -397,7 +397,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -407,7 +407,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -462,7 +462,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-oneway-splice",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -472,7 +472,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-oneway-splice",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-oneway-splice" },
@@ -490,7 +490,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "angels-accelerator-oneway",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -500,7 +500,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -510,7 +510,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -520,7 +520,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -582,7 +582,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-oneway-target",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -592,7 +592,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-oneway-target",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-oneway-target" },
@@ -610,7 +610,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "angels-accelerator-oneway",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -620,7 +620,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -630,7 +630,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -640,7 +640,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy3x3.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy3x3.png",
           priority = "high",
           width = 96,
           height = 96,
@@ -689,7 +689,7 @@ if angelsmods.industries.tech then
     {
       type = "item",
       name = "angels-accelerator-collider",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       subgroup = "angels-assemblers-small",
       order = "a",
@@ -699,7 +699,7 @@ if angelsmods.industries.tech then
     {
       type = "assembling-machine",
       name = "angels-accelerator-collider",
-      icon = "__angelsindustries__/graphics/entity/dummy1x1.png",
+      icon = "__angelsindustriesgraphics__/graphics/entity/dummy1x1.png",
       icon_size = 32,
       flags = { "placeable-neutral", "placeable-player", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-accelerator-collider" },
@@ -717,7 +717,7 @@ if angelsmods.industries.tech then
       fast_replaceable_group = "assembling-machine-small",
       animation = {
         north = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -727,7 +727,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         east = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -737,7 +737,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         south = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,
@@ -747,7 +747,7 @@ if angelsmods.industries.tech then
           scale = 1,
         },
         west = {
-          filename = "__angelsindustries__/graphics/entity/dummy6x6.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/dummy6x6.png",
           priority = "high",
           width = 192,
           height = 192,

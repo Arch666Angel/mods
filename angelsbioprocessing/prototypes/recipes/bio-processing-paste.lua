@@ -15,7 +15,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-cellulose", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-cellulose.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-cellulose.png",
     icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-chlor-methane"),
     order = "c[paste-cellulose]",
@@ -34,7 +34,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-copper", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-copper.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-copper.png",
     icon_size = 32,
     order = "b",
   },
@@ -52,7 +52,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-gold", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-gold.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-gold.png",
     icon_size = 32,
     order = "c",
   },
@@ -70,7 +70,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-tungsten", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-tungsten.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-tungsten.png",
     icon_size = 32,
     order = "d",
   },
@@ -88,7 +88,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-cobalt", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-cobalt.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-cobalt.png",
     icon_size = 32,
     order = "e",
   },
@@ -106,7 +106,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-titanium", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-titanium.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-titanium.png",
     icon_size = 32,
     order = "f",
   },
@@ -124,7 +124,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-zinc", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-zinc.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-zinc.png",
     icon_size = 32,
     order = "g",
   },
@@ -142,7 +142,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-iron", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-iron.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-iron.png",
     icon_size = 32,
     order = "h",
   },
@@ -160,7 +160,7 @@ data:extend({
     results = {
       { type = "item", name = "paste-silver", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/paste-silver.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/paste-silver.png",
     icon_size = 32,
     order = "i",
   },

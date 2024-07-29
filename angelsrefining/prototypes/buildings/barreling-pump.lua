@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "barreling-pump",
-    icon = "__angelsrefining__/graphics/icons/barreling-pump.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "c[barreling-pump]",
@@ -14,7 +14,7 @@ data:extend({
 local barreling_pump = {
   type = "assembling-machine",
   name = "barreling-pump",
-  icon = "__angelsrefining__/graphics/icons/barreling-pump.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation" },
   minable = { mining_time = 1, result = "barreling-pump" },
@@ -39,14 +39,14 @@ local barreling_pump = {
   ingredient_count = 2,
   animation = {
     north = {
-      filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
       width = 160,
       height = 160,
       frame_count = 1,
       shift = { 0, 0 },
     },
     east = {
-      filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
       x = 480,
       width = 160,
       height = 160,
@@ -54,7 +54,7 @@ local barreling_pump = {
       shift = { 0, 0 },
     },
     south = {
-      filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
       x = 320,
       width = 160,
       height = 160,
@@ -62,7 +62,7 @@ local barreling_pump = {
       shift = { 0, 0 },
     },
     west = {
-      filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
       x = 160,
       width = 160,
       height = 160,
@@ -77,7 +77,7 @@ local barreling_pump = {
       south_position = { 0, -0.25 },
       west_position = { 0, -0.15 },
       animation = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump-animation.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump-animation.png",
         frame_count = 36,
         line_length = 6,
         width = 64,

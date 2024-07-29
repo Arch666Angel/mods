@@ -29,7 +29,7 @@ data:extend({
   {
     type = "technology",
     name = "water-treatment",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "technology",
     name = "water-treatment-2",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -111,7 +111,7 @@ data:extend({
   {
     type = "technology",
     name = "water-treatment-3",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -163,7 +163,7 @@ data:extend({
   {
     type = "technology",
     name = "water-treatment-4",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -196,7 +196,7 @@ data:extend({
   {
     type = "technology",
     name = "water-washing-1",
-    icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "automation",
@@ -248,7 +248,7 @@ data:extend({
   {
     type = "technology",
     name = "water-washing-2",
-    icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
       "water-washing-1",

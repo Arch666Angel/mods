@@ -12,6 +12,7 @@
     "angelspetrochem >= 1.0.0",
     "angelssmelting >= 1.0.0",
     "angelsbioprocessing >= 1.0.0",
+    "~ angelsindustriesgraphics >= 1.0.0",
     "(?) aai-industry >= 0.4.12"
   ]
 }

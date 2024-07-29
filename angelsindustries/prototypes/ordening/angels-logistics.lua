@@ -17,7 +17,7 @@ if mods["boblogistics"] then
       icon_size = 64,
     },
     {
-      icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/bobs-logo.png",
       icon_size = 1080,
       scale = 64 / 1080 * 0.35,
       shift = { 20, -20 },

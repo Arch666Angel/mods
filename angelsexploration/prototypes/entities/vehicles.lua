@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "angels-turbo-bike",
-    icon = "__angelsexploration__/graphics/icons/turbo-bike.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/turbo-bike.png",
     icon_size = "64",
     flags = {},
     subgroup = "angels-vehicle-car",
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "car",
     name = "angels-turbo-bike",
-    icon = "__angelsexploration__/graphics/icons/turbo-bike.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/turbo-bike.png",
     icon_size = 64,
     flags = {
       "placeable-neutral",
@@ -118,17 +118,17 @@ data:extend({
           axially_symmetrical = false,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
               width_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
               width_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/bike/turbo-bike.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/bike/turbo-bike.png",
               height_in_frames = 8,
               width_in_frames = 8,
             },
@@ -169,7 +169,7 @@ data:extend({
       match_speed_to_activity = true,
       use_doppler_shift = false,
       sound = {
-        filename = "__angelsexploration__/sound/bicycle-squeaky.ogg",
+        filename = "__angelsexplorationgraphics__/sound/bicycle-squeaky.ogg",
         volume = 0.15,
       },
     },
@@ -209,7 +209,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "angels-heavy-tank",
-    icon = "__angelsexploration__/graphics/icons/heavy-tank-icon.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-icon.png",
     icon_size = 32,
     flags = {},
     subgroup = "angels-exploration-tank-b",
@@ -220,7 +220,7 @@ data:extend({
   {
     type = "gun",
     name = "heavy-tank-machine-gun",
-    icon = "__angelsexploration__/graphics/icons/heavy-tank-gun-icon.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-gun-icon.png",
     icon_size = 32,
     flags = { "hidden" },
     subgroup = "gun",
@@ -267,7 +267,7 @@ data:extend({
   {
     type = "gun",
     name = "heavy-tank-cannon",
-    icon = "__angelsexploration__/graphics/icons/heavy-tank-cannon-icon.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-cannon-icon.png",
     icon_size = 32,
     flags = { "hidden" },
     subgroup = "gun",
@@ -282,7 +282,7 @@ data:extend({
       range = 40,
       sound = {
         {
-          filename = "__angelsexploration__/sound/tank-cannon.ogg",
+          filename = "__angelsexplorationgraphics__/sound/tank-cannon.ogg",
           volume = 1.0,
         },
       },
@@ -292,7 +292,7 @@ data:extend({
   {
     type = "gun",
     name = "heavy-tank-rocket-launcher",
-    icon = "__angelsexploration__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
     icon_size = 32,
     flags = { "hidden" },
     subgroup = "gun",
@@ -317,7 +317,7 @@ data:extend({
   {
     type = "car",
     name = "angels-heavy-tank",
-    icon = "__angelsexploration__/graphics/icons/heavy-tank-icon.png",
+    icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-icon.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
     minable = { mining_time = 1, result = "angels-heavy-tank" },
@@ -418,42 +418,42 @@ data:extend({
           max_advance = 1,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-1.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-2.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-3.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-4.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-5.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-6.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-7.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-7.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-8.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-8.png",
               width_in_frames = 2,
               height_in_frames = 8,
             },
@@ -470,42 +470,42 @@ data:extend({
           --line_length = 2,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-7.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-mask-8.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-mask-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -521,42 +521,42 @@ data:extend({
           max_advance = 1,
           stripes = util.multiplystripes(2, {
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-7.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/base-shadow-8.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/base-shadow-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -576,42 +576,42 @@ data:extend({
           max_advance = 1,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-7.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-8.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -628,42 +628,42 @@ data:extend({
           max_advance = 1,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-3.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-4.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-5.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-5.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-6.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-6.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-7.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-7.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/tank/turret-mask-8.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/tank/turret-mask-8.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -705,15 +705,15 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
-        filename = "__angelsexploration__/sound/heavy-tank-run.ogg",
+        filename = "__angelsexplorationgraphics__/sound/heavy-tank-run.ogg",
         volume = 1,
       },
       activate_sound = {
-        filename = "__angelsexploration__/sound/heavy-tank-start.ogg",
+        filename = "__angelsexplorationgraphics__/sound/heavy-tank-start.ogg",
         volume = 1,
       },
       deactivate_sound = {
-        filename = "__angelsexploration__/sound/heavy-tank-off.ogg",
+        filename = "__angelsexplorationgraphics__/sound/heavy-tank-off.ogg",
         volume = 1,
       },
       match_speed_to_activity = true,

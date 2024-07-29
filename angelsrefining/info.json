@@ -9,6 +9,7 @@
   "description": "Adds ore refining to the game. Compound ores have to be refined before you are able to smelt and cast them into plates. Works best (has more functionality) in conjunction with Angel's industries and/or Bob's mods and supports additional mods like Yuoki Industries.",
   "dependencies": [
     "base >= 2.0.0",
+    "~ angelsrefininggraphics >= 1.0.0",
     "(?) bobassembly >= 1.1.5",
     "? bobelectronics >= 1.1.6",
     "? bobenemies >= 1.1.5",

@@ -17,7 +17,7 @@ data:extend({
       { type = "item", name = "bio-hogger-1", amount_min = 3, amount_max = 5 },
       { type = "item", name = "copper-ore", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/hogger-1-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-1-icon.png",
     icon_size = 32,
     order = "a",
   },
@@ -38,7 +38,7 @@ data:extend({
       { type = "item", name = "bio-hogger-2", amount_min = 3, amount_max = 5 },
       { type = "item", name = "copper-ore", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/hogger-2-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-2-icon.png",
     icon_size = 32,
     order = "b",
   },
@@ -59,7 +59,7 @@ data:extend({
       { type = "item", name = "bio-hogger-3", amount_min = 3, amount_max = 5 },
       { type = "item", name = "copper-ore", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/hogger-3-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-3-icon.png",
     icon_size = 32,
     order = "c",
   },
@@ -80,7 +80,7 @@ data:extend({
       { type = "item", name = "bio-hogger-4", amount_min = 3, amount_max = 5 },
       { type = "item", name = "copper-ore", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/hogger-4-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-4-icon.png",
     icon_size = 32,
     order = "d",
   },
@@ -101,7 +101,7 @@ data:extend({
       { type = "item", name = "bio-hogger-5", amount_min = 3, amount_max = 5 },
       { type = "item", name = "copper-ore", amount = 10 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/hogger-5-icon.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-5-icon.png",
     icon_size = 32,
     order = "d",
   },
@@ -128,10 +128,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/hogger-1-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-1-icon.png",
       },
     },
     icon_size = 32,
@@ -159,10 +159,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/hogger-2-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-2-icon.png",
       },
     },
     icon_size = 32,
@@ -190,10 +190,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/hogger-3-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-3-icon.png",
       },
     },
     icon_size = 32,
@@ -221,10 +221,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/hogger-4-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-4-icon.png",
       },
     },
     icon_size = 32,
@@ -252,10 +252,10 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/breeding.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/hogger-5-icon.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/hogger-5-icon.png",
       },
     },
     icon_size = 32,
@@ -276,7 +276,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "a",
   },
@@ -294,7 +294,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "b",
   },
@@ -312,7 +312,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "c",
   },
@@ -330,7 +330,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "d",
   },
@@ -348,7 +348,7 @@ data:extend({
     results = {
       { type = "item", name = "bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessing__/graphics/icons/raw-meat.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
     order = "d",
   },

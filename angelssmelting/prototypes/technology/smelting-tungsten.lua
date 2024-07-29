@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-1",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

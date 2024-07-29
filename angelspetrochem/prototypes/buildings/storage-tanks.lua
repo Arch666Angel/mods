@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "angels-storage-tank-1",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-gas-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-gas-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-fluid-tanks",
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "angels-storage-tank-1",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-gas-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-gas-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -42,7 +42,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank.png",
             priority = "extra-high",
             frames = 1,
             width = 167,
@@ -50,7 +50,7 @@ data:extend({
             shift = util.by_pixel(-1, -7),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-gas-tank/hr-petrochem-gas-tank.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/hr-petrochem-gas-tank.png",
                   priority = "extra-high",
                   frames = 1,
                   width = 334,
@@ -61,7 +61,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank-shadow.png",
             priority = "extra-high",
             frames = 1,
             width = 220,
@@ -70,7 +70,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-gas-tank/hr-petrochem-gas-tank-shadow.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/hr-petrochem-gas-tank-shadow.png",
                   priority = "extra-high",
                   frames = 1,
                   width = 437,
@@ -153,7 +153,7 @@ data:extend({
   {
     type = "item",
     name = "angels-storage-tank-2",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-oil-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-oil-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-fluid-tanks",
@@ -164,7 +164,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "angels-storage-tank-2",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-oil-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-oil-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -189,7 +189,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank.png",
             priority = "extra-high",
             frames = 2,
             width = 135,
@@ -197,7 +197,7 @@ data:extend({
             shift = util.by_pixel(-1, -1),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-oil-tank/hr-petrochem-oil-tank.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/hr-petrochem-oil-tank.png",
                   priority = "extra-high",
                   frames = 2,
                   width = 273,
@@ -208,7 +208,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/petrochem-oil-tank-shadow.png",
             priority = "extra-high",
             frames = 2,
             width = 167,
@@ -217,7 +217,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-oil-tank/hr-petrochem-oil-tank-shadow.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-oil-tank/hr-petrochem-oil-tank-shadow.png",
                   priority = "extra-high",
                   frames = 2,
                   width = 335,
@@ -299,7 +299,7 @@ data:extend({
   {
     type = "item",
     name = "angels-storage-tank-3",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-inline-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-fluid-tanks",
@@ -310,7 +310,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "angels-storage-tank-3",
-    icon = "__angelspetrochem__/graphics/icons/petrochem-inline-tank.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-inline-tank.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -334,7 +334,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
             priority = "extra-high",
             frames = 4,
             width = 71,
@@ -342,7 +342,7 @@ data:extend({
             shift = util.by_pixel(-0.5, -8),
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
                   priority = "extra-high",
                   frames = 4,
                   width = 142,
@@ -353,7 +353,7 @@ data:extend({
               or nil,
           },
           {
-            filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
             priority = "extra-high",
             frames = 4,
             width = 106,
@@ -362,7 +362,7 @@ data:extend({
             draw_as_shadow = true,
             hr_version = angelsmods.trigger.enable_hq_graphics
                 and {
-                  filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+                  filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
                   priority = "extra-high",
                   frames = 4,
                   width = 207,
@@ -376,25 +376,25 @@ data:extend({
         },
       },
       fluid_background = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
         priority = "extra-high",
         width = 1,
         height = 1,
       },
       window_background = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
         priority = "extra-high",
         width = 1,
         height = 1,
       },
       flow_sprite = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
         priority = "extra-high",
         width = 1,
         height = 1,
       },
       gas_flow = {
-        filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
         priority = "extra-high",
         width = 1,
         height = 1,
@@ -403,7 +403,7 @@ data:extend({
         direction_count = 1,
         animation_speed = 0.25,
         hr_version = {
-          filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
           priority = "extra-high",
           width = 1,
           height = 1,

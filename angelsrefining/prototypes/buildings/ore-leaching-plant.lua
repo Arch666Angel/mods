@@ -4,7 +4,7 @@ data:extend({
     name = "ore-leaching-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "ore-leaching-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -46,7 +46,7 @@ data:extend({
     },
     energy_usage = "200kW",
     animation = {
-      filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
       priority = "extra-high",
       width = 192,
       height = 192,
@@ -55,7 +55,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
@@ -82,7 +82,7 @@ data:extend({
     name = "ore-leaching-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-2.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -98,7 +98,7 @@ data:extend({
     name = "ore-leaching-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-2.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-2.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -127,7 +127,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -135,7 +135,7 @@ data:extend({
           shift = { 0.4, -0.14 },
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
           tint = { r = 0.2, g = 0.3, b = 0.45 },
           priority = "high",
           width = 192,
@@ -147,7 +147,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },
@@ -174,7 +174,7 @@ data:extend({
     name = "ore-leaching-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-3.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -189,7 +189,7 @@ data:extend({
     name = "ore-leaching-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/ore-leaching-plant-3.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-3.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -217,7 +217,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -225,7 +225,7 @@ data:extend({
           shift = { 0.4, -0.14 },
         },
         {
-          filename = "__angelsrefining__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/2ore-leaching-plant-overlay.png",
           tint = { r = 0.50, g = 0.1, b = 0.05 },
           priority = "high",
           width = 192,
@@ -237,7 +237,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2.5,
     },

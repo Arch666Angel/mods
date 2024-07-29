@@ -6,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "angels-big-chest",
-    icon = "__angelsindustries__/graphics/icons/chest-big-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "a",
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "container",
     name = "angels-big-chest",
-    icon = "__angelsindustries__/graphics/icons/chest-big-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "angels-big-chest" },
@@ -40,7 +40,7 @@ data:extend({
     inventory_size = 60,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "item",
     name = "angels-logistic-chest-requester",
-    icon = "__angelsindustries__/graphics/icons/chest-big-requester-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-requester-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "f",
@@ -63,7 +63,7 @@ data:extend({
   {
     type = "logistic-container",
     name = "angels-logistic-chest-requester",
-    icon = "__angelsindustries__/graphics/icons/chest-big-requester-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-requester-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-logistic-chest-requester" },
@@ -88,7 +88,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big-requester.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-requester.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "item",
     name = "angels-logistic-chest-passive-provider",
-    icon = "__angelsindustries__/graphics/icons/chest-big-passive-provider-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-passive-provider-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "c",
@@ -111,7 +111,7 @@ data:extend({
   {
     type = "logistic-container",
     name = "angels-logistic-chest-passive-provider",
-    icon = "__angelsindustries__/graphics/icons/chest-big-passive-provider-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-passive-provider-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-logistic-chest-passive-provider" },
@@ -136,7 +136,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big-passive-provider.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-passive-provider.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -149,7 +149,7 @@ data:extend({
   {
     type = "item",
     name = "angels-logistic-chest-active-provider",
-    icon = "__angelsindustries__/graphics/icons/chest-big-active-provider-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-active-provider-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "a",
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "logistic-container",
     name = "angels-logistic-chest-active-provider",
-    icon = "__angelsindustries__/graphics/icons/chest-big-active-provider-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-active-provider-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-logistic-chest-active-provider" },
@@ -174,7 +174,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big-active-provider.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-active-provider.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -187,7 +187,7 @@ data:extend({
   {
     type = "item",
     name = "angels-logistic-chest-storage",
-    icon = "__angelsindustries__/graphics/icons/chest-big-storage-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-storage-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "d",
@@ -197,7 +197,7 @@ data:extend({
   {
     type = "logistic-container",
     name = "angels-logistic-chest-storage",
-    icon = "__angelsindustries__/graphics/icons/chest-big-storage-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-storage-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-logistic-chest-storage" },
@@ -223,7 +223,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big-storage.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-storage.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -236,7 +236,7 @@ data:extend({
   {
     type = "item",
     name = "angels-logistic-chest-buffer",
-    icon = "__angelsindustries__/graphics/icons/chest-big-buffer-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-buffer-ico.png",
     icon_size = 32,
     subgroup = "angels-chests-big",
     order = "e",
@@ -246,7 +246,7 @@ data:extend({
   {
     type = "logistic-container",
     name = "angels-logistic-chest-buffer",
-    icon = "__angelsindustries__/graphics/icons/chest-big-buffer-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/chest-big-buffer-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-logistic-chest-buffer" },
@@ -271,7 +271,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture = {
-      filename = "__angelsindustries__/graphics/entity/chests/chest-big-buffer.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-buffer.png",
       priority = "extra-high",
       width = 128,
       height = 128,

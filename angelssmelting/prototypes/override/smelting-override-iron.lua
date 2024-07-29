@@ -97,7 +97,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       },
       icons = {
         {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
         },
         {
           icon = "__base__/graphics/icons/iron-ore.png",
@@ -123,12 +123,12 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       "iron-plate",
     },
   })
-  data.raw["item"]["iron-plate"].icon = "__angelssmelting__/graphics/icons/plate-iron.png"
+  data.raw["item"]["iron-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png"
   data.raw["item"]["iron-plate"].icon_size = 32
   data.raw["item"]["iron-plate"].icon_mipmaps = 1
   OV.global_replace_icon(
     "__base__/graphics/icons/plate/iron-plate.png",
-    "__angelssmelting__/graphics/icons/plate-iron.png"
+    "__angelssmeltinggraphics__/graphics/icons/plate-iron.png"
   )
 
   if angelsmods.refining then

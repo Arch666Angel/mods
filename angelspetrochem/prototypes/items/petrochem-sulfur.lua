@@ -9,7 +9,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "H[font=default-tiny-bold]2[/font]S" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
       "SHH"
     ),
     --icon_size = 32,
@@ -26,7 +26,7 @@ data:extend({
     type = "fluid",
     name = "gas-enriched-hydrogen-sulfide",
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
       "SWsWs"
     ),
     --icon_size = 32,
@@ -47,7 +47,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "SO[font=default-tiny-bold]2[/font]" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
       "SOO"
     ),
     --icon_size = 32,
@@ -68,7 +68,7 @@ data:extend({
       "H[font=default-tiny-bold]2[/font]SO[font=default-tiny-bold]4[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochem__/graphics/icons/molecules/sulfuric-acid.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfuric-acid.png", 72 },
       "SHO"
     ),
     --icon_size = 32,
@@ -83,7 +83,7 @@ data:extend({
   {
     type = "item",
     name = "solid-calcium-sulfate",
-    icon = "__angelspetrochem__/graphics/icons/solid-calcium-sulfate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-calcium-sulfate.png",
     icon_size = 32,
     subgroup = "petrochem-sulfur",
     order = "b[solid-calcium-sulfate]",
@@ -92,7 +92,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-sulfate",
-    icon = "__angelspetrochem__/graphics/icons/solid-sodium-sulfate.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-sulfate.png",
     icon_size = 32,
     subgroup = "petrochem-sodium",
     order = "d[sodium-hydroxide]",
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "item",
     name = "filter-lime",
-    icon = "__angelspetrochem__/graphics/icons/filter-lime.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/filter-lime.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "b[filter-lime]-a[new]",
@@ -110,7 +110,7 @@ data:extend({
   {
     type = "item",
     name = "filter-lime-used",
-    icon = "__angelspetrochem__/graphics/icons/filter-lime-used.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/filter-lime-used.png",
     icon_size = 32,
     subgroup = "petrochem-catalysts",
     order = "b[filter-lime]-a[used]",

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "bio-butchery",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-alien-a",
     order = "b",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "furnace",
     name = "bio-butchery",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-butchery.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "bio-butchery" },
@@ -50,7 +50,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-butchery/bio-butchery.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-butchery/bio-butchery.png",
           width = 160,
           height = 160,
           frame_count = 36,

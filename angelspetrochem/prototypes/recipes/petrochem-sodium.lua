@@ -19,7 +19,7 @@ data:extend({
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
-      { "__angelspetrochem__/graphics/icons/molecules/chlorine.png", 72 },
+      { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
       "solid-sodium",
     }, "ClClCl"),
     crafting_machine_tint = AF.get_recipe_tints({ "gas-chlorine" }),

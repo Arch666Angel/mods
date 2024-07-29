@@ -364,7 +364,7 @@ end
 function angelsmods.functions.create_gathering_turret_shooting_glow(inputs)
   inputs = inputs or {}
   return {
-    filename = "__angelsexploration__/graphics/entity/gathering-turret/gathering-turret-shooting-light.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/gathering-turret/gathering-turret-shooting-light.png",
     line_length = 8,
     width = 62,
     height = 58,
@@ -374,7 +374,7 @@ function angelsmods.functions.create_gathering_turret_shooting_glow(inputs)
     shift = modify_shift(util.by_pixel(0, -35), inputs.scale, inputs.shift),
     scale = modify_scale(1, inputs.scale),
     hr_version = {
-      filename = "__angelsexploration__/graphics/entity/gathering-turret/hr-gathering-turret-shooting-light.png",
+      filename = "__angelsexplorationgraphics__/graphics/entity/gathering-turret/hr-gathering-turret-shooting-light.png",
       line_length = 8,
       width = 122,
       height = 116,
@@ -673,7 +673,7 @@ local function create_gathering_turret_target_tech(inputs)
         type = "technology",
         name = inputs.require_tech_unlock,
         localised_name = { "technology-name.angels-gathering-turret-target", "__ITEM__" .. inputs.name .. "__" },
-        icon = "__angelsexploration__/graphics/technology/gathering-turret-target.png",
+        icon = "__angelsexplorationgraphics__/graphics/technology/gathering-turret-target.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = inputs.additional_tech_prerequisites
@@ -810,7 +810,7 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     icon_size = 256,
     icon_mipmaps = 4,
     icons = util.technology_icon_constant_damage(
-      "__angelsexploration__/graphics/technology/gathering-turret-speed.png"
+      "__angelsexplorationgraphics__/graphics/technology/gathering-turret-speed.png"
     ),
     prerequisites = {
       inputs.level == 1 and "angels-gathering-turret" or ("angels-gathering-speed-" .. (inputs.level - 1)),

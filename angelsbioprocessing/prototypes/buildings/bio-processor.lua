@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "bio-processor",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-processor.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-processor.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-b",
     order = "c",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "bio-processor",
-    icon = "__angelsbioprocessing__/graphics/icons/bio-processor.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-processor.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "bio-processor" },
@@ -37,7 +37,7 @@ data:extend({
     energy_usage = "150kW",
     --ingredient_count = 4,
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-processor/bio-processor.png",
       width = 224,
       height = 224,
       line_length = 5,
@@ -50,7 +50,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-bg.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-processor/bio-processor-bg.png",
           line_length = 5,
           frame_count = 25,
           width = 224,
@@ -62,7 +62,7 @@ data:extend({
       {
         always_draw = true,
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-trans.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-processor/bio-processor-trans.png",
           line_length = 5,
           frame_count = 25,
           width = 224,
@@ -75,7 +75,7 @@ data:extend({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/bio-processor/bio-processor-ani.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-processor/bio-processor-ani.png",
           line_length = 5,
           frame_count = 25,
           width = 224,

@@ -80,22 +80,22 @@ local function make_die_animation(data_die)
           scale = data_die.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -113,12 +113,12 @@ local function make_die_animation(data_die)
           tint = data_die.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -136,12 +136,12 @@ local function make_die_animation(data_die)
           tint = data_die.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -173,22 +173,22 @@ local function make_run_animation(data_run)
           scale = data_run.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -206,12 +206,12 @@ local function make_run_animation(data_run)
           tint = data_run.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -229,12 +229,12 @@ local function make_run_animation(data_run)
           tint = data_run.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -266,22 +266,22 @@ local function make_attack_animation(data_attack)
           scale = data_attack.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -299,12 +299,12 @@ local function make_attack_animation(data_attack)
           tint = data_attack.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -322,12 +322,12 @@ local function make_attack_animation(data_attack)
           tint = data_attack.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -540,10 +540,10 @@ end
 local function make_icon(ico_app)
   return {
     {
-      icon = "__angelsexploration__/graphics/icons/" .. ico_app.type .. "-base.png",
+      icon = "__angelsexplorationgraphics__/graphics/icons/" .. ico_app.type .. "-base.png",
     },
     {
-      icon = "__angelsexploration__/graphics/icons/" .. ico_app.type .. "-overlay.png",
+      icon = "__angelsexplorationgraphics__/graphics/icons/" .. ico_app.type .. "-overlay.png",
       tint = ico_app.tint1,
     },
   }

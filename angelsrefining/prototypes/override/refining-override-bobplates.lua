@@ -64,7 +64,7 @@ if mods["bobplates"] then
     {
       type = "technology",
       name = "geode-crystallization-1",
-      icon = "__angelsrefining__/graphics/technology/geode-processing-cyan.png",
+      icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-cyan.png",
       icon_size = 256,
       icon_mipmaps = 2,
       prerequisites = {

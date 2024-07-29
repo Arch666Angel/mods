@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "heavy-pump",
-    icon = "__angelspetrochem__/graphics/icons/heavy-pump.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/heavy-pump.png",
     icon_size = 32,
     subgroup = "petrochem-well-head",
     order = "g[heavy-pump]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "heavy-pump",
-    icon = "__angelspetrochem__/graphics/icons/heavy-pump.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/heavy-pump.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "heavy-pump" },
@@ -37,14 +37,14 @@ data:extend({
     ingredient_count = 4,
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/heavy-pump.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/heavy-pump.png",
         width = 160,
         height = 160,
         frame_count = 1,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/heavy-pump.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/heavy-pump.png",
         x = 480,
         width = 160,
         height = 160,
@@ -52,7 +52,7 @@ data:extend({
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/heavy-pump.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/heavy-pump.png",
         x = 320,
         width = 160,
         height = 160,
@@ -60,7 +60,7 @@ data:extend({
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/heavy-pump.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/heavy-pump.png",
         x = 160,
         width = 160,
         height = 160,
@@ -75,7 +75,7 @@ data:extend({
         south_position = { 0, -0.25 },
         west_position = { 0, -0.15 },
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
           line_length = 6,
           width = 64,

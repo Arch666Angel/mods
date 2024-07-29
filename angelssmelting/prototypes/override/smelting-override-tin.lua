@@ -65,7 +65,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
     OV.global_replace_item("angels-plate-tin", "tin-plate")
     angelsmods.functions.add_flag("angels-plate-tin", "hidden")
     angelsmods.functions.move_item("tin-plate", "angels-tin-casting", "i")
-    data.raw["item"]["tin-plate"].icon = "__angelssmelting__/graphics/icons/plate-tin.png"
+    data.raw["item"]["tin-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
     data.raw["item"]["tin-plate"].icon_size = 32
     data.raw["item"]["tin-plate"].icon_mipmaps = 1
 
@@ -83,10 +83,10 @@ if angelsmods.trigger.smelting_products["tin"].plate then
         },
         icons = {
           {
-            icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
           },
           {
-            icon = "__angelssmelting__/graphics/icons/ore-tin.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png",
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -132,12 +132,12 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     angelsmods.functions.add_flag("angels-wire-tin", "hidden")
     angelsmods.functions.move_item("tinned-copper-cable", "angels-tin-casting", "j")
     OV.disable_recipe({ "tinned-copper-cable" })
-    data.raw["item"]["tinned-copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-tin.png"
+    data.raw["item"]["tinned-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-tin.png"
     data.raw["item"]["tinned-copper-cable"].icon_size = 32
     data.raw["item"]["tinned-copper-cable"].icon_mipmaps = 1
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
-      "__angelssmelting__/graphics/icons/wire-tin.png"
+      "__angelssmeltinggraphics__/graphics/icons/wire-tin.png"
     )
   end
 

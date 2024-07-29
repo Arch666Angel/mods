@@ -35,7 +35,7 @@ data:extend({
   {
     type = "capsule",
     name = "alien-fish-1-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-1.png",
     icon_size = 32,
     capsule_action = {
       type = "use-on-self",
@@ -68,7 +68,7 @@ data:extend({
   {
     type = "capsule",
     name = "alien-fish-2-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-2.png",
     icon_size = 32,
     capsule_action = {
       type = "use-on-self",
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "capsule",
     name = "alien-fish-3-raw",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-3.png",
     icon_size = 32,
     capsule_action = {
       type = "use-on-self",
@@ -167,7 +167,7 @@ data:extend({
   {
     type = "item",
     name = "fish-pulp",
-    icon = "__angelsbioprocessing__/graphics/icons/fish-pulp.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/fish-pulp.png",
     icon_size = 32,
     subgroup = "bio-fish",
     order = "dc",

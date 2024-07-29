@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "rutile-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-rutile.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png",
     icon_size = 32,
     subgroup = "angels-titanium",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "processed-titanium",
-    icon = "__angelssmelting__/graphics/icons/processed-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-titanium",
-    icon = "__angelssmelting__/graphics/icons/pellet-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium",
@@ -39,7 +39,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "TiCl[font=default-tiny-bold]4[/font]" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
       "SiClCl"
     ),
     subgroup = "angels-titanium",
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "item",
     name = "sponge-titanium",
-    icon = "__angelssmelting__/graphics/icons/sponge-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium",
     order = "e",
@@ -63,7 +63,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-titanium",
-    icon = "__angelssmelting__/graphics/icons/ingot-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "item",
     name = "powder-titanium",
-    icon = "__angelssmelting__/graphics/icons/powder-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium",
@@ -84,7 +84,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-titanium",
-    icon = "__angelssmelting__/graphics/icons/molten-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium-casting",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-titanium",
-    icon = "__angelssmelting__/graphics/icons/roll-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-titanium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-titanium-casting",
@@ -110,7 +110,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-titanium",
-    icon = "__angelssmelting__/graphics/icons/plate-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium-casting",
     order = "j",

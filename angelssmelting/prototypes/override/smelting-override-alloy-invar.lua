@@ -16,7 +16,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       {
         type = "fluid",
         name = "liquid-molten-invar",
-        icon = "__angelssmelting__/graphics/icons/molten-invar.png",
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-invar.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
@@ -69,7 +69,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       {
         type = "technology",
         name = "angels-invar-smelting-1",
-        icon = "__angelssmelting__/graphics/technology/casting-invar-tech.png",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-invar-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         prerequisites = {
@@ -99,7 +99,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       },
     })
     angelsmods.functions.move_item("invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
-    data.raw["item"]["invar-alloy"].icon = "__angelssmelting__/graphics/icons/plate-invar.png"
+    data.raw["item"]["invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
     data.raw["item"]["invar-alloy"].icon_size = 32
     data.raw["item"]["invar-alloy"].icon_mipmaps = 1
     OV.global_replace_technology("invar-processing", "angels-invar-smelting-1")

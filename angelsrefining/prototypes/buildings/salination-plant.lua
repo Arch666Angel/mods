@@ -4,7 +4,7 @@ data:extend({
     name = "salination-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/salination-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "salination-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/salination-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -49,7 +49,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-base.png",
           priority = "extra-high",
           width = 244,
           height = 270,
@@ -59,7 +59,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/hr-salination-plant-base.png",
                 priority = "extra-high",
                 width = 484,
                 height = 540,
@@ -72,7 +72,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-shadow.png",
           priority = "extra-high",
           width = 255,
           height = 235,
@@ -82,7 +82,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
                 priority = "extra-high",
                 width = 509,
                 height = 467,
@@ -98,7 +98,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg", volume = 0.8 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.8 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,
@@ -126,7 +126,7 @@ data:extend({
     name = "salination-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/salination-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -141,7 +141,7 @@ data:extend({
     name = "salination-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/salination-plant.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -170,7 +170,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-base.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-base.png",
           priority = "extra-high",
           width = 244,
           height = 270,
@@ -180,7 +180,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-base.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/hr-salination-plant-base.png",
                 priority = "extra-high",
                 width = 484,
                 height = 540,
@@ -193,7 +193,7 @@ data:extend({
             or nil,
         },
         {
-          filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant-shadow.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-shadow.png",
           priority = "extra-high",
           width = 255,
           height = 235,
@@ -203,7 +203,7 @@ data:extend({
           animation_speed = 0.5,
           hr_version = angelsmods.trigger.enable_hq_graphics
               and {
-                filename = "__angelsrefining__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
+                filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/hr-salination-plant-shadow.png",
                 priority = "extra-high",
                 width = 509,
                 height = 467,
@@ -219,7 +219,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-leaching-plant.ogg", volume = 0.8 },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.8 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       audible_distance_modifier = 0.5,
       apparent_volume = 2.5,

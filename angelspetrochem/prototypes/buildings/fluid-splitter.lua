@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "angels-fluid-splitter-2-way",
-    icon = "__angelspetrochem__/graphics/icons/fluid-splitter-1.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/fluid-splitter-1.png",
     flags = { "goes-to-quickbar" },
     subgroup = "angels-fluid-control",
     order = "e[angels-fluid-splitter-2-way]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "furnace",
     name = "angels-fluid-splitter-2-way",
-    icon = "__angelspetrochem__/graphics/icons/fluid-splitter-1.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/fluid-splitter-1.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "angels-fluid-splitter-2-way" },
     max_health = 100,
@@ -73,14 +73,14 @@ data:extend({
     energy_usage = "30kW",
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
         width = 160,
         height = 160,
         frame_count = 1,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
         x = 480,
         width = 160,
         height = 160,
@@ -88,7 +88,7 @@ data:extend({
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
         x = 320,
         width = 160,
         height = 160,
@@ -96,7 +96,7 @@ data:extend({
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-1.png",
         x = 160,
         width = 160,
         height = 160,
@@ -111,7 +111,7 @@ data:extend({
         south_position = { 0, -0.25 },
         west_position = { 0, -0.15 },
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
           line_length = 6,
           width = 64,
@@ -131,7 +131,7 @@ data:extend({
   {
     type = "item",
     name = "angels-fluid-splitter-3-way",
-    icon = "__angelspetrochem__/graphics/icons/fluid-splitter-2.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/fluid-splitter-2.png",
     flags = { "goes-to-quickbar" },
     subgroup = "angels-fluid-control",
     order = "e[angels-fluid-splitter-3-way]",
@@ -141,7 +141,7 @@ data:extend({
   {
     type = "furnace",
     name = "angels-fluid-splitter-3-way",
-    icon = "__angelspetrochem__/graphics/icons/fluid-splitter-2.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/fluid-splitter-2.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "angels-fluid-splitter-3-way" },
     max_health = 100,
@@ -205,14 +205,14 @@ data:extend({
     energy_usage = "30kW",
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
         width = 160,
         height = 160,
         frame_count = 1,
         shift = { 0, 0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
         x = 160,
         width = 160,
         height = 160,
@@ -220,7 +220,7 @@ data:extend({
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
         x = 320,
         width = 160,
         height = 160,
@@ -228,7 +228,7 @@ data:extend({
         shift = { 0, 0 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-2.png",
         x = 480,
         width = 160,
         height = 160,
@@ -243,7 +243,7 @@ data:extend({
         south_position = { 0, -0.25 },
         west_position = { 0, -0.15 },
         animation = {
-          filename = "__angelspetrochem__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/fluid-splitter/fluid-splitter-animation.png",
           frame_count = 36,
           line_length = 6,
           width = 64,

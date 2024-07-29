@@ -3,7 +3,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-turbo-bike",
-    icon = "__angelsexploration__/graphics/technology/turbo-bike-tech.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/turbo-bike-tech.png",
     icon_size = 128,
     prerequisites = {
       "steel-processing",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-heavy-tank",
-    icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/heavy-tank-tech.png",
     icon_size = 128,
     prerequisites = {
       "tank",
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-cannon-turret",
-    icon = "__angelsexploration__/graphics/technology/cannon-turret-tech.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/cannon-turret-tech.png",
     icon_size = 128,
     prerequisites = {
       "military-2",
@@ -96,7 +96,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-rocket-turret",
-    icon = "__angelsexploration__/graphics/technology/rocket-turret-tech.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/rocket-turret-tech.png",
     icon_size = 128,
     prerequisites = {
       "rocketry",
@@ -121,7 +121,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-gathering-turret",
-    icon = "__angelsexploration__/graphics/technology/gathering-turret.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/gathering-turret.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-bio-gun",
-    icon = "__angelsexploration__/graphics/technology/bio-tech.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/bio-tech.png",
     icon_size = 128,
     prerequisites = {
       "flammables",

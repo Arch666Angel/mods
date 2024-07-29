@@ -2,7 +2,7 @@ data:extend({
   {
     type = "fish",
     name = "alien-fish-1",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-1.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-1.png",
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "alien-fish-1-raw", count = 1 },
@@ -13,7 +13,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/aliens/fish-1.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/aliens/fish-1.png",
         priority = "extra-high",
         width = 64,
         height = 64,
@@ -38,7 +38,7 @@ data:extend({
   {
     type = "fish",
     name = "alien-fish-2",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-2.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-2.png",
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "alien-fish-2-raw", count = 1 },
@@ -49,7 +49,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/aliens/fish-2.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/aliens/fish-2.png",
         priority = "extra-high",
         width = 64,
         height = 64,
@@ -74,7 +74,7 @@ data:extend({
   {
     type = "fish",
     name = "alien-fish-3",
-    icon = "__angelsbioprocessing__/graphics/icons/alien-fish-3.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-3.png",
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "alien-fish-3-raw", count = 1 },
@@ -85,7 +85,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/aliens/fish-3.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/aliens/fish-3.png",
         priority = "extra-high",
         width = 64,
         height = 64,

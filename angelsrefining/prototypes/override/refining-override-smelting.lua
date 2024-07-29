@@ -12,7 +12,7 @@ else
       name = "iron-plate",
       icons = {
         mods["angelssmelting"] and {
-          icon = "__angelssmelting__/graphics/icons/plate-iron.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
         } or {
           icon = "__base__/graphics/icons/iron-plate.png",
           icon_size = 64,
@@ -32,7 +32,7 @@ else
       name = "copper-plate",
       icons = {
         mods["angelssmelting"] and {
-          icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
         } or {
           icon = "__base__/graphics/icons/copper-plate.png",
           icon_size = 64,
@@ -62,7 +62,7 @@ if ore_exists("lead") then
         { "!!" },
         { name = mods["angelssmelting"] and "angels-plate-lead" or "lead-plate", amount = 1 },
       },
-      icon = "__angelsrefining__/graphics/icons/lead-plate-crushed.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/lead-plate-crushed.png",
     },
   })
 else
@@ -77,7 +77,7 @@ if ore_exists("tin") then
         { "!!" },
         { name = mods["angelssmelting"] and "angels-plate-tin" or "tin-plate", amount = 1 },
       },
-      icon = "__angelsrefining__/graphics/icons/tin-plate-crushed.png",
+      icon = "__angelsrefininggraphics__/graphics/icons/tin-plate-crushed.png",
     },
   })
 else

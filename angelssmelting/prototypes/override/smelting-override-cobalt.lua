@@ -23,7 +23,7 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     OV.global_replace_item("solid-cobalt-oxide", "cobalt-oxide")
     angelsmods.functions.add_flag("solid-cobalt-oxide", "hidden")
     angelsmods.functions.move_item("cobalt-oxide", "angels-cobalt", "e")
-    data.raw["item"]["cobalt-oxide"].icon = "__angelssmelting__/graphics/icons/solid-cobalt-oxide.png"
+    data.raw["item"]["cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
     data.raw["item"]["cobalt-oxide"].icon_size = 32
     data.raw["item"]["cobalt-oxide"].icon_mipmaps = 1
     OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
@@ -94,7 +94,7 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
     OV.global_replace_item("angels-plate-cobalt", "cobalt-plate")
     angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")
     angelsmods.functions.move_item("cobalt-plate", "angels-cobalt-casting", "j")
-    data.raw["item"]["cobalt-plate"].icon = "__angelssmelting__/graphics/icons/plate-cobalt.png"
+    data.raw["item"]["cobalt-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png"
     data.raw["item"]["cobalt-plate"].icon_size = 32
     data.raw["item"]["cobalt-plate"].icon_mipmaps = 1
   end

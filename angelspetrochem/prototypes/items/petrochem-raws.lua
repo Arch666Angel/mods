@@ -19,7 +19,7 @@ data:extend({
   -- {
   -- type = "fluid",
   -- name = "gas-natural-2",
-  -- icon = "__angelspetrochem__/graphics/icons/gas-natural-2.png",
+  -- icon = "__angelspetrochemgraphics__/graphics/icons/gas-natural-2.png",
   -- default_temperature = 0,
   -- heat_capacity = "1KJ",
   -- base_color = {r = 0.50, g = 0.70, b = 0.40},
@@ -58,7 +58,7 @@ data:extend({
   -- {
   -- type = "fluid",
   -- name = "gas-raw-2",
-  -- icon = "__angelspetrochem__/graphics/icons/gas-raw-1.png",
+  -- icon = "__angelspetrochemgraphics__/graphics/icons/gas-raw-1.png",
   -- default_temperature = 0,
   -- heat_capacity = "1KJ",
   -- base_color = {r = 0.70, g = 0.90, b = 0.60},

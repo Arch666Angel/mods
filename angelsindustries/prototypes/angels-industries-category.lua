@@ -61,7 +61,7 @@ data:extend({
         icon_mipmaps = 2,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 128 / 32 * 0.35,
         shift = { 40, -40 },
@@ -226,7 +226,7 @@ data:extend({
     name = "angels-blocks",
     order = "la[angels]-e[industries]-ab",
     icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/item-group/components-tech.png",
   },
 
   {
@@ -316,7 +316,7 @@ data:extend({
     name = "angels-tech",
     order = "la[angels]-e[industries]-b",
     icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/science-group.png",
+    icon = "__angelsindustriesgraphics__/graphics/item-group/science-group.png",
   },
   {
     type = "item-subgroup",
@@ -374,7 +374,7 @@ data:extend({
   --  name = "angels-enhancement",
   --  order = "la[angels]-e[industries]-c",
   --  icon_size = 64,
-  --  icon = "__angelsindustries__/graphics/item-group/vequip.png",
+  --  icon = "__angelsindustriesgraphics__/graphics/item-group/vequip.png",
   --},
   --{
   --  type = "item-subgroup",
@@ -427,12 +427,12 @@ data:extend({
     order = "la[angels]-e[industries]-c",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/vequip.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/vequip.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -484,12 +484,12 @@ data:extend({
     order = "la[angels]-e[industries]-d",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/cargo-roboport-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/cargo-roboport-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -569,12 +569,12 @@ data:extend({
     order = "la[angels]-e[industries]-e",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/crawler-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -627,7 +627,7 @@ data:extend({
   --      icon_size = 64
   --    },
   --    {
-  --      icon = "__angelsrefining__/graphics/icons/void.png",
+  --      icon = "__angelsrefininggraphics__/graphics/icons/void.png",
   --      icon_size = 32,
   --      scale = 64 / 32 * 0.35,
   --      shift = {20, -20}

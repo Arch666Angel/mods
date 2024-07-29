@@ -46,25 +46,25 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-1.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-1.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-2.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-2.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-3.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-3.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-4.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-4.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
@@ -122,7 +122,7 @@ data:extend({
   -- pictures =
   -- {
   -- {
-  -- filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-big-1.png",
+  -- filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-big-1.png",
   -- width = 320,
   -- height = 256,
   -- shift = {3, -1.2}

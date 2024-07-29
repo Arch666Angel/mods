@@ -4,7 +4,7 @@ data:extend({
     name = "angels-cobalt-smelting-1",
     localised_name = { "technology-name.angels-cobalt-metallurgy" },
     localised_description = { "technology-description.angels-cobalt-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -46,7 +46,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-cobalt-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-cobalt-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -87,7 +87,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-cobalt-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-cobalt-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-cobalt-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-cobalt-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {

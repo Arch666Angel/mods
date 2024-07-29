@@ -4,7 +4,7 @@ data:extend({
     name = "ore-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "ore-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -47,7 +47,7 @@ data:extend({
     energy_usage = "100kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-lr.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -56,7 +56,7 @@ data:extend({
       shift = { 0, 0 },
       animation_speed = 0.5,
       hr_version = {
-        filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-hr.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-hr.png",
         priority = "extra-high",
         width = 256,
         height = 256,
@@ -69,7 +69,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-powderizer.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-powderizer.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2,
     },
@@ -79,7 +79,7 @@ data:extend({
     name = "ore-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -94,7 +94,7 @@ data:extend({
     name = "ore-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -122,7 +122,7 @@ data:extend({
     energy_usage = "125kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-lr.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -131,7 +131,7 @@ data:extend({
       shift = { 0, 0 },
       animation_speed = 0.5,
       hr_version = {
-        filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-hr.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-hr.png",
         priority = "extra-high",
         width = 256,
         height = 256,
@@ -144,7 +144,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-powderizer.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-powderizer.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2,
     },
@@ -154,7 +154,7 @@ data:extend({
     name = "ore-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -169,7 +169,7 @@ data:extend({
     name = "ore-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/powderizer-ico.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -196,7 +196,7 @@ data:extend({
     energy_usage = "150kW",
     ingredient_count = 4,
     animation = {
-      filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-lr.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-lr.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -205,7 +205,7 @@ data:extend({
       shift = { 0, 0 },
       animation_speed = 0.5,
       hr_version = {
-        filename = "__angelsrefining__/graphics/entity/ore-powderizer/powderizer-hr.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/ore-powderizer/powderizer-hr.png",
         priority = "extra-high",
         width = 256,
         height = 256,
@@ -218,7 +218,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/ore-powderizer.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-powderizer.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 2,
     },

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-wood-processing",
-    icon = "__angelsbioprocessing__/graphics/technology/wood-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-wood-processing-2",
-    icon = "__angelsbioprocessing__/graphics/technology/wood-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-wood-processing-3",
-    icon = "__angelsbioprocessing__/graphics/technology/wood-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -92,7 +92,7 @@ data:extend({
     name = "bio-arboretum-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-arboretum-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
       },
     },
     icon_size = 128,
@@ -149,7 +149,7 @@ data:extend({
     name = "bio-arboretum-2",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-arboretum-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
       },
     },
     icon_size = 128,
@@ -196,7 +196,7 @@ data:extend({
     name = "bio-arboretum-3",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-arboretum-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
       },
     },
     icon_size = 128,
@@ -239,7 +239,7 @@ data:extend({
     name = "bio-arboretum-temperate-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-temperate-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -282,7 +282,7 @@ data:extend({
     name = "bio-arboretum-temperate-2",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-temperate-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -320,7 +320,7 @@ data:extend({
     name = "bio-arboretum-temperate-3",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-temperate-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -355,7 +355,7 @@ data:extend({
     name = "bio-arboretum-swamp-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-swamp-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -394,7 +394,7 @@ data:extend({
     name = "bio-arboretum-swamp-2",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-swamp-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -432,7 +432,7 @@ data:extend({
     name = "bio-arboretum-swamp-3",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-swamp-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -467,7 +467,7 @@ data:extend({
     name = "bio-arboretum-desert-1",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-desert-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -506,7 +506,7 @@ data:extend({
     name = "bio-arboretum-desert-2",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-desert-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -544,7 +544,7 @@ data:extend({
     name = "bio-arboretum-desert-3",
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/technology/bio-desert-generator-tech.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
       },
     },
     icon_size = 128,
@@ -577,7 +577,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-paper-1",
-    icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -611,7 +611,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-paper-2",
-    icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
@@ -651,7 +651,7 @@ data:extend({
   {
     type = "technology",
     name = "bio-paper-3",
-    icon = "__angelsbioprocessing__/graphics/technology/paper-tech.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {

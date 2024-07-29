@@ -57,13 +57,13 @@ data:extend({
     order = "la[angels]-c[petrochem]-b",
     icons = {
       {
-        icon = "__angelspetrochem__/graphics/technology/advanced-gas-refinery-tech.png",
+        icon = "__angelspetrochemgraphics__/graphics/technology/advanced-gas-refinery-tech.png",
         icon_size = 256,
         icon_mipmaps = 2,
         scale = 0.25,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },

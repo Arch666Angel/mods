@@ -51,7 +51,7 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
+        { "__angelssmeltinggraphics__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
       }, "SiClCl"),
       1,
       angelsmods.smelting.number_tint
@@ -77,7 +77,7 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
-        { "__angelssmelting__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
+        { "__angelssmeltinggraphics__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
       }, "SiClCl"),
       2,
       angelsmods.smelting.number_tint

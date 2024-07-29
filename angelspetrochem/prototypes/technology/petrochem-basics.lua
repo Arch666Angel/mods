@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-fluid-control",
-    icon = "__angelspetrochem__/graphics/technology/fluid-splitter-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/fluid-splitter-tech.png",
     icon_size = 128,
     prerequisites = {
       "basic-chemistry",

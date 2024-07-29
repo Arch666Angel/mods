@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "valve-inspector",
-    icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "a[valve]-a[valve-inspector]",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "valve-inspector",
-    icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "valve-inspector" },
@@ -41,7 +41,7 @@ data:extend({
     pictures = {
       picture = {
         north = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           frames = 1,
           width = 64,
@@ -49,7 +49,7 @@ data:extend({
           shift = { 0, -0 },
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -58,7 +58,7 @@ data:extend({
           shift = { 0, 0 },
         },
         south = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 128,
           frames = 1,
@@ -67,7 +67,7 @@ data:extend({
           shift = { 0, -0.05 },
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "item",
     name = "valve-return",
-    icon = "__angelspetrochem__/graphics/icons/valve-return.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "a[valve]-b[valve-return]",
@@ -128,7 +128,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "valve-return",
-    icon = "__angelspetrochem__/graphics/icons/valve-return.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "valve-return" },
@@ -156,7 +156,7 @@ data:extend({
     pictures = {
       picture = {
         north = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           frames = 1,
           width = 64,
@@ -164,7 +164,7 @@ data:extend({
           shift = { 0, -0 },
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -173,7 +173,7 @@ data:extend({
           shift = { 0, 0 },
         },
         south = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           x = 128,
           frames = 1,
@@ -182,7 +182,7 @@ data:extend({
           shift = { 0, -0.05 },
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -233,7 +233,7 @@ data:extend({
   {
     type = "item",
     name = "valve-overflow",
-    icon = "__angelspetrochem__/graphics/icons/valve-overflow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "a[valve]-c[valve-overflow]",
@@ -243,7 +243,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "valve-overflow",
-    icon = "__angelspetrochem__/graphics/icons/valve-overflow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "valve-overflow" },
@@ -272,7 +272,7 @@ data:extend({
     pictures = {
       picture = {
         north = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           frames = 1,
           width = 64,
@@ -280,7 +280,7 @@ data:extend({
           shift = { 0, -0 },
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -289,7 +289,7 @@ data:extend({
           shift = { 0, 0 },
         },
         south = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 128,
           frames = 1,
@@ -298,7 +298,7 @@ data:extend({
           shift = { 0, -0.05 },
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -349,7 +349,7 @@ data:extend({
   {
     type = "item",
     name = "valve-underflow",
-    icon = "__angelspetrochem__/graphics/icons/valve-underflow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "a[valve]-d[valve-underflow]",
@@ -359,7 +359,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "valve-underflow",
-    icon = "__angelspetrochem__/graphics/icons/valve-underflow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "valve-underflow" },
@@ -388,7 +388,7 @@ data:extend({
     pictures = {
       picture = {
         north = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-underflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
           priority = "extra-high",
           frames = 1,
           width = 64,
@@ -396,7 +396,7 @@ data:extend({
           shift = { 0, -0 },
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-underflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -405,7 +405,7 @@ data:extend({
           shift = { 0, 0 },
         },
         south = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-underflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
           priority = "extra-high",
           x = 128,
           frames = 1,
@@ -414,7 +414,7 @@ data:extend({
           shift = { 0, -0.05 },
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-underflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -465,7 +465,7 @@ data:extend({
   {
     type = "item",
     name = "valve-converter",
-    icon = "__angelspetrochem__/graphics/icons/valve-converter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "a[valve]-e[valve-converter]",
@@ -475,7 +475,7 @@ data:extend({
   {
     type = "furnace",
     name = "valve-converter",
-    icon = "__angelspetrochem__/graphics/icons/valve-converter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "valve-converter" },
@@ -521,7 +521,7 @@ data:extend({
     energy_usage = "30kW",
     animation = {
       north = {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
         priority = "extra-high",
         frame_count = 1,
         width = 64,
@@ -529,7 +529,7 @@ data:extend({
         shift = { 0, -0 },
       },
       east = {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
         priority = "extra-high",
         x = 64,
         frame_count = 1,
@@ -538,7 +538,7 @@ data:extend({
         shift = { 0, 0 },
       },
       south = {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
         priority = "extra-high",
         x = 128,
         frame_count = 1,
@@ -547,7 +547,7 @@ data:extend({
         shift = { 0, -0.05 },
       },
       west = {
-        filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
         priority = "extra-high",
         x = 192,
         frame_count = 1,

@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "angels-construction-robot",
-    icon = "__angelsindustries__/graphics/icons/construction-robot-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/construction-robot-ico.png",
     icon_size = 32,
     subgroup = "angels-cargo-bots",
     order = "a[angels-construction-robot]",
@@ -14,7 +14,7 @@ data:extend({
   {
     type = "construction-robot",
     name = "angels-construction-robot",
-    icon = "__angelsindustries__/graphics/icons/construction-robot-ico.png",
+    icon = "__angelsindustriesgraphics__/graphics/icons/construction-robot-ico.png",
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "angels-construction-robot" },
@@ -32,7 +32,7 @@ data:extend({
     max_to_charge = 0.95,
     working_light = { intensity = 0.8, size = 3 },
     idle = {
-      filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -43,7 +43,7 @@ data:extend({
       direction_count = 16,
     },
     in_motion = {
-      filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
       line_length = 16,
       width = 128,
@@ -55,7 +55,7 @@ data:extend({
       y = 128,
     },
     shadow_idle = {
-      filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -65,7 +65,7 @@ data:extend({
       direction_count = 16,
     },
     shadow_in_motion = {
-      filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot-shadow.png",
       priority = "high",
       line_length = 16,
       width = 64,
@@ -75,7 +75,7 @@ data:extend({
       direction_count = 16,
     },
     working = {
-      filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-working.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot-working.png",
       priority = "high",
       line_length = 2,
       width = 128,
@@ -89,7 +89,7 @@ data:extend({
     shadow_working = {
       stripes = util.multiplystripes(2, {
         {
-          filename = "__angelsindustries__/graphics/entity/construction-robot/construction-robot-shadow.png",
+          filename = "__angelsindustriesgraphics__/graphics/entity/construction-robot/construction-robot-shadow.png",
           width_in_frames = 16,
           height_in_frames = 1,
         },

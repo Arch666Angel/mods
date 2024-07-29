@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "temperate-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icon_size = 32,
     subgroup = "farming-gardens",
     order = "b[garden]-a",
@@ -11,7 +11,7 @@ data:extend({
   {
     type = "tree",
     name = "temperate-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/temperate-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -53,35 +53,35 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/temperate-garden-1.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/temperate-garden-1.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/temperate-garden-2.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/temperate-garden-2.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/temperate-garden-3.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/temperate-garden-3.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/temperate-garden-4.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/temperate-garden-4.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/temperate-garden-5.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/temperate-garden-5.png",
         width = 128,
         height = 128,
         scale = 0.75,
@@ -92,7 +92,7 @@ data:extend({
   {
     type = "item",
     name = "desert-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icon_size = 32,
     subgroup = "farming-gardens",
     order = "b[garden]-c",
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "tree",
     name = "desert-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/desert-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -143,28 +143,28 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/desert-garden-1.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/desert-garden-1.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/desert-garden-2.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/desert-garden-2.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/desert-garden-3.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/desert-garden-3.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/desert-garden-4.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/desert-garden-4.png",
         width = 128,
         height = 128,
         scale = 0.75,
@@ -175,7 +175,7 @@ data:extend({
   {
     type = "item",
     name = "swamp-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icon_size = 32,
     subgroup = "farming-gardens",
     order = "b[garden]-b",
@@ -184,7 +184,7 @@ data:extend({
   {
     type = "tree",
     name = "swamp-garden",
-    icon = "__angelsbioprocessing__/graphics/icons/swamp-garden.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
@@ -226,35 +226,35 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-1.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/swamp-garden-1.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-2.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/swamp-garden-2.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       {
-        filename = "__angelsbioprocessing__/graphics/entity/gardens/swamp-garden-3.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/swamp-garden-3.png",
         width = 128,
         height = 128,
         scale = 0.75,
         shift = { 0, 0 },
       },
       -- {
-      -- filename = "__angelsbioprocessing__/graphics/entity/gardens/water-garden-4.png",
+      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-4.png",
       -- width = 128,
       -- height = 128,
       -- scale = 0.75,
       -- shift = {0, 0}
       -- },
       -- {
-      -- filename = "__angelsbioprocessing__/graphics/entity/gardens/water-garden-5.png",
+      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-5.png",
       -- width = 128,
       -- height = 128,
       -- scale = 0.75,

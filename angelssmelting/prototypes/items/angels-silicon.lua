@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "quartz",
-    icon = "__angelssmelting__/graphics/icons/ore-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
     icon_size = 32,
     subgroup = "angels-silicon",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "processed-silica",
-    icon = "__angelssmelting__/graphics/icons/processed-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-silica.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-silicon",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-silica",
-    icon = "__angelssmelting__/graphics/icons/pellet-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-silica.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-silicon",
@@ -39,7 +39,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "HCl[font=default-tiny-bold]3[/font]Si" }
       or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelssmelting__/graphics/icons/molecule-trichlorosilane.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-trichlorosilane.png", 72 },
       "SiHCl"
     ),
     subgroup = "angels-silicon",
@@ -57,7 +57,7 @@ data:extend({
         and { "tooltip-description.chemical-formula", "H[font=default-tiny-bold]4[/font]Si" }
       or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelssmelting__/graphics/icons/molecule-silane.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-silane.png", 72 },
       "SiHH"
     ),
     subgroup = "angels-silicon",
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-silicon",
-    icon = "__angelssmelting__/graphics/icons/ingot-silicon.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-silicon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-silicon",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "item",
     name = "powder-silicon",
-    icon = "__angelssmelting__/graphics/icons/powder-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-silicon",
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-silicon",
-    icon = "__angelssmelting__/graphics/icons/molten-silicon.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-silicon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-silicon-casting",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "item",
     name = "angels-mono-silicon-seed",
-    icon = "__angelssmelting__/graphics/icons/silicon-seed.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-seed.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "i",
@@ -117,7 +117,7 @@ data:extend({
   {
     type = "item",
     name = "angels-quartz-crucible",
-    icon = "__angelssmelting__/graphics/icons/silicon-crucible.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-crucible.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "j",
@@ -127,7 +127,7 @@ data:extend({
   {
     type = "item",
     name = "angels-mono-silicon",
-    icon = "__angelssmelting__/graphics/icons/silicon-mono.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-mono.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "k",
@@ -136,7 +136,7 @@ data:extend({
   {
     type = "item",
     name = "angels-silicon-wafer",
-    icon = "__angelssmelting__/graphics/icons/silicon-wafer.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-wafer.png",
     icon_size = 32,
     subgroup = "angels-silicon-casting",
     order = "l",

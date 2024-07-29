@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "crop-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/basic-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/basic-farm.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-a",
     order = "a",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "crop-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/basic-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/basic-farm.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "crop-farm" },
@@ -38,7 +38,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/farm-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/farm-base.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -46,7 +46,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-basic.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-basic.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -59,7 +59,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-animation-1.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-animation-1.png",
           line_length = 6,
           frame_count = 36,
           width = 224,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "item",
     name = "temperate-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/temperate-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-farm.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-a",
     order = "ba",
@@ -98,7 +98,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "temperate-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/temperate-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-farm.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "temperate-farm" },
@@ -124,7 +124,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/farm-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/farm-base.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -132,7 +132,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-temperate.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-temperate.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -145,7 +145,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-animation-2.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-animation-2.png",
           line_length = 6,
           frame_count = 36,
           width = 224,
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "item",
     name = "desert-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/desert-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-farm.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-a",
     order = "bc",
@@ -184,7 +184,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "desert-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/desert-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-farm.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "desert-farm" },
@@ -210,7 +210,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/farm-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/farm-base.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -218,7 +218,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-desert.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-desert.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -231,7 +231,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-animation-3.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-animation-3.png",
           line_length = 6,
           frame_count = 36,
           width = 224,
@@ -260,7 +260,7 @@ data:extend({
   {
     type = "item",
     name = "swamp-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/swamp-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-farm.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-a",
     order = "bb",
@@ -270,7 +270,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "swamp-farm",
-    icon = "__angelsbioprocessing__/graphics/icons/swamp-farm.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-farm.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "swamp-farm" },
@@ -296,7 +296,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/farm-base.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/farm-base.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -304,7 +304,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-water.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-water.png",
           width = 224,
           height = 224,
           line_length = 1,
@@ -317,7 +317,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsbioprocessing__/graphics/entity/crop-farm/field-animation-4.png",
+          filename = "__angelsbioprocessinggraphics__/graphics/entity/crop-farm/field-animation-4.png",
           line_length = 6,
           frame_count = 36,
           width = 224,

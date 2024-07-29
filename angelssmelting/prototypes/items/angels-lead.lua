@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "lead-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
     icon_size = 32,
     subgroup = "angels-lead",
     order = "a",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "processed-lead",
-    icon = "__angelssmelting__/graphics/icons/processed-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead",
@@ -25,7 +25,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-lead",
-    icon = "__angelssmelting__/graphics/icons/pellet-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead",
@@ -35,7 +35,7 @@ data:extend({
   {
     type = "item",
     name = "solid-lead-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-lead-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png",
     icon_size = 32,
     subgroup = "angels-lead",
     order = "d",
@@ -44,7 +44,7 @@ data:extend({
   {
     type = "item",
     name = "anode-lead",
-    icon = "__angelssmelting__/graphics/icons/anode-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/anode-lead.png",
     icon_size = 32,
     subgroup = "angels-lead",
     order = "e",
@@ -58,7 +58,7 @@ data:extend({
       "F[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]2[/font]Si",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelssmelting__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 },
+      { "__angelssmeltinggraphics__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 },
       "SiFF"
     ),
     subgroup = "angels-lead",
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-lead",
-    icon = "__angelssmelting__/graphics/icons/ingot-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead",
@@ -83,7 +83,7 @@ data:extend({
   {
     type = "item",
     name = "powder-lead",
-    icon = "__angelssmelting__/graphics/icons/powder-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead",
@@ -94,7 +94,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-lead",
-    icon = "__angelssmelting__/graphics/icons/molten-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead-casting",
@@ -109,7 +109,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-lead",
-    icon = "__angelssmelting__/graphics/icons/roll-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-lead.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-lead-casting",
@@ -120,7 +120,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-lead",
-    icon = "__angelssmelting__/graphics/icons/plate-lead.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png",
     icon_size = 32,
     subgroup = "angels-lead-casting",
     order = "k",

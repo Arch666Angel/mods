@@ -3,7 +3,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-rocket",
-      icon = "__angelsindustries__/graphics/technology/rocket-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/rocket-tech.png",
       icon_size = 250,
       prerequisites = {
         "rocketry",
@@ -27,7 +27,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-rocket-hull",
-      icon = "__angelsindustries__/graphics/technology/rocket-hull-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/rocket-hull-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-rocket",
@@ -54,7 +54,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-rocket-ion-thruster",
-      icon = "__angelsindustries__/graphics/technology/rocket-ion-thruster-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/rocket-ion-thruster-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-rocket",
@@ -85,7 +85,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-rocket-fusion-reactor",
-      icon = "__angelsindustries__/graphics/technology/rocket-fusion-reactor-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/rocket-fusion-reactor-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-rocket",
@@ -114,7 +114,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-rocket-shield-array",
-      icon = "__angelsindustries__/graphics/technology/rocket-shield-array-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/rocket-shield-array-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-rocket",

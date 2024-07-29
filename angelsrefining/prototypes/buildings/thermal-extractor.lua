@@ -4,7 +4,7 @@ data:extend({
     name = "thermal-bore",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -19,7 +19,7 @@ data:extend({
     name = "thermal-bore",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -153,7 +153,7 @@ data:extend({
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/thermal-extractor.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
       apparent_volume = 1.5,
     },
     fast_replaceable_group = "thermal-extractor",
@@ -163,7 +163,7 @@ data:extend({
     name = "thermal-extractor",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -178,7 +178,7 @@ data:extend({
     name = "thermal-extractor",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelsrefining__/graphics/icons/thermal-extractor.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
         icon_mipmaps = 1,
       },
@@ -227,7 +227,7 @@ data:extend({
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
     base_picture = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
         priority = "extra-high",
         width = 288,
         height = 288,
@@ -241,14 +241,14 @@ data:extend({
         height = 288,
         line_length = 4,
         shift = { 0, 0 },
-        filename = "__angelsrefining__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
         frame_count = 16,
         animation_speed = 0.5,
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__angelsrefining__/sound/thermal-extractor.ogg" },
+      sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
       apparent_volume = 1.5,
     },
     fast_replaceable_group = "thermal-extractor",

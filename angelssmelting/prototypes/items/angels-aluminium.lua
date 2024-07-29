@@ -3,7 +3,7 @@ data:extend({
   {
     type = "item",
     name = "bauxite-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-bauxite.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
     order = "a",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "processed-aluminium",
-    icon = "__angelssmelting__/graphics/icons/processed-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "item",
     name = "pellet-aluminium",
-    icon = "__angelssmelting__/graphics/icons/pellet-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium",
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "item",
     name = "solid-sodium-aluminate",
-    icon = "__angelssmelting__/graphics/icons/solid-sodium-aluminate.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-aluminate.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
     order = "d",
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "item",
     name = "solid-aluminium-hydroxide",
-    icon = "__angelssmelting__/graphics/icons/solid-aluminium-hydroxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
     order = "e",
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "item",
     name = "solid-aluminium-oxide",
-    icon = "__angelssmelting__/graphics/icons/solid-aluminium-oxide.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
     order = "f",
@@ -61,7 +61,7 @@ data:extend({
   {
     type = "item",
     name = "ingot-aluminium",
-    icon = "__angelssmelting__/graphics/icons/ingot-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium",
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "item",
     name = "powder-aluminium",
-    icon = "__angelssmelting__/graphics/icons/powder-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "fluid",
     name = "liquid-molten-aluminium",
-    icon = "__angelssmelting__/graphics/icons/molten-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium-casting",
@@ -97,7 +97,7 @@ data:extend({
   {
     type = "item",
     name = "angels-roll-aluminium",
-    icon = "__angelssmelting__/graphics/icons/roll-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-aluminium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "angels-aluminium-casting",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plate-aluminium",
-    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png",
     icon_size = 32,
     subgroup = "angels-aluminium-casting",
     order = "k",

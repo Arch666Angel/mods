@@ -7,7 +7,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-2",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-tin-smelting-1",
@@ -44,7 +44,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-3",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-2",
@@ -82,7 +82,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-4",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-3",
@@ -122,7 +122,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-5",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-4",

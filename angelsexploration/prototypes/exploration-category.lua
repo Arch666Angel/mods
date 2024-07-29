@@ -46,12 +46,12 @@ data:extend({
     order = "la[angels]-f[exploration]-a", -- order la[angels]-f[exploration]-b reserved for warfare
     icons = {
       {
-        icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+        icon = "__angelsexplorationgraphics__/graphics/technology/heavy-tank-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsexploration__/graphics/icons/void.png",
+        icon = "__angelsexplorationgraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },

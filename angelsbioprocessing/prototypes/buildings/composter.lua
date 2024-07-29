@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "composter",
-    icon = "__angelsbioprocessing__/graphics/icons/composter.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/composter.png",
     icon_size = 32,
     subgroup = "bio-processing-buildings-vegetabilis-b",
     order = "b",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "furnace",
     name = "composter",
-    icon = "__angelsbioprocessing__/graphics/icons/composter.png",
+    icon = "__angelsbioprocessinggraphics__/graphics/icons/composter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "composter" },
@@ -57,7 +57,7 @@ data:extend({
     },
     energy_usage = "30kW",
     animation = {
-      filename = "__angelsbioprocessing__/graphics/entity/composter/composter.png",
+      filename = "__angelsbioprocessinggraphics__/graphics/entity/composter/composter.png",
       width = 160,
       height = 160,
       frame_count = 1,
@@ -67,7 +67,7 @@ data:extend({
     },
     --[[working_visualisations = --looks like a pick 1... this or animation?
     {
-        filename = "__angelsbioprocessing__/graphics/entity/composter/composter-animation.png",
+        filename = "__angelsbioprocessinggraphics__/graphics/entity/composter/composter-animation.png",
         width = 128,
         height = 32,
         frame_count = 25,
