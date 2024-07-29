@@ -1998,6 +1998,7 @@ local function box_equal(b1, b2)
   end
   return pos_equal(b1.right_bottom or b1[2], b2.right_bottom or b2[2])
 end
+
 -------------------------------------------------------------------------------
 -- MODIFY FAST_REPLACE_CATEGORY -----------------------------------------------
 -------------------------------------------------------------------------------
@@ -2078,7 +2079,7 @@ function angelsmods.functions.tech_uses_science_pack(tech_name, pack)
     if technology and technology.unit and technology.unit.ingredients then
       local addit = true
       for i, ingredient in pairs(technology.unit.ingredients) do
-        if ingredient[1] == pack or ingredient.name == pack then
+        if ingredient[1] == pack then
           return true
         end
       end

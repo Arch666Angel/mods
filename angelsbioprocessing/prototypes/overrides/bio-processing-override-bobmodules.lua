@@ -187,9 +187,9 @@ if mods["bobmodules"] then
       unit = {
         count = 100,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 30,
       },
@@ -297,10 +297,10 @@ if mods["bobmodules"] then
       unit = {
         count = 100,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "production-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 30,
       },
@@ -363,7 +363,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 1},
+        --{ type = "item", name = "solder", amount = 1 },
         { type = "item", name = "productivity-module", amount = 1 },
         { type = "item", name = "effectivity-module", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -373,7 +373,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-2",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 2},
+        --{ type = "item", name = "solder", amount = 2 },
         { type = "item", name = "productivity-module-2", amount = 1 },
         { type = "item", name = "effectivity-module-2", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -383,7 +383,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-3",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 3},
+        --{ type = "item", name = "solder", amount = 3 },
         { type = "item", name = "productivity-module-3", amount = 1 },
         { type = "item", name = "effectivity-module-3", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -436,8 +436,8 @@ if mods["bobmodules"] then
       i > 1 and "effectivity-module-" .. i or "effectivity-module",
     }) do
       for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
+        if not ingredients_added[ingredient[1]] then
+          ingredients_added[ingredient[1]] = true
           table.insert(ingredients, util.table.deepcopy(ingredient))
         end
       end
@@ -458,8 +458,8 @@ if mods["bobmodules"] then
       "effectivity-module-" .. (i < 6 and 4 or 6),
     }) do
       for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
+        if not ingredients_added[ingredient[1]] then
+          ingredients_added[ingredient[1]] = true
           table.insert(ingredients, util.table.deepcopy(ingredient))
         end
       end

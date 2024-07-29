@@ -21,7 +21,7 @@ if angelsmods.addons.storage.warehouses then
   else
     table.insert(
       data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
-      { type = "item", name = "utility-science-pack", amount = 1 }
+      { "utility-science-pack", 1 }
     )
   end
 
@@ -29,7 +29,7 @@ if angelsmods.addons.storage.warehouses then
   if mods["bobtech"] and bobmods.tech.advanced_logistic_science then
     table.insert(
       data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
-      { type = "item", name = "advanced-logistic-science-pack", amount = 1 }
+      { "advanced-logistic-science-pack", 1 }
     )
   end
 end

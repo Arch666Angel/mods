@@ -24,7 +24,7 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { "angels-science-pack-grey", 1 },
         },
         time = pack_time_base,
       },
@@ -58,8 +58,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -89,9 +89,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -125,10 +125,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -158,11 +158,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },

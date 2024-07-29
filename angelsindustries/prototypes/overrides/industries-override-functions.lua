@@ -60,7 +60,7 @@ end
 function angelsmods.functions.AI.set_core(techname, core_n)
   local has_core = false
   for _, pack in pairs((data.raw.technology[techname] or { unit = { ingredients = {} } }).unit.ingredients) do
-    local packname = pack.name or pack[1]
+    local packname = pack[1]
     if string.find(packname, "datacore") ~= nil then
       if packname == core_n then
         has_core = true
@@ -207,9 +207,9 @@ function angelsmods.functions.AI.tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
-      if technology.unit.ingredients and not technology.max_level and technology.unit.ingredients[1] then
-        for i, ingredients in pairs(technology.unit.ingredients[1]) do
-          if ingredients == "angels-science-pack-grey" and techname ~= "tech-specialised-labs" then
+      if technology.unit.ingredients and not technology.max_level then
+        for i, ingredient in pairs(technology.unit.ingredients) do
+          if ingredient[1] == "angels-science-pack-grey" and techname ~= "tech-specialised-labs" then
             OV.add_prereq(techname, "tech-specialised-labs")
             set_research_tiers(
               techname,
@@ -217,7 +217,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.grey.amount
             )
           end
-          if ingredients == "angels-science-pack-red" then
+          if ingredient[1] == "angels-science-pack-red" then
             OV.add_prereq(techname, "tech-red-packs")
             set_research_tiers(
               techname,
@@ -225,7 +225,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.red.amount
             )
           end
-          if ingredients == "angels-science-pack-green" then
+          if ingredient[1] == "angels-science-pack-green" then
             OV.add_prereq(techname, "tech-green-packs")
             set_research_tiers(
               techname,
@@ -233,7 +233,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.green.amount
             )
           end
-          if ingredients == "angels-science-pack-orange" then
+          if ingredient[1] == "angels-science-pack-orange" then
             OV.add_prereq(techname, "tech-orange-packs")
             set_research_tiers(
               techname,
@@ -241,7 +241,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.orange.amount
             )
           end
-          if ingredients == "angels-science-pack-blue" then
+          if ingredient[1] == "angels-science-pack-blue" then
             OV.add_prereq(techname, "tech-blue-packs")
             set_research_tiers(
               techname,
@@ -249,7 +249,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.blue.amount
             )
           end
-          if ingredients == "angels-science-pack-yellow" then
+          if ingredient[1] == "angels-science-pack-yellow" then
             OV.add_prereq(techname, "tech-yellow-packs")
             set_research_tiers(
               techname,
@@ -257,7 +257,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
               angelsmods.industries.techtiers.yellow.amount
             )
           end
-          if ingredients == "angels-science-pack-white" then
+          if ingredient[1] == "angels-science-pack-white" then
             OV.add_prereq(techname, "space-science-pack")
             set_research_tiers(
               techname,
@@ -277,7 +277,7 @@ function angelsmods.functions.AI.core_tier_upgrade()
     local pack_name = nil
     local core_name = nil
     for _, pack in pairs(technology.unit and technology.unit.ingredients or {}) do
-      local pack_n = pack[1] or pack.name or ""
+      local pack_n = pack[1] or ""
       if string.find(pack_n, "angels") and string.find(pack_n, "science") and string.find(pack_n, "pack") then
         pack_name = pack_n
       elseif string.find(pack_n, "datacore") then

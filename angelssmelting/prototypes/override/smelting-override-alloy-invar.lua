@@ -90,8 +90,8 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         unit = {
           count = 150,
           ingredients = {
-            { type = "item", name = "automation-science-pack", amount = 1 },
-            { type = "item", name = "logistic-science-pack", amount = 1 },
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 },
           },
           time = 30,
         },

@@ -685,9 +685,9 @@ local function create_gathering_turret_target_tech(inputs)
         unit = {
           count = 150,
           ingredients = {
-            { type = "item", name = "automation-science-pack", amount = 2 },
-            { type = "item", name = "logistic-science-pack", amount = 1 },
-            { type = "item", name = "military-science-pack", amount = 2 },
+            { "automation-science-pack",  2 },
+            { "logistic-science-pack", 1 },
+            { "military-science-pack", 2 },
           },
           time = 30,
         },
@@ -825,11 +825,11 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     unit = {
       count = inputs.cost or 50,
       ingredients = {
-        inputs.level > 0 and { type = "item", name = "automation-science-pack", amount = 1 } or nil,
-        inputs.level > 0 and { type = "item", name = "logistic-science-pack", amount = 2 } or nil,
-        inputs.level > 0 and { type = "item", name = "military-science-pack", amount = 2 } or nil,
-        inputs.level > 3 and { type = "item", name = "chemical-science-pack", amount = 1 } or nil,
-        inputs.level > 5 and { type = "item", name = "utility-science-pack", amount = 1 } or nil,
+        inputs.level > 0 and { "automation-science-pack", 1 } or nil,
+        inputs.level > 0 and { "logistic-science-pack",  2 } or nil,
+        inputs.level > 0 and { "military-science-pack", 2 } or nil,
+        inputs.level > 3 and { "chemical-science-pack", 1 } or nil,
+        inputs.level > 5 and { "utility-science-pack", 1 } or nil,
       },
       time = 30,
     },

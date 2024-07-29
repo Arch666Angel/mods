@@ -803,9 +803,8 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   tech.unit = tech.unit or {}
   tech.unit.ingredients = tech.unit.ingredients or {}
   for pk, pack in pairs(tech.unit.ingredients) do
-    local nk = pack.name and "name" or 1
-    if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
-      for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
+    if substitution_table.science_packs[pack[1]] and substitution_table.science_packs[pack[1]].remove then
+      for k, rem in pairs(substitution_table.science_packs[pack[1]].remove) do
         to_remove[rem] = true
       end
     end
@@ -813,24 +812,22 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   for i = #tech.unit.ingredients, 1, -1 do
     local pack = tech.unit.ingredients[i]
     if pack then
-      local nk = pack.name and "name" or 1
-      local ak = pack.name and "amount" or 2
-      if to_remove[pack[nk]] then
+      if to_remove[pack[1]] then
         table.remove(tech.unit.ingredients, i)
       else
-        if substitution_table.science_packs[pack[nk]] then
-          pack[ak] = substitution_table.science_packs[pack[nk]].amount
-          pack[nk] = substitution_table.science_packs[pack[nk]].add
+        if substitution_table.science_packs[pack[1]] then
+          pack[2] = substitution_table.science_packs[pack[1]].amount
+          pack[1] = substitution_table.science_packs[pack[1]].add
         end
-        if modifications and modifications[pack[nk]] then
-          if modifications[pack[nk]] > 0 then
-            dup_table[pack[nk]] = true
-            pack[ak] = modifications[pack[nk]]
+        if modifications and modifications[pack[1]] then
+          if modifications[pack[1]] > 0 then
+            dup_table[pack[1]] = true
+            pack[2] = modifications[pack[1]]
           else
             table.remove(tech.unit.ingredients, i)
           end
         else
-          dup_table[pack[nk]] = true
+          dup_table[pack[1]] = true
         end
       end
     end
@@ -838,7 +835,7 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   if modifications then
     for name, add in pairs(modifications) do
       if add > 0 and not dup_table[name] then
-        table.insert(tech.unit.ingredients, { type = "item", name = name, amount = add })
+        table.insert(tech.unit.ingredients, { name, add })
       end
     end
   end
