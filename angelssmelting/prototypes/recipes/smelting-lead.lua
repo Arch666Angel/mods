@@ -240,7 +240,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-lead", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
+        { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
       },
       results = {
         { type = "item", name = "angels-roll-lead", amount = 4 },
@@ -253,7 +253,7 @@ data:extend({
       energy_required = 2,
       ingredients = {
         { type = "fluid", name = "liquid-molten-lead", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
+        { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
       },
       results = {
         { type = "item", name = "angels-roll-lead", amount = 4 },
