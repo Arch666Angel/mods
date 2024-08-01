@@ -144,7 +144,7 @@ local function generate_train_recipe(item, add_unlock)
       copy.localised_name = { "", { "recipe-name." .. item.name }, " MK" .. i }
       copy.localised_description = { "recipe-description." .. item.name }
       copy.ingredients = ingredients
-      copy.results = {{ type = "item", name = name, amount  = 1 }},
+      copy.results = {{ type = "item", name = name, amount  = 1 }}
 
       if copy.order then
         copy.order = copy.order .. "-" .. i

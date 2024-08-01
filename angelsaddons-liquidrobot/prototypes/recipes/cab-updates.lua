@@ -11,6 +11,6 @@ angelsmods.functions.RB.build({
       { "construction-components", 20 },
       { "circuit-orange-loaded", 2 },
     },
-    results = {{ type = "item" name = "angels-cab", amount = 1, }},
+    results = {{ type = "item", name = "angels-cab", amount = 1, }},
   },
 })
