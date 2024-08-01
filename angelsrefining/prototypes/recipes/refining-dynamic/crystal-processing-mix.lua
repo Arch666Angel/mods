@@ -54,6 +54,9 @@ data:extend({
       { type = "item", name = "angels-ore6-crystal", amount = 2 },
       { type = "item", name = "catalysator-orange", amount = 1 },
     },
+    results = {
+      { type = "item", name = "angels-void", amount = 1 },
+    },
     icon_size = 32,
     order = "m",
   },
