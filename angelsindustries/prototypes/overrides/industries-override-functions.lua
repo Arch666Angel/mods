@@ -213,7 +213,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-specialised-labs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.grey.time
+              angelsmods.industries.techtiers.grey.time,
               angelsmods.industries.techtiers.grey.amount
             )
           end
@@ -221,7 +221,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-red-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.red.time
+              angelsmods.industries.techtiers.red.time,
               angelsmods.industries.techtiers.red.amount
             )
           end
@@ -229,7 +229,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-green-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.green.time
+              angelsmods.industries.techtiers.green.time,
               angelsmods.industries.techtiers.green.amount
             )
           end
@@ -237,7 +237,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-orange-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.orange.time
+              angelsmods.industries.techtiers.orange.time,
               angelsmods.industries.techtiers.orange.amount
             )
           end
@@ -245,7 +245,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-blue-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.blue.time
+              angelsmods.industries.techtiers.blue.time,
               angelsmods.industries.techtiers.blue.amount
             )
           end
@@ -253,7 +253,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "tech-yellow-packs")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.yellow.time
+              angelsmods.industries.techtiers.yellow.time,
               angelsmods.industries.techtiers.yellow.amount
             )
           end
@@ -261,7 +261,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
             OV.add_prereq(techname, "space-science-pack")
             set_research_tiers(
               techname,
-              angelsmods.industries.techtiers.white.time
+              angelsmods.industries.techtiers.white.time,
               angelsmods.industries.techtiers.white.amount
             )
           end
