@@ -38,7 +38,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-red-tool", amount = 1 },
+        { "alien-artifact-red-tool", 1 },
       },
       time = 30,
     },
@@ -82,7 +82,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-yellow-tool", amount = 1 },
+        { "alien-artifact-yellow-tool", 1 },
       },
       time = 30,
     },
@@ -125,7 +125,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-orange-tool", amount = 1 },
+        { "alien-artifact-orange-tool", 1 },
       },
       time = 30,
     },
@@ -168,7 +168,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-blue-tool", amount = 1 },
+        { "alien-artifact-blue-tool", 1 },
       },
       time = 30,
     },
@@ -212,7 +212,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-purple-tool", amount = 1 },
+        { "alien-artifact-purple-tool", 1 },
       },
       time = 30,
     },
@@ -256,7 +256,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-green-tool", amount = 1 },
+        { "alien-artifact-green-tool", 1 },
       },
       time = 30,
     },
@@ -292,7 +292,7 @@ data:extend({
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "alien-artifact-tool", amount = 1 },
+        { "alien-artifact-tool", 1 },
       },
       time = 30,
     },
