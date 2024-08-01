@@ -86,7 +86,7 @@ local function generate_tiered_ingredients(tier, ingredients)
   local generated_ingredients = {}
   for _, ingredient in pairs(ingredients) do
     local ingredient_name = ingredient.name
-    local ingredient_amount = ingredient.amount
+    local ingredient_amount = ingredient.amount or ingredient.amounts
 
     if type(ingredient_amount) == "table" then
       ingredient_amount = ingredient_amount[tier] or 0
