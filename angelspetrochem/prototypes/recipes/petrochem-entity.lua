@@ -475,7 +475,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-chemical-plant-3", amount = 1 },
     },
-    results = {{ type = "item", name = "angels-chemical-plant-4", amount = 4 }},
+    results = {{ type = "item", name = "angels-chemical-plant-4", amount = 1 }},
   },
   --ELECTRIC BOILER
   {
