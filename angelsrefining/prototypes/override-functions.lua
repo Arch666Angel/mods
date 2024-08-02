@@ -680,7 +680,6 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
   end
   local function adjust_difficulty(path)
     adjust_subtable(path, "ingredients", "recipe_items")
-    adjust_member(path, "result", "recipe_items")
     adjust_subtable(path, "results", "recipe_items")
     adjust_member(path, "main_product", "recipe_items")
   end
