@@ -86,7 +86,7 @@ local function generate_tiered_ingredients(tier, ingredients)
   local generated_ingredients = {}
   for _, ingredient in pairs(ingredients) do
     local ingredient_name = ingredient.name
-    local ingredient_amount = ingredient.amount
+    local ingredient_amount = ingredient.amount or ingredient.amounts
 
     if type(ingredient_amount) == "table" then
       ingredient_amount = ingredient_amount[tier] or 0
@@ -144,7 +144,7 @@ local function generate_train_recipe(item, add_unlock)
       copy.localised_name = { "", { "recipe-name." .. item.name }, " MK" .. i }
       copy.localised_description = { "recipe-description." .. item.name }
       copy.ingredients = ingredients
-      copy.results = {{ type = "item", name = name, amount  = 1 }},
+      copy.results = {{ type = "item", name = name, amount  = 1 }}
 
       if copy.order then
         copy.order = copy.order .. "-" .. i

@@ -61,8 +61,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
@@ -107,8 +107,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
@@ -186,8 +186,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
@@ -242,8 +242,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
@@ -312,8 +312,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
@@ -359,8 +359,8 @@ if alien_technology then
       unit = {
         count = 250,
         ingredients = {
-          { type = "item", name = "science-pack-gold", amount = 1 },
-          { type = "item", name = "alien-science-pack", amount = 2 },
+          { "science-pack-gold", 1 },
+          { "alien-science-pack", 2 },
         },
         time = 30,
       },
