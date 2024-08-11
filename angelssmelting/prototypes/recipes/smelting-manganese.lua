@@ -224,7 +224,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-manganese", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-manganese", amount = 4 },

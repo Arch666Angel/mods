@@ -136,7 +136,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-glass", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
     },
     results = {
       { type = "item", name = "angels-coil-glass-fiber", amount = 8 },

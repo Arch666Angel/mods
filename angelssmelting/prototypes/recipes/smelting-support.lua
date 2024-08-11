@@ -55,7 +55,7 @@ data:extend({
       { type = "item", name = "filter-coal", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "liquid-coolant", amount = 160 },
+      { type = "fluid", name = "liquid-coolant", amount = 160, catalyst_amount = 160 },
       { type = "item", name = "filter-frame", amount = 1 },
     },
     main_product = "liquid-coolant",
@@ -74,7 +74,7 @@ data:extend({
       { type = "item", name = "filter-ceramic", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "liquid-coolant", amount = 160 },
+      { type = "fluid", name = "liquid-coolant", amount = 160, catalyst_amount = 160 },
       { type = "item", name = "filter-ceramic-used", amount = 1 },
     },
     main_product = "liquid-coolant",

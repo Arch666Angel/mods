@@ -180,7 +180,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-platinum", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-platinum", amount = 4 },
@@ -224,7 +224,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "liquid-molten-platinum", amount = 70 },
       { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-      { type = "fluid", name = "liquid-coolant", amount = 40 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-platinum", amount = 8 },
