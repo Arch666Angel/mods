@@ -56,18 +56,19 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "raw-fish", amount = 4 },
+      { type = "item", name = "raw-fish", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "raw-fish", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "raw-fish", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
       {
         type = "item",
         name = "raw-fish",
         amount = 1,
         probability = 0.75,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       {
@@ -75,7 +76,8 @@ data:extend({
         name = "raw-fish",
         amount = 1,
         probability = 0.50,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
@@ -92,18 +94,19 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-1-raw", amount = 4 },
+      { type = "item", name = "alien-fish-1-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-1-raw", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "alien-fish-1-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
         name = "alien-fish-1-raw",
         amount = 1,
         probability = 0.85,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
@@ -120,18 +123,19 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-2-raw", amount = 4 },
+      { type = "item", name = "alien-fish-2-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-2-raw", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "alien-fish-2-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
         name = "alien-fish-2-raw",
         amount = 1,
         probability = 0.85,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
@@ -148,18 +152,18 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-3-raw", amount = 4 },
+      { type = "item", name = "alien-fish-3-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-3-raw", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "alien-fish-3-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
         name = "alien-fish-3-raw",
         amount = 1,
-        probability = 0.85,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
@@ -179,12 +183,12 @@ data:extend({
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "raw-fish", amount = 2 },
+      { type = "item", name = "raw-fish", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "raw-fish", amount_min = 2, amount_max = 4, catalyst_amount = 2 },
+      { type = "item", name = "raw-fish", amount_min = 2, amount_max = 4, ignored_by_productivity = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
       --{type="fluid", name="water-yellow-waste", amount=20},
     },
@@ -210,12 +214,12 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "algae-brown", amount = 2 },
-      { type = "item", name = "alien-fish-1-raw", amount = 2 },
+      { type = "item", name = "alien-fish-1-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-1-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2 },
+      { type = "item", name = "alien-fish-1-raw", amount_min = 5, amount_max = 10, ignored_by_productivity = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
     icons = {
@@ -238,12 +242,12 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "algae-green", amount = 2 },
-      { type = "item", name = "alien-fish-2-raw", amount = 2 },
+      { type = "item", name = "alien-fish-2-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-2-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2 },
+      { type = "item", name = "alien-fish-2-raw", amount_min = 5, amount_max = 10, ignored_by_productivity = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
     icons = {
@@ -266,12 +270,12 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-raw-meat", amount = 2 },
-      { type = "item", name = "alien-fish-3-raw", amount = 2 },
+      { type = "item", name = "alien-fish-3-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-3-raw", amount_min = 5, amount_max = 10, catalyst_amount = 2 },
+      { type = "item", name = "alien-fish-3-raw", amount_min = 5, amount_max = 10, ignored_by_productivity = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
     icons = {
@@ -497,7 +501,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-fish-oil", amount = 100 },
       { type = "fluid", name = "liquid-mineral-oil", amount = 100 },
-      { type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_viscous_liquid_filtering_recipe_icon(
@@ -517,12 +521,12 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "liquid-raw-fish-oil", amount = 150 },
       { type = "fluid", name = "thermal-water", amount = 50 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "liquid-fish-oil", amount = 125 },
       { type = "fluid", name = "liquid-mineral-oil", amount = 75 },
-      { type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "filter-ceramic-used", amount = 1, ignored_by_productivity = 1 },
     },
     always_show_products = true,
     icons = AF.create_viscous_liquid_filtering_recipe_icon(

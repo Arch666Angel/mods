@@ -167,7 +167,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "liquid-acetic-acid", amount = 100 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "liquid-acetic-acid",
     always_show_products = true,
@@ -306,7 +306,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "liquid-propionic-acid", amount = 50 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "liquid-propionic-acid",
     always_show_products = true,

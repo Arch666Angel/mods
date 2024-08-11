@@ -117,11 +117,11 @@ if angelsmods.industries.components then
           molten2,
           --{type = "fluid", name = "liquid-molten-steel", amount = 20},
           { type = "item", name = "mold-non-expendable", amount = 1 },
-          { type = "fluid", name = "liquid-coolant", amount = 10, catalyst_amount = 8 },
+          { type = "fluid", name = "liquid-coolant", amount = 10, ignored_by_stats = 8 },
         },
         results = {
           { type = "item", name = "motor-casing-" .. num, amount = 2 },
-          { type = "item", name = "spent-mold-non-expendable", amount = 1, catalyst_amount = 1 },
+          { type = "item", name = "spent-mold-non-expendable", amount = 1 },
           { type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300 },
         },
         icons = {
@@ -182,7 +182,7 @@ if angelsmods.industries.components then
       },
       results = {
         { type = "item", name = "motor-casing-5-green", amount = 1 },
-        { type = "item", name = "spent-mold-non-expendable", amount = 1, probability = 0.90, catalyst_amount = 1 },
+        { type = "item", name = "spent-mold-non-expendable", amount = 1, probability = 0.90 },
       },
       main_product = "motor-casing-5-green",
       icons = {

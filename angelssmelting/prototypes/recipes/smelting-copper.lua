@@ -176,7 +176,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-copper", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-copper", amount = 4 },
@@ -222,7 +222,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-copper", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-copper", amount = 8 },

@@ -85,7 +85,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "gas-nitrogen-monoxide", amount = 100 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -129,7 +129,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "gas-ammonia", amount = 100 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -253,7 +253,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "gas-melamine", amount = 100 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -299,7 +299,7 @@ data:extend({
     results = {
       { type = "fluid", name = "gas-hydrazine", amount = 100 },
       { type = "fluid", name = "gas-hydrogen-chloride", amount = 100 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -405,7 +405,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "gas-dinitrogen-tetroxide", amount = 50 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     main_product = "gas-dinitrogen-tetroxide",

@@ -245,11 +245,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-saw", amount = 1 },
+      { type = "item", name = "solid-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
-      { type = "item", name = "solid-saw", amount = 1, catalyst_amount = 1, probability = 0.9 },
+      { type = "item", name = "solid-saw", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.9 },
     },
     main_product = "wood",
     allow_decomposition = false,
@@ -269,11 +269,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-crystal-tipped-saw", amount = 1 },
+      { type = "item", name = "solid-crystal-tipped-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
-      { type = "item", name = "solid-crystal-tipped-saw", amount = 1, catalyst_amount = 1, probability = 0.95 },
+      { type = "item", name = "solid-crystal-tipped-saw", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.95 },
     },
     main_product = "wood",
     allow_decomposition = false,
@@ -293,11 +293,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-crystal-full-saw", amount = 1 },
+      { type = "item", name = "solid-crystal-full-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
-      { type = "item", name = "solid-crystal-full-saw", amount = 1, catalyst_amount = 1, probability = 0.99 },
+      { type = "item", name = "solid-crystal-full-saw", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.99 },
     },
     main_product = "wood",
     allow_decomposition = false,
@@ -427,7 +427,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-resin", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("temperate-tree"),
@@ -454,7 +454,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-resin", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("temperate-tree"),
@@ -688,7 +688,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-plastic", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("swamp-tree"),
@@ -715,7 +715,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-plastic", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("swamp-tree"),
@@ -900,7 +900,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-rubber", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("desert-tree"),
@@ -927,7 +927,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "bio-rubber", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, catalyst_amount = 3 },
+      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("desert-tree"),

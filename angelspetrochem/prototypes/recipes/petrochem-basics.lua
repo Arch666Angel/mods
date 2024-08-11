@@ -96,13 +96,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 100 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "gas-oxygen", amount = 30 },
       { type = "fluid", name = "gas-hydrogen", amount = 40 },
       { type = "item", name = "slag", amount = 1 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon(
@@ -165,12 +165,12 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "water-purified", amount = 100 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "gas-oxygen", amount = 40 },
       { type = "fluid", name = "gas-hydrogen", amount = 60 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon(
@@ -417,7 +417,7 @@ data:extend({
       { type = "fluid", name = "liquid-ngl", amount = 30 },
       { type = "fluid", name = "liquid-mineral-oil", amount = 20 },
       { type = "item", name = "solid-coke", amount = 6 }, --COKE
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -716,11 +716,11 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-water-semiheavy-1", amount = 200, minimum_temperature = 26 },
+      { type = "fluid", name = "liquid-water-semiheavy-1", amount = 200, ignored_by_stats = 200, minimum_temperature = 26 },
       { type = "fluid", name = "water-purified", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "liquid-water-semiheavy-1", amount = 200, temperature = 25 },
+      { type = "fluid", name = "liquid-water-semiheavy-1", amount = 200, ignored_by_stats = 200, temperature = 25 },
       { type = "fluid", name = "steam", amount = 50, temperature = 125 },
     },
     main_product = "liquid-water-semiheavy-1",
@@ -749,11 +749,11 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-water-semiheavy-2", amount = 200, minimum_temperature = 26 },
+      { type = "fluid", name = "liquid-water-semiheavy-2", amount = 200, ignored_by_stats = 200, minimum_temperature = 26 },
       { type = "fluid", name = "water-purified", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "liquid-water-semiheavy-2", amount = 200, temperature = 25 },
+      { type = "fluid", name = "liquid-water-semiheavy-2", amount = 200, ignored_by_stats = 200, temperature = 25 },
       { type = "fluid", name = "steam", amount = 50, temperature = 125 },
     },
     main_product = "liquid-water-semiheavy-2",
@@ -782,11 +782,11 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-water-semiheavy-3", amount = 200, minimum_temperature = 26 },
+      { type = "fluid", name = "liquid-water-semiheavy-3", amount = 200, ignored_by_stats = 200, minimum_temperature = 26 },
       { type = "fluid", name = "water-purified", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "liquid-water-semiheavy-3", amount = 200, temperature = 25 },
+      { type = "fluid", name = "liquid-water-semiheavy-3", amount = 200, ignored_by_stats = 200, temperature = 25 },
       { type = "fluid", name = "steam", amount = 50, temperature = 125 },
     },
     main_product = "liquid-water-semiheavy-3",
@@ -843,11 +843,11 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-water-heavy", amount = 100, minimum_temperature = 26 },
+      { type = "fluid", name = "liquid-water-heavy", amount = 100, ignored_by_stats = 100, minimum_temperature = 26 },
       { type = "fluid", name = "water-purified", amount = 25 },
     },
     results = {
-      { type = "fluid", name = "liquid-water-heavy", amount = 100, temperature = 25 },
+      { type = "fluid", name = "liquid-water-heavy", amount = 100, ignored_by_stats = 100, temperature = 25 },
       { type = "fluid", name = "steam", amount = 25, temperature = 125 },
     },
     main_product = "liquid-water-heavy",
@@ -909,12 +909,12 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "liquid-water-heavy", amount = 100, maximum_temperature = 30 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "gas-oxygen", amount = 40 },
       { type = "fluid", name = "gas-deuterium", amount = 60 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon(

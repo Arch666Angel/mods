@@ -73,14 +73,14 @@ data:extend({
     energy_required = 210, --540
     ingredients = {
       { type = "item", name = "americium-241", amount = 5 },
-      { type = "item", name = "uranium-238", amount = 60 },
+      { type = "item", name = "uranium-238", amount = 60, ignored_by_stats = 15 },
       { type = "item", name = "plutonium-240", amount = 1 },
     },
     results = {
       --{type = "item", name = "uranium-235", amount = 1,probability=0.3},
-      { type = "item", name = "plutonium-240", amount = 6, catalyst_amount = 1 },
-      { type = "item", name = "uranium-238", amount = 15, catalyst_amount = 15 },
-      { type = "item", name = "solid-lead-oxide", amount = 5 }, -- equals 5 lead plates
+      { type = "item", name = "plutonium-240", amount = 6, ignored_by_productivity = 1, ignored_by_stats = 1 },
+      { type = "item", name = "uranium-238", amount = 15, ignored_by_productivity = 15, ignored_by_stats = 15 },
+      { type = "item", name = "solid-lead-oxide", amount = 5, ignored_by_productivity = 5 }, -- equals 5 lead plates
     },
     icons = {
       { -- need to have something as bottom layer
@@ -301,7 +301,7 @@ data:extend({
       { type = "item", name = "americium-241", amount = 1, probability = 0.95 },
       { type = "item", name = "curium-245", amount = 1, probability = 0.05 },
       { type = "item", name = "uranium-238", amount = 1 },
-      { type = "item", name = "slag", amount = 5 },
+      { type = "item", name = "slag", amount = 5, ignored_by_productivity = 5 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -353,10 +353,10 @@ data:extend({
     },
     results = {
       { type = "item", name = "plutonium-240", amount = 2 },
-      { type = "item", name = "slag", amount = 10 },
+      { type = "item", name = "slag", amount = 10, ignored_by_productivity = 10 },
       { type = "item", name = "curium-245", amount = 3, probability = 0.45 },
       { type = "item", name = "uranium-235", amount = 1, probability = 0.2 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60 },
+      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -471,7 +471,7 @@ data:extend({
       { type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 5 },
     },
     results = {
-      { type = "item", name = "slag", amount = 5 },
+      { type = "item", name = "slag", amount = 5, ignored_by_productivity = 5 },
       { type = "item", name = "neptunium-240", amount = 1 },
       { type = "item", name = "thorium-232", amount = 2 },
       { type = "item", name = "uranium-234", amount = 1, probability = 0.05 },
@@ -533,11 +533,11 @@ data:extend({
       { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "slag", amount = 10 },
+      { type = "item", name = "slag", amount = 10, ignored_by_productivity = 10 },
       { type = "item", name = "neptunium-240", amount = 2 },
       { type = "item", name = "uranium-234", amount = 2, probability = 0.05 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60 },
-      { type = "item", name = "angels-muon-fusion-catalyst", amount = 1, catalyst_amount = 1, probability = 4 / 30 },
+      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
+      { type = "item", name = "angels-muon-fusion-catalyst", amount = 1, ignored_by_productivity = 1, probability = 4 / 30 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -620,12 +620,12 @@ data:extend({
     },
     results = {
       { type = "item", name = "slag", amount = 5 },
-      { type = "item", name = "angels-muon-fusion-catalyst", amount = 4, catalyst_amount = 4 }, -- make it lose 1%; 99% of 5 = 4.95 return
+      { type = "item", name = "angels-muon-fusion-catalyst", amount = 4, ignored_by_productivity = 4 }, -- make it lose 1%; 99% of 5 = 4.95 return
       {
         type = "item",
         name = "angels-muon-fusion-catalyst",
         amount = 1,
-        catalyst_amount = 1,
+        ignored_by_productivity = 1,
         probability = 0.95,
         show_details_in_recipe_tooltip = false,
       },
@@ -680,8 +680,8 @@ data:extend({
     },
     results = {
       { type = "item", name = "slag", amount = 5 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60 },
-      { type = "item", name = "angels-muon-fusion-catalyst", amount = 10, catalyst_amount = 10 },
+      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
+      { type = "item", name = "angels-muon-fusion-catalyst", amount = 10, ignored_by_productivity = 10 },
     },
     icons = {
       { -- need to have something as bottom layer

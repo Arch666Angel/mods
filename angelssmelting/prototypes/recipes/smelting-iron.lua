@@ -110,7 +110,7 @@ data:extend({
       { type = "item", name = "solid-coke", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-iron", amount = 6 },
+      { type = "item", name = "ingot-iron", amount = 6, ignored_by_productivity = 6, ignored_by_stats = 6 },
       { type = "fluid", name = "gas-carbon-dioxide", amount = 20 },
     },
     main_product = "ingot-iron",
@@ -287,7 +287,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-iron", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-iron", amount = 4 },
@@ -333,7 +333,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-iron", amount = 110 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-rod-stack-iron", amount = 2 },

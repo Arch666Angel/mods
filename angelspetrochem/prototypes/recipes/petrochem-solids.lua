@@ -371,7 +371,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "catalyst-metal-carrier", amount = 10 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
       -- {type="item", name="iron-ore", amount=1},
       -- {type="item", name="copper-ore", amount=1},
     },
@@ -390,7 +390,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "catalyst-metal-carrier", amount = 10 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
       -- {type="item", name="bauxite-ore", amount=1},
       -- {type="item", name="silver-ore", amount=1},
     },
@@ -409,7 +409,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "catalyst-metal-carrier", amount = 10 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
       -- {type="item", name="rutile-ore", amount=1},
       -- {type="item", name="cobalt-ore", amount=1},
     },
@@ -428,7 +428,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "catalyst-metal-carrier", amount = 10 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
       -- {type="item", name="tungsten-ore", amount=1},
       -- {type="item", name="nickel-ore", amount=1},
     },

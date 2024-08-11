@@ -187,11 +187,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-ore8-crushed", amount = 3 },
-      { type = "item", name = "milling-drum", amount = 1 },
+      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "angels-ore8-powder", amount = 3 },
-      { type = "item", name = "milling-drum-used", amount = 1 },
+      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore8-powder",
     --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
@@ -230,11 +230,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-ore9-crushed", amount = 3 },
-      { type = "item", name = "milling-drum", amount = 1 },
+      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "angels-ore9-powder", amount = 3 },
-      { type = "item", name = "milling-drum-used", amount = 1 },
+      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore9-powder",
     --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
@@ -672,7 +672,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-ore8-solution", amount = 60 },
       { type = "fluid", name = "water-purified", amount = 50 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-ore8-slime", amount = 60 },
@@ -778,7 +778,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-ore9-solution", amount = 60 },
       { type = "fluid", name = "water-purified", amount = 50 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-ore9-slime", amount = 60 },
@@ -1010,7 +1010,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "coal", amount = 1 },
-      { type = "item", name = "filter-frame", amount = 5 },
+      { type = "item", name = "filter-frame", amount = 5, ignored_by_stats = 5 },
     },
     results = {
       { type = "item", name = "filter-coal", amount = 5 },
@@ -1049,7 +1049,7 @@ data:extend({
       { type = "fluid", name = "water-purified", amount = 50 },
     },
     results = {
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     icon = "__angelsrefininggraphics__/graphics/icons/filter-ceramic.png",
     icon_size = 32,
@@ -1085,7 +1085,7 @@ data:extend({
       { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = {
-      { type = "item", name = "milling-drum", amount = 1 },
+      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     icon = "__angelsrefininggraphics__/graphics/icons/milling-drum-used.png",
     icon_size = 32,
@@ -1153,7 +1153,7 @@ data:extend({
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 50 },
       { type = "fluid", name = "water-yellow-waste", amount = 40 },
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_stats = 1 },
     },
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
       "coal",
@@ -1172,7 +1172,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "slag-slurry", amount = 35 },
       { type = "fluid", name = "water-purified", amount = 50 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 35 },
@@ -1199,7 +1199,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 50 },
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_stats = 1 },
     },
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
       "coal",
@@ -1218,7 +1218,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "thermal-water", amount = 35 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 35 },
@@ -1411,7 +1411,7 @@ data:extend({
     results = {
       { type = "fluid", name = "crystal-seedling", amount = 50 },
       { type = "fluid", name = "water-yellow-waste", amount = 40 },
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_stats = 1 },
     },
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
       "coal",
@@ -1430,7 +1430,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "crystal-slurry", amount = 35 },
       { type = "fluid", name = "water-purified", amount = 50 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "crystal-seedling", amount = 35 },
@@ -1459,7 +1459,7 @@ data:extend({
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 50 },
       { type = "fluid", name = "water-yellow-waste", amount = 40 },
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_stats = 1 },
     },
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
       "coal",
@@ -1478,7 +1478,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "crystal-slurry", amount = 35 },
       { type = "fluid", name = "water-mineralized", amount = 100 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "mineral-sludge", amount = 35 },

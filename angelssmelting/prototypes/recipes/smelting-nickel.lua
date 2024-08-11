@@ -116,10 +116,10 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "solid-nickel-carbonyl", amount = 18 },
-      { type = "item", name = "ingot-nickel", amount = 6 },
+      { type = "item", name = "ingot-nickel", amount = 6, ignored_by_stats = 6 },
     },
     results = {
-      { type = "item", name = "ingot-nickel", amount = 24 },
+      { type = "item", name = "ingot-nickel", amount = 24, ignored_by_productivity = 6, ignored_by_stats = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("ingot-nickel"),
@@ -191,7 +191,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-nickel", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-nickel", amount = 4 },

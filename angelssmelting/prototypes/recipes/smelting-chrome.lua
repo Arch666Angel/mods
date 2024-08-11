@@ -142,12 +142,12 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-chrome-oxide", amount = 24 },
-      { type = "item", name = "ingot-chrome", amount = 6 },
+      { type = "item", name = "solid-chrome-oxide", amount = 24, ignored_by_stats = 6 },
+      { type = "item", name = "ingot-chrome", amount = 6, ignored_by_stats = 6 },
     },
     results = {
-      { type = "item", name = "ingot-chrome", amount = 24 },
-      { type = "item", name = "solid-chrome-oxide", amount = 6 },
+      { type = "item", name = "ingot-chrome", amount = 24, ignored_by_productivity = 6, ignored_by_stats = 6 },
+      { type = "item", name = "solid-chrome-oxide", amount = 6, ignored_by_productivity = 6, ignored_by_stats = 6 },
     },
     main_product = "ingot-chrome",
     icons = AF.add_number_icon_layer(AF.get_object_icons("ingot-chrome"), 3, angelsmods.smelting.number_tint),
@@ -212,7 +212,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-chrome", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-chrome", amount = 4 },

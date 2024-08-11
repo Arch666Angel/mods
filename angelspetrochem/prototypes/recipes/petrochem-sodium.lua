@@ -10,12 +10,12 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "solid-salt", amount = 10 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "gas-chlorine", amount = 200 },
       { type = "item", name = "solid-sodium", amount = 5 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -35,11 +35,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "solid-sodium-hydroxide", amount = 5 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "solid-sodium", amount = 5 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
       { type = "fluid", name = "water-purified", amount = 50 },
       --{type = "fluid", name = "gas-oxygen", amount = 50}
     },
@@ -104,7 +104,7 @@ data:extend({
     results = {
       { type = "item", name = "solid-sodium-cyanide", amount = 5 },
       { type = "fluid", name = "gas-hydrogen", amount = 30 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "solid-sodium-cyanide",
     icon_size = 32,
@@ -194,12 +194,12 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "solid-sodium-carbonate", amount = 5 },
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
       { type = "fluid", name = "water-purified", amount = 50 },
     },
     results = {
       { type = "fluid", name = "liquid-aqueous-sodium-hydroxide", amount = 50 },
-      { type = "item", name = "angels-electrode-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
       { type = "fluid", name = "gas-carbon-dioxide", amount = 50 },
     },
     main_product = "liquid-aqueous-sodium-hydroxide",
@@ -299,7 +299,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "solid-sodium-perchlorate", amount = 5 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "solid-sodium-perchlorate",
     icon_size = 32,

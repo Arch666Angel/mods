@@ -104,7 +104,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "solid-manganese-oxide", amount = 12 },
-      { type = "item", name = "ingot-iron", amount = 4 },
+      { type = "item", name = "ingot-iron", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "liquid-sulfuric-acid", amount = 40 },
     },
     results = {
@@ -224,7 +224,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-manganese", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-manganese", amount = 4 },

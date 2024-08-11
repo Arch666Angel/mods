@@ -110,10 +110,10 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "liquid-trichlorosilane", amount = 90 },
-      { type = "item", name = "ingot-silicon", amount = 6 },
+      { type = "item", name = "ingot-silicon", amount = 6, ignored_by_stats = 6 },
     },
     results = {
-      { type = "item", name = "ingot-silicon", amount = 24 },
+      { type = "item", name = "ingot-silicon", amount = 24, ignored_by_productivity = 6, ignored_by_stats = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("ingot-silicon"),
@@ -131,10 +131,10 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "gas-silane", amount = 90 },
-      { type = "item", name = "ingot-silicon", amount = 6 },
+      { type = "item", name = "ingot-silicon", amount = 6, ignored_by_stats = 6 },
     },
     results = {
-      { type = "item", name = "ingot-silicon", amount = 24 },
+      { type = "item", name = "ingot-silicon", amount = 24, ignored_by_productivity = 6, ignored_by_stats = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("ingot-silicon"),
@@ -238,12 +238,12 @@ data:extend({
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
-      { type = "item", name = "angels-quartz-crucible", amount = 1 },
+      { type = "item", name = "angels-quartz-crucible", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-mono-silicon", amount = 6 },
-      { type = "item", name = "angels-quartz-crucible", amount = 1, catalyst_amount = 1, probability = 0.80 },
+      { type = "item", name = "angels-quartz-crucible", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1, probability = 0.80 },
     },
     main_product = "angels-mono-silicon",
     icons = angelsmods.functions.add_number_icon_layer(

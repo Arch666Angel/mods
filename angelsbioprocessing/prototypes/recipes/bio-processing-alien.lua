@@ -200,11 +200,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-dust", amount = 10 },
-      { type = "item", name = "milling-drum", amount = 1 },
+      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 20 },
-      { type = "item", name = "milling-drum-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     icons = {
       {

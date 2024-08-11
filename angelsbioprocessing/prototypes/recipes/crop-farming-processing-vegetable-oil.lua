@@ -84,7 +84,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-vegetable-oil", amount = 160 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 40 },
-      { type = "item", name = "filter-frame", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     order = "b[oil-processing]-a",
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
@@ -103,12 +103,12 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "liquid-raw-vegetable-oil", amount = 100 },
       { type = "fluid", name = "water-purified", amount = 100 },
-      { type = "item", name = "filter-ceramic", amount = 1 },
+      { type = "item", name = "filter-ceramic", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "liquid-vegetable-oil", amount = 180 },
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "item", name = "filter-ceramic-used", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "filter-ceramic-used", amount = 1, ignored_by_productivity = 1 },
     },
     order = "b[oil-processing]-b",
     icons = angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(

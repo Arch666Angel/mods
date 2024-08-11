@@ -54,13 +54,13 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "temperate-3-seed", amount = 5 },
+      { type = "item", name = "temperate-3-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "item", name = "temperate-3", amount_min = 40, amount_max = 60 },
-      { type = "item", name = "temperate-3-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "temperate-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-3",
     icon_size = 32,
@@ -77,14 +77,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "temperate-4-seed", amount = 5 },
+      { type = "item", name = "temperate-4-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-soil", amount = 5 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "item", name = "temperate-4", amount_min = 40, amount_max = 60 },
-      { type = "item", name = "temperate-4-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "temperate-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-4",
     icon_size = 32,
@@ -101,14 +101,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "temperate-5-seed", amount = 5 },
+      { type = "item", name = "temperate-5-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-soil", amount = 5 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "item", name = "temperate-5", amount_min = 40, amount_max = 60 },
-      { type = "item", name = "temperate-5-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "temperate-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-5",
     icon_size = 32,
@@ -158,10 +158,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "temperate-3-seed-dormant", amount = 5 },
+      { type = "item", name = "temperate-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "temperate-3-seed", amount = 5 },
+      { type = "item", name = "temperate-3-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "temperate-3-seed", amount = 1, probability = 0.05 },
     },
     main_product = "temperate-3-seed",
@@ -176,10 +176,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "temperate-4-seed-dormant", amount = 5 },
+      { type = "item", name = "temperate-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "temperate-4-seed", amount = 5 },
+      { type = "item", name = "temperate-4-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "temperate-4-seed", amount = 1, probability = 0.05 },
     },
     main_product = "temperate-4-seed",
@@ -194,10 +194,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "temperate-5-seed-dormant", amount = 5 },
+      { type = "item", name = "temperate-5-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "temperate-5-seed", amount = 5 },
+      { type = "item", name = "temperate-5-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "temperate-5-seed", amount = 1, probability = 0.05 },
     },
     main_product = "temperate-5-seed",
@@ -259,13 +259,13 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "desert-3-seed", amount = 5 },
+      { type = "item", name = "desert-3-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-sand", amount = 10 },
       { type = "fluid", name = "water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-3", amount_min = 30, amount_max = 40 },
-      { type = "item", name = "desert-3-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "desert-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-3",
     icon_size = 32,
@@ -282,14 +282,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "desert-4-seed", amount = 5 },
+      { type = "item", name = "desert-4-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-sand", amount = 10 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-4", amount_min = 30, amount_max = 40 },
-      { type = "item", name = "desert-4-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "desert-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-4",
     icon_size = 32,
@@ -306,14 +306,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "desert-5-seed", amount = 5 },
+      { type = "item", name = "desert-5-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-sand", amount = 10 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-5", amount_min = 30, amount_max = 40 },
-      { type = "item", name = "desert-5-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "desert-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-5",
     icon_size = 32,
@@ -363,10 +363,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "desert-3-seed-dormant", amount = 5 },
+      { type = "item", name = "desert-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "desert-3-seed", amount = 5 },
+      { type = "item", name = "desert-3-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "desert-3-seed", amount = 1, probability = 0.05 },
     },
     main_product = "desert-3-seed",
@@ -381,10 +381,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "desert-4-seed-dormant", amount = 5 },
+      { type = "item", name = "desert-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "desert-4-seed", amount = 5 },
+      { type = "item", name = "desert-4-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "desert-4-seed", amount = 1, probability = 0.05 },
     },
     main_product = "desert-4-seed",
@@ -399,10 +399,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "desert-5-seed-dormant", amount = 5 },
+      { type = "item", name = "desert-5-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "desert-5-seed", amount = 5 },
+      { type = "item", name = "desert-5-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "desert-5-seed", amount = 1, probability = 0.05 },
     },
     main_product = "desert-5-seed",
@@ -464,13 +464,13 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "swamp-3-seed", amount = 5 },
+      { type = "item", name = "swamp-3-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-mud", amount = 10 },
       { type = "fluid", name = "water-concentrated-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-3", amount_min = 40, amount_max = 50 },
-      { type = "item", name = "swamp-3-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "swamp-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-3",
     icon_size = 32,
@@ -487,14 +487,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "swamp-4-seed", amount = 5 },
+      { type = "item", name = "swamp-4-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-mud", amount = 10 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-4", amount_min = 40, amount_max = 50 },
-      { type = "item", name = "swamp-4-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "swamp-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-4",
     icon_size = 32,
@@ -511,14 +511,14 @@ data:extend({
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "swamp-5-seed", amount = 5 },
+      { type = "item", name = "swamp-5-seed", amount = 5, ignored_by_stats = 5 },
       { type = "item", name = "solid-mud", amount = 10 },
       { type = "item", name = "solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water-thin-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-5", amount_min = 40, amount_max = 50 },
-      { type = "item", name = "swamp-5-seed-dormant", amount = 5, catalyst_amount = 5 },
+      { type = "item", name = "swamp-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-5",
     icon_size = 32,
@@ -568,10 +568,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "swamp-3-seed-dormant", amount = 5 },
+      { type = "item", name = "swamp-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "swamp-3-seed", amount = 5 },
+      { type = "item", name = "swamp-3-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "swamp-3-seed", amount = 1, probability = 0.05 },
     },
     main_product = "swamp-3-seed",
@@ -586,10 +586,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "swamp-4-seed-dormant", amount = 5 },
+      { type = "item", name = "swamp-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "swamp-4-seed", amount = 5 },
+      { type = "item", name = "swamp-4-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "swamp-4-seed", amount = 1, probability = 0.05 },
     },
     main_product = "swamp-4-seed",
@@ -604,10 +604,10 @@ data:extend({
     enabled = false,
     energy_required = 0.5,
     ingredients = {
-      { type = "item", name = "swamp-5-seed-dormant", amount = 5 },
+      { type = "item", name = "swamp-5-seed-dormant", amount = 5, ignored_by_stats = 5 },
     },
     results = {
-      { type = "item", name = "swamp-5-seed", amount = 5 },
+      { type = "item", name = "swamp-5-seed", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5 },
       { type = "item", name = "swamp-5-seed", amount = 1, probability = 0.05 },
     },
     main_product = "swamp-5-seed",

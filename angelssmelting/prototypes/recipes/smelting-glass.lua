@@ -136,11 +136,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-glass", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, catalyst_amount = 32 },
+      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-coil-glass-fiber", amount = 8 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, catalyst_amount = 40, temperature = 300 },
+      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-coil-glass-fiber",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -181,11 +181,11 @@ data:extend({
     energy_required = 3,
     ingredients = {
       { type = "fluid", name = "liquid-molten-glass", amount = 40 },
-      { type = "fluid", name = "liquid-molten-lead", amount = 20, catalyst_amount = 20 },
+      { type = "fluid", name = "liquid-molten-lead", amount = 20 },
     },
     results = {
       { type = "item", name = "angels-plate-glass", amount = 4 },
-      { type = "item", name = "solid-lead-oxide", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "solid-lead-oxide", amount = 2, ignored_by_productivity = 2 },
     },
     main_product = "angels-plate-glass",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -204,12 +204,12 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "liquid-molten-glass", amount = 40 },
-      { type = "fluid", name = "liquid-molten-tin", amount = 20, catalyst_amount = 20 },
+      { type = "fluid", name = "liquid-molten-tin", amount = 20 },
       { type = "fluid", name = "gas-nitrogen", amount = 20 },
     },
     results = {
       { type = "item", name = "angels-plate-glass", amount = 5 },
-      { type = "item", name = "ingot-tin", amount = 2, catalyst_amount = 2 },
+      { type = "item", name = "ingot-tin", amount = 2, ignored_by_productivity = 2 },
     },
     main_product = "angels-plate-glass",
     icons = angelsmods.functions.add_number_icon_layer(

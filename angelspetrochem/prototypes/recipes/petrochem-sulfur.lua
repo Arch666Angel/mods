@@ -17,7 +17,7 @@ data:extend({
       { type = "fluid", name = "gas-hydrogen-sulfide", amount = 60 },
       { type = "fluid", name = "gas-carbon-dioxide", amount = 20 },
       { type = "fluid", name = "gas-hydrogen-fluoride", amount = 20 },
-      { type = "item", name = "catalyst-metal-carrier", amount = 1, catalyst_amount = 1 },
+      { type = "item", name = "catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
@@ -224,7 +224,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "stone-crushed", amount = 5 },
     },
     results = {
@@ -246,7 +246,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 20 },
     },
     results = {
-      { type = "item", name = "filter-lime-used", amount = 1 },
+      { type = "item", name = "filter-lime-used", amount = 1, ignored_by_productivity = 1 },
       { type = "fluid", name = "water-yellow-waste", amount = 20 },
     },
     always_show_products = true,
@@ -269,7 +269,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "gas-acid", amount = 20 },
-      { type = "item", name = "filter-frame", amount = 1 },
+      { type = "item", name = "filter-frame", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "gas-acid",
     always_show_products = true,
