@@ -51,15 +51,15 @@ if angelsmods.industries.components then
       {
         name = "construction-robot",
         ingredients = {
-          { type = "item", name = "robot-brain-construction", amount = 1 },
-          { type = "item", name = "robot-tool-construction", amount = 1 },
+          { type = "item", name = "bob-robot-brain", amount = 1 },
+          { type = "item", name = "bob-robot-tool", amount = 1 },
         },
       },
       {
         name = "logistic-robot",
         ingredients = {
-          { type = "item", name = "robot-brain-logistic", amount = 1 },
-          { type = "item", name = "robot-tool-logistic", amount = 1 },
+          { type = "item", name = "bob-robot-brain", amount = 1 },
+          { type = "item", name = "bob-robot-tool", amount = 1 },
         },
       },
     })
