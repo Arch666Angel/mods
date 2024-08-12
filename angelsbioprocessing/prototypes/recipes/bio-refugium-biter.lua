@@ -351,7 +351,7 @@ data:extend({
       { type = "fluid", name = "liquid-nutrient-pulp", amount = 40 },
     },
     results = {
-      { type = "item", name = "biter-medium", amount = 3, , ignored_by_productivity = 3, ignored_by_stats = 3 },
+      { type = "item", name = "biter-medium", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
         name = "biter-medium",

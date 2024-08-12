@@ -347,7 +347,7 @@ data:extend({
         amount = 1,
         probability = 0.98,
         ignored_by_productivity = 1,
-        ignored_by_stats = 1
+        ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
       { type = "item", name = "bio-puffer-3", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
