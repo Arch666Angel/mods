@@ -409,12 +409,12 @@ function angelsmods.functions.AI.replace_gen_mats()
       angelsmods.functions.add_flag(nme, "hidden")
       if info.unlock_by then
         OV.remove_unlock(info.unlock_by, nme)
-        if info.alt_rec and data.raw.recipe[alt_rec] then --check if recipe actually exists
-          OV.remove_unlock(info.unlock_by, alt_rec)
+        if info.alt_rec and data.raw.recipe[info.alt_rec] then --check if recipe actually exists
+          OV.remove_unlock(info.unlock_by, info.alt_rec)
         end
       end
-      if info.alt_rec and data.raw.recipe[alt_rec] then --check if recipe actually exists
-        data.raw.recipe[alt_rec].hidden = true
+      if info.alt_rec and data.raw.recipe[info.alt_rec] then --check if recipe actually exists
+        data.raw.recipe[info.alt_rec].hidden = true
       end
     end
   end
