@@ -12,7 +12,7 @@ for spawner_idx, spawner_data in pairs(navive_data) do
     data:extend({
       {
         type = "tips-and-tricks-item",
-        name = "angels-native-inhabitants-unit[" .. unit_name .. "]",
+        name = "angels-native-inhabitants-unit-" .. unit_name,
 
         is_title = false,
         tag = "[entity=" .. unit_name .. "]",
@@ -36,14 +36,14 @@ for spawner_idx, spawner_data in pairs(navive_data) do
         dependencies = { "angelsexploration" },
         trigger = {
           type = "research",
-          technology = "tips-and-tricks-trigger[angels-native-inhabitants-unit[" .. unit_name .. "]]",
+          technology = "tips-and-tricks-trigger-angels-native-inhabitants-unit-" .. unit_name,
         },
 
         --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",
       },
       {
         type = "technology",
-        name = "tips-and-tricks-trigger[angels-native-inhabitants-unit[" .. unit_name .. "]]",
+        name = "tips-and-tricks-trigger-angels-native-inhabitants-unit-" .. unit_name,
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         icon_mipmaps = 1,
