@@ -54,7 +54,7 @@ data:extend({
   {
     type = "recipe",
     name = "cobalt-ore-processing-alt",
-    category = "ore-processing-2",
+    category = "chemical-smelting-2",
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
