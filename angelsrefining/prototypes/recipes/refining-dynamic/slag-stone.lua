@@ -314,9 +314,6 @@ data:extend({
     results = {
       { type = "item", name = "stone-crushed", amount = 2 },
     },
-    main_product = "stone-crushed",
-    icon = "__angelsrefining__/graphics/icons/stone-crushed.png",
-    icon_size = 32,
     order = "c[slag-processing-stone]",
   },
   {
