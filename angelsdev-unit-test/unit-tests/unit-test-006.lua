@@ -113,44 +113,6 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["bobmodules"] and settings.startup["bobmods-modules-enable-modules-lab"].value then
-    for pack_name, pack_level in pairs({
-      -- bobs module science packs
-      ["speed-processor"] = (
-        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
-      ),
-      ["effectivity-processor"] = (
-        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
-      ),
-      ["productivity-processor"] = (
-        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
-      ),
-      ["pollution-clean-processor"] = (
-        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
-      ),
-      ["pollution-create-processor"] = (
-        science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]
-      ),
-      ["module-circuit-board"] = (
-        science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]
-      ),
-      ["module-case"] = (
-        science_pack_level["angels-science-pack-yellow"] or science_pack_level["production-science-pack"]
-      ),
-    }) do
-      science_pack_level[pack_name] = pack_level
-    end
-    technologies_to_ignore["effectivity-module-5"] = true
-    technologies_to_ignore["green-module-1"] = true
-    technologies_to_ignore["god-module-1"] = true
-    technologies_to_ignore["pollution-clean-module-5"] = true
-    technologies_to_ignore["pollution-create-module-5"] = true
-    technologies_to_ignore["productivity-module-5"] = true
-    technologies_to_ignore["raw-productivity-module-1"] = true
-    technologies_to_ignore["raw-speed-module-1"] = true
-    technologies_to_ignore["speed-module-5"] = true
-  end
-
   if game.active_mods["SeaBlock"] then
     for pack_name, pack_level in pairs({
       ["sb-angelsore3-tool"] = 0,
