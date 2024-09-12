@@ -150,7 +150,7 @@ data:extend({
   {
     type = "recipe",
     name = "powder-titanium",
-    category = "advanced-crafting",
+    category = "powderizing-2",
     subgroup = "angels-titanium",
     energy_required = 0.5,
     enabled = false,
