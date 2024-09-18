@@ -46,8 +46,8 @@ if mods["bobmodules"] then
     data.raw["item"]["module-processor-board-3"].subgroup = "module-intermediates-3"
     data.raw["item"]["speed-processor-2"].subgroup = "module-intermediates-2"
     data.raw["item"]["speed-processor-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["effectivity-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["effectivity-processor-3"].subgroup = "module-intermediates-3"
+    data.raw["item"]["efficiency-processor-2"].subgroup = "module-intermediates-2"
+    data.raw["item"]["efficiency-processor-3"].subgroup = "module-intermediates-3"
     data.raw["item"]["productivity-processor-2"].subgroup = "module-intermediates-2"
     data.raw["item"]["productivity-processor-3"].subgroup = "module-intermediates-3"
     data.raw["item"]["pollution-clean-processor-2"].subgroup = "module-intermediates-2"
@@ -67,19 +67,19 @@ if mods["bobmodules"] then
       { name = "productivity-module", ingredients = { { type = "item", name = "crystal-splinter-red", amount = 0 } } },
       { name = "productivity-module-2", ingredients = { { type = "item", name = "crystal-shard-red", amount = 0 } } },
       { name = "productivity-module-3", ingredients = { { type = "item", name = "crystal-full-red", amount = 0 } } },
-      { name = "effectivity-module", ingredients = { { type = "item", name = "crystal-splinter-green", amount = 0 } } },
-      { name = "effectivity-module-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 0 } } },
-      { name = "effectivity-module-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 0 } } },
+      { name = "efficiency-module", ingredients = { { type = "item", name = "crystal-splinter-green", amount = 0 } } },
+      { name = "efficiency-module-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 0 } } },
+      { name = "efficiency-module-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 0 } } },
     })
     OV.remove_prereq("speed-module", "bio-processing-crystal-splinter-1")
     OV.remove_prereq("productivity-module", "bio-processing-crystal-splinter-1")
-    OV.remove_prereq("effectivity-module", "bio-processing-crystal-splinter-1")
+    OV.remove_prereq("efficiency-module", "bio-processing-crystal-splinter-1")
     OV.remove_prereq("speed-module-2", "bio-processing-crystal-shard-1")
     OV.remove_prereq("productivity-module-2", "bio-processing-crystal-shard-1")
-    OV.remove_prereq("effectivity-module-2", "bio-processing-crystal-shard-1")
+    OV.remove_prereq("efficiency-module-2", "bio-processing-crystal-shard-1")
     OV.remove_prereq("speed-module-3", "bio-processing-crystal-full")
     OV.remove_prereq("productivity-module-3", "bio-processing-crystal-full")
-    OV.remove_prereq("effectivity-module-3", "bio-processing-crystal-full")
+    OV.remove_prereq("efficiency-module-3", "bio-processing-crystal-full")
   end
 
   OV.patch_recipes({
@@ -90,11 +90,11 @@ if mods["bobmodules"] then
     { name = "productivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-red", amount = 1 } } },
     { name = "productivity-processor-3", ingredients = { { type = "item", name = "crystal-full-red", amount = 1 } } },
     {
-      name = "effectivity-processor",
+      name = "efficiency-processor",
       ingredients = { { type = "item", name = "crystal-splinter-green", amount = 1 } },
     },
-    { name = "effectivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 1 } } },
-    { name = "effectivity-processor-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 1 } } },
+    { name = "efficiency-processor-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 1 } } },
+    { name = "efficiency-processor-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 1 } } },
     {
       name = "pollution-clean-processor",
       ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } },
@@ -128,7 +128,7 @@ if mods["bobmodules"] then
   OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
   OV.add_prereq("pollution-clean-module-1", "bio-processing-crystal-splinter-2")
   OV.add_prereq("pollution-create-module-1", "bio-processing-crystal-splinter-2")
-  for _, type in pairs({ "speed", "effectivity", "productivity" }) do
+  for _, type in pairs({ "speed", "efficiency", "productivity" }) do
     -- remove the marked as upgrade from base game
     local tech = data.raw.technology[type .. "-module-2"]
     if tech then
@@ -168,14 +168,14 @@ if mods["bobmodules"] then
     },
   })
   OV.remove_unlock("advanced-electronics-2", "module-processor-board-2")
-  for _, type in pairs({ "speed", "effectivity", "productivity" }) do
+  for _, type in pairs({ "speed", "efficiency", "productivity" }) do
     -- remove the marked as upgrade from base game
     local tech = data.raw.technology[type .. "-module-3"]
     if tech then
       tech.upgrade = "false"
     end
   end
-  for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
+  for _, type in pairs({ "speed", "efficiency", "productivity", "pollution-clean", "pollution-create" }) do
     OV.add_prereq(type .. "-module-3", "modules-2")
     OV.set_research_difficulty(type .. "-module-3", 60, 100)
     OV.set_research_difficulty(type .. "-module-4", 60, 150)
@@ -217,7 +217,7 @@ if mods["bobmodules"] then
       order = "i-a",
     },
   })
-  for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
+  for _, type in pairs({ "speed", "efficiency", "productivity", "pollution-clean", "pollution-create" }) do
     OV.add_prereq(type .. "-module-6", "modules-3")
     OV.set_research_difficulty(type .. "-module-6", 120, 300)
     OV.set_research_difficulty(type .. "-module-7", 120, 400)
@@ -233,7 +233,7 @@ if mods["bobmodules"] then
     OV.add_prereq("modules-3", "advanced-electronics-3")
     OV.remove_prereq("speed-module-6", "advanced-electronics-3")
     OV.remove_prereq("productivity-module-6", "advanced-electronics-3")
-    OV.remove_prereq("effectivity-module-6", "advanced-electronics-3")
+    OV.remove_prereq("efficiency-module-6", "advanced-electronics-3")
     OV.remove_prereq("pollution-clean-module-6", "advanced-electronics-3")
     OV.remove_prereq("pollution-create-module-6", "advanced-electronics-3")
   else
@@ -271,7 +271,7 @@ if mods["bobmodules"] then
         { "!!" },
         --{ type = "item", name = "solder", amount = 1 },
         { type = "item", name = "productivity-module", amount = 1 },
-        { type = "item", name = "effectivity-module", amount = 1 },
+        { type = "item", name = "efficiency-module", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
     },
@@ -281,7 +281,7 @@ if mods["bobmodules"] then
         { "!!" },
         --{ type = "item", name = "solder", amount = 2 },
         { type = "item", name = "productivity-module-2", amount = 1 },
-        { type = "item", name = "effectivity-module-2", amount = 1 },
+        { type = "item", name = "efficiency-module-2", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
     },
@@ -291,7 +291,7 @@ if mods["bobmodules"] then
         { "!!" },
         --{ type = "item", name = "solder", amount = 3 },
         { type = "item", name = "productivity-module-3", amount = 1 },
-        { type = "item", name = "effectivity-module-3", amount = 1 },
+        { type = "item", name = "efficiency-module-3", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
       },
     },
@@ -336,7 +336,7 @@ if mods["bobmodules"] then
     local ingredients_added = { ["token-bio"] = true }
     for _, tech_name in pairs({
       i > 1 and "productivity-module-" .. i or "productivity-module",
-      i > 1 and "effectivity-module-" .. i or "effectivity-module",
+      i > 1 and "efficiency-module-" .. i or "efficiency-module",
     }) do
       for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
         if not ingredients_added[ingredient[1]] then
@@ -358,7 +358,7 @@ if mods["bobmodules"] then
     local ingredients_added = { ["token-bio"] = true }
     for _, tech_name in pairs({
       "productivity-module-" .. (i < 6 and 4 or 6),
-      "effectivity-module-" .. (i < 6 and 4 or 6),
+      "efficiency-module-" .. (i < 6 and 4 or 6),
     }) do
       for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
         if not ingredients_added[ingredient[1]] then
@@ -400,7 +400,7 @@ if mods["bobmodules"] then
         ingredients = {
           --{type = "item", name = "solder", amount = solder_amount},
           { type = "item", name = "productivity-module-" .. i, amount = 1 },
-          { type = "item", name = "effectivity-module-" .. i, amount = 1 },
+          { type = "item", name = "efficiency-module-" .. i, amount = 1 },
           { type = "item", name = "token-bio", amount = 1 },
         },
         energy_required = 15,
@@ -415,7 +415,7 @@ if mods["bobmodules"] then
         prerequisites = {
           "angels-bio-yield-module-" .. i - 1,
           "productivity-module-" .. i,
-          "effectivity-module-" .. i,
+          "efficiency-module-" .. i,
         },
         effects = {
           {

@@ -27,7 +27,7 @@ if alien_technology then
       for _, tech_name in pairs({
         "speed-module-5",
         "productivity-module-5",
-        "effectivity-module-5",
+        "efficiency-module-5",
         "pollution-clean-module-5",
         "pollution-create-module-5",
       }) do

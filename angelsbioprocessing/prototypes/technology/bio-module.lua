@@ -7,7 +7,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "productivity-module",
-      "effectivity-module",
+      "efficiency-module",
       "gardens-2",
     },
     effects = {
@@ -35,7 +35,7 @@ data:extend({
     prerequisites = {
       "angels-bio-yield-module",
       "productivity-module-2",
-      "effectivity-module-2",
+      "efficiency-module-2",
     },
     effects = {
       {
@@ -63,7 +63,7 @@ data:extend({
     prerequisites = {
       "angels-bio-yield-module-2",
       "productivity-module-3",
-      "effectivity-module-3",
+      "efficiency-module-3",
     },
     effects = {
       {

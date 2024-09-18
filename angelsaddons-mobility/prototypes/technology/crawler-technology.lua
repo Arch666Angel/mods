@@ -58,9 +58,9 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
 
   local extra_prereq = {
     nil,
-    { "speed-module", "effectivity-module" },
-    { "speed-module-2", "effectivity-module-2", "low-density-structure", "electric-engine" },
-    { "speed-module-3", "effectivity-module-3", "construction-robotics" },
+    { "speed-module", "efficiency-module" },
+    { "speed-module-2", "efficiency-module-2", "low-density-structure", "electric-engine" },
+    { "speed-module-3", "efficiency-module-3", "construction-robotics" },
     { "rocket-control-unit", "logistic-system" },
   }
 

@@ -117,13 +117,13 @@ if angelsmods.industries.components then
         },
       },
       {
-        name = "effectivity-module",
+        name = "efficiency-module",
         ingredients = {
           { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded" },
         },
       },
       {
-        name = "effectivity-module-3",
+        name = "efficiency-module-3",
         ingredients = {
           { type = "item", name = "circuit-orange-loaded", amount = "circuit-green-loaded" },
           { type = "item", name = "circuit-yellow-loaded", amount = "circuit-blue-loaded" },
@@ -159,9 +159,9 @@ if angelsmods.industries.components then
     OV.add_prereq("speed-module", "tech-orange-circuit")
     OV.add_prereq("speed-module-2", "tech-blue-circuit")
     OV.add_prereq("speed-module-3", "tech-yellow-circuit")
-    OV.add_prereq("effectivity-module", "tech-orange-circuit")
-    OV.add_prereq("effectivity-module-2", "tech-blue-circuit")
-    OV.add_prereq("effectivity-module-3", "tech-yellow-circuit")
+    OV.add_prereq("efficiency-module", "tech-orange-circuit")
+    OV.add_prereq("efficiency-module-2", "tech-blue-circuit")
+    OV.add_prereq("efficiency-module-3", "tech-yellow-circuit")
     OV.add_prereq("productivity-module", "tech-orange-circuit")
     OV.add_prereq("productivity-module-2", "tech-blue-circuit")
     OV.add_prereq("productivity-module-3", "tech-yellow-circuit")

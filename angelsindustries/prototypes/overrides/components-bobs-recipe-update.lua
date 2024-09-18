@@ -177,7 +177,7 @@ if angelsmods.industries.components then
   if mods["bobmodules"] then
     --replace green with orange boards on logic step
     local module_recs = {}
-    for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
+    for _, type in pairs({ "speed", "efficiency", "productivity", "pollution-clean", "pollution-create" }) do
       table.insert(module_recs, {
         name = type .. "-processor-2",
         ingredients = {

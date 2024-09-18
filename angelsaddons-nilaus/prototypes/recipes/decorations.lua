@@ -70,7 +70,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "nilaus-truck", amount = 1 },
         { type = "item", name = "speed-module-2", amount = 2 },
-        { type = "item", name = "effectivity-module-2", amount = 1 },
+        { type = "item", name = "efficiency-module-2", amount = 1 },
         { type = "item", name = "advanced-circuit", amount = 20 },
         { type = "item", name = "electric-engine-unit", amount = 25 },
       },
@@ -82,7 +82,7 @@ data:extend({
       ingredients = {
         { type = "item", name = "nilaus-truck", amount = 1 },
         { type = "item", name = "speed-module-2", amount = 2 },
-        { type = "item", name = "effectivity-module-2", amount = 2 },
+        { type = "item", name = "efficiency-module-2", amount = 2 },
         { type = "item", name = "advanced-circuit", amount = 30 },
         { type = "item", name = "electric-engine-unit", amount = 55 },
       },

@@ -414,7 +414,7 @@ if angelsmods.industries.components then
     else
       OV.set_science_pack("speed-module-3", "utility-science-pack", 1)
       OV.set_science_pack("productivity-module-3", "utility-science-pack", 1)
-      OV.set_science_pack("effectivity-module-3", "utility-science-pack", 1)
+      OV.set_science_pack("efficiency-module-3", "utility-science-pack", 1)
       OV.set_science_pack("angels-bio-yield-module-3", "utility-science-pack", 1)
     end
   end

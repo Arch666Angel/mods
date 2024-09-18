@@ -141,11 +141,11 @@ if angelsmods.industries.tech then
     AI.pack_replace("speed-module-7", "blue", "yellow")
     AI.pack_replace("speed-module-8", "blue", "yellow")
 
-    AI.pack_replace("effectivity-module-2", "green", "orange")
-    AI.pack_replace("effectivity-module-3", "yellow", "blue")
-    AI.pack_replace("effectivity-module-6", "blue", "yellow")
-    AI.pack_replace("effectivity-module-7", "blue", "yellow")
-    AI.pack_replace("effectivity-module-8", "blue", "yellow")
+    AI.pack_replace("efficiency-module-2", "green", "orange")
+    AI.pack_replace("efficiency-module-3", "yellow", "blue")
+    AI.pack_replace("efficiency-module-6", "blue", "yellow")
+    AI.pack_replace("efficiency-module-7", "blue", "yellow")
+    AI.pack_replace("efficiency-module-8", "blue", "yellow")
 
     AI.pack_replace("productivity-module-2", "green", "orange")
     AI.pack_replace("productivity-module-3", "yellow", "blue")
