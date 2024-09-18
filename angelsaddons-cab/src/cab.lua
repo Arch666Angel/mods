@@ -64,16 +64,16 @@ end
 return {
 
   init = function()
-    if not global.vehicleData then
-      global.vehicleData = {}
+    if not storage.vehicleData then
+      storage.vehicleData = {}
     end
 
-    global.vehicleData.version = 1.2
-    global.vehicleData.entityName = "angels-cab"
-    global.vehicleData.positionIdentifier = "%u(%gx%g)"
+    storage.vehicleData.version = 1.2
+    storage.vehicleData.entityName = "angels-cab"
+    storage.vehicleData.positionIdentifier = "%u(%gx%g)"
 
-    global.vehicleData.openedCabs = {}
-    global.vehicleData.onTickActive = false
+    storage.vehicleData.openedCabs = {}
+    storage.vehicleData.onTickActive = false
   end,
 
   deploy = function(entity)
@@ -121,11 +121,11 @@ return {
     end
 
     -- check if this vehicle is already deployed
-    local identifier = string.format(global.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
-    if not global.vehicleData.deployedCabs then
-      global.vehicleData.deployedCabs = {}
+    local identifier = string.format(storage.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
+    if not storage.vehicleData.deployedCabs then
+      storage.vehicleData.deployedCabs = {}
     end
-    if global.vehicleData.deployedCabs[identifier] then
+    if storage.vehicleData.deployedCabs[identifier] then
       return cannotDeploy(deployedCab["angels-cab"], { "angels-cab-messages.deploy-alreadyDeployed" })
     end
 
@@ -159,7 +159,7 @@ return {
     deployedCab["angels-cab"].minable = false
     deployedCab["angels-cab"].effectivity_modifier = 0
     deployedCab["angels-cab"].consumption_modifier = 0
-    global.vehicleData.deployedCabs[identifier] = deployedCab
+    storage.vehicleData.deployedCabs[identifier] = deployedCab
     return true
   end,
 
@@ -207,16 +207,16 @@ return {
     end
 
     -- check if this vehicle is deployed
-    local identifier = string.format(global.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
-    if not global.vehicleData.deployedCabs then
-      global.vehicleData.deployedCabs = {}
+    local identifier = string.format(storage.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
+    if not storage.vehicleData.deployedCabs then
+      storage.vehicleData.deployedCabs = {}
     end
-    if not global.vehicleData.deployedCabs[identifier] then -- not deployed yet
+    if not storage.vehicleData.deployedCabs[identifier] then -- not deployed yet
       return cannotUndeploy(deployedCab, "angels-cab-messages.undeploy-notDeployed")
     end
 
     -- undeploy the vehicle
-    deployedCab = global.vehicleData.deployedCabs[identifier]
+    deployedCab = storage.vehicleData.deployedCabs[identifier]
     for _, entityName in pairs({
       "angels-cab-energy-interface",
       "angels-cab-electric-pole",
@@ -228,33 +228,33 @@ return {
     deployedCab["angels-cab"].minable = true
     deployedCab["angels-cab"].effectivity_modifier = 1
     deployedCab["angels-cab"].consumption_modifier = 1
-    global.vehicleData.deployedCabs[identifier] = nil
+    storage.vehicleData.deployedCabs[identifier] = nil
     return true
   end,
 
   is_deployed = function(entity)
-    if not global.vehicleData.deployedCabs then
+    if not storage.vehicleData.deployedCabs then
       return false
     end
 
     local identifier = string.format(
-      global.vehicleData.positionIdentifier,
+      storage.vehicleData.positionIdentifier,
       entity.surface.index,
       math.floor(entity.position.y) + 0.5,
       math.floor(entity.position.x) + 0.5
     )
 
-    return (global.vehicleData.deployedCabs[identifier] and true or false)
+    return (storage.vehicleData.deployedCabs[identifier] and true or false)
   end,
 
   tick = function()
-    for _, deployedCab in pairs(global.vehicleData.deployedCabs) do
+    for _, deployedCab in pairs(storage.vehicleData.deployedCabs) do
       tick_updateDeployedCab(deployedCab)
     end
   end,
 
   destroyed = function(entity)
-    if not global.vehicleData.deployedCabs then
+    if not storage.vehicleData.deployedCabs then
       return false
     end
 
@@ -264,9 +264,9 @@ return {
       x = math.floor(entity.position.x) + 0.5,
       y = math.floor(entity.position.y) + 0.5,
     }
-    local identifier = string.format(global.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
+    local identifier = string.format(storage.vehicleData.positionIdentifier, surfaceIndex, position.y, position.x)
 
-    local deployedCab = global.vehicleData.deployedCabs[identifier]
+    local deployedCab = storage.vehicleData.deployedCabs[identifier]
     if not deployedCab then
       return false
     end
@@ -282,20 +282,20 @@ return {
     end
 
     -- remove the destroyed cab from the list
-    global.vehicleData.deployedCabs[identifier] = nil
+    storage.vehicleData.deployedCabs[identifier] = nil
     return true
   end,
 
   player_opened_cab = function(playerIndex, entity)
-    global.vehicleData.openedCabs[playerIndex] = entity
+    storage.vehicleData.openedCabs[playerIndex] = entity
   end,
 
   get_opened_cab = function(playerIndex)
-    local entity = global.vehicleData.openedCabs[playerIndex]
+    local entity = storage.vehicleData.openedCabs[playerIndex]
     if entity.valid then
       return entity
     else
-      global.vehicleData.openedCabs[playerIndex] = nil
+      storage.vehicleData.openedCabs[playerIndex] = nil
       return nil
     end
   end,

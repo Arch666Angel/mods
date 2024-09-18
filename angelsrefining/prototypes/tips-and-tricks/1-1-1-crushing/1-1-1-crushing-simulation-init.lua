@@ -44,7 +44,7 @@ game.surfaces[1].create_entity({
   type = "output",
 })
 -- infinity chest (source)
-global.sink = game.surfaces[1]
+storage.sink = game.surfaces[1]
   .create_entity({
     name = "infinity-chest",
     position = { -14, -3 },

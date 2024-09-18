@@ -28,21 +28,21 @@ script.on_configuration_changed(onConfigChanged)
 
 function setOnTickState(status)
   if status == true then -- activate onTick
-    if global.vehicleData.deployedCabs and next(global.vehicleData.deployedCabs) then
+    if storage.vehicleData.deployedCabs and next(storage.vehicleData.deployedCabs) then
       script.on_event(defines.events.on_tick, cab.tick)
-      global.vehicleData.onTickActive = true
+      storage.vehicleData.onTickActive = true
     end
   else -- status == false -- deactivate onTick
-    if not global.vehicleData.deployedCabs or (not next(global.vehicleData.deployedCabs)) then
+    if not storage.vehicleData.deployedCabs or (not next(storage.vehicleData.deployedCabs)) then
       script.on_event(defines.events.on_tick, nil)
-      global.vehicleData.onTickActive = false
+      storage.vehicleData.onTickActive = false
     end
   end
 end
 
 script.on_load(function()
   -- sync mod status when player joins map
-  setOnTickState(global.vehicleData.onTickActive)
+  setOnTickState(storage.vehicleData.onTickActive)
 end)
 
 script.on_event(defines.events.on_trigger_created_entity, function(event)
@@ -76,7 +76,7 @@ end)
 script.on_event(defines.events.on_built_entity, function(event)
   if event.created_entity and
      event.created_entity.valid and
-     event.created_entity.name == global.vehicleData.entityName then
+     event.created_entity.name == storage.vehicleData.entityName then
   end
 end)
 ]]

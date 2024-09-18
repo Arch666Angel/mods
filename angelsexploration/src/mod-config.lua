@@ -16,7 +16,7 @@ return function(configuration_data)
     --------------------------------------------------
     -- Gathering turret script                      --
     --------------------------------------------------
-    if not global.GT_data then
+    if not storage.GT_data then
       log("Updating gathering turret from version 0 to version 1.")
       gathering_turret:on_init()
     end
@@ -24,7 +24,7 @@ return function(configuration_data)
     --------------------------------------------------
     -- Turbo bike script                            --
     --------------------------------------------------
-    if not global.TB_data then
+    if not storage.TB_data then
       log("Updating turbo bike from version 0 to version 1.")
       turbo_bike:on_init()
     end
@@ -32,7 +32,7 @@ return function(configuration_data)
     --------------------------------------------------
     -- Tips and tricks trigger script               --
     --------------------------------------------------
-    if not global.TNT_data then
+    if not storage.TNT_data then
       log("Updating tips and tricks triggers from version 0 to version 1.")
       tips_and_tricks_triggers:on_init()
     end

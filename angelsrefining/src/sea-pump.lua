@@ -7,14 +7,14 @@ local sea_pump = {}
 -- Initiation of the class
 -------------------------------------------------------------------------------
 function sea_pump:on_init()
-  if not global.SP_data then
-    global.SP_data = self:init_global_data()
+  if not storage.SP_data then
+    storage.SP_data = self:init_storage_data()
   end
 end
 
-function sea_pump:init_global_data()
+function sea_pump:init_storage_data()
   local SP_data = {
-    ["version"] = 2, -- version of the global data
+    ["version"] = 2, -- version of the storage data
 
     ["prototype_data"] = self:init_prototype_data(), -- data storing info about the prototypes
     ["entity_modules_data_tag"] = "sea-pump-modules_request", -- the tag name where the data is stored in the entity
@@ -38,32 +38,32 @@ end
 -- Getter functions to extract data from the data structure
 -------------------------------------------------------------------------------
 function sea_pump:get_pump_name()
-  if global.SP_data then
-    return global.SP_data.prototype_data.sea_pump_name
+  if storage.SP_data then
+    return storage.SP_data.prototype_data.sea_pump_name
   else
     return "angels-void"
   end
 end
 
 function sea_pump:get_placeable_name()
-  if global.SP_data then
-    return global.SP_data.prototype_data.sea_pump_placeable
+  if storage.SP_data then
+    return storage.SP_data.prototype_data.sea_pump_placeable
   else
     return "angels-void"
   end
 end
 
 function sea_pump:get_resource_name()
-  if global.SP_data then
-    return global.SP_data.prototype_data.sea_pump_resource
+  if storage.SP_data then
+    return storage.SP_data.prototype_data.sea_pump_resource
   else
     return "angels-void"
   end
 end
 
 function sea_pump:get_ghost_tag_name()
-  if global.SP_data then
-    return global.SP_data.entity_modules_data_tag
+  if storage.SP_data then
+    return storage.SP_data.entity_modules_data_tag
   else
     return "angels-void"
   end

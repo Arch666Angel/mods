@@ -7,14 +7,14 @@ local turbo_bike = {}
 -- Initiation of the class
 -------------------------------------------------------------------------------
 function turbo_bike:on_init()
-  if not global.TB_data then
-    global.TB_data = self:init_global_data()
+  if not storage.TB_data then
+    storage.TB_data = self:init_storage_data()
   end
 end
 
-function turbo_bike:init_global_data()
+function turbo_bike:init_storage_data()
   local TB_data = {
-    ["version"] = 1, -- version of the global data
+    ["version"] = 1, -- version of the storage data
 
     ["prototype_data"] = self:init_prototype_data(), -- data storing info about the prototypes
   }
@@ -35,8 +35,8 @@ end
 -- Getter functions to extract data from the data structure
 -------------------------------------------------------------------------------
 function turbo_bike:get_bike_name()
-  if global.TB_data then
-    return global.TB_data.prototype_data.turbo_bike_name
+  if storage.TB_data then
+    return storage.TB_data.prototype_data.turbo_bike_name
   else
     return "angels-void"
   end
