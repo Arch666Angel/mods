@@ -1,13 +1,13 @@
 {
   "name": "angelsdev-unit-test",
   "version": "0.0.2",
-  "factorio_version": "2.0",
+  "factorio_version": "1.2",
   "title": "Angel's Dev - Unit Tests",
   "author": "Arch666Angel",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "A tool to help process unit tests ingame",
   "dependencies": [
-    "base >= 2.0.0"
+    "base >= 1.2.0"
   ]
 }
