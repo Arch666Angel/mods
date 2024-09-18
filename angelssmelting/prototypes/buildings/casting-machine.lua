@@ -34,9 +34,7 @@ data:extend({
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -1.8 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 0,
-    },
+    module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "casting" },
     crafting_speed = 1,
@@ -196,9 +194,7 @@ data:extend({
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -1.8 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "casting", "casting-2" },
     crafting_speed = 1.5,
@@ -358,9 +354,7 @@ data:extend({
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -1.8 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "casting", "casting-2", "casting-3" },
     crafting_speed = 2,
@@ -519,9 +513,7 @@ data:extend({
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -1.8 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "casting", "casting-2", "casting-3", "casting-4" },
     crafting_speed = 3,

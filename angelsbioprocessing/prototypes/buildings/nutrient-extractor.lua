@@ -23,9 +23,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -2.0 }, { 1.5, 1.5 } },
     fast_replaceable_group = "nutrient-extractor",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "nutrient-extractor" },
     crafting_speed = 1,

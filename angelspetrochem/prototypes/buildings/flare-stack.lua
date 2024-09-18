@@ -23,9 +23,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box = { { -1, -5.25 }, { 1, 1 } },
     crafting_categories = { "angels-chemical-void" },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     result_inventory_size = 0,
     source_inventory_size = 0,

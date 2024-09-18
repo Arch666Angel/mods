@@ -20,9 +20,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_categories = { "angels-fluid-splitter" },
     result_inventory_size = 1,

@@ -31,9 +31,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-refining-t1-5" },
     crafting_speed = 1.5,
@@ -104,9 +102,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-refining-t1-5" },
     crafting_speed = 2,
@@ -176,9 +172,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "ore-refining-t1-5" },
     crafting_speed = 3,

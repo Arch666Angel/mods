@@ -24,9 +24,7 @@ local barreling_pump = {
   dying_explosion = "medium-explosion",
   collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
   selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-  module_specification = {
-    module_slots = 2,
-  },
+  module_slots = 2,
   allowed_effects = { "consumption", "speed", "pollution" },
   crafting_categories = { "barreling-pump" },
   crafting_speed = 2,

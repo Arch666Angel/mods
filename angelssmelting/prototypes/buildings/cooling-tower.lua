@@ -23,9 +23,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -1.5, -3.0 }, { 1.5, 1.5 } },
     crafting_categories = { "cooling" },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_speed = 2,
     --ingredient_count = 4,

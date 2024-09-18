@@ -94,11 +94,14 @@ if angelsmods.industries.tech then
     researching_speed = 1,
     inputs = {},
 
-    module_specification = {
-      module_slots = 2,
-      module_info_max_icons_per_row = 3,
-      module_info_max_icon_rows = 1,
-      module_info_icon_shift = { 0, 0.9 },
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.lab_modules,
+        max_icons_per_row = 3,
+        max_icon_rows = 1
+        shift = { 0, 0.9 },
+      }
     },
   }
 
@@ -158,8 +161,7 @@ if angelsmods.industries.tech then
       end
       lab_entity.max_health = lab_entity.max_health + (tier_props.health_inc or 0)
       lab_entity.researching_speed = lab_entity.researching_speed * (tier_props.speed_multiplier or 1)
-      lab_entity.module_specification.module_slots = lab_entity.module_specification.module_slots
-        + (tier_props.modules or 0)
+      lab_entity.module_slots = lab_entity.module_slots + (tier_props.modules or 0)
     end
 
     -- item
@@ -455,12 +457,15 @@ if angelsmods.industries.tech then
       inputs = data.raw["lab"][lab_item.name .. string.format("-%i", 1)].inputs,
 
       --[[
-        module_specification = {
-          module_slots = 2,
-          module_info_max_icons_per_row = 3,
-          module_info_max_icon_rows = 1,
-          module_info_icon_shift = {0, 0.9}
+        module_slots = 2,
+        icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1
+          shift = { 0, 0.9 },
         }
+      },
         ]]
     },
   })

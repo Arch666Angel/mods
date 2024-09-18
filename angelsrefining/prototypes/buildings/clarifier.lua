@@ -32,9 +32,7 @@ data:extend({
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     crafting_categories = { "angels-water-void" },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     result_inventory_size = 0,
     crafting_speed = 2,

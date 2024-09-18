@@ -31,9 +31,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "liquifying" },
     crafting_speed = 1.5,
@@ -121,9 +119,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "liquifying" },
     crafting_speed = 2.25,
@@ -211,9 +207,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "liquifying" },
     crafting_speed = 3,
@@ -300,9 +294,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 4,
-    },
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     crafting_categories = { "liquifying" },
     crafting_speed = 3.75,

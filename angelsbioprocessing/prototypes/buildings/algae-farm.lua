@@ -31,9 +31,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "algae-farm",
     next_upgrade = "algae-farm-2",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-processing" },
     crafting_speed = 0.5,
@@ -124,9 +122,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "algae-farm",
     next_upgrade = "algae-farm-3",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-processing", "bio-processing-2" },
     crafting_speed = 1,
@@ -217,9 +213,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "algae-farm",
     next_upgrade = "algae-farm-4",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-processing", "bio-processing-2", "bio-processing-3" },
     crafting_speed = 1.5,
@@ -309,9 +303,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "algae-farm",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-processing", "bio-processing-2", "bio-processing-3", "bio-processing-4" },
     crafting_speed = 2,

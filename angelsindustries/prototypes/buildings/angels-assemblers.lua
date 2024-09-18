@@ -419,9 +419,7 @@ data:extend({
       emissions_per_minute = 0.04 / 2.5,
     },
     energy_usage = "150kW",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
   {
@@ -545,9 +543,7 @@ data:extend({
       emissions_per_minute = 0.04 / 2.5,
     },
     energy_usage = "150kW",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
   --T3
@@ -651,9 +647,7 @@ data:extend({
       emissions_per_minute = 0.03 / 3.5,
     },
     energy_usage = "210kW",
-    module_specification = {
-      module_slots = 4,
-    },
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
   {
@@ -777,9 +771,7 @@ data:extend({
       emissions_per_minute = 0.03 / 3.5,
     },
     energy_usage = "210kW",
-    module_specification = {
-      module_slots = 4,
-    },
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
   },
 })

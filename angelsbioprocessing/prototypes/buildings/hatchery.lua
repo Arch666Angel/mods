@@ -24,9 +24,7 @@ data:extend({
     drawing_box = { { -1.5, -1.75 }, { 1.5, 1.5 } },
     crafting_categories = { "bio-hatchery" },
     cant_insert_at_source_message_key = "cant_insert.angels-hatchery-limitation",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     result_inventory_size = 3,
     crafting_speed = 2,

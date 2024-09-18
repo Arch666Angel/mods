@@ -33,9 +33,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 1,
@@ -539,9 +537,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 1.5,
@@ -1045,9 +1041,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 2,
@@ -1550,9 +1544,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
     crafting_speed = 2.5,

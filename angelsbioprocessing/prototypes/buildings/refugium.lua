@@ -24,9 +24,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     drawing_box = { { -3.5, -4.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "bio-refugium",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-refugium-fish" },
     crafting_speed = 0.75,
@@ -127,9 +125,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     drawing_box = { { -2.5, -3.5 }, { 2.5, 2.5 } },
     fast_replaceable_group = "bio-refugium",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-refugium-puffer" },
     crafting_speed = 0.75,
@@ -241,9 +237,7 @@ data:extend({
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "bio-refugium",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-refugium-biter" },
     crafting_speed = 2,
@@ -326,9 +320,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     --drawing_box = {{-2.5, -3}, {2.5, 2.5}},
     fast_replaceable_group = "bio-refugium",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-refugium-hogger" },
     crafting_speed = 0.75,

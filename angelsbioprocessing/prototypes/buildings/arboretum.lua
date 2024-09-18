@@ -32,9 +32,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
     fast_replaceable_group = "bio-generator",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-temperate", "angels-tree" },
     crafting_speed = 0.5,
@@ -158,9 +156,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
     fast_replaceable_group = "bio-generator",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-swamp", "angels-tree" },
     crafting_speed = 0.5,
@@ -284,9 +280,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
     fast_replaceable_group = "bio-generator",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-desert", "angels-tree" },
     crafting_speed = 0.5,
@@ -412,9 +406,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     drawing_box = { { -2.5, -4.0 }, { 2.5, 2.5 } },
     fast_replaceable_group = "bio-arboretum",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-arboretum" },
     crafting_speed = 0.5,

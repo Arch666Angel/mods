@@ -23,9 +23,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_categories = { "angels-bio-void" },
     cant_insert_at_source_message_key = "cant_insert.angels-composter-limitation",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     result_inventory_size = 1,
     crafting_speed = 2,

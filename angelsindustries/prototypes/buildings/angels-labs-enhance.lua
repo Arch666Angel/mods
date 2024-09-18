@@ -91,11 +91,14 @@ if angelsmods.industries.tech then
         "datacore-enhance-1",
         "token-bio",
       },
-      module_specification = {
-        module_slots = 2,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1
+          shift = { 0, 0.9 },
+        }
       },
     },
     {
@@ -171,11 +174,14 @@ if angelsmods.industries.tech then
         "datacore-enhance-2",
         "token-bio",
       },
-      module_specification = {
-        module_slots = 2,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1
+          shift = { 0, 0.9 },
+        }
       },
     },
     {
@@ -247,11 +253,14 @@ if angelsmods.industries.tech then
         "angels-science-pack-white",
         "datacore-enhance-2",
       },
-      module_specification = {
-        module_slots = 3,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 3,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1
+          shift = { 0, 0.9 },
+        }
       },
     },
   })

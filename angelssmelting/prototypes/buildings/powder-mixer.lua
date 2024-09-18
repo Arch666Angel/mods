@@ -34,9 +34,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box = { { -1, -1.55 }, { 1, 1 } },
-    module_specification = {
-      module_slots = 0,
-    },
+    module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "powder-mixing" },
     crafting_speed = 1,
@@ -137,9 +135,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box = { { -1, -1.55 }, { 1, 1 } },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "powder-mixing", "powder-mixing-2" },
     crafting_speed = 1.5,
@@ -240,9 +236,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box = { { -1, -1.55 }, { 1, 1 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "powder-mixing", "powder-mixing-2", "powder-mixing-3" },
     crafting_speed = 2,
@@ -342,9 +336,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box = { { -1, -1.55 }, { 1, 1 } },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "powder-mixing", "powder-mixing-2", "powder-mixing-3", "powder-mixing-4" },
     crafting_speed = 3,

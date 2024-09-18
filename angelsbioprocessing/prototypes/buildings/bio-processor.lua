@@ -23,9 +23,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     drawing_box = { { -2.5, -3.5 }, { 2.5, 2.5 } },
     fast_replaceable_group = "bio-processor",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-processor" },
     crafting_speed = 1,

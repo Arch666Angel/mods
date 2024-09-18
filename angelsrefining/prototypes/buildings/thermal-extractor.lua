@@ -30,9 +30,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     energy_source = {
       type = "electric",
@@ -55,9 +53,7 @@ data:extend({
     --mining_power = 3,
     resource_searching_radius = 0.49,
     vector_to_place_result = { 0, 0 },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
       width = 12,
@@ -187,9 +183,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -4.4, -4.4 }, { 4.4, 4.4 } },
     selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
     energy_source = {
       type = "electric",
@@ -212,9 +206,7 @@ data:extend({
     --mining_power = 3,
     resource_searching_radius = 0.49,
     vector_to_place_result = { 0, 0 },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
       width = 12,

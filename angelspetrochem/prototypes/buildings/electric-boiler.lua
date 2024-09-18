@@ -37,9 +37,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.29, -1.29 }, { 1.29, 1.29 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 0,
-    },
+    module_slots = 0,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_categories = { "petrochem-boiler" },
     crafting_speed = 1,
@@ -186,9 +184,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.29, -1.29 }, { 1.29, 1.29 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_categories = { "petrochem-boiler" },
     crafting_speed = 1.5,
@@ -337,9 +333,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.29, -1.29 }, { 1.29, 1.29 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_categories = { "petrochem-boiler" },
     crafting_speed = 2,

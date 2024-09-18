@@ -32,9 +32,7 @@ data:extend({
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "petrochem-electrolyser" },
     crafting_speed = 1,
@@ -156,9 +154,7 @@ data:extend({
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "petrochem-electrolyser" },
     crafting_speed = 1.5,
@@ -280,9 +276,7 @@ data:extend({
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "petrochem-electrolyser" },
     crafting_speed = 2,
@@ -403,9 +397,7 @@ data:extend({
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "petrochem-electrolyser" },
     crafting_speed = 2.5,

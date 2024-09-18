@@ -40,9 +40,7 @@ data:extend({
     energy_usage = "250kW",
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 1,
-    },
+    module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
@@ -192,9 +190,7 @@ data:extend({
     energy_usage = "300kW",
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
@@ -344,9 +340,7 @@ data:extend({
     energy_usage = "350kW",
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
@@ -495,9 +489,7 @@ data:extend({
     energy_usage = "400kW",
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 4,
-    },
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
