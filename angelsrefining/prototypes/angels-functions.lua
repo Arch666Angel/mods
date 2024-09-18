@@ -985,7 +985,7 @@ function angelsmods.functions.create_solid_recipe_icon(bot_molecules_icon, solid
   top_molecules_icon =
     create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
 
-  local recipe_icons = get_icons(solid_item_name)
+  local recipe_icons = util.table.deepcopy(get_icons(solid_item_name))
 
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do

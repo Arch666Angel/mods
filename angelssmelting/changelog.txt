@@ -9,6 +9,7 @@ Date: ???
     - Updated for Factorio 2.0 (994)
   Bugfixes:
     - Fixed coolant production graphs (1000)
+    - Moved Cobalt Oxide 1 recipe from Ore processor to Chemical furnace (1006)
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.23
 Date: 21.02.2024

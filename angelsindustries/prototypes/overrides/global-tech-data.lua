@@ -49,18 +49,7 @@ if angelsmods.industries.tech then
   angelsmods.functions.add_exception("bio-swamp-farming")
   angelsmods.functions.add_exception("bio-swamp-farm")
 
-  -- EXCLUDE BOBS MODULES
-  if mods["bobmodules"] and bobmods.modules.ModulesLab then
-    angelsmods.functions.add_exception("module-merging")
-    --removes enhancement core from module techs (not modules)
-    for rec_4tech in pairs(data.raw.technology) do
-      --fix modules to still work in bobs module lab
-      if string.find(rec_4tech, "%-module%-") ~= nil then
-        angelsmods.functions.add_exception(rec_4tech)
-      end
-    end
-  end
-
+  -- EXCLUDE BOBS ALIEN TECHS
   if mods["bobtech"] then
     for _, ignore in pairs({
       --blue artifact tech
