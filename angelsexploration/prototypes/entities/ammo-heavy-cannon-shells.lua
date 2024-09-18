@@ -69,7 +69,6 @@ data:extend({
       },
     },
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     ammo_type = {
       category = "heavy-cannon-shell",
@@ -179,7 +178,6 @@ data:extend({
       },
     },
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     ammo_type = {
       category = "heavy-cannon-shell",
@@ -274,7 +272,6 @@ data:extend({
       },
     },
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     ammo_type = {
       category = "heavy-cannon-shell",
@@ -384,7 +381,6 @@ data:extend({
       },
     },
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     ammo_type = {
       category = "heavy-cannon-shell",

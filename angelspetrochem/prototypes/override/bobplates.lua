@@ -142,7 +142,6 @@ if mods["bobplates"] then
   )
   data.raw.fluid["tungstic-acid"].icon = nil
   data.raw.fluid["tungstic-acid"].icon_size = nil
-  data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
   data.raw.recipe["tungstic-acid"].icon = nil
   OV.patch_recipes({
     {
@@ -196,7 +195,6 @@ if mods["bobplates"] or mods["bobelectronics"] then
           {
             icon = resin_icon,
             icon_size = 32,
-            icon_mipmaps = 1,
           },
         }, 1, angelsmods.petrochem.number_tint),
       },
@@ -207,13 +205,11 @@ if mods["bobplates"] or mods["bobelectronics"] then
           {
             icon = resin_icon,
             icon_size = 32,
-            icon_mipmaps = 1,
           },
         } or angelsmods.functions.add_number_icon_layer({
           {
             icon = resin_icon,
             icon_size = 32,
-            icon_mipmaps = 1,
           },
         }, 2, angelsmods.petrochem.number_tint),
       },
@@ -270,7 +266,6 @@ if mods["bobplates"] or mods["bobelectronics"] then
             {
               icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
-              icon_mipmaps = 1,
             },
           }, 1, angelsmods.petrochem.number_tint),
         },
@@ -282,7 +277,6 @@ if mods["bobplates"] or mods["bobelectronics"] then
             {
               icon = "__bobelectronics__/graphics/icons/rubber.png",
               icon_size = 32,
-              icon_mipmaps = 1,
             },
           }, 2, angelsmods.petrochem.number_tint),
         },

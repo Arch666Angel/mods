@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-tin-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-1",
     },
@@ -38,7 +37,6 @@ data:extend({
     name = "angels-tin-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-tin-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "ore-processing-1",
@@ -74,7 +72,6 @@ data:extend({
     name = "angels-tin-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "strand-casting-1",
@@ -114,7 +111,6 @@ data:extend({
     name = "angels-tin-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-tin-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "ore-processing-2",
@@ -146,7 +142,6 @@ data:extend({
     name = "angels-tin-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tin-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",

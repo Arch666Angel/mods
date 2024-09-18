@@ -4,7 +4,6 @@ data:extend({
     name = "angels-tungsten-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-refining",
       "powder-metallurgy-4",
@@ -51,7 +50,6 @@ data:extend({
     name = "angels-tungsten-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-processing-4",
       "powder-metallurgy-5",
@@ -95,7 +93,6 @@ data:extend({
     name = "angels-tungsten-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-processing-5",
       "angels-tungsten-smelting-2",

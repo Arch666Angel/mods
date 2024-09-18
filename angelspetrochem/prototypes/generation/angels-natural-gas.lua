@@ -17,7 +17,6 @@ angelsmods.functions.add_resource("make", {
   output_max = 20,
   icon = "__angelspetrochemgraphics__/graphics/icons/gas.png",
   icon_size = 64,
-  icon_mipmaps = 1,
   stage_counts = { 0 },
   autoplace = {
     starting_area = false,

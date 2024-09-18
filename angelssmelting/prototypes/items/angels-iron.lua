@@ -7,7 +7,6 @@ data:extend({
     name = "processed-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "b",
     stack_size = 200,
@@ -17,7 +16,6 @@ data:extend({
     name = "pellet-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "c",
     stack_size = 200,
@@ -37,7 +35,6 @@ data:extend({
     name = "ingot-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "e",
     stack_size = 200,
@@ -48,7 +45,6 @@ data:extend({
     name = "powder-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron",
     order = "g",
     stack_size = 200,
@@ -60,7 +56,6 @@ data:extend({
     name = "liquid-molten-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron-casting",
     order = "i",
     default_temperature = 1538,
@@ -75,7 +70,6 @@ data:extend({
     name = "angels-roll-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/roll-iron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-iron-casting",
     order = "j",
     stack_size = 200,
@@ -120,4 +114,3 @@ stick.icon_size = 32
 stick.subgroup = "angels-iron-casting"
 stick.order = "m"
 stick.stack_size = 200
-stick.icon_mipmaps = 1

@@ -159,7 +159,6 @@ angelsmods.functions.add_resource("make", {
   output_max = 20,
   icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",
   icon_size = 64,
-  icon_mipmaps = 4,
   autoplace = {
     starting_area = false,
     --resource_index = 27,

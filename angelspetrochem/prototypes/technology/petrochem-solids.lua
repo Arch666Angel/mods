@@ -240,7 +240,6 @@ data:extend({
     name = "angels-nuclear-fuel",
     icon = "__angelspetrochemgraphics__/graphics/technology/nuclear-fuel.png",
     icon_size = 128,
-    icon_mipmaps = 1,
     prerequisites = {
       "kovarex-enrichment-process",
       "utility-science-pack",

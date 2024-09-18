@@ -5,7 +5,6 @@ data:extend({
     name = "ore-crushing",
     icon = "__angelsrefininggraphics__/graphics/technology/mechanical-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "automation",
     },
@@ -77,7 +76,6 @@ data:extend({
     name = "advanced-ore-refining-1",
     icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"ore-crushing",
       "slag-processing-1",
@@ -123,7 +121,6 @@ data:extend({
     name = "geode-processing-1",
     icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-red.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       --"ore-crushing",
       "ore-floatation",
@@ -250,7 +247,6 @@ data:extend({
     name = "ore-floatation",
     icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "advanced-ore-refining-1",
       "ore-crushing",
@@ -326,7 +322,6 @@ data:extend({
     name = "advanced-ore-refining-2",
     icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"ore-floatation",
       "advanced-ore-refining-1",
@@ -392,7 +387,6 @@ data:extend({
     name = "geode-processing-2",
     icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-green.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "geode-processing-1",
     },
@@ -713,7 +707,6 @@ data:extend({
     name = "advanced-ore-refining-3",
     icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-leaching",
       "advanced-ore-refining-2",
@@ -775,7 +768,6 @@ data:extend({
     name = "geode-processing-3",
     icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-yellow.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "geode-processing-2",
       "slag-processing-2",
@@ -807,7 +799,6 @@ data:extend({
     name = "ore-refining",
     icon = "__angelsrefininggraphics__/graphics/technology/thermal-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-leaching",
       "advanced-ore-refining-3",
@@ -885,7 +876,6 @@ data:extend({
     name = "advanced-ore-refining-4",
     icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-refining",
       "advanced-ore-refining-3",

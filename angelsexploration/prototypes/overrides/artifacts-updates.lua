@@ -434,7 +434,6 @@ if alien_technology then
     for _, icon_property in pairs({
       "icon",
       "icon_size",
-      "icon_mipmaps",
       "scale",
       "shift",
       "tint",

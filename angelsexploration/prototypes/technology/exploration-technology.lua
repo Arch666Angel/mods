@@ -123,7 +123,6 @@ data:extend({
     name = "angels-gathering-turret",
     icon = "__angelsexplorationgraphics__/graphics/technology/gathering-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "military-science-pack",
       "angels-alien-artifact",

@@ -39,7 +39,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "ore-floatation",
@@ -54,7 +53,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -502,7 +500,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "ore-floatation",
@@ -517,7 +514,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -965,7 +961,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     subgroup = "ore-floatation",
@@ -980,7 +975,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

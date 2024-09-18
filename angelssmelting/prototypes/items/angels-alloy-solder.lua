@@ -16,7 +16,6 @@ data:extend({
     name = "liquid-molten-solder",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-solder-casting",
     order = "b",
     default_temperature = 200,

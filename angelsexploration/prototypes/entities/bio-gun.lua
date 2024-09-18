@@ -4,7 +4,6 @@ data:extend({
     name = "bio-gun",
     icon = "__angelsexplorationgraphics__/graphics/icons/bio-gun.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     subgroup = "angels-fire",
     order = "a[gun]-b[bio-rounds]",

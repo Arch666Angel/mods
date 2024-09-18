@@ -26,7 +26,6 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     angelsmods.functions.move_item("silver-nitrate", "angels-silver", "d")
     data.raw["item"]["silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
     data.raw["item"]["silver-nitrate"].icon_size = 32
-    data.raw["item"]["silver-nitrate"].icon_mipmaps = 1
     OV.disable_recipe({ "silver-nitrate", "silver-from-lead" })
     OV.remove_prereq("battery-3", "nitrogen-processing")
     OV.add_prereq("battery-3", "angels-silver-smelting-2")
@@ -47,7 +46,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     OV.disable_recipe({ "molten-silver-smelting" })
     OV.disable_technology({ "angels-silver-casting-2", "angels-silver-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-silver-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-silver-smelting-2"][property])
     end
@@ -79,7 +78,6 @@ if angelsmods.trigger.smelting_products["silver"].plate then
     angelsmods.functions.move_item("silver-plate", "angels-silver-casting", "m")
     data.raw["item"]["silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
     data.raw["item"]["silver-plate"].icon_size = 32
-    data.raw["item"]["silver-plate"].icon_mipmaps = 1
 
     OV.patch_recipes({
       {

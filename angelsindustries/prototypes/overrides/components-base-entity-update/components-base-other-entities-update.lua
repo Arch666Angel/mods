@@ -96,7 +96,6 @@ if angelsmods.industries.components then
   if rocket then
     rocket.icon = "__angelsindustriesgraphics__/graphics/icons/rocket.png"
     rocket.icon_size = 64
-    rocket.icon_mipmaps = 1
     rocket.icons = nil
     rocket.subgroup = "angels-rocket"
     rocket.order = "b[rocket]"

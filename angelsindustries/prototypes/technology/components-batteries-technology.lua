@@ -9,7 +9,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-1",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         --"angels-lead-smelting-1",
         "angels-sulfur-processing-1",
@@ -55,7 +54,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-2",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-tin-smelting-1",
         "angels-glass-smelting-1",
@@ -105,7 +103,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-3", --unlocks for basic blocks 3 which is a military tier (but does not have the packs)
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-aluminium-smelting-1",
         "angels-cobalt-smelting-1",
@@ -157,7 +154,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-4",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-gold-smelting-1",
         --"plastic-1",
@@ -207,7 +203,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-5",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-platinum-smelting-1",
         "angels-components-batteries-4",
@@ -259,7 +254,6 @@ if angelsmods.industries.components then
         name = "angels-components-batteries-6",
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "sodium-processing-2",
           "angels-tungsten-smelting-1",

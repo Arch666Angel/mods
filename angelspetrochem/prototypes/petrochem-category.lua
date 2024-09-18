@@ -59,7 +59,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/technology/advanced-gas-refinery-tech.png",
         icon_size = 256,
-        icon_mipmaps = 2,
         scale = 0.25,
       },
       {

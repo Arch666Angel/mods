@@ -157,7 +157,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-enhancement-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-enhancement",
@@ -171,7 +170,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-enhancement-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-enhancement",
@@ -185,7 +183,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-enhancement-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-enhancement",
@@ -199,7 +196,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-enhancement-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-enhancement",
@@ -213,7 +209,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-enhancement-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-enhancement",
@@ -230,7 +225,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-energy-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-energy",
@@ -244,7 +238,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-energy-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-energy",
@@ -258,7 +251,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-energy-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-energy",
@@ -272,7 +264,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-energy-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-energy",
@@ -286,7 +277,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-energy-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-energy",
@@ -303,7 +293,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-exploration-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-exploration",
@@ -317,7 +306,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-exploration-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-exploration",
@@ -331,7 +319,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-exploration-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-exploration",
@@ -345,7 +332,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-exploration-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-exploration",
@@ -359,7 +345,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-exploration-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-exploration",
@@ -376,7 +361,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-logistic-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-logistic",
@@ -390,7 +374,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-logistic-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-logistic",
@@ -404,7 +387,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-logistic-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-logistic",
@@ -418,7 +400,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-logistic-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-logistic",
@@ -432,7 +413,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-logistic-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-logistic",
@@ -449,7 +429,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-production-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-production",
@@ -463,7 +442,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-production-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-production",
@@ -477,7 +455,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-production-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-production",
@@ -491,7 +468,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-production-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-production",
@@ -505,7 +481,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-production-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-production",
@@ -522,7 +497,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-extraction-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -536,7 +510,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-extraction-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -550,7 +523,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-extraction-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -567,7 +539,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-mprocessing-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -581,7 +552,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-mprocessing-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -595,7 +565,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-mprocessing-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -612,7 +581,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-cprocessing-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -626,7 +594,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-cprocessing-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -640,7 +607,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-cprocessing-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -657,7 +623,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-bprocessing-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -671,7 +636,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-bprocessing-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -685,7 +649,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-bprocessing-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-processing",
@@ -702,7 +665,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-warfare-1.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "blocks-warfare",
@@ -716,7 +678,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-warfare-2.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "blocks-warfare",
@@ -730,7 +691,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-warfare-3.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "blocks-warfare",
@@ -744,7 +704,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-warfare-4.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 4, angelsmods.industries.number_tint),
       subgroup = "blocks-warfare",
@@ -758,7 +717,6 @@ if angelsmods.industries.components then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/block-warfare-5.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 5, angelsmods.industries.number_tint),
       subgroup = "blocks-warfare",

@@ -6,7 +6,6 @@ data:extend({
   --  localised_description = {"technology-description.fluid-handling"},
   --  icon = "__base__/graphics/technology/fluid-handling.png",
   --  icon_size = 256,
-  --  icon_mipmaps = 4,
   --  prerequisites = {
   --    "automation-2"
   --  },
@@ -31,7 +30,6 @@ data:extend({
     name = "water-treatment",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       mods["angelspetrochem"] and "angels-fluid-control" or "electronics",
     },
@@ -71,7 +69,6 @@ data:extend({
     name = "water-treatment-2",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "slag-processing-1",
       "water-treatment",
@@ -113,7 +110,6 @@ data:extend({
     name = "water-treatment-3",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "water-treatment-2",
       "advanced-electronics",
@@ -165,7 +161,6 @@ data:extend({
     name = "water-treatment-4",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "water-treatment-3",
       "thermal-water-processing",

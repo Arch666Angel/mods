@@ -247,7 +247,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",

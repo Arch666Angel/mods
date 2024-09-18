@@ -51,7 +51,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 0.25,
       },
       {
@@ -239,7 +238,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 64 / 256,
       },
       {
@@ -394,7 +392,6 @@ data:extend({
         icon = "__angelsrefininggraphics__/graphics/item-group/void-group.png",
         icon_size = 128,
         scale = 0.5,
-        icon_mipmaps = 2,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",

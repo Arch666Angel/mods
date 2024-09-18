@@ -15,7 +15,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 2, angelsmods.petrochem.number_tint),
@@ -31,7 +30,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 2, angelsmods.petrochem.number_tint),
@@ -171,7 +169,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 3, angelsmods.petrochem.number_tint),
@@ -187,7 +184,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 3, angelsmods.petrochem.number_tint),
@@ -327,7 +323,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 4, angelsmods.petrochem.number_tint),
@@ -343,7 +338,6 @@ data:extend({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 4, angelsmods.petrochem.number_tint),

@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-cobalt-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-leaching",
       --"angels-metallurgy-3",
@@ -48,7 +47,6 @@ data:extend({
     name = "angels-cobalt-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
       "ore-processing-3",
@@ -89,7 +87,6 @@ data:extend({
     name = "angels-cobalt-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-4",
       "strand-casting-2",
@@ -121,7 +118,6 @@ data:extend({
     name = "angels-cobalt-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-5",
       "ore-processing-4",
@@ -161,7 +157,6 @@ data:extend({
     name = "angels-cobalt-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-5",
       "strand-casting-3",

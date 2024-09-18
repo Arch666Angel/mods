@@ -16,7 +16,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         name = "liquid-molten-brass",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-brass.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
         order = "b[brass]-a[liquid-molten-brass]",
         default_temperature = 0,
@@ -119,7 +118,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         name = "angels-brass-smelting-1",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-zinc-smelting-1",
           "angels-copper-smelting-1",
@@ -149,7 +147,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         name = "angels-brass-smelting-2",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-metallurgy-3",
           "angels-brass-smelting-1",
@@ -177,7 +174,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         name = "angels-brass-smelting-3",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-brass-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-metallurgy-4",
           "angels-brass-smelting-2",
@@ -205,7 +201,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
     angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
     data.raw["item"]["brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
     data.raw["item"]["brass-alloy"].icon_size = 32
-    data.raw["item"]["brass-alloy"].icon_mipmaps = 1
     OV.disable_recipe({ "brass-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-brass")
     OV.add_prereq("zinc-processing", "angels-brass-smelting-1")

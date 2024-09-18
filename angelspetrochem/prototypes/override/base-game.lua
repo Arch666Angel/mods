@@ -58,7 +58,6 @@ OV.add_unlock("plastics", "solid-plastic")
 -- sulfur
 data.raw["item"]["sulfur"].icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png"
 data.raw["item"]["sulfur"].icon_size = 32
-data.raw["item"]["sulfur"].icon_mipmaps = 1
 OV.global_replace_icon(
   { "__base__/graphics/icons/fluid/sulfuric-acid.png" },
   { "__angelspetrochemgraphics__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64 }
@@ -148,7 +147,6 @@ OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
 
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochemgraphics__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32
-data.raw["item"]["rocket-fuel"].icon_mipmaps = 1
 move_item("rocket-fuel", "petrochem-fuel", "b[rocket-fuel]-c")
 
 move_item("nuclear-fuel", "petrochem-fuel", "d[nuclear-fuel]")
@@ -200,7 +198,6 @@ data.raw["recipe"]["explosives"].icons = angelsmods.functions.add_number_icon_la
   {
     icon = "__base__/graphics/icons/explosives.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     scale = 0.5,
   },
 }, 1, angelsmods.petrochem.number_tint)

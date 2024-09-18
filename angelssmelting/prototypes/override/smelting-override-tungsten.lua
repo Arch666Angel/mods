@@ -31,7 +31,6 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
     angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "d")
     data.raw["item"]["tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
     data.raw["item"]["tungsten-oxide"].icon_size = 32
-    data.raw["item"]["tungsten-oxide"].icon_mipmaps = 1
     data.raw["item"]["tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
     OV.disable_recipe({ "tungsten-oxide" })
   end
@@ -42,7 +41,6 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
     angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
     data.raw["item"]["powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
     data.raw["item"]["powdered-tungsten"].icon_size = 64
-    data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
     data.raw["item"]["powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
     OV.disable_recipe({ "powdered-tungsten" })
   end
@@ -68,7 +66,6 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     angelsmods.functions.move_item("tungsten-plate", "angels-tungsten-casting", "j")
     data.raw["item"]["tungsten-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tungsten.png"
     data.raw["item"]["tungsten-plate"].icon_size = 32
-    data.raw["item"]["tungsten-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-tungsten-plate" })
     OV.add_prereq("tungsten-processing", "angels-tungsten-smelting-1")
   end
@@ -84,7 +81,6 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
           {
             icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
             icon_size = 64,
-            icon_mipmaps = 1,
             scale = 0.5,
           },
         }, 1, angelsmods.smelting.number_tint),
@@ -97,7 +93,6 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
           {
             icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
             icon_size = 64,
-            icon_mipmaps = 1,
             scale = 0.5,
           },
         }, 2, angelsmods.smelting.number_tint),

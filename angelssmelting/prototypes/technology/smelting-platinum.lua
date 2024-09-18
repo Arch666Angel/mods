@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-platinum-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-platinum-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-electro-whinning-cell",
       "angels-metallurgy-4",
@@ -46,7 +45,6 @@ data:extend({
     name = "angels-platinum-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-platinum-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-5",
       "ore-processing-4",
@@ -85,7 +83,6 @@ data:extend({
     name = "angels-platinum-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-platinum-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-5",
       "strand-casting-4",
@@ -128,7 +125,6 @@ data:extend({
     name = "angels-platinum-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-platinum-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-5",
       "ore-processing-5",
@@ -171,7 +167,6 @@ data:extend({
     name = "angels-platinum-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-platinum-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-5",
       --"strand-casting-4",

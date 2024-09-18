@@ -9,7 +9,6 @@ if angelsmods.industries.tech then
       {
         icon = "__angelsindustriesgraphics__/graphics/icons/main-lab.png",
         icon_size = 64,
-        icon_mipmaps = 1,
         scale = 0.5,
       },
     },
@@ -220,7 +219,6 @@ if angelsmods.industries.tech then
 
       icon = "__angelsindustriesgraphics__/graphics/icons/crash-site-lab-repaired.png",
       icon_size = 64,
-      icon_mipmaps = 4,
 
       subgroup = lab_item.subgroup,
       order = lab_item.order .. string.format("-%i", 0),
@@ -246,7 +244,6 @@ if angelsmods.industries.tech then
 
       icon = "__angelsindustriesgraphics__/graphics/icons/crash-site-lab-repaired.png",
       icon_size = 64,
-      icon_mipmaps = 4,
 
       flags = { "not-deconstructable", "placeable-player", "player-creation", "hidden" },
       --map_color = {r = 0, g = 0.365, b = 0.58, a = 1},

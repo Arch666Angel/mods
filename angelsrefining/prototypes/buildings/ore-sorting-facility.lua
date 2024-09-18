@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "ore-sorter",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -111,7 +109,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "ore-sorter",
@@ -126,7 +123,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -216,7 +212,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     subgroup = "ore-sorter",
@@ -231,7 +226,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -321,7 +315,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 4, angelsmods.refining.number_tint),
     subgroup = "ore-sorter",
@@ -336,7 +329,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 4, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -426,7 +418,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 5, angelsmods.refining.number_tint),
     subgroup = "ore-sorter",
@@ -441,7 +432,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 5, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

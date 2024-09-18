@@ -185,14 +185,12 @@ local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_numb
     table.insert(new_icon_layers, {
       icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
       icon_size = 64,
-      icon_mipmaps = 2,
       tint = { 0, 0, 0, 255 },
       scale = 0.5 * icon_size_scale,
     })
     table.insert(new_icon_layers, {
       icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
       icon_size = 64,
-      icon_mipmaps = 2,
       tint = number_tint,
       scale = 0.5 * icon_size_scale,
     })
@@ -220,12 +218,10 @@ local function generate_train_items(item)
           {
             icon = item.icon,
             icon_size = item.icon_size,
-            icon_mipmaps = item.icon_mipmaps,
           },
         }
       copy.icon = nil
       copy.icon_size = nil
-      copy.icon_mipmaps = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
       table.insert(entries, copy)
     end
@@ -259,12 +255,10 @@ local function generate_train_entities(item)
           {
             icon = item.icon,
             icon_size = item.icon_size,
-            icon_mipmaps = item.icon_mipmaps,
           },
         }
       copy.icon = nil
       copy.icon_size = nil
-      copy.icon_mipmaps = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
       copy.minable.result = name
       copy.max_health = item.max_health * multiplier

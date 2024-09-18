@@ -675,7 +675,6 @@ local function create_gathering_turret_target_tech(inputs)
         localised_name = { "technology-name.angels-gathering-turret-target", "__ITEM__" .. inputs.name .. "__" },
         icon = "__angelsexplorationgraphics__/graphics/technology/gathering-turret-target.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = inputs.additional_tech_prerequisites
             and (type(inputs.additional_tech_prerequisites) == "string" and { inputs.additional_tech_prerequisites } or type(
               inputs.additional_tech_prerequisites
@@ -808,7 +807,6 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     type = "technology",
     name = "angels-gathering-speed-" .. inputs.level,
     icon_size = 256,
-    icon_mipmaps = 4,
     icons = util.technology_icon_constant_damage(
       "__angelsexplorationgraphics__/graphics/technology/gathering-turret-speed.png"
     ),

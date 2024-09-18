@@ -58,7 +58,6 @@ data:extend({
       {
         icon = "__base__/graphics/item-group/intermediate-products.png",
         icon_size = 128,
-        icon_mipmaps = 2,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",

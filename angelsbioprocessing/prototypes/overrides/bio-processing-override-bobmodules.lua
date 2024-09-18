@@ -13,13 +13,11 @@ if mods["bobmodules"] then
       {
         icon = "__base__/graphics/technology/module.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         scale = 0.25,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/bobs-logo.png",
         icon_size = 1080,
-        icon_mipmaps = 1,
         scale = 64 / 1080 * 0.35,
         shift = { 20, -20 },
       },
@@ -146,7 +144,6 @@ if mods["bobmodules"] then
       name = "modules-2",
       icon = "__base__/graphics/technology/module.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "modules",
         "advanced-electronics-2",
@@ -197,7 +194,6 @@ if mods["bobmodules"] then
       name = "modules-3",
       icon = "__base__/graphics/technology/module.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "modules-2",
         "bio-processing-crystal-full",
@@ -259,17 +255,14 @@ if mods["bobmodules"] then
   data.raw.module["angels-bio-yield-module"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-1.png"
   data.raw.module["angels-bio-yield-module"].icon_size = 32
-  data.raw.module["angels-bio-yield-module"].icon_mipmaps = 1
   move_item("angels-bio-yield-module", "bio-yield-module", "b-y-1", "module")
   data.raw.module["angels-bio-yield-module-2"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-2.png"
   data.raw.module["angels-bio-yield-module-2"].icon_size = 32
-  data.raw.module["angels-bio-yield-module-2"].icon_mipmaps = 1
   move_item("angels-bio-yield-module-2", "bio-yield-module", "b-y-2", "module")
   data.raw.module["angels-bio-yield-module-3"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-3.png"
   data.raw.module["angels-bio-yield-module-3"].icon_size = 32
-  data.raw.module["angels-bio-yield-module-3"].icon_mipmaps = 1
   move_item("angels-bio-yield-module-3", "bio-yield-module", "b-y-3", "module")
   OV.patch_recipes({
     {
@@ -329,15 +322,12 @@ if mods["bobmodules"] then
   data.raw.technology["angels-bio-yield-module"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-1.png"
   data.raw.technology["angels-bio-yield-module"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module"].icon_mipmaps = 1
   data.raw.technology["angels-bio-yield-module-2"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-2.png"
   data.raw.technology["angels-bio-yield-module-2"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module-2"].icon_mipmaps = 1
   data.raw.technology["angels-bio-yield-module-3"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-3.png"
   data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module-3"].icon_mipmaps = 1
   if data.raw.technology["module-merging"] ~= nil then
     OV.add_prereq("angels-bio-yield-module", "module-merging")
   end
@@ -391,7 +381,6 @@ if mods["bobmodules"] then
         localised_description = { "item-description.angels-bio-yield-module-" .. i },
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
         icon_size = 32,
-        icon_mipmaps = 1,
         subgroup = "bio-yield-module",
         category = "productivity",
         tier = i,
@@ -422,7 +411,6 @@ if mods["bobmodules"] then
         name = "angels-bio-yield-module-" .. i,
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
         icon_size = 32,
-        icon_mipmaps = 1,
         order = "c-a",
         prerequisites = {
           "angels-bio-yield-module-" .. i - 1,

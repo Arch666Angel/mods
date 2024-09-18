@@ -43,7 +43,6 @@ data:extend({
     name = "angels-oil-processing",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "oil-gas-extraction",
     },
@@ -80,7 +79,6 @@ data:extend({
     name = "angels-advanced-oil-processing",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-advanced-chemistry-2",
     },
@@ -110,7 +108,6 @@ data:extend({
     name = "gas-processing",
     icon = "__angelspetrochemgraphics__/graphics/technology/gas-refinery-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "oil-gas-extraction",
     },
@@ -147,7 +144,6 @@ data:extend({
     name = "angels-advanced-gas-processing",
     icon = "__angelspetrochemgraphics__/graphics/technology/advanced-gas-refinery-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "steam-cracking-2",
     },
@@ -185,7 +181,6 @@ data:extend({
     name = "angels-flare-stack",
     icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-fluid-control",
     },

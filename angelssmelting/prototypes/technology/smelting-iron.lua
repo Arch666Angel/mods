@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-iron-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-1",
     },
@@ -38,7 +37,6 @@ data:extend({
     name = "angels-iron-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "ore-processing-1",
@@ -74,7 +72,6 @@ data:extend({
     name = "angels-iron-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "strand-casting-1",
@@ -119,7 +116,6 @@ data:extend({
     name = "angels-iron-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "ore-processing-2",
@@ -152,7 +148,6 @@ data:extend({
     name = "angels-iron-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",
@@ -190,7 +185,6 @@ data:extend({
     name = "angels-iron-casting-4",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-4",
       "angels-iron-casting-3",

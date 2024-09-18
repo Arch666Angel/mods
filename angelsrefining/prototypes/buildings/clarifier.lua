@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     },
@@ -22,7 +21,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     },

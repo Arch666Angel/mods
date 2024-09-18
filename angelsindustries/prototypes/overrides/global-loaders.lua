@@ -1,10 +1,8 @@
 if not loaders_graphics then
   data.raw["item"]["loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-yellow-ico.png"
   data.raw["item"]["loader"].icon_size = 32
-  data.raw["item"]["loader"].icon_mipmaps = 1
   data.raw["loader"]["loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-yellow-ico.png"
   data.raw["loader"]["loader"].icon_size = 32
-  data.raw["loader"]["loader"].icon_mipmaps = 1
   data.raw["loader"]["loader"].structure = {
     direction_in = {
       sheet = {
@@ -27,10 +25,8 @@ if not loaders_graphics then
 
   data.raw["item"]["fast-loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-red-ico.png"
   data.raw["item"]["fast-loader"].icon_size = 32
-  data.raw["item"]["fast-loader"].icon_mipmaps = 1
   data.raw["loader"]["fast-loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-red-ico.png"
   data.raw["loader"]["fast-loader"].icon_size = 32
-  data.raw["loader"]["fast-loader"].icon_mipmaps = 1
   data.raw["loader"]["fast-loader"].structure = {
     direction_in = {
       sheet = {
@@ -53,10 +49,8 @@ if not loaders_graphics then
 
   data.raw["item"]["express-loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-blue-ico.png"
   data.raw["item"]["express-loader"].icon_size = 32
-  data.raw["item"]["express-loader"].icon_mipmaps = 1
   data.raw["loader"]["express-loader"].icon = "__angelsindustriesgraphics__/graphics/icons/loader-blue-ico.png"
   data.raw["loader"]["express-loader"].icon_size = 32
-  data.raw["loader"]["express-loader"].icon_mipmaps = 1
   data.raw["loader"]["express-loader"].structure = {
     direction_in = {
       sheet = {

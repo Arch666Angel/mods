@@ -27,7 +27,6 @@ OV.patch_recipes({
       {
         icon = "__base__/graphics/icons/concrete.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 1, angelsmods.smelting.number_tint),

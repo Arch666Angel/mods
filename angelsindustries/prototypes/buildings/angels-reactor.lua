@@ -8,7 +8,6 @@ if angelsmods.industries.overhaul then
       name = "angels-burner-reactor",
       icon = "__angelsindustriesgraphics__/graphics/icons/fast-reactor-icon.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.5, result = "angels-burner-reactor" },
       max_health = 500,

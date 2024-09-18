@@ -78,7 +78,6 @@ elseif not angelsmods.trigger.early_sintering_oven then
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, update.tier, angelsmods.smelting.number_tint)
@@ -109,7 +108,6 @@ else
     {
       icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       scale = 0.5,
     },
   }, 1, angelsmods.smelting.number_tint)
@@ -117,7 +115,6 @@ else
     {
       icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       scale = 0.5,
     },
   }, 2, angelsmods.smelting.number_tint)
@@ -125,7 +122,6 @@ else
     {
       icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       scale = 0.5,
     },
   }, 3, angelsmods.smelting.number_tint)

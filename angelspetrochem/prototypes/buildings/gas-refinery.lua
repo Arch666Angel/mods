@@ -7,7 +7,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-gas-refinery",
@@ -22,7 +21,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -539,7 +537,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-gas-refinery",
@@ -554,7 +551,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -1071,7 +1067,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-gas-refinery",
@@ -1086,7 +1081,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -1603,7 +1597,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 4, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-gas-refinery",
@@ -1618,7 +1611,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },

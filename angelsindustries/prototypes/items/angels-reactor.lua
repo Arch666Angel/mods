@@ -5,7 +5,6 @@ if angelsmods.industries.overhaul then
       name = "angels-burner-reactor",
       icon = "__angelsindustriesgraphics__/graphics/icons/fast-reactor-icon.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       subgroup = "angels-power-nuclear",
       order = "a[reactor]-b",
       place_result = "angels-burner-reactor",

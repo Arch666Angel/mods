@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "ore-powderizer",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -81,7 +79,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "ore-powderizer",
@@ -96,7 +93,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -156,7 +152,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.refining.number_tint),
     subgroup = "ore-powderizer",
@@ -171,7 +166,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

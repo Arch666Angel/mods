@@ -7,7 +7,6 @@ data:extend({
     name = "angels-gathering-turret",
     icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "angels-electric-a",
     order = "ba",
     place_result = "angels-gathering-turret",
@@ -23,7 +22,6 @@ data:extend({
 
     icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
-    icon_mipmaps = 4,
 
     flags = {
       "placeable-player",
@@ -76,7 +74,6 @@ data:extend({
 
     icon = "__angelsexplorationgraphics__/graphics/icons/gathering-turret.png",
     icon_size = 64,
-    icon_mipmaps = 4,
 
     flags = { "placeable-player", "placeable-enemy", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-gathering-turret" },

@@ -70,7 +70,7 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   else
     OV.disable_technology({ "angels-iron-casting-2", "angels-iron-casting-3", "angels-iron-casting-4" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-iron-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-iron-smelting-2"][property])
     end
@@ -125,7 +125,6 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   })
   data.raw["item"]["iron-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png"
   data.raw["item"]["iron-plate"].icon_size = 32
-  data.raw["item"]["iron-plate"].icon_mipmaps = 1
   OV.global_replace_icon(
     "__base__/graphics/icons/plate/iron-plate.png",
     "__angelssmeltinggraphics__/graphics/icons/plate-iron.png"

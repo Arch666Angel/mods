@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.bioprocessing.number_tint),
     subgroup = "bio-processing-buildings-nauvis-a",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -101,7 +99,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.bioprocessing.number_tint),
     subgroup = "bio-processing-buildings-nauvis-a",
@@ -116,7 +113,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -196,7 +192,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.bioprocessing.number_tint),
     subgroup = "bio-processing-buildings-nauvis-a",
@@ -211,7 +206,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -291,7 +285,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 4, angelsmods.bioprocessing.number_tint),
     subgroup = "bio-processing-buildings-nauvis-a",
@@ -306,7 +299,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 4, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },

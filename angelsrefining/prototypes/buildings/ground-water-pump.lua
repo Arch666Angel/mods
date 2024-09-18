@@ -24,7 +24,6 @@ data:extend({
     name = "ground-water-pump",
     icon = "__angelsrefininggraphics__/graphics/icons/water-pump.png",
     icon_size = 48,
-    icon_mipmaps = 1,
     flags = { "placeable-neutral", "player-creation" },
 
     collision_mask = { "water-tile", "object-layer", "player-layer" },

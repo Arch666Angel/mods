@@ -4,7 +4,6 @@ data:extend({
     name = "angels-solder-smelting-basic",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {},
     effects = {
       {
@@ -30,7 +29,6 @@ data:extend({
     name = "angels-solder-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-1"
       "angels-solder-smelting-basic",
@@ -65,7 +63,6 @@ data:extend({
     name = "angels-solder-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "strand-casting-1",
@@ -101,7 +98,6 @@ data:extend({
     name = "angels-solder-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",

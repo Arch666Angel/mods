@@ -4,7 +4,6 @@ data:extend({
     name = "angels-steel-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-iron-smelting-1",
       "basic-chemistry",
@@ -37,7 +36,6 @@ data:extend({
     name = "angels-steel-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "strand-casting-1",
@@ -91,7 +89,6 @@ data:extend({
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 3" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "strand-casting-2",
       "angels-steel-smelting-2",
@@ -129,7 +126,6 @@ data:extend({
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 4" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-steel-smelting-3",
       "angels-chrome-smelting-1",

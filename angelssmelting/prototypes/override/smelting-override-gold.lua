@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
     OV.disable_recipe({ "molten-gold-smelting" })
     OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-gold-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-gold-smelting-2"][property])
     end
@@ -64,7 +64,6 @@ if angelsmods.trigger.smelting_products["gold"].plate then
     angelsmods.functions.move_item("gold-plate", "angels-gold-casting", "l")
     data.raw["item"]["gold-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png"
     data.raw["item"]["gold-plate"].icon_size = 32
-    data.raw["item"]["gold-plate"].icon_mipmaps = 1
 
     OV.global_replace_technology("gold-processing", "angels-gold-smelting-1")
   end
@@ -86,7 +85,6 @@ if angelsmods.trigger.smelting_products["gold"].wire then
     OV.disable_recipe({ "gilded-copper-cable" })
     data.raw["item"]["gilded-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
     data.raw["item"]["gilded-copper-cable"].icon_size = 32
-    data.raw["item"]["gilded-copper-cable"].icon_mipmaps = 1
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"

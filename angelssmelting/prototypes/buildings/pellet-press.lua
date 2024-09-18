@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 1, angelsmods.smelting.number_tint),
@@ -22,7 +21,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 1, angelsmods.smelting.number_tint),
@@ -113,7 +111,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 2, angelsmods.smelting.number_tint),
@@ -129,7 +126,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 2, angelsmods.smelting.number_tint),
@@ -220,7 +216,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 3, angelsmods.smelting.number_tint),
@@ -236,7 +231,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 3, angelsmods.smelting.number_tint),
@@ -327,7 +321,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 4, angelsmods.smelting.number_tint),
@@ -343,7 +336,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 4, angelsmods.smelting.number_tint),

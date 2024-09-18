@@ -7,7 +7,6 @@ data:extend({
     name = "angels-ore1-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -75,7 +74,6 @@ data:extend({
     name = "angels-ore2-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -143,7 +141,6 @@ data:extend({
     name = "angels-ore3-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -211,7 +208,6 @@ data:extend({
     name = "angels-ore4-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -279,7 +275,6 @@ data:extend({
     name = "angels-ore5-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -347,7 +342,6 @@ data:extend({
     name = "angels-ore6-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -849,7 +843,6 @@ data:extend({
     name = "stone-crushed",
     icon = "__angelsrefininggraphics__/graphics/icons/stone-crushed.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,

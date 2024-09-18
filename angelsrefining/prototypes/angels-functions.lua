@@ -14,7 +14,6 @@ local function get_icons(object_name)
           {
             icon = object.icon,
             icon_size = object.icon_size or 32,
-            icon_mipmaps = object.icon_mipmaps ~= 1 and object.icon_mipmaps or nil,
             scale = 32 / (object.icon_size or 32),
           },
         }
@@ -34,7 +33,6 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
       table.insert(icon_layers, {
         icon = layer_to_add.icon,
         icon_size = layer_to_add.icon_size,
-        icon_mipmaps = layer_to_add.icon_mipmaps,
         tint = layer_to_add.tint,
         scale = (layer_to_add.scale or 1) * (layer_scale or 1),
         shift = {
@@ -49,7 +47,6 @@ function angelsmods.functions.add_icon_layer(icon_layers, layers_to_add, layer_s
     table.insert(icon_layers, {
       icon = layers_to_add.icon,
       icon_size = layers_to_add.icon_size,
-      icon_mipmaps = layers_to_add.icon_mipmaps,
       tint = layers_to_add.tint,
       scale = (layers_to_add.scale or 1) * (layer_scale or 1),
       shift = {
@@ -133,7 +130,6 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
     {
       icon = "__angelsrefininggraphics__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
       icon_size = 64,
-      icon_mipmaps = 2,
       tint = unify_tint(outline_tint or { 0, 0, 0, 1 }),
       scale = 0.5 * icon_size_scale,
       shift = icon_size_shift,
@@ -141,7 +137,6 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
     {
       icon = "__angelsrefininggraphics__/graphics/icons/numerals/num-" .. number_tier .. ".png",
       icon_size = 64,
-      icon_mipmaps = 2,
       tint = unify_tint(number_tint),
       scale = 0.5 * icon_size_scale,
       shift = icon_size_shift,
@@ -1542,7 +1537,6 @@ function angelsmods.functions.modify_barreling_icon()
               table.insert(item.icons, {
                 icon = fluid.icon,
                 icon_size = icon_size,
-                icon_mipmaps = fluid.icon_mipmaps,
                 shift = { 0, 5 },
                 scale = 16 / icon_size,
               })

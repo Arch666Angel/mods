@@ -25,7 +25,6 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     angelsmods.functions.move_item("alumina", "angels-aluminium", "f")
     data.raw["item"]["alumina"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png"
     data.raw["item"]["alumina"].icon_size = 32
-    data.raw["item"]["alumina"].icon_mipmaps = 1
 
     OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
   end
@@ -48,7 +47,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
     OV.disable_technology({ "angels-aluminium-casting-2", "angels-aluminium-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-aluminium-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-aluminium-smelting-2"][property])
     end
@@ -89,7 +88,6 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
     angelsmods.functions.move_item("aluminium-plate", "angels-aluminium-casting", "k")
     data.raw["item"]["aluminium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png"
     data.raw["item"]["aluminium-plate"].icon_size = 32
-    data.raw["item"]["aluminium-plate"].icon_mipmaps = 1
     OV.hide_recipe({ "bob-aluminium-plate", "alumina" })
   end
 else

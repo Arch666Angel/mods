@@ -16,7 +16,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "angels-labs-1",
@@ -43,7 +42,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },
@@ -101,7 +99,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "angels-labs-2",
@@ -132,7 +129,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },
@@ -194,7 +190,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "angels-labs-3",
@@ -221,7 +216,6 @@ if angelsmods.industries.tech then
         {
           icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },

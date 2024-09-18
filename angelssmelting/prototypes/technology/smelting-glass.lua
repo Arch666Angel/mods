@@ -4,7 +4,6 @@ data:extend({
     name = "angels-glass-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/glass-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
       "powder-metallurgy-2",
@@ -38,7 +37,6 @@ data:extend({
     name = "angels-glass-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/glass-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "powder-metallurgy-3",
@@ -77,7 +75,6 @@ data:extend({
     name = "angels-glass-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/glass-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
       "powder-metallurgy-4",

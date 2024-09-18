@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-silver-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "ore-floatation",
       "angels-metallurgy-2",
@@ -44,7 +43,6 @@ data:extend({
     name = "angels-silver-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "ore-processing-2",
@@ -85,7 +83,6 @@ data:extend({
     name = "angels-silver-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "strand-casting-2",
@@ -126,7 +123,6 @@ data:extend({
     name = "angels-silver-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
       "ore-processing-3",
@@ -168,7 +164,6 @@ data:extend({
     name = "angels-silver-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
       "strand-casting-3",

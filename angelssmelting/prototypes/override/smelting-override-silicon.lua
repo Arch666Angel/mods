@@ -28,7 +28,7 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
       "angels-silicon-casting-2",--[[, "angels-silicon-casting-3"]]
     })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-silicon-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-silicon-smelting-2"][property])
     end
@@ -60,7 +60,6 @@ if angelsmods.trigger.smelting_products["silicon"].mono then
     --angelsmods.functions.move_item("silicon", "angels-silicon-casting", "k")
     --data.raw["item"]["silicon"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silicon.png"
     --data.raw["item"]["silicon"].icon_size = 32
-    --data.raw["item"]["silicon"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-silicon-plate" })
   end
 else

@@ -250,12 +250,10 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         scale = 0.4375,
         shift = { 10, -10 },
       },
@@ -281,7 +279,6 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png",

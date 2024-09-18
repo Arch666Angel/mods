@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "ore-refining",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -211,7 +209,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "ore-refining",
@@ -226,7 +223,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

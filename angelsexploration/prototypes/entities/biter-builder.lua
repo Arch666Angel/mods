@@ -1686,7 +1686,6 @@ function angelsmods.functions.make_alien(def_data)
       {
         icon = "__base__/graphics/icons/big-biter-corpse.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = def_data.appearance.tint1,
       },
     },

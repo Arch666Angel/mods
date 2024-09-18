@@ -121,7 +121,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-green.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.bioprocessing.number_tint),
     order = "aa[algae-farming]",
@@ -144,7 +143,6 @@ data:extend({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-green.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.bioprocessing.number_tint),
     order = "ab[algae-farming]",

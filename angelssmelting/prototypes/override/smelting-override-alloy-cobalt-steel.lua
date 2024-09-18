@@ -16,7 +16,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         name = "liquid-molten-cobalt-steel",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt-steel.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
         order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
         default_temperature = 0,
@@ -68,7 +67,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         name = "angels-cobalt-steel-smelting-1",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-steel-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-steel-smelting-1",
           "angels-cobalt-smelting-1",
@@ -102,7 +100,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
     )
     data.raw["item"]["cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
     data.raw["item"]["cobalt-steel-alloy"].icon_size = 32
-    data.raw["item"]["cobalt-steel-alloy"].icon_mipmaps = 1
     OV.add_prereq("cobalt-processing", "angels-cobalt-steel-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-cobalt-steel")
   end

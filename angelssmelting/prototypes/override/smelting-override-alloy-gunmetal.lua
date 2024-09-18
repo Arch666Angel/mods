@@ -16,7 +16,6 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         name = "liquid-molten-gunmetal",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-gunmetal.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
         order = "c[gunmetal]-a[liquid-molten-gunmetal]",
         default_temperature = 0,
@@ -69,7 +68,6 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         name = "angels-gunmetal-smelting-1",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-gunmetal-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-tin-smelting-1",
           "angels-zinc-smelting-1",
@@ -99,7 +97,6 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
     angelsmods.functions.move_item("gunmetal-alloy", "angels-alloys-casting", "c[gunmetal]-b[gunmetal-alloy]")
     data.raw["item"]["gunmetal-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gunmetal.png"
     data.raw["item"]["gunmetal-alloy"].icon_size = 32
-    data.raw["item"]["gunmetal-alloy"].icon_mipmaps = 1
     OV.disable_recipe({ "gunmetal-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-gunmetal")
 

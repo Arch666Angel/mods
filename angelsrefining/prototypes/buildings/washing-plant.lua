@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "washing-building",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -102,7 +100,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "washing-building",
@@ -117,7 +114,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

@@ -16,7 +16,6 @@ data:extend({
     name = "angels-fissure",
     icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral" },
     category = "angels-fissure",
     order = "a-b-a",

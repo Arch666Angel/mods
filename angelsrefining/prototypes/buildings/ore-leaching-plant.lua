@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "ore-leaching",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -84,7 +82,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-2.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     icon_size = 32,
@@ -100,7 +97,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-2.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -176,7 +172,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-3.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.refining.number_tint),
     subgroup = "ore-leaching",
@@ -191,7 +186,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-leaching-plant-3.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

@@ -25,7 +25,7 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
     OV.disable_recipe({ "molten-zinc-smelting" })
     OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-zinc-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-zinc-smelting-2"][property])
     end
@@ -68,7 +68,6 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
     angelsmods.functions.move_item("zinc-plate", "angels-zinc-casting", "j")
     data.raw["item"]["zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
     data.raw["item"]["zinc-plate"].icon_size = 32
-    data.raw["item"]["zinc-plate"].icon_mipmaps = 1
     OV.disable_recipe({ "bob-zinc-plate" })
     OV.remove_prereq("battery-3", "zinc-processing")
     OV.add_prereq("battery-3", "angels-zinc-smelting-1")

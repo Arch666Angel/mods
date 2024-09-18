@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     OV.disable_recipe({ "molten-tin-smelting" })
     OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-tin-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-tin-smelting-2"][property])
     end
@@ -67,7 +67,6 @@ if angelsmods.trigger.smelting_products["tin"].plate then
     angelsmods.functions.move_item("tin-plate", "angels-tin-casting", "i")
     data.raw["item"]["tin-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
     data.raw["item"]["tin-plate"].icon_size = 32
-    data.raw["item"]["tin-plate"].icon_mipmaps = 1
 
     OV.patch_recipes({
       {
@@ -134,7 +133,6 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     OV.disable_recipe({ "tinned-copper-cable" })
     data.raw["item"]["tinned-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-tin.png"
     data.raw["item"]["tinned-copper-cable"].icon_size = 32
-    data.raw["item"]["tinned-copper-cable"].icon_mipmaps = 1
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/tinned-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-tin.png"

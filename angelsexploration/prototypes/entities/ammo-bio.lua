@@ -262,7 +262,6 @@ data:extend({
     name = "bio-ammo",
     icon = "__angelsexplorationgraphics__/graphics/icons/bio-ammo.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     ammo_type = {
       {

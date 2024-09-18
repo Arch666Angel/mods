@@ -6,7 +6,6 @@ local create_spider_vehicle_body = function(entity_name, entity_scale)
 
     icon = "__base__/graphics/icons/spidertron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     minimap_representation = {
       filename = "__base__/graphics/entity/spidertron/spidertron-map.png",
       flags = { "icon" },
@@ -1250,7 +1249,6 @@ local create_spider_vehicle_leg = function(entity_name, entity_scale, entity_ide
 
     icon = "__base__/graphics/icons/spidertron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
 
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     selectable_in_game = false,
@@ -1829,7 +1827,6 @@ data:extend({
     name = entity_name,
     icon = "__base__/graphics/icons/spidertron.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "transport",
     order = "b[personal-transport]-c[spidertron]-a[spider]",
     place_result = entity_name,

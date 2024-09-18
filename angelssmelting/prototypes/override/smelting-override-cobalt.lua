@@ -25,7 +25,6 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     angelsmods.functions.move_item("cobalt-oxide", "angels-cobalt", "e")
     data.raw["item"]["cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
     data.raw["item"]["cobalt-oxide"].icon_size = 32
-    data.raw["item"]["cobalt-oxide"].icon_mipmaps = 1
     OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
     OV.remove_prereq({ "battery-2", "rtg" }, "cobalt-processing") --based on the oxide not the plate
     OV.add_prereq({ "battery-2", "rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
@@ -38,7 +37,7 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     OV.disable_recipe({ "molten-cobalt-smelting" })
     OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-cobalt-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-cobalt-smelting-2"][property])
     end
@@ -96,7 +95,6 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
     angelsmods.functions.move_item("cobalt-plate", "angels-cobalt-casting", "j")
     data.raw["item"]["cobalt-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png"
     data.raw["item"]["cobalt-plate"].icon_size = 32
-    data.raw["item"]["cobalt-plate"].icon_mipmaps = 1
   end
 else
   angelsmods.functions.add_flag("angels-plate-cobalt", "hidden")

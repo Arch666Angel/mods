@@ -16,7 +16,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         name = "liquid-molten-bronze",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-bronze.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         subgroup = "angels-alloys-casting",
         order = "a[bronze]-a[liquid-molten-bronze]",
         default_temperature = 0,
@@ -119,7 +118,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         name = "angels-bronze-smelting-1",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-tin-smelting-1",
           "angels-copper-smelting-1",
@@ -148,7 +146,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         name = "angels-bronze-smelting-2",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           --"angels-metallurgy-2",
           "angels-bronze-smelting-1",
@@ -175,7 +172,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         name = "angels-bronze-smelting-3",
         icon = "__angelssmeltinggraphics__/graphics/technology/casting-bronze-tech.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
           "angels-metallurgy-3",
           "angels-bronze-smelting-2",
@@ -202,7 +198,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
     data.raw["item"]["bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
     data.raw["item"]["bronze-alloy"].icon_size = 32
-    data.raw["item"]["bronze-alloy"].icon_mipmaps = 1
     OV.disable_recipe({ "bronze-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------

@@ -6,7 +6,6 @@ data:extend({
     localised_description = { "technology-description.angels-silicon-metallurgy" },
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silicon-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-2",
       "angels-coal-processing",
@@ -49,7 +48,6 @@ data:extend({
     name = "angels-silicon-smelting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silicon-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
       "ore-processing-2",
@@ -90,7 +88,6 @@ data:extend({
     name = "angels-silicon-smelting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silicon-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
       "ore-processing-3",
@@ -128,7 +125,6 @@ data:extend({
     name = "angels-silicon-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silicon-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-3",
       "angels-silicon-smelting-1",

@@ -69,7 +69,6 @@ data:extend({
     name = "angels-ore1",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-HR.png",
     icon_size = 64,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -148,7 +147,6 @@ data:extend({
     name = "angels-ore5",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-HR.png",
     icon_size = 64,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,
@@ -208,7 +206,6 @@ data:extend({
     name = "angels-ore6",
     icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6.png",
     icon_size = 32,
-    --icon_mipmaps = 8,
     pictures = {
       {
         size = 64,

@@ -128,17 +128,15 @@ local function generate_fill_barrel_icons(fluid, style)
     f_icon = generate_liquid_canister_icons(fluid)
   else
     f_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }
@@ -163,17 +161,15 @@ local function generate_barrel_icons(fluid, style)
     f_icon = generate_liquid_canister_icons(fluid)
   else
     f_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-hoop-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }
@@ -190,17 +186,15 @@ local function generate_empty_barrel_icons(fluid, style)
     e_icon = generate_liquid_canister_icons(fluid)
   else
     e_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }

@@ -760,7 +760,6 @@ OV.patch_recipes(merge_table_of_tables({
             {
               icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
               icon_size = 32,
-              icon_mipmaps = 1,
             },
           }, 1, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, { 10, 10 })
@@ -806,7 +805,6 @@ OV.patch_recipes(merge_table_of_tables({
             {
               icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
               icon_size = 32,
-              icon_mipmaps = 1,
             },
           }, 2, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, { 10, 10 })

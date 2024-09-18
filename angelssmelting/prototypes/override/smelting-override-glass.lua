@@ -40,7 +40,6 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     angelsmods.functions.move_item("glass", "angels-glass-casting", "d")
     data.raw["item"]["glass"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png"
     data.raw["item"]["glass"].icon_size = 32
-    data.raw["item"]["glass"].icon_mipmaps = 1
 
     data.raw["recipe"]["angels-plate-glass-2"].main_product = "glass"
     data.raw["recipe"]["angels-plate-glass-3"].main_product = "glass"
@@ -107,7 +106,6 @@ if angelsmods.trigger.smelting_products["glass"].board then
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-glass.png",
             icon_size = 64,
-            icon_mipmaps = 4,
             scale = 0.4375 * 0.5,
             shift = { -10, -10 },
           },

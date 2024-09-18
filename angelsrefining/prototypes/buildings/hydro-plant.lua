@@ -72,7 +72,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     subgroup = "water-treatment-building",
@@ -87,7 +86,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -579,7 +577,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     subgroup = "water-treatment-building",
@@ -594,7 +591,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -1086,7 +1082,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     subgroup = "water-treatment-building",
@@ -1101,7 +1096,6 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
-        icon_mipmaps = 4,
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },

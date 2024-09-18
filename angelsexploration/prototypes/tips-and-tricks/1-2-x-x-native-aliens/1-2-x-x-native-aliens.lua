@@ -46,7 +46,6 @@ for spawner_idx, spawner_data in pairs(navive_data) do
         name = "tips-and-tricks-trigger-angels-native-inhabitants-unit-" .. unit_name,
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
-        icon_mipmaps = 1,
         hidden = true,
         prerequisites = nil,
         effects = nil,

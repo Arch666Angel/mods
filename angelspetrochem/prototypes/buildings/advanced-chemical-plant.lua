@@ -6,7 +6,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-chemical-plant",
@@ -21,7 +20,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
@@ -132,7 +130,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.petrochem.number_tint),
     subgroup = "petrochem-buildings-chemical-plant",
@@ -147,7 +144,6 @@ data:extend({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
