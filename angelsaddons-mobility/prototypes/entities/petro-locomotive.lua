@@ -185,7 +185,6 @@ funcs.generate_train_entities({
       },
       {
         priority = "very-low",
-        flags = { "compressed" },
         width = 256,
         height = 256,
         direction_count = 128,

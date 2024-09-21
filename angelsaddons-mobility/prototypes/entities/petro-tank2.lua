@@ -141,7 +141,6 @@ funcs.generate_train_entities({
         back_equals_front = true,
       },
       {
-        flags = { "compressed" },
         width = 256,
         height = 256,
         draw_as_shadow = true,
