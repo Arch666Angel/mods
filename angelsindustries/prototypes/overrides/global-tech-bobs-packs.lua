@@ -473,7 +473,7 @@ if angelsmods.industries.tech then
         if burner_lab then
           burner_lab.energy_source = {
             type = "burner",
-            fuel_category = "chemical",
+            fuel_categories = { "chemical" },
             effectivity = 0.65,
             fuel_inventory_size = 1,
             emissions_per_minute = 6,

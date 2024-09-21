@@ -30,7 +30,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     burner = {
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 0.5,
       fuel_inventory_size = 3,
       burnt_inventory_size = 1,

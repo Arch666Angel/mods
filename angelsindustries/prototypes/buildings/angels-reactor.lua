@@ -17,7 +17,7 @@ if angelsmods.industries.overhaul then
       neighbour_bonus = 0,
       energy_source = {
         type = "burner",
-        fuel_category = "nuclear",
+        fuel_categories = { "nuclear" },
         effectivity = 0.25,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,

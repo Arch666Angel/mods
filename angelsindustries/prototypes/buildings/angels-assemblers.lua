@@ -80,7 +80,7 @@ data:extend({
     crafting_speed = 0.5,
     energy_source = {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions_per_minute = 0.01,
