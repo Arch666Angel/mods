@@ -28,10 +28,14 @@ if angelsmods.industries.tech then
     angelsmods.functions.add_flag("lab", "hidden")
   end
 
-  data.raw["item"]["satellite"].rocket_launch_product = {
-    type = "item",
-    name = "science-gravitational-analyzer",
-    amount = 1000,
+  research_products = {{type = "item", name = "space-science-pack", amount = 1000}},
+
+  data.raw["rocket-silo-rocket"]["rocket-silo-rocket"].research_products = {
+    {
+      type = "item",
+      name = "science-gravitational-analyzer",
+      amount = 1000,
+    }
   }
   data.raw.technology["space-science-pack"].icon = "__angelsindustriesgraphics__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128

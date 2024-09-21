@@ -112,13 +112,6 @@ if angelsmods.industries.overhaul then
       move_item("rtg", "angels-basic-intermediate", "z[rocket]-d[rtg]")
     end
   end
-
-  -- rocket payload
-  if angelsmods.industries.tech then
-    move_item("satellite", "angels-pack-components", "dba")
-  else
-    move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")
-  end
 end
 
 -------------------------------------------------------------------------------
