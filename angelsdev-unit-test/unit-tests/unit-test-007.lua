@@ -10,7 +10,7 @@ local recipe_categories_to_ignore = {
 }
 
 local function has_recipe(recipe_filters, recipes_to_ignore)
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   if #recipe_prototypes == 0 then
     return false
@@ -35,7 +35,7 @@ local unit_test_007 = function()
   -- Ignore recipe result items that create rockets, which are 'used' to launch to space
   local rocket_silo_filters = {}
   table.insert(rocket_silo_filters, { filter = "type", invert = false, mode = "and", type = "rocket-silo" })
-  local rocket_silo_prototypes = game.get_filtered_entity_prototypes(rocket_silo_filters)
+  local rocket_silo_prototypes = prototypes.get_entity_filtered(rocket_silo_filters)
   local rocket_silo_fixed_recipe_names = {} -- fixed recipe names in rocket silos
   local rocket_silo_recipe_categories = {} -- rocket silo crafting categories without fixed recipes
   for _, rocket_silo_prototype in pairs(rocket_silo_prototypes) do
@@ -56,7 +56,7 @@ local unit_test_007 = function()
   end
   local rocket_silo_recipes = {} -- create a list of all recipes that can be made in a rocket silo
   if #rocket_silo_recipe_filters > 0 then
-    rocket_silo_recipes = game.get_filtered_recipe_prototypes(rocket_silo_recipe_filters)
+    rocket_silo_recipes = prototypes.get_recipe_filtered(rocket_silo_recipe_filters)
   end
   local recipe_prototypes = game.recipe_prototypes
   for _, rocket_silo_fixed_recipe_name in pairs(rocket_silo_fixed_recipe_names) do
@@ -111,7 +111,7 @@ local unit_test_007 = function()
     end
   end
 
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
     fluid_recipes_to_ignore[recipe_name] = true
@@ -131,7 +131,7 @@ local unit_test_007 = function()
   table.insert(item_filters, { filter = "wire-count", invert = false, mode = "and", comparison = "=", value = 0 })
   table.insert(item_filters, { filter = "name", invert = true, mode = "and", name = items_to_ignore })
 
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+  local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
     local recipe_filters = {}
@@ -154,7 +154,7 @@ local unit_test_007 = function()
   table.insert(fluid_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(fluid_filters, { filter = "fuel-value", invert = true, mode = "and", comparison = ">", value = 0.0 })
 
-  local fluid_prototypes = game.get_filtered_fluid_prototypes(fluid_filters)
+  local fluid_prototypes = prototypes.get_fluid_filtered(fluid_filters)
 
   for fluid_name, fluid in pairs(fluid_prototypes) do
     local recipe_filters = {}

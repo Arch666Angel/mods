@@ -11,7 +11,7 @@ local recipe_categories_to_ignore = {
 }
 
 local function has_recipe(recipe_filters, recipes_to_ignore)
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   if #recipe_prototypes == 0 then
     return false
@@ -43,7 +43,7 @@ local unit_test_008 = function()
   table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
   table.insert(item_filters, { filter = "burnt-result", invert = false, mode = "and", type = "item" })
 
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+  local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
     items_to_ignore[item.burnt_result.name] = true
@@ -55,7 +55,7 @@ local unit_test_008 = function()
   table.insert(entity_filters, { filter = "minable", invert = false, mode = "and" })
   table.insert(entity_filters, { filter = "autoplace", invert = false, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = game.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if entity.mineable_properties.products then
@@ -74,7 +74,7 @@ local unit_test_008 = function()
   table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
   table.insert(item_filters, { filter = "has-rocket-launch-products", invert = false, mode = "and" })
 
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+  local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
     for _, product in pairs(item.rocket_launch_products) do
@@ -90,7 +90,7 @@ local unit_test_008 = function()
   local entity_filters = {}
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     local loot = entity.loot
@@ -113,7 +113,7 @@ local unit_test_008 = function()
     end
   end
 
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
     fluid_recipes_to_ignore[recipe_name] = true
@@ -124,7 +124,7 @@ local unit_test_008 = function()
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(entity_filters, { filter = "type", type = "offshore-pump", mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     local fluid = entity.fluid
@@ -139,7 +139,7 @@ local unit_test_008 = function()
   table.insert(entity_filters, { filter = "hidden", mode = "and", invert = true })
   table.insert(entity_filters, { filter = "type", type = "boiler", mode = "or" })
   table.insert(entity_filters, { filter = "flag", flag = "player-creation", mode = "and" })
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for boiler_name, boiler in pairs(entity_prototypes) do
     for _, fluidbox in pairs(boiler.fluidbox_prototypes) do
@@ -158,7 +158,7 @@ local unit_test_008 = function()
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "deconstruction-item" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "upgrade-item" })
 
-  local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+  local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
     if not items_to_ignore[item_name] then
@@ -182,7 +182,7 @@ local unit_test_008 = function()
   local fluid_filters = {}
   table.insert(fluid_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local fluid_prototypes = game.get_filtered_fluid_prototypes(fluid_filters)
+  local fluid_prototypes = prototypes.get_fluid_filtered(fluid_filters)
 
   for fluid_name, fluid in pairs(fluid_prototypes) do
     if not fluids_to_ignore[fluid_name] then

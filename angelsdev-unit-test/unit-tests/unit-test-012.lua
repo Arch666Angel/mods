@@ -52,7 +52,7 @@ local function make_starting_unlocks()
   local recipe_filters = {}
   table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(recipe_filters, { filter = "enabled", invert = false, mode = "and" })
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for _, recipe in pairs(recipe_prototypes) do
     table.insert(starting_tech.effects, { type = "unlock-recipe", recipe = recipe.name })
@@ -70,7 +70,7 @@ local unit_test_012 = function()
   local tech_filters = {}
   table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(tech_filters, { filter = "enabled", invert = false, mode = "and" })
-  local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
+  local tech_prototypes = prototypes.get_technology_filtered(tech_filters)
 
   local I = 0
   local escape = false

@@ -90,7 +90,7 @@ local function process_tech(tech)
       local item_filters = {}
       table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
       table.insert(item_filters, { filter = "burnt-result", mode = "and" })
-      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_prototypes = prototypes.get_item_filtered(item_filters)
 
       for _, item in pairs(item_prototypes) do
         recipes[recipe.name].products.items[item.burnt_result.name] = true
@@ -102,7 +102,7 @@ local function process_tech(tech)
       local item_filters = {}
       table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
       table.insert(item_filters, { filter = "place-result", mode = "and" })
-      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_prototypes = prototypes.get_item_filtered(item_filters)
 
       for _, item in pairs(item_prototypes) do
         local entity = item.place_result
@@ -275,7 +275,7 @@ local function make_starting_unlocks()
   local entity_filters = {}
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     local loot = entity.loot
@@ -295,7 +295,7 @@ local function make_starting_unlocks()
   table.insert(entity_filters, { filter = "minable", invert = false, mode = "and" })
   table.insert(entity_filters, { filter = "autoplace", invert = false, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if entity.mineable_properties.products then
@@ -314,7 +314,7 @@ local function make_starting_unlocks()
   local recipe_filters = {}
   table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(recipe_filters, { filter = "enabled", invert = false, mode = "and" })
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for _, recipe in pairs(recipe_prototypes) do
     if recipe.hidden_from_player_crafting then
@@ -542,7 +542,7 @@ local unit_test_010 = function()
   local tech_filters = {}
   table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(tech_filters, { filter = "enabled", invert = false, mode = "and" })
-  local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
+  local tech_prototypes = prototypes.get_technology_filtered(tech_filters)
 
   local I = 0
   local escape = false

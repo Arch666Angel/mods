@@ -39,7 +39,7 @@ local suitable_research_lab = function(tech_prototype)
   local entity_filters = {}
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(entity_filters, { filter = "type", type = "lab", mode = "and" })
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for _, entity_prototype in pairs(entity_prototypes) do
     if has_suitable_lab_inputs(entity_prototype) then

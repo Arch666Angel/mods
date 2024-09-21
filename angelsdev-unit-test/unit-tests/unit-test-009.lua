@@ -20,7 +20,7 @@ local entities_to_ignore_item = {
 }
 
 local function has_recipe(recipe_filters, recipes_to_ignore)
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   if #recipe_prototypes == 0 then
     return false
@@ -43,7 +43,7 @@ local function try_find_character_for(recipe)
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(entity_filters, { filter = "type", type = "character", mode = "and" })
 
-  local entities = game.get_filtered_entity_prototypes(entity_filters)
+  local entities = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entities) do
     for category_name, _ in pairs(entity.crafting_categories) do
@@ -88,7 +88,7 @@ local function try_find_entity_for(recipe)
   table.insert(entity_filters, { filter = "crafting-category", crafting_category = recipe.category, mode = "and" })
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if
@@ -149,7 +149,7 @@ local unit_test_009 = function()
   table.insert(entity_filters, { filter = "crafting-machine", invert = false, mode = "and" })
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if not entities_to_ignore_recipe[entity_name] then
@@ -174,7 +174,7 @@ local unit_test_009 = function()
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(entity_filters, { filter = "autoplace", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if not entities_to_ignore_item[entity_name] then
@@ -190,7 +190,7 @@ local unit_test_009 = function()
         table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
       end
 
-      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_prototypes = prototypes.get_item_filtered(item_filters)
       if #item_prototypes == 0 then
         unit_test_functions.print_msg(string.format("Entity %q has no item to place it.", entity_name))
         unit_test_result = unit_test_functions.test_failed
@@ -202,7 +202,7 @@ local unit_test_009 = function()
   local recipe_filters = {}
   table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
     if not try_find_entity_for(recipe) then

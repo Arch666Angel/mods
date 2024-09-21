@@ -27,7 +27,7 @@ end
 function tips_and_tricks_triggers:init_trigger_data()
   -- init trigger data
   local trigger_data = {}
-  local alien_data = game.get_filtered_entity_prototypes({
+  local alien_data = prototypes.get_entity_filtered({
     { mode = "or", filter = "type", type = "unit" },
     { mode = "or", filter = "type", type = "unit-spawner" },
   })

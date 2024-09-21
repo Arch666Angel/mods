@@ -120,7 +120,7 @@ function sea_pump:on_build_entity(created_entity, entity_tags)
     if created_entity.ghost_name == self:get_placeable_name() then
       local modules = {}
       local has_modules = false
-      local module_prototypes = game.get_filtered_item_prototypes({
+      local module_prototypes = prototypes.get_item_filtered({
         { filter = "type", type = "module" },
       })
       for module_name, module_count in pairs(created_entity.item_requests) do
