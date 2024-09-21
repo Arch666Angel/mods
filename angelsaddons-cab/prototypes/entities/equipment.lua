@@ -59,7 +59,7 @@ data:extend({
     },
     icon = "__angelsaddons-cab__/graphics/icons/cab-energy-interface-mk1.png",
     icon_size = 32,
-    placed_as_equipment_result = string.format(energyInterface.name, "-mk1"),
+    place_as_equipment_result = string.format(energyInterface.name, "-mk1"),
     subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
     order = mods["angelsindustries"] and "b[crawlers]-e" or "e[angels-cab-energy-interface]-a",
     stack_size = 50,
@@ -69,7 +69,7 @@ data:extend({
 data:extend({
   {
     type = "night-vision-equipment",
-    name = data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result,
+    name = data.raw["item"][string.format(energyInterface.name, "-mk1")].place_as_equipment_result,
     localised_name = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_name,
     localised_description = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_description,
     sprite = {
@@ -100,7 +100,7 @@ data:extend({
 data:extend({
   {
     type = "electric-energy-interface",
-    name = data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result,
+    name = data.raw["item"][string.format(energyInterface.name, "-mk1")].place_as_equipment_result,
     localised_name = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_name,
     localised_description = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_description,
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
@@ -156,7 +156,7 @@ data:extend({
   },
   icon = "__angelsaddons-cab__/graphics/icons/cab-energy-interface-mk2.png",
   icon_size = 32,
-  placed_as_equipment_result = string.format(energyInterface.name, "-mk2"),
+  place_as_equipment_result = string.format(energyInterface.name, "-mk2"),
   subgroup = "angels-cab",
   order = "e[angels-cab-energy-interface]-b",
   stack_size = 50,
@@ -164,7 +164,7 @@ data:extend({
 }}
 data:extend{{
   type = "night-vision-equipment",
-  name = data.raw["item"][string.format(energyInterface.name, "-mk2")].placed_as_equipment_result,
+  name = data.raw["item"][string.format(energyInterface.name, "-mk2")].place_as_equipment_result,
   localised_name        = data.raw["item"][string.format(energyInterface.name, "-mk2")].localised_name,
   localised_description = data.raw["item"][string.format(energyInterface.name, "-mk2")].localised_description,
   sprite =
@@ -193,7 +193,7 @@ data:extend{{
   energy_source =
   {
     type              = "electric",
-    usage_priority    = data.raw["night-vision-equipment"][data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result].energy_source.usage_priority,
+    usage_priority    = data.raw["night-vision-equipment"][data.raw["item"][string.format(energyInterface.name, "-mk1")].place_as_equipment_result].energy_source.usage_priority,
     buffer_capacity   = string.format("%iJ", energyInterface.transferRates["mk2"]),
     --drain             = "0W",
     input_flow_limit  = string.format("%iW", energyInterface.transferRates["mk2"] * 60),
@@ -220,7 +220,7 @@ data:extend{{
 }}
 data:extend{{
   type = "electric-energy-interface",
-  name = data.raw["item"][string.format(energyInterface.name, "-mk2")].placed_as_equipment_result,
+  name = data.raw["item"][string.format(energyInterface.name, "-mk2")].place_as_equipment_result,
   localised_name        = data.raw["item"][string.format(energyInterface.name, "-mk2")].localised_name,
   localised_description = data.raw["item"][string.format(energyInterface.name, "-mk2")].localised_description,
   icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
@@ -237,7 +237,7 @@ data:extend{{
   energy_source =
   {
     type              = "electric",
-    usage_priority    = data.raw["electric-energy-interface"][data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result].energy_source.usage_priority,
+    usage_priority    = data.raw["electric-energy-interface"][data.raw["item"][string.format(energyInterface.name, "-mk1")].place_as_equipment_result].energy_source.usage_priority,
     buffer_capacity   = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.buffer_capacity,
     drain             = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.drain,
     input_flow_limit  = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk2")].energy_source.output_flow_limit,
