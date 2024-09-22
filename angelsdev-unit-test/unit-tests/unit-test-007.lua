@@ -121,31 +121,32 @@ local unit_test_007 = function()
   local item_filters = {}
   table.insert(item_filters, { filter = "tool", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "selection-tool", invert = true, mode = "and" })
-  table.insert(item_filters, { filter = "fuel", invert = true, mode = "and", flag = "hidden" })
+  table.insert(item_filters, { filter = "fuel", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "place-result", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "place-as-tile", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "placed-as-equipment-result", invert = true, mode = "and" })
-  table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
+  --table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "type", invert = false, mode = "and", type = "item" })
-  table.insert(item_filters, { filter = "has-rocket-launch-products", invert = true, mode = "and" })
-  table.insert(item_filters, { filter = "wire-count", invert = false, mode = "and", comparison = "=", value = 0 })
   table.insert(item_filters, { filter = "name", invert = true, mode = "and", name = items_to_ignore })
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
-    local recipe_filters = {}
-    table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-    table.insert(recipe_filters, {
-      filter = "has-ingredient-item",
-      invert = false,
-      mode = "and",
-      elem_filters = { { filter = "name", name = item_name } },
-    })
+    -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
+    if not item.hidden then
+      local recipe_filters = {}
+      table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
+      table.insert(recipe_filters, {
+        filter = "has-ingredient-item",
+        invert = false,
+        mode = "and",
+        elem_filters = { { filter = "name", name = item_name } },
+      })
 
-    if not has_recipe(recipe_filters, item_recipes_to_ignore) then
-      unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
-      unit_test_result = unit_test_functions.test_failed
+      if not has_recipe(recipe_filters, item_recipes_to_ignore) then
+        unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
+        unit_test_result = unit_test_functions.test_failed
+      end
     end
   end
 

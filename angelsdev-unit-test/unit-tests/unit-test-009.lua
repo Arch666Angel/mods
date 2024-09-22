@@ -187,11 +187,22 @@ local unit_test_009 = function()
           item_name = item.name
         end
         table.insert(item_filters, { filter = "name", invert = false, mode = "or", name = item_name })
-        table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
+        --table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
       end
 
       local item_prototypes = prototypes.get_item_filtered(item_filters)
-      if #item_prototypes == 0 then
+      local found_item = false
+      
+      for item_name, item in pairs(item_prototypes) do
+        if not item.hidden then
+          found_item = true
+          break
+        end
+      end
+      
+      -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
+      if not found_item then
+      --if #item_prototypes == 0 then
         unit_test_functions.print_msg(string.format("Entity %q has no item to place it.", entity_name))
         unit_test_result = unit_test_functions.test_failed
       end

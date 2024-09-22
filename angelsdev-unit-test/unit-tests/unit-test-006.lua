@@ -259,14 +259,12 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
         end
         if recipe_product.type == "item" then
           local item = item_prototypes[recipe_product.name]
-          if item.place_result then
-            local entity = prototypes.entity[item.place_result]
-            if entity.type == "rocket-silo" and entity.research_products then
-              for _, research_product in pairs(entity.research_products) do
-                local research_product_level = science_pack_level[research_product.name]
-                if research_product_level then
-                  tech_effect_level = math.max(tech_effect_level, research_product_level)
-                end
+          local entity = item.place_result
+          if entity and entity.type == "rocket-silo" and entity.research_products then
+            for _, research_product in pairs(entity.research_products) do
+              local research_product_level = science_pack_level[research_product.name]
+              if research_product_level then
+                tech_effect_level = math.max(tech_effect_level, research_product_level)
               end
             end
           end

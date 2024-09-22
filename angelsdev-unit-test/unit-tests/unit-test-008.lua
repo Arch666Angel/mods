@@ -40,13 +40,16 @@ local unit_test_008 = function()
 
   -- Populate items_to_ignore with burnt results
   local item_filters = {}
-  table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
+  --table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "burnt-result", invert = false, mode = "and", type = "item" })
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
-    items_to_ignore[item.burnt_result.name] = true
+    -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
+    if not item.hidden then
+      items_to_ignore[item.burnt_result.name] = true
+    end
   end
 
   -- Populate items_to_ignore and fluids_to_ignore with mining results
@@ -126,9 +129,10 @@ local unit_test_008 = function()
   local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
-    local fluid = entity.fluid
-    if fluid then
-      fluids_to_ignore[fluid.name] = true
+    for _, fluidbox in pairs(entity.fluidbox_prototypes) do
+      if fluidbox.filter then
+        fluids_to_ignore[fluidbox.filter.name] = true
+      end
     end
   end
 
@@ -151,7 +155,7 @@ local unit_test_008 = function()
 
   -- Check items
   local item_filters = {}
-  table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
+  --table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "blueprint" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "blueprint-book" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "deconstruction-item" })
@@ -160,7 +164,8 @@ local unit_test_008 = function()
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
-    if not items_to_ignore[item_name] then
+    -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
+    if not item.hidden and not items_to_ignore[item_name] then
       local recipe_filters = {}
       table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
       table.insert(recipe_filters, {
