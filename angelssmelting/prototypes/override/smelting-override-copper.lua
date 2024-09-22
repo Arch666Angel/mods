@@ -19,7 +19,7 @@ if angelsmods.trigger.ores["copper"] then
   })
   angelsmods.functions.move_item("copper-ore", "angels-copper", "a")
 else
-  angelsmods.functions.add_flag("copper-ore", "hidden")
+  angelsmods.functions.hide("copper-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -75,7 +75,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
     OV.remove_unlock("ore-crushing", "copper-plate")
   end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
-  angelsmods.functions.add_flag("angels-plate-copper", "hidden")
+  angelsmods.functions.hide("angels-plate-copper")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -118,7 +118,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].powder then
 else
-  angelsmods.functions.add_flag("powder-copper", "hidden")
+  angelsmods.functions.hide("powder-copper")
   OV.disable_recipe({ "powder-copper" })
 end
 
@@ -147,7 +147,7 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   })
   angelsmods.functions.remove_productivity("copper-cable")
   OV.global_replace_item("angels-wire-copper", "copper-cable")
-  angelsmods.functions.add_flag("angels-wire-copper", "hidden")
+  angelsmods.functions.hide("angels-wire-copper")
   angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
   data.raw["item"]["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png"
   data.raw["item"]["copper-cable"].icon_size = 32

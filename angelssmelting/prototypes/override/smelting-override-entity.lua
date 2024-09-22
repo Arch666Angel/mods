@@ -9,13 +9,13 @@ if not angelsmods.trigger.sintering_tech then
     "sintering-oven-4",
     "sintering-oven-5",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "sintering-oven",
     "sintering-oven-2",
     "sintering-oven-3",
     "sintering-oven-4",
     "sintering-oven-5",
-  }, "hidden")
+  })
   for _, tech_name in pairs({
     "powder-metallurgy-2",
     "powder-metallurgy-3",
@@ -44,11 +44,11 @@ elseif not angelsmods.trigger.early_sintering_oven then
     "sintering-oven-2",
     "sintering-oven-3",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "sintering-oven",
     "sintering-oven-2",
     "sintering-oven-3",
-  }, "hidden")
+  })
   angelsmods.functions.set_next_upgrade("assembling-machine", "sintering-oven", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "sintering-oven-2", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "sintering-oven-3", nil)
@@ -98,9 +98,9 @@ else
   OV.disable_recipe({
     "angels-chemical-furnace",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "angels-chemical-furnace",
-  }, "hidden")
+  })
   angelsmods.functions.set_next_upgrade("assembling-machine", "angels-chemical-furnace", nil)
 
   -- update numbers (name and icon)

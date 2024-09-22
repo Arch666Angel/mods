@@ -12,11 +12,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["saphirite"] then
 else
-  angelsmods.functions.add_flag("angels-ore1", "hidden")
-  angelsmods.functions.add_flag("angels-ore1-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore1-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore1-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore1-pure", "hidden")
+  angelsmods.functions.hide("angels-ore1")
+  angelsmods.functions.hide("angels-ore1-crushed")
+  angelsmods.functions.hide("angels-ore1-chunk")
+  angelsmods.functions.hide("angels-ore1-crystal")
+  angelsmods.functions.hide("angels-ore1-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -24,11 +24,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["jivolite"] then
 else
-  angelsmods.functions.add_flag("angels-ore2", "hidden")
-  angelsmods.functions.add_flag("angels-ore2-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore2-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore2-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore2-pure", "hidden")
+  angelsmods.functions.hide("angels-ore2")
+  angelsmods.functions.hide("angels-ore2-crushed")
+  angelsmods.functions.hide("angels-ore2-chunk")
+  angelsmods.functions.hide("angels-ore2-crystal")
+  angelsmods.functions.hide("angels-ore2-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -36,11 +36,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["stiratite"] then
 else
-  angelsmods.functions.add_flag("angels-ore3", "hidden")
-  angelsmods.functions.add_flag("angels-ore3-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore3-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore3-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore3-pure", "hidden")
+  angelsmods.functions.hide("angels-ore3")
+  angelsmods.functions.hide("angels-ore3-crushed")
+  angelsmods.functions.hide("angels-ore3-chunk")
+  angelsmods.functions.hide("angels-ore3-crystal")
+  angelsmods.functions.hide("angels-ore3-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -48,11 +48,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["crotinnium"] then
 else
-  angelsmods.functions.add_flag("angels-ore4", "hidden")
-  angelsmods.functions.add_flag("angels-ore4-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore4-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore4-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore4-pure", "hidden")
+  angelsmods.functions.hide("angels-ore4")
+  angelsmods.functions.hide("angels-ore4-crushed")
+  angelsmods.functions.hide("angels-ore4-chunk")
+  angelsmods.functions.hide("angels-ore4-crystal")
+  angelsmods.functions.hide("angels-ore4-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -61,11 +61,11 @@ end
 if angelsmods.trigger.refinery_products["rubyte"] then
   angelsmods.trigger.geode_cyan = true
 else
-  angelsmods.functions.add_flag("angels-ore5", "hidden")
-  angelsmods.functions.add_flag("angels-ore5-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore5-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore5-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore5-pure", "hidden")
+  angelsmods.functions.hide("angels-ore5")
+  angelsmods.functions.hide("angels-ore5-crushed")
+  angelsmods.functions.hide("angels-ore5-chunk")
+  angelsmods.functions.hide("angels-ore5-crystal")
+  angelsmods.functions.hide("angels-ore5-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -74,11 +74,11 @@ end
 if angelsmods.trigger.refinery_products["bobmonium"] then
   angelsmods.trigger.geode_red = true
 else
-  angelsmods.functions.add_flag("angels-ore6", "hidden")
-  angelsmods.functions.add_flag("angels-ore6-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore6-chunk", "hidden")
-  angelsmods.functions.add_flag("angels-ore6-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore6-pure", "hidden")
+  angelsmods.functions.hide("angels-ore6")
+  angelsmods.functions.hide("angels-ore6-crushed")
+  angelsmods.functions.hide("angels-ore6-chunk")
+  angelsmods.functions.hide("angels-ore6-crystal")
+  angelsmods.functions.hide("angels-ore6-pure")
 end
 
 -------------------------------------------------------------------------------
@@ -90,14 +90,14 @@ if angelsmods.trigger.refinery_products["ferrous"] then
   angelsmods.functions.move_item("angels-ore8-anode-sludge", "ore-processing-fluid", "a[ferrous]-c", "fluid")
   angelsmods.functions.move_item("angels-ore8-slime", "ore-processing-fluid", "a[ferrous]-d", "fluid")
 else
-  angelsmods.functions.add_flag("angels-ore8-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-powder", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-dust", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-sludge", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-solution", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-anode-sludge", "hidden")
-  angelsmods.functions.add_flag("angels-ore8-slime", "hidden")
+  angelsmods.functions.hide("angels-ore8-crushed")
+  angelsmods.functions.hide("angels-ore8-powder")
+  angelsmods.functions.hide("angels-ore8-dust")
+  angelsmods.functions.hide("angels-ore8-crystal")
+  angelsmods.functions.hide("angels-ore8-sludge")
+  angelsmods.functions.hide("angels-ore8-solution")
+  angelsmods.functions.hide("angels-ore8-anode-sludge")
+  angelsmods.functions.hide("angels-ore8-slime")
 
   OV.disable_recipe({
     "angelsore8-powder",
@@ -132,14 +132,14 @@ if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.functions.move_item("angels-ore9-anode-sludge", "ore-processing-fluid", "b[cupric]-c", "fluid")
   angelsmods.functions.move_item("angels-ore9-slime", "ore-processing-fluid", "b[cupric]-d", "fluid")
 else
-  angelsmods.functions.add_flag("angels-ore9-crushed", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-powder", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-dust", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-crystal", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-sludge", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-solution", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-anode-sludge", "hidden")
-  angelsmods.functions.add_flag("angels-ore9-slime", "hidden")
+  angelsmods.functions.hide("angels-ore9-crushed")
+  angelsmods.functions.hide("angels-ore9-powder")
+  angelsmods.functions.hide("angels-ore9-dust")
+  angelsmods.functions.hide("angels-ore9-crystal")
+  angelsmods.functions.hide("angels-ore9-sludge")
+  angelsmods.functions.hide("angels-ore9-solution")
+  angelsmods.functions.hide("angels-ore9-anode-sludge")
+  angelsmods.functions.hide("angels-ore9-slime")
 
   OV.disable_recipe({
     "angelsore9-powder",
@@ -166,15 +166,15 @@ if angelsmods.functions.is_special_vanilla() then
     "catalysator-green",
     "catalysator-orange",
   })
-  angelsmods.functions.add_flag("crystal-seedling", "hidden")
-  angelsmods.functions.add_flag("catalysator-brown", "hidden")
-  angelsmods.functions.add_flag("catalysator-green", "hidden")
-  angelsmods.functions.add_flag("catalysator-orange", "hidden")
+  angelsmods.functions.hide("crystal-seedling")
+  angelsmods.functions.hide("catalysator-brown")
+  angelsmods.functions.hide("catalysator-green")
+  angelsmods.functions.hide("catalysator-orange")
 end
 
 -- Currently crystal-matrix has no use
 OV.disable_recipe({ "crystal-matrix" })
-angelsmods.functions.add_flag("crystal-matrix", "hidden")
+angelsmods.functions.hide("crystal-matrix")
 
 -------------------------------------------------------------------------------
 -- SLAG -----------------------------------------------------------------------
@@ -184,5 +184,5 @@ if angelsmods.trigger.slag == false then
     "slag-processing-stone",
     "slag-processing-dissolution",
   })
-  angelsmods.functions.add_flag("slag", "hidden")
+  angelsmods.functions.hide("slag")
 end

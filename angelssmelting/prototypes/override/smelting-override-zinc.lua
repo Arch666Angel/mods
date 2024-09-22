@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["zinc"] then
 else
-  angelsmods.functions.add_flag("zinc-ore", "hidden")
+  angelsmods.functions.hide("zinc-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
   if angelsmods.trigger.smelting_products["zinc"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
+    angelsmods.functions.hide("liquid-molten-zinc")
     OV.disable_recipe({ "molten-zinc-smelting" })
     OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
     -- swap tech tier 1 to ingots
@@ -42,12 +42,12 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
     })
   end
 else
-  angelsmods.functions.add_flag("processed-zinc", "hidden")
-  angelsmods.functions.add_flag("pellet-zinc", "hidden")
-  angelsmods.functions.add_flag("solid-zinc-oxide", "hidden")
-  angelsmods.functions.add_flag("cathode-zinc", "hidden")
-  angelsmods.functions.add_flag("ingot-zinc", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
+  angelsmods.functions.hide("processed-zinc")
+  angelsmods.functions.hide("pellet-zinc")
+  angelsmods.functions.hide("solid-zinc-oxide")
+  angelsmods.functions.hide("cathode-zinc")
+  angelsmods.functions.hide("ingot-zinc")
+  angelsmods.functions.hide("liquid-molten-zinc")
   OV.disable_recipe({ "zinc-ore-processing", "zinc-processed-processing", "zinc-ore-processing-alt" })
   OV.disable_recipe({ "pellet-zinc-smelting", "solid-zinc-oxide-smelting" })
   OV.disable_recipe({ "zinc-ore-smelting", "processed-zinc-smelting", "cathode-zinc-smelting" })
@@ -64,7 +64,7 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-zinc", "zinc-plate")
-    angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
+    angelsmods.functions.hide("angels-plate-zinc")
     angelsmods.functions.move_item("zinc-plate", "angels-zinc-casting", "j")
     data.raw["item"]["zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
     data.raw["item"]["zinc-plate"].icon_size = 32
@@ -73,8 +73,8 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
     OV.add_prereq("battery-3", "angels-zinc-smelting-1")
   end
 else
-  angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
-  angelsmods.functions.add_flag("angels-roll-zinc", "hidden")
+  angelsmods.functions.hide("angels-plate-zinc")
+  angelsmods.functions.hide("angels-roll-zinc")
   OV.disable_recipe({ "roll-zinc-casting", "roll-zinc-casting-fast" })
   OV.disable_recipe({ "angels-plate-zinc", "angels-roll-zinc-converting" })
 end
@@ -84,6 +84,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["zinc"].powder then
 else
-  angelsmods.functions.add_flag("powder-zinc", "hidden")
+  angelsmods.functions.hide("powder-zinc")
   OV.disable_recipe({ "powder-zinc" })
 end

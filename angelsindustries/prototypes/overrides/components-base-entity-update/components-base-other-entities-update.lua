@@ -100,7 +100,7 @@ if angelsmods.industries.components then
     rocket.subgroup = "angels-rocket"
     rocket.order = "b[rocket]"
   end
-  angelsmods.functions.remove_flag(rocket.name, "hidden")
+  angelsmods.functions.unhide(rocket.name)
 
   OV.patch_recipes({
     {

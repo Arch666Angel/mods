@@ -7,7 +7,7 @@ local move_item = angelsmods.functions.move_item
 move_item("chemical-plant", "petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
 
 if angelsmods.trigger.disable_vanilla_chemical_plants then
-  angelsmods.functions.add_flag("chemical-plant", "hidden")
+  angelsmods.functions.hide("chemical-plant")
   angelsmods.functions.set_next_upgrade("assembling-machine", "chemical-plant", nil)
   OV.global_replace_item("chemical-plant", "angels-chemical-plant")
   OV.disable_recipe("chemical-plant")

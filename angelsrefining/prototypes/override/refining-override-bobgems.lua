@@ -45,7 +45,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   angelsmods.functions.move_item("gem-ore", "bob-gems-crystallization", "g")
-  angelsmods.functions.add_flag("gem-ore", "hidden")
+  angelsmods.functions.hide("gem-ore")
   --[[if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
     data:extend(
       {
@@ -109,7 +109,7 @@ else
   OV.disable_recipe("angelsore7-crystallization-6")
 
   if mods["bobores"] then
-    angelsmods.functions.add_flag({
+    angelsmods.functions.hide({
       "gem-ore",
       "ruby-ore",
       "sapphire-ore",
@@ -117,6 +117,6 @@ else
       "amethyst-ore",
       "topaz-ore",
       "diamond-ore",
-    }, "hidden")
+    })
   end
 end

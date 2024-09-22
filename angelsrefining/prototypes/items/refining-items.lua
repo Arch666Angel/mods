@@ -1072,7 +1072,7 @@ data:extend({
     name = "angels-void",
     icon = "__angelsrefininggraphics__/graphics/icons/void.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "processing-crafting",
     stack_size = 200,
   },

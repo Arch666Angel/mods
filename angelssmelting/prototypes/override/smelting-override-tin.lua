@@ -12,7 +12,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["tin"] then
 else
-  angelsmods.functions.add_flag("tin-ore", "hidden")
+  angelsmods.functions.hide("tin-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
   if angelsmods.trigger.smelting_products["tin"].plate or angelsmods.trigger.smelting_products["tin"].wire then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
+    angelsmods.functions.hide("liquid-molten-tin")
     OV.disable_recipe({ "molten-tin-smelting" })
     OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
     -- swap tech tier 1 to ingots
@@ -35,10 +35,10 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     OV.add_prereq("electronics", "angels-tin-smelting-1")
   end
 else
-  angelsmods.functions.add_flag("processed-tin", "hidden")
-  angelsmods.functions.add_flag("pellet-tin", "hidden")
-  angelsmods.functions.add_flag("ingot-tin", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-tin", "hidden")
+  angelsmods.functions.hide("processed-tin")
+  angelsmods.functions.hide("pellet-tin")
+  angelsmods.functions.hide("ingot-tin")
+  angelsmods.functions.hide("liquid-molten-tin")
   OV.disable_recipe({ "tin-ore-processing", "tin-processed-processing" })
   OV.disable_recipe({ "tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting" })
   OV.disable_recipe({ "molten-tin-smelting" })
@@ -63,7 +63,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-tin", "tin-plate")
-    angelsmods.functions.add_flag("angels-plate-tin", "hidden")
+    angelsmods.functions.hide("angels-plate-tin")
     angelsmods.functions.move_item("tin-plate", "angels-tin-casting", "i")
     data.raw["item"]["tin-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
     data.raw["item"]["tin-plate"].icon_size = 32
@@ -98,8 +98,8 @@ if angelsmods.trigger.smelting_products["tin"].plate then
     OV.remove_unlock("ore-crushing", "tin-plate")
   end
 else
-  angelsmods.functions.add_flag("angels-plate-tin", "hidden")
-  angelsmods.functions.add_flag("angels-roll-tin", "hidden")
+  angelsmods.functions.hide("angels-plate-tin")
+  angelsmods.functions.hide("angels-roll-tin")
   OV.disable_recipe({ "roll-tin-casting", "roll-tin-casting-fast" })
   OV.disable_recipe({ "angels-plate-tin", "angels-roll-tin-converting" })
 end
@@ -128,7 +128,7 @@ if angelsmods.trigger.smelting_products["tin"].wire then
 
   if data.raw.item["tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
-    angelsmods.functions.add_flag("angels-wire-tin", "hidden")
+    angelsmods.functions.hide("angels-wire-tin")
     angelsmods.functions.move_item("tinned-copper-cable", "angels-tin-casting", "j")
     OV.disable_recipe({ "tinned-copper-cable" })
     data.raw["item"]["tinned-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-tin.png"
@@ -152,8 +152,8 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     })
   end
 else
-  angelsmods.functions.add_flag("angels-wire-tin", "hidden")
-  angelsmods.functions.add_flag("angels-wire-coil-tin", "hidden")
+  angelsmods.functions.hide("angels-wire-tin")
+  angelsmods.functions.hide("angels-wire-coil-tin")
   OV.disable_recipe({ "angels-wire-coil-tin-casting", "angels-wire-coil-tin-casting-fast" })
   OV.disable_recipe({ "basic-tinned-copper-wire", "angels-wire-coil-tin-converting" })
 end
@@ -163,6 +163,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].powder then
 else
-  angelsmods.functions.add_flag("powder-tin", "hidden")
+  angelsmods.functions.hide("powder-tin")
   OV.disable_recipe({ "powder-tin" })
 end

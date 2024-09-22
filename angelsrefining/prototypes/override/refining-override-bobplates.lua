@@ -5,12 +5,12 @@ local move_item = angelsmods.functions.move_item
 -- BARRELING PUMPS ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "water-pump",
     "water-pump-2",
     "water-pump-3",
     "water-pump-4",
-  }, "hidden")
+  })
 
   OV.hide_recipe({
     "water-pump",
@@ -178,7 +178,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- Distillery 1
-  angelsmods.functions.add_flag("bob-distillery", "hidden")
+  angelsmods.functions.hide("bob-distillery")
   angelsmods.functions.set_next_upgrade("assembling-machine", "bob-distillery", nil)
   angelsmods.functions.set_next_upgrade("furnace", "bob-distillery", nil)
   OV.global_replace_item("bob-distillery", "chemical-plant")

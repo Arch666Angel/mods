@@ -22,7 +22,7 @@ local unit_test_003 = function()
       local recipe_ingredients = recipe_data.ingredients
       for _, recipe_ingredient in pairs(recipe_ingredients) do
         if recipe_ingredient.type == "item" then
-          if item_prototypes[recipe_ingredient.name].has_flag("hidden") then
+          if item_prototypes[recipe_ingredient.name].hidden then
             unit_test_functions.print_msg(
               string.format("Recipe %q requires %q (item), which is hidden.", recipe_name, recipe_ingredient.name)
             )
@@ -48,7 +48,7 @@ local unit_test_003 = function()
         --add exception list for results (void results)
         if not products_to_ignore[recipe_product.name] then
           if recipe_product.type == "item" then
-            if item_prototypes[recipe_product.name].has_flag("hidden") then
+            if item_prototypes[recipe_product.name].hidden then
               unit_test_functions.print_msg(
                 string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name)
               )

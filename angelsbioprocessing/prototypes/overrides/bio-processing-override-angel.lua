@@ -79,7 +79,7 @@ for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-n
 end
 
 -- Puffer nests cannot be created
-angelsmods.functions.add_flag("puffer-nest", "hidden")
+angelsmods.functions.hide("puffer-nest")
 
 if angelsmods.trigger.crystals_full == true then
 else
@@ -89,10 +89,10 @@ else
     "crystal-full-red",
     --"crystal-full-green" -- Used for agriculture modules
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "crystal-full-harmonic",
     "crystal-full-blue",
     "crystal-full-red",
     --"crystal-full-green" -- Used for agriculture modules
-  }, "hidden")
+  })
 end

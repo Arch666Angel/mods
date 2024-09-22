@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["lead"] then
 else
-  angelsmods.functions.add_flag("lead-ore", "hidden")
+  angelsmods.functions.hide("lead-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")
-    angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
+    angelsmods.functions.hide("solid-lead-oxide")
     angelsmods.functions.move_item("lead-oxide", "angels-lead", "d")
     data.raw["item"]["lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
     data.raw["item"]["lead-oxide"].icon_size = 32
@@ -34,7 +34,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   if angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["zinc"].ingot then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-lead", "hidden")
+    angelsmods.functions.hide("liquid-molten-lead")
     OV.disable_recipe({ "molten-lead-smelting" })
   end
 
@@ -48,13 +48,13 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
     end
   end
 else
-  angelsmods.functions.add_flag("processed-lead", "hidden")
-  angelsmods.functions.add_flag("pellet-lead", "hidden")
-  angelsmods.functions.add_flag("solid-lead-oxide", "hidden")
-  angelsmods.functions.add_flag("anode-lead", "hidden")
-  angelsmods.functions.add_flag("liquid-hexafluorosilicic-acid", "hidden")
-  angelsmods.functions.add_flag("ingot-lead", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-lead", "hidden")
+  angelsmods.functions.hide("processed-lead")
+  angelsmods.functions.hide("pellet-lead")
+  angelsmods.functions.hide("solid-lead-oxide")
+  angelsmods.functions.hide("anode-lead")
+  angelsmods.functions.hide("liquid-hexafluorosilicic-acid")
+  angelsmods.functions.hide("ingot-lead")
+  angelsmods.functions.hide("liquid-molten-lead")
   OV.disable_recipe({ "lead-ore-processing", "lead-processed-processing" })
   OV.disable_recipe({ "processed-lead-smelting", "pellet-lead-smelting", "liquid-hexafluorosilicic-acid" })
   OV.disable_recipe({ "lead-ore-smelting", "solid-lead-oxide-smelting", "anode-lead-smelting" })
@@ -79,7 +79,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
 
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-lead", "lead-plate")
-    angelsmods.functions.add_flag("angels-plate-lead", "hidden")
+    angelsmods.functions.hide("angels-plate-lead")
     angelsmods.functions.move_item("lead-plate", "angels-lead-casting", "k")
     data.raw["item"]["lead-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png"
     data.raw["item"]["lead-plate"].icon_size = 32
@@ -114,8 +114,8 @@ if angelsmods.trigger.smelting_products["lead"].plate then
     OV.remove_unlock("ore-crushing", "lead-plate")
   end
 else
-  angelsmods.functions.add_flag("angels-plate-lead", "hidden")
-  angelsmods.functions.add_flag("angels-roll-lead", "hidden")
+  angelsmods.functions.hide("angels-plate-lead")
+  angelsmods.functions.hide("angels-roll-lead")
   OV.disable_recipe({ "roll-lead-casting", "roll-lead-casting-fast" })
   OV.disable_recipe({ "angels-plate-lead", "angels-roll-lead-converting" })
 end
@@ -125,6 +125,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["lead"].powder then
 else
-  angelsmods.functions.add_flag("powder-lead", "hidden")
+  angelsmods.functions.hide("powder-lead")
   OV.disable_recipe({ "powder-lead" })
 end

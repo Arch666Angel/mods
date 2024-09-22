@@ -8,7 +8,7 @@ for _, upgrade in pairs({
 }) do
   local entity = prototypes.entity[upgrade.oldEntity]
 
-  if entity and entity.has_flag("hidden") then
+  if entity and entity.hidden then
     for _, surface in pairs(game.surfaces) do
       for chunk in surface.get_chunks() do
         angelsmods.migration.replace_item(

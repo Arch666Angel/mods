@@ -316,13 +316,13 @@ if angelsmods.industries.components then
         "block-exploration-4",
         "block-exploration-5",
       })
-      angelsmods.functions.add_flag({
+      angelsmods.functions.hide({
         "block-exploration-1",
         "block-exploration-2",
         "block-exploration-3",
         "block-exploration-4",
         "block-exploration-5",
-      }, "hidden")
+      })
     end
     if angelsmods.industries.blocks.logistic == false then
       OV.disable_recipe({
@@ -332,13 +332,13 @@ if angelsmods.industries.components then
         "block-logistic-4",
         "block-logistic-5",
       })
-      angelsmods.functions.add_flag({
+      angelsmods.functions.hide({
         "block-logistic-1",
         "block-logistic-2",
         "block-logistic-3",
         "block-logistic-4",
         "block-logistic-5",
-      }, "hidden")
+      })
     end
     if angelsmods.industries.blocks.warfare == false then
       OV.disable_recipe({
@@ -368,7 +368,7 @@ if angelsmods.industries.components then
         "weapon-parts-acceleratorcoil",
         "angels-acceleratorcoil",
       })
-      angelsmods.functions.add_flag({
+      angelsmods.functions.hide({
         "block-warfare-1",
         "weapon-1",
         "body-1",
@@ -390,16 +390,16 @@ if angelsmods.industries.components then
         "weapon-5",
         "body-5",
         "angels-acceleratorcoil",
-      }, "hidden")
+      })
       OV.remove_prereq("military-3", "angels-tungsten-smelting-1")
     end
     if angelsmods.industries.blocks.enhancement5 == false then
       OV.disable_recipe("block-enhancement-5")
-      angelsmods.functions.add_flag("block-enhancement-5", "hidden")
+      angelsmods.functions.hide("block-enhancement-5")
     end
     if angelsmods.industries.blocks.energy5 == false then
       OV.disable_recipe("block-energy-5")
-      angelsmods.functions.add_flag("block-energy-5", "hidden")
+      angelsmods.functions.hide("block-energy-5")
     end
     if
       (angelsmods.industries.blocks.enhancement5 == false)
@@ -407,7 +407,7 @@ if angelsmods.industries.components then
       and (angelsmods.industries.blocks.logistic == false)
     then
       OV.disable_recipe("angels-servo-motor-5")
-      angelsmods.functions.add_flag("angels-servo-motor-5", "hidden")
+      angelsmods.functions.hide("angels-servo-motor-5")
     end
 
     if mods["bobmodules"] then

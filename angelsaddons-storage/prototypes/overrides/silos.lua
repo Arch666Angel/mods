@@ -42,7 +42,7 @@ if angelsmods.addons.storage.oresilos and angelsmods.refining then
         },
       })
     else
-      angelsmods.functions.add_flag("silo-" .. ore_name, "hidden")
+      angelsmods.functions.hide("silo-" .. ore_name)
       angelsmods.functions.OV.disable_recipe("silo-" .. ore_name)
     end
   end

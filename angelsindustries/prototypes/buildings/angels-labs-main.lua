@@ -198,7 +198,7 @@ if angelsmods.industries.tech then
 
   -- disable base game lab as it is obsolete
   OV.disable_recipe("lab")
-  angelsmods.functions.add_flag("lab", "hidden")
+  angelsmods.functions.hide("lab")
 
   -- duplicate the first main lab to be part of the crash site
   data:extend({
@@ -247,7 +247,8 @@ if angelsmods.industries.tech then
       icon = "__angelsindustriesgraphics__/graphics/icons/crash-site-lab-repaired.png",
       icon_size = 64,
 
-      flags = { "not-deconstructable", "placeable-player", "player-creation", "hidden" },
+      flags = { "not-deconstructable", "placeable-player", "player-creation" },
+      hidden = true,
       --map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
       minable = {
         mining_time = 1,

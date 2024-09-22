@@ -73,8 +73,8 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
       { "", { "technology-name.angels-steel-casting" }, " 2" }
   end
 else
-  angelsmods.functions.add_flag("ingot-steel", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-steel", "hidden")
+  angelsmods.functions.hide("ingot-steel")
+  angelsmods.functions.hide("liquid-molten-steel")
   OV.disable_recipe({ "ingot-iron-smelting" })
   OV.disable_recipe({
     "molten-steel-smelting-1",
@@ -100,7 +100,7 @@ if angelsmods.trigger.smelting_products["steel"].plate then
   })
   OV.add_prereq("steel-processing", "angels-steel-smelting-1")
   OV.global_replace_item("angels-plate-steel", "steel-plate")
-  angelsmods.functions.add_flag("angels-plate-steel", "hidden")
+  angelsmods.functions.hide("angels-plate-steel")
   angelsmods.functions.move_item("steel-plate", "angels-steel-casting", "l")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -115,8 +115,8 @@ if angelsmods.trigger.smelting_products["steel"].plate then
     "__angelssmeltinggraphics__/graphics/icons/plate-steel.png"
   )
 else
-  angelsmods.functions.add_flag("angels-plate-steel", "hidden")
-  angelsmods.functions.add_flag("angels-roll-steel", "hidden")
+  angelsmods.functions.hide("angels-plate-steel")
+  angelsmods.functions.hide("angels-roll-steel")
   OV.disable_recipe({ "roll-steel-casting", "roll-steel-casting-fast" })
   OV.disable_recipe({ "angels-plate-steel", "angels-roll-steel-converting" })
 end
@@ -126,7 +126,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["steel"].powder then
 else
-  angelsmods.functions.add_flag("powder-steel", "hidden")
+  angelsmods.functions.hide("powder-steel")
   OV.disable_recipe({ "powder-steel" })
 end
 
@@ -136,8 +136,8 @@ end
 if angelsmods.trigger.smelting_products["steel"].rod then
   OV.add_unlock("steel-processing", "angels-rod-steel-plate")
 else
-  angelsmods.functions.add_flag("angels-rod-stack-steel", "hidden")
-  angelsmods.functions.add_flag("angels-rod-steel", "hidden")
+  angelsmods.functions.hide("angels-rod-stack-steel")
+  angelsmods.functions.hide("angels-rod-steel")
   OV.disable_recipe({ "rod-stack-steel-casting", "rod-stack-steel-casting-fast" })
   OV.disable_recipe({ "angels-rod-steel-plate", "angels-rod-stack-steel-converting" })
 end

@@ -19,7 +19,7 @@ if mods["bobplates"] then
 
   -- Remove Stone chemical furnaces
   OV.global_replace_item("stone-chemical-furnace", "stone-furnace")
-  angelsmods.functions.add_flag("stone-chemical-furnace", "hidden")
+  angelsmods.functions.hide("stone-chemical-furnace")
   angelsmods.functions.set_next_upgrade("assembling-machine", "stone-chemical-furnace", nil)
   OV.disable_recipe("stone-chemical-furnace")
   OV.remove_unlock("chemical-processing-1", "stone-chemical-furnace")
@@ -28,13 +28,13 @@ if mods["bobplates"] then
 
   -- Remove (fluid) Steel chemical furnaces
   OV.global_replace_item("steel-chemical-furnace", "steel-furnace")
-  angelsmods.functions.add_flag({ "steel-chemical-furnace", "fluid-chemical-furnace" }, "hidden")
+  angelsmods.functions.hide({ "steel-chemical-furnace", "fluid-chemical-furnace" })
   OV.disable_recipe({ "fluid-chemical-furnace", "steel-chemical-furnace" })
   OV.disable_technology({ "fluid-chemical-furnace", "steel-chemical-furnace" })
 
   -- Remove Electric chemical furnaces
   OV.global_replace_item("electric-chemical-furnace", "electric-furnace")
-  angelsmods.functions.add_flag("electric-chemical-furnace", "hidden")
+  angelsmods.functions.hide("electric-chemical-furnace")
   angelsmods.functions.set_next_upgrade("assembling-machine", "electric-chemical-furnace", nil)
   data.raw["assembling-machine"]["electric-chemical-furnace"].crafting_categories = { "chemical-furnace" }
   OV.disable_recipe("electric-chemical-furnace")
@@ -81,17 +81,17 @@ if mods["bobplates"] then
   else --remove metal mixing furnaces if multi-purpose are also removed
     -- remove stone mixing furnace
     OV.global_replace_item("stone-mixing-furnace", "stone-furnace")
-    angelsmods.functions.add_flag("stone-mixing-furnace", "hidden")
+    angelsmods.functions.hide("stone-mixing-furnace")
     angelsmods.functions.set_next_upgrade("assembling-machine", "stone-mixing-furnace", nil)
     OV.disable_recipe("stone-mixing-furnace")
 
     -- remove steel mixing furnace
-    angelsmods.functions.add_flag({ "steel-mixing-furnace", "fluid-mixing-furnace" }, "hidden")
+    angelsmods.functions.hide({ "steel-mixing-furnace", "fluid-mixing-furnace" })
     OV.disable_recipe({ "steel-mixing-furnace", "fluid-mixing-furnace" })
     OV.disable_technology({ "steel-mixing-furnace", "fluid-mixing-furnace" })
 
     -- remove electric mixing furnace
-    angelsmods.functions.add_flag("electric-mixing-furnace", "hidden")
+    angelsmods.functions.hide("electric-mixing-furnace")
     OV.disable_technology("electric-mixing-furnace")
     OV.disable_recipe("electric-mixing-furnace")
   end

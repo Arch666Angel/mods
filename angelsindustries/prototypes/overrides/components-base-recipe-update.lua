@@ -84,11 +84,11 @@ if angelsmods.industries.components then
     OV.add_prereq("rocket-control-unit", "angels-components-batteries-5")
     -- disable battery 6
     OV.global_replace_item("battery-6", "battery-5")
-    angelsmods.functions.add_flag("battery-6", "hidden")
-    angelsmods.functions.add_flag("battery-anode-6", "hidden")
-    angelsmods.functions.add_flag("battery-cathode-6", "hidden")
-    angelsmods.functions.add_flag("battery-electrolyte-6", "hidden")
-    angelsmods.functions.add_flag("battery-frame-6", "hidden")
+    angelsmods.functions.hide("battery-6")
+    angelsmods.functions.hide("battery-anode-6")
+    angelsmods.functions.hide("battery-cathode-6")
+    angelsmods.functions.hide("battery-electrolyte-6")
+    angelsmods.functions.hide("battery-frame-6")
     OV.disable_recipe({
       "battery-6",
       "battery-anode-6",

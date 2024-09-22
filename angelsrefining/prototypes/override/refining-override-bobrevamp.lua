@@ -7,7 +7,7 @@ if mods["bobrevamp"] then
   if mods["bobplates"] and settings.startup["bobmods-revamp-hardmode"].value then
     if angelsmods.trigger.washing_tech then --washing/limestone is active
       OV.global_replace_item("limestone", "solid-limestone")
-      angelsmods.functions.add_flag("limestone", "hidden")
+      angelsmods.functions.hide("limestone")
       OV.disable_recipe({ "limestone" })
     else
       if limestone then

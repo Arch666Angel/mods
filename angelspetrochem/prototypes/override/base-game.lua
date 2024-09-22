@@ -39,9 +39,9 @@ data.raw["resource"]["crude-oil"]["minable"].results = {
   { type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1 },
 }
 move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
-angelsmods.functions.add_flag("petroleum-gas", "hidden")
-angelsmods.functions.add_flag("light-oil", "hidden")
-angelsmods.functions.add_flag("heavy-oil", "hidden")
+angelsmods.functions.hide("petroleum-gas")
+angelsmods.functions.hide("light-oil")
+angelsmods.functions.hide("heavy-oil")
 move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
@@ -63,7 +63,7 @@ OV.global_replace_icon(
   { "__angelspetrochemgraphics__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64 }
 )
 move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
-angelsmods.functions.add_flag("sulfuric-acid", "hidden")
+angelsmods.functions.hide("sulfuric-acid")
 if angelsmods.trigger.early_sulfuric_acid == true then
   OV.remove_prereq("battery", "sulfur-processing")
   OV.add_prereq("battery", "angels-sulfur-processing-2")

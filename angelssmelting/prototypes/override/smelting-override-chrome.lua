@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["chrome"] then
 else
-  angelsmods.functions.add_flag("chrome-ore", "hidden")
+  angelsmods.functions.hide("chrome-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
   if angelsmods.trigger.smelting_products["chrome"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
+    angelsmods.functions.hide("liquid-molten-chrome")
     OV.disable_recipe({ "molten-chrome-smelting" })
     OV.disable_technology({ "angels-chrome-casting-2", "angels-chrome-casting-3" })
     -- swap tech tier 1 to ingots
@@ -31,13 +31,13 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
     end
   end
 else
-  angelsmods.functions.add_flag("processed-chrome", "hidden")
-  angelsmods.functions.add_flag("pellet-chrome", "hidden")
-  angelsmods.functions.add_flag("solid-chromate", "hidden")
-  angelsmods.functions.add_flag("solid-dichromate", "hidden")
-  angelsmods.functions.add_flag("solid-chrome-oxide", "hidden")
-  angelsmods.functions.add_flag("ingot-chrome", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-chrome", "hidden")
+  angelsmods.functions.hide("processed-chrome")
+  angelsmods.functions.hide("pellet-chrome")
+  angelsmods.functions.hide("solid-chromate")
+  angelsmods.functions.hide("solid-dichromate")
+  angelsmods.functions.hide("solid-chrome-oxide")
+  angelsmods.functions.hide("ingot-chrome")
+  angelsmods.functions.hide("liquid-molten-chrome")
   OV.disable_recipe({ "chrome-ore-processing", "chrome-processed-processing", "pellet-chrome-smelting" })
   OV.disable_recipe({ "solid-chromate-smelting", "solid-dichromate-smelting" })
   OV.disable_recipe({ "chrome-ore-smelting", "processed-chrome-smelting", "solid-chrome-oxide-smelting" })
@@ -51,8 +51,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["chrome"].plate then
 else
-  angelsmods.functions.add_flag("angels-plate-chrome", "hidden")
-  angelsmods.functions.add_flag("angels-roll-chrome", "hidden")
+  angelsmods.functions.hide("angels-plate-chrome")
+  angelsmods.functions.hide("angels-roll-chrome")
   OV.disable_recipe({ "roll-chrome-casting", "roll-chrome-casting-fast" })
   OV.disable_recipe({ "angels-plate-chrome", "angels-roll-chrome-converting" })
 end
@@ -62,6 +62,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["chrome"].powder then
 else
-  angelsmods.functions.add_flag("powder-chrome", "hidden")
+  angelsmods.functions.hide("powder-chrome")
   OV.disable_recipe({ "powder-chrome" })
 end

@@ -222,7 +222,7 @@ data:extend({
     name = "heavy-tank-machine-gun",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-gun-icon.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "a[basic-clips]-b[tank-machine-gun]",
     attack_parameters = {
@@ -269,7 +269,7 @@ data:extend({
     name = "heavy-tank-cannon",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-cannon-icon.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[cannon]",
     attack_parameters = {
@@ -294,7 +294,7 @@ data:extend({
     name = "heavy-tank-rocket-launcher",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "d[heavy-tank-rocket-launcher]",
     attack_parameters = {

@@ -273,7 +273,7 @@ data:extend({
         shift = { 9.6, 9.6 },
       },
     },
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "angels-void",
     order = "zzz[water-void]",
     stack_size = 200,

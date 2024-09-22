@@ -12,7 +12,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   -- REPLACE ITEMS (use bob version)
   if mods["bobelectronics"] and data.raw.item["solder"] then
     OV.global_replace_item("angels-solder", "solder")
-    angelsmods.functions.add_flag("angels-solder", "hidden")
+    angelsmods.functions.hide("angels-solder")
     angelsmods.functions.move_item("solder", "angels-solder-casting", "d")
     data.raw["item"]["solder"].icon = "__angelssmeltinggraphics__/graphics/icons/solder.png"
     data.raw["item"]["solder"].icon_size = 32
@@ -23,7 +23,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     OV.remove_unlock("electronics", "solder")
 
     OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "solder" })
-    angelsmods.functions.add_flag("solder-alloy", "hidden")
+    angelsmods.functions.hide("solder-alloy")
     OV.remove_unlock("electronics", "solder-alloy-lead")
     OV.remove_prereq("electronics", "alloy-processing")
 
@@ -43,7 +43,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
       OV.add_prereq("angels-solder-smelting-basic", "automation-science-pack")
     end
   else
-    angelsmods.functions.add_flag("angels-solder-mixture", "hidden")
+    angelsmods.functions.hide("angels-solder-mixture")
     OV.disable_recipe({ "angels-solder-mixture", "angels-solder-smelting-1", "angels-solder-mixture-smelting" })
     OV.disable_technology({ "angels-solder-smelting-basic" })
     OV.remove_prereq("angels-solder-smelting-1", "angels-solder-smelting-basic")
@@ -65,10 +65,10 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     )
   end
 else
-  angelsmods.functions.add_flag("angels-solder-mixture", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-solder", "hidden")
-  angelsmods.functions.add_flag("angels-roll-solder", "hidden")
-  angelsmods.functions.add_flag("angels-solder", "hidden")
+  angelsmods.functions.hide("angels-solder-mixture")
+  angelsmods.functions.hide("liquid-molten-solder")
+  angelsmods.functions.hide("angels-roll-solder")
+  angelsmods.functions.hide("angels-solder")
   OV.disable_recipe({ "angels-solder-mixture" })
   OV.disable_recipe({
     "angels-solder-smelting-1",

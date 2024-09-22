@@ -390,7 +390,7 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
 
     angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
   else
-    angelsmods.functions.add_flag(old_fluid_name, "hidden")
+    angelsmods.functions.hide(old_fluid_name)
   end
 end
 

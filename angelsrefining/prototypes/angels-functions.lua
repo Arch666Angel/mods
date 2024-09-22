@@ -1417,35 +1417,76 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     for _, f in pairs(flag) do
       angelsmods.functions.add_flag(entity, f)
     end
+    return
   end
 
   for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
-      if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
-        to_add.hidden = true
+      if to_add.flags then
+        table.insert(to_add.flags, flag)
+      else
+        to_add.flags = { flag }
+      end
+    end
+  end
+end
+
+function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.remove_flag(ent, flag)
+    end
+    return
+  end
+  if type(flag) == "table" then
+    for _, f in pairs(flag) do
+      angelsmods.functions.add_flag(entity, f)
+    end
+    return
+  end
+
+  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
+    local to_remove = data.raw[type][entity]
+    if to_remove and to_remove.flags then
+      for i, f in pairs(to_remove.flags) do
+        if f == flag_to_remove then
+          table.remove(to_remove.flags, i)
+          break
+        end
+      end
+    end
+  end
+end
+
+-------------------------------------------------------------------------------
+-- HIDE / UNHIDE --------------------------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.hide(entity)
+  if type(entity) == "table" then
+    for _, ent in pairs(entity) do
+      angelsmods.functions.hide(ent)
+    end
+    return
+  end
+
+  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
+    local to_add = data.raw[type][entity] or nil
+    if to_add then
+      to_add.hidden = true
+      if type == "fluid" then --also remove barrel if a fluid
         angelsmods.functions.disable_barreling_recipes(entity)
         for _, void_category in pairs({ "water", "chemical" }) do
           angelsmods.functions.OV.disable_recipe("angels-" .. void_category .. "-void-" .. entity)
         end
-      else
-        if to_add.flags then
-          table.insert(to_add.flags, flag)
-        else
-          to_add.flags = { flag }
-        end
       end
 
-      --hide actual (building) entity if not not just an item
-      if flag == "hidden" and to_add.place_result == entity then
+      -- hide actual (building) entity if not not just an item
+      if to_add.place_result == entity then
         for _, type in pairs(building_types) do
-          to_add = data.raw[type][entity] --entity-types...
+          to_add = data.raw[type][entity] -- entity-types...
           if to_add and not to_add.autoplace then -- do not hide entities that are autoplaced (required for editor mode)
-            if to_add.flags then
-              table.insert(to_add.flags, flag)
-            else
-              to_add.flags = { flag }
-            end
+            to_add.hidden = true
             -- also have to make sure next_upgrade is not set to this (hidden) entity
             if to_add.fast_replaceable_group then
               for _, type in pairs(building_types) do
@@ -1466,10 +1507,10 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
   end
 end
 
-function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
+function angelsmods.functions.unhide(entity)
   if type(entity) == "table" then
     for _, ent in pairs(entity) do
-      angelsmods.functions.remove_flag(ent, flag)
+      angelsmods.functions.unhide(ent)
     end
     return
   end
@@ -1477,26 +1518,16 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
   for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
     local to_remove = data.raw[type][entity]
     if to_remove then
-      if type == "fluid" and flag_to_remove == "hidden" then
-        to_remove.hidden = false
-        -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
-      elseif to_remove.flags then
-        for i, f in pairs(to_remove.flags) do
-          if f == flag_to_remove then
-            table.remove(to_remove.flags, i)
-            break
-          end
-        end
-      end
+      to_remove.hidden = false
+      -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
     end
-  end
-  --actual entity if not not just an item
-  for _, type in pairs(building_types) do
-    local to_remove = data.raw[type][entity] --entity-types...
-    if to_remove then
-      for flag_index, flag in pairs(to_remove.flags or {}) do
-        if flag == flag_to_remove then
-          table.remove(to_remove.flags, flag_index)
+
+    -- actual entity if not not just an item
+    if to_remove.place_result == entity then
+      for _, type in pairs(building_types) do
+        to_remove = data.raw[type][entity] --entity-types...
+        if to_remove then
+          to_remove.hidden = false
         end
       end
     end
@@ -1522,7 +1553,7 @@ function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-liquid-bot")
-  angelsmods.functions.add_flag(fluid_to_disable .. "-barrel", "hidden")
+  angelsmods.functions.hide(fluid_to_disable .. "-barrel")
 end
 
 function angelsmods.functions.modify_barreling_icon()
@@ -1820,7 +1851,7 @@ function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels
       end
       if angelsmods.trigger.enableconverter then
       else -- hide the unused other fluid
-        angelsmods.functions.add_flag(fluid_name_other, "hidden")
+        angelsmods.functions.hide(fluid_name_other)
       end
     end
   end

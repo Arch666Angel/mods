@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["nickel"] then
 else
-  angelsmods.functions.add_flag("nickel-ore", "hidden")
+  angelsmods.functions.hide("nickel-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
   if angelsmods.trigger.smelting_products["nickel"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-nickel", "hidden")
+    angelsmods.functions.hide("liquid-molten-nickel")
     OV.disable_recipe({ "molten-nickel-smelting" })
     OV.disable_technology({ "angels-nickel-casting-2", "angels-nickel-casting-3" })
     -- swap tech tier 1 to ingots
@@ -36,12 +36,12 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
     end
   end
 else
-  angelsmods.functions.add_flag("processed-nickel", "hidden")
-  angelsmods.functions.add_flag("pellet-nickel", "hidden")
-  angelsmods.functions.add_flag("cathode-nickel", "hidden")
-  angelsmods.functions.add_flag("solid-nickel-carbonyl", "hidden")
-  angelsmods.functions.add_flag("ingot-nickel", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-nickel", "hidden")
+  angelsmods.functions.hide("processed-nickel")
+  angelsmods.functions.hide("pellet-nickel")
+  angelsmods.functions.hide("cathode-nickel")
+  angelsmods.functions.hide("solid-nickel-carbonyl")
+  angelsmods.functions.hide("ingot-nickel")
+  angelsmods.functions.hide("liquid-molten-nickel")
   OV.disable_recipe({ "nickel-ore-processing", "nickel-processed-processing" })
   OV.disable_recipe({ "processed-nickel-smelting", "pellet-nickel-smelting" })
   OV.disable_recipe({ "nickel-ore-smelting", "cathode-nickel-smelting", "solid-nickel-carbonyl-smelting" })
@@ -57,14 +57,14 @@ if angelsmods.trigger.smelting_products["nickel"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-nickel", "nickel-plate")
-    angelsmods.functions.add_flag("angels-plate-nickel", "hidden")
+    angelsmods.functions.hide("angels-plate-nickel")
     angelsmods.functions.move_item("nickel-plate", "angels-nickel-casting", "j")
     data.raw["item"]["nickel-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nickel.png"
     data.raw["item"]["nickel-plate"].icon_size = 32
   end
 else
-  angelsmods.functions.add_flag("angels-plate-nickel", "hidden")
-  angelsmods.functions.add_flag("angels-roll-nickel", "hidden")
+  angelsmods.functions.hide("angels-plate-nickel")
+  angelsmods.functions.hide("angels-roll-nickel")
   OV.disable_recipe({ "roll-nickel-casting", "roll-nickel-casting-fast" })
   OV.disable_recipe({ "angels-plate-nickel", "angels-roll-nickel-converting" })
 end
@@ -74,6 +74,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["nickel"].powder then
 else
-  angelsmods.functions.add_flag("powder-nickel", "hidden")
+  angelsmods.functions.hide("powder-nickel")
   OV.disable_recipe({ "powder-nickel" })
 end

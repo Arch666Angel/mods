@@ -45,13 +45,13 @@ if angelsmods.trigger.water_red_waste == true then
   end
 else
   OV.disable_recipe("red-waste-water-purification")
-  angelsmods.functions.add_flag("water-red-waste", "hidden")
+  angelsmods.functions.hide("water-red-waste")
   if angelsmods.petrochem then
     OV.disable_recipe({
       "solid-sodium-nitrate-processing",
       "sodium-nitrate-acid-processing",
     })
-    angelsmods.functions.add_flag("solid-sodium-nitrate", "hidden")
+    angelsmods.functions.hide("solid-sodium-nitrate")
     OV.remove_prereq("angels-nitrogen-processin-2", "angels-sulfur-processing-1")
   end
   if angelsmods.bioprocessing then
@@ -72,9 +72,9 @@ else
   OV.disable_recipe({
     "green-waste-water-purification",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "water-green-waste",
-  }, "hidden")
+  })
   if angelsmods.bioprocessing then
     OV.disable_recipe({
       "puffer-puffing-15",
@@ -92,18 +92,18 @@ else
   OV.disable_recipe({
     "greenyellow-waste-water-purification",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "water-greenyellow-waste",
-  }, "hidden")
+  })
   if angelsmods.petrochem then
     OV.disable_recipe({
       "gas-hydrogen-fluoride",
       "gas-sulfur-dioxide-calcium-sulfate",
     })
-    angelsmods.functions.add_flag({
+    angelsmods.functions.hide({
       "fluorite-ore",
       "solid-calcium-sulfate",
-    }, "hidden")
+    })
   end
   if angelsmods.bioprocessing then
     OV.disable_recipe({
@@ -130,7 +130,7 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
     "solid-limestone",
     "solid-sand",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "water-viscous-mud",
     "water-heavy-mud",
     "water-concentrated-mud",
@@ -140,18 +140,18 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
     "solid-clay",
     "solid-limestone",
     "solid-sand",
-  }, "hidden")
+  })
   -- disable the buildings as well
   OV.disable_recipe({
     "seafloor-pump",
     "washing-plant",
     "washing-plant-2",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "seafloor-pump",
     "washing-plant",
     "washing-plant-2",
-  }, "hidden")
+  })
   -- disable technology
   OV.disable_technology({ "water-washing-1", "water-washing-2" })
   OV.remove_prereq("geode-processing-1", "water-washing-2")
@@ -169,7 +169,7 @@ angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
 if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_consumption == true) then
   angelsmods.trigger.water_saline = true
   if mods["bobplates"] then
-    angelsmods.functions.add_flag("salt", "hidden")
+    angelsmods.functions.hide("salt")
 
     if not angelsmods.petrochem then
       OV.global_replace_item("salt", "solid-salt")
@@ -210,14 +210,14 @@ if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_cons
     end
   end
 else
-  angelsmods.functions.add_flag({ "solid-salt" }, "hidden")
+  angelsmods.functions.hide({ "solid-salt" })
 end
 
 if angelsmods.trigger.salt_production == false then
   if
     (angelsmods.trigger.smelting_products["lithium"].plate == false) and (angelsmods.trigger.water_saline == false)
   then
-    angelsmods.functions.add_flag({ "salination-plant", "salination-plant-2" }, "hidden")
+    angelsmods.functions.hide({ "salination-plant", "salination-plant-2" })
     OV.disable_recipe({
       "salination-plant",
       "salination-plant-2",
@@ -236,7 +236,7 @@ end
 
 if angelsmods.trigger.water_saline == false then
   OV.disable_recipe({ "water-saline" })
-  angelsmods.functions.add_flag({ "water-saline" }, "hidden")
+  angelsmods.functions.hide({ "water-saline" })
   OV.patch_recipes({
     {
       name = "water-purification",
@@ -306,12 +306,12 @@ if mods["bobplates"] then
   if data.raw.fluid["pure-water"] then
     OV.global_replace_item("pure-water", "water-purified")
     OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
-    angelsmods.functions.add_flag("pure-water", "hidden")
+    angelsmods.functions.hide("pure-water")
   end
 
   -- lithium processing -------------------------------------------------------
   OV.global_replace_item("lithium-chloride", "solid-lithium")
-  angelsmods.functions.add_flag("lithium-chloride", "hidden")
+  angelsmods.functions.hide("lithium-chloride")
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes({
@@ -341,7 +341,7 @@ if mods["bobplates"] then
 else
   if angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate then
   else
-    angelsmods.functions.add_flag("solid-lithium", "hidden")
+    angelsmods.functions.hide("solid-lithium")
     OV.disable_recipe("solid-lithium")
     OV.disable_recipe("algae-brown-burning")
   end
@@ -351,7 +351,7 @@ end
 -- GEODES ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.geode_cyan == false then
-  angelsmods.functions.add_flag("geode-cyan", "hidden")
+  angelsmods.functions.hide("geode-cyan")
 
   OV.disable_recipe({
     "geode-cyan-processing",
@@ -360,7 +360,7 @@ if angelsmods.trigger.geode_cyan == false then
 end
 
 if angelsmods.trigger.geode_red == false then
-  angelsmods.functions.add_flag("geode-red", "hidden")
+  angelsmods.functions.hide("geode-red")
 
   OV.disable_recipe({
     "geode-red-processing",

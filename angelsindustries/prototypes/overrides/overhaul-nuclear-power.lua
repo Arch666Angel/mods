@@ -160,7 +160,7 @@ if angelsmods.industries.overhaul then
       "a[radioactive-element]-e[plutonium-239]"
     )
     OV.disable_recipe("empty-nuclear-fuel-cell")
-    angelsmods.functions.add_flag({ "plutonium-240", "empty-nuclear-fuel-cell" }, "hidden")
+    angelsmods.functions.hide({ "plutonium-240", "empty-nuclear-fuel-cell" })
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
@@ -205,7 +205,7 @@ if angelsmods.industries.overhaul then
       OV.disable_technology("bobingabout-enrichment-process")
     end
 
-    angelsmods.functions.add_flag("plutonium-fuel-cell", "hidden")
+    angelsmods.functions.hide("plutonium-fuel-cell")
     angelsmods.functions.add_flag("plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
     -- thorium processing
@@ -214,33 +214,33 @@ if angelsmods.industries.overhaul then
     OV.disable_technology("thorium-processing")
 
     OV.disable_recipe("thorium-fuel-cell")
-    angelsmods.functions.add_flag("thorium-fuel-cell", "hidden")
+    angelsmods.functions.hide("thorium-fuel-cell")
     angelsmods.functions.add_flag("thorium-fuel-cell", "hide-from-fuel-tooltip")
 
     OV.disable_recipe("thorium-fuel-reprocessing")
     OV.disable_technology("thorium-fuel-reprocessing")
-    angelsmods.functions.add_flag("used-up-thorium-fuel-cell", "hidden")
+    angelsmods.functions.hide("used-up-thorium-fuel-cell")
 
     OV.disable_recipe("thorium-plutonium-fuel-cell")
     OV.disable_technology("thorium-plutonium-fuel-cell")
-    angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hidden")
+    angelsmods.functions.hide("thorium-plutonium-fuel-cell")
     angelsmods.functions.add_flag("thorium-plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
     -- deuterium processing
     OV.disable_recipe({ "deuterium-fuel-cell", "deuterium-fuel-cell-2" })
-    angelsmods.functions.add_flag("deuterium-fuel-cell", "hidden")
+    angelsmods.functions.hide("deuterium-fuel-cell")
     angelsmods.functions.add_flag("deuterium-fuel-cell", "hide-from-fuel-tooltip")
-    angelsmods.functions.add_flag("deuterium-fuel-cell-2", "hidden")
+    angelsmods.functions.hide("deuterium-fuel-cell-2")
     angelsmods.functions.add_flag("deuterium-fuel-cell-2", "hide-from-fuel-tooltip")
 
     OV.global_replace_item("fusion-catalyst", "angels-muon-fusion-catalyst")
-    angelsmods.functions.add_flag("fusion-catalyst", "hidden")
+    angelsmods.functions.hide("fusion-catalyst")
 
     OV.disable_recipe("deuterium-fuel-reprocessing")
     OV.global_replace_technology("deuterium-fuel-reprocessing", "angels-fusion-power-1")
     OV.global_replace_technology("deuterium-fuel-cell-2", "angels-fusion-power-2")
     OV.disable_technology("deuterium-fuel-reprocessing", "deuterium-fuel-cell-2")
-    angelsmods.functions.add_flag("used-up-deuterium-fuel-cell", "hidden")
+    angelsmods.functions.hide("used-up-deuterium-fuel-cell")
 
     -- plutonium processing
     if bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value then
@@ -287,16 +287,16 @@ if angelsmods.industries.overhaul then
 else
   -- disable all nuclear stuff
   -- uranium fuel cell
-  angelsmods.functions.add_flag("uranium-234", "hidden")
-  angelsmods.functions.add_flag("angels-uranium-fuel-cell", "hidden")
+  angelsmods.functions.hide("uranium-234")
+  angelsmods.functions.hide("angels-uranium-fuel-cell")
   OV.disable_recipe({ "angels-uranium-fuel-cell", "angels-advanced-uranium-reprocessing" })
   -- plutonium fuel cell
-  angelsmods.functions.add_flag("neptunium-240", "hidden")
-  angelsmods.functions.add_flag("plutonium-240", "hidden")
-  angelsmods.functions.add_flag("americium-241", "hidden")
-  angelsmods.functions.add_flag("curium-245", "hidden")
-  angelsmods.functions.add_flag("AMOX-cell", "hidden")
-  angelsmods.functions.add_flag("used-up-AMOX-cell", "hidden")
+  angelsmods.functions.hide("neptunium-240")
+  angelsmods.functions.hide("plutonium-240")
+  angelsmods.functions.hide("americium-241")
+  angelsmods.functions.hide("curium-245")
+  angelsmods.functions.hide("AMOX-cell")
+  angelsmods.functions.hide("used-up-AMOX-cell")
   OV.disable_recipe({ "angels-plutonium-synthesis", "angels-americium-regeneration" })
   OV.disable_recipe({
     "angels-mixed-oxide-cell",
@@ -305,9 +305,9 @@ else
   })
   OV.disable_technology({ "angels-plutonium-power" })
   -- thorium fuel cell
-  angelsmods.functions.add_flag("thorium-232", "hidden")
-  angelsmods.functions.add_flag("angels-thorium-fuel-cell", "hidden")
-  angelsmods.functions.add_flag("used-up-angels-thorium-fuel-cell", "hidden")
+  angelsmods.functions.hide("thorium-232")
+  angelsmods.functions.hide("angels-thorium-fuel-cell")
+  angelsmods.functions.hide("used-up-angels-thorium-fuel-cell")
   OV.disable_recipe({ "angels-thorium-processing" })
   OV.disable_recipe({
     "angels-thorium-fuel-cell",
@@ -316,9 +316,9 @@ else
   })
   OV.disable_technology({ "angels-thorium-power" })
   -- deuterium fuel cell
-  angelsmods.functions.add_flag("angels-muon-fusion-catalyst", "hidden")
-  angelsmods.functions.add_flag("angels-deuterium-fuel-cell", "hidden")
-  angelsmods.functions.add_flag("used-up-angels-deuterium-fuel-cell", "hidden")
+  angelsmods.functions.hide("angels-muon-fusion-catalyst")
+  angelsmods.functions.hide("angels-deuterium-fuel-cell")
+  angelsmods.functions.hide("used-up-angels-deuterium-fuel-cell")
   OV.disable_recipe({
     "angels-deuterium-fuel-cell",
     "angels-deuterium-fuel-cell-reprocessing",
@@ -326,11 +326,11 @@ else
   })
   OV.disable_technology({ "angels-fusion-power-1", "angels-fusion-power-2" })
   -- nuclear fuel products (nuclear fuel + atomic bombs)
-  angelsmods.functions.add_flag("angels-nuclear-fuel", "hidden")
-  angelsmods.functions.add_flag("angels-nuclear-fuel-2", "hidden")
+  angelsmods.functions.hide("angels-nuclear-fuel")
+  angelsmods.functions.hide("angels-nuclear-fuel-2")
   OV.disable_recipe({ "angels-nuclear-fuel", "angels-nuclear-fuel-2" })
   OV.disable_recipe({ "angels-atomic-bomb", "angels-atomic-bomb-2" })
   -- fast burner reactor
   OV.disable_recipe({ "angels-burner-reactor" })
-  angelsmods.functions.add_flag("angels-burner-reactor", "hidden")
+  angelsmods.functions.hide("angels-burner-reactor")
 end

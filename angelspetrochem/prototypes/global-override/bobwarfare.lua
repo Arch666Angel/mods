@@ -25,7 +25,7 @@ if mods["bobwarfare"] then
 
     hide_sulfuric_nitric_acid_mixture = true -- with petrochem we can actualy use 3 inputs instead of making a submixture first
     if hide_sulfuric_nitric_acid_mixture then
-      angelsmods.functions.add_flag("sulfuric-nitric-acid", "hidden")
+      angelsmods.functions.hide("sulfuric-nitric-acid")
       OV.disable_recipe({ "sulfuric-nitric-acid" })
     end
   end

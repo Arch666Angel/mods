@@ -7,25 +7,25 @@ if angelsmods.industries.tech then
     OV.disable_recipe("lab")
     OV.disable_technology("lab")
     OV.global_replace_item("lab", "angels-basic-lab-2")
-    angelsmods.functions.add_flag("lab", "hidden")
+    angelsmods.functions.hide("lab")
     --lab2
     OV.disable_recipe("lab-2")
     OV.disable_technology("advanced-research")
     OV.global_replace_item("lab-2", "angels-basic-lab-3")
-    angelsmods.functions.add_flag("lab-2", "hidden")
+    angelsmods.functions.hide("lab-2")
     if settings.startup["bobmods-burnerphase"].value then
       --clobber basic-lab
       OV.disable_recipe("burner-lab")
-      angelsmods.functions.add_flag("burner-lab", "hidden")
+      angelsmods.functions.hide("burner-lab")
       OV.global_replace_item("lab", "angels-basic-lab")
 
       -- hide steam science pack
       OV.disable_recipe("steam-science-pack")
-      angelsmods.functions.add_flag("steam-science-pack", "hidden")
+      angelsmods.functions.hide("steam-science-pack")
     end
   else
     OV.global_replace_item("lab", "angels-basic-lab")
-    angelsmods.functions.add_flag("lab", "hidden")
+    angelsmods.functions.hide("lab")
   end
 
   research_products = {{type = "item", name = "space-science-pack", amount = 1000}},

@@ -34,7 +34,7 @@ data:extend({
     name = "angels-cab-deploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z",
     attack_parameters = {
@@ -60,7 +60,7 @@ data:extend({
     name = "angels-cab-undeploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z",
     attack_parameters = {

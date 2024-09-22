@@ -18,12 +18,12 @@ if angelsmods.trigger.smelting_products["glass"].mixture then
   then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
+    angelsmods.functions.hide("liquid-molten-glass")
     OV.disable_recipe({ "molten-glass-smelting" })
   end
 else
-  angelsmods.functions.add_flag("solid-glass-mixture", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
+  angelsmods.functions.hide("solid-glass-mixture")
+  angelsmods.functions.hide("liquid-molten-glass")
   OV.disable_recipe({ "glass-mixture-1", "glass-mixture-2", "glass-mixture-3", "glass-mixture-4" })
   OV.disable_recipe({ "molten-glass-smelting" })
   OV.disable_technology({ "angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3" })
@@ -36,7 +36,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-glass", "glass")
-    angelsmods.functions.add_flag("angels-plate-glass", "hidden")
+    angelsmods.functions.hide("angels-plate-glass")
     angelsmods.functions.move_item("glass", "angels-glass-casting", "d")
     data.raw["item"]["glass"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png"
     data.raw["item"]["glass"].icon_size = 32
@@ -71,7 +71,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     })
   end
 else
-  angelsmods.functions.add_flag("angels-plate-glass", "hidden")
+  angelsmods.functions.hide("angels-plate-glass")
   OV.disable_recipe({ "angels-plate-glass-1", "angels-plate-glass-2", "angels-plate-glass-3" })
 end
 
@@ -80,7 +80,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["glass"].fibre then
 else
-  angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
+  angelsmods.functions.hide("angels-coil-glass-fiber")
   OV.disable_recipe({ "angels-coil-glass-fiber" })
   OV.disable_recipe({ "angels-coil-glass-fiber-fast" })
 end

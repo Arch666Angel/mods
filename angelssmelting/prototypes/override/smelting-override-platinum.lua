@@ -12,7 +12,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["platinum"] then
 else
-  angelsmods.functions.add_flag("platinum-ore", "hidden")
+  angelsmods.functions.hide("platinum-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
   then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
+    angelsmods.functions.hide("liquid-molten-platinum")
     OV.disable_recipe({ "molten-platinum-smelting" })
     OV.disable_technology({ "angels-platinum-casting-2", "angels-platinum-casting-3" })
     -- swap tech tier 1 to ingots
@@ -34,12 +34,12 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
     end
   end
 else
-  angelsmods.functions.add_flag("processed-platinum", "hidden")
-  angelsmods.functions.add_flag("pellet-platinum", "hidden")
-  angelsmods.functions.add_flag("liquid-hexachloroplatinic-acid", "hidden")
-  angelsmods.functions.add_flag("solid-ammonium-chloroplatinate", "hidden")
-  angelsmods.functions.add_flag("ingot-platinum", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-platinum", "hidden")
+  angelsmods.functions.hide("processed-platinum")
+  angelsmods.functions.hide("pellet-platinum")
+  angelsmods.functions.hide("liquid-hexachloroplatinic-acid")
+  angelsmods.functions.hide("solid-ammonium-chloroplatinate")
+  angelsmods.functions.hide("ingot-platinum")
+  angelsmods.functions.hide("liquid-molten-platinum")
   OV.disable_recipe({ "platinum-ore-processing", "platinum-processed-processing" })
   OV.disable_recipe({ "pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting" })
   OV.disable_recipe({
@@ -57,8 +57,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["platinum"].plate then
 else
-  angelsmods.functions.add_flag("angels-plate-platinum", "hidden")
-  angelsmods.functions.add_flag("angels-roll-platinum", "hidden")
+  angelsmods.functions.hide("angels-plate-platinum")
+  angelsmods.functions.hide("angels-roll-platinum")
   OV.disable_recipe({ "roll-platinum-casting", "roll-platinum-casting-fast" })
   OV.disable_recipe({ "angels-plate-platinum", "angels-roll-platinum-converting" })
 end
@@ -88,8 +88,8 @@ if angelsmods.trigger.smelting_products["platinum"].wire then
     })
   end
 else
-  angelsmods.functions.add_flag("angels-wire-platinum", "hidden")
-  angelsmods.functions.add_flag("angels-wire-coil-platinum", "hidden")
+  angelsmods.functions.hide("angels-wire-platinum")
+  angelsmods.functions.hide("angels-wire-coil-platinum")
   OV.disable_recipe({ "angels-wire-coil-platinum-casting", "angels-wire-coil-platinum-casting-fast" })
   OV.disable_recipe({ "basic-platinated-copper-wire", "angels-wire-coil-platinum-converting" })
 end
@@ -99,6 +99,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["platinum"].powder then
 else
-  angelsmods.functions.add_flag("powder-platinum", "hidden")
+  angelsmods.functions.hide("powder-platinum")
   OV.disable_recipe({ "powder-platinum" })
 end

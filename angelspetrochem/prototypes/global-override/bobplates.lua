@@ -5,13 +5,13 @@ local move_item = angelsmods.functions.move_item
 -- AIR COMPRESSOR -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "void-pump",
     "air-pump",
     "air-pump-2",
     "air-pump-3",
     "air-pump-4",
-  }, "hidden")
+  })
 
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump", nil)
   angelsmods.functions.set_next_upgrade("assembling-machine", "air-pump-2", nil)
@@ -99,7 +99,7 @@ end
 if mods["bobplates"] then
   -- generic replace items ----------------------------------------------------
   OV.global_replace_item("carbon", "solid-carbon")
-  angelsmods.functions.add_flag("carbon", "hidden")
+  angelsmods.functions.hide("carbon")
   OV.remove_unlock("chemical-processing-1", "carbon")
   OV.add_prereq("lead-processing", "angels-coal-processing")
   OV.add_prereq("silicon-processing", "angels-coal-processing")
@@ -129,7 +129,7 @@ if mods["bobplates"] then
   OV.remove_unlock("chemical-processing-2", "hydrogen-chloride")
 
   OV.global_replace_item("calcium-chloride", "solid-calcium-chloride")
-  angelsmods.functions.add_flag("calcium-chloride", "hidden")
+  angelsmods.functions.hide("calcium-chloride")
   OV.disable_recipe("calcium-chloride")
   OV.remove_unlock("chemical-processing-2", "calcium-chloride")
   if not mods["angelssmelting"] then
@@ -142,7 +142,7 @@ if mods["bobplates"] then
 
   -- sodium processing --------------------------------------------------------
   OV.global_replace_item("sodium-hydroxide", "solid-sodium-hydroxide")
-  angelsmods.functions.add_flag("sodium-hydroxide", "hidden")
+  angelsmods.functions.hide("sodium-hydroxide")
 
   -- nitrogen processing ------------------------------------------------------
   OV.converter_fluid("liquid-air", "gas-compressed-air")
@@ -217,7 +217,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   OV.global_replace_item("salt", "solid-salt")
-  angelsmods.functions.add_flag("salt", "hidden")
+  angelsmods.functions.hide("salt")
 
   move_item("heavy-water", "water-treatment-fluid", "eb")
   move_item("deuterium", "petrochem-basic-fluids", "i")

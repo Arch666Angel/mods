@@ -10,6 +10,6 @@ if mods["bobores"] then
   })
   if mods["bobplates"] then
   else
-    angelsmods.functions.add_flag("lithia-water", "hidden")
+    angelsmods.functions.hide("lithia-water")
   end
 end

@@ -16,8 +16,8 @@ else
     "bio-rubber-tree",
     "bio-rubber",
   })
-  angelsmods.functions.add_flag("tree-desert-seed", "hidden")
-  angelsmods.functions.add_flag("bio-rubber", "hidden")
+  angelsmods.functions.hide("tree-desert-seed")
+  angelsmods.functions.hide("bio-rubber")
   OV.disable_technology({
     "bio-arboretum-desert-1",
     "bio-arboretum-desert-2",
@@ -42,8 +42,8 @@ else
     "bio-resin",
     "bio-resin-wood-reprocessing",
   })
-  angelsmods.functions.add_flag("tree-temperate-seed", "hidden")
-  angelsmods.functions.add_flag("bio-resin", "hidden")
+  angelsmods.functions.hide("tree-temperate-seed")
+  angelsmods.functions.hide("bio-resin")
   OV.disable_technology({
     "bio-arboretum-temperate-1",
     "bio-arboretum-temperate-2",
@@ -68,8 +68,8 @@ else
     "bio-plastic-tree",
     "bio-plastic",
   })
-  angelsmods.functions.add_flag("tree-swamp-seed", "hidden")
-  angelsmods.functions.add_flag("bio-plastic", "hidden")
+  angelsmods.functions.hide("tree-swamp-seed")
+  angelsmods.functions.hide("bio-plastic")
   OV.disable_technology({
     "bio-arboretum-swamp-1",
     "bio-arboretum-swamp-2",
@@ -99,7 +99,7 @@ else
     "solid-alginic-acid",
     "solid-sodium-hypochlorite-decomposition",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "pulping-liquor",
     "liquid-brown-liquor",
     "liquid-white-liquor",
@@ -109,7 +109,7 @@ else
     "solid-paper",
     "solid-wood-pulp",
     "solid-alginic-acid",
-  }, "hidden")
+  })
   OV.disable_technology({
     "bio-paper-1",
     "bio-paper-2",

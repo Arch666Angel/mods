@@ -403,7 +403,7 @@ function angelsmods.functions.AI.replace_gen_mats()
       data.raw.recipe[nme].hidden = true
       OV.disable_recipe({ nme })
       --in case hiding is not enough
-      angelsmods.functions.add_flag(nme, "hidden")
+      angelsmods.functions.hide(nme)
       if info.unlock_by then
         OV.remove_unlock(info.unlock_by, nme)
         if info.alt_rec and data.raw.recipe[info.alt_rec] then --check if recipe actually exists

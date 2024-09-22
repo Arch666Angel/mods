@@ -33,12 +33,12 @@ elseif angelsmods.industries and angelsmods.industries.overhaul then
   --elseif data.raw["fluid"]["deuterium"] then
   -- not bobs mods, should we do something, usual thing is to do nothing...
 else -- no deuterium required, disabling it...
-  angelsmods.functions.add_flag("gas-enriched-hydrogen-sulfide", "hidden")
-  angelsmods.functions.add_flag("liquid-water-semiheavy-1", "hidden")
-  angelsmods.functions.add_flag("liquid-water-semiheavy-2", "hidden")
-  angelsmods.functions.add_flag("liquid-water-semiheavy-3", "hidden")
-  angelsmods.functions.add_flag("liquid-water-heavy", "hidden")
-  angelsmods.functions.add_flag("gas-deuterium", "hidden")
+  angelsmods.functions.hide("gas-enriched-hydrogen-sulfide")
+  angelsmods.functions.hide("liquid-water-semiheavy-1")
+  angelsmods.functions.hide("liquid-water-semiheavy-2")
+  angelsmods.functions.hide("liquid-water-semiheavy-3")
+  angelsmods.functions.hide("liquid-water-heavy")
+  angelsmods.functions.hide("gas-deuterium")
 
   OV.disable_recipe({
     "angels-hydrogen-sulfide-enrichment",
@@ -174,7 +174,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.enableconverter then
 else
-  angelsmods.functions.add_flag("valve-converter", "hidden")
+  angelsmods.functions.hide("valve-converter")
   OV.disable_recipe("valve-converter")
 end
 
@@ -185,9 +185,9 @@ if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
     "solid-calcium-chloride",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "solid-calcium-chloride",
-  }, "hidden")
+  })
 end
 
 if angelsmods.trigger.gas_acetone then
@@ -195,9 +195,9 @@ else
   OV.disable_recipe({
     "cumene-process",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "gas-acetone",
-  }, "hidden")
+  })
 end
 
 if angelsmods.trigger.gas_urea then
@@ -205,9 +205,9 @@ else
   OV.disable_recipe({
     "gas-urea",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "gas-urea",
-  }, "hidden")
+  })
 end
 
 if angelsmods.trigger.resin then
@@ -220,12 +220,12 @@ else
     "gas-melamine",
     "liquid-bisphenol-a",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "solid-resin",
     "liquid-resin",
     "gas-melamine",
     "liquid-bisphenol-a",
-  }, "hidden")
+  })
   OV.disable_technology({
     "resins",
     "resin-1",
@@ -243,13 +243,13 @@ else
     "liquid-ethylbenzene-catalyst",
     "catalyst-steam-cracking-butane",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "solid-rubber",
     "liquid-rubber",
     "liquid-styrene",
     "liquid-ethylbenzene",
     "gas-butadiene",
-  }, "hidden")
+  })
   OV.disable_technology({
     "rubbers",
     "rubber",
@@ -262,7 +262,7 @@ else
     "liquid-ferric-chloride-solution",
   })
   OV.remove_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
-  angelsmods.functions.add_flag("liquid-ferric-chloride-solution", "hidden")
+  angelsmods.functions.hide("liquid-ferric-chloride-solution")
 end
 
 if angelsmods.trigger.liquid_cupric_chloride_solution then
@@ -271,7 +271,7 @@ else
     "liquid-cupric-chloride-solution",
   })
   OV.remove_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
-  angelsmods.functions.add_flag("liquid-cupric-chloride-solution", "hidden")
+  angelsmods.functions.hide("liquid-cupric-chloride-solution")
 end
 
 if
@@ -291,7 +291,7 @@ else
     "gas-ammonium-chloride",
   })
   OV.remove_unlock("angels-nitrogen-processing-4", "gas-ammonium-chloride")
-  angelsmods.functions.add_flag("gas-ammonium-chloride", "hidden")
+  angelsmods.functions.hide("gas-ammonium-chloride")
   OV.remove_prereq("angels-nitrogen-processing-3", "chlorine-processing-2")
 end
 
@@ -299,10 +299,10 @@ end
 -- DEAD ENDS ----------------------------------------------------------------
 -----------------------------------------------------------------------------
 --Hydrogen peroxide may be used at a later date, but for now, it is a dead-end
-angelsmods.functions.add_flag({
+angelsmods.functions.hide({
   "gas-hydrogen-peroxide",
   "gas-phosgene",
-}, "hidden")
+})
 OV.disable_recipe({
   "gas-phosgene",
 })
@@ -383,8 +383,8 @@ if angelsmods.trigger.gas_hydrogen_fluoride == false then
     results = { { name = "gas-hydrogen-fluoride", type = "fluid", amount = 0 } },
     category = "chemistry",
   })
-  angelsmods.functions.add_flag({
+  angelsmods.functions.hide({
     "gas-hydrogen-fluoride",
     "liquid-hydrofluoric-acid",
-  }, "hidden")
+  })
 end

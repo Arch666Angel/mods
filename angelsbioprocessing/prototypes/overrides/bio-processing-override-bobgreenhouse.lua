@@ -12,7 +12,7 @@ if mods["bobgreenhouse"] then
   -- FERTILIEZR ---------------------------------------------------------------
   -----------------------------------------------------------------------------
   OV.global_replace_item("fertiliser", "solid-fertilizer")
-  angelsmods.functions.add_flag("fertiliser", "hidden")
+  angelsmods.functions.hide("fertiliser")
 
   data.raw.recipe["bob-fertiliser"].subgroup = "bio-wood"
   data.raw.recipe["bob-fertiliser"].order = "a[support]-cb"

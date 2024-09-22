@@ -26,7 +26,7 @@ if mods["bobrevamp"] then
   -----------------------------------------------------------------------------
   OV.disable_recipe("petroleum-gas-sweetening")
 
-  angelsmods.functions.add_flag("sour-gas", "hidden")
+  angelsmods.functions.hide("sour-gas")
 
   OV.hide_recipe("ammonia")
   OV.converter_fluid("ammonia", "gas-ammonia")
@@ -86,13 +86,13 @@ if mods["bobrevamp"] then
     angelsmods.functions.disable_barreling_recipes("carbon-dioxide")
 
     OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
-    angelsmods.functions.add_flag("sodium-carbonate", "hidden")
+    angelsmods.functions.hide("sodium-carbonate")
 
     OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
-    angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
+    angelsmods.functions.hide("sodium-perchlorate")
 
     OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
-    angelsmods.functions.add_flag("sodium-chlorate", "hidden")
+    angelsmods.functions.hide("sodium-chlorate")
 
     OV.converter_fluid("nitric-oxide", "gas-nitrogen-monoxide")
     angelsmods.functions.disable_barreling_recipes("nitric-oxide")
@@ -111,7 +111,7 @@ if mods["bobrevamp"] then
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-rtg"].value then
     OV.global_replace_item("sodium-carbonate", "solid-sodium-carbonate")
-    angelsmods.functions.add_flag("sodium-carbonate", "hidden")
+    angelsmods.functions.hide("sodium-carbonate")
 
     if settings.startup["bobmods-revamp-hardmode"].value then
       OV.disable_recipe({
@@ -120,18 +120,18 @@ if mods["bobrevamp"] then
         "sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
       })
 
-      angelsmods.functions.add_flag("ammoniated-brine", "hidden")
+      angelsmods.functions.hide("ammoniated-brine")
 
-      angelsmods.functions.add_flag("sodium-bicarbonate", "hidden")
+      angelsmods.functions.hide("sodium-bicarbonate")
 
       OV.global_replace_item("sodium-chlorate", "solid-sodium-chlorate")
-      angelsmods.functions.add_flag("sodium-chlorate", "hidden")
+      angelsmods.functions.hide("sodium-chlorate")
 
       OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
-      angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
+      angelsmods.functions.hide("sodium-perchlorate")
 
       OV.disable_recipe({ "ammonium-chloride-recycling" })
-      angelsmods.functions.add_flag("ammonium-chloride", "hidden")
+      angelsmods.functions.hide("ammonium-chloride")
     end
   end
 end

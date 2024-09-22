@@ -557,12 +557,12 @@ else
     "angels-iron-pebbles",
     "angels-copper-pebbles",
   })
-  angelsmods.functions.add_flag("angels-iron-nugget", "hidden")
-  angelsmods.functions.add_flag("angels-iron-pebbles", "hidden")
-  angelsmods.functions.add_flag("angels-iron-slag", "hidden")
-  angelsmods.functions.add_flag("angels-copper-nugget", "hidden")
-  angelsmods.functions.add_flag("angels-copper-pebbles", "hidden")
-  angelsmods.functions.add_flag("angels-copper-slag", "hidden")
+  angelsmods.functions.hide("angels-iron-nugget")
+  angelsmods.functions.hide("angels-iron-pebbles")
+  angelsmods.functions.hide("angels-iron-slag")
+  angelsmods.functions.hide("angels-copper-nugget")
+  angelsmods.functions.hide("angels-copper-pebbles")
+  angelsmods.functions.hide("angels-copper-slag")
 end
 
 if ore_enabled("ferrous") or ore_enabled("cupric") then
@@ -581,8 +581,8 @@ else
     "electro-whinning-cell",
     "electro-whinning-cell-2",
   })
-  angelsmods.functions.add_flag("electro-whinning-cell", "hidden")
-  angelsmods.functions.add_flag("electro-whinning-cell-2", "hidden")
+  angelsmods.functions.hide("electro-whinning-cell")
+  angelsmods.functions.hide("electro-whinning-cell-2")
   OV.remove_unlock("advanced-ore-refining-4", "electro-whinning-cell-2")
 
   if angelsmods.bioprocessing then
@@ -595,11 +595,11 @@ else
       "milling-drum",
       "milling-drum-used",
     })
-    angelsmods.functions.add_flag("ore-powderizer", "hidden")
-    angelsmods.functions.add_flag("ore-powderizer-2", "hidden")
-    angelsmods.functions.add_flag("ore-powderizer-3", "hidden")
-    angelsmods.functions.add_flag("milling-drum", "hidden")
-    angelsmods.functions.add_flag("milling-drum-used", "hidden")
+    angelsmods.functions.hide("ore-powderizer")
+    angelsmods.functions.hide("ore-powderizer-2")
+    angelsmods.functions.hide("ore-powderizer-3")
+    angelsmods.functions.hide("milling-drum")
+    angelsmods.functions.hide("milling-drum-used")
     OV.remove_unlock("advanced-ore-refining-3", "ore-powderizer-3")
   end
 end
