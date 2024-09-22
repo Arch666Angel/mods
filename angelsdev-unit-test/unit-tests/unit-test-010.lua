@@ -16,7 +16,7 @@ local function process_tech(tech)
 
   for _, modifier in pairs(tech.effects) do
     if modifier.type == "unlock-recipe" then
-      local recipe = game.recipe_prototypes[modifier.recipe]
+      local recipe = prototypes.recipe[modifier.recipe]
       recipes[recipe.name] = {
         processed = false,
         ingredients = { items = {}, fluids = {} },
@@ -41,7 +41,7 @@ local function process_tech(tech)
             recipes[recipe.name].products.items[product.name] = true
 
             -- Check for entity. Add crafting categories
-            local entity = game.item_prototypes[product.name].place_result
+            local entity = prototypes.item[product.name].place_result
             if entity then
               if entity.crafting_categories then
                 for category_name, _ in pairs(entity.crafting_categories) do
@@ -64,7 +64,7 @@ local function process_tech(tech)
 
       -- Skip building recipes
       if (ignore_building_recipes == true) and (#recipe.products == 1) and (recipe.products[1].type == "item") then
-        local item = game.item_prototypes[recipe.products[1].name]
+        local item = prototypes.item[recipe.products[1].name]
         if item.place_result then
           skip = true
         end

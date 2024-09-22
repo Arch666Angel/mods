@@ -31,7 +31,7 @@ function tips_and_tricks_triggers:init_trigger_data()
     { mode = "or", filter = "type", type = "unit" },
     { mode = "or", filter = "type", type = "unit-spawner" },
   })
-  local technology_data = game.technology_prototypes
+  local technology_data = prototypes.technology
   for alien_name, alien_prototype_data in pairs(alien_data) do
     local technology_name = "tips-and-tricks-trigger[angels-native-inhabitants-"
       .. (alien_prototype_data.type == "unit" and "unit" or "spawner")

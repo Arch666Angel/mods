@@ -55,7 +55,7 @@ local unit_test_008 = function()
   table.insert(entity_filters, { filter = "minable", invert = false, mode = "and" })
   table.insert(entity_filters, { filter = "autoplace", invert = false, mode = "and" })
 
-  local entity_prototypes = game.get_entity_filtered(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if entity.mineable_properties.products then
@@ -70,14 +70,13 @@ local unit_test_008 = function()
   end
 
   -- Populate items_to_ignore with rocket launch products
-  local item_filters = {}
-  table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
-  table.insert(item_filters, { filter = "has-rocket-launch-products", invert = false, mode = "and" })
+  local entity_filters = {}
+  table.insert(entity_filters, { filter = "type", type = "rocket-silo" })
 
-  local item_prototypes = prototypes.get_item_filtered(item_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
-  for item_name, item in pairs(item_prototypes) do
-    for _, product in pairs(item.rocket_launch_products) do
+  for entity_name, entity in pairs(entity_prototypes) do
+    for _, product in pairs(entity.research_products or {}) do
       if product.type == "item" then
         items_to_ignore[product.name] = true
       else
@@ -107,7 +106,7 @@ local unit_test_008 = function()
   local recipe_filters = {}
   if #recipe_categories_to_ignore > 0 then
     for _, category_name in pairs(recipe_categories_to_ignore) do
-      if game.recipe_category_prototypes[category_name] then
+      if prototypes.recipe_category[category_name] then
         table.insert(recipe_filters, { filter = "category", invert = false, mode = "or", category = category_name })
       end
     end

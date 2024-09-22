@@ -231,7 +231,7 @@ end
 
 local function calculate_unlock_level_from_start()
   local effect_level_from_start = 0
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
   for _, recipe_prototype in pairs(recipe_prototypes) do
     if not recipe_prototype.hidden and recipe_prototype.enabled then
       for _, recipe_product in pairs(recipe_prototype.products) do
@@ -247,8 +247,8 @@ end
 
 local function calculate_tech_unlock_level(technology_prototype, effect_level_from_start)
   local tech_effect_level = effect_level_from_start or 0
-  local item_prototypes = game.item_prototypes
-  local recipe_prototypes = game.recipe_prototypes
+  local item_prototypes = prototypes.item
+  local recipe_prototypes = prototypes.recipe
   for _, tech_effect in pairs(technology_prototype.effects) do
     if tech_effect.type == "unlock-recipe" then
       local recipe_prototype = recipe_prototypes[tech_effect.recipe]
@@ -258,10 +258,16 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
           tech_effect_level = math.max(tech_effect_level, recipe_product_level)
         end
         if recipe_product.type == "item" then
-          for _, rocket_launch_product in pairs(item_prototypes[recipe_product.name].rocket_launch_products) do
-            local rocket_launch_product_level = science_pack_level[rocket_launch_product.name]
-            if rocket_launch_product_level then
-              tech_effect_level = math.max(tech_effect_level, rocket_launch_product_level)
+          local item = item_prototypes[recipe_product.name]
+          if item.place_result then
+            local entity = prototypes.entity[item.place_result]
+            if entity.type == "rocket-silo" and entity.research_products then
+              for _, research_product in pairs(entity.research_products) do
+                local research_product_level = science_pack_level[research_product.name]
+                if research_product_level then
+                  tech_effect_level = math.max(tech_effect_level, research_product_level)
+                end
+              end
             end
           end
         end
@@ -276,7 +282,7 @@ local unit_test_006 = function()
   calculate_tech_bonus_effects()
   calculate_science_pack_level()
 
-  local tech_prototypes = game.technology_prototypes
+  local tech_prototypes = prototypes.technology
   local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
   local tech_unlock_levels = {} -- the technology level defined by the research effects
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game

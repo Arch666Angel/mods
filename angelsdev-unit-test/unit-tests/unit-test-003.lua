@@ -14,9 +14,9 @@ local products_to_ignore = {
 local unit_test_003 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  local recipe_prototypes = game.recipe_prototypes
-  local item_prototypes = game.item_prototypes
-  local fluid_prototypes = game.fluid_prototypes
+  local recipe_prototypes = prototypes.recipe
+  local item_prototypes = prototypes.item
+  local fluid_prototypes = prototypes.fluid
   for recipe_name, recipe_data in pairs(recipe_prototypes) do
     if not recipe_data.hidden and not recipes_to_ignore[recipe_name] then -- only test recipes that are not hidden or ignored
       local recipe_ingredients = recipe_data.ingredients

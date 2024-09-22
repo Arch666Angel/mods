@@ -70,7 +70,7 @@ local unit_test_004 = function()
     tech_unlocked_by_script["sct-automation-science-pack"] = true
   end
 
-  local tech_prototypes = game.technology_prototypes
+  local tech_prototypes = prototypes.technology
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     if (not tech_hidden(tech_prototype)) and not tech_unlocked_by_script[tech_name] then
       -- tech visible and must be researched

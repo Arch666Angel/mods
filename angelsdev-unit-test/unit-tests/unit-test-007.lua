@@ -58,7 +58,7 @@ local unit_test_007 = function()
   if #rocket_silo_recipe_filters > 0 then
     rocket_silo_recipes = prototypes.get_recipe_filtered(rocket_silo_recipe_filters)
   end
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
   for _, rocket_silo_fixed_recipe_name in pairs(rocket_silo_fixed_recipe_names) do
     table.insert(rocket_silo_recipes, recipe_prototypes[rocket_silo_fixed_recipe_name]) -- extend the recipe list with the fixed recipes
   end
@@ -105,7 +105,7 @@ local unit_test_007 = function()
 
   if #recipe_categories_to_ignore > 0 then
     for _, category_name in pairs(recipe_categories_to_ignore) do
-      if game.recipe_category_prototypes[category_name] then
+      if prototypes.recipe_category[category_name] then
         table.insert(recipe_filters, { filter = "category", invert = false, mode = "or", category = category_name })
       end
     end

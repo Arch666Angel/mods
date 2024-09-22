@@ -36,7 +36,7 @@ local unit_test_005 = function()
   local unit_test_result = unit_test_functions.test_successful
   local researchable_recipes = get_researchable_recipes()
 
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
   for recipe_name, recipe_prototype in pairs(recipe_prototypes) do
     if not recipe_prototype.enabled and not recipe_prototype.hidden then -- recipe must be researched
       if not researchable_recipes[recipe_name] then

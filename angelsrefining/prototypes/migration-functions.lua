@@ -322,8 +322,8 @@ function angelsmods.migration.replace_inventory_content(entities_to_check, items
       local inventory = entity.get_inventory(inventoryType)
       if inventory and inventory.valid then
         for oldItemName, newItemName in pairs(items_to_replace) do
-          local itemCount = game.item_prototypes[oldItemName]
-              and game.item_prototypes[newItemName]
+          local itemCount = prototypes.item[oldItemName]
+              and prototypes.item[newItemName]
               and inventory.get_item_count(oldItemName)
             or 0
           if itemCount > 0 then
@@ -352,7 +352,7 @@ function angelsmods.migration.replace_inserter_content(entities_to_check, items_
         if
           inserterStack.count > 0
           and items_to_replace[inserterStack.name or "none"]
-          and game.item_prototypes[items_to_replace[inserterStack.name]]
+          and prototypes.item[items_to_replace[inserterStack.name]]
         then
           inserterStack.set_stack({
             name = items_to_replace[inserterStack.name],
@@ -376,8 +376,8 @@ function angelsmods.migration.replace_belt_content(entities_to_check, items_to_r
         local transportLine = entity.get_transport_line(lineIndex)
         if transportLine and transportLine.valid then
           for oldItem, newItem in pairs(items_to_replace) do
-            local itemCount = game.item_prototypes[oldItem]
-                and game.item_prototypes[newItem]
+            local itemCount = prototypes.item[oldItem]
+                and prototypes.item[newItem]
                 and transportLine.get_item_count(oldItem)
               or 0
             if itemCount > 0 then
@@ -404,9 +404,9 @@ function angelsmods.migration.replace_entity(entities_to_check, items_to_replace
 
   for _, entity in pairs(entities_to_check) do
     for oldItem, newItem in pairs(items_to_replace) do
-      local oldItemPrototype = game.item_prototypes[oldItem]
+      local oldItemPrototype = prototypes.item[oldItem]
       local oldEntityPrototype = oldItemPrototype and oldItemPrototype.place_result or nil
-      local newItemPrototype = game.item_prototypes[newItem]
+      local newItemPrototype = prototypes.item[newItem]
       local newEntityPrototype = newItemPrototype and newItemPrototype.place_result or nil
       if
         oldEntityPrototype

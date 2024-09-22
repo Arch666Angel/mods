@@ -34,7 +34,7 @@ end
 function debug_info:init_enemy_data(resolution)
   -- STEP 1 get a list of all biter spawners and spawning units
   local enemy_units = {}
-  local entity_prototypes = game.entity_prototypes
+  local entity_prototypes = prototypes.entity
   for entity_name, entity_prototype in pairs(entity_prototypes) do
     if entity_prototype.type == "unit-spawner" then
       enemy_units[entity_name] = {}

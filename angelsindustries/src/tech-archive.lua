@@ -34,7 +34,7 @@ end
 
 function tech_archive:remove_lab_from_inv(inventory)
   if inventory then
-    local items = game.item_prototypes
+    local items = prototypes.item
     for key, lab in pairs(tech_archive.main_lab) do
       if items[lab] and inventory.get_item_count(lab) > 0 then
         inventory.remove({ name = lab })
@@ -46,7 +46,7 @@ function tech_archive:remove_lab_from_inv(inventory)
 end
 
 function tech_archive:initialize_crash_site()
-  if game.entity_prototypes[tech_archive.main_lab[1]] and not storage.is_lab_given then
+  if prototypes.entity[tech_archive.main_lab[1]] and not storage.is_lab_given then
     -- angels science mode
     local surface = game.surfaces["nauvis"]
     if surface and surface.valid then
@@ -75,7 +75,7 @@ function tech_archive:initialize_crash_site()
           create_build_effect_smoke = false,
         })
         if created_entity and created_entity.valid then
-          created_entity.energy = game.item_prototypes["coal"].fuel_value
+          created_entity.energy = prototypes.item["coal"].fuel_value
           storage.is_lab_given = true
 
           -- create explosions
@@ -139,7 +139,7 @@ function tech_archive:on_player_respawned(player_index)
   local player = game.players[player_index]
 
   if player and player.valid then
-    if not storage.is_lab_given and game.entity_prototypes[tech_archive.main_lab[1]] then
+    if not storage.is_lab_given and prototypes.entity[tech_archive.main_lab[1]] then
       storage.is_lab_given = player.insert({ name = tech_archive.main_lab[0], count = 1 }) > 0
     end
   end
@@ -157,7 +157,7 @@ function tech_archive:on_player_respawned(player_index)
 end
 
 function tech_archive:on_entity_died(entity)
-  if game.entity_prototypes[tech_archive.main_lab[1]] then
+  if prototypes.entity[tech_archive.main_lab[1]] then
     local etype = entity.type
     if table_contains(tech_archive.main_lab, entity.name) then
       storage.is_lab_given = false
@@ -170,7 +170,7 @@ function tech_archive:on_entity_died(entity)
 end
 
 function tech_archive:on_pre_player_died(player_index)
-  if game.entity_prototypes[tech_archive.main_lab[1]] then
+  if prototypes.entity[tech_archive.main_lab[1]] then
     self:remove_lab_from_inv(game.players[player_index].get_main_inventory())
   end
 end

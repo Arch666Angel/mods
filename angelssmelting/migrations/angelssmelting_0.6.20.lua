@@ -6,7 +6,7 @@ for _, upgrade in pairs({
   { oldEntity = "sintering-oven-3", newEntity = "sintering-oven-4" },
   { oldEntity = "angels-chemical-furnace", newEntity = "angels-chemical-furnace-2" },
 }) do
-  local entity = game.entity_prototypes[upgrade.oldEntity]
+  local entity = prototypes.entity[upgrade.oldEntity]
 
   if entity and entity.has_flag("hidden") then
     for _, surface in pairs(game.surfaces) do

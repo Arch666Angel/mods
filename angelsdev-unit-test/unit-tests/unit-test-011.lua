@@ -7,7 +7,7 @@ local recipes_to_ignore = {
 
 local unit_test_011 = function()
   local unit_test_result = unit_test_functions.test_successful
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
 
   local tech_filters = {}
   table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
