@@ -113,7 +113,11 @@ local function process_tech(tech)
             end
           end
         elseif entity.type == "offshore-pump" then
-          recipes[recipe.name].products.fluids[entity.fluid.name] = true
+          for _, fluidbox in pairs(entity.fluidbox_prototypes) do
+            if fluidbox.filter then
+              recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
+            end
+          end
         end
       end
     end
