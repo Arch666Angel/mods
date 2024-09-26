@@ -144,8 +144,42 @@ funcs.generate_train_entities({
       intensity = 0.6,
     },
   },
-  back_light = rolling_stock_back_light(),
-  stand_by_light = rolling_stock_stand_by_light(),
+  back_light = {
+    {
+      minimum_darkness = 0.3,
+      color = {1, 0.1, 0.05, 0},
+      shift = {-0.6, 3.5},
+      size = 2,
+      intensity = 0.6,
+      add_perspective = true
+    },
+    {
+      minimum_darkness = 0.3,
+      color = {1, 0.1, 0.05, 0},
+      shift = {0.6, 3.5},
+      size = 2,
+      intensity = 0.6,
+      add_perspective = true
+    }
+  },
+  stand_by_light = {
+    {
+      minimum_darkness = 0.3,
+      color = {0.05, 0.2, 1, 0},
+      shift = {-0.6, -3.5},
+      size = 2,
+      intensity = 0.5,
+      add_perspective = true
+    },
+    {
+      minimum_darkness = 0.3,
+      color = {0.05, 0.2, 1, 0},
+      shift = {0.6, -3.5},
+      size = 2,
+      intensity = 0.5,
+      add_perspective = true
+    }
+  },
   pictures = {
     priority = "very-low",
     width = 256,
@@ -219,7 +253,10 @@ funcs.generate_train_entities({
       },
     },
   },
-  drive_over_tie_trigger = drive_over_tie(),
+  drive_over_tie_trigger = {
+    type = "play-sound",
+    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) } )
+  },
   tie_distance = 50,
   vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   working_sound = {
