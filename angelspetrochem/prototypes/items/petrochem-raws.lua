@@ -41,7 +41,6 @@ data:extend({
     order = "ba", --bb=crude oil
     default_temperature = 0,
     base_flow_rate = 100,
-    base_flow_rate = 100,
     heat_capacity = "0.1kJ",
     base_color = angelsmods.functions.fluid_color("Oi3Ng2C"), --{r = 0.3, g = 0.4, b = 0.3},
     flow_color = angelsmods.functions.flow_color("Oi3Ng2C"), --{r = 0.3, g = 0.4, b = 0.3},
@@ -87,7 +86,6 @@ data:extend({
     order = "ca",
     default_temperature = 0,
     base_flow_rate = 100,
-    base_flow_rate = 100,
     heat_capacity = "0.1kJ",
     base_color = angelsmods.functions.fluid_color("Ng2C"), --{r = 0.5, g = 0.5, b = 0.5},
     flow_color = angelsmods.functions.flow_color("Ng2C"), --{r = 0.5, g = 0.5, b = 0.5},
@@ -117,7 +115,6 @@ data:extend({
     subgroup = "petrochem-raw-fluids",
     order = "ac",
     default_temperature = 0,
-    base_flow_rate = 100,
     base_flow_rate = 100,
     heat_capacity = "0.1kJ",
     base_color = angelsmods.functions.fluid_color("Ng3Oi2C"), --{r = 0.3, g = 0.5, b = 0.3},
