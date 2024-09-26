@@ -1,10 +1,5 @@
 require("util")
 
-local noise = require("noise")
-
-local tne = noise.to_noise_expression
-local litexp = noise.literal_expression
-
 local onehalf_exp = tne(1) / 2
 local onethird_exp = tne(1) / 3
 
