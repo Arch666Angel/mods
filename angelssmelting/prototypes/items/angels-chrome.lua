@@ -83,7 +83,7 @@ data:extend({
     subgroup = "angels-chrome-casting",
     order = "i",
     default_temperature = 1907,
-    heat_capacity = "0KJ",
+    heat_capacity = "0kJ",
     base_color = { r = 200 / 255, g = 186 / 255, b = 245 / 255 },
     flow_color = { r = 200 / 255, g = 186 / 255, b = 245 / 255 },
     max_temperature = 1907,

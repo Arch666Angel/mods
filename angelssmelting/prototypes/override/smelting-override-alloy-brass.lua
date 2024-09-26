@@ -19,7 +19,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         subgroup = "angels-alloys-casting",
         order = "b[brass]-a[liquid-molten-brass]",
         default_temperature = 0,
-        heat_capacity = "0KJ",
+        heat_capacity = "0kJ",
         base_color = { r = 204 / 256, g = 153 / 256, b = 102 / 256 },
         flow_color = { r = 204 / 256, g = 153 / 256, b = 102 / 256 },
         max_temperature = 0,

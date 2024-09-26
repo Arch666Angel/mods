@@ -74,7 +74,7 @@ data:extend({
     subgroup = "angels-manganese-casting",
     order = "h",
     default_temperature = 1246,
-    heat_capacity = "0KJ",
+    heat_capacity = "0kJ",
     base_color = { r = 242 / 255, g = 97 / 255, b = 97 / 255 },
     flow_color = { r = 242 / 255, g = 97 / 255, b = 97 / 255 },
     max_temperature = 1246,

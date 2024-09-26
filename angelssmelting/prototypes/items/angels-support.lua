@@ -19,7 +19,7 @@ data:extend({
     subgroup = "water-treatment-fluid",
     order = "fb",
     default_temperature = 25,
-    heat_capacity = "0.1KJ",
+    heat_capacity = "0.1kJ",
     base_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
     flow_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
     max_temperature = 300,

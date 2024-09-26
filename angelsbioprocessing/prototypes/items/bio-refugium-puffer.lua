@@ -11,7 +11,7 @@ data:extend({
     default_temperature = 0,
     gas_temperature = 0,
     max_temperature = 0,
-    heat_capacity = "1KJ",
+    heat_capacity = "1kJ",
     base_color = { r = 156 / 255, g = 206 / 255, b = 0 / 255 },
     flow_color = { r = 156 / 255, g = 206 / 255, b = 0 / 255 },
   },

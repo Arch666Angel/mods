@@ -84,7 +84,7 @@ data:extend({
     subgroup = "angels-silver-casting",
     order = "j",
     default_temperature = 961.8,
-    heat_capacity = "0KJ",
+    heat_capacity = "0kJ",
     base_color = { r = 59 / 255, g = 143 / 255, b = 179 / 255 },
     flow_color = { r = 59 / 255, g = 143 / 255, b = 179 / 255 },
     max_temperature = 961.8,

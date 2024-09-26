@@ -28,7 +28,7 @@ data:extend({
     subgroup = "angels-steel-casting",
     order = "i",
     default_temperature = 1370,
-    heat_capacity = "0KJ",
+    heat_capacity = "0kJ",
     base_color = { r = 187 / 255, g = 192 / 255, b = 199 / 255 },
     flow_color = { r = 187 / 255, g = 192 / 255, b = 199 / 255 },
     max_temperature = 1370,
