@@ -43,6 +43,7 @@ data:extend({
     subgroup = "angels-titanium",
     order = "d",
     default_temperature = 1668,
+    base_flow_rate = 100,
     heat_capacity = "1kJ",
     base_color = { r = 126 / 255, g = 98 / 255, b = 123 / 255 },
     flow_color = { r = 126 / 255, g = 98 / 255, b = 123 / 255 },

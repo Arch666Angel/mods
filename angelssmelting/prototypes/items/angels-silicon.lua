@@ -96,6 +96,7 @@ data:extend({
     subgroup = "angels-silicon-casting",
     order = "h",
     default_temperature = 1414,
+    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
     flow_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },

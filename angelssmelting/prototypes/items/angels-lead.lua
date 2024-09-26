@@ -96,6 +96,7 @@ data:extend({
     subgroup = "angels-lead-casting",
     order = "i",
     default_temperature = 327.5,
+    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 77 / 255, g = 78 / 255, b = 90 / 255 },
     flow_color = { r = 77 / 255, g = 78 / 255, b = 90 / 255 },
