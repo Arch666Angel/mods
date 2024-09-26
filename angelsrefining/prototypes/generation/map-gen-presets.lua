@@ -1,4 +1,3 @@
-local noise = require("noise")
 
 if mods["angelsexploration"] then
   -- angels exploration takes care of this
