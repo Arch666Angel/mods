@@ -1398,7 +1398,8 @@ local function make_projectile_stream(pro_app, pro_dmg)
             {
               type = "create-entity",
               entity_name = "water-splash",
-              tile_collision_mask = { "ground-tile" },
+              tile_collision_mask = {layers={
+      ground_tile=true}},
             },
           },
         },

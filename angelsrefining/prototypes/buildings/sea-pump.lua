@@ -24,7 +24,8 @@ data:extend({
     center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground
     fluid_box_tile_collision_test = { "ground-tile" },
     adjacent_tile_collision_test = { "water-tile" },
-    adjacent_tile_collision_mask = { "ground-tile" }, -- to prevent building on edge of map :(
+    adjacent_tile_collision_mask = {layers={
+      ground_tile=true}}, -- to prevent building on edge of map :(
     adjacent_tile_collision_box = { { -2, -3 }, { 2, -2 } },
     minable = { mining_time = 1, result = "sea-pump" },
     max_health = 200,
