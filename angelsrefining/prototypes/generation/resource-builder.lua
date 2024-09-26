@@ -1,5 +1,4 @@
-local noise = require("noise")
-local tne = noise.to_noise_expression
+
 local resource_autoplace = require("resource-autoplace")
 
 --Create autoplace
