@@ -1,4 +1,4 @@
-circuit_connector_definitions["angels-big-chest"] = circuit_connector_definitions.create(universal_connector_template, {
+circuit_connector_definitions["angels-big-chest"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 26, main_offset = util.by_pixel(16, 16), shadow_offset = util.by_pixel(18, 28), show_shadow = false },
 })
 

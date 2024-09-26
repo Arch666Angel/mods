@@ -1,10 +1,10 @@
 circuit_connector_definitions["angels-construction-zone-expander-1"] =
-  circuit_connector_definitions.create(universal_connector_template, {
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 12), show_shadow = false },
   })
 
 circuit_connector_definitions["angels-construction-zone-expander-2"] =
-  circuit_connector_definitions.create(universal_connector_template, {
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 26, main_offset = util.by_pixel(8, 0), shadow_offset = util.by_pixel(10, 12), show_shadow = false },
   })
 

@@ -1,4 +1,4 @@
-circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create(universal_connector_template, {
+circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 26, main_offset = util.by_pixel(0, 64), shadow_offset = util.by_pixel(2, 78), show_shadow = false },
 })
 

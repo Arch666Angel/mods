@@ -1,5 +1,5 @@
 circuit_connector_definitions["angels-charging-station"] =
-  circuit_connector_definitions.create(universal_connector_template, {
+  circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 26, main_offset = util.by_pixel(28, 36), shadow_offset = util.by_pixel(30, 48), show_shadow = false },
   })
 
