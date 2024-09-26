@@ -1039,10 +1039,6 @@ function angelsmods.functions.get_recipe_tints(layers, opacity)
       }) do
         if data.raw[type][name] then
           local base = data.raw[type][name]
-          log(base.base_color.r)
-            log(base.base_color.g)
-            log(alpha)
-            log(serpent.block(base))
           tints[index] = {
             r = base.base_color.r or 0,
             g = base.base_color.g or 0,
