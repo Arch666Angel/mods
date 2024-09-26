@@ -95,7 +95,7 @@ if angelsmods.industries.tech then
         {
           inventory_index = defines.inventory.lab_modules,
           max_icons_per_row = 3,
-          max_icon_rows = 1
+          max_icon_rows = 1,
           shift = { 0, 0.9 },
         }
       },
@@ -180,7 +180,7 @@ if angelsmods.industries.tech then
         {
           inventory_index = defines.inventory.lab_modules,
           max_icons_per_row = 3,
-          max_icon_rows = 1
+          max_icon_rows = 1,
           shift = { 0, 0.9 },
         }
       },
@@ -262,7 +262,7 @@ if angelsmods.industries.tech then
         {
           inventory_index = defines.inventory.lab_modules,
           max_icons_per_row = 3,
-          max_icon_rows = 1
+          max_icon_rows = 1,
           shift = { 0, 0.9 },
         }
       },
