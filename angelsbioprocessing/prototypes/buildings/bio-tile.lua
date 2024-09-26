@@ -13,7 +13,7 @@ data:extend({
     place_as_tile = {
       result = "bio-tile",
       condition_size = 4,
-      condition = {layers = {water_tile = true},
+      condition = { "water-tile" },
     },
   },
   {

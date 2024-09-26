@@ -40,7 +40,7 @@ data:extend({
     place_as_tile = {
       result = "clay-bricks",
       condition_size = 2,
-      condition = {layers = {water_tile = true},
+      condition = { "water-tile" },
     },
   },
   -- order f is reserved for stone brick (see override)
@@ -73,7 +73,7 @@ data:extend({
       result = "tile-concrete-brick",
       -- result = "tutorial-grid",
       condition_size = 1,
-      condition = {layers = {water_tile = true},
+      condition = { "water-tile" },
     },
   },
   {
@@ -87,7 +87,7 @@ data:extend({
     place_as_tile = {
       result = "tile-reinforced-concrete-brick",
       condition_size = 1,
-      condition = {layers = {water_tile = true},
+      condition = { "water-tile" },
     },
   },
 })
