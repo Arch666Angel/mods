@@ -62,6 +62,7 @@ data:extend({
     subgroup = "angels-lead",
     order = "f",
     default_temperature = 0,
+    base_flow_rate = 100,
     heat_capacity = "1kJ",
     base_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },
     flow_color = { r = 209 / 255, g = 209 / 255, b = 209 / 255 },

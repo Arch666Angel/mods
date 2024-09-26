@@ -19,6 +19,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         subgroup = "angels-alloys-casting",
         order = "f[nitinol]-a[liquid-molten-nitinol]",
         default_temperature = 0,
+    base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },
         flow_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },

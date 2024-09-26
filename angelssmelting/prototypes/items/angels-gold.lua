@@ -52,6 +52,7 @@ data:extend({
     subgroup = "angels-gold",
     order = "e",
     default_temperature = 0,
+    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
     flow_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },

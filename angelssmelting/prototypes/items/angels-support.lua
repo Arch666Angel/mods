@@ -8,6 +8,7 @@ data:extend({
     subgroup = "water-treatment-fluid",
     order = "fa",
     default_temperature = 0,
+    base_flow_rate = 100,
     base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
     flow_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
   },

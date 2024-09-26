@@ -21,6 +21,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         subgroup = "angels-alloys-casting",
         order = "d[invar]-a[liquid-molten-invar]",
         default_temperature = 0,
+    base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 95 / 256, g = 125 / 256, b = 122 / 256 },
         flow_color = { r = 95 / 256, g = 125 / 256, b = 122 / 256 },

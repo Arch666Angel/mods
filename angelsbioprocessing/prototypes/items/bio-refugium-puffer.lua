@@ -9,6 +9,7 @@ data:extend({
     subgroup = "bio-puffer-1",
     order = "b",
     default_temperature = 0,
+    base_flow_rate = 100,
     gas_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
