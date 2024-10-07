@@ -17,7 +17,7 @@ if settings.startup["deco-shred-create-shrine-offer"].value then
         effects = {},
 
         unit = {
-          count = data.raw["item"]["satellite"].rocket_launch_product[2] or 1000,
+          count = data.raw["item"]["satellite"].rocket_launch_products[1].amount or 1000,
           ingredients = data.raw["technology"][satteliteTechnologyName].unit.ingredients,
           time = 60,
         },

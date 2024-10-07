@@ -27,7 +27,7 @@ if settings.startup["deco-shred-create-shrine-offer"].value then
           .. data.raw["item"]["deco-" .. decoName .. "-1"].order
           .. "]",
         stack_size = data.raw["item"]["satellite"].stack_size,
-        rocket_launch_product = util.table.deepcopy(data.raw["item"]["satellite"].rocket_launch_product),
+        rocket_launch_products = util.table.deepcopy(data.raw["item"]["satellite"].rocket_launch_products),
       },
       -- recipe
       {

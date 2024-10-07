@@ -28,7 +28,7 @@ if angelsmods.industries.tech then
     angelsmods.functions.hide("lab")
   end
 
-  data.raw["rocket-silo-rocket"]["rocket-silo-rocket"].research_products = {
+  data.raw["item"]["satellite"].rocket_launch_products = {
     {
       type = "item",
       name = "science-gravitational-analyzer",
