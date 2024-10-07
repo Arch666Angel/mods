@@ -180,7 +180,7 @@ end
 -- Event handlers
 -------------------------------------------------------------------------------
 function welcome_dialog:on_cutscene_cancelled(player_index)
-  if game.active_mods["angelsexploration"] then
+  if script.active_mods["angelsexploration"] then
     return
   end
   self:create_welcome_dialog(player_index)

@@ -77,7 +77,7 @@ game.surfaces[1]
     force = "neutral",
   })
   .set_infinity_pipe_filter({
-    name = game.active_mods["angelspetrochem"] and "liquid-sulfuric-acid" or "sulfuric-acid",
+    name = script.active_mods["angelspetrochem"] and "liquid-sulfuric-acid" or "sulfuric-acid",
     percentage = 1,
   })
 -- inserters (output)

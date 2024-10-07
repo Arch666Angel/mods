@@ -9,7 +9,7 @@ for _, force in pairs(game.forces) do
 end
 
 -- fix nuclear technologies
-if settings.startup["angels-enable-industries"].value or game.active_mods["bobplates"] then -- overhaul enabled
+if settings.startup["angels-enable-industries"].value or script.active_mods["bobplates"] then -- overhaul enabled
   for _, force in pairs(game.forces) do
     for newTech, oldTechs in pairs({
       ["water-chemistry-1"] = {
@@ -66,15 +66,15 @@ if settings.startup["angels-enable-industries"].value or game.active_mods["bobpl
 end
 
 -- fix nuclear recipes
-if settings.startup["angels-enable-industries"].value or game.active_mods["bobplates"] then -- overhaul enabled
+if settings.startup["angels-enable-industries"].value or script.active_mods["bobplates"] then -- overhaul enabled
   for _, surface in pairs(game.surfaces) do
     -- replace centrifuge recipes
     angelsmods.migration.replace_recipes(
       surface.find_entities_filtered({
         name = {
           "centrifuge",
-          game.active_mods["bobassembly"] and "centrifuge-2",
-          game.active_mods["bobassembly"] and "centrifuge-3",
+          script.active_mods["bobassembly"] and "centrifuge-2",
+          script.active_mods["bobassembly"] and "centrifuge-3",
         },
         type = "assembling-machine",
       }),
@@ -84,7 +84,7 @@ if settings.startup["angels-enable-industries"].value or game.active_mods["bobpl
         { "thorium-fuel-reprocessing", "angels-thorium-fuel-cell-reprocessing" },
         { "deuterium-fuel-reprocessing", "angels-deuterium-fuel-cell-reprocessing" },
         not (
-              game.active_mods["bobrevamp"]
+              script.active_mods["bobrevamp"]
               and settings.startup["bobmods-revamp-rtg"]
               and settings.startup["bobmods-revamp-rtg"].value
             )
@@ -99,9 +99,9 @@ if settings.startup["angels-enable-industries"].value or game.active_mods["bobpl
           "assembling-machine-1",
           "assembling-machine-2",
           "assembling-machine-3",
-          game.active_mods["bobassembly"] and "assembling-machine-4",
-          game.active_mods["bobassembly"] and "assembling-machine-5",
-          game.active_mods["bobassembly"] and "assembling-machine-6",
+          script.active_mods["bobassembly"] and "assembling-machine-4",
+          script.active_mods["bobassembly"] and "assembling-machine-5",
+          script.active_mods["bobassembly"] and "assembling-machine-6",
         },
         type = "assembling-machine",
       }),
@@ -116,7 +116,7 @@ if settings.startup["angels-enable-industries"].value or game.active_mods["bobpl
 end
 
 -- fix nuclear items
-if settings.startup["angels-enable-industries"].value or game.active_mods["bobplates"] then -- overhaul enabled
+if settings.startup["angels-enable-industries"].value or script.active_mods["bobplates"] then -- overhaul enabled
   for _, surface in pairs(game.surfaces) do
     for chunk in surface.get_chunks() do
       --local entities = surface.find_entities(chunk.area)

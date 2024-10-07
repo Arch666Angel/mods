@@ -73,8 +73,8 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
       surface.find_entities_filtered({
         name = {
           "centrifuge",
-          game.active_mods["bobassembly"] and "centrifuge-2",
-          game.active_mods["bobassembly"] and "centrifuge-3",
+          script.active_mods["bobassembly"] and "centrifuge-2",
+          script.active_mods["bobassembly"] and "centrifuge-3",
         },
         type = "assembling-machine",
       }),
@@ -84,7 +84,7 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
         { "thorium-fuel-reprocessing", "angels-thorium-fuel-cell-reprocessing" },
         { "deuterium-fuel-reprocessing", "angels-deuterium-fuel-cell-reprocessing" },
         not (
-              game.active_mods["bobrevamp"]
+              script.active_mods["bobrevamp"]
               and settings.startup["bobmods-revamp-rtg"]
               and settings.startup["bobmods-revamp-rtg"].value
             )
@@ -99,9 +99,9 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
           "assembling-machine-1",
           "assembling-machine-2",
           "assembling-machine-3",
-          game.active_mods["bobassembly"] and "assembling-machine-4",
-          game.active_mods["bobassembly"] and "assembling-machine-5",
-          game.active_mods["bobassembly"] and "assembling-machine-6",
+          script.active_mods["bobassembly"] and "assembling-machine-4",
+          script.active_mods["bobassembly"] and "assembling-machine-5",
+          script.active_mods["bobassembly"] and "assembling-machine-6",
         },
         type = "assembling-machine",
       }),
