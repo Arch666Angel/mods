@@ -11,7 +11,7 @@ local bonus_upgrade_technologies = {}
 
 local science_pack_level = {}
 local function calculate_science_pack_level()
-  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
+  local technology_overhaul = script.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
     or false
 
   if technology_overhaul then
@@ -50,6 +50,23 @@ local function calculate_science_pack_level()
     }) do
       science_pack_level[pack_name] = pack_level
     end
+  elseif script.active_mods["space-age"] then
+    for pack_name, pack_level in pairs({
+      ["automation-science-pack"] = 100,
+      ["logistic-science-pack"] = 200,
+      ["military-science-pack"] = 300,
+      ["chemical-science-pack"] = 400,
+      ["space-science-pack"] = 600,
+      ["agricultural-science-pack"] = 700,
+      ["electromagnetic-science-pack"] = 700,
+      ["metallurgic-science-pack"] = 700,
+      ["production-science-pack"] = 700,
+      ["utility-science-pack"] = 700,
+      ["cryogenic-science-pack"] = 800,
+      ["interstellar-science-pack"] = 900,
+    }) do
+      science_pack_level[pack_name] = pack_level
+    end
   else
     for pack_name, pack_level in pairs({
       -- vanilla science packs
@@ -65,7 +82,7 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["angelsbioprocessing"] then
+  if script.active_mods["angelsbioprocessing"] then
     science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"]
       or science_pack_level["automation-science-pack"]
 
@@ -78,7 +95,7 @@ local function calculate_science_pack_level()
     science_pack_level["alien-artifact-green-tool"] = 0
   end
 
-  if game.active_mods["bobtech"] then
+  if script.active_mods["bobtech"] then
     -- bobs regular science packs
     for pack_name, pack_level in pairs({
       ["steam-science-pack"] = 30,
@@ -88,7 +105,7 @@ local function calculate_science_pack_level()
       science_pack_level[pack_name] = pack_level
     end
 
-    if game.active_mods["bobenemies"] then
+    if script.active_mods["bobenemies"] then
       -- bobs alien science packs
       for pack_name, pack_level in pairs({
         ["science-pack-gold"] = 50
@@ -113,7 +130,7 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["SeaBlock"] then
+  if script.active_mods["SeaBlock"] then
     for pack_name, pack_level in pairs({
       ["sb-angelsore3-tool"] = 0,
       ["sb-algae-brown-tool"] = 0,
@@ -124,11 +141,11 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["ScienceCostTweakerM"] then
+  if script.active_mods["ScienceCostTweakerM"] then
     science_pack_level["sct-bio-science-pack"] = science_pack_level["token-bio"]
   end
 
-  if game.active_mods["SpaceMod"] then
+  if script.active_mods["SpaceMod"] then
     technologies_to_ignore["space-assembly"] = true
     technologies_to_ignore["protection-fields"] = true
     technologies_to_ignore["fusion-reactor"] = true
@@ -259,13 +276,10 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
         end
         if recipe_product.type == "item" then
           local item = item_prototypes[recipe_product.name]
-          local entity = item.place_result
-          if entity and entity.type == "rocket-silo" and entity.research_products then
-            for _, research_product in pairs(entity.research_products) do
-              local research_product_level = science_pack_level[research_product.name]
-              if research_product_level then
-                tech_effect_level = math.max(tech_effect_level, research_product_level)
-              end
+          for _, rocket_launch_product in pairs(item_prototypes[recipe_product.name].rocket_launch_products) do
+            local rocket_launch_product_level = science_pack_level[rocket_launch_product.name]
+            if rocket_launch_product_level then
+              tech_effect_level = math.max(tech_effect_level, rocket_launch_product_level)
             end
           end
         end

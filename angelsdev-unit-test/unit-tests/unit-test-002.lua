@@ -28,7 +28,7 @@ end
 local unit_test_002 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  if not game.active_mods["angelsindustries"] then
+  if not script.active_mods["angelsindustries"] then
     return true
   end -- skip test
   local industries_tech_setting = settings.startup["angels-enable-tech"]

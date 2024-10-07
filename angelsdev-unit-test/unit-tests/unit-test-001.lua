@@ -9,7 +9,7 @@ local unit_test_functions = require("unit-test-functions")
 
 local unit_test_001 = function()
   unit_test_functions.print_msg("Unit testing mod configuration:")
-  for mod_name, mod_version in pairs(game.active_mods) do
+  for mod_name, mod_version in pairs(script.active_mods) do
     unit_test_functions.print_msg(mod_name .. " version " .. mod_version)
   end
   return unit_test_functions.test_successful -- unit test succeeded.

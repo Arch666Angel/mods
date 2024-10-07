@@ -14,9 +14,9 @@ local function process_tech(tech)
   local result = { name = tech.name, items = {}, fluids = {}, categories = {} }
   local recipes = {}
 
-  for _, modifier in pairs(tech.effects) do
-    if modifier.type == "unlock-recipe" then
-      local recipe = prototypes.recipe[modifier.recipe]
+  for _, effect in pairs(tech.effects) do
+    if effect.type == "unlock-recipe" then
+      local recipe = prototypes.recipe[effect.recipe]
       recipes[recipe.name] = {
         processed = false,
         ingredients = { items = {}, fluids = {} },
@@ -113,10 +113,19 @@ local function process_tech(tech)
             end
           end
         elseif entity.type == "offshore-pump" then
-          for _, fluidbox in pairs(entity.fluidbox_prototypes) do
-            if fluidbox.filter then
-              recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
-            end
+          if entity.fluidbox_prototypes[1].filter then
+            recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
+          else
+          
+          end
+        end
+      end
+    elseif effect.type == "unlock-space-location" then
+      local planet = game.planets[effect.space_location]
+      if planet then
+        for _, tile in pairs(planet.prototype.map_gen_settings.autoplace_settings["tile"].settings) do
+          if tile.fluid then
+            result.fluids[tile.fluid.name] = true
           end
         end
       end
@@ -340,7 +349,7 @@ end
 local function add_ignores()
   -- TODO: Remove this. Currently components has so many missing prerequisites that this test is not worth having
   if
-    game.active_mods["angelsindustries"]
+    script.active_mods["angelsindustries"]
     and (
       (settings.startup["angels-enable-components"].value == true)
       or (settings.startup["angels-enable-tech"].value == true)
@@ -356,7 +365,7 @@ local function add_ignores()
     },
   }
 
-  if game.active_mods["angelsrefining"] then
+  if script.active_mods["angelsrefining"] then
     ignore_building_recipes = true
     ignored_unlocks["ore-powderizer"] = {
       items = {
@@ -373,7 +382,7 @@ local function add_ignores()
     }
   end
 
-  if game.active_mods["angelssmelting"] then
+  if script.active_mods["angelssmelting"] then
     ignored_unlocks["angels-coolant-1"] = {
       fluids = {
         ["liquid-coolant-used"] = true,
@@ -381,7 +390,7 @@ local function add_ignores()
     }
   end
 
-  if game.active_mods["angelsbioprocessing"] then
+  if script.active_mods["angelsbioprocessing"] then
     ignored_unlocks["plastics"] = {
       fluids = {
         ["liquid-plastic"] = true,
@@ -476,7 +485,7 @@ local function add_ignores()
     }
   end
 
-  if game.active_mods["angelsindustries"] then
+  if script.active_mods["angelsindustries"] then
     ignored_unlocks["angels-nuclear-fuel"] = {
       items = {
         ["plutonium-239"] = true,
@@ -500,7 +509,7 @@ local function add_ignores()
     }
   end
 
-  if game.active_mods["SeaBlock"] then
+  if script.active_mods["SeaBlock"] then
     ignore_building_recipes = false
     ignored_unlocks["starting"] = {
       items = {

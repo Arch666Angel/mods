@@ -34,7 +34,7 @@ local unit_test_008 = function()
   local unit_test_result = unit_test_functions.test_successful
 
   -- Populate items_to_ignore with script items
-  if game.active_mods["angelsindustries"] and (settings.startup["angels-enable-tech"].value == true) then
+  if script.active_mods["angelsindustries"] and (settings.startup["angels-enable-tech"].value == true) then
     items_to_ignore["angels-main-lab-0"] = true
   end
 
@@ -76,10 +76,15 @@ local unit_test_008 = function()
   local entity_filters = {}
   table.insert(entity_filters, { filter = "type", type = "rocket-silo" })
 
-  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
+  local item_filters = {}
+  table.insert(item_filters, { filter = "flag", invert = true, mode = "and", flag = "hidden" })
+  table.insert(item_filters, { filter = "has-rocket-launch-products", invert = false, mode = "and" })
 
-  for entity_name, entity in pairs(entity_prototypes) do
-    for _, product in pairs(entity.research_products or {}) do
+  --local item_prototypes = prototypes.get_item_filtered(item_filters)
+  local item_prototypes = prototypes.item
+
+  for item_name, item in pairs(item_prototypes) do
+    for _, product in pairs(item.rocket_launch_products) do
       if product.type == "item" then
         items_to_ignore[product.name] = true
       else
@@ -133,6 +138,12 @@ local unit_test_008 = function()
       if fluidbox.filter then
         fluids_to_ignore[fluidbox.filter.name] = true
       end
+    end
+  end
+  
+  for tile_name, tile in pairs(prototypes.tile) do
+    if tile.fluid then
+      fluids_to_ignore[tile.fluid.name] = true
     end
   end
 
