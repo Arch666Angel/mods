@@ -28,8 +28,6 @@ if angelsmods.industries.tech then
     angelsmods.functions.hide("lab")
   end
 
-  --research_products = {{type = "item", name = "space-science-pack", amount = 1000}},
-
   data.raw["rocket-silo-rocket"]["rocket-silo-rocket"].research_products = {
     {
       type = "item",

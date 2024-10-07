@@ -100,7 +100,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "35MJ",
-      input_flow_limit = "3500KW",
+      input_flow_limit = "3500kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "1000kW",
@@ -153,7 +153,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "70MJ",
-      input_flow_limit = "7000KW",
+      input_flow_limit = "7000kW",
       usage_priority = "secondary-input",
     },
     charging_energy = "2000kW",

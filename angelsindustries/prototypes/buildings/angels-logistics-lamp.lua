@@ -25,7 +25,7 @@ data:extend({
       type = "electric",
       usage_priority = "lamp",
     },
-    energy_usage_per_tick = "5KW",
+    energy_usage_per_tick = "5kW",
     darkness_for_all_lamps_on = 0.5,
     darkness_for_all_lamps_off = 0.3,
     light = { intensity = 0.9, size = 40, color = { r = 1.0, g = 1.0, b = 1.0 } },
