@@ -278,7 +278,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-servo-motor-1",
-      energy_required = 1,
+      energy_required = 1 * angelsmods.industries.component_crafting_time_multiplier,
       category = "crafting",
       enabled = true,
       ingredients = {
@@ -286,14 +286,16 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-1", amount = 1 },
         { type = "item", name = "angels-cabling", amount = 1 },
       },
-      result = "angels-servo-motor-1",
+      results = {
+        { type = "item", name = "angels-servo-motor-1", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       allow_decomposition = true,
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "angels-servo-motor-2",
-      energy_required = 2,
+      energy_required = 2 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -301,13 +303,15 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-2", amount = 1 },
         { type = "item", name = "angels-cabling", amount = 1 },
       },
-      result = "angels-servo-motor-2",
+      results = {
+        { type = "item", name = "angels-servo-motor-2", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "angels-servo-motor-3",
-      energy_required = 3,
+      energy_required = 3 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -315,13 +319,15 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-3", amount = 1 },
       },
-      result = "angels-servo-motor-3",
+      results = {
+        { type = "item", name = "angels-servo-motor-3", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "angels-servo-motor-4",
-      energy_required = 4,
+      energy_required = 4 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -329,13 +335,15 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-4", amount = 1 },
       },
-      result = "angels-servo-motor-4",
+      results = {
+        { type = "item", name = "angels-servo-motor-4", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "angels-servo-motor-5",
-      energy_required = 6,
+      energy_required = 6 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -343,7 +351,9 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
         { type = "item", name = "cable-shielding-5", amount = 1 },
       },
-      result = "angels-servo-motor-5",
+      results = {
+        { type = "item", name = "angels-servo-motor-5", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       icon_size = 32,
     },
   })

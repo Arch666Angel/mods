@@ -82,13 +82,13 @@ if angelsmods.industries.components then
       name = "construction-frame-1",
       enabled = true,
       category = "crafting",
-      energy_required = 1, --1:2 ratio to grate
+      energy_required = 1 * angelsmods.industries.component_crafting_time_multiplier, --1:2 ratio to grate
       ingredients = {
         { type = "item", name = "grate-iron", amount = 1 },
         { type = "item", name = "angels-girder", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-1", amount = 2 },
+        { type = "item", name = "construction-frame-1", amount = 2 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -98,14 +98,14 @@ if angelsmods.industries.components then
       name = "construction-frame-2",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 1.5, --2:3 ratio to grate
+      energy_required = 1.5 * angelsmods.industries.component_crafting_time_multiplier, --2:3 ratio to grate
       ingredients = {
         { type = "item", name = "grate-steel", amount = 1 },
         { type = "item", name = "angels-girder", amount = 1 },
         { type = "item", name = "angels-rivet", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-2", amount = 2 },
+        { type = "item", name = "construction-frame-2", amount = 2 * angelsmods.industries.component_result_multiplier },
       },
       icon_size = 32,
     },
@@ -114,7 +114,7 @@ if angelsmods.industries.components then
       name = "construction-frame-3",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 2, -- 3:4 ratio to grate
+      energy_required = 2 * angelsmods.industries.component_crafting_time_multiplier, -- 3:4 ratio to grate
       ingredients = {
         { type = "item", name = "grate-aluminium", amount = 1 },
         { type = "item", name = "angels-girder", amount = 1 },
@@ -122,7 +122,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-bracket", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-3", amount = 2 },
+        { type = "item", name = "construction-frame-3", amount = 2 * angelsmods.industries.component_result_multiplier },
       },
       icon_size = 32,
     },
@@ -131,7 +131,7 @@ if angelsmods.industries.components then
       name = "construction-frame-4",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 3.5, -- 4:7 ratio to grate
+      energy_required = 3.5 * angelsmods.industries.component_crafting_time_multiplier, -- 4:7 ratio to grate
       ingredients = {
         { type = "item", name = "grate-titanium", amount = 1 },
         { type = "item", name = "angels-girder", amount = 1 },
@@ -140,7 +140,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-plating", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-4", amount = 2 },
+        { type = "item", name = "construction-frame-4", amount = 2 * angelsmods.industries.component_result_multiplier },
       },
       icon_size = 32,
     },
@@ -149,7 +149,7 @@ if angelsmods.industries.components then
       name = "construction-frame-5",
       enabled = false,
       category = "advanced-crafting",
-      energy_required = 5, -- 3:5 ratio to grate
+      energy_required = 5 * angelsmods.industries.component_crafting_time_multiplier, -- 3:5 ratio to grate
       ingredients = {
         { type = "item", name = "grate-tungsten", amount = 1 },
         { type = "item", name = "angels-girder", amount = 1 },
@@ -159,7 +159,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-strut", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-5", amount = 2 },
+        { type = "item", name = "construction-frame-5", amount = 2 * angelsmods.industries.component_result_multiplier },
       },
       icon_size = 32,
     },
