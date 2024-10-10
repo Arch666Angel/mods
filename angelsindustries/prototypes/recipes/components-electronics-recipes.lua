@@ -453,7 +453,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-solder", amount = 2 },
       },
       results = {
-        { type = "item", name = "circuit-green-loaded", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "circuit-green-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -471,7 +475,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-solder", amount = 3 },
       },
       results = {
-        { type = "item", name = "circuit-orange-loaded", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "circuit-orange-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -510,7 +518,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-solder", amount = 5 },
       },
       results = {
-        { type = "item", name = "circuit-yellow-loaded", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "circuit-yellow-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },

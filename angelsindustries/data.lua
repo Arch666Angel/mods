@@ -51,7 +51,11 @@ elseif component_result_multiplier == "easy" then
   angelsmods.industries.component_result_multiplier = 2
   angelsmods.industries.component_crafting_time_multiplier = 1
 elseif component_result_multiplier ~= "hard" then
-  console.log("Error: Angels startup setting 'angels-components-component-difficulty' has an invalid value '"..block_result_multiplier.."' configured! Falling back to default...")
+  console.log(
+    "Error: Angels startup setting 'angels-components-component-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. "' configured! Falling back to default..."
+  )
 end
 
 angelsmods.industries.block_result_multiplier = 1
@@ -64,7 +68,11 @@ elseif block_result_multiplier == "easy" then
   angelsmods.industries.block_result_multiplier = 2
   angelsmods.industries.block_crafting_time_multiplier = 1
 elseif block_result_multiplier ~= "hard" then
-  console.log("Error: Angels startup setting 'angels-components-block-difficulty' has an invalid value '"..block_result_multiplier.." configured! Falling back to default...")
+  console.log(
+    "Error: Angels startup setting 'angels-components-block-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. " configured! Falling back to default..."
+  )
 end
 
 -- set triggers for other angel mods
