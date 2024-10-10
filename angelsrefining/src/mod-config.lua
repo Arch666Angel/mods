@@ -18,7 +18,7 @@ return function(configuration_data)
       log("Updating sea pump from version 0 to latest version.")
       sea_pump:on_init()
     end
-    
+
     if global.SP_data.version == 1 then
       log("Updating sea pump from version 1 to version 2.")
       global.SP_data["entity_modules_data_tag"] = "sea-pump-modules_request" -- the tag name where the data is stored in the entity
