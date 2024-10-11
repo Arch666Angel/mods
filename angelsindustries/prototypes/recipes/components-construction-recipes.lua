@@ -88,7 +88,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-girder", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-1", amount = 2 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "construction-frame-1",
+          amount = 2 * angelsmods.industries.component_result_multiplier,
+        },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -105,7 +109,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-rivet", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-2", amount = 2 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "construction-frame-2",
+          amount = 2 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -122,7 +130,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-bracket", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-3", amount = 2 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "construction-frame-3",
+          amount = 2 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -140,7 +152,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-plating", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-4", amount = 2 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "construction-frame-4",
+          amount = 2 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -159,7 +175,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-strut", amount = 1 },
       },
       results = {
-        { type = "item", name = "construction-frame-5", amount = 2 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "construction-frame-5",
+          amount = 2 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },

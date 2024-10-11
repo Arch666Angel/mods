@@ -297,7 +297,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
       },
       results = {
-        { type = "item", name = "angels-servo-motor-1", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "angels-servo-motor-1",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -314,7 +318,11 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-cabling", amount = 1 },
       },
       results = {
-        { type = "item", name = "angels-servo-motor-2", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "angels-servo-motor-2",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -330,7 +338,11 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-3", amount = 1 },
       },
       results = {
-        { type = "item", name = "angels-servo-motor-3", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "angels-servo-motor-3",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -346,7 +358,11 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-4", amount = 1 },
       },
       results = {
-        { type = "item", name = "angels-servo-motor-4", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "angels-servo-motor-4",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
@@ -362,7 +378,11 @@ if angelsmods.industries.components then
         { type = "item", name = "cable-shielding-5", amount = 1 },
       },
       results = {
-        { type = "item", name = "angels-servo-motor-5", amount = 1 * angelsmods.industries.component_result_multiplier },
+        {
+          type = "item",
+          name = "angels-servo-motor-5",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
       },
       icon_size = 32,
     },
