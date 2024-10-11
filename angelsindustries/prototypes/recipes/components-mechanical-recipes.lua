@@ -403,6 +403,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-gear",
+      subgroup = "angels-motor-block",
+      order = "f",
       energy_required = 1,
       category = "crafting",
       enabled = true, -- enabled from the start
@@ -418,6 +420,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-axle",
+      subgroup = "angels-motor-block",
+      order = "g",
       energy_required = 1,
       category = "advanced-crafting",
       enabled = false,
@@ -430,6 +434,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-roller-chain",
+      subgroup = "angels-motor-block",
+      order = "h",
       energy_required = 1.5,
       category = "advanced-crafting",
       enabled = false,
@@ -442,6 +448,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-spring",
+      subgroup = "angels-motor-block",
+      order = "i",
       energy_required = 2,
       category = "advanced-crafting",
       enabled = false,
@@ -454,6 +462,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-bearing",
+      subgroup = "angels-motor-block",
+      order = "j",
       energy_required = 2.5,
       category = "advanced-crafting",
       enabled = false,
@@ -471,7 +481,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "mechanical-parts-gear",
-      subgroup = "angels-mechanical-parts",
+      subgroup = "angels-motors",
       order = "f",
       energy_required = 3,
       category = "crafting",
@@ -498,7 +508,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "mechanical-parts-axle",
-      subgroup = "angels-mechanical-parts",
+      subgroup = "angels-motors",
       order = "g",
       energy_required = 3,
       category = "advanced-crafting",
@@ -524,7 +534,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "mechanical-parts-roller-chain",
-      subgroup = "angels-mechanical-parts",
+      subgroup = "angels-motors",
       order = "h",
       energy_required = 3,
       category = "advanced-crafting",
@@ -550,7 +560,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "mechanical-parts-spring",
-      subgroup = "angels-mechanical-parts",
+      subgroup = "angels-motors",
       order = "i",
       energy_required = 3,
       category = "advanced-crafting",
@@ -576,7 +586,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "mechanical-parts-bearing",
-      subgroup = "angels-mechanical-parts",
+      subgroup = "angels-motors",
       order = "j",
       energy_required = 3,
       category = "advanced-crafting",

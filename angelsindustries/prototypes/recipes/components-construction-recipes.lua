@@ -169,6 +169,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-girder",
+      subgroup = "angels-construction-grates",
+      order = "f",
       enabled = true,
       category = "crafting",
       energy_required = 0.5,
@@ -184,6 +186,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-rivet",
+      subgroup = "angels-construction-grates",
+      order = "g",
       enabled = false,
       category = "advanced-crafting",
       energy_required = 1,
@@ -198,6 +202,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-bracket",
+      subgroup = "angels-construction-grates",
+      order = "h",
       enabled = false,
       category = "advanced-crafting",
       energy_required = 1.5,
@@ -212,6 +218,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-plating",
+      subgroup = "angels-construction-grates",
+      order = "i",
       enabled = false,
       category = "advanced-crafting",
       energy_required = 2,
@@ -226,6 +234,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-strut",
+      subgroup = "angels-construction-grates",
+      order = "j",
       enabled = false,
       category = "advanced-crafting",
       energy_required = 2.5,
@@ -243,7 +253,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "construction-components-girder",
-      subgroup = "angels-construction-components",
+      subgroup = "angels-construction-frames",
       order = "f",
       enabled = true,
       category = "crafting",
@@ -270,7 +280,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "construction-components-rivet",
-      subgroup = "angels-construction-components",
+      subgroup = "angels-construction-frames",
       order = "g",
       enabled = false,
       category = "advanced-crafting",
@@ -296,7 +306,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "construction-components-bracket",
-      subgroup = "angels-construction-components",
+      subgroup = "angels-construction-frames",
       order = "h",
       enabled = false,
       category = "advanced-crafting",
@@ -322,7 +332,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "construction-components-plating",
-      subgroup = "angels-construction-components",
+      subgroup = "angels-construction-frames",
       order = "h",
       enabled = false,
       category = "advanced-crafting",
@@ -348,7 +358,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "construction-components-strut",
-      subgroup = "angels-construction-components",
+      subgroup = "angels-construction-frames",
       order = "h",
       enabled = false,
       category = "advanced-crafting",

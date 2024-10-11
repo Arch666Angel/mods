@@ -97,6 +97,25 @@ if angelsmods.industries.components then
       "battery-frame-6",
       "battery-casing-6",
     })
+    -- patch battery 4 and 5 recipe ordening
+    OV.patch_recipes({
+      {
+        name = "battery-frame-4",
+        subgroup = "angels-batteries",
+      },
+      {
+        name = "battery-casing-4",
+        subgroup = "angels-anodes",
+      },
+      {
+        name = "battery-frame-5",
+        subgroup = "angels-batteries",
+      },
+      {
+        name = "battery-casing-5",
+        subgroup = "angels-anodes",
+      },
+    })
   end
 
   if mods["bobmodules"] then

@@ -170,6 +170,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-trigger",
+      subgroup = "angels-weapons-body",
+      order = "f",
       energy_required = 0.5,
       category = "crafting",
       enabled = false,
@@ -183,6 +185,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-explosionchamber",
+      subgroup = "angels-weapons-body",
+      order = "g",
       energy_required = 1,
       category = "advanced-crafting",
       enabled = false,
@@ -195,6 +199,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-fluidchamber",
+      subgroup = "angels-weapons-body",
+      order = "h",
       energy_required = 1.5,
       category = "advanced-crafting",
       enabled = false,
@@ -207,6 +213,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-energycrystal",
+      subgroup = "angels-weapons-body",
+      order = "i",
       energy_required = 2,
       category = "advanced-crafting",
       enabled = false,
@@ -219,6 +227,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-acceleratorcoil",
+      subgroup = "angels-weapons-body",
+      order = "j",
       energy_required = 2.5,
       category = "advanced-crafting",
       enabled = false,
@@ -236,7 +246,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "weapon-parts-trigger",
-      subgroup = "angels-weapons-parts",
+      subgroup = "angels-weapons",
       order = "f",
       energy_required = 3,
       category = "advanced-crafting",
@@ -262,7 +272,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "weapon-parts-explosionchamber",
-      subgroup = "angels-weapons-parts",
+      subgroup = "angels-weapons",
       order = "g",
       energy_required = 3,
       category = "advanced-crafting",
@@ -288,7 +298,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "weapon-parts-fluidchamber",
-      subgroup = "angels-weapons-parts",
+      subgroup = "angels-weapons",
       order = "h",
       energy_required = 3,
       category = "advanced-crafting",
@@ -314,7 +324,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "weapon-parts-energycrystal",
-      subgroup = "angels-weapons-parts",
+      subgroup = "angels-weapons",
       order = "i",
       energy_required = 3,
       category = "advanced-crafting",
@@ -340,7 +350,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "weapon-parts-acceleratorcoil",
-      subgroup = "angels-weapons-parts",
+      subgroup = "angels-weapons",
       order = "j",
       energy_required = 3,
       category = "advanced-crafting",

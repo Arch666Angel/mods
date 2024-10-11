@@ -70,6 +70,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cable-harness-1",
+      subgroup = "angels-cable-shielding",
+      order = "f",
       energy_required = 1,
       category = "crafting",
       enabled = true,
@@ -85,6 +87,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cable-harness-2",
+      subgroup = "angels-cable-shielding",
+      order = "g",
       energy_required = 1.5,
       category = "advanced-crafting",
       enabled = false,
@@ -99,6 +103,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cable-harness-3",
+      subgroup = "angels-cable-shielding",
+      order = "h",
       energy_required = 2,
       category = "advanced-crafting",
       enabled = false,
@@ -113,6 +119,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cable-harness-4",
+      subgroup = "angels-cable-shielding",
+      order = "i",
       energy_required = 3.5,
       category = "crafting-with-fluid",
       enabled = false,
@@ -127,6 +135,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cable-harness-5",
+      subgroup = "angels-cable-shielding",
+      order = "j",
       energy_required = 5,
       category = "crafting-with-fluid",
       enabled = false,
@@ -144,7 +154,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cabling-cable-harness-1",
-      subgroup = "angels-cable-harness",
+      subgroup = "angels-servo-motor",
       order = "f",
       enabled = true,
       category = "crafting",
@@ -171,7 +181,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cabling-cable-harness-2",
-      subgroup = "angels-cable-harness",
+      subgroup = "angels-servo-motor",
       order = "g",
       enabled = false,
       category = "advanced-crafting",
@@ -197,7 +207,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cabling-cable-harness-3",
-      subgroup = "angels-cable-harness",
+      subgroup = "angels-servo-motor",
       order = "h",
       enabled = false,
       category = "advanced-crafting",
@@ -223,7 +233,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cabling-cable-harness-4",
-      subgroup = "angels-cable-harness",
+      subgroup = "angels-servo-motor",
       order = "h",
       enabled = false,
       category = "advanced-crafting",
@@ -249,7 +259,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "cabling-cable-harness-5",
-      subgroup = "angels-cable-harness",
+      subgroup = "angels-servo-motor",
       order = "h",
       enabled = false,
       category = "advanced-crafting",
