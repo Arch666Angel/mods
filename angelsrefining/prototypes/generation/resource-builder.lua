@@ -17,7 +17,7 @@ end
 
 --Create particles
 local function make_particle(input)
-  if not data.raw.particle[input.name .. "-particle"] then
+  if not data.raw["optimized-particle"][input.name .. "-particle"] then
     data:extend({
       {
         type = "optimized-particle",
