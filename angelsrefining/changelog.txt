@@ -6,6 +6,7 @@ Date: ???
     - Fixed crash when upgrading blueprints (978)
     - Fixed crash when removing 'angelspump' mod (test mod, merged into Angel's Refining) (992)
     - Fixed crash on startup with error message No icon size defined for icon (997)
+    - Fixed crash when playing the trains-stations tutorial
   Changes:
     - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
 ---------------------------------------------------------------------------------------------------
