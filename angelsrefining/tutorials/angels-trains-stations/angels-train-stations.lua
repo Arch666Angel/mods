@@ -1,5 +1,4 @@
-entities =
-{
+entities = {
   {
     destructible = true,
     direction = 6,
@@ -8,12 +7,11 @@ entities =
     minable = true,
     name = "hidden-electric-energy-interface",
     operable = false,
-    position =
-    {
+    position = {
       x = 37,
-      y = 6
+      y = 6,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -22,96 +20,87 @@ entities =
     minable = true,
     name = "big-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 37,
-      y = 6
+      y = 6,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 1,
-    inventory =
-    {
+    inventory = {
       {
-        ["rocket-fuel"] = 1
+        ["rocket-fuel"] = 1,
       },
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "steel-furnace",
     operable = true,
-    position =
-    {
+    position = {
       x = 2,
-      y = -20
+      y = -20,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 2,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -18.5
+      y = -18.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 3,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -19.5
+      y = -19.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 4,
-    inventory =
-    {
+    inventory = {
       {
-        ["rocket-fuel"] = 1
+        ["rocket-fuel"] = 1,
       },
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "steel-furnace",
     operable = true,
-    position =
-    {
+    position = {
       x = 2,
-      y = -18
+      y = -18,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -121,12 +110,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = -19.5
+      y = -19.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -136,12 +124,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = -18.5
+      y = -18.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -151,12 +138,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = -18.5
+      y = -18.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -166,90 +152,81 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = -19.5
+      y = -19.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 9,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -19.5
+      y = -19.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 10,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -18.5
+      y = -18.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 11,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -16.5
+      y = -16.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 12,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -17.5
+      y = -17.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -258,113 +235,102 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = -16.5
+      y = -16.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 14,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -17.5
+      y = -17.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 15,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -16.5
+      y = -16.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 16,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 17,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -15.5
+      y = -15.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 18,
-    inventory =
-    {
+    inventory = {
       {
-        ["rocket-fuel"] = 1
+        ["rocket-fuel"] = 1,
       },
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "steel-furnace",
     operable = true,
-    position =
-    {
+    position = {
       x = 2,
-      y = -15
+      y = -15,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -374,12 +340,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -389,113 +354,102 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 21,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -15.5
+      y = -15.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 22,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 23,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -12.5
+      y = -12.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 24,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 25,
-    inventory =
-    {
+    inventory = {
       {
-        ["rocket-fuel"] = 1
+        ["rocket-fuel"] = 1,
       },
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "steel-furnace",
     operable = true,
-    position =
-    {
+    position = {
       x = 2,
-      y = -13
+      y = -13,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -505,12 +459,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -520,71 +473,64 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 28,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 29,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -12.5
+      y = -12.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 31,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = -11.5
+      y = -11.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -594,70 +540,63 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = -10.5
+      y = -10.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 4,
     force = "player",
     index = 33,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -11.5
+      y = -11.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 2,
     force = "player",
     index = 34,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = -10.5
+      y = -10.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 35,
-    inventory =
-    {
-      {}
+    inventory = {
+      {},
     },
     minable = true,
     name = "iron-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = 6.5,
-      y = -10.5
+      y = -10.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -666,12 +605,11 @@ entities =
     minable = true,
     name = "big-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 11,
-      y = -8
+      y = -8,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -680,12 +618,11 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = -4.5,
-      y = -9.5
+      y = -9.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -694,12 +631,11 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = -7.5
+      y = -7.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -709,12 +645,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -14,
-      y = -4
+      y = -4,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -724,12 +659,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -9,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -739,12 +673,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -7,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -754,12 +687,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -5,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -769,12 +701,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -3,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -784,12 +715,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -1,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -799,12 +729,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 1,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -814,12 +743,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 3,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -829,12 +757,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 5,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -844,12 +771,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 7,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -859,12 +785,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 9,
-      y = -5
+      y = -5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -874,12 +799,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 14,
-      y = -4
+      y = -4,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -889,12 +813,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -17,
-      y = -1
+      y = -1,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     backer_name = "A",
@@ -905,12 +828,11 @@ entities =
     minable = true,
     name = "train-stop",
     operable = true,
-    position =
-    {
+    position = {
       x = 9,
-      y = -3
+      y = -3,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -920,12 +842,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 17,
-      y = -1
+      y = -1,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -935,12 +856,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -20,
-      y = 2
+      y = 2,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -949,12 +869,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 20,
-      y = 2
+      y = 2,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -963,12 +882,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -21,
-      y = 7
+      y = 7,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -977,12 +895,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 21,
-      y = 7
+      y = 7,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -991,12 +908,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -21,
-      y = 9
+      y = 9,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1005,12 +921,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 21,
-      y = 9
+      y = 9,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1020,12 +935,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -20,
-      y = 14
+      y = 14,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1035,12 +949,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 20,
-      y = 14
+      y = 14,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1050,12 +963,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -17,
-      y = 17
+      y = 17,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1065,12 +977,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -14,
-      y = 20
+      y = 20,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1080,12 +991,11 @@ entities =
     minable = true,
     name = "curved-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 14,
-      y = 20
+      y = 20,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1095,12 +1005,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 17,
-      y = 17
+      y = 17,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     backer_name = "B",
@@ -1111,12 +1020,11 @@ entities =
     minable = true,
     name = "train-stop",
     operable = true,
-    position =
-    {
+    position = {
       x = -9,
-      y = 19
+      y = 19,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1126,12 +1034,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -9,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1141,12 +1048,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -7,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1156,12 +1062,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -5,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1171,12 +1076,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -3,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1186,12 +1090,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = -1,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1201,12 +1104,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 1,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1216,12 +1118,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 3,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1231,12 +1132,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 5,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1246,12 +1146,11 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 7,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1261,132 +1160,119 @@ entities =
     minable = true,
     name = "straight-rail",
     operable = true,
-    position =
-    {
+    position = {
       x = 9,
-      y = 21
+      y = 21,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 99,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 8
-      }
+        ["angels-ore1"] = 8,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 100,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 31
-      }
+        ["angels-ore1"] = 31,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 101,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 78
-      }
+        ["angels-ore1"] = 78,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 102,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 78
-      }
+        ["angels-ore1"] = 78,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 103,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 8
-      }
+        ["angels-ore1"] = 8,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 104,
-    inventory =
-    {
+    inventory = {
       {
-        ["angels-ore1"] = 29
-      }
+        ["angels-ore1"] = 29,
+      },
     },
     minable = true,
     name = "steel-chest",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 23.5
+      y = 23.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1395,12 +1281,11 @@ entities =
     minable = true,
     name = "big-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 13,
-      y = 24
+      y = 24,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1409,12 +1294,11 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1424,12 +1308,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1439,59 +1322,54 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 6,
     force = "player",
     index = 109,
-    line_contents =
-    {
+    line_contents = {
       {
-        ["angels-ore1"] = 1
+        ["angels-ore1"] = 1,
       },
       {
-        ["angels-ore1"] = 4
-      }
+        ["angels-ore1"] = 4,
+      },
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 110,
-    line_contents =
-    {
+    line_contents = {
       {
-        ["angels-ore1"] = 5
+        ["angels-ore1"] = 5,
       },
       {
-        ["angels-ore1"] = 2
-      }
+        ["angels-ore1"] = 2,
+      },
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1501,12 +1379,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1516,56 +1393,51 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 6,
     force = "player",
     index = 113,
-    line_contents =
-    {
+    line_contents = {
       {},
       {
-        ["angels-ore1"] = 4
-      }
+        ["angels-ore1"] = 4,
+      },
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 2,
     force = "player",
     index = 114,
-    line_contents =
-    {
+    line_contents = {
       {
-        ["angels-ore1"] = 4
+        ["angels-ore1"] = 4,
       },
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1575,12 +1447,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1590,59 +1461,54 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 2,
     force = "player",
     index = 117,
-    line_contents =
-    {
+    line_contents = {
       {
-        ["angels-ore1"] = 4
+        ["angels-ore1"] = 4,
       },
       {
-        ["angels-ore1"] = 1
-      }
+        ["angels-ore1"] = 1,
+      },
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 118,
-    line_contents =
-    {
+    line_contents = {
       {
-        ["angels-ore1"] = 2
+        ["angels-ore1"] = 2,
       },
       {
-        ["angels-ore1"] = 5
-      }
+        ["angels-ore1"] = 5,
+      },
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 25.5
+      y = 25.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1651,98 +1517,89 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 24.5
+      y = 24.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 120,
-    line_contents =
-    {
+    line_contents = {
       {},
       {},
       {},
       {},
       {},
       {
-        ["angels-ore1"] = 1
+        ["angels-ore1"] = 1,
       },
       {
-        ["angels-ore1"] = 1
+        ["angels-ore1"] = 1,
       },
-      {}
+      {},
     },
     minable = true,
     name = "fast-splitter",
     operable = true,
-    position =
-    {
+    position = {
       x = 1,
-      y = 26.5
+      y = 26.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 121,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 27.5
+      y = 27.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 122,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 29.5
+      y = 29.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 123,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 28.5
+      y = 28.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -1751,50 +1608,45 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 30.5
+      y = 30.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 125,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 31.5
+      y = 31.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 126,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 30.5
+      y = 30.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 384,
@@ -1804,12 +1656,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 291,
@@ -1819,12 +1670,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 432,
@@ -1834,12 +1684,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 203,
@@ -1849,12 +1698,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 408,
@@ -1864,50 +1712,45 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 132,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 133,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 32.5
+      y = 32.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 367,
@@ -1917,12 +1760,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 340,
@@ -1932,12 +1774,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 272,
@@ -1947,12 +1788,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 236,
@@ -1962,12 +1802,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 33.5
+      y = 33.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 276,
@@ -1977,12 +1816,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 321,
@@ -1992,12 +1830,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 225,
@@ -2007,12 +1844,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 398,
@@ -2022,12 +1858,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 437,
@@ -2037,12 +1872,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 415,
@@ -2052,32 +1886,29 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 2,
     force = "player",
     index = 144,
-    inventory =
-    {
+    inventory = {
       nil,
-      {}
+      {},
     },
     minable = true,
     name = "electric-mining-drill",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 270,
@@ -2087,12 +1918,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 337,
@@ -2102,12 +1932,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 394,
@@ -2117,12 +1946,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 413,
@@ -2132,50 +1960,45 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 149,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 150,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 359,
@@ -2185,12 +2008,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 318,
@@ -2200,12 +2022,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 349,
@@ -2215,12 +2036,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 397,
@@ -2230,32 +2050,29 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 6,
     force = "player",
     index = 155,
-    inventory =
-    {
+    inventory = {
       nil,
-      {}
+      {},
     },
     minable = true,
     name = "electric-mining-drill",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 214,
@@ -2265,12 +2082,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 398,
@@ -2280,12 +2096,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 309,
@@ -2295,12 +2110,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 34.5
+      y = 34.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 218,
@@ -2310,12 +2124,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 35.5
+      y = 35.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 405,
@@ -2325,12 +2138,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 402,
@@ -2340,12 +2152,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -2354,12 +2165,11 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 304,
@@ -2369,12 +2179,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 200,
@@ -2384,12 +2193,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 435,
@@ -2399,12 +2207,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 464,
@@ -2414,12 +2221,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 380,
@@ -2429,12 +2235,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 239,
@@ -2444,12 +2249,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 224,
@@ -2459,12 +2263,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 431,
@@ -2474,50 +2277,45 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 171,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 172,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 236,
@@ -2527,12 +2325,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 233,
@@ -2542,12 +2339,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 302,
@@ -2557,12 +2353,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 223,
@@ -2572,12 +2367,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 285,
@@ -2587,12 +2381,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 197,
@@ -2602,12 +2395,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 321,
@@ -2617,12 +2409,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 36.5
+      y = 36.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 312,
@@ -2632,12 +2423,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -2646,12 +2436,11 @@ entities =
     minable = true,
     name = "medium-electric-pole",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 37.5
+      y = 37.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 291,
@@ -2661,12 +2450,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 415,
@@ -2676,12 +2464,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 257,
@@ -2691,12 +2478,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 384,
@@ -2706,12 +2492,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 293,
@@ -2721,12 +2506,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 347,
@@ -2736,32 +2520,29 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 2,
     force = "player",
     index = 188,
-    inventory =
-    {
+    inventory = {
       nil,
-      {}
+      {},
     },
     minable = true,
     name = "electric-mining-drill",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 282,
@@ -2771,12 +2552,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 273,
@@ -2786,12 +2566,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 327,
@@ -2801,12 +2580,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 355,
@@ -2816,50 +2594,45 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 193,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 194,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 249,
@@ -2869,12 +2642,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 411,
@@ -2884,12 +2656,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 308,
@@ -2899,12 +2670,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 491,
@@ -2914,32 +2684,29 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     direction = 6,
     force = "player",
     index = 199,
-    inventory =
-    {
+    inventory = {
       nil,
-      {}
+      {},
     },
     minable = true,
     name = "electric-mining-drill",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 473,
@@ -2949,12 +2716,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 283,
@@ -2964,12 +2730,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 236,
@@ -2979,12 +2744,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 38.5
+      y = 38.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 289,
@@ -2994,12 +2758,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 39.5
+      y = 39.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 299,
@@ -3009,12 +2772,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 354,
@@ -3024,12 +2786,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -2.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 318,
@@ -3039,12 +2800,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 227,
@@ -3054,12 +2814,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 373,
@@ -3069,12 +2828,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 446,
@@ -3084,12 +2842,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = -0.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 409,
@@ -3099,12 +2856,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 238,
@@ -3114,12 +2870,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 0.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 454,
@@ -3129,12 +2884,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 466,
@@ -3144,12 +2898,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 1.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 472,
@@ -3159,12 +2912,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 413,
@@ -3174,12 +2926,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 2.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 411,
@@ -3189,12 +2940,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 440,
@@ -3204,12 +2954,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 3.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 272,
@@ -3219,12 +2968,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 440,
@@ -3234,12 +2982,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 4.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 381,
@@ -3249,12 +2996,11 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 40.5
+      y = 40.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     amount = 311,
@@ -3264,76 +3010,69 @@ entities =
     minable = true,
     name = "angels-ore1",
     operable = true,
-    position =
-    {
+    position = {
       x = 5.5,
-      y = 41.5
+      y = 41.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   -- additions for angels compatibility
   {
     destructible = true,
     force = "player",
     index = 300,
-    inventory =
-    {
+    inventory = {
       {},
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "ore-crusher",
     operable = true,
-    position =
-    {
+    position = {
       x = -3.5,
-      y = -11.5
+      y = -11.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 301,
-    inventory =
-    {
+    inventory = {
       {},
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "ore-crusher",
     operable = true,
-    position =
-    {
+    position = {
       x = -3.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 302,
-    inventory =
-    {
+    inventory = {
       {},
       {},
       {},
-      {}
+      {},
     },
     minable = true,
     name = "ore-crusher",
     operable = true,
-    position =
-    {
+    position = {
       x = -3.5,
-      y = -18.5
+      y = -18.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3341,12 +3080,11 @@ entities =
     index = 303,
     minable = true,
     name = "medium-electric-pole",
-    position =
-    {
+    position = {
       x = -4.5,
-      y = -16.5
+      y = -16.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3356,12 +3094,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = -17.5
+      y = -17.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3371,12 +3108,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3386,12 +3122,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -1.5,
-      y = -12.5
+      y = -12.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3401,12 +3136,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -5.5,
-      y = -17.5
+      y = -17.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3416,12 +3150,11 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -5.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
@@ -3431,201 +3164,180 @@ entities =
     minable = true,
     name = "fast-inserter",
     operable = true,
-    position =
-    {
+    position = {
       x = -5.5,
-      y = -12.5
+      y = -12.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 310,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -8.5
+      y = -8.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 311,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -9.5
+      y = -9.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 312,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -10.5
+      y = -10.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 313,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -11.5
+      y = -11.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 314,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -12.5
+      y = -12.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 315,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -13.5
+      y = -13.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 316,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -14.5
+      y = -14.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 317,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -15.5
+      y = -15.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 318,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -16.5
+      y = -16.5,
     },
-    rotatable = true
+    rotatable = true,
   },
   {
     destructible = true,
     force = "player",
     index = 319,
-    line_contents =
-    {
+    line_contents = {
       {},
-      {}
+      {},
     },
     minable = true,
     name = "fast-transport-belt",
     operable = true,
-    position =
-    {
+    position = {
       x = -6.5,
-      y = -17.5
+      y = -17.5,
     },
-    rotatable = true
+    rotatable = true,
   },
 }

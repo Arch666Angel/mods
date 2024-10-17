@@ -14,7 +14,7 @@ if data.raw["tutorial"]["trains-stations"]["scenario"] == "trains-stations" then
     {
       type = "tutorial",
       name = "angels-trains-stations",
-      scenario = "angels-trains-stations"
+      scenario = "angels-trains-stations",
     },
   })
   data.raw["tips-and-tricks-item"]["train-stops"]["tutorial"] = "angels-trains-stations"
