@@ -166,7 +166,7 @@ data:extend({
   {
     type = "recipe",
     name = "powder-manganese",
-    category = "advanced-crafting",
+    category = "powderizing-1",
     subgroup = "angels-manganese",
     energy_required = 0.5,
     enabled = false,

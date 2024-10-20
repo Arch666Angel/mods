@@ -7,12 +7,15 @@ data:extend({
   { type = "recipe-category", name = "angels-manual-crafting" }, -- used for manual crafting in character only },
 
   { type = "recipe-category", name = "ore-refining-t1" }, -- crusher
-  { type = "recipe-category", name = "ore-refining-t1-5" }, -- powderizer
   { type = "recipe-category", name = "ore-refining-t2" }, -- flotation
   { type = "recipe-category", name = "ore-refining-t3" }, -- leaching
   { type = "recipe-category", name = "ore-refining-t3b" }, -- leaching 2
   { type = "recipe-category", name = "ore-refining-t3-5" }, -- electrowinning
   { type = "recipe-category", name = "ore-refining-t4" }, -- refinery
+
+  { type = "recipe-category", name = "powderizing-1" }, -- powderizer
+  { type = "recipe-category", name = "powderizing-2" },
+  { type = "recipe-category", name = "powderizing-3" },
 
   { type = "recipe-category", name = "ore-sorting" },
   { type = "recipe-category", name = "ore-sorting-2" },

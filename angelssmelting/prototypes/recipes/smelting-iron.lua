@@ -133,7 +133,7 @@ data:extend({
   {
     type = "recipe",
     name = "powder-iron",
-    category = "advanced-crafting",
+    category = "powderizing-1",
     subgroup = "angels-iron",
     energy_required = 0.5,
     enabled = false,
