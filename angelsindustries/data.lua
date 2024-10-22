@@ -41,6 +41,40 @@ angelsmods.industries.return_ingredients = angelsmods.industries.components
   or false
 angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
 
+angelsmods.industries.component_result_multiplier = 1
+angelsmods.industries.component_crafting_time_multiplier = 1
+local component_result_multiplier = settings.startup["angels-components-component-difficulty"].value
+if component_result_multiplier == "normal" then
+  angelsmods.industries.component_result_multiplier = 2
+  angelsmods.industries.component_crafting_time_multiplier = 2
+elseif component_result_multiplier == "easy" then
+  angelsmods.industries.component_result_multiplier = 2
+  angelsmods.industries.component_crafting_time_multiplier = 1
+elseif component_result_multiplier ~= "hard" then
+  console.log(
+    "Error: Angels startup setting 'angels-components-component-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. "' configured! Falling back to default..."
+  )
+end
+
+angelsmods.industries.block_result_multiplier = 1
+angelsmods.industries.block_crafting_time_multiplier = 1
+local block_result_multiplier = settings.startup["angels-components-block-difficulty"].value
+if block_result_multiplier == "normal" then
+  angelsmods.industries.block_result_multiplier = 2
+  angelsmods.industries.block_crafting_time_multiplier = 2
+elseif block_result_multiplier == "easy" then
+  angelsmods.industries.block_result_multiplier = 2
+  angelsmods.industries.block_crafting_time_multiplier = 1
+elseif block_result_multiplier ~= "hard" then
+  console.log(
+    "Error: Angels startup setting 'angels-components-block-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. " configured! Falling back to default..."
+  )
+end
+
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")
 

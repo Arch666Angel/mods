@@ -1,7 +1,6 @@
 local OV = angelsmods.functions.OV
 local RB = angelsmods.functions.RB
 local AI = angelsmods.functions.AI
---require("prototypes.overrides.industries-override-functions")
 
 if angelsmods.industries.components then
   AI.add_con_mats()

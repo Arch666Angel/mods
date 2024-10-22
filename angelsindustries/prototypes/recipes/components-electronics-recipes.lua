@@ -6,6 +6,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-resistor",
+      subgroup = "angels-circuit-board",
+      order = "f",
       energy_required = 0.5,
       category = "crafting", --to allow hand crafting
       enabled = false,
@@ -20,6 +22,8 @@ if angelsmods.industries.components then
     --{
     --  type = "recipe",
     --  name = "circuit-resistor",
+    --  subgroup = "angels-circuit-board",
+    --  order = "f",
     --  energy_required = 3,
     --  category = "advanced-crafting",
     --  enabled = false,
@@ -32,11 +36,12 @@ if angelsmods.industries.components then
     --  },
     --  results = {{ type = "item", name = "circuit-resistor", amount = 1 }},
     --  icon_size = 32,
-    --  order = "b",
     --},
     {
       type = "recipe",
       name = "circuit-transistor",
+      subgroup = "angels-circuit-board",
+      order = "g",
       energy_required = 1,
       category = "advanced-crafting",
       enabled = false,
@@ -50,6 +55,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-microchip",
+      subgroup = "angels-circuit-board",
+      order = "h",
       energy_required = 1.5,
       category = "advanced-crafting",
       enabled = false,
@@ -64,6 +71,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-transformer",
+      subgroup = "angels-circuit-board",
+      order = "i",
       energy_required = 2,
       category = "advanced-crafting",
       enabled = false,
@@ -77,6 +86,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-cpu",
+      subgroup = "angels-circuit-board",
+      order = "j",
       energy_required = 2.5,
       category = "advanced-crafting",
       enabled = false,
@@ -94,7 +105,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "electronic-parts-resistor",
-      subgroup = "angels-circuit-components",
+      subgroup = "angels-loaded-circuit-board",
       order = "f",
       energy_required = 1.5,
       category = "advanced-crafting",
@@ -120,7 +131,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "electronic-parts-transistor",
-      subgroup = "angels-circuit-components",
+      subgroup = "angels-loaded-circuit-board",
       order = "g",
       energy_required = 1.5,
       category = "advanced-crafting",
@@ -146,7 +157,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "electronic-parts-microchip",
-      subgroup = "angels-circuit-components",
+      subgroup = "angels-loaded-circuit-board",
       order = "h",
       energy_required = 1.5,
       category = "advanced-crafting",
@@ -172,7 +183,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "electronic-parts-transformer",
-      subgroup = "angels-circuit-components",
+      subgroup = "angels-loaded-circuit-board",
       order = "i",
       energy_required = 1.5,
       category = "advanced-crafting",
@@ -198,7 +209,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "electronic-parts-cpu",
-      subgroup = "angels-circuit-components",
+      subgroup = "angels-loaded-circuit-board",
       order = "j",
       energy_required = 1.5,
       category = "advanced-crafting",
@@ -328,6 +339,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-grey",
+      subgroup = "angels-board",
+      order = "h",
       energy_required = 0.25, -- 1:1 ratio to boards
       category = "crafting",
       enabled = true,
@@ -335,7 +348,9 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-grey-board", amount = 1 },
         { type = "item", name = "angels-wire-copper", amount = 3 },
       },
-      results = {{ type = "item", name = "circuit-grey", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-grey", amount = 1 },
+      },
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -349,7 +364,9 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-red-board", amount = 1 },
         { type = "item", name = "angels-wire-copper", amount = 3 },
       },
-      results = {{ type = "item", name = "circuit-red", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-red", amount = 1 },
+      },
       allow_decomposition = true,
       icon_size = 32,
     },
@@ -363,7 +380,9 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-green-board", amount = 1 },
         { type = "item", name = "angels-wire-tin", amount = 3 },
       },
-      results = {{ type = "item", name = "circuit-green", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-green", amount = 1 },
+      },
       icon_size = 32,
     },
     {
@@ -377,7 +396,9 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-silver", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      results = {{ type = "item", name = "circuit-orange", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-orange", amount = 1 },
+      },
       icon_size = 32,
     },
     {
@@ -391,7 +412,9 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-gold", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      results = {{ type = "item", name = "circuit-blue", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-blue", amount = 1 },
+      },
       icon_size = 32,
     },
     {
@@ -405,7 +428,9 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-wire-platinum", amount = 3 },
         { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
       },
-      results = {{ type = "item", name = "circuit-yellow", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-yellow", amount = 1 },
+      },
       icon_size = 32,
     },
     -----------------------------------------------------------------------------
@@ -414,7 +439,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "circuit-red-loaded",
-      energy_required = 1,
+      energy_required = 1 * angelsmods.industries.component_crafting_time_multiplier,
       category = "crafting",
       enabled = false,
       ingredients = {
@@ -422,14 +447,16 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-resistor", amount = 1 },
         { type = "item", name = "angels-solder", amount = 1 },
       },
-      results = {{ type = "item", name = "circuit-red-loaded", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-red-loaded", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       allow_decomposition = true,
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "circuit-green-loaded",
-      energy_required = 1.5,
+      energy_required = 1.5 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -438,13 +465,19 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-transistor", amount = 1 },
         { type = "item", name = "angels-solder", amount = 2 },
       },
-      results = {{ type = "item", name = "circuit-green-loaded", amount = 1 }},
+      results = {
+        {
+          type = "item",
+          name = "circuit-green-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "circuit-orange-loaded",
-      energy_required = 2,
+      energy_required = 2 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -454,13 +487,19 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-microchip", amount = 1 },
         { type = "item", name = "angels-solder", amount = 3 },
       },
-      results = {{ type = "item", name = "circuit-orange-loaded", amount = 1 }},
+      results = {
+        {
+          type = "item",
+          name = "circuit-orange-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "circuit-blue-loaded",
-      energy_required = 3.5,
+      energy_required = 3.5 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -471,13 +510,15 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-transformer", amount = 1 },
         { type = "item", name = "angels-solder", amount = 4 },
       },
-      results = {{ type = "item", name = "circuit-blue-loaded", amount = 1 }},
+      results = {
+        { type = "item", name = "circuit-blue-loaded", amount = 1 * angelsmods.industries.component_result_multiplier },
+      },
       icon_size = 32,
     },
     {
       type = "recipe",
       name = "circuit-yellow-loaded",
-      energy_required = 5,
+      energy_required = 5 * angelsmods.industries.component_crafting_time_multiplier,
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
@@ -489,7 +530,13 @@ if angelsmods.industries.components then
         { type = "item", name = "circuit-cpu", amount = 1 },
         { type = "item", name = "angels-solder", amount = 5 },
       },
-      results = {{ type = "item", name = "circuit-yellow-loaded", amount = 1 }},
+      results = {
+        {
+          type = "item",
+          name = "circuit-yellow-loaded",
+          amount = 1 * angelsmods.industries.component_result_multiplier,
+        },
+      },
       icon_size = 32,
     },
   })

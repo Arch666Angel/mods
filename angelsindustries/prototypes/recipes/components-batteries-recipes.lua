@@ -8,7 +8,7 @@ if angelsmods.industries.components then
       name = "battery-1",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 1,
+      energy_required = 1 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-1", amount = 1 },
@@ -17,7 +17,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-1", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-1", amount = 1 },
+        { type = "item", name = "battery-1", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -27,7 +27,7 @@ if angelsmods.industries.components then
       name = "battery-2",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 2,
+      energy_required = 2 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-2", amount = 1 },
@@ -36,7 +36,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-2", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-2", amount = 1 },
+        { type = "item", name = "battery-2", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -46,7 +46,7 @@ if angelsmods.industries.components then
       name = "battery-3",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 3,
+      energy_required = 3 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-3", amount = 1 },
@@ -55,7 +55,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-3", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-3", amount = 1 },
+        { type = "item", name = "battery-3", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -65,7 +65,7 @@ if angelsmods.industries.components then
       name = "battery-4",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 4,
+      energy_required = 4 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-4", amount = 1 },
@@ -74,7 +74,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-4", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-4", amount = 1 },
+        { type = "item", name = "battery-4", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -84,7 +84,7 @@ if angelsmods.industries.components then
       name = "battery-5",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 6,
+      energy_required = 6 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-5", amount = 1 },
@@ -93,7 +93,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-5", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-5", amount = 1 },
+        { type = "item", name = "battery-5", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -103,7 +103,7 @@ if angelsmods.industries.components then
       name = "battery-6",
       enabled = false,
       category = "crafting-with-fluid",
-      energy_required = 10,
+      energy_required = 10 * angelsmods.industries.component_crafting_time_multiplier,
       ingredients = {
         { type = "item", name = "battery-casing", amount = 1 },
         { type = "item", name = "battery-frame-6", amount = 1 },
@@ -112,7 +112,7 @@ if angelsmods.industries.components then
         { type = "fluid", name = "battery-electrolyte-6", amount = 10 },
       },
       results = {
-        { type = "item", name = "battery-6", amount = 1 },
+        { type = "item", name = "battery-6", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
       allow_decomposition = true,
       icon_size = 32,
@@ -128,6 +128,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-1",
+      subgroup = "angels-anodes",
+      order = "g",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -154,6 +156,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-1",
+      subgroup = "angels-batteries",
+      order = "g",
       enabled = false,
       category = "crafting",
       energy_required = 0.5,
@@ -232,6 +236,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-2",
+      subgroup = "angels-anodes",
+      order = "h",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -258,6 +264,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-2",
+      subgroup = "angels-batteries",
+      order = "h",
       enabled = false,
       category = "crafting-with-fluid",
       energy_required = 1,
@@ -378,6 +386,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-3",
+      subgroup = "angels-anodes",
+      order = "i",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -404,6 +414,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-3",
+      subgroup = "angels-batteries",
+      order = "i",
       enabled = false,
       category = "crafting-with-fluid",
       energy_required = 1.5,
@@ -483,6 +495,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-4",
+      subgroup = "angels-electrolytes",
+      order = "j",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -510,6 +524,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-4",
+      subgroup = "angels-cathodes",
+      order = "j",
       enabled = false,
       category = "advanced-crafting",
       energy_required = 2,
@@ -590,6 +606,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-5",
+      subgroup = "angels-electrolytes",
+      order = "k",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -616,6 +634,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-5",
+      subgroup = "angels-cathodes",
+      order = "k",
       enabled = false,
       category = "crafting-with-fluid",
       energy_required = 3,
@@ -697,6 +717,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-casing-6",
+      subgroup = "angels-electrolytes",
+      order = "l",
       enabled = false,
       category = "crafting",
       energy_required = 5,
@@ -723,6 +745,8 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "battery-frame-6",
+      subgroup = "angels-cathodes",
+      order = "l",
       enabled = false,
       category = "sintering-5",
       energy_required = 5,

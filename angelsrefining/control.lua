@@ -4,6 +4,8 @@ local ground_water_pump = require("src.ground_water_pump")
 local sea_pump = require("src.sea-pump")
 
 -- initialisation
+local on_configuration_changed = require("src.mod-config")
+script.on_configuration_changed(on_configuration_changed)
 script.on_init(function()
   starting_items:on_init()
   sea_pump:on_init()
