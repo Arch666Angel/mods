@@ -1,5 +1,5 @@
 from typing import Optional
-import os, shutil, sys, getopt
+import os, shutil, sys, getopt, re
 import json
 
 class ModBuilder:
@@ -36,13 +36,13 @@ class ModBuilder:
 
   def __deleteAllVersions(self, modName:str, deleteZip:bool=True) -> None:
     # deleting folders
-    folders = [folderName for folderName in next(os.walk(self.modFolderDir))[1] if folderName.find(modName) >= 0]
+    folders = [folderName for folderName in next(os.walk(self.modFolderDir))[1] if re.fullmatch(modName + '(_.*)?', folderName) is not None ]
     for folder in folders:
       print("    Removing '{0}/'".format(folder))
       shutil.rmtree(self.modFolderDir + folder)
 
     # deleting zip folders
-    folders = [folderName for folderName in os.listdir(self.modFolderDir) if deleteZip and folderName.find(modName) >= 0 ]
+    folders = [folderName for folderName in os.listdir(self.modFolderDir) if re.fullmatch(modName + '(_.*)?', folderName) is not None ]
     for folder in folders:
       print("    Removing '{0}'".format(folder))
       os.remove(self.modFolderDir + folder)

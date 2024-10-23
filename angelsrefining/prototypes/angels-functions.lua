@@ -1520,14 +1520,14 @@ function angelsmods.functions.unhide(entity)
     if to_remove then
       to_remove.hidden = false
       -- THIS DOES NOT RE-ENABLE THE BARRELING RECIPES FOR THIS FLUID!
-    end
 
-    -- actual entity if not not just an item
-    if to_remove.place_result == entity then
-      for _, type in pairs(building_types) do
-        to_remove = data.raw[type][entity] --entity-types...
-        if to_remove then
-          to_remove.hidden = false
+      -- actual entity if not not just an item
+      if to_remove.place_result == entity then
+        for _, type in pairs(building_types) do
+          to_remove = data.raw[type][entity] --entity-types...
+          if to_remove then
+            to_remove.hidden = false
+          end
         end
       end
     end
