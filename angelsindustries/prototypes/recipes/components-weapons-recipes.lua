@@ -161,7 +161,6 @@ if angelsmods.industries.components then
       results = {
         { type = "item", name = "weapon-5", amount = 1 * angelsmods.industries.component_result_multiplier },
       },
-      result = "weapon-5",
       icon_size = 32,
     },
     -----------------------------------------------------------------------------

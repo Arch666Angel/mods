@@ -11,7 +11,7 @@ if angelsmods.industries.tech then
         { type = "item", name = "circuit-grey", amount = 2 },
       },
       results = {
-        { name = "datacore-basic", amount = 2 },
+        { type = "item", name = "datacore-basic", amount = 2 },
       },
       icon_size = 32,
     },

@@ -79,7 +79,7 @@ if angelsmods.industries.components then
         name = "angels-casing-" .. metal .. "-1",
         category = category1,
         subgroup = "angels-" .. metal .. "-casting",
-        localised_name = { "recipe-name.casing", metal, num, "expendable" },
+        localised_name = { "recipe-name.casing", metal, ''..num, "expendable" },
         enabled = false,
         energy_required = 3 * num,
         ingredients = {
@@ -110,7 +110,7 @@ if angelsmods.industries.components then
         name = "angels-casing-" .. metal .. "-2",
         category = category2,
         subgroup = "angels-" .. metal .. "-casting",
-        localised_name = { "recipe-name.casing", metal, num, "reusable" },
+        localised_name = { "recipe-name.casing", metal, ''..num, "reusable" },
         enabled = false,
         energy_required = 2 * num,
         ingredients = {
