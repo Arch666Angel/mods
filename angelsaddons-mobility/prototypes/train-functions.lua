@@ -1,5 +1,6 @@
 require("util")
 
+---@alias Angels.Addons.Mobility.TrainType "crawlertrain"|"petrotrain"|"smeltingtrain"
 ---@alias Angels.Addons.Mobility.TrainPrototype data.LocomotivePrototype|data.FluidWagonPrototype|data.CargoWagonPrototype
 
 ---A mapping of supported equipment categories for use with locomotives and wagons.
@@ -68,17 +69,22 @@ local function get_unlock_recipe_effects(technology_name)
   return effects
 end
 
-local function set_type(name)
+---Gets the type of train from the given `name`.
+---@param prototype_name data.EntityID --The name of a train prototype.
+---@return Angels.Addons.Mobility.TrainType
+local function get_train_type(prototype_name)
+  ---@type Angels.Addons.Mobility.TrainType
   local train_type
-  if string.find(name, "crawler") then
-    train_type = "crawlertrain" --angelsmods.addons.mobility.crawlertrain
-  elseif string.find(name, "petro") then
-    train_type = "petrotrain" --angelsmods.addons.mobility.petrotrain
-  elseif string.find(name, "smelting") then
-    train_type = "smeltingtrain" --angelsmods.addons.mobility.smeltingtrain
+  if string.find(prototype_name, "crawler") then
+    train_type = "crawlertrain"
+  elseif string.find(prototype_name, "petro") then
+    train_type = "petrotrain"
+  elseif string.find(prototype_name, "smelting") then
+    train_type = "smeltingtrain"
   else
-    log("wrong train finding string for: " .. name)
+    log("(get_train_type) unknown TrainType for train with prototype name '" .. prototype_name .. "'.")
   end
+
   return train_type
 end
 
@@ -131,7 +137,7 @@ local function generate_additional_pastable_entities(prototype_name)
   local pastable_entities = {}
 
   for _, angel_train_base_name in pairs(angel_train_base_names) do
-    local num_tiers = angelsmods.addons.mobility[set_type(angel_train_base_name)].tier_amount
+    local num_tiers = angelsmods.addons.mobility[get_train_type(angel_train_base_name)].tier_amount
 
     if num_tiers > 1 then
       --Construct the train prototype names for the configured number of tiers.
@@ -233,7 +239,7 @@ end
 local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_name)
   local recipes = {}
 
-  local train_type = set_type(ref_recipe.name)
+  local train_type = get_train_type(ref_recipe.name)
   if angelsmods.addons.mobility[train_type].tier_amount > 1 then
     for i = 1, angelsmods.addons.mobility[train_type].tier_amount, 1 do
       ---@type data.RecipePrototype
@@ -305,7 +311,7 @@ local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_numb
 local function generate_train_items(ref_item)
   local items = {}
 
-  local train_type = set_type(ref_item.name)
+  local train_type = get_train_type(ref_item.name)
   if angelsmods.addons.mobility[train_type].tier_amount > 1 then
     for i = 1, angelsmods.addons.mobility[train_type].tier_amount, 1 do
       ---@type data.ItemWithEntityDataPrototype
@@ -344,7 +350,7 @@ local function generate_train_items(ref_item)
 local function generate_train_entities(ref_entity)
   local entities = {}
 
-  local train_type = set_type(ref_entity.name)
+  local train_type = get_train_type(ref_entity.name)
   if angelsmods.addons.mobility[train_type].tier_amount > 1 then
     if ref_entity.inventory_size then
       ref_entity.inventory_size = ref_entity.inventory_size / 1.5
@@ -406,7 +412,7 @@ end
 local function generate_train_technology(ref_technology, tiers)
   local technologies = {}
 
-  local train_type = set_type(ref_technology.name)
+  local train_type = get_train_type(ref_technology.name)
   if angelsmods.addons.mobility[train_type].tier_amount > 1 then
     for i = 1, angelsmods.addons.mobility[train_type].tier_amount, 1 do
       ---@type data.TechnologyPrototype
