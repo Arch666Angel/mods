@@ -291,11 +291,10 @@ local function generate_train_entities(item)
       elseif item.type == "fluid-wagon" then
         copy.capacity = math.floor(item.capacity * i)
       end
-      copy.additional_pasteable_entities = generate_additional_pastable_entities(copy.name)
-      table.insert(entries, copy)
+      copy.additional_pastable_entities = generate_additional_pastable_entities(copy.name)
     end
   else
-    item.additional_pasteable_entities = generate_additional_pastable_entities(item.name)
+    item.additional_pastable_entities = generate_additional_pastable_entities(item.name)
     table.insert(entries, item)
   end
 
