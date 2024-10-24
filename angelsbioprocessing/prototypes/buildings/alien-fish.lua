@@ -21,17 +21,18 @@ data:extend({
       },
     },
     autoplace = {
-      order = "xa",
+      --order = "xa",
       --max_probability = 0.025,
-      peaks = {
-        {
-          influence = 0.01,
-          min_influence = 0,
-          water_optimal = 0.625,
-          water_range = 0.125,
-          water_max_range = 0.125,
-        },
-      },
+      --peaks = {
+      --  {
+      --    influence = 0.01,
+      --    min_influence = 0,
+      --    water_optimal = 0.625,
+      --    water_range = 0.125,
+      --    water_max_range = 0.125,
+      --  },
+      --},
+      probability_expression = 0.01
     },
     protected_from_tile_building = false,
   },
@@ -57,17 +58,18 @@ data:extend({
       },
     },
     autoplace = {
-      order = "xb",
+      --order = "xb",
       --max_probability = 0.025,
-      peaks = {
-        {
-          influence = 0.01,
-          min_influence = 0,
-          water_optimal = 0.875,
-          water_range = 0.125,
-          water_max_range = 0.125,
-        },
-      },
+      --peaks = {
+      --  {
+      --    influence = 0.01,
+      --    min_influence = 0,
+      --    water_optimal = 0.875,
+      --    water_range = 0.125,
+      --    water_max_range = 0.125,
+      --  },
+      --},
+      probability_expression = 0.01
     },
     protected_from_tile_building = false,
   },
@@ -93,17 +95,18 @@ data:extend({
       },
     },
     autoplace = {
-      order = "xc",
+      --order = "xc",
       --max_probability = 0.025,
-      peaks = {
-        {
-          influence = 0.01,
-          min_influence = 0,
-          water_optimal = 0.250,
-          water_range = 0.250,
-          water_max_range = 0.250,
-        },
-      },
+      --peaks = {
+      --  {
+      --    influence = 0.01,
+      --    min_influence = 0,
+      --    water_optimal = 0.250,
+      --    water_range = 0.250,
+      --    water_max_range = 0.250,
+      --  },
+      --},
+      probability_expression = 0.01
     },
     protected_from_tile_building = false,
   },

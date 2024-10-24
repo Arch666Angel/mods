@@ -26,7 +26,7 @@ data:extend({
     icon_size = 48,
     flags = { "placeable-neutral", "player-creation" },
 
-    collision_mask = { "water-tile", "object-layer", "player-layer" },
+    collision_mask = {layers={object=true, train=true, is_object=true, is_lower_object=true}},
     collision_box = { { -0.45, -1.45 }, { 0.45, 0.45 } },
     tile_width = 1,
     tile_height = 1,
@@ -34,7 +34,8 @@ data:extend({
     fluid_box_tile_collision_test = {},
     adjacent_tile_collision_test = {},
     adjacent_tile_collision_mask = {},
-    adjacent_tile_collision_box = { { -45, -1.5 }, { 0.45, -0.5 } },
+    adjacent_tile_collision_box = { { -0.45, -1.5 }, { 0.45, -0.5 } },
+    fluid_source_offset = {0, -1},
     selection_box = { { -0.5, -1.5 }, { 0.5, 0.5 } },
 
     minable = { mining_time = 0.1, result = "ground-water-pump" },
@@ -54,11 +55,17 @@ data:extend({
       filter = "water",
       pipe_connections = {
         {
-          position = { 0, 1 },
-          type = "output",
+          position = { 0, 0.4 },
+          flow_direction = "output",
+          direction = defines.direction.north
         },
       },
     },
+    energy_source =
+    {
+      type = "void"
+    },
+    energy_usage = "60kW",
 
     resistances = {
       {
