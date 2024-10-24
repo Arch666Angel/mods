@@ -1,5 +1,7 @@
 require("util")
 
+---@alias Angels.Addons.Mobility.TrainPrototype data.LocomotivePrototype|data.FluidWagonPrototype|data.CargoWagonPrototype
+
 ---A mapping of supported equipment categories for use with locomotives and wagons.
 ---@class Angels.Addons.Mobility.EquipmentCategories
 ---@field locomotives data.EquipmentCategoryID[] Supported locomotive equipment categories.
@@ -245,60 +247,65 @@ local function generate_train_items(item)
     table.insert(entries, item)
   end
 
-  data:extend(entries)
-end
+---Generates a tiered train entity from the given reference `entity`.
+---@param ref_entity Angels.Addons.Mobility.TrainPrototype The entity prototype that defines the common base entity for all tiers.
+local function generate_train_entities(ref_entity)
+  local entities = {}
 
-local function generate_train_entities(item)
-  local entries = {}
-  local type = set_type(item.name)
-  if angelsmods.addons.mobility[type].tier_amount > 1 then
-    if item.inventory_size then
-      item.inventory_size = item.inventory_size / 1.5
+  local train_type = set_type(ref_entity.name)
+  if angelsmods.addons.mobility[train_type].tier_amount > 1 then
+    if ref_entity.inventory_size then
+      ref_entity.inventory_size = ref_entity.inventory_size / 1.5
     end
 
-    for i = 1, angelsmods.addons.mobility[type].tier_amount, 1 do
-      local copy = table.deepcopy(item)
-      local name = item.name
+    for i = 1, angelsmods.addons.mobility[train_type].tier_amount, 1 do
+      ---@type Angels.Addons.Mobility.TrainPrototype
+      local copy = table.deepcopy(ref_entity)
+      local name = ref_entity.name
+
       if i > 1 then
         name = name .. "-" .. i
       end
+
       local multiplier = math.pow(1.25, i - 1)
 
       copy.name = name
-      copy.localised_name = { "", { "entity-name." .. item.name }, " MK" .. i }
-      copy.icons = item.icons
-        or {
+      copy.localised_name = { "", { "entity-name." .. ref_entity.name }, " MK" .. i }
+      copy.icons = ref_entity.icons or {
           {
-            icon = item.icon,
-            icon_size = item.icon_size,
+          icon = ref_entity.icon,
+          icon_size = ref_entity.icon_size,
           },
         }
       copy.icon = nil
       copy.icon_size = nil
-      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
+      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
       copy.minable.result = name
-      copy.max_health = item.max_health * multiplier
-      copy.max_speed = item.max_speed * multiplier
-      copy.friction_force = item.friction_force / multiplier
-      copy.air_resistance = item.air_resistance / multiplier
-      copy.weight = item.weight * multiplier
-      copy.braking_force = item.braking_force * (multiplier * 2 - 1)
-      if item.type == "locomotive" then
-        copy.max_power = (tonumber(item.max_power:match("%d[%d.]*")) * multiplier) .. "kW"
-        copy.reversing_power_modifier = item.reversing_power_modifier * multiplier
-      elseif item.type == "cargo-wagon" then
-        copy.inventory_size = math.floor(item.inventory_size * (multiplier * 1.5))
-      elseif item.type == "fluid-wagon" then
-        copy.capacity = math.floor(item.capacity * i)
+      copy.max_health = ref_entity.max_health * multiplier
+      copy.max_speed = ref_entity.max_speed * multiplier
+      copy.friction_force = ref_entity.friction_force / multiplier
+      copy.air_resistance = ref_entity.air_resistance / multiplier
+      copy.weight = ref_entity.weight * multiplier
+      copy.braking_force = ref_entity.braking_force * (multiplier * 2 - 1)
+
+      if ref_entity.type == "locomotive" then
+        copy.max_power = (tonumber(ref_entity.max_power:match("%d[%d.]*")) * multiplier) .. "kW"
+        copy.reversing_power_modifier = ref_entity.reversing_power_modifier * multiplier
+      elseif ref_entity.type == "cargo-wagon" then
+        copy.inventory_size = math.floor(ref_entity.inventory_size * (multiplier * 1.5))
+      elseif ref_entity.type == "fluid-wagon" then
+        copy.capacity = math.floor(ref_entity.capacity * i)
       end
+
       copy.additional_pastable_entities = generate_additional_pastable_entities(copy.name)
+      table.insert(entities, copy)
     end
   else
-    item.additional_pastable_entities = generate_additional_pastable_entities(item.name)
-    table.insert(entries, item)
+    ref_entity.additional_pastable_entities = generate_additional_pastable_entities(ref_entity.name)
+    table.insert(entities, ref_entity)
   end
 
-  data:extend(entries)
+  data:extend(entities)
 end
 
 local function get_unlocks(tech, base_effects)
