@@ -27,8 +27,9 @@ data:extend({
     walking_speed_modifier = 1.3,
     layer = 80,
     decorative_removal_probability = 1,
-    absorptions_per_second = pollution_absorption_per_second,
+    absorptions_per_second = {pollution = pollution_absorption_per_second},
     variants = {
+      transition = table.deepcopy(data.raw.tile["concrete"].variants.transition),
       main = {
         {
           picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-small.png",
