@@ -208,6 +208,7 @@ funcs.generate_train_entities({
     },
   },
   pictures = {
+    rotated = {
     layers = {
       {
         priority = "very-low",
@@ -265,6 +266,7 @@ funcs.generate_train_entities({
         line_length = 8,
         lines_per_file = 8,
         shift = { 0.5, -0.5 },
+        },
       },
     },
   },

@@ -118,6 +118,7 @@ funcs.generate_train_entities({
     },
   },
   pictures = {
+    rotated = {
     priority = "very-low",
     width = 256,
     height = 256,
@@ -128,6 +129,7 @@ funcs.generate_train_entities({
     line_length = 8,
     lines_per_file = 8,
     shift = { 0, -0.75 },
+    },
   },
   wheels = standard_train_wheels,
   drive_over_tie_trigger = {
