@@ -512,6 +512,11 @@ local function update_equipment_grid(equipment_grid_name, categories_to_add, cat
   end
 end
 
+---Updates the equipment categories for the equipment with the given `equipment_name` and
+---`equipment_type` with the provided `categories_to_add`
+---@param equipment_type string --The type of the equipment prototype.
+---@param equipment_name data.EquipmentID --The name of the equipment prototype.
+---@param categories_to_add data.EquipmentCategoryID[]|data.EquipmentCategoryID --The equipment categories to add.
 local function update_equipment(equipment_type, equipment_name, categories_to_add)
   if type(categories_to_add) == "table" then
     for _, category_to_add in pairs(categories_to_add) do
@@ -519,17 +524,22 @@ local function update_equipment(equipment_type, equipment_name, categories_to_ad
     end
   end
 
+  -- Ensure the equipment exists.
   if not data.raw[equipment_type] then
     return
   end
   if not data.raw[equipment_type][equipment_name] then
     return
   end
+
+  -- Ensure the category exists.
   if not data.raw["equipment-category"][categories_to_add] then
     return
   end
 
+  -- Ensure the categories table exists on the equipment prototype.
   if data.raw[equipment_type][equipment_name].categories then
+    -- Check if the category has already been assigned.
     for _, category in pairs(data.raw[equipment_type][equipment_name].categories) do
       if category == categories_to_add then
         return
@@ -539,6 +549,7 @@ local function update_equipment(equipment_type, equipment_name, categories_to_ad
     data.raw[equipment_type][equipment_name].categories = {}
   end
 
+  -- Assign the category to the equipment.
   table.insert(data.raw[equipment_type][equipment_name].categories, categories_to_add)
 end
 
