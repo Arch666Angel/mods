@@ -183,7 +183,7 @@ funcs.generate_train_entities({
     shift = { 0.0, -0.75 },
     },
   },
-  wheels = standard_train_wheels,
+  wheels = funcs.standard_train_wheels,
   stop_trigger = {
     -- left side
     {

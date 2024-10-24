@@ -270,7 +270,7 @@ funcs.generate_train_entities({
       },
     },
   },
-  wheels = standard_train_wheels,
+  wheels = funcs.standard_train_wheels,
   stop_trigger = {
     -- front left side
     {

@@ -99,15 +99,15 @@ local function append_speed_cap_to_train_locale_description(train_prototype)
   if train_prototype.localised_description then
     if type(train_prototype.localised_description) == "string" then
       train_prototype.localised_description = { "", train_prototype.localised_description }
-          end
+    end
 
     -- Append the speed cap on a new line below the existing description.
     table.insert(train_prototype.localised_description, "\n")
     table.insert(train_prototype.localised_description, { "speed-text.speed-cap", speed_cap })
   else
     train_prototype.localised_description = { "speed-text.speed-cap", speed_cap }
-        end
-      end
+  end
+end
 
 ---Appends the speed cap to the `localised_description` of all cargo, fluid, and artillery wagons.
 local function add_speed_cap_to_trains_locale_descriptions()
@@ -124,18 +124,18 @@ end
 ---
 ---The first tier is just the base name; otherwise, it is the base name suffixed with `-#`.
 local angel_train_base_names = {
-    "crawler-locomotive",
-    "crawler-locomotive-wagon",
-    "crawler-wagon",
-    "crawler-bot-wagon",
+  "crawler-locomotive",
+  "crawler-locomotive-wagon",
+  "crawler-wagon",
+  "crawler-bot-wagon",
 
-    "petro-locomotive-1",
-    "petro-tank1",
-    "petro-tank2",
+  "petro-locomotive-1",
+  "petro-tank1",
+  "petro-tank2",
 
-    "smelting-locomotive-1",
-    "smelting-locomotive-tender",
-    "smelting-wagon-1",
+  "smelting-locomotive-1",
+  "smelting-locomotive-tender",
+  "smelting-wagon-1",
 }
 
 ---Generates the [`additional_pastable_entities`](https://lua-api.factorio.com/latest/prototypes/EntityPrototype.html#additional_pastable_entities)
@@ -283,9 +283,9 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
 
       table.insert(recipes, copy)
 
-        if i > 1 then
+      if i > 1 then
         technology_name = technology_name .. "-" .. i
-        end
+      end
 
       add_recipe_unlock(technology_name, recipe_name)
     end
@@ -300,23 +300,23 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
 end
 
 local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_number_icon_layer
-  or function(icon_layers, number_tier, number_tint)
-    local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
+    or function(icon_layers, number_tier, number_tint)
+      local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
       local new_icon_layers = table.deepcopy(icon_layers)
-    table.insert(new_icon_layers, {
-      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
-      icon_size = 64,
-      tint = { 0, 0, 0, 255 },
-      scale = 0.5 * icon_size_scale,
-    })
-    table.insert(new_icon_layers, {
-      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
-      icon_size = 64,
-      tint = number_tint,
-      scale = 0.5 * icon_size_scale,
-    })
-    return new_icon_layers
-  end
+      table.insert(new_icon_layers, {
+        icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
+        icon_size = 64,
+        tint = { 0, 0, 0, 255 },
+        scale = 0.5 * icon_size_scale,
+      })
+      table.insert(new_icon_layers, {
+        icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
+        icon_size = 64,
+        tint = number_tint,
+        scale = 0.5 * icon_size_scale,
+      })
+      return new_icon_layers
+    end
 
 ---Generates a tiered train item from the given `ref_item`.
 ---@param ref_item data.ItemWithEntityDataPrototype The item prototype that defines the common base item for all tiers.
@@ -340,11 +340,11 @@ local function generate_train_items(ref_item)
       copy.localised_description = { "item-description." .. ref_item.name }
       copy.place_result = name
       copy.icons = ref_item.icons or {
-          {
+        {
           icon = ref_item.icon,
           icon_size = ref_item.icon_size,
-          },
-        }
+        },
+      }
       copy.icon = nil
       copy.icon_size = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
@@ -355,7 +355,7 @@ local function generate_train_items(ref_item)
   end
 
   data:extend(items)
-  end
+end
 
 ---Generates a tiered train entity from the given reference `entity`.
 ---@param ref_entity Angels.Addons.Mobility.TrainPrototype The entity prototype that defines the common base entity for all tiers.
@@ -382,11 +382,11 @@ local function generate_train_entities(ref_entity)
       copy.name = name
       copy.localised_name = { "", { "entity-name." .. ref_entity.name }, " MK" .. i }
       copy.icons = ref_entity.icons or {
-          {
+        {
           icon = ref_entity.icon,
           icon_size = ref_entity.icon_size,
-          },
-        }
+        },
+      }
       copy.icon = nil
       copy.icon_size = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
@@ -553,7 +553,30 @@ local function update_equipment(equipment_type, equipment_name, categories_to_ad
   table.insert(data.raw[equipment_type][equipment_name].categories, categories_to_add)
 end
 
+---@type data.RollingStockRotatedSlopedGraphics
+local standard_train_wheels = {
+  rotated = util.sprite_load("__base__/graphics/entity/train-wheel/train-wheel", {
+    priority = "very-low",
+    direction_count = 256,
+    scale = 0.5,
+    shift = util.by_pixel(0, 8),
+    usage = "train",
+  }),
+}
+
+if mods["elevated-rails"] then
+  standard_train_wheels.sloped = util.sprite_load("__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped", {
+    priority = "very-low",
+    direction_count = 160,
+    scale = 0.5,
+    shift = util.by_pixel(0, 8),
+    usage = "train",
+  })
+  standard_train_wheels.slope_angle_between_frames = 1.25
+end
+
 return {
+  standard_train_wheels = standard_train_wheels,
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
   generate_train_recipe = generate_train_recipe,
