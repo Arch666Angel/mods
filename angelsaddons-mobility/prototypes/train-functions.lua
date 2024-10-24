@@ -215,36 +215,43 @@ local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_numb
     return new_icon_layers
   end
 
-local function generate_train_items(item)
-  local entries = {}
-  local type = set_type(item.name)
-  if angelsmods.addons.mobility[type].tier_amount > 1 then
-    for i = 1, angelsmods.addons.mobility[type].tier_amount, 1 do
-      local copy = table.deepcopy(item)
-      local name = item.name
+---Generates a tiered train item from the given `ref_item`.
+---@param ref_item data.ItemWithEntityDataPrototype The item prototype that defines the common base item for all tiers.
+local function generate_train_items(ref_item)
+  local items = {}
+
+  local train_type = set_type(ref_item.name)
+  if angelsmods.addons.mobility[train_type].tier_amount > 1 then
+    for i = 1, angelsmods.addons.mobility[train_type].tier_amount, 1 do
+      ---@type data.ItemWithEntityDataPrototype
+      local copy = table.deepcopy(ref_item)
+      local name = ref_item.name
+
       if i > 1 then
         name = name .. "-" .. i
       end
 
       copy.order = copy.order .. "-" .. i
       copy.name = name
-      copy.localised_name = { "", { "item-name." .. item.name }, " MK" .. i }
-      copy.localised_description = { "item-description." .. item.name }
+      copy.localised_name = { "", { "item-name." .. ref_item.name }, " MK" .. i }
+      copy.localised_description = { "item-description." .. ref_item.name }
       copy.place_result = name
-      copy.icons = item.icons
-        or {
+      copy.icons = ref_item.icons or {
           {
-            icon = item.icon,
-            icon_size = item.icon_size,
+          icon = ref_item.icon,
+          icon_size = ref_item.icon_size,
           },
         }
       copy.icon = nil
       copy.icon_size = nil
-      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[type].number_tint)
-      table.insert(entries, copy)
+      copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
+      table.insert(items, copy)
     end
   else
-    table.insert(entries, item)
+    table.insert(items, ref_item)
+  end
+
+  data:extend(items)
   end
 
 ---Generates a tiered train entity from the given reference `entity`.
