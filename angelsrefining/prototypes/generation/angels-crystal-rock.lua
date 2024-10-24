@@ -28,6 +28,7 @@ data:extend({
         percent = 100,
       },
     },
+    --[[ TODO: Fix autoplace
     autoplace = {
       order = "a[doodad]-c[angels-crystal-rock]",
       max_probability = 0.05,
@@ -44,6 +45,7 @@ data:extend({
         },
       },
     },
+    ]]--
     pictures = {
       {
         filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-1.png",
