@@ -1,7 +1,7 @@
 local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_representation
 local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
 
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
 
 data:extend({
   {

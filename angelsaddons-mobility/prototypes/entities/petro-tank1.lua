@@ -1,7 +1,7 @@
 local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].minimap_representation
 local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
 
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
 
 local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
 local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
