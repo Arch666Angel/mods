@@ -53,9 +53,11 @@ local function add_speed_locale()
   end
 end
 
-local function generate_additional_pastable_entities(name)
-  local all_entity_names = {}
-  for _, entity_type_name in pairs({
+---A list of root Angel train prototype names, to which a tier may be appended to obtain a specific
+---train prototype name.
+---
+---The first tier is just the base name; otherwise, it is the base name suffixed with `-#`.
+local angel_train_base_names = {
     "crawler-locomotive",
     "crawler-locomotive-wagon",
     "crawler-wagon",
@@ -68,32 +70,51 @@ local function generate_additional_pastable_entities(name)
     "smelting-locomotive-1",
     "smelting-locomotive-tender",
     "smelting-wagon-1",
-  }) do
-    local entity_type_tiers = angelsmods.addons.mobility[set_type(entity_type_name)].tier_amount
-    if entity_type_tiers > 1 then
-      for entity_tier = 1, entity_type_tiers, 1 do
-        local entity_name = entity_type_name
-        if entity_tier > 1 then
-          entity_name = entity_name .. "-" .. entity_tier
+}
+
+---Generates the [`additional_pastable_entities`](https://lua-api.factorio.com/latest/prototypes/EntityPrototype.html#additional_pastable_entities)
+---for the train prototype with the given `prototype_name`, allowing this mod to receive the
+---`on_entity_settings_pasted` event and handle the copying between types directly.
+---@param prototype_name data.EntityID --The name of a train prototype.
+---@return data.EntityID[]?
+local function generate_additional_pastable_entities(prototype_name)
+  ---A list of all Angel train prototype names that support copy/paste operations.
+  ---@type data.EntityID[]
+  local pastable_entities = {}
+
+  for _, angel_train_base_name in pairs(angel_train_base_names) do
+    local num_tiers = angelsmods.addons.mobility[set_type(angel_train_base_name)].tier_amount
+
+    if num_tiers > 1 then
+      --Construct the train prototype names for the configured number of tiers.
+      for tier = 1, num_tiers, 1 do
+        local entity_name = angel_train_base_name
+
+        if tier > 1 then
+          entity_name = entity_name .. "-" .. tier
         end
-        if name ~= entity_name then
-          table.insert(all_entity_names, entity_name)
-        end
+
+        table.insert(pastable_entities, entity_name)
       end
     end
   end
 
-  local valid_name = false
-  local pastable_entities = {}
-  for _, entity_name in pairs(all_entity_names) do
-    if entity_name == name then
-      valid_name = true
+  ---`true` if `prototype_name` is a member of `pastable_entities`.
+  local is_prototype_compatible = false
+
+  ---A list of all Angel train prototype names that support copy/paste operations, excluding `prototype_name`
+  ---@type data.EntityID[]
+  local additional_pastable_entities = {}
+
+  for _, pastable_entity in pairs(pastable_entities) do
+    if pastable_entity == prototype_name then
+      is_prototype_compatible = true
     else
-      table.insert(pastable_entities, entity_name)
+      table.insert(additional_pastable_entities, pastable_entity)
     end
   end
 
-  return valid_name and pastable or nil
+  return is_prototype_compatible and additional_pastable_entities or nil
 end
 
 local function generate_tiered_ingredients(tier, ingredients)
