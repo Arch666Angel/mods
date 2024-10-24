@@ -83,8 +83,9 @@ funcs.generate_train_entities({
       percent = 20,
     },
   },
-  burner = {
-    fuel_category = "chemical",
+  energy_source = {
+    type = "burner",
+    fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 3,
     smoke = {
@@ -170,17 +171,17 @@ funcs.generate_train_entities({
   },
   pictures = {
     rotated = {
-    priority = "very-low",
-    width = 256,
-    height = 256,
-    direction_count = 128,
-    filenames = {
-      "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-loco-1.png",
-      "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-loco-2.png",
-    },
-    line_length = 8,
-    lines_per_file = 8,
-    shift = { 0.0, -0.75 },
+      priority = "very-low",
+      width = 256,
+      height = 256,
+      direction_count = 128,
+      filenames = {
+        "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-loco-1.png",
+        "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-loco-2.png",
+      },
+      line_length = 8,
+      lines_per_file = 8,
+      shift = { 0.0, -0.75 },
     },
   },
   wheels = funcs.standard_train_wheels,
