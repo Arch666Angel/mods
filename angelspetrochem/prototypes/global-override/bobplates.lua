@@ -63,8 +63,8 @@ if mods["bobplates"] then
       },
     })
 
-    data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.base_area = 2000
-    data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.base_area = 1500
+    data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.volume = 200000
+    data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.volume = 150000
   end
   -- electrolysis -------------------------------------------------------------
   --move small tanks to fluid-control

@@ -97,14 +97,13 @@ local barreling_pump = {
     {
       production_type = "input",
       pipe_covers = pipecoverspictures(),
-      base_area = 10,
-      base_level = -1,
+      volume = 1000,
       pipe_connections = { { type = "input", position = { 0, 2 } } },
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
-      base_level = 1,
+      volume = 100,
       pipe_connections = { { type = "output", position = { 0, -2 } } },
     },
   },

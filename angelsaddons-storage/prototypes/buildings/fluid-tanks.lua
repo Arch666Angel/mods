@@ -23,7 +23,7 @@ if angelsmods.addons.storage.pressuretank then
       collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
       selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
       fluid_box = {
-        base_area = 3500,
+        volume = 35000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { position = { 0, -3 } },
@@ -128,7 +128,7 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
       selection_box = { { -1, -1 }, { 1, 1 } },
       two_direction_only = false,
       fluid_box = {
-        base_area = 200,
+        volume = 20000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
           { position = { 0.5, -1.5 } },

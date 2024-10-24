@@ -30,7 +30,7 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 10,
+      volume = 1000,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0, 1 } },
@@ -145,7 +145,7 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1,
+      volume = 100,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0, 1 }, type = "output" },
@@ -260,8 +260,7 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1,
-      base_level = 0.8,
+      volume = 80,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0, 1 }, type = "output" },
@@ -376,8 +375,7 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1,
-      base_level = -0.2,
+      volume = 20,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0, 1 }, type = "output" },
@@ -502,14 +500,13 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
+        volume = 1000,
         pipe_connections = { { type = "input", position = { 0, -1 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
+        volume = 100,
         pipe_connections = { { type = "output", position = { 0, 1 } } },
       },
     },

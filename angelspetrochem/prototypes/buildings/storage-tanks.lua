@@ -26,7 +26,7 @@ data:extend({
     drawing_box = { { -2.5, -3.25 }, { 2.5, 2.5 } },
     two_direction_only = false,
     fluid_box = {
-      base_area = 1250,
+      volume = 125000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0, -3 } },
@@ -171,7 +171,7 @@ data:extend({
     selection_box = { { -2, -2 }, { 2, 2 } },
     two_direction_only = true,
     fluid_box = {
-      base_area = 800,
+      volume = 80000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1.5, -2.5 } },
@@ -316,7 +316,7 @@ data:extend({
     drawing_box = { { -1, -1.9 }, { 1, 1 } },
     two_direction_only = false,
     fluid_box = {
-      base_area = 200,
+      volume = 20000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { 0.5, -1.5 } },

@@ -52,7 +52,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
+        volume = 100,
         pipe_connections = { { type = "output", position = { 0, 2 } } },
       },
     },

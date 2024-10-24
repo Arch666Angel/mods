@@ -510,7 +510,7 @@ data:extend({
       secondary_draw_order = 0,
       render_layer = "lower-object",
       pipe_covers = pipecoverspictures(),
-      base_area = 1,
+      volume = 100,
       pipe_connections = {
         { position = { -1.5, 1.0 } },
         { position = { 1.5, 1.0 } },

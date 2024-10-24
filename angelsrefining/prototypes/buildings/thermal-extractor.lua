@@ -38,8 +38,7 @@ data:extend({
       usage_priority = "secondary-input",
     },
     output_fluid_box = {
-      base_area = 5,
-      base_level = 1,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {
@@ -191,8 +190,7 @@ data:extend({
       usage_priority = "secondary-input",
     },
     output_fluid_box = {
-      base_area = 10,
-      base_level = 1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {

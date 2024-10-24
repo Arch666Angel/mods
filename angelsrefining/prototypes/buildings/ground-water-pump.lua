@@ -48,8 +48,7 @@ data:extend({
     always_draw_fluid = true,
     pumping_speed = 20 / 1200 * 60,
     fluid_box = {
-      base_area = 1,
-      base_level = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "water",

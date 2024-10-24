@@ -35,8 +35,7 @@ data:extend({
     collision_box = { { -1.4, -2.45 }, { 1.4, 0.3 } },
     selection_box = { { -1.6, -2.49 }, { 1.6, 0.49 } },
     fluid_box = {
-      base_area = 1,
-      base_level = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "water-viscous-mud",
