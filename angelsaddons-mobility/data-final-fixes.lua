@@ -48,4 +48,4 @@ for _, prototype_type in pairs({
   end
 end
 
-funcs.add_speed_locale()
+funcs.add_speed_cap_to_trains_locale_descriptions()

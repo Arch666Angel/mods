@@ -88,21 +88,33 @@ local function get_train_type(prototype_name)
   return train_type
 end
 
-local function add_speed_locale()
-  local parts = { "cargo-wagon", "fluid-wagon", "artillery-wagon" }
-  for _, part in pairs(parts) do
-    for _, train in pairs(data.raw[part]) do
-      if train then
-        if train.localised_description then --add to table
-          if type(train.localised_description) == "string" then
-            train.localised_description = { "", train.localised_description }
+---Appends the speed cap to the `localised_description` of the given `train` prototype.
+---@param train_prototype data.CargoWagonPrototype|data.FluidWagonPrototype|data.ArtilleryWagonPrototype
+local function append_speed_cap_to_train_locale_description(train_prototype)
+  if not train_prototype then return end
+
+  -- Convert the tile/tick speed to km/h, discarding any digits after the decimal.
+  local speed_cap = tostring(math.floor(train_prototype.max_speed * 216 * 100) / 100)
+
+  if train_prototype.localised_description then
+    if type(train_prototype.localised_description) == "string" then
+      train_prototype.localised_description = { "", train_prototype.localised_description }
           end
-          table.insert(train.localised_description, "\n") --ensure new line at start
-          table.insert(train.localised_description, { "speed-text.speed-cap", train.max_speed * 216 })
-        else -- add new table
-          train.localised_description = { "speed-text.speed-cap", math.floor(train.max_speed * 216 * 100) / 100 } --rounded tile/tick converted to km/h
+
+    -- Append the speed cap on a new line below the existing description.
+    table.insert(train_prototype.localised_description, "\n")
+    table.insert(train_prototype.localised_description, { "speed-text.speed-cap", speed_cap })
+  else
+    train_prototype.localised_description = { "speed-text.speed-cap", speed_cap }
         end
       end
+
+---Appends the speed cap to the `localised_description` of all cargo, fluid, and artillery wagons.
+local function add_speed_cap_to_trains_locale_descriptions()
+  local train_types = { "cargo-wagon", "fluid-wagon", "artillery-wagon" }
+  for _, train_type in pairs(train_types) do
+    for _, train_prototype in pairs(data.raw[train_type]) do
+      append_speed_cap_to_train_locale_description(train_prototype)
     end
   end
 end
@@ -537,5 +549,5 @@ return {
   generate_train_technology = generate_train_technology,
   update_equipment_grid = update_equipment_grid,
   update_equipment = update_equipment,
-  add_speed_locale = add_speed_locale,
+  add_speed_cap_to_trains_locale_descriptions = add_speed_cap_to_trains_locale_descriptions,
 }
