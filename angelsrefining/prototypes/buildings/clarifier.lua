@@ -52,15 +52,14 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, 3 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.north } },
       },
     },
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.01 * 60,
+      emissions_per_minute = {pollution = 0.6},
     },
     energy_usage = "30kW",
     animation = {
