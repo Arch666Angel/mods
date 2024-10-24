@@ -1,7 +1,7 @@
 local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].minimap_representation
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
 
 data:extend({
   {
@@ -84,55 +84,57 @@ funcs.generate_train_entities({
   back_light = {
     {
       minimum_darkness = 0.3,
-      color = {1, 0.1, 0.05, 0},
-      shift = {-0.6, 3.5},
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { -0.6, 3.5 },
       size = 2,
       intensity = 0.6,
-      add_perspective = true
+      add_perspective = true,
     },
     {
       minimum_darkness = 0.3,
-      color = {1, 0.1, 0.05, 0},
-      shift = {0.6, 3.5},
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { 0.6, 3.5 },
       size = 2,
       intensity = 0.6,
-      add_perspective = true
-    }
+      add_perspective = true,
+    },
   },
   stand_by_light = {
     {
       minimum_darkness = 0.3,
-      color = {0.05, 0.2, 1, 0},
-      shift = {-0.6, -3.5},
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { -0.6, -3.5 },
       size = 2,
       intensity = 0.5,
-      add_perspective = true
+      add_perspective = true,
     },
     {
       minimum_darkness = 0.3,
-      color = {0.05, 0.2, 1, 0},
-      shift = {0.6, -3.5},
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { 0.6, -3.5 },
       size = 2,
       intensity = 0.5,
-      add_perspective = true
-    }
+      add_perspective = true,
+    },
   },
   pictures = {
-    priority = "very-low",
-    width = 256,
-    height = 256,
-    direction_count = 64,
-    filenames = {
-      "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-wagon.png",
+    rotated = {
+      priority = "very-low",
+      width = 256,
+      height = 256,
+      direction_count = 64,
+      filenames = {
+        "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-wagon.png",
+      },
+      line_length = 8,
+      lines_per_file = 8,
+      shift = { 0, -0.75 },
     },
-    line_length = 8,
-    lines_per_file = 8,
-    shift = { 0, -0.75 },
   },
-  wheels = standard_train_wheels,
+  wheels = funcs.standard_train_wheels,
   drive_over_tie_trigger = {
     type = "play-sound",
-    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) } )
+    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) }),
   },
   tie_distance = 50,
   working_sound = {

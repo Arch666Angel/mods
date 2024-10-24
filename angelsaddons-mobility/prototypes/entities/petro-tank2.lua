@@ -1,7 +1,7 @@
 local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].minimap_representation
 local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
 
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
 
 local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
 local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
@@ -81,117 +81,119 @@ funcs.generate_train_entities({
   back_light = {
     {
       minimum_darkness = 0.3,
-      color = {1, 0.1, 0.05, 0},
-      shift = {-0.6, 3.5},
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { -0.6, 3.5 },
       size = 2,
       intensity = 0.6,
-      add_perspective = true
+      add_perspective = true,
     },
     {
       minimum_darkness = 0.3,
-      color = {1, 0.1, 0.05, 0},
-      shift = {0.6, 3.5},
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { 0.6, 3.5 },
       size = 2,
       intensity = 0.6,
-      add_perspective = true
-    }
+      add_perspective = true,
+    },
   },
   stand_by_light = {
     {
       minimum_darkness = 0.3,
-      color = {0.05, 0.2, 1, 0},
-      shift = {-0.6, -3.5},
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { -0.6, -3.5 },
       size = 2,
       intensity = 0.5,
-      add_perspective = true
+      add_perspective = true,
     },
     {
       minimum_darkness = 0.3,
-      color = {0.05, 0.2, 1, 0},
-      shift = {0.6, -3.5},
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { 0.6, -3.5 },
       size = 2,
       intensity = 0.5,
-      add_perspective = true
-    }
+      add_perspective = true,
+    },
   },
   pictures = {
-    layers = {
-      {
-        priority = "very-low",
-        width = 256,
-        height = 256,
-        direction_count = 64,
-        filenames = {
-          "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2.png",
+    rotated = {
+      layers = {
+        {
+          priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2.png",
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          shift = { 0, -0.75 },
         },
-        line_length = 8,
-        lines_per_file = 8,
-        shift = { 0, -0.75 },
-      },
-      {
-        priority = "very-low",
-        flags = { "mask" },
-        width = 256,
-        height = 256,
-        direction_count = 64,
-        filenames = {
-          "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
+        {
+          priority = "very-low",
+          flags = { "mask" },
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = true,
+          shift = { 0.0, -0.75 },
+          back_equals_front = true,
         },
-        line_length = 8,
-        lines_per_file = 8,
-        apply_runtime_tint = true,
-        shift = { 0.0, -0.75 },
-        back_equals_front = true,
-      },
-      {
-        priority = "very-low",
-        width = 256,
-        height = 256,
-        direction_count = 64,
-        filenames = {
-          "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
+        {
+          priority = "very-low",
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = fixed_tint,
+          shift = { 0.0, -0.75 },
+          back_equals_front = true,
         },
-        line_length = 8,
-        lines_per_file = 8,
-        apply_runtime_tint = false,
-        tint = fixed_tint,
-        shift = { 0.0, -0.75 },
-        back_equals_front = true,
-      },
-      {
-        priority = "very-low",
-        flags = { "mask" },
-        width = 256,
-        height = 256,
-        direction_count = 64,
-        filenames = {
-          "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint-2.png",
+        {
+          priority = "very-low",
+          flags = { "mask" },
+          width = 256,
+          height = 256,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint-2.png",
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          apply_runtime_tint = false,
+          tint = { r = 0.2, g = 0.2, b = 0.2, a = 10 / 255 },
+          shift = { 0.0, -0.75 },
+          back_equals_front = true,
         },
-        line_length = 8,
-        lines_per_file = 8,
-        apply_runtime_tint = false,
-        tint = { r = 0.2, g = 0.2, b = 0.2, a = 10 / 255 },
-        shift = { 0.0, -0.75 },
-        back_equals_front = true,
-      },
-      {
-        width = 256,
-        height = 256,
-        draw_as_shadow = true,
-        direction_count = 64,
-        filenames = {
-          "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-shadow.png",
+        {
+          width = 256,
+          height = 256,
+          draw_as_shadow = true,
+          direction_count = 64,
+          filenames = {
+            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-shadow.png",
+          },
+          line_length = 8,
+          lines_per_file = 8,
+          shift = { 0.0, -0.5 },
         },
-        line_length = 8,
-        lines_per_file = 8,
-        shift = { 0.0, -0.5 },
       },
     },
   },
-  wheels = standard_train_wheels,
+  wheels = funcs.standard_train_wheels,
   drive_over_tie_trigger = {
     type = "play-sound",
-    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) } )
+    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) }),
   },
   tie_distance = 50,
   working_sound = {

@@ -1,60 +1,68 @@
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
+
 if angelsmods.addons.mobility.smeltingtrain.enabled then
+  ---@type Angels.Addons.Mobility.TrainTechnologyTier[]
   local tiers = {
     {
-      count = 60,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
+      unit = {
+        count = 60,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+        },
+        time = 30,
       },
-      time = 30,
     },
     {
-      count = 100,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+        },
+        time = 30,
       },
-      time = 30,
+      prerequisites = { "speed-module", "efficiency-module" },
     },
     {
-      count = 100,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+        },
+        time = 30,
       },
-      time = 30,
+      prerequisites = { "speed-module-2", "efficiency-module-2", "low-density-structure", "electric-engine" },
     },
     {
-      count = 100,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+        },
+        time = 30,
       },
-      time = 30,
+      prerequisites = { "speed-module-3", "efficiency-module-3" },
     },
     {
-      count = 100,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+        },
+        time = 30,
       },
-      time = 30,
+      prerequisites = { "rocket-control-unit" },
     },
-  }
-
-  local extra_prereq = {
-    nil,
-    { "speed-module", "efficiency-module" },
-    { "speed-module-2", "efficiency-module-2", "low-density-structure", "electric-engine" },
-    { "speed-module-3", "efficiency-module-3" },
-    { "rocket-control-unit" },
   }
 
   funcs.generate_train_technology({
@@ -66,5 +74,5 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
       "railway",
     },
     order = "c-a",
-  }, tiers, extra_prereq)
+  }, tiers)
 end

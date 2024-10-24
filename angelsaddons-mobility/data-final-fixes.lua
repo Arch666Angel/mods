@@ -7,11 +7,13 @@ local wagons = {
   angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "petro-tank1-3" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "petro-tank1-4" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "petro-tank1-5" or nil,
+
   angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "petro-tank2" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "petro-tank2-2" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "petro-tank2-3" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "petro-tank2-4" or nil,
   angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "petro-tank2-5" or nil,
+
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 1 and "smelting-wagon-1" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 2 and "smelting-wagon-1-2" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 3 and "smelting-wagon-1-3" or nil,
@@ -48,4 +50,4 @@ for _, prototype_type in pairs({
   end
 end
 
-funcs.add_speed_locale()
+funcs.add_speed_cap_to_trains_locale_descriptions()
