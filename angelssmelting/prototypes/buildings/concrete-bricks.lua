@@ -136,7 +136,7 @@ data:extend({
     walking_sound = concrete_sounds,
     map_color={r=122, g=122, b=122},
     scorch_mark_color = {r = 0.373, g = 0.307, b = 0.243, a = 1.000},
-    pollution_absorption_per_second = 0,
+    absorptions_per_second = {pollution = 0},
 
     trigger_effect = tile_trigger_effects.tutorial_grid_trigger_effect(),
   },

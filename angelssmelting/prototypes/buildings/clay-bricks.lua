@@ -11,6 +11,7 @@ data:extend({
     layer = 60,
     decorative_removal_probability = 0.75,
     variants = {
+      transition = table.deepcopy(data.raw.tile["concrete"].variants.transition),
       main = {
         {
           picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-small.png",
@@ -76,7 +77,7 @@ data:extend({
       },
     },
     map_color = { r = 50, g = 50, b = 50 },
-    pollution_absorption_per_second = 0,
+    absorptions_per_second = {pollution = 0},
     --ageing=0,
     vehicle_friction_modifier = 1.1,
   },
