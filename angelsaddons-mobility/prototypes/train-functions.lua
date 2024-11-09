@@ -34,6 +34,8 @@ require("util")
 ---@type { [data.TechnologyID]: { [data.RecipeID] : boolean } }
 local technology_recipe_unlocks = {}
 
+local use_sloped_train_features = feature_flags.rail_bridges and (mods["elevated-rails"] and true or false)
+
 ---Adds the given `recipe_name` to the `technology_recipe_unlocks` dictionary, to be unlocked by the
 ---technology with the given `technology_name`.
 ---@param technology_name data.TechnologyID The name of a technology prototype that will unlock the recipe with the `recipe_name`.
@@ -579,6 +581,14 @@ if mods["elevated-rails"] then
 end
 
 return {
+  ---Indicates whether to use the sloped train features of the `RollingStockRotatedSlopedGraphicsSet`
+  ---prototype.
+  ---
+  ---`true` when the Rail Bridges feature flag and the `elevated-rails` mod are activated; otherwise,
+  ---`false`.
+  ---@type boolean
+  use_sloped_train_features = use_sloped_train_features,
+
   standard_train_wheels = standard_train_wheels,
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,
