@@ -2,23 +2,23 @@ local funcs = require("prototypes.train-functions")
 require("prototypes.tips-and-tricks.tips-and-tricks")
 
 local wagons = {
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "angels-petro-tank1" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "angels-petro-tank1-2" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "angels-petro-tank1-3" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "angels-petro-tank1-4" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "angels-petro-tank1-5" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "angels-petro-gas-wagon" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "angels-petro-gas-wagon-2" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "angels-petro-gas-wagon-3" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "angels-petro-gas-wagon-4" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "angels-petro-gas-wagon-5" or nil,
 
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "angels-petro-tank2" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "angels-petro-tank2-2" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "angels-petro-tank2-3" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "angels-petro-tank2-4" or nil,
-  angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "angels-petro-tank2-5" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 1 and "angels-petro-oil-wagon" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 2 and "angels-petro-oil-wagon-2" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 3 and "angels-petro-oil-wagon-3" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 4 and "angels-petro-oil-wagon-4" or nil,
+  angelsmods.addons.mobility.petrotrain.tier_amount >= 5 and "angels-petro-oil-wagon-5" or nil,
 
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 1 and "angels-smelting-wagon-1" or nil,
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 2 and "angels-smelting-wagon-1-2" or nil,
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 3 and "angels-smelting-wagon-1-3" or nil,
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 4 and "angels-smelting-wagon-1-4" or nil,
-  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 5 and "angels-smelting-wagon-1-5" or nil,
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 1 and "angels-smelting-cargo-wagon" or nil,
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 2 and "angels-smelting-cargo-wagon-2" or nil,
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 3 and "angels-smelting-cargo-wagon-3" or nil,
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 4 and "angels-smelting-cargo-wagon-4" or nil,
+  angelsmods.addons.mobility.smeltingtrain.tier_amount >= 5 and "angels-smelting-cargo-wagon-5" or nil,
 }
 
 for _, prototype_type in pairs({

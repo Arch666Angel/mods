@@ -19,19 +19,22 @@ angelsmods.addons.mobility.smeltingtrain.tier_amount = settings.startup["angels-
 angelsmods.addons.mobility.smeltingtrain.number_tint = { r = 1, g = 0.38, b = 0, a = 1 } --[[@as data.Color]]
 
 require("prototypes.categories")
+
 --CRAWLER
 require("prototypes.entities.crawler-locomotive")
-require("prototypes.entities.crawler-locomotive-wagon")
-require("prototypes.entities.crawler-wagon")
-require("prototypes.entities.crawler-bot-wagon")
+require("prototypes.entities.crawler-locomotive-tender")
+require("prototypes.entities.crawler-cargo-wagon")
+require("prototypes.entities.crawler-robot-wagon")
+
 --PETRO
 require("prototypes.entities.petro-locomotive")
-require("prototypes.entities.petro-tank1")
-require("prototypes.entities.petro-tank2")
+require("prototypes.entities.petro-gas-wagon")
+require("prototypes.entities.petro-oil-wagon")
+
 --SMELTING
 require("prototypes.entities.smelting-locomotive")
 require("prototypes.entities.smelting-locomotive-tender")
-require("prototypes.entities.smelting-wagon")
+require("prototypes.entities.smelting-cargo-wagon")
 
 require("prototypes.recipes.recipes")
 

@@ -7,7 +7,7 @@ local simulations = require("prototypes.factoriopedia-simulations")
 data:extend({
   {
     type = "equipment-grid",
-    name = "angels-crawler-loco-wagon",
+    name = "angels-crawler-locomotive-wagon",
     width = 6,
     height = 6,
     equipment_categories = { "angels-void" },
@@ -16,12 +16,12 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "angels-crawler-locomotive-wagon",
+  name = "angels-crawler-locomotive-tender",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-loco-wagon-ico.png",
   icon_size = 32,
   subgroup = "angels-vehicle-train-crawler",
   order = "b[locomotive-wagon]",
-  place_result = "angels-crawler-locomotive-wagon",
+  place_result = "angels-crawler-locomotive-tender",
   stack_size = 5,
 })
 
@@ -29,11 +29,11 @@ funcs.generate_train_items({
 ---@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "locomotive",
-  name = "angels-crawler-locomotive-wagon",
+  name = "angels-crawler-locomotive-tender",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-loco-wagon-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "angels-crawler-locomotive-wagon" },
+  minable = { mining_time = 1, result = "angels-crawler-locomotive-tender" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 2500,
   corpse = "medium-remnants",
@@ -56,8 +56,8 @@ funcs.generate_train_entities({
   connection_distance = 3,
   joint_distance = 4,
   energy_per_hit_point = 5,
-  equipment_grid = "angels-crawler-loco-wagon",
-  fast_replaceable_group = "angels-crawler-loco-wagon",
+  equipment_grid = "angels-crawler-locomotive-wagon",
+  fast_replaceable_group = "angels-crawler-locomotive-wagon",
   allow_robot_dispatch_in_automatic_mode = true,
   minimap_representation = minimap_representation,
   selected_minimap_representation = selected_minimap_representation,

@@ -3,7 +3,15 @@ Version: 2.0.0
 Date: ???
   Changes:
     - Updated for Factorio 2.0 (994)
-    - Added "angels-" prefix to all prototypes (1159)
+    - Added "angels-" prefix to all prototypes (1159), and revised train item, entity and recipe prototype names:
+      - smelting-locomotive-1(-#) -> angels-smelting-locomotive(-#)
+      - smelting-wagon-1(-#) -> angels-smelting-cargo-wagon(-#)
+      - petro-locomotive-1(-#) -> angels-petro-locomotive(-#)
+      - petro-tank1(-#) -> angels-petro-gas-wagon(-#)
+      - petro-tank2(-#) -> angels-petro-oil-wagon(-#)
+      - crawler-locomotive-wagon(-#) -> angels-crawler-locomotive-tender(-#)
+      - crawler-wagon(-#) -> angels-crawler-cargo-wagon(-#)
+      - crawler-bot-wagon(-#) -> angels-crawler-robot-wagon(-#)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 01.01.2023

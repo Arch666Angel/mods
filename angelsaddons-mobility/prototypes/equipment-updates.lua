@@ -67,12 +67,13 @@ if angelsmods.petrochem then
   local OV = angelsmods.functions.OV
   if angelsmods.addons.mobility.petrotrain.tier_amount > 1 then
     for i = 1, angelsmods.addons.mobility.petrotrain.tier_amount, 1 do
-      local tank1 = i == 1 and "angels-petro-tank1" or "petro-tank1-" .. i
-      local tank2 = i == 1 and "angels-petro-tank2" or "petro-tank2-" .. i
-      OV.modify_input(tank1, { type = "item", name = "angels-storage-tank-1", amount = "storage-tank" })
-      OV.modify_input(tank2, { type = "item", name = "angels-storage-tank-2", amount = "storage-tank" })
-      table.insert(updated_recipes, tank1)
-      table.insert(updated_recipes, tank2)
+      local gas_wagon = i == 1 and "angels-petro-gas-wagon" or "angels-petro-gas-wagon-" .. i
+      OV.modify_input(gas_wagon, { type = "item", name = "angels-storage-tank-1", amount = "storage-tank" })
+      table.insert(updated_recipes, gas_wagon)
+
+      local oil_wagon = i == 1 and "angels-petro-oil-wagon" or "angels-petro-oil-wagon-" .. i
+      OV.modify_input(oil_wagon, { type = "item", name = "angels-storage-tank-2", amount = "storage-tank" })
+      table.insert(updated_recipes, oil_wagon)
     end
   end
   OV.execute()
@@ -140,14 +141,14 @@ local train_equipment_grids = {
     "angels-smelting-locomotive",
     "angels-smelting-locomotive-tender",
     "angels-crawler-locomotive",
-    "angels-crawler-loco-wagon",
+    "angels-crawler-locomotive-tender",
   },
   wagons = {
-    "angels-petro-tank1",
-    "angels-petro-tank2",
-    "angels-smelting-wagon",
-    "angels-crawler-wagon",
-    "angels-crawler-bot-wagon",
+    "angels-petro-gas-wagon",
+    "angels-petro-oil-wagon",
+    "angels-smelting-cargo-wagon",
+    "angels-crawler-cargo-wagon",
+    "angels-crawler-robot-wagon",
   },
 }
 
@@ -177,13 +178,13 @@ for _, equipment_grid_name in pairs(train_equipment_grids.wagons) do
   end
 end
 
---NOTE "angels-crawler-bot-wagon" also needs the construction categories.
+--NOTE "angels-crawler-robot-wagon" also needs the construction categories.
 if mods["bobvehicleequipment"] then
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "cargo-wagon")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "cargo-wagon")
 else
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-basegame-construction")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "angels-basegame-construction")
 end
 
 if mods["angelsindustries"] then
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-construction")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "angels-construction")
 end

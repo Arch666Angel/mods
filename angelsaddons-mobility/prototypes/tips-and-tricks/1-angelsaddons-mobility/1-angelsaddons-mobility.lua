@@ -10,7 +10,7 @@ data:extend({
     name = "angelsaddons-mobility",
 
     is_title = true,
-    tag = "[entity=angels-crawler-locomotive-wagon]",
+    tag = "[entity=angels-crawler-locomotive-tender]",
     localised_name = { "tips-and-tricks-name.angelsaddons-mobility" },
     localised_description = require(
       "prototypes.tips-and-tricks.1-angelsaddons-mobility.1-angelsaddons-mobility-description"

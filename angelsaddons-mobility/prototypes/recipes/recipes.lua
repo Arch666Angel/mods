@@ -25,10 +25,10 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-crawler-locomotive-wagon",
+    name = "angels-crawler-locomotive-tender",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-crawler-locomotive-wagon", amount = 1 } },
+    results = { { type = "item", name = "angels-crawler-locomotive-tender", amount = 1 } },
   }, {
     { type = "item", name = "locomotive", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "engine-unit", amounts = { 25, "+5", 0, 0, 0 } },
@@ -47,10 +47,10 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-crawler-wagon",
+    name = "angels-crawler-cargo-wagon",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-crawler-wagon", amount = 1 } },
+    results = { { type = "item", name = "angels-crawler-cargo-wagon", amount = 1 } },
   }, {
     { type = "item", name = "cargo-wagon", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "electronic-circuit", amounts = { 15, 0, 0, 0, 0 } },
@@ -66,10 +66,10 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-crawler-bot-wagon",
+    name = "angels-crawler-robot-wagon",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-crawler-bot-wagon", amount = 1 } },
+    results = { { type = "item", name = "angels-crawler-robot-wagon", amount = 1 } },
   }, {
     { type = "item", name = "cargo-wagon", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "electronic-circuit", amounts = { 15, 0, 0, 0, 0 } },
@@ -91,10 +91,10 @@ end
 if angelsmods.addons.mobility.petrotrain.enabled then
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-petro-locomotive-1",
+    name = "angels-petro-locomotive",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-petro-locomotive-1", amount = 1 } },
+    results = { { type = "item", name = "angels-petro-locomotive", amount = 1 } },
   }, {
     { type = "item", name = "locomotive", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "engine-unit", amounts = { 25, "+5", 0, 0, 0 } },
@@ -110,10 +110,10 @@ if angelsmods.addons.mobility.petrotrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-petro-tank1",
+    name = "angels-petro-gas-wagon",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-petro-tank1", amount = 1 } },
+    results = { { type = "item", name = "angels-petro-gas-wagon", amount = 1 } },
   }, {
     { type = "item", name = "fluid-wagon", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "electronic-circuit", amounts = { 15, 0, 0, 0, 0 } },
@@ -128,10 +128,10 @@ if angelsmods.addons.mobility.petrotrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-petro-tank2",
+    name = "angels-petro-oil-wagon",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-petro-tank2", amount = 1 } },
+    results = { { type = "item", name = "angels-petro-oil-wagon", amount = 1 } },
   }, {
     { type = "item", name = "fluid-wagon", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "electronic-circuit", amounts = { 15, 0, 0, 0, 0 } },
@@ -149,10 +149,10 @@ end
 if angelsmods.addons.mobility.smeltingtrain.enabled then
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-smelting-locomotive-1",
+    name = "angels-smelting-locomotive",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-smelting-locomotive-1", amount = 1 } },
+    results = { { type = "item", name = "angels-smelting-locomotive", amount = 1 } },
   }, {
     { type = "item", name = "locomotive", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "engine-unit", amounts = { 25, "+5", 0, 0, 0 } },
@@ -190,10 +190,10 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
 
   funcs.generate_train_recipe({
     type = "recipe",
-    name = "angels-smelting-wagon-1",
+    name = "angels-smelting-cargo-wagon",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "angels-smelting-wagon-1", amount = 1 } },
+    results = { { type = "item", name = "angels-smelting-cargo-wagon", amount = 1 } },
   }, {
     { type = "item", name = "cargo-wagon", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "electronic-circuit", amounts = { 15, 0, 0, 0, 0 } },

@@ -13,23 +13,23 @@ local destination_entity_types = {
 local petro_tier_amount = settings.startup["angels-petrotrain-tier-amount"].value
 local smelting_tier_amount = settings.startup["angels-smeltingtrain-tier-amount"].value
 local wagons_to_copy = {
-  ["angels-petro-tank1"] = petro_tier_amount >= 1,
-  ["angels-petro-tank1-2"] = petro_tier_amount >= 2,
-  ["angels-petro-tank1-3"] = petro_tier_amount >= 3,
-  ["angels-petro-tank1-4"] = petro_tier_amount >= 4,
-  ["angels-petro-tank1-5"] = petro_tier_amount >= 5,
+  ["angels-petro-gas-wagon"] = petro_tier_amount >= 1,
+  ["angels-petro-gas-wagon-2"] = petro_tier_amount >= 2,
+  ["angels-petro-gas-wagon-3"] = petro_tier_amount >= 3,
+  ["angels-petro-gas-wagon-4"] = petro_tier_amount >= 4,
+  ["angels-petro-gas-wagon-5"] = petro_tier_amount >= 5,
 
-  ["angels-petro-tank2"] = petro_tier_amount >= 1,
-  ["angels-petro-tank2-2"] = petro_tier_amount >= 2,
-  ["angels-petro-tank2-3"] = petro_tier_amount >= 3,
-  ["angels-petro-tank2-4"] = petro_tier_amount >= 4,
-  ["angels-petro-tank2-5"] = petro_tier_amount >= 5,
+  ["angels-petro-oil-wagon"] = petro_tier_amount >= 1,
+  ["angels-petro-oil-wagon-2"] = petro_tier_amount >= 2,
+  ["angels-petro-oil-wagon-3"] = petro_tier_amount >= 3,
+  ["angels-petro-oil-wagon-4"] = petro_tier_amount >= 4,
+  ["angels-petro-oil-wagon-5"] = petro_tier_amount >= 5,
 
-  ["angels-smelting-wagon-1"] = smelting_tier_amount >= 1,
-  ["angels-smelting-wagon-1-2"] = smelting_tier_amount >= 2,
-  ["angels-smelting-wagon-1-3"] = smelting_tier_amount >= 3,
-  ["angels-smelting-wagon-1-4"] = smelting_tier_amount >= 4,
-  ["angels-smelting-wagon-1-5"] = smelting_tier_amount >= 5,
+  ["angels-smelting-cargo-wagon"] = smelting_tier_amount >= 1,
+  ["angels-smelting-cargo-wagon-2"] = smelting_tier_amount >= 2,
+  ["angels-smelting-cargo-wagon-3"] = smelting_tier_amount >= 3,
+  ["angels-smelting-cargo-wagon-4"] = smelting_tier_amount >= 4,
+  ["angels-smelting-cargo-wagon-5"] = smelting_tier_amount >= 5,
 }
 
 ---Copies and pastes the color from the source entity to the destination entity, if the source and
