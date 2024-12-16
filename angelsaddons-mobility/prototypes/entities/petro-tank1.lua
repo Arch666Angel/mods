@@ -5,7 +5,6 @@ local funcs = require("prototypes.train-functions")
 local simulations = require("prototypes.factoriopedia-simulations")
 
 local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
-local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
 
 data:extend({
   {
@@ -28,6 +27,8 @@ funcs.generate_train_items({
   stack_size = 5,
 })
 
+--- braking_force OR braking_power, but diagnostics wants both to be compliant.
+---@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "fluid-wagon",
   name = "angels-petro-tank1",
@@ -43,7 +44,7 @@ funcs.generate_train_entities({
   factoriopedia_simulation = simulations.factoriopedia_petro_tank1,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
-  color = tintable_tint,
+  color = funcs.default_train_colors.petro,
   vertical_selection_shift = -0.796875,
   weight = 1000,
   max_speed = 1.5,

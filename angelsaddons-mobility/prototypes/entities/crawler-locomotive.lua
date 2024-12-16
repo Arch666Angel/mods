@@ -25,6 +25,8 @@ funcs.generate_train_items({
   stack_size = 5,
 })
 
+--- braking_force OR braking_power, but diagnostics wants both to be compliant.
+---@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "locomotive",
   name = "angels-crawler-locomotive",
@@ -42,7 +44,7 @@ funcs.generate_train_entities({
   drawing_box = { { -1, -4 }, { 1, 3 } },
   allow_manual_color = true,
   allow_remote_driving = true,
-  color = { r = 0.92, g = 0.07, b = 0, a = 0.5 },
+  color = funcs.default_train_colors.crawler,
   weight = 3000,
   max_speed = 1.2 * 300 / 259,
   max_power = "800kW",

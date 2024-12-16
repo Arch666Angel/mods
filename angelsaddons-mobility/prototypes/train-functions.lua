@@ -580,6 +580,18 @@ if mods["elevated-rails"] then
   standard_train_wheels.slope_angle_between_frames = 1.25
 end
 
+---@class Angels.Addons.Mobility.TrainColors
+---@field petro data.Color
+---@field crawler data.Color
+---@field smelting data.Color
+
+---@type Angels.Addons.Mobility.TrainColors
+local train_colors = {
+  petro = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 1 },
+  crawler = { r = 0.92, g = 0.07, b = 0, a = 1 },
+  smelting = { r = 1, g = 0.38, b = 0.0, a = 1 },
+}
+
 return {
   ---Indicates whether to use the sloped train features of the `RollingStockRotatedSlopedGraphicsSet`
   ---prototype.
@@ -588,6 +600,8 @@ return {
   ---`false`.
   ---@type boolean
   use_sloped_train_features = use_sloped_train_features,
+
+  default_train_colors = train_colors,
 
   standard_train_wheels = standard_train_wheels,
   generate_train_entities = generate_train_entities,

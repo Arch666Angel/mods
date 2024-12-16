@@ -46,17 +46,7 @@ local on_entity_settings_pasted = function(event)
       (source_entity_types[destination.type] and destination_entity_types[source.type])
 
   if is_valid_source and is_valid_destination then
-    local source_color = source.color or source.prototype.color
-    if source_color then
-      local destination_color = destination.color or destination.prototype.color
-
-      destination.color = {
-        r = source_color.r,
-        g = source_color.g,
-        b = source_color.b,
-        a = destination_color and destination_color.a or 1, -- keep alpha color
-      }
-    end
+    destination.color = source.color or source.prototype.color
   end
 end
 

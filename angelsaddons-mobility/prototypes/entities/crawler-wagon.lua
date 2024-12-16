@@ -25,6 +25,8 @@ funcs.generate_train_items({
   stack_size = 5,
 })
 
+--- braking_force OR braking_power, but diagnostics wants both to be compliant.
+---@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "cargo-wagon",
   name = "angels-crawler-wagon",
@@ -40,7 +42,7 @@ funcs.generate_train_entities({
   factoriopedia_simulation = simulations.factoriopedia_crawler_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
-  color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
+  color = funcs.default_train_colors.crawler,
   allow_manual_color = true,
   vertical_selection_shift = -0.796875,
   weight = 1500,
