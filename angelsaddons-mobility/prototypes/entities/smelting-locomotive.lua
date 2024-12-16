@@ -59,6 +59,7 @@ funcs.generate_train_entities({
   minimap_representation = minimap_representation,
   selected_minimap_representation = selected_minimap_representation,
   allow_manual_color = true,
+  allow_remote_driving = true,
   color = tintable_tint,
   resistances = {
     {
