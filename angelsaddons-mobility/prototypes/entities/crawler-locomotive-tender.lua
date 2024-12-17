@@ -189,7 +189,7 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-wagon/crawler-locomotive-wagon", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-tender/crawler-locomotive-tender", {
           dice = 4,
           priority = "very-low",
           allow_low_quality_rotation = true,
@@ -197,7 +197,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-wagon/crawler-locomotive-wagon-shadow", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-tender/crawler-locomotive-tender-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -212,14 +212,14 @@ funcs.generate_train_entities({
     slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-wagon/crawler-locomotive-wagon-sloped", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-tender/crawler-locomotive-tender-sloped", {
           dice = 4,
           priority = "very-low",
           direction_count = 160,
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-wagon/crawler-locomotive-wagon-sloped-shadow", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-locomotive-tender/crawler-locomotive-tender-sloped-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },

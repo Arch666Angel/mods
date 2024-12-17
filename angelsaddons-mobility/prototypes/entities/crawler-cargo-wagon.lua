@@ -124,7 +124,7 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon", {
           dice = 4,
           priority = "very-low",
           allow_low_quality_rotation = true,
@@ -133,7 +133,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-shadow", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -149,14 +149,14 @@ funcs.generate_train_entities({
     slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-sloped", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-sloped", {
           dice = 4,
           priority = "very-low",
           direction_count = 160,
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-sloped-shadow", {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-sloped-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -170,12 +170,12 @@ funcs.generate_train_entities({
   },
   horizontal_doors = {
     layers = {
-      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-door-horizontal", {
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-horizontal", {
         frame_count = 8,
         scale = 0.5,
         usage = "train",
       }),
-      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-door-horizontal-shadow", {
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-horizontal-shadow", {
         flags = { "shadow" },
         draw_as_shadow = true,
         frame_count = 8,
@@ -186,12 +186,12 @@ funcs.generate_train_entities({
   },
   vertical_doors = {
     layers = {
-      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-door-vertical", {
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-vertical", {
         frame_count = 8,
         scale = 0.5,
         usage = "train",
       }),
-      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-wagon/crawler-wagon-door-vertical-shadow", {
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-vertical-shadow", {
         flags = { "shadow" },
         draw_as_shadow = true,
         frame_count = 8,
