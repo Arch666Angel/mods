@@ -46,7 +46,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
 
     OV.patch_recipes({
       {
-        name = "quartz-glass",
+        name = "bob-glass",
         energy_required = 10.5,
         ingredients = {
           { name = "quartz", type = "item", amount = "+3" },

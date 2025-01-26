@@ -110,13 +110,13 @@ else
 
   if mods["bobores"] then
     angelsmods.functions.hide({
-      "gem-ore",
-      "ruby-ore",
-      "sapphire-ore",
-      "emerald-ore",
-      "amethyst-ore",
-      "topaz-ore",
-      "diamond-ore",
+      "bob-gem-ore",
+      "bob-ruby-ore",
+      "bob-sapphire-ore",
+      "bob-emerald-ore",
+      "bob-amethyst-ore",
+      "bob-topaz-ore",
+      "bob-diamond-ore",
     })
   end
 end

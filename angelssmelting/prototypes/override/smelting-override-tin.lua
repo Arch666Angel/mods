@@ -62,15 +62,15 @@ if angelsmods.trigger.smelting_products["tin"].plate then
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-tin", "tin-plate")
+    OV.global_replace_item("angels-plate-tin", "bob-tin-plate")
     angelsmods.functions.hide("angels-plate-tin")
-    angelsmods.functions.move_item("tin-plate", "angels-tin-casting", "i")
-    data.raw["item"]["tin-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
-    data.raw["item"]["tin-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-tin-plate", "angels-tin-casting", "i")
+    data.raw["item"]["bob-tin-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
+    data.raw["item"]["bob-tin-plate"].icon_size = 32
 
     OV.patch_recipes({
       {
-        name = "tin-plate",
+        name = "bob-tin-plate",
         energy_required = 10.5,
         enabled = false,
         hidden = true,
@@ -78,7 +78,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
           { name = "tin-ore", type = "item", amount = "+3" },
         },
         results = {
-          { name = "tin-plate", type = "item", amount = "+2" },
+          { name = "bob-tin-plate", type = "item", amount = "+2" },
         },
         icons = {
           {
@@ -95,7 +95,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
         order = "i[angels-plate-tin]-b",
       },
     })
-    OV.remove_unlock("ore-crushing", "tin-plate")
+    OV.remove_unlock("ore-crushing", "bob-tin-plate")
   end
 else
   angelsmods.functions.hide("angels-plate-tin")

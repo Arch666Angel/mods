@@ -43,9 +43,9 @@ if mods["bobmining"] then
         },
       },
     })
-    OV.add_prereq("bob-drills-2", "invar-processing")
+    OV.add_prereq("bob-drills-2", "bob-invar-processing")
     OV.remove_prereq("bob-drills-2", "cobalt-processing")
-    OV.add_prereq("bob-area-drills-2", "invar-processing")
+    OV.add_prereq("bob-area-drills-2", "bob-invar-processing")
     OV.remove_prereq("bob-area-drills-2", "cobalt-processing")
   end
 end

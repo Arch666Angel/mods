@@ -49,18 +49,18 @@ if mods["bobplates"] then
   end
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
-    data.raw.item["empty-canister"].subgroup = "angels-fluid-control"
-    data.raw.item["empty-canister"].order = "i"
-    data.raw.item["gas-canister"].subgroup = "angels-fluid-control"
-    data.raw.item["gas-canister"].order = "j"
-    data.raw.technology["gas-canisters"].prerequisites = { "fluid-canister-processing" }
-    data.raw.technology["gas-canisters"].enabled = true
-    OV.remove_prereq("fluid-canister-processing", "water-bore-1")
-    OV.add_prereq("fluid-canister-processing", "fluid-barrel-processing")
-    OV.remove_prereq("fluid-barrel-processing", "water-bore-1")
+    data.raw.item["bob-empty-canister"].subgroup = "angels-fluid-control"
+    data.raw.item["bob-empty-canister"].order = "i"
+    data.raw.item["bob-gas-canister"].subgroup = "angels-fluid-control"
+    data.raw.item["bob-gas-canister"].order = "j"
+    data.raw.technology["bob-gas-canisters"].prerequisites = { "bob-fluid-canister-processing" }
+    data.raw.technology["bob-gas-canisters"].enabled = true
+    OV.remove_prereq("bob-fluid-canister-processing", "water-bore-1")
+    OV.add_prereq("bob-fluid-canister-processing", "bob-fluid-barrel-processing")
+    OV.remove_prereq("bob-fluid-barrel-processing", "water-bore-1")
     OV.patch_recipes({
       {
-        name = "empty-canister",
+        name = "bob-empty-canister",
         ingredients = {
           { name = "barrel", amount = 5 },
         },
@@ -68,9 +68,9 @@ if mods["bobplates"] then
         order = "i",
       },
       {
-        name = "gas-canister",
+        name = "bob-gas-canister",
         ingredients = {
-          { name = "empty-canister", amount = 5 },
+          { name = "bob-empty-canister", amount = 5 },
         },
         subgroup = "angels-fluid-control",
         order = "j",
@@ -78,7 +78,7 @@ if mods["bobplates"] then
     })
   end
   OV.remove_unlock("fluid-handling", "barreling-pump")
-  OV.add_unlock("fluid-barrel-processing", "barreling-pump")
+  OV.add_unlock("bob-fluid-barrel-processing", "barreling-pump")
 end
 --General barrelling fix
 for _, fluid_n in pairs(data.raw.fluid) do

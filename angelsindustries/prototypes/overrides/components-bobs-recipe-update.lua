@@ -208,7 +208,7 @@ if angelsmods.industries.components then
     angelsmods.functions.hide("silver-oxide")
     angelsmods.functions.hide("lithium")
     angelsmods.functions.hide("lithium-perchlorate")
-    angelsmods.functions.hide("lithia-water")
+    angelsmods.functions.hide("bob-lithia-water")
     OV.disable_technology("lithium-processing")
   end
 

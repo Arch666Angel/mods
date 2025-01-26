@@ -186,3 +186,7 @@ if angelsmods.trigger.slag == false then
   })
   angelsmods.functions.hide("slag")
 end
+-------------------------------------------------------------------------------
+-- URANIUM MINING -------------------------------------------------------------
+-------------------------------------------------------------------------------
+OV.set_research_difficulty("uranium-processing","uranium-ore",100,"craft-item")

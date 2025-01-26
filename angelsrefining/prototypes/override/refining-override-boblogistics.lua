@@ -65,8 +65,8 @@ if mods["boblogistics"] then
     },
   })
   OV.add_prereq("bob-repair-pack-3", {
-    mods["bobplates"] and "zinc-processing" or "steel-axe",
-    mods["bobplates"] and "invar-processing" or "steel-processing",
+    mods["bobplates"] and "bob-zinc-processing" or "steel-axe",
+    mods["bobplates"] and "bob-invar-processing" or "steel-processing",
   })
   OV.remove_prereq("bob-repair-pack-3", "cobalt-processing")
 end

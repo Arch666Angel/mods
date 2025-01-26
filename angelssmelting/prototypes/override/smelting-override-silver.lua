@@ -73,21 +73,21 @@ end
 if angelsmods.trigger.smelting_products["silver"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-silver", "silver-plate")
+    OV.global_replace_item("angels-plate-silver", "bob-silver-plate")
     angelsmods.functions.hide("angels-plate-silver")
-    angelsmods.functions.move_item("silver-plate", "angels-silver-casting", "m")
-    data.raw["item"]["silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
-    data.raw["item"]["silver-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-silver-plate", "angels-silver-casting", "m")
+    data.raw["item"]["bob-silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
+    data.raw["item"]["bob-silver-plate"].icon_size = 32
 
     OV.patch_recipes({
       {
-        name = "silver-plate",
+        name = "bob-silver-plate",
         energy_required = 10.5,
         ingredients = {
           { name = "silver-ore", type = "item", amount = "+3" },
         },
         results = {
-          { name = "silver-plate", type = "item", amount = "+2" },
+          { name = "bob-silver-plate", type = "item", amount = "+2" },
         },
         icons = {
           {
@@ -104,7 +104,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         order = "m[angels-plate-silver]-a",
       },
     })
-    OV.hide_recipe({ "silver-plate" })
+    OV.hide_recipe({ "bob-silver-plate" })
   end
 
   if mods["bobelectronics"] then
@@ -112,7 +112,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
       {
         name = "superior-circuit-board",
         ingredients = {
-          { type = "item", name = "silver-plate", amount = "gold-plate" },
+          { type = "item", name = "bob-silver-plate", amount = "bob-gold-plate" },
         },
       },
     })

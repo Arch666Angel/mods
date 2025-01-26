@@ -469,18 +469,83 @@ ov_functions.remove_science_pack = function(technology, pack)
   ov_functions.set_science_pack(technology, pack, 0)
 end
 
-ov_functions.set_research_difficulty = function(technology, unit_time, unit_amount)
+ov_functions.set_research_difficulty = function(technology, unit_time, unit_amount, trigger)
+  -- technology is the technology name, or a table of names
+  -- unit_time is either time for pack technologies or entity_name used in the trigger format
+  -- trigger is unit for default technologies, or the type of trigger:
+  --[[
+  mine-entity
+  craft-item
+  craft-fluid
+  send-item-to-orbit
+  capture-spawner
+  build-entity
+  create-space-platform
+  ]]
+  local tab_form = { -- allow for triggered technologies
+    ["unit"]={
+      time = unit_time,
+      amount = unit_amount,
+    },
+    ["craft-item"]=
+    {
+      count = unit_amount,
+      item = unit_time,
+      type = trigger
+    },
+    ["craft-fluid"]=
+    {
+      count = unit_amount,
+      fluid = unit_time,
+      type = "craft-fluid"
+    },
+    ["mine-entity"]=
+    {
+      entity = unit_time,
+      type = "mine-entity"
+    },
+    ["send-item-to-orbit"]=
+    {
+      item = unit_time,
+      type = "send-item-to-orbit"
+    },
+    ["capture-spawner"]=
+    {
+      item = unit_time,
+      type = "capture-spawner"
+    },
+    ["build-entity"]=
+    {
+      entity = unit_time,
+      type = "build-entity"
+    },
+    ["create-space-platform"]=
+    {
+      type="create-space-platform"
+    },
+  }
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do
-      ov_functions.set_research_difficulty(tech, unit_time, unit_amount)
+    for k, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
+      ov_functions.set_research_difficulty(tech, unit_time, unit_amount,trigger)
     end
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "difficulty")
-    modify_table.technologies[technology].difficulty = {
-      time = unit_time,
-      amount = unit_amount,
-    }
+    if trigger == nil then
+      local tech = data.raw.technology[technology]
+      if tech and type(tech.research_trigger)=="table" then
+        trigger = tech.research_trigger.type
+      elseif tech and type(tech.unit)=="table" then
+        trigger = "unit"
+      else
+        log("technology ".. technology.." does not have an unlock condition")
+      end
+    end
+    if trigger == "unit" or nil then
+      modify_table.technologies[technology].difficulty = tab_form["unit"]
+    else
+      modify_table.technologies[technology].difficulty = tab_form[trigger]
+    end
   end
 end
 
@@ -552,11 +617,11 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
         }
         F_Fill.ingredients = {
           { type = "fluid", name = fluid_s.name, amount = 50 },
-          { type = "item", name = "gas-canister", amount = 1 },
+          { type = "item", name = "bob-gas-canister", amount = 1 },
         }
         F_Empty.results = {
           { type = "fluid", name = fluid_s.name, amount = 50 },
-          { type = "item", name = "gas-canister", amount = 1 },
+          { type = "item", name = "bob-gas-canister", amount = 1 },
         }
         F_Empty.localised_name = {
           "recipe-name.empty-filled-gas-canister",
@@ -566,10 +631,10 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "item-name.filled-gas-canister",
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
-        ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
       elseif style == "acid" then -- Liquid Fuel Canisters
         F_Fill.localised_name = {
           "recipe-name.fill-canister",
@@ -577,11 +642,11 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
         }
         F_Fill.ingredients = {
           { type = "fluid", name = fluid_s.name, amount = 50 },
-          { type = "item", name = "empty-canister", amount = 1 },
+          { type = "item", name = "bob-empty-canister", amount = 1 },
         }
         F_Empty.results = {
           { type = "fluid", name = fluid_s.name, amount = 50 },
-          { type = "item", name = "empty-canister", amount = 1 },
+          { type = "item", name = "bob-empty-canister", amount = 1 },
         }
         F_Empty.localised_name = {
           "recipe-name.empty-filled-canister",
@@ -591,10 +656,10 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "item-name.filled-canister",
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
-        ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
       else -- Vanilla Barrel
         F_Fill.localised_name = {
           "recipe-name.fill-barrel",
@@ -785,50 +850,58 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   if modify_table.technologies[k] then
     modifications = modify_table.technologies[k].difficulty
     if modifications then
-      tech.unit.time = modifications.time
-      tech.unit.count = modifications.amount
+      if tech.unit then
+        tech.unit.time = modifications.time
+        tech.unit.count = modifications.amount
+      else -- not a unit based technology
+        for i, modification in pairs(modifications) do
+          tech.research_trigger[i]=modification
+        end
+        end
     end
   end
-  --adjust ingredient list
-  dup_table = {}
-  modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
-  to_remove = {}
-  tech.unit = tech.unit or {}
-  tech.unit.ingredients = tech.unit.ingredients or {}
-  for pk, pack in pairs(tech.unit.ingredients) do
-    if substitution_table.science_packs[pack[1]] and substitution_table.science_packs[pack[1]].remove then
-      for k, rem in pairs(substitution_table.science_packs[pack[1]].remove) do
-        to_remove[rem] = true
+  --adjust ingredient list only if unit based tech
+  if tech.unit then
+    dup_table = {}
+    modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
+    to_remove = {}
+    tech.unit = tech.unit or {}
+    tech.unit.ingredients = tech.unit.ingredients or {}
+    for pk, pack in pairs(tech.unit.ingredients) do
+      if substitution_table.science_packs[pack[1]] and substitution_table.science_packs[pack[1]].remove then
+        for k, rem in pairs(substitution_table.science_packs[pack[1]].remove) do
+          to_remove[rem] = true
+        end
       end
     end
-  end
-  for i = #tech.unit.ingredients, 1, -1 do
-    local pack = tech.unit.ingredients[i]
-    if pack then
-      if to_remove[pack[1]] then
-        table.remove(tech.unit.ingredients, i)
-      else
-        if substitution_table.science_packs[pack[1]] then
-          pack[2] = substitution_table.science_packs[pack[1]].amount
-          pack[1] = substitution_table.science_packs[pack[1]].add
-        end
-        if modifications and modifications[pack[1]] then
-          if modifications[pack[1]] > 0 then
-            dup_table[pack[1]] = true
-            pack[2] = modifications[pack[1]]
-          else
-            table.remove(tech.unit.ingredients, i)
-          end
+    for i = #tech.unit.ingredients, 1, -1 do
+      local pack = tech.unit.ingredients[i]
+      if pack then
+        if to_remove[pack[1]] then
+          table.remove(tech.unit.ingredients, i)
         else
-          dup_table[pack[1]] = true
+          if substitution_table.science_packs[pack[1]] then
+            pack[2] = substitution_table.science_packs[pack[1]].amount
+            pack[1] = substitution_table.science_packs[pack[1]].add
+          end
+          if modifications and modifications[pack[1]] then
+            if modifications[pack[1]] > 0 then
+              dup_table[pack[1]] = true
+              pack[2] = modifications[pack[1]]
+            else
+              table.remove(tech.unit.ingredients, i)
+            end
+          else
+            dup_table[pack[1]] = true
+          end
         end
       end
     end
-  end
-  if modifications then
-    for name, add in pairs(modifications) do
-      if add > 0 and not dup_table[name] then
-        table.insert(tech.unit.ingredients, { name, add })
+    if modifications then
+      for name, add in pairs(modifications) do
+        if add > 0 and not dup_table[name] then
+          table.insert(tech.unit.ingredients, { name, add })
+        end
       end
     end
   end

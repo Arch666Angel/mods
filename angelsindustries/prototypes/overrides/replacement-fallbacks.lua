@@ -92,7 +92,7 @@ angelsmods.industries.general_replace = {
   --gears
   ["iron-gear-wheel"] = { new = "mechanical-parts", amt_multi = 1 },
   ["steel-gear-wheel"] = { new = "angels-gear", amt_multi = 1, unlock_by = "steel-processing" },
-  ["brass-gear-wheel"] = { new = "angels-axle", amt_multi = 1, unlocked_by = "zinc-processing" },
+  ["brass-gear-wheel"] = { new = "angels-axle", amt_multi = 1, unlocked_by = "bob-zinc-processing" },
   ["cobalt-steel-gear-wheel"] = { new = "angels-roller-chain", amt_multi = 1, unlocked_by = "cobalt-processing" },
   ["titanium-gear-wheel"] = { new = "angels-spring", amt_multi = 1, unlocked_by = "titanium-processing" },
   ["tungsten-gear-wheel"] = { new = "angels-bearing", amt_multi = 1, unlocked_by = "tungsten-processing" },

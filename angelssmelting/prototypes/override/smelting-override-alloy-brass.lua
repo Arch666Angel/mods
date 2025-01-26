@@ -208,6 +208,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
     data.raw["item"]["brass-alloy"].icon_size = 32
     OV.disable_recipe({ "brass-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-brass")
-    OV.add_prereq("zinc-processing", "angels-brass-smelting-1")
+    OV.add_prereq("bob-zinc-processing", "angels-brass-smelting-1")
   end
 end

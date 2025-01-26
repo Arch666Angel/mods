@@ -142,7 +142,7 @@ end
 -- TECH TREE CLEANUP ----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.add_prereq("zinc-processing", "ore-floatation")
+  OV.add_prereq("bob-zinc-processing", "ore-floatation")
 
   OV.set_science_pack("cobalt-processing", "chemical-science-pack", 1)
   OV.add_prereq("cobalt-processing", "ore-leaching")
@@ -189,23 +189,23 @@ end
 -- SMELTING -------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.add_unlock("ore-crushing", "tin-plate")
-  OV.add_unlock("ore-crushing", "lead-plate")
-  OV.add_unlock("ore-crushing", "quartz-glass")
-  OV.add_unlock("lead-processing", "silver-plate")
+  OV.add_unlock("ore-crushing", "bob-tin-plate")
+  OV.add_unlock("ore-crushing", "bob-lead-plate")
+  OV.add_unlock("ore-crushing", "bob-glass")
+  OV.add_unlock("bob-lead-processing", "bob-silver-plate")
   if data.raw.recipe["solder-alloy"] then
     OV.remove_unlock("electronics", "solder-alloy")
-    OV.add_unlock("lead-processing", "solder-alloy")
+    OV.add_unlock("bob-lead-processing", "solder-alloy")
   end
-  OV.add_prereq("battery-3", "lead-processing")
-  OV.add_prereq("solar-panel-equipment-2", "lead-processing")
-  OV.add_prereq("vehicle-solar-panel-equipment-2", "lead-processing")
+  OV.add_prereq("battery-3", "bob-lead-processing")
+  OV.add_prereq("solar-panel-equipment-2", "bob-lead-processing")
+  OV.add_prereq("vehicle-solar-panel-equipment-2", "bob-lead-processing")
   if mods["bobmodules"] then
-    OV.add_prereq("processing-unit", "lead-processing")
+    OV.add_prereq("processing-unit", "bob-lead-processing")
   end
   OV.patch_recipes({
     {
-      name = "tin-plate",
+      name = "bob-tin-plate",
       enabled = false,
     },
     {
@@ -213,11 +213,11 @@ if mods["bobplates"] then
       enabled = false,
     },
     {
-      name = "quartz-glass",
+      name = "bob-glass",
       enabled = false,
     },
     {
-      name = "silver-plate",
+      name = "bob-silver-plate",
       enabled = false,
     },
   })

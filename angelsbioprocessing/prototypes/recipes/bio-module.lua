@@ -45,7 +45,7 @@ data:extend({
   },
 })
 
-if mods["boblibrary"] then
+--[[if mods["boblibrary"] then -- function called no longer exists
   for _, module_name in pairs({
     "angels-bio-yield-module",
     "angels-bio-yield-module-2",
@@ -58,4 +58,4 @@ if mods["boblibrary"] then
   }) do
     bobmods.lib.module.exclude_productivity_module(module_name)
   end
-end
+end]]

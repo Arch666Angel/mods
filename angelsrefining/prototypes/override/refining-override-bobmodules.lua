@@ -7,7 +7,7 @@ local pt_enabled = (mods["angelssmelting"] and angelsmods.trigger.smelting_produ
 if mods["bobmodules"] then
   OV.add_prereq(
     "modules",
-    mods["angelssmelting"] and "advanced-circuit" or (mods["bobplates"] and "lead-processing" or "plastics")
+    mods["angelssmelting"] and "advanced-circuit" or (mods["bobplates"] and "bob-lead-processing" or "plastics")
   ) --bobs silver smelting is avail from the start, but silver from lead gets unlocked here...
   OV.remove_prereq("modules", "gold-processing")
   if pt_enabled == true and mods["bobplates"] then
@@ -17,19 +17,19 @@ if mods["bobmodules"] then
         ingredients = {
           { "!!" },
           { name = "copper-plate", amount = 1 },
-          { name = "silver-plate", amount = 1 },
+          { name = "bob-silver-plate", amount = 1 },
         },
       },
       {
         name = "module-processor-board",
         ingredients = {
-          { name = "silver-plate", amount = "tin-plate" },
+          { name = "bob-silver-plate", amount = "bob-tin-plate" },
         },
       },
       {
         name = "module-processor-board-3",
         ingredients = {
-          { name = "angels-wire-platinum", amount = "gold-plate" },
+          { name = "angels-wire-platinum", amount = "bob-gold-plate" },
         },
       },
     })
@@ -40,13 +40,13 @@ if mods["bobmodules"] then
         ingredients = {
           { "!!" },
           { name = "copper-plate", amount = 1 },
-          { name = "silver-plate", amount = 1 },
+          { name = "bob-silver-plate", amount = 1 },
         },
       },
       {
         name = "module-processor-board-2",
         ingredients = {
-          { name = "silver-plate", amount = "gold-plate" },
+          { name = "bob-silver-plate", amount = "bob-gold-plate" },
         },
       },
     })

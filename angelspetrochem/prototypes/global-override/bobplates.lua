@@ -78,8 +78,8 @@ if mods["bobplates"] then
   --clean-up pre-requisites
   OV.remove_prereq("steel-processing", "electrolysis-1")
   OV.remove_prereq("lithium-processing", "electrolysis-1")
-  OV.remove_prereq("zinc-processing", "electrolysis-1")
-  OV.remove_prereq("lead-processing", "electrolysis-1")
+  OV.remove_prereq("bob-zinc-processing", "electrolysis-1")
+  OV.remove_prereq("bob-lead-processing", "electrolysis-1")
   OV.remove_prereq("cobalt-processing", "electrolysis-1")
 
   OV.remove_prereq("chemical-processing-2", "electrolysis-2")
@@ -101,7 +101,7 @@ if mods["bobplates"] then
   OV.global_replace_item("carbon", "solid-carbon")
   angelsmods.functions.hide("carbon")
   OV.remove_unlock("chemical-processing-1", "carbon")
-  OV.add_prereq("lead-processing", "angels-coal-processing")
+  OV.add_prereq("bob-lead-processing", "angels-coal-processing")
   OV.add_prereq("silicon-processing", "angels-coal-processing")
 
   -- lithium processing -------------------------------------------------------

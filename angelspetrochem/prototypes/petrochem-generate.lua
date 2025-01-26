@@ -1,6 +1,6 @@
 if angelsmods.refining then
   --ADD UNLOCK TO BARRELS
-  angelsmods.functions.OV.add_prereq("fluid-barreling", "angels-fluid-control")
+  angelsmods.functions.OV.add_prereq("bob-fluid-barreling", "angels-fluid-control")
 
   --CREATE CONVERTER
   angelsmods.functions.make_converter("sulfuric-acid", "liquid-sulfuric-acid")

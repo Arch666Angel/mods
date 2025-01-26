@@ -53,29 +53,3 @@ if mods["bobwarfare"] and not mods["angelsexploration"] then
   move_item("robot-drone-frame", intermediate_subgroup, "z[others]-f[robot-drone-frame]")
   move_item("robot-drone-frame-large", intermediate_subgroup, "z[others]-g[robot-drone-frame]")
 end
-
--------------------------------------------------------------------------------
--- Armour patching ------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobwarfare"] then
-  if mods["bobplates"] then
-    OV.patch_recipes({
-      {
-        name = "heavy-armor-2",
-        ingredients = {
-          { name = "gunmetal-alloy", amount = "cobalt-steel-alloy" },
-        },
-      },
-    })
-    data.raw.armor["heavy-armor-2"].localised_name = { "item-name.AB-heavy-armour-2" }
-    OV.remove_prereq("bob-armor-making-3", "cobalt-processing")
-    if mods["angelssmelting"] then
-      OV.add_prereq("bob-armor-making-3", "angels-gunmetal-smelting-1")
-    else
-      OV.add_prereq("bob-armor-making-3", "zinc-processing")
-    end
-  else
-    OV.add_prereq("bob-armor-making-3", "logistic-science-pack")
-    OV.add_prereq("bob-armor-making-4", "chemical-science-pack")
-  end
-end

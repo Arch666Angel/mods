@@ -28,7 +28,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
     data.raw["item"]["lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
     data.raw["item"]["lead-oxide"].icon_size = 32
     OV.hide_recipe({ "bob-lead-plate", "lead-oxide", "lead-oxide-2" })
-    OV.global_replace_technology("lead-processing", "angels-lead-smelting-1")
+    OV.global_replace_technology("bob-lead-processing", "angels-lead-smelting-1")
   end
 
   if angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["zinc"].ingot then
