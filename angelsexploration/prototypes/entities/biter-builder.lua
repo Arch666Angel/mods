@@ -624,6 +624,7 @@ local function make_projectile_beam(pro_app, pro_dmg)
     flags = { "not-on-map" },
     width = 0.5,
     damage_interval = pro_dmg.cooldown,
+    graphics_set = {},
     action = {
       type = "direct",
       action_delivery = {
@@ -1534,7 +1535,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
       spawning_spacing = 3,
       max_spawn_shift = 0,
       max_richness_for_spawn_shift = 100,
-      autoplace = enemy_spawner_autoplace(1),
+      autoplace = enemy_spawner_autoplace("enemy_autoplace_base(0, 6)"),
       call_for_help_radius = 50,
     },
     {

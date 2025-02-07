@@ -256,6 +256,7 @@ data:extend({
     icon = "__angelsexplorationgraphics__/graphics/icons/bio-ammo.png",
     icon_size = 64,
     flags = {},
+    ammo_category = "biological",
     ammo_type = {
       {
         source_type = "default",
