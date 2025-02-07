@@ -1,6 +1,6 @@
 local gathering_turret = require("src.gathering-turret")
 local turbo_bike = require("src.turbo-bike")
--- TODO local tips_and_tricks_triggers = require("src.tips-and-tricks-triggers")
+local tips_and_tricks_triggers = require("src.tips-and-tricks-triggers")
 local debug_info = require("src.debug-info")
 
 -- config changes
@@ -11,7 +11,7 @@ script.on_configuration_changed(on_configuration_changed)
 script.on_init(function()
   gathering_turret:on_init()
   turbo_bike:on_init()
-  --tips_and_tricks_triggers:on_init()
+  tips_and_tricks_triggers:on_init()
   debug_info:on_init()
 end)
 
@@ -52,7 +52,7 @@ end, {
 })
 script.on_event(defines.events.on_entity_died, function(event)
   gathering_turret:on_entity_died(event.entity, event.loot)
-  --tips_and_tricks_triggers:on_entity_died(event.entity, event.cause)
+  tips_and_tricks_triggers:on_entity_died(event.entity, event.cause)
 end, {
   -- Event raise filter 1: gathering turret dies
   { mode = "or", filter = "name", name = "angels-gathering-turret" },
@@ -89,12 +89,12 @@ end)
 -- technology events
 script.on_event(defines.events.on_research_finished, function(event)
   gathering_turret:on_tech_research_finished(event.research.force.name, event.research.name)
-  --tips_and_tricks_triggers:on_tech_research_finished(event.research.force.name, event.research.name)
+  tips_and_tricks_triggers:on_tech_research_finished(event.research.force.name, event.research.name)
 end)
 script.on_event(defines.events.on_research_reversed, function(event)
   gathering_turret:on_tech_research_reversed(event.research.force.name, event.research.name)
 end)
 script.on_event(defines.events.on_technology_effects_reset, function(event)
   gathering_turret:on_tech_research_reset(event.force.name)
-  --tips_and_tricks_triggers:on_tech_research_reset(event.force.name)
+  tips_and_tricks_triggers:on_tech_research_reset(event.force.name)
 end)
