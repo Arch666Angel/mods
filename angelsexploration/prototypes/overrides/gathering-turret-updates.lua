@@ -70,7 +70,7 @@ if angelsmods.trigger.artifacts["red"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- "angels-alien-artifact-red", TODO where is this defined?
+      "angels-alien-artifact-red",
     },
   })
 end
@@ -80,7 +80,7 @@ if angelsmods.trigger.artifacts["yellow"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- "angels-alien-artifact-yellow", TODO where is this defined?
+      "angels-alien-artifact-yellow",
     },
   })
 end
@@ -90,7 +90,7 @@ if angelsmods.trigger.artifacts["orange"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- TODO "angels-alien-artifact-orange",
+      "angels-alien-artifact-orange",
     },
   })
 end
@@ -100,7 +100,7 @@ if angelsmods.trigger.artifacts["blue"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- TODO "angels-alien-artifact-blue",
+      "angels-alien-artifact-blue",
     },
   })
 end
@@ -110,7 +110,7 @@ if angelsmods.trigger.artifacts["purple"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- TODO "angels-alien-artifact-purple",
+      "angels-alien-artifact-purple",
     },
   })
 end
@@ -120,7 +120,7 @@ if angelsmods.trigger.artifacts["green"] then
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
-      -- TODO "angels-alien-artifact-green",
+      "angels-alien-artifact-green",
     },
   })
 end
