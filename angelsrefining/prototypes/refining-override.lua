@@ -55,9 +55,9 @@ if mods["bobplates"] then
     data.raw.item["bob-gas-canister"].order = "j"
     data.raw.technology["bob-gas-canisters"].prerequisites = { "bob-fluid-canister-processing" }
     data.raw.technology["bob-gas-canisters"].enabled = true
-    OV.remove_prereq("bob-fluid-canister-processing", "water-bore-1")
+    OV.remove_prereq("bob-fluid-canister-processing", "bob-water-bore-1")
     OV.add_prereq("bob-fluid-canister-processing", "bob-fluid-barrel-processing")
-    OV.remove_prereq("bob-fluid-barrel-processing", "water-bore-1")
+    OV.remove_prereq("bob-fluid-barrel-processing", "bob-water-bore-1")
     OV.patch_recipes({
       {
         name = "bob-empty-canister",

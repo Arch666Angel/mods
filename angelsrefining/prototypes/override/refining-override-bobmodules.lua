@@ -5,15 +5,23 @@ local pt_enabled = (mods["angelssmelting"] and angelsmods.trigger.smelting_produ
 -- MODULE UPDATE --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobmodules"] then
-  OV.add_prereq(
-    "modules",
-    mods["angelssmelting"] and "advanced-circuit" or (mods["bobplates"] and "bob-lead-processing" or "plastics")
-  ) --bobs silver smelting is avail from the start, but silver from lead gets unlocked here...
-  OV.remove_prereq("modules", "gold-processing")
+  if mods["angelspetrochem"] then
+    OV.add_prereq("modules", "chlorine-processing-1")
+  end
+
+  if mods["angelssmelting"] then
+    OV.add_prereq("modules", "angels-silver-smelting-1")
+  elseif mods["bobplates"] then
+    OV.add_prereq("modules", "bob-lead-processing")
+  else
+    OV.add_prereq("modules", "plastics")
+  end
+
+  OV.remove_prereq("modules", "bob-gold-processing")
   if pt_enabled == true and mods["bobplates"] then
     OV.patch_recipes({
       {
-        name = "module-contact",
+        name = "bob-module-contact",
         ingredients = {
           { "!!" },
           { name = "copper-plate", amount = 1 },
@@ -21,13 +29,13 @@ if mods["bobmodules"] then
         },
       },
       {
-        name = "module-processor-board",
+        name = "bob-module-processor-board",
         ingredients = {
           { name = "bob-silver-plate", amount = "bob-tin-plate" },
         },
       },
       {
-        name = "module-processor-board-3",
+        name = "bob-module-processor-board-3",
         ingredients = {
           { name = "angels-wire-platinum", amount = "bob-gold-plate" },
         },
@@ -36,7 +44,7 @@ if mods["bobmodules"] then
   elseif mods["bobplates"] then
     OV.patch_recipes({
       {
-        name = "module-contact",
+        name = "bob-module-contact",
         ingredients = {
           { "!!" },
           { name = "copper-plate", amount = 1 },
@@ -44,7 +52,7 @@ if mods["bobmodules"] then
         },
       },
       {
-        name = "module-processor-board-2",
+        name = "bob-module-processor-board-2",
         ingredients = {
           { name = "bob-silver-plate", amount = "bob-gold-plate" },
         },

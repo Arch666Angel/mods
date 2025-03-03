@@ -57,10 +57,10 @@ if mods["boblogistics"] then
   --repair pack techs
   OV.patch_recipes({
     {
-      name = "repair-pack-3",
+      name = "bob-repair-pack-3",
       ingredients = {
-        { name = "brass-gear-wheel", amount = "cobalt-steel-gear-wheel" },
-        { name = "invar-alloy", amount = "cobalt-steel-alloy" },
+        { name = "bob-brass-gear-wheel", amount = "bob-cobalt-steel-gear-wheel" },
+        { name = "bob-invar-alloy", amount = "bob-cobalt-steel-alloy" },
       },
     },
   })
@@ -68,5 +68,5 @@ if mods["boblogistics"] then
     mods["bobplates"] and "bob-zinc-processing" or "steel-axe",
     mods["bobplates"] and "bob-invar-processing" or "steel-processing",
   })
-  OV.remove_prereq("bob-repair-pack-3", "cobalt-processing")
+  OV.remove_prereq("bob-repair-pack-3", "bob-cobalt-processing")
 end
