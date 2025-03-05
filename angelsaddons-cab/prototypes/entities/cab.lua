@@ -130,7 +130,8 @@ data:extend({
     selection_box = { { -2.5, -4 }, { 2.5, 4 } },
     effectivity = 0.7,
     braking_power = "1000kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       effectivity = 0.75,
       fuel_inventory_size = 3,
       -- smoke =
@@ -418,6 +419,7 @@ data:extend({
     name = "angels-cab-deploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
+    ammo_category = "bullet",
     ammo_type = {
       category = "angels-cab-deploy",
       target_type = "direction",
@@ -451,6 +453,7 @@ data:extend({
     name = "angels-cab-undeploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
+    ammo_category = "bullet",
     ammo_type = {
       category = "angels-cab-undeploy",
       target_type = "direction",
@@ -635,7 +638,7 @@ data:extend({
       },
     },
     collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
-    collision_mask = {},
+    collision_mask = { layers = {} },
     --selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     drawing_box = { { -0.5, -2.8 }, { 0.5, 0.5 } },
     maximum_wire_distance = 0.25,
