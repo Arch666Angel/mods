@@ -12,7 +12,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "silver-ore", amount = 4 },
+      { type = "item", name = "bob-silver-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-silver", amount = 2 },
@@ -101,7 +101,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "silver-ore", amount = 24 },
+      { type = "item", name = "bob-silver-ore", amount = 24 },
     },
     results = {
       { type = "item", name = "ingot-silver", amount = 24 },

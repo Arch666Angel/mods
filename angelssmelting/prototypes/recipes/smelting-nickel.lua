@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "nickel-ore", amount = 4 },
+      { type = "item", name = "bob-nickel-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-nickel", amount = 2 },
@@ -79,7 +79,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "nickel-ore", amount = 24 },
+      { type = "item", name = "bob-nickel-ore", amount = 24 },
       { type = "fluid", name = "gas-carbon-monoxide", amount = 60 },
     },
     results = {

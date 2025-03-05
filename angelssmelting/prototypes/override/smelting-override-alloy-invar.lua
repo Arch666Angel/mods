@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       {
         type = "recipe",
         name = "angels-plate-invar",
-        localised_name = { "item-name.invar-alloy" },
+        localised_name = { "item-name.bob-invar-alloy" },
         category = "casting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,

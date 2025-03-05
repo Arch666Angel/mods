@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "lead-ore",
+    name = "bob-lead-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
     icon_size = 32,
     subgroup = "angels-lead",

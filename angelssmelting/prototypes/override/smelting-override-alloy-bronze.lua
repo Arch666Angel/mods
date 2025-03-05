@@ -103,7 +103,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "recipe",
         name = "angels-plate-bronze",
-        localised_name = { "item-name.bronze-alloy" },
+        localised_name = { "item-name.bob-bronze-alloy" },
         category = "casting",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -205,18 +205,18 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     OV.disable_recipe({ "bob-bronze-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
-    OV.add_prereq("alloy-processing", "angels-bronze-smelting-1")
+    OV.add_prereq("bob-alloy-processing", "angels-bronze-smelting-1")
     OV.add_prereq("logistics-2", "angels-bronze-smelting-1")
-    OV.remove_prereq("chemical-science-pack", "alloy-processing")
-    OV.remove_prereq("cobalt-processing", "alloy-processing")
-    OV.remove_prereq("logistics-2", "alloy-processing")
-    OV.remove_prereq("nitinol-processing", "alloy-processing")
-    OV.remove_prereq("tungsten-processing", "alloy-processing")
-    OV.remove_prereq("tungsten-alloy-processing", "alloy-processing")
-    OV.remove_prereq("bob-zinc-processing", "alloy-processing")
+    OV.remove_prereq("chemical-science-pack", "bob-alloy-processing")
+    OV.remove_prereq("bob-cobalt-processing", "bob-alloy-processing")
+    OV.remove_prereq("logistics-2", "bob-alloy-processing")
+    OV.remove_prereq("bob-nitinol-processing", "bob-alloy-processing")
+    OV.remove_prereq("bob-tungsten-processing", "bob-alloy-processing")
+    OV.remove_prereq("bob-tungsten-alloy-processing", "bob-alloy-processing")
+    OV.remove_prereq("bob-zinc-processing", "bob-alloy-processing")
     if mods["bobpower"] then
-      OV.remove_prereq("fluid-generator-1", "alloy-processing")
-      OV.add_prereq("fluid-generator-1", "angels-bronze-smelting-1")
+      OV.remove_prereq("bob-fluid-generator-1", "bob-alloy-processing")
+      OV.add_prereq("bob-fluid-generator-1", "angels-bronze-smelting-1")
     end
   end
 end

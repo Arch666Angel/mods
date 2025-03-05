@@ -11,7 +11,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 1 },
+      { type = "item", name = "bob-quartz", amount = 1 },
     },
     results = {
       { type = "item", name = "solid-glass-mixture", amount = 1 },
@@ -32,7 +32,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 1 },
+      { type = "item", name = "bob-quartz", amount = 1 },
       { type = "item", name = "solid-lime", amount = 1 },
     },
     results = {
@@ -54,7 +54,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 1 },
+      { type = "item", name = "bob-quartz", amount = 1 },
       { type = "item", name = "solid-aluminium-oxide", amount = 1 },
       { type = "item", name = "solid-lime", amount = 1 },
     },

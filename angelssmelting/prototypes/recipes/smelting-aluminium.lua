@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "bauxite-ore", amount = 4 },
+      { type = "item", name = "bob-bauxite-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-aluminium", amount = 2 },
@@ -64,7 +64,7 @@ data:extend({
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "item", name = "bauxite-ore", amount = 12 },
+      { type = "item", name = "bob-bauxite-ore", amount = 12 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 3 },
     },
     results = {

@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tungsten-ore", amount = 4 },
+      { type = "item", name = "bob-tungsten-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-tungsten", amount = 2 },
@@ -41,7 +41,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tungsten-ore", amount = 12 },
+      { type = "item", name = "bob-tungsten-ore", amount = 12 },
       { type = "fluid", name = "gas-hydrogen", amount = 30 },
     },
     results = {

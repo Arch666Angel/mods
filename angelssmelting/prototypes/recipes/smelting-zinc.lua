@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "zinc-ore", amount = 4 },
+      { type = "item", name = "bob-zinc-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-zinc", amount = 2 },
@@ -45,7 +45,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "zinc-ore", amount = 8 },
+      { type = "item", name = "bob-zinc-ore", amount = 8 },
       { type = "fluid", name = "gas-oxygen", amount = 60 },
     },
     results = {
@@ -111,7 +111,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "zinc-ore", amount = 24 },
+      { type = "item", name = "bob-zinc-ore", amount = 24 },
       { type = "fluid", name = "gas-oxygen", amount = 60 },
       { type = "fluid", name = "liquid-molten-lead", amount = 60 },
     },

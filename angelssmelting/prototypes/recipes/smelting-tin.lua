@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tin-ore", amount = 4 },
+      { type = "item", name = "bob-tin-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-tin", amount = 2 },
@@ -44,7 +44,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tin-ore", amount = 24 },
+      { type = "item", name = "bob-tin-ore", amount = 24 },
     },
     results = {
       { type = "item", name = "ingot-tin", amount = 24 },

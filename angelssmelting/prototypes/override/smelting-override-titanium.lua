@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["titanium"] then
 else
-  angelsmods.functions.hide("rutile-ore")
+  angelsmods.functions.hide("bob-rutile-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ end
 if angelsmods.trigger.smelting_products["titanium"].ingot then
   --REPLACE TECHS AND DISABLE RECIPES
   if mods["bobplates"] then
-    OV.add_prereq("titanium-processing", "angels-titanium-smelting-1")
+    OV.add_prereq("bob-titanium-processing", "angels-titanium-smelting-1")
   end
 
   if angelsmods.trigger.smelting_products["titanium"].plate then

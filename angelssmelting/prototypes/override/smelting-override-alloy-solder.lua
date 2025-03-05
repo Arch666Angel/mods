@@ -22,10 +22,10 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     )
     OV.remove_unlock("bob-electronics", "bob-solder")
 
-    OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "bob-solder" })
-    angelsmods.functions.hide("solder-alloy")
-    OV.remove_unlock("bob-electronics", "solder-alloy-lead")
-    OV.remove_prereq("bob-electronics", "alloy-processing")
+    OV.disable_recipe({ "bob-solder-alloy", "bob-solder-alloy-lead", "bob-solder" })
+    angelsmods.functions.hide("bob-solder-alloy")
+    OV.remove_unlock("bob-electronics", "bob-solder-alloy-lead")
+    OV.remove_prereq("bob-electronics", "bob-alloy-processing")
 
     if angelsmods.trigger.smelting_products["solder"].mixture then
       OV.add_prereq("bob-electronics", "angels-solder-smelting-basic")

@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["zinc"] then
 else
-  angelsmods.functions.hide("zinc-ore")
+  angelsmods.functions.hide("bob-zinc-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -69,8 +69,8 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
     data.raw["item"]["bob-zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
     data.raw["item"]["bob-zinc-plate"].icon_size = 32
     OV.disable_recipe({ "bob-zinc-plate" })
-    OV.remove_prereq("battery-3", "bob-zinc-processing")
-    OV.add_prereq("battery-3", "angels-zinc-smelting-1")
+    OV.remove_prereq("bob-battery-3", "bob-zinc-processing")
+    OV.add_prereq("bob-battery-3", "angels-zinc-smelting-1")
   end
 else
   angelsmods.functions.hide("angels-plate-zinc")

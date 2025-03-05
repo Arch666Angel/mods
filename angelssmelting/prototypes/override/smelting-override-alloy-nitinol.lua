@@ -50,7 +50,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
       {
         type = "recipe",
         name = "angels-plate-nitinol",
-        localised_name = { "item-name.nitinol-alloy" },
+        localised_name = { "item-name.bob-nitinol-alloy" },
         category = "casting-4",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -100,9 +100,9 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
     angelsmods.functions.move_item("bob-nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
     data.raw["item"]["bob-nitinol-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png"
     data.raw["item"]["bob-nitinol-alloy"].icon_size = 32
-    OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")
-    OV.add_prereq("nitinol-processing", "lubricant")
-    OV.remove_prereq("nitinol-processing", "titanium-processing")
+    OV.add_prereq("bob-nitinol-processing", "angels-nitinol-smelting-1")
+    OV.add_prereq("bob-nitinol-processing", "lubricant")
+    OV.remove_prereq("bob-nitinol-processing", "bob-titanium-processing")
     OV.disable_recipe({ "bob-nitinol-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-nitinol")
   end

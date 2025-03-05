@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "tungsten-ore",
+    name = "bob-tungsten-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-tungsten.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
