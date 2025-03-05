@@ -98,7 +98,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       icons = {
         {
           icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
-          icon_size = 32
+          icon_size = 32,
         },
         {
           icon = "__base__/graphics/icons/iron-ore.png",

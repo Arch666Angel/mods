@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "lead-ore", amount = 4 },
+      { type = "item", name = "bob-lead-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-lead", amount = 2 },
@@ -83,7 +83,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 3 },
+      { type = "item", name = "bob-quartz", amount = 3 },
       { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 30 },
     },
     results = {
@@ -107,7 +107,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "lead-ore", amount = 24 },
+      { type = "item", name = "bob-lead-ore", amount = 24 },
       { type = "fluid", name = "gas-oxygen", amount = 60 },
     },
     results = {

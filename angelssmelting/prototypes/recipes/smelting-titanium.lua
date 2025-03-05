@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "rutile-ore", amount = 4 },
+      { type = "item", name = "bob-rutile-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-titanium", amount = 2 },
@@ -43,7 +43,7 @@ data:extend({
     energy_required = 8,
     enabled = false,
     ingredients = {
-      { type = "item", name = "rutile-ore", amount = 24 },
+      { type = "item", name = "bob-rutile-ore", amount = 24 },
       { type = "item", name = "solid-carbon", amount = 6 },
       { type = "fluid", name = "gas-chlorine", amount = 60 },
     },

@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 4 },
+      { type = "item", name = "bob-quartz", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-silica", amount = 2 },
@@ -93,7 +93,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "quartz", amount = 24 },
+      { type = "item", name = "bob-quartz", amount = 24 },
       { type = "item", name = "solid-carbon", amount = 6 },
     },
     results = {
@@ -211,7 +211,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "quartz", amount = 1 },
+      { type = "item", name = "bob-quartz", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-quartz-crucible", amount = 1 },

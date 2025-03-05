@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "quartz",
+    name = "bob-quartz",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
     icon_size = 32,
     subgroup = "angels-silicon",

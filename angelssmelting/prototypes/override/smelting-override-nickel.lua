@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["nickel"] then
 else
-  angelsmods.functions.hide("nickel-ore")
+  angelsmods.functions.hide("bob-nickel-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["nickel"].ingot then
   if mods["bobplates"] then
-    OV.global_replace_technology("nickel-processing", "angels-nickel-smelting-1")
+    OV.global_replace_technology("bob-nickel-processing", "angels-nickel-smelting-1")
     OV.hide_recipe("bob-nickel-plate")
   end
 

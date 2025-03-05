@@ -3,5 +3,5 @@
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["thorium"] then
 else
-  angelsmods.functions.hide("thorium-ore")
+  angelsmods.functions.hide("bob-thorium-ore")
 end

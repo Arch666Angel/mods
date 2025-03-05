@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "rutile-ore",
+    name = "bob-rutile-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png",
     icon_size = 32,
     subgroup = "angels-titanium",

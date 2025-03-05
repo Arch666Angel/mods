@@ -12,7 +12,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silver"] then
 else
-  angelsmods.functions.hide("silver-ore")
+  angelsmods.functions.hide("bob-silver-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -26,10 +26,10 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     angelsmods.functions.move_item("bob-silver-nitrate", "angels-silver", "d")
     data.raw["item"]["bob-silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
     data.raw["item"]["bob-silver-nitrate"].icon_size = 32
-    OV.disable_recipe({ "bob-silver-nitrate", "silver-from-lead" })
-    OV.remove_prereq("battery-3", "nitrogen-processing")
-    OV.add_prereq("battery-3", "angels-silver-smelting-2")
-    OV.add_prereq("battery-3", "powder-metallurgy-4")
+    OV.disable_recipe({ "bob-silver-nitrate", "bob-silver-from-lead" })
+    OV.remove_prereq("bob-battery-3", "bob-nitrogen-processing")
+    OV.add_prereq("bob-battery-3", "angels-silver-smelting-2")
+    OV.add_prereq("bob-battery-3", "powder-metallurgy-4")
 
     angelsmods.functions.move_item("bob-silver-oxide", "angels-silver", "e")
     data.raw.item["bob-silver-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-oxide.png"
@@ -84,7 +84,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         name = "bob-silver-plate",
         energy_required = 10.5,
         ingredients = {
-          { name = "silver-ore", type = "item", amount = "+3" },
+          { name = "bob-silver-ore", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-silver-plate", type = "item", amount = "+2" },
@@ -133,7 +133,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   if mods["bobelectronics"] then
     OV.patch_recipes({
       {
-        name = "electronic-components",
+        name = "bob-electronic-components",
         ingredients = {
           { type = "item", name = "angels-wire-silver", amount = "bob-tinned-copper-cable" },
         },

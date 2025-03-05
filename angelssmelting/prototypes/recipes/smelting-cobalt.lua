@@ -10,7 +10,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 4 },
+      { type = "item", name = "bob-cobalt-ore", amount = 4 },
     },
     results = {
       { type = "item", name = "processed-cobalt", amount = 2 },
@@ -61,7 +61,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 8 },
+      { type = "item", name = "bob-cobalt-ore", amount = 8 },
       { type = "item", name = "solid-limestone", amount = 3 },
     },
     results = {
@@ -128,7 +128,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 24 },
+      { type = "item", name = "bob-cobalt-ore", amount = 24 },
       { type = "item", name = "solid-carbon", amount = 6 },
     },
     results = {

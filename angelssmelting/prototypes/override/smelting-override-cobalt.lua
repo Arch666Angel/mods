@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["cobalt"] then
 else
-  angelsmods.functions.hide("cobalt-ore")
+  angelsmods.functions.hide("bob-cobalt-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -25,9 +25,9 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     angelsmods.functions.move_item("bob-cobalt-oxide", "angels-cobalt", "e")
     data.raw["item"]["bob-cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
     data.raw["item"]["bob-cobalt-oxide"].icon_size = 32
-    OV.disable_recipe({ "bob-cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "bob-cobalt-steel-alloy" })
-    OV.remove_prereq({ "battery-2", "rtg" }, "cobalt-processing") --based on the oxide not the plate
-    OV.add_prereq({ "battery-2", "rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
+    OV.disable_recipe({ "bob-cobalt-oxide", "bob-cobalt-oxide-from-copper", "bob-cobalt-plate", "bob-cobalt-steel-alloy" })
+    OV.remove_prereq({ "bob-battery-2", "rtg" }, "bob-cobalt-processing") --based on the oxide not the plate
+    OV.add_prereq({ "bob-battery-2", "rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
   end
 
   if angelsmods.trigger.smelting_products["cobalt"].plate then

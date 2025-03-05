@@ -2,7 +2,7 @@ data:extend({
   --ORE
   {
     type = "item",
-    name = "bauxite-ore",
+    name = "bob-bauxite-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png",
     icon_size = 32,
     subgroup = "angels-aluminium",

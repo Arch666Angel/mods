@@ -12,7 +12,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silicon"] then
 else
-  angelsmods.functions.hide("quartz")
+  angelsmods.functions.hide("bob-quartz")
 end
 
 -------------------------------------------------------------------------------
@@ -55,8 +55,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].mono then
   if mods["bobplates"] then
-    OV.global_replace_item("silicon", "angels-mono-silicon")
-    angelsmods.functions.hide("silicon")
+    OV.global_replace_item("bob-silicon-plate", "angels-mono-silicon")
+    angelsmods.functions.hide("bob-silicon-plate")
     --angelsmods.functions.move_item("silicon", "angels-silicon-casting", "k")
     --data.raw["item"]["silicon"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silicon.png"
     --data.raw["item"]["silicon"].icon_size = 32

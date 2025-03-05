@@ -49,7 +49,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
         name = "bob-glass",
         energy_required = 10.5,
         ingredients = {
-          { name = "quartz", type = "item", amount = "+3" },
+          { name = "bob-quartz", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-glass", type = "item", amount = "+2" },
