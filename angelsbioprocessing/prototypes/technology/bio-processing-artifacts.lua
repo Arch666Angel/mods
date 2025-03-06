@@ -30,11 +30,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-red-from-small",
+          recipe = "bob-alien-artifact-red",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-red-from-basic",
+          recipe = "bob-alien-artifact-red-from-small",
         },
       },
       unit = {
@@ -74,11 +74,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-yellow-from-small",
+          recipe = "bob-alien-artifact-yellow",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-yellow-from-basic",
+          recipe = "bob-alien-artifact-yellow-from-small",
         },
       },
       unit = {
@@ -117,11 +117,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-orange-from-small",
+          recipe = "bob-alien-artifact-orange",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-orange-from-basic",
+          recipe = "bob-alien-artifact-orange-from-small",
         },
       },
       unit = {
@@ -160,11 +160,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-blue-from-small",
+          recipe = "bob-alien-artifact-blue",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-blue-from-basic",
+          recipe = "bob-alien-artifact-blue-from-small",
         },
       },
       unit = {
@@ -204,11 +204,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-purple-from-small",
+          recipe = "bob-alien-artifact-purple",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-purple-from-basic",
+          recipe = "bob-alien-artifact-purple-from-small",
         },
       },
       unit = {
@@ -248,11 +248,11 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-green-from-small",
+          recipe = "bob-alien-artifact-green",
         },
         {
           type = "unlock-recipe",
-          recipe = "alien-artifact-green-from-basic",
+          recipe = "bob-alien-artifact-green-from-small",
         },
       },
       unit = {

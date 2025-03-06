@@ -1,0 +1,28 @@
+{
+  "recipe":
+  [
+    ["fill-alien-goo-barrel", "alien-goo-barrel"],
+    ["fill-alien-spores-barrel", "alien-spores-barrel"],
+    ["fill-gas-ethanol-barrel", "gas-ethanol-barrel"],
+    ["fill-gas-puffer-atmosphere-barrel", "gas-puffer-atmosphere-barrel"],
+    ["fill-liquid-acetic-acid-barrel", "liquid-acetic-acid-barrel"],
+    ["fill-liquid-acetic-anhydride-barrel", "liquid-acetic-anhydride-barrel"],
+    ["fill-liquid-black-liquor-barrel", "liquid-black-liquor-barrel"],
+    ["fill-liquid-brown-liquor-barrel", "liquid-brown-liquor-barrel"],
+    ["fill-liquid-cellulose-acetate-barrel", "liquid-cellulose-acetate-barrel"],
+    ["fill-liquid-cellulose-acetate-mixture-barrel", "liquid-cellulose-acetate-mixture-barrel"],
+    ["fill-liquid-fermentation-raw-barrel", "liquid-fermentation-raw-barrel"],
+    ["fill-liquid-fish-atmosphere-barrel", "liquid-fish-atmosphere-barrel"],
+    ["fill-liquid-fish-oil-barrel", "liquid-fish-oil-barrel"],
+    ["fill-liquid-green-liquor-barrel", "liquid-green-liquor-barrel"],
+    ["fill-liquid-nutrient-pulp-barrel", "liquid-nutrient-pulp-barrel"],
+    ["fill-liquid-plant-milk-barrel", "liquid-plant-milk-barrel"],
+    ["fill-liquid-polluted-fish-atmosphere-barrel", "liquid-polluted-fish-atmosphere-barrel"],
+    ["fill-liquid-propionic-acid-barrel", "liquid-propionic-acid-barrel"],
+    ["fill-liquid-pulping-liquor-barrel", "liquid-pulping-liquor-barrel"],
+    ["fill-liquid-raw-fish-oil-barrel", "liquid-raw-fish-oil-barrel"],
+    ["fill-liquid-raw-vegetable-oil-barrel", "liquid-raw-vegetable-oil-barrel"],
+    ["fill-liquid-vegetable-oil-barrel", "liquid-vegetable-oil-barrel"],
+    ["fill-liquid-white-liquor-barrel", "liquid-white-liquor-barrel"]
+  ]
+}

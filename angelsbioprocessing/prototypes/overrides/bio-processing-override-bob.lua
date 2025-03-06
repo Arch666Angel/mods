@@ -58,25 +58,25 @@ if bobmods then
   })
 end
 
-if mods["bobassembly"] and data.raw.technology["basic-automation"] then
+if mods["bobassembly"] and data.raw.technology["bob-electronics"] then
   OV.remove_prereq("bio-processing-brown", "automation")
-  OV.add_prereq("bio-processing-brown", "basic-automation")
+  OV.add_prereq("bio-processing-brown", "electronics")
   OV.remove_prereq("basic-chemistry", "automation")
-  OV.add_prereq("basic-chemistry", "basic-automation")
+  OV.add_prereq("basic-chemistry", "electronics")
 end
 
 if mods["bobelectronics"] then
   OV.patch_recipes({
     {
-      name = "wooden-board",
-      results = {{ type = "item", name = "wooden-board", amount = 1 }},
+      name = "bob-wooden-board",
+      results = {{ type = "item", name = "bob-wooden-board", amount = 1 }},
     },
   })
-  angelsmods.functions.remove_productivity("wooden-board")
+  angelsmods.functions.remove_productivity("bob-wooden-board")
 
   OV.patch_recipes({
     {
-      name = "phenolic-board",
+      name = "bob-phenolic-board",
       energy_required = 2,
       ingredients = {
         { "!!" },
@@ -88,5 +88,5 @@ if mods["bobelectronics"] then
   })
   OV.add_prereq("advanced-circuit", "bio-paper-1")
   OV.add_prereq("advanced-circuit", "resins")
-  angelsmods.functions.remove_productivity("phenolic-board")
+  angelsmods.functions.remove_productivity("bob-phenolic-board")
 end
