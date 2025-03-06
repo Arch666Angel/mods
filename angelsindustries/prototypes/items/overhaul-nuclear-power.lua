@@ -57,7 +57,7 @@ data:extend({
   --Th-232
   {
     type = "item",
-    name = "thorium-232", -- red (almost maroon)
+    name = "bob-thorium-232", -- red (almost maroon)
     icon = "__angelsindustriesgraphics__/graphics/icons/thorium-232.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -131,7 +131,7 @@ data:extend({
     stack_size = 50,
   },
   --order "a[uranium]-b" reserved for uranium-fuel-cell
-  --order "a[uranium]-c" reserved for used-up-uranium-fuel-cell
+  --order "a[uranium]-c" reserved for depleted-uranium-fuel-cell
   --AMOX-cell
   {
     type = "item",
@@ -141,14 +141,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-AMOX-cell",
+    burnt_result = "depleted-AMOX-cell",
     fuel_value = "8GJ",
     fuel_glow_color = util.color("ff9500"), -- Orange, slightly yellow
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-AMOX-cell",
+    name = "depleted-AMOX-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-plutonium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -164,14 +164,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-angels-thorium-fuel-cell",
+    burnt_result = "depleted-angels-thorium-fuel-cell",
     fuel_value = "15GJ", --down from 50
     fuel_glow_color = util.color("ff190d"), -- Red, slightly towards orange
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-angels-thorium-fuel-cell",
+    name = "depleted-angels-thorium-fuel-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-thorium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -187,14 +187,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-angels-deuterium-fuel-cell",
+    burnt_result = "depleted-angels-deuterium-fuel-cell",
     fuel_value = "80GJ",
     fuel_glow_color = util.color("00d5ff"), -- cyan per Lovely_Santa
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-angels-deuterium-fuel-cell",
+    name = "depleted-angels-deuterium-fuel-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-deuterium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -221,7 +221,7 @@ Starting with the vanilla system, leave as is, add an advanced reprocessing cycl
 Np-240
 Pu-240
 AMOX-cell
-used-up-AMOX-cell
+depleted-AMOX-cell
 Am-241
 muon-fusion-catalyst
 == LIST OF RECIPES
@@ -238,7 +238,7 @@ angels-mixed-oxide-cell
 "advanced-crafting" (no-hand crafting)
 
 angels-mixed-oxide-reprocessing
-10 used-up-AMOX-cells -> 2 U-238 + 1 slag + 1 Am-241 + 1 Fusion Catalyst
+10 depleted-AMOX-cells -> 2 U-238 + 1 slag + 1 Am-241 + 1 Fusion Catalyst
 "centrifuging" (centrifuge)
 
 angels-americium-regeneration

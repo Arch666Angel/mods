@@ -505,11 +505,18 @@ local function update_equipment_grid(equipment_grid_name, categories_to_add, cat
     end
   end
 
+  -- Factorio 2.0 requires equipment_categories to be an array (table with sequential indexes)
+  local seq_categories = {}
+  for _, value in pairs(categories) do
+     table.insert(seq_categories, value)
+  end
+
   for _, value in pairs(categories_to_add) do
     if not flipped_categories[value] then
-      table.insert(categories, value)
+      table.insert(seq_categories, value)
     end
   end
+  data.raw["equipment-grid"][equipment_grid_name].equipment_categories = seq_categories
 end
 
 ---Updates the equipment categories for the equipment with the given `equipment_name` and
