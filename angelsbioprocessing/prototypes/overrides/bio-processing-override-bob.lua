@@ -54,7 +54,7 @@ end
 -- everything below this should be rewritten and organized as it's becomming a mess
 if bobmods then
   OV.patch_recipes({
-    { name = "bob-coal-from-wood", ingredients = { { type = "item", name = "wood", amount = 5 } } },
+    { name = "bob-carbon-from-wood", ingredients = { { type = "item", name = "wood", amount = 5 } } },
   })
 end
 
