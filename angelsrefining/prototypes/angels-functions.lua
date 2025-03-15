@@ -1476,6 +1476,10 @@ function angelsmods.functions.hide(entity)
       to_add.hidden = true
       if type == "fluid" then --also remove barrel if a fluid
         angelsmods.functions.disable_barreling_recipes(entity)
+
+        -- disable bob's voiding recipe
+        angelsmods.functions.OV.disable_recipe("void-" .. entity)
+        -- ...and angel's voiding recipe(s)
         for _, void_category in pairs({ "water", "chemical" }) do
           angelsmods.functions.OV.disable_recipe("angels-" .. void_category .. "-void-" .. entity)
         end
