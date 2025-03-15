@@ -1,10 +1,5 @@
 local OV = angelsmods.functions.OV
 if mods["boblogistics"] then
-  -- bob valves
-  angelsmods.functions.move_item("bob-valve", "angels-fluid-control", "a[valve]-a", "item")
-  angelsmods.functions.move_item("bob-overflow-valve", "angels-fluid-control", "a[valve]-b", "item")
-  angelsmods.functions.move_item("bob-topup-valve", "angels-fluid-control", "a[valve]-c", "item")
-
   -- bob pumps
   angelsmods.functions.move_item("pump", "angels-fluid-control", "b[pump]-a[mk1]")
   angelsmods.functions.move_item("bob-pump-2", "angels-fluid-control", "b[pump]-b[mk2]")
