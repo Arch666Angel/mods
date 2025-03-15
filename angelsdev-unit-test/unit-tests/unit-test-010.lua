@@ -27,7 +27,11 @@ local function process_tech(tech)
       local skip = false
 
       -- Skip unbarelling recipes
-      if recipe.subgroup.name == "empty-barrel" then
+      if
+        recipe.name ~= "empty-barrel"
+        and string.sub(recipe.name, 1, 6) == "empty-"
+        and string.sub(recipe.name, -7, -1) == "-barrel"
+      then
         skip = true
       elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
         skip = true
@@ -65,6 +69,8 @@ local function process_tech(tech)
 
       -- Skip barelling recipes
       if recipe.subgroup.name == "fill-barrel" then
+        skip = true
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
       elseif recipe.subgroup.name == "bob-gas-bottle" then
         skip = true

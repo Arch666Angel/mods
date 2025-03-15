@@ -85,7 +85,7 @@ for _, fluid_n in pairs(data.raw.fluid) do
   if not (fluid_n.auto_barrel == false) then
     OV.patch_recipes({
       {
-        name = "fill-" .. fluid_n.name .. "-barrel",
+        name = fluid_n.name .. "-barrel",
         category = "barreling-pump",
         hide_from_player_crafting = angelsmods.trigger.enable_hide_barreling,
       },

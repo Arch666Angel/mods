@@ -555,7 +555,7 @@ ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_tem
   max_temp = max_temp or nil
   if data.raw.fluid[fluid] then
     local fluid = data.raw.fluid[fluid]
-    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+    local fill_barrel = data.raw.recipe[fluid.name .. "-barrel"]
     local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
     if fill_barrel then
       for _, ingredient in pairs(fill_barrel.ingredients) do
@@ -592,9 +592,9 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
     local F_Fill
     local F_Empty
     --check that the barrel actually exists
-    if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
+    if data.raw.recipe[fluid_s.name .. "-barrel"] then
       --define local function variables
-      F_Fill = data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] --define F_Fill
+      F_Fill = data.raw.recipe[fluid_s.name .. "-barrel"] --define F_Fill
       F_Empty = data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
       fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
       --set common properties
@@ -631,8 +631,8 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "item-name.filled-gas-canister",
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
-        ov_functions.remove_unlock("bob-fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("bob-gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-gas-canisters", fluid_s.name .. "-barrel")
         ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
         ov_functions.add_unlock("bob-gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
       elseif style == "acid" then -- Liquid Fuel Canisters
@@ -656,8 +656,8 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           "item-name.filled-canister",
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
-        ov_functions.remove_unlock("bob-fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-        ov_functions.add_unlock("bob-fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-fluid-canister-processing", fluid_s.name .. "-barrel")
         ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
         ov_functions.add_unlock("bob-fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
       else -- Vanilla Barrel

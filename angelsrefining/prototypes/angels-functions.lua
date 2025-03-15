@@ -1549,7 +1549,7 @@ end
 -- MODIFY BARRELING RECIPES ---------------------------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
-  angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-barrel")
+  angelsmods.functions.OV.disable_recipe(fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-liquid-bot")
@@ -1591,9 +1591,9 @@ function angelsmods.functions.modify_barreling_recipes()
 
     for fn, _ in pairs(data.raw.fluid) do
       if data.raw.item[fn .. "-barrel"] then
-        if recipes["fill-" .. fn .. "-barrel"] then
-          recipes["fill-" .. fn .. "-barrel"].hidden = true
-          recipes["fill-" .. fn .. "-barrel"].category = "barreling-pump"
+        if recipes[fn .. "-barrel"] then
+          recipes[fn .. "-barrel"].hidden = true
+          recipes[fn .. "-barrel"].category = "barreling-pump"
         end
         if recipes["empty-" .. fn .. "-barrel"] then
           recipes["empty-" .. fn .. "-barrel"].hidden = true
@@ -1654,9 +1654,9 @@ function angelsmods.functions.create_barreling_fluid_subgroup(fluids_to_move)
         })
       end
 
-      if recipes["fill-" .. fn .. "-barrel"] then
-        recipes["fill-" .. fn .. "-barrel"].subgroup = barrel.subgroup
-        recipes["fill-" .. fn .. "-barrel"].order = barrel.order .. "-a"
+      if recipes[fn .. "-barrel"] then
+        recipes[fn .. "-barrel"].subgroup = barrel.subgroup
+        recipes[fn .. "-barrel"].order = barrel.order .. "-a"
         recipes["empty-" .. fn .. "-barrel"].subgroup = barrel.subgroup
         recipes["empty-" .. fn .. "-barrel"].order = barrel.order .. "-b"
       end
