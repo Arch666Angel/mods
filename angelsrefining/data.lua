@@ -27,6 +27,7 @@ angelsmods.functions.OV = require("prototypes.override-functions")
 --Function set to build recipes and normalize them
 angelsmods.functions.RB = require("prototypes.recipe-builder")
 --Function set to build resources
+require("prototypes.generation.noise-expressions")
 require("prototypes.generation.resource-builder")
 --Functions for tips and tricks
 angelsmods.functions.TNT = require("prototypes.tips-and-tricks-functions")

@@ -1,5 +1,11 @@
 data:extend({
   {
+    type = "noise-function",
+    name = "angels_elevation_level",
+    parameters = {"optimal", "range", "max_range"},
+    expression = "angels_value_optimal_with_range(elevation, optimal, range, max_range)",
+  },
+  {
     type = "simple-entity",
     name = "angels-crystal-rock",
     flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
@@ -28,24 +34,11 @@ data:extend({
         percent = 100,
       },
     },
-    --[[ TODO: Fix autoplace
     autoplace = {
       order = "a[doodad]-c[angels-crystal-rock]",
-      max_probability = 0.05,
-      peaks = {
-        {
-          influence = 0.0002,
-        },
-        {
-          influence = 0.002,
-          min_influence = 0,
-          elevation_optimal = 45000,
-          elevation_range = 37000,
-          elevation_max_range = 45000,
-        },
-      },
+      control = "rocks",
+      probability_expression = "0.0002 + 0.002 * angels_elevation_level(45000, 37000, 45000)",
     },
-    ]]--
     pictures = {
       {
         filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-1.png",
