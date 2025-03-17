@@ -288,6 +288,97 @@ if angelsmods.industries.overhaul then
       })
       OV.add_prereq("bob-atomic-artillery-shell", "angels-plutonium-power")
     end
+
+    -- bobequipment adjustments
+    if mods["bobequipment"] then
+      OV.remove_prereq("bob-fission-reactor-equipment-4", "bob-thorium-plutonium-fuel-cell")
+      OV.add_prereq("bob-fission-reactor-equipment-4", "angels-fusion-power-1")
+
+      OV.patch_recipes({
+        {
+          name = "bob-fission-reactor-equipment-2",
+          ingredients = {
+            { type = "item", name = "AMOX-cell", amount = "bob-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-fission-reactor-equipment-3",
+          ingredients = {
+            { type = "item", name = "angels-thorium-fuel-cell", amount = "bob-thorium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-fission-reactor-equipment-4",
+          ingredients = {
+            { type = "item", name = "angels-deuterium-fuel-cell", amount = "bob-thorium-plutonium-fuel-cell" },
+          },
+        },
+      })
+    end
+
+    -- bobvehicleequipment adjustments
+    if mods["bobvehicleequipment"] then
+      OV.remove_prereq(
+        { "bob-vehicle-fission-cell-equipment-5", "bob-vehicle-fission-reactor-equipment-5" },
+        "bob-thorium-plutonium-fuel-cell"
+      )
+      OV.add_prereq(
+        { "bob-vehicle-fission-cell-equipment-5", "bob-vehicle-fission-reactor-equipment-5" },
+        "angels-fusion-power-1"
+      )
+
+      OV.patch_recipes({
+        {
+          name = "bob-vehicle-fission-cell-equipment-3",
+          ingredients = {
+            { type = "item", name = "AMOX-cell", amount = "bob-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-cell-equipment-4",
+          ingredients = {
+            { type = "item", name = "angels-thorium-fuel-cell", amount = "bob-thorium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-cell-equipment-5",
+          ingredients = {
+            { type = "item", name = "angels-deuterium-fuel-cell", amount = "bob-thorium-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-cell-equipment-6",
+          ingredients = {
+            { type = "item", name = "angels-deuterium-fuel-cell", amount = "bob-thorium-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-reactor-equipment-3",
+          ingredients = {
+            { type = "item", name = "AMOX-cell", amount = "bob-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-reactor-equipment-4",
+          ingredients = {
+            { type = "item", name = "angels-thorium-fuel-cell", amount = "bob-thorium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-reactor-equipment-5",
+          ingredients = {
+            { type = "item", name = "angels-deuterium-fuel-cell", amount = "bob-thorium-plutonium-fuel-cell" },
+          },
+        },
+        {
+          name = "bob-vehicle-fission-reactor-equipment-6",
+          ingredients = {
+            { type = "item", name = "angels-deuterium-fuel-cell", amount = "bob-thorium-plutonium-fuel-cell" },
+          },
+        },
+      })
+    end
+
   end
 else
   -- disable all nuclear stuff
