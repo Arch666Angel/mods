@@ -21,7 +21,8 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xa",
+      -- control = "water",
+      order = "xa",
       --max_probability = 0.025,
       --peaks = {
       --  {
@@ -32,7 +33,7 @@ data:extend({
       --    water_max_range = 0.125,
       --  },
       --},
-      probability_expression = 0.01
+      probability_expression = "min(0.025, 0.005*angels_moisture_level(0.625, 0.125, 0.125))",
     },
     protected_from_tile_building = false,
   },
@@ -58,7 +59,8 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xb",
+      -- control = "water",
+      order = "xb",
       --max_probability = 0.025,
       --peaks = {
       --  {
@@ -69,7 +71,7 @@ data:extend({
       --    water_max_range = 0.125,
       --  },
       --},
-      probability_expression = 0.01
+      probability_expression = "min(0.025, 0.005*angels_moisture_level(0.875, 0.25, 0.25))",
     },
     protected_from_tile_building = false,
   },
@@ -95,19 +97,25 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xc",
-      --max_probability = 0.025,
-      --peaks = {
-      --  {
-      --    influence = 0.01,
-      --    min_influence = 0,
-      --    water_optimal = 0.250,
-      --    water_range = 0.250,
-      --    water_max_range = 0.250,
-      --  },
-      --},
-      probability_expression = 0.01
+   --    -- control = "water",
+      order = "xc",
+   --    --max_probability = 0.025,
+   --    --peaks = {
+   --    --  {
+   --    --    influence = 0.01,
+   --    --    min_influence = 0,
+   --    --    water_optimal = 0.250,
+   --    --    water_range = 0.250,
+   --    --    water_max_range = 0.250,
+   --    --  },
+   --    --},
+      probability_expression = "min(0.025, 0.005*angels_moisture_level(0.25, 0.25, 0.25))",
+      -- probability_expression = 0.005
     },
     protected_from_tile_building = false,
   },
 })
+ 
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings.entity.settings["alien-fish-1"] = {}
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings.entity.settings["alien-fish-2"] = {}
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings.entity.settings["alien-fish-3"] = {}

@@ -1,5 +1,11 @@
 data:extend({
   {
+    type = "noise-function",
+    name = "angels_tree_probability",
+    parameters = {"moisture_optimal"},
+    expression = "0.00004*angels_moisture_level(moisture_optimal, 0.125, 0.15)",
+  },
+  {
     type = "item",
     name = "temperate-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
@@ -31,7 +37,9 @@ data:extend({
     order = "z-a",
     impact_category = "wood",
     autoplace = {
---       order = "xaa",
+      order = "xaa",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_tree_probability(0.625)",
 --       max_probability = 0.025,
 --       peaks = {
 --         {
@@ -42,7 +50,6 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-        probability_expression = 0.01
       --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
@@ -98,7 +105,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
+      order = "yaa",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_tree_probability(0.875)",
 --       max_probability = 0.025,
 --       peaks = {
 --         {
@@ -109,7 +118,6 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-        probability_expression = 0.01
       --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
@@ -171,7 +179,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
+      order = "yaa",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_tree_probability(0.25)",
 --       max_probability = 0.025,
 --       peaks = {
 --         {
@@ -182,7 +192,6 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-        probability_expression = 0.01
       --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {

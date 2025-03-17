@@ -1,5 +1,11 @@
 data:extend({
   {
+    type = "noise-function",
+    name = "angels_garden_probability",
+    parameters = {"moisture_optimal"},
+    expression = "0.00005*angels_moisture_level(moisture_optimal, 0.1, 0.15)",
+  },
+  {
     type = "item",
     name = "temperate-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
@@ -35,7 +41,9 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "xab",
+      order = "xab",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_garden_probability(0.6)",
 --       max_probability = 0.025,
 --       peaks = {
 --         -- {
@@ -49,7 +57,6 @@ data:extend({
 --           water_max_range = 0.15,
 --         },
 --       },
-        probability_expression = 0.01
       --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
@@ -126,7 +133,9 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "yab",
+      order = "yab",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_garden_probability(0.225)",
 --       max_probability = 0.025,
 --       peaks = {
 --         -- {
@@ -140,7 +149,8 @@ data:extend({
 --           water_max_range = 0.15,
 --         },
 --       },
-        probability_expression = 0.01
+        -- probability_expression = probability_expr,
+      -- probability_expression = "min(0.025, 0.0005*moisture_level(0.225, 0.1, 0.15))",
       --tile_restriction = {"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3", "sand-1", "sand-2", "sand-3"},
     },
     pictures = {
@@ -210,7 +220,9 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "yab",
+      order = "yab",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = "angels_garden_probability(0.9)",
 --       max_probability = 0.025,
 --       peaks = {
 --         -- {
@@ -224,7 +236,8 @@ data:extend({
 --           water_max_range = 0.15,
 --         },
 --       },
-        probability_expression = 0.01
+      -- probability_expression = "min(0.025, 0.0005*moisture_level(0.9, 0.1, 0.15))",
+        -- probability_expression = 0.001,
       --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {

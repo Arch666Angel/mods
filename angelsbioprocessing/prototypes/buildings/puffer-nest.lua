@@ -33,7 +33,9 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "za",
+      order = "za",
+      control = "trees", -- Otherwise it doesn't get placed on Nauvis
+      probability_expression = 0.00003,
 --       max_probability = 0.025,
 --       peaks = {
 --         -- {
@@ -47,7 +49,6 @@ data:extend({
 --           water_max_range = 0.5,
 --         },
 --       },
-        probability_expression = 0.01
       --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
