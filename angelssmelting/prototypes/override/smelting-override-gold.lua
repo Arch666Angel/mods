@@ -92,7 +92,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
 
     OV.patch_recipes({
       {
-        name = "intergrated-electronics",
+        name = "bob-integrated-electronics",
         ingredients = {
           {
             type = "item",
