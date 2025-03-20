@@ -61,10 +61,10 @@ if angelsmods.industries.overhaul then
   end
 
   if mods["bobelectronics"] then
-    move_item("basic-electronic-components", "angels-circuit-components", "z[bob]-a")
-    move_item("electronic-components", "angels-circuit-components", "z[bob]-b")
-    move_item("intergrated-electronics", "angels-circuit-components", "z[bob]-c")
-    move_item("processing-electronics", "angels-circuit-components", "z[bob]-d")
+    move_item("bob-basic-electronic-components", "angels-circuit-components", "z[bob]-a")
+    move_item("bob-electronic-components", "angels-circuit-components", "z[bob]-b")
+    move_item("bob-integrated-electronics", "angels-circuit-components", "z[bob]-c")
+    move_item("bob-processing-electronics", "angels-circuit-components", "z[bob]-d")
 
     move_item("wooden-board", "angels-board", "z[bob]-a")
     move_item("phenolic-board", "angels-board", "z[bob]-b")
