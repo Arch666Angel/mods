@@ -1,3 +1,15 @@
+local function angels_induction_furnace_fluid_boxes()
+  return {
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 2, -2 }, direction = defines.direction.north },
+      },
+    },
+  }
+end
 data:extend({
   {
     type = "item",
@@ -159,24 +171,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      -- {
-      -- production_type = "input",
-      -- pipe_picture = assembler3pipepictures(),
-      -- pipe_covers = pipecoverspictures(),
-      -- volume = 1000,
-      -- pipe_connections = {{type = "input", position = {0, 2}}}
-      -- },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      --off_when_no_fluid_recipe = true,
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_induction_furnace_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/induction-furnace.ogg", volume = 0.45 },
@@ -343,17 +339,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      --off_when_no_fluid_recipe = true,
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_induction_furnace_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/induction-furnace.ogg", volume = 0.45 },
@@ -520,17 +507,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      --off_when_no_fluid_recipe = true,
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_induction_furnace_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/induction-furnace.ogg", volume = 0.45 },
@@ -701,17 +679,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      --off_when_no_fluid_recipe = true,
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_induction_furnace_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/induction-furnace.ogg", volume = 0.45 },
