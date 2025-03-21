@@ -3,7 +3,7 @@
 angelsmods.functions.RB.set_fallback(
   "item",
   "t0-circuit",
-  { { "block-electronics-0" }, { "basic-circuit-board" }, { "electronic-circuit" } }
+  { { "block-electronics-0" }, { "bob-basic-circuit-board" }, { "electronic-circuit" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
