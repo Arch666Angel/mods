@@ -44,28 +44,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.north },
+          { flow_direction = "input", position = { -1, -1 }, direction = defines.direction.north },
         },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, -1.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 1, -1 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, 1.4 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { -1, 1 }, direction = defines.direction.south },
         },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 1, 1.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "output", position = { 1, 1 }, direction = defines.direction.south } },
       },
     },
     energy_source = {
