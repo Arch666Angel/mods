@@ -1,3 +1,34 @@
+local function angels_casting_machine_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "input", position = { -1, -1 }, direction = defines.direction.north },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "output", position = { 1, -1 }, direction = defines.direction.east } },
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { 1, 1 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { -1, 1 }, direction = defines.direction.west } },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -88,34 +119,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1.4, 1 }, direction = defines.direction.west } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "output", position = { 1.4, -1 }, direction = defines.direction.east } },
-      },
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
@@ -211,34 +216,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1.4, 1 }, direction = defines.direction.west } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "output", position = { 1.4, -1 }, direction = defines.direction.east } },
-      },
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
@@ -334,34 +313,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1.4, 1 }, direction = defines.direction.west } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "output", position = { 1.4, -1 }, direction = defines.direction.east } },
-      },
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
@@ -456,34 +409,8 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1.4, 1 }, direction = defines.direction.west } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "output", position = { 1.4, -1 }, direction = defines.direction.east } },
-      },
-    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelssmeltinggraphics__/sound/casting-machine.ogg", volume = 0.45 },
