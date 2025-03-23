@@ -94,7 +94,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
     OV.patch_recipes({
       {
         name = "angels-glass-fiber-board",
-        localised_name = { "item-name.fibreglass-board" },
+        localised_name = { "item-name.bob-fibreglass-board" },
         results = {
           { "!!" },
           { name = "bob-fibreglass-board", type = "item", amount = 4 },
@@ -102,8 +102,8 @@ if angelsmods.trigger.smelting_products["glass"].board then
         icons = {
           {
             icon = "__bobelectronics__/graphics/icons/fibreglass-board.png",
-            icon_size = 128,
-            scale = 32 / 128,
+            icon_size = 64,
+            scale = 32 / 64,
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-glass.png",

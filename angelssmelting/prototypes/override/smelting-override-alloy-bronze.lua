@@ -114,6 +114,12 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         results = {
           { type = "item", name = "bob-bronze-alloy", amount = 4 },
         },
+        icons = angelsmods.functions.add_icon_layer(
+          angelsmods.functions.get_object_icons("bob-bronze-alloy"),
+          angelsmods.functions.get_object_icons("liquid-molten-bronze"),
+          { -10, -10 },
+          0.2
+        ),
         order = "a[bronze]-b[bronze-alloy]",
       },
       --TECH

@@ -194,6 +194,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-molten-cobalt", amount = 120 },
     },
+    icons = angelsmods.functions.get_object_icons("liquid-molten-cobalt"),
     order = "h[liquid-molten-cobalt]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt"),
   },

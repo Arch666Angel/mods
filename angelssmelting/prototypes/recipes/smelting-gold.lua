@@ -203,8 +203,8 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-molten-gold", amount = 120 },
     },
+    icons = angelsmods.functions.get_object_icons("liquid-molten-gold"),
     main_product = "liquid-molten-gold",
-    --icon = "__angelssmeltinggraphics__/graphics/icons/molten-gold.png",
     order = "i[liquid-molten-gold]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
   },
