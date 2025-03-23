@@ -150,6 +150,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-molten-copper", amount = 120 },
     },
+    icons = angelsmods.functions.get_object_icons("liquid-molten-copper"),
     order = "g[liquid-molten-copper]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-copper"),
   },

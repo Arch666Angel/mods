@@ -159,6 +159,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-molten-platinum", amount = 120 },
     },
+    icons = angelsmods.functions.get_object_icons("liquid-molten-platinum"),
     order = "h[liquid-molten-platinum]",
     crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
   },

@@ -131,6 +131,7 @@ data:extend({
     results = {
       { type = "fluid", name = "liquid-molten-tin", amount = 120 },
     },
+    icons = angelsmods.functions.get_object_icons("liquid-molten-tin"),
     main_product = "liquid-molten-tin",
     order = "f[liquid-molten-tin]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
