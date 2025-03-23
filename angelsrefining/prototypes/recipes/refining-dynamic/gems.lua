@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-1",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,
@@ -19,6 +20,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-2",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,
@@ -35,6 +37,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-3",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,
@@ -51,6 +54,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-4",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,
@@ -67,6 +71,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-5",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,
@@ -83,6 +88,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore7-crystallization-6",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "geode-crystallization",
     energy_required = 4,

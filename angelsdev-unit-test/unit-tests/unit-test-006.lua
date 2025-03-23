@@ -156,6 +156,10 @@ local function calculate_science_pack_level()
     technologies_to_ignore["ftl-theory-A"] = true
     technologies_to_ignore["ftl-propulsion"] = true
   end
+
+  if script.active_mods["space-age"] then
+    technologies_to_ignore["railgun-damage-1"] = true
+  end
 end
 
 local tech_bonus_effects = {}
@@ -313,7 +317,6 @@ local unit_test_006 = function()
   local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
   local tech_unlock_levels = {} -- the technology level defined by the research effects
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
-
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     -- first calculate if this technology is a bonus technology
     if tech_unlocks_only_bonus_upgrades(tech_prototype) then

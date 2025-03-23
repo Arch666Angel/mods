@@ -854,10 +854,11 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
         tech.unit.time = modifications.time
         tech.unit.count = modifications.amount
       else -- not a unit based technology
+        tech.research_trigger = {}
         for i, modification in pairs(modifications) do
-          tech.research_trigger[i]=modification
+          tech.research_trigger[i] = modification
         end
-        end
+      end
     end
   end
   --adjust ingredient list only if unit based tech

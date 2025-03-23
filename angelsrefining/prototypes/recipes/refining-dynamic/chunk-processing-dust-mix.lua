@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix1-processing", --quartz
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -22,6 +23,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix2-processing", --nickel
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -41,6 +43,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix3-processing", --aluminium
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -60,6 +63,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix4-processing", --zinc
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -79,6 +83,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix5-processing", --silver-ore
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -98,6 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix6-processing", --fluorite
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -117,6 +123,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-chunk-mix7-processing", --unused
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
     energy_required = 1,
@@ -137,6 +144,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore8-dust-processing",
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,
@@ -163,6 +171,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore9-dust-processing",
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,

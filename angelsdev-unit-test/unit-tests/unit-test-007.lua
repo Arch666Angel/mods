@@ -23,6 +23,21 @@ local function has_recipe(recipe_filters, recipes_to_ignore)
   end
 end
 
+local function has_generator(fluid_name)
+  local generator_filters = {
+    { filter = "type", type = "fusion-generator", mode = "and" },
+  }
+  local generator_prototypes = prototypes.get_entity_filtered(generator_filters)
+  for _, generator_prototype in pairs(generator_prototypes) do
+    for _, fluidbox in pairs(generator_prototype.fluidbox_prototypes) do
+      if fluidbox.production_type == "input" and fluidbox.filter and fluidbox.filter.name == fluid_name then
+        return true
+      end
+    end
+  end
+  return false
+end
+
 local unit_test_007 = function()
   local unit_test_result = unit_test_functions.test_successful
 
@@ -161,7 +176,7 @@ local unit_test_007 = function()
       elem_filters = { { filter = "name", name = fluid_name } },
     })
 
-    if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
+    if not has_recipe(recipe_filters, fluid_recipes_to_ignore) and not has_generator(fluid_name) then
       unit_test_functions.print_msg(string.format("No (useful) recipe is using fluid %q as an ingredient.", fluid_name))
       unit_test_result = unit_test_functions.test_failed
     end

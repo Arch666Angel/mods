@@ -1555,7 +1555,7 @@ end
 function angelsmods.functions.disable_barreling_recipes(fluid_to_disable)
   angelsmods.functions.OV.disable_recipe(fluid_to_disable .. "-barrel")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-barrel")
-  angelsmods.functions.OV.disable_recipe("fill-" .. fluid_to_disable .. "-liquid-bot")
+  angelsmods.functions.OV.disable_recipe(fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.OV.disable_recipe("empty-" .. fluid_to_disable .. "-liquid-bot")
   angelsmods.functions.hide(fluid_to_disable .. "-barrel")
 end
@@ -1727,6 +1727,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
   if recipe then -- valid
     recipe.type = "recipe"
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
+    recipe.localised_name = { "recipe-name.angels-" .. void_category .. "-void", { "fluid-name." .. fluid_name }}
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
     recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void

@@ -31,7 +31,7 @@ data:extend({
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     prerequisites = {
-      mods["angelspetrochem"] and "angels-fluid-control" or "electronics",
+      mods["angelspetrochem"] and "angels-fluid-control" or "automation-science-pack",
     },
     effects = {
       {

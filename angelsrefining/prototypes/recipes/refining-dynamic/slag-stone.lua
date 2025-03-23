@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-1",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -23,6 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-2",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -43,6 +45,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-3",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -63,6 +66,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-4",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-2",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -83,6 +87,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-5",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-2",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -103,6 +108,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-6",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-2",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -123,6 +129,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-7",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-2",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -143,6 +150,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-8",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-3",
     subgroup = "slag-processing-1",
     energy_required = 8,
@@ -163,6 +171,7 @@ data:extend({
   {
     type = "recipe",
     name = "slag-processing-9",
+    localised_name = { "item-name.angels-void" },
     category = "crystallizing-3",
     subgroup = "slag-processing-1",
     energy_required = 8,
