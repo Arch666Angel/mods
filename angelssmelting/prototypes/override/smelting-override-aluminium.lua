@@ -20,11 +20,11 @@ end
 if angelsmods.trigger.smelting_products["aluminium"].ingot then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-aluminium-oxide", "alumina")
+    OV.global_replace_item("solid-aluminium-oxide", "bob-alumina")
     angelsmods.functions.hide("solid-aluminium-oxide")
-    angelsmods.functions.move_item("alumina", "angels-aluminium", "f")
-    data.raw["item"]["alumina"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png"
-    data.raw["item"]["alumina"].icon_size = 32
+    angelsmods.functions.move_item("bob-alumina", "angels-aluminium", "f")
+    data.raw["item"]["bob-alumina"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png"
+    data.raw["item"]["bob-alumina"].icon_size = 32
 
     OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
   end
@@ -34,7 +34,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
       name = "filter-ceramic",
       ingredients = {
         { type = "item", name = "plastic-bar", amount = 0 },
-        { type = "item", name = mods["bobplates"] and "alumina" or "solid-aluminium-oxide", amount = 1 },
+        { type = "item", name = mods["bobplates"] and "bob-alumina" or "solid-aluminium-oxide", amount = 1 },
       },
     },
   })
@@ -88,7 +88,7 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
     angelsmods.functions.move_item("bob-aluminium-plate", "angels-aluminium-casting", "k")
     data.raw["item"]["bob-aluminium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png"
     data.raw["item"]["bob-aluminium-plate"].icon_size = 32
-    OV.hide_recipe({ "bob-aluminium-plate", "alumina" })
+    OV.hide_recipe({ "bob-aluminium-plate", "bob-alumina" })
   end
 else
   angelsmods.functions.hide("angels-plate-aluminium")

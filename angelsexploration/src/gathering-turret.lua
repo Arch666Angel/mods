@@ -45,12 +45,12 @@ function gathering_turret:init_prototype_data()
     -- a complete list of possible items to loot and the technology name to unlock it
     ["gathering_items"] = { -- technology "angels-void" unlocks the technology from the start
       ["small-alien-artifact"] = "angels-gathering-turret",
-      ["small-alien-artifact-green"] = "angels-gathering-turret-target[small-alien-artifact-green]",
-      ["small-alien-artifact-purple"] = "angels-gathering-turret-target[small-alien-artifact-purple]",
-      ["small-alien-artifact-blue"] = "angels-gathering-turret-target[small-alien-artifact-blue]",
-      ["small-alien-artifact-orange"] = "angels-gathering-turret-target[small-alien-artifact-orange]",
-      ["small-alien-artifact-yellow"] = "angels-gathering-turret-target[small-alien-artifact-yellow]",
-      ["small-alien-artifact-red"] = "angels-gathering-turret-target[small-alien-artifact-red]",
+      ["small-alien-artifact-green"] = "angels-gathering-turret-target_small-alien-artifact-green_",
+      ["small-alien-artifact-purple"] = "angels-gathering-turret-target_small-alien-artifact-purple_",
+      ["small-alien-artifact-blue"] = "angels-gathering-turret-target_small-alien-artifact-blue_",
+      ["small-alien-artifact-orange"] = "angels-gathering-turret-target_small-alien-artifact-orange_",
+      ["small-alien-artifact-yellow"] = "angels-gathering-turret-target_small-alien-artifact-yellow_",
+      ["small-alien-artifact-red"] = "angels-gathering-turret-target_small-alien-artifact-red_",
     },
   }
 end
@@ -364,7 +364,7 @@ function gathering_turret:update_searching_turret(turret_data)
     gathering_distance_remaining = self:calculate_distance(turret_target.position, turret_entity.position),
   }
   local target_info = {
-    name = "angels-gathering-turret-target[" .. turret_data["target_data"].item_name .. "]",
+    name = "angels-gathering-turret-target_" .. turret_data["target_data"].item_name .. "_",
     position = turret_target.position,
     force = "enemy",
     create_build_effect_smoke = false,
@@ -530,7 +530,7 @@ function gathering_turret:get_whitelisted_gathering_items(force_name)
 end
 
 function gathering_turret:is_gathering_target(target_name)
-  return string.match(target_name, "angels%-gathering%-turret%-target%[.+%]") == target_name
+  return string.match(target_name, "angels%-gathering%-turret%-target%_.+%_") == target_name
 end
 
 function gathering_turret:get_gathering_radius(force_name)

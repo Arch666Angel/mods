@@ -96,12 +96,12 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       },
     })
     angelsmods.functions.move_item(
-      "cobalt-steel-alloy",
+      "bob-cobalt-steel-alloy",
       "angels-alloys-casting",
       "e[cobalt-steel]-b[cobalt-steel-alloy]"
     )
-    data.raw["item"]["cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
-    data.raw["item"]["cobalt-steel-alloy"].icon_size = 32
+    data.raw["item"]["bob-cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
+    data.raw["item"]["bob-cobalt-steel-alloy"].icon_size = 32
     OV.add_prereq("cobalt-processing", "angels-cobalt-steel-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-cobalt-steel")
   end

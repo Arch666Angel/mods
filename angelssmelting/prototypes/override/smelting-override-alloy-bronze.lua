@@ -199,10 +199,10 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
-    data.raw["item"]["bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
-    data.raw["item"]["bronze-alloy"].icon_size = 32
-    OV.disable_recipe({ "bronze-alloy" })
+    angelsmods.functions.move_item("bob-bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
+    data.raw["item"]["bob-bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
+    data.raw["item"]["bob-bronze-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-bronze-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
     OV.add_prereq("alloy-processing", "angels-bronze-smelting-1")

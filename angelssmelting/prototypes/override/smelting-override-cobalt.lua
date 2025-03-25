@@ -20,12 +20,12 @@ end
 if angelsmods.trigger.smelting_products["cobalt"].ingot then
   --REPLACE TECHS AND DISABLE RECIPES
   if mods["bobplates"] then
-    OV.global_replace_item("solid-cobalt-oxide", "cobalt-oxide")
+    OV.global_replace_item("solid-cobalt-oxide", "bob-cobalt-oxide")
     angelsmods.functions.hide("solid-cobalt-oxide")
-    angelsmods.functions.move_item("cobalt-oxide", "angels-cobalt", "e")
-    data.raw["item"]["cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
-    data.raw["item"]["cobalt-oxide"].icon_size = 32
-    OV.disable_recipe({ "cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
+    angelsmods.functions.move_item("bob-cobalt-oxide", "angels-cobalt", "e")
+    data.raw["item"]["bob-cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
+    data.raw["item"]["bob-cobalt-oxide"].icon_size = 32
+    OV.disable_recipe({ "bob-cobalt-oxide", "cobalt-oxide-from-copper", "cobalt-plate", "cobalt-steel-alloy" })
     OV.remove_prereq({ "battery-2", "rtg" }, "cobalt-processing") --based on the oxide not the plate
     OV.add_prereq({ "battery-2", "rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
   end
@@ -92,16 +92,16 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-cobalt", "cobalt-plate")
     angelsmods.functions.hide("angels-plate-cobalt")
-    angelsmods.functions.move_item("cobalt-plate", "angels-cobalt-casting", "j")
-    data.raw["item"]["cobalt-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png"
-    data.raw["item"]["cobalt-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-cobalt-plate", "angels-cobalt-casting", "j")
+    data.raw["item"]["bob-cobalt-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png"
+    data.raw["item"]["bob-cobalt-plate"].icon_size = 32
   end
 else
   angelsmods.functions.hide("angels-plate-cobalt")
   angelsmods.functions.hide("angels-roll-cobalt")
   OV.disable_recipe({ "roll-cobalt-casting", "roll-cobalt-casting-fast" })
   OV.disable_recipe({ "angels-plate-cobalt", "angels-roll-cobalt-converting" })
-  angelsmods.functions.hide("cobalt-plate")
+  angelsmods.functions.hide("bob-cobalt-plate")
 end
 
 -------------------------------------------------------------------------------

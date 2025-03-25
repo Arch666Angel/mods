@@ -502,7 +502,7 @@ end
 
 local function create_gathering_turret_target_tech(inputs)
   if type(inputs.require_tech_unlock) == "boolean" then
-    inputs.require_tech_unlock = "angels-gathering-turret-target[" .. inputs.name .. "]"
+    inputs.require_tech_unlock = "angels-gathering-turret-target_" .. inputs.name .. "_"
     return create_gathering_turret_target_tech(inputs)
   end
 
@@ -579,7 +579,7 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
   data:extend({
     {
       type = "land-mine",
-      name = "angels-gathering-turret-target[" .. inputs.name .. "]",
+      name = "angels-gathering-turret-target_" .. inputs.name .. "_",
 
       icons = angelsmods.functions.get_object_icons(inputs.name),
 

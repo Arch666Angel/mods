@@ -1,6 +1,6 @@
 require("util")
 
-local noise = require("noise")
+--[[local noise = require("noise-expression")
 
 local tne = noise.to_noise_expression
 local litexp = noise.literal_expression
@@ -13,7 +13,7 @@ local function new_random_seed()
   enemy_random_seed = enemy_random_seed + 1
   return enemy_random_seed
 end
-
+]]
 local control_name = "enemy-base"
 
 -- autoplace
@@ -23,32 +23,31 @@ local function enemy_autoplace(params)
   local is_turret = params.is_turret or false
 
   local distance_unit = 312
-  local distance_outside_starting_area = noise.var("distance") - noise.var("starting_area_radius")
+  local distance_outside_starting_area = "noise.var(distance) - noise.var(starting_area_radius)"
 
   -- Units with a higher distance_factor will appear farther out by one
   -- distance_unit per distance_factor
   local distance_height_multiplier =
-    noise.max(0, 1 + (distance_outside_starting_area - distance_unit * distance_factor) * 0.002 * distance_factor)
+    "noise.max(0, 1 + (distance_outside_starting_area - distance_unit * distance_factor) * 0.002 * distance_factor)"
 
-  local probability_expression = noise.var("enemy_base_probability") * distance_height_multiplier
+  local probability_expression = "noise.var(enemy_base_probability) * distance_height_multiplier"
   -- limit probability so that it never quite reaches 1,
   -- because that would result in stupid-looking squares of biter bases:
-  probability_expression = noise.min(probability_expression, 0.25 + distance_factor * 0.05)
+  probability_expression = "noise.min(probability_expression, 0.25 + distance_factor * 0.05)"
   -- Add randomness to the probability so that there's a little bit of a gradient
   -- between different units:
-  probability_expression = noise.random_penalty(probability_expression, 0.1, {
-    x = noise.var("x") + new_random_seed(), -- Include distance_factor in random seed!
-  })
+  probability_expression = "noise.random_penalty(probability_expression, 0.1, {x = noise.var(x) + new_random_seed(),})"
+  -- Include distance_factor in random seed!
   -- log("Probability expression for " .. params.order .. "#" .. distance_factor .. ":")
   -- log(tostring(expression_to_ascii_math(probability_expression)))
-  local richness_expression = tne(1)
+  --local richness_expression = tne(1)
 
   return {
     control = control_name,
     order = order,
     force = "enemy",
-    probability_expression = probability_expression,
-    richness_expression = richness_expression,
+    probability_expression = enemy_base_probability,--probability_expression, uses vanilla probability experssion
+    intensity_expression = enemy_base_intensity--richness_expression, uses vanilla intensity
   }
 end
 local function enemy_spawner_autoplace(distance)
@@ -854,7 +853,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
     --flame_alpha = 0.35,
     --flame_alpha_deviation = 0.05,
 
-    emissions_per_second = 0,
+    emissions_per_second = {pollution=0.001},
 
     add_fuel_cooldown = 10,
     fade_in_duration = 1,
@@ -1176,7 +1175,9 @@ local function make_projectile_stream(pro_app, pro_dmg)
             {
               type = "create-fire",
               entity_name = splash_fire.name,
-              tile_collision_mask = { "water-tile" },
+              tile_collision_mask = { layers = {
+                water_tile=true
+              } },
               show_in_tooltip = true,
             },
             {

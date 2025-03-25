@@ -6,7 +6,7 @@ data:extend({
     type = "item-with-entity-data",
     name = "angels-turbo-bike",
     icon = "__angelsexplorationgraphics__/graphics/icons/turbo-bike.png",
-    icon_size = "64",
+    icon_size = 64,
     flags = {},
     subgroup = "angels-vehicle-car",
     order = "a[bike]-a[turbo-bike]",
@@ -56,9 +56,11 @@ data:extend({
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     effectivity = 0.06,
     braking_power = "100W",
-    burner = {
+    energy_source = { --burner
+      type = "burner",
       effectivity = 0.5,
       fuel_inventory_size = 1,
+      fuel_categories = {"chemical"},
       --smoke =
       --{
       --  {
@@ -359,19 +361,11 @@ data:extend({
     drawing_box = { { -1.55, -3 }, { 1.55, 3 } },
     effectivity = 0.7,
     braking_power = "1000kW",
-    burner = {
+    energy_source = { --burner
+      type = "burner",
       effectivity = 0.75,
       fuel_inventory_size = 3,
-      smoke = {
-        {
-          name = "tank-smoke",
-          deviation = { 0.25, 0.25 },
-          frequency = 50,
-          position = { 0, 1.5 },
-          starting_frame = 0,
-          starting_frame_deviation = 60,
-        },
-      },
+      fuel_categories = {"chemical"},
     },
     consumption = "1200kW",
     terrain_friction_modifier = 0.2,

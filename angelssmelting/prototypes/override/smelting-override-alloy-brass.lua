@@ -202,10 +202,10 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
-    data.raw["item"]["brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
-    data.raw["item"]["brass-alloy"].icon_size = 32
-    OV.disable_recipe({ "brass-alloy" })
+    angelsmods.functions.move_item("bob-brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
+    data.raw["item"]["bob-brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
+    data.raw["item"]["bob-brass-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-brass-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-brass")
     OV.add_prereq("bob-zinc-processing", "angels-brass-smelting-1")
   end

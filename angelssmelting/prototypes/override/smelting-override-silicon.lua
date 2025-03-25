@@ -107,23 +107,23 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].powder then
   if mods["bobplates"] then
-    OV.global_replace_item("powder-silicon", "silicon-powder")
+    OV.global_replace_item("powder-silicon", "bob-silicon-powder")
     angelsmods.functions.override_item_conditions({
       value = 200,
       list = {
-        "silicon-powder",
+        "bob-silicon-powder",
       },
     })
     angelsmods.functions.hide("powder-silicon")
     OV.disable_recipe({ "powder-silicon" })
 
-    angelsmods.functions.move_item("silicon-powder", "angels-silicon", "g")
-    data.raw.item["silicon-powder"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png"
-    data.raw.item["silicon-powder"].icon_size = 64
-    data.raw.item["silicon-powder"].localised_name = { "item-name.powder-silicon" }
+    angelsmods.functions.move_item("bob-silicon-powder", "angels-silicon", "g")
+    data.raw.item["bob-silicon-powder"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png"
+    data.raw.item["bob-silicon-powder"].icon_size = 64
+    data.raw.item["bob-silicon-powder"].localised_name = { "item-name.powder-silicon" }
     OV.patch_recipes({
       {
-        name = "silicon-powder",
+        name = "bob-silicon-powder",
         subgroup = "angels-silicon",
         energy_required = 0.5,
         ingredients = {
@@ -133,20 +133,20 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
         order = "g[bobs-silicon]",
       },
     })
-    angelsmods.functions.remove_productivity("silicon-powder")
+    angelsmods.functions.remove_productivity("bob-silicon-powder")
     OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
   end
 
   if mods["bobplates"] then
     -- silicon powder derivatives
-    angelsmods.functions.move_item("silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
-    angelsmods.functions.move_item("silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
+    angelsmods.functions.move_item("bob-silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
+    angelsmods.functions.move_item("bob-silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
     OV.patch_recipes({
-      { name = "silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a" },
-      { name = "silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b" },
+      { name = "bob-silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a" },
+      { name = "bob-silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b" },
     })
   end
 else
-  angelsmods.functions.hide("powder-silicon")
-  OV.disable_recipe({ "powder-silicon" })
+  angelsmods.functions.hide("bob-powder-silicon")
+  OV.disable_recipe({ "bob-powder-silicon" })
 end

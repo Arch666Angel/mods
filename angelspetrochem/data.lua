@@ -42,7 +42,7 @@ angelsmods.trigger.salt_production = true
 angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids
   or (angelsmods.functions.is_special_vanilla() == false)
 angelsmods.trigger.water_green_waste = (
-  angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["deuterium"])
+  angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["bob-deuterium"])
 )
     and true
   or false

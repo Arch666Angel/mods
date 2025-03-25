@@ -98,9 +98,9 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
-    data.raw["item"]["invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
-    data.raw["item"]["invar-alloy"].icon_size = 32
+    angelsmods.functions.move_item("bob-invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
+    data.raw["item"]["bob-invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
+    data.raw["item"]["bob-invar-alloy"].icon_size = 32
     OV.global_replace_technology("bob-invar-processing", "angels-invar-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-invar")
   end
