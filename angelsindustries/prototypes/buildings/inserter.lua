@@ -35,7 +35,7 @@ data:extend({
       drain = "0kW",
     },
     fast_replaceable_group = "inserter",
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       match_progress_to_activity = true,
       sound = {
@@ -149,7 +149,7 @@ data:extend({
     extension_speed = 0.03,
     rotation_speed = 0.014,
     fast_replaceable_group = "inserter",
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       match_progress_to_activity = true,
       sound = {

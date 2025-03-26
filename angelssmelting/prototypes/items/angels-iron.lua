@@ -59,7 +59,6 @@ data:extend({
     subgroup = "angels-iron-casting",
     order = "i",
     default_temperature = 1538,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 125 / 255, g = 145 / 255, b = 161 / 255 },
     flow_color = { r = 125 / 255, g = 145 / 255, b = 161 / 255 },

@@ -27,11 +27,15 @@ local function process_tech(tech)
       local skip = false
 
       -- Skip unbarelling recipes
-      if recipe.subgroup.name == "empty-barrel" then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif recipe.subgroup.name == "empty-barrel" then
         skip = true
       elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
         skip = true
       elseif recipe.subgroup.name == "bob-empty-canister" then
+        skip = true
+      elseif string.sub(recipe.name, 1, 6) == "empty-" and string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
       end
 
@@ -64,7 +68,11 @@ local function process_tech(tech)
       skip = false
 
       -- Skip barelling recipes
-      if recipe.subgroup.name == "fill-barrel" then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "fill-barrel" then
         skip = true
       elseif recipe.subgroup.name == "bob-gas-bottle" then
         skip = true
@@ -123,10 +131,9 @@ local function process_tech(tech)
             end
           end
         elseif entity.type == "offshore-pump" then
-          if entity.fluidbox_prototypes[1].filter then
-            recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
-          else
-          
+          local filter = entity.fluidbox_prototypes[1].filter
+          if filter then
+            recipes[recipe.name].products.fluids[filter.name] = true
           end
         end
       end

@@ -24,10 +24,10 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "lead-oxide")
     angelsmods.functions.hide("solid-lead-oxide")
-    angelsmods.functions.move_item("lead-oxide", "angels-lead", "d")
-    data.raw["item"]["lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
-    data.raw["item"]["lead-oxide"].icon_size = 32
-    OV.hide_recipe({ "bob-lead-plate", "lead-oxide", "lead-oxide-2" })
+    angelsmods.functions.move_item("bob-lead-oxide", "angels-lead", "d")
+    data.raw["item"]["bob-lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
+    data.raw["item"]["bob-lead-oxide"].icon_size = 32
+    OV.hide_recipe({ "bob-lead-plate", "bob-lead-oxide", "lead-oxide-2" })
     OV.global_replace_technology("bob-lead-processing", "angels-lead-smelting-1")
   end
 

@@ -614,7 +614,7 @@ data:extend({
       run_mode = "backward",
       layers = { [0] = "object" },
     }),
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
     prepare_range = 35,
     shoot_in_prepare_state = false,
     attack_parameters = {

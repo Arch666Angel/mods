@@ -81,7 +81,7 @@ data:extend({
     energy_usage = "90kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -94,7 +94,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
   },
   --T1
@@ -164,7 +163,7 @@ data:extend({
     energy_usage = "90kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -177,7 +176,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
   },
   {
@@ -246,7 +244,7 @@ data:extend({
     energy_usage = "90kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -259,7 +257,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
   },
   --T2
@@ -321,7 +318,7 @@ data:extend({
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -334,7 +331,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
     crafting_categories = { "crafting", "advanced-crafting", "crafting-with-fluid" },
     crafting_speed = 1,
@@ -424,7 +420,7 @@ data:extend({
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -437,7 +433,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
     crafting_categories = { "crafting", "advanced-crafting", "crafting-with-fluid" },
     crafting_speed = 0.5,
@@ -479,7 +474,7 @@ data:extend({
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -492,7 +487,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
     collision_box = { { -1.2 * 2 / 3, -1.2 * 2 / 3 }, { 1.2 * 2 / 3, 1.2 * 2 / 3 } },
     selection_box = { { -1.5 * 2 / 3, -1.5 * 2 / 3 }, { 1.5 * 2 / 3, 1.5 * 2 / 3 } },
@@ -582,7 +576,7 @@ data:extend({
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -595,7 +589,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.5,
     },
     collision_box = { { -1.2 * 4 / 3, -1.2 * 4 / 3 }, { 1.2 * 4 / 3, 1.2 * 4 / 3 } },
     selection_box = { { -1.5 * 4 / 3, -1.5 * 4 / 3 }, { 1.5 * 4 / 3, 1.5 * 4 / 3 } },

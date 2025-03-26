@@ -55,7 +55,6 @@ data:extend({
           volume = 1.0,
         },
       },
-      apparent_volume = 2,
     },
     dying_sound = {
       {

@@ -38,7 +38,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     fast_replaceable_group = "container",
     inventory_size = 60,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big.png",
       priority = "extra-high",
@@ -86,7 +86,7 @@ data:extend({
     logistic_mode = "requester",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-requester.png",
       priority = "extra-high",
@@ -134,7 +134,7 @@ data:extend({
     logistic_mode = "passive-provider",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-passive-provider.png",
       priority = "extra-high",
@@ -172,7 +172,7 @@ data:extend({
     logistic_mode = "active-provider",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-active-provider.png",
       priority = "extra-high",
@@ -221,7 +221,7 @@ data:extend({
     logistic_mode = "storage",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-storage.png",
       priority = "extra-high",
@@ -269,7 +269,7 @@ data:extend({
     logistic_mode = "buffer",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     picture = {
       filename = "__angelsindustriesgraphics__/graphics/entity/chests/chest-big-buffer.png",
       priority = "extra-high",

@@ -45,7 +45,7 @@ if angelsmods.addons.storage.warehouses then
       selection_box = { { -3, -3 }, { 3, 3 } },
       fast_replaceable_group = "angels-warehouse",
       inventory_size = 768,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       picture = {
         filename = "__angelsaddons-storage__/graphics/entity/warehouse.png",
         priority = "extra-high",

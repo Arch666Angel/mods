@@ -530,7 +530,7 @@ function gathering_turret:get_whitelisted_gathering_items(force_name)
 end
 
 function gathering_turret:is_gathering_target(target_name)
-  return string.match(target_name, "angels%-gathering%-turret%-target%[.+%]") == target_name
+  return string.match(target_name, "angels%-gathering%-turret%-target%_.+%_") == target_name
 end
 
 function gathering_turret:get_gathering_radius(force_name)

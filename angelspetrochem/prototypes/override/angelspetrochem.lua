@@ -4,19 +4,19 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobplates"] and data.raw["fluid"]["deuterium"] then
+if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
   angelsmods.trigger.water_green_waste = true
   OV.converter_fluid("heavy-water", "liquid-water-heavy")
   angelsmods.functions.disable_barreling_recipes("heavy-water")
-  OV.converter_fluid("deuterium", "gas-deuterium")
-  angelsmods.functions.disable_barreling_recipes("deuterium")
+  OV.converter_fluid("bob-deuterium", "gas-deuterium")
+  angelsmods.functions.disable_barreling_recipes("bob-deuterium")
 
   OV.disable_recipe({ "bob-heavy-water", "heavy-water-electrolysis" })
 
-  OV.global_replace_technology("heavy-water-processing", "water-chemistry-1")
-  OV.disable_technology("heavy-water-processing")
-  OV.global_replace_technology("deuterium-processing", "water-chemistry-2")
-  OV.disable_technology("deuterium-processing")
+  OV.global_replace_technology("bob-heavy-water-processing", "water-chemistry-1")
+  OV.disable_technology("bob-heavy-water-processing")
+  OV.global_replace_technology("bob-deuterium-processing", "water-chemistry-2")
+  OV.disable_technology("bob-deuterium-processing")
   OV.add_prereq("water-chemistry-2", "nuclear-fuel-reprocessing")
 
   if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then

@@ -19,7 +19,6 @@ data:extend({
     subgroup = "angels-solder-casting",
     order = "b",
     default_temperature = 200,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 106 / 255, g = 138 / 255, b = 129 / 255 },
     flow_color = { r = 106 / 255, g = 138 / 255, b = 129 / 255 },

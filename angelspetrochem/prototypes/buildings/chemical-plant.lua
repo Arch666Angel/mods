@@ -100,7 +100,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -116,9 +116,8 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -254,7 +253,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -270,9 +269,8 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -408,7 +406,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -424,9 +422,8 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -561,7 +558,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -577,9 +574,8 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },

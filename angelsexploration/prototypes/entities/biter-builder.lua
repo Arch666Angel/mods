@@ -1,6 +1,5 @@
 require("util")
 
-
 local control_name = "enemy-base"
 
 -- autoplace
@@ -827,7 +826,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
     --flame_alpha = 0.35,
     --flame_alpha_deviation = 0.05,
 
-    emissions_per_second = { pollution = 0 },
+    emissions_per_second = {pollution=0.001},
 
     add_fuel_cooldown = 10,
     fade_in_duration = 1,
@@ -1149,8 +1148,8 @@ local function make_projectile_stream(pro_app, pro_dmg)
             {
               type = "create-fire",
               entity_name = splash_fire.name,
-              tile_collision_mask = {layers = {
-                  water_tile=true,
+              tile_collision_mask = { layers = {
+                water_tile=true
               } },
               show_in_tooltip = true,
             },
@@ -1362,7 +1361,7 @@ local function make_loot(loot_data)
     return nil
   end
 
-  loot_proto = {}
+  local loot_proto = {}
   for _, loot_item in pairs(loot_data) do
     local item_found = false
     if loot_item.item then
@@ -1498,7 +1497,6 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
             volume = 1.0,
           },
         },
-        apparent_volume = 2,
       },
       dying_sound = {
         {

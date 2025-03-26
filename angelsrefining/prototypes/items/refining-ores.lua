@@ -275,7 +275,6 @@ data:extend({
     subgroup = "ore-sorting-fluid",
     order = "a[slag]-a[thermal]",
     default_temperature = 0,
-    base_flow_rate = 100,
     heat_capacity = "0.2kJ",
     base_color = { r = 242 / 255, g = 135 / 255, b = 0 / 255 },
     flow_color = { r = 247 / 255, g = 140 / 255, b = 3 / 255 },

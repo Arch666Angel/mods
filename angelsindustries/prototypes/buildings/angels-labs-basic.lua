@@ -73,7 +73,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",
@@ -163,7 +162,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",
@@ -253,7 +251,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",

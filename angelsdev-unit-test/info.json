@@ -8,6 +8,6 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "A tool to help process unit tests ingame",
   "dependencies": [
-    "base >= 1.2.0"
+    "base >= 2.0.0"
   ]
 }

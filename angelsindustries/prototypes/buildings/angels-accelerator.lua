@@ -85,7 +85,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -98,7 +98,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -205,7 +204,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -218,7 +217,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -319,7 +317,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -332,7 +330,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -433,7 +430,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -446,7 +443,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -547,7 +543,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -560,7 +556,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -667,7 +662,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -680,7 +675,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {
@@ -775,7 +769,7 @@ if angelsmods.industries.tech then
       ingredient_count = 1,
       open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
       close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       working_sound = {
         sound = {
           {
@@ -788,7 +782,6 @@ if angelsmods.industries.tech then
           },
         },
         idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-        apparent_volume = 1.5,
       },
       fluid_boxes = {
         {

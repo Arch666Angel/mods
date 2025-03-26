@@ -19,30 +19,30 @@ end
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods["bobplates"] then
-    OV.converter_fluid("tungstic-acid", "liquid-tungstic-acid")
-    angelsmods.functions.disable_barreling_recipes("tungstic-acid")
-    OV.disable_recipe({ "tungstic-acid" })
+    OV.converter_fluid("bob-tungstic-acid", "liquid-tungstic-acid")
+    angelsmods.functions.disable_barreling_recipes("bob-tungstic-acid")
+    OV.disable_recipe({ "bob-tungstic-acid" })
   end
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-tungsten-oxide", "tungsten-oxide")
+    OV.global_replace_item("solid-tungsten-oxide", "bob-tungsten-oxide")
     angelsmods.functions.hide("solid-tungsten-oxide")
-    angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "d")
-    data.raw["item"]["tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
-    data.raw["item"]["tungsten-oxide"].icon_size = 32
-    data.raw["item"]["tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
-    OV.disable_recipe({ "tungsten-oxide" })
+    angelsmods.functions.move_item("bob-tungsten-oxide", "angels-tungsten", "d")
+    data.raw["item"]["bob-tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
+    data.raw["item"]["bob-tungsten-oxide"].icon_size = 32
+    data.raw["item"]["bob-tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
+    OV.disable_recipe({ "bob-tungsten-oxide" })
   end
 
   if mods["bobplates"] then
-    OV.global_replace_item("powder-tungsten", "powdered-tungsten")
+    OV.global_replace_item("powder-tungsten", "bob-powdered-tungsten")
     angelsmods.functions.hide("powder-tungsten")
-    angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
-    data.raw["item"]["powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
-    data.raw["item"]["powdered-tungsten"].icon_size = 64
-    data.raw["item"]["powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
-    OV.disable_recipe({ "powdered-tungsten" })
+    angelsmods.functions.move_item("bob-powdered-tungsten", "angels-tungsten", "h")
+    data.raw["item"]["bob-powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
+    data.raw["item"]["bob-powdered-tungsten"].icon_size = 64
+    data.raw["item"]["bob-powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
+    OV.disable_recipe({ "bob-powdered-tungsten" })
   end
 else
   angelsmods.functions.hide("processed-tungsten")

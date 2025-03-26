@@ -19,7 +19,6 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         subgroup = "angels-alloys-casting",
         order = "b[brass]-a[liquid-molten-brass]",
         default_temperature = 0,
-        base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 204 / 256, g = 153 / 256, b = 102 / 256 },
         flow_color = { r = 204 / 256, g = 153 / 256, b = 102 / 256 },
@@ -203,10 +202,10 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
-    data.raw["item"]["brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
-    data.raw["item"]["brass-alloy"].icon_size = 32
-    OV.disable_recipe({ "brass-alloy" })
+    angelsmods.functions.move_item("bob-brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
+    data.raw["item"]["bob-brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
+    data.raw["item"]["bob-brass-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-brass-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-brass")
     OV.add_prereq("bob-zinc-processing", "angels-brass-smelting-1")
   end

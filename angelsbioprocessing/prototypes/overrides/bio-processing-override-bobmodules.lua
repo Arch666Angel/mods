@@ -348,11 +348,17 @@ if mods["bobmodules"] then
       "productivity-module-" .. (i < 6 and 4 or 6),
       "efficiency-module-" .. (i < 6 and 4 or 6),
     }) do
-      for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient[1]] then
-          ingredients_added[ingredient[1]] = true
-          table.insert(ingredients, util.table.deepcopy(ingredient))
+      --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
+      local technology = data.raw.technology[tech_name]
+      if technology and technology.unit and technology.unit.ingredients then
+        for _, ingredient in pairs(technology.unit.ingredients) do
+          if not ingredients_added[ingredient[1]] then
+            ingredients_added[ingredient[1]] = true
+            table.insert(ingredients, util.table.deepcopy(ingredient))
+          end
         end
+      else
+        --log(tech_name)
       end
     end
     local solder_amount = i
@@ -414,7 +420,7 @@ if mods["bobmodules"] then
         unit = {
           count = i < 6 and ((i - 1) * 50) or ((i - 3) * 100),
           ingredients = ingredients,
-          time = data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit.time,
+          time = (data.raw.technology["productivity-module-" .. (i<6 and 4 or 6)] and data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit) and data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit.time or 12,
         },
       },
     })

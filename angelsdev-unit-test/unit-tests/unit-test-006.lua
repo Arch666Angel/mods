@@ -98,7 +98,7 @@ local function calculate_science_pack_level()
   if script.active_mods["bobtech"] then
     -- bobs regular science packs
     for pack_name, pack_level in pairs({
-      ["advanced-logistic-science-pack"] = 50
+      ["bob-advanced-logistic-science-pack"] = 50
         + (science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]),
     }) do
       science_pack_level[pack_name] = pack_level
@@ -107,22 +107,22 @@ local function calculate_science_pack_level()
     if script.active_mods["bobenemies"] then
       -- bobs alien science packs
       for pack_name, pack_level in pairs({
-        ["science-pack-gold"] = 50
+        ["bob-science-pack-gold"] = 50
+          + (science_pack_level["angels-science-pack-orange"] or science_pack_level["chemical-science-pack"]),
+        ["bob-alien-science-pack"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack"] = 50
+        ["bob-alien-science-pack-blue"] = 50
+          + (science_pack_level["angels-science-pack-orange"] or science_pack_level["chemical-science-pack"]),
+        ["bob-alien-science-pack-orange"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-blue"] = 50
+        ["bob-alien-science-pack-purple"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-orange"] = 50
+        ["bob-alien-science-pack-yellow"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-purple"] = 50
+        ["bob-alien-science-pack-green"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-yellow"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-green"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-red"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
+        ["bob-alien-science-pack-red"] = 50
+          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
       }) do
         science_pack_level[pack_name] = pack_level
       end
@@ -155,6 +155,10 @@ local function calculate_science_pack_level()
     technologies_to_ignore["astrometrics"] = true
     technologies_to_ignore["ftl-theory-A"] = true
     technologies_to_ignore["ftl-propulsion"] = true
+  end
+
+  if script.active_mods["space-age"] then
+    technologies_to_ignore["railgun-damage-1"] = true
   end
 end
 
@@ -313,7 +317,6 @@ local unit_test_006 = function()
   local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
   local tech_unlock_levels = {} -- the technology level defined by the research effects
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
-
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     -- first calculate if this technology is a bonus technology
     if tech_unlocks_only_bonus_upgrades(tech_prototype) then

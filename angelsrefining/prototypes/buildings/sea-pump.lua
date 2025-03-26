@@ -61,7 +61,7 @@ data:extend({
     pumping_speed = 1500 / 60,
     tile_width = 3,
     tile_height = 3,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     graphics_set = {
       base_pictures = {
         north = {
@@ -290,7 +290,7 @@ data:extend({
     --    }
     --  }
     --},
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     --working_sound =
@@ -306,8 +306,7 @@ data:extend({
     --    --  volume = 0.43
     --    --}
     --  },
-    --  max_sounds_per_type = 3,
-    --  audible_distance_modifier = 0.6,
+    --  max_sounds_per_prototype = 3,
     --  fade_in_ticks = 4,
     --  fade_out_ticks = 10
     --},

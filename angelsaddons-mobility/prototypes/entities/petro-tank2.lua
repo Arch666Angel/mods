@@ -205,7 +205,7 @@ funcs.generate_train_entities({
   },
   crash_trigger = crash_trigger(),
   sound_minimum_speed = 0.5,
-  vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+  impact_category = "wood",
   equipment_grid = "angels-petro-tank2",
   fast_replaceable_group = "angels-petro-tank2",
   minimap_representation = fluid_minimap_representation,
