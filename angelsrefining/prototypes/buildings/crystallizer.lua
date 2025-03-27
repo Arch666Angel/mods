@@ -1,3 +1,54 @@
+local function angels_crystallizer_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = {
+        north = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 0,
+          shift = { 0, 1 },
+          scale = 0.5,
+        },
+        east = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 128,
+          shift = { -1, 0 },
+          scale = 0.5,
+        },
+        south = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 256,
+          shift = { 0, -1 },
+          scale = 0.5,
+        },
+        west = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 384,
+          shift = { 1, 0 },
+          scale = 0.5,
+        },
+      },
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
+    },
+    -- {
+    -- production_type = "output",
+    -- pipe_covers = pipecoverspictures(),
+    -- volume = 100,
+    -- pipe_connections = {{ position = {0, -3} }}
+    -- },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -72,54 +123,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = {
-          north = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 0,
-            shift = { 0, 1 },
-            scale = 0.5,
-          },
-          east = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 128,
-            shift = { -1, 0 },
-            scale = 0.5,
-          },
-          south = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 256,
-            shift = { 0, -1 },
-            scale = 0.5,
-          },
-          west = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 384,
-            shift = { 1, 0 },
-            scale = 0.5,
-          },
-        },
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      -- {
-      -- production_type = "output",
-      -- pipe_covers = pipecoverspictures(),
-      -- volume = 100,
-      -- pipe_connections = {{ position = {0, -3} }}
-      -- },
-    },
+    fluid_boxes = angels_crystallizer_fluid_boxes(),
   },
   {
     type = "item",
@@ -194,54 +198,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = {
-          north = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 0,
-            shift = { 0, 1 },
-            scale = 0.5,
-          },
-          east = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 128,
-            shift = { -1, 0 },
-            scale = 0.5,
-          },
-          south = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 256,
-            shift = { 0, -1 },
-            scale = 0.5,
-          },
-          west = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 384,
-            shift = { 1, 0 },
-            scale = 0.5,
-          },
-        },
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      -- {
-      -- production_type = "output",
-      -- pipe_covers = pipecoverspictures(),
-      -- volume = 100,
-      -- pipe_connections = {{ position = {0, -3} }}
-      -- },
-    },
+    fluid_boxes = angels_crystallizer_fluid_boxes(),
   },
   {
     type = "item",
@@ -315,53 +272,6 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = {
-          north = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 0,
-            shift = { 0, 1 },
-            scale = 0.5,
-          },
-          east = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 128,
-            shift = { -1, 0 },
-            scale = 0.5,
-          },
-          south = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 256,
-            shift = { 0, -1 },
-            scale = 0.5,
-          },
-          west = {
-            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
-            priority = "extra-high",
-            size = 128,
-            x = 384,
-            shift = { 1, 0 },
-            scale = 0.5,
-          },
-        },
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      -- {
-      -- production_type = "output",
-      -- pipe_covers = pipecoverspictures(),
-      -- volume = 100,
-      -- pipe_connections = {{ position = {0, -3} }}
-      -- },
-    },
+    fluid_boxes = angels_crystallizer_fluid_boxes(),
   },
 })

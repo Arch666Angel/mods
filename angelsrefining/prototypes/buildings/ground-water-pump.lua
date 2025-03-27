@@ -57,7 +57,7 @@ data:extend({
         {
           flow_direction = "output",
           position = { 0, 0.4 },
-          direction = defines.direction.north
+          direction = defines.direction.south
         },
       },
     },
