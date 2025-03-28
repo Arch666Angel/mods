@@ -78,13 +78,13 @@ end
 -- WIRE -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["gold"].wire then
-  if data.raw.item["gilded-copper-cable"] then -- bob electronics
-    OV.global_replace_item("angels-wire-gold", "gilded-copper-cable")
+  if data.raw.item["bob-gilded-copper-cable"] then -- bob electronics
+    OV.global_replace_item("angels-wire-gold", "bob-gilded-copper-cable")
     angelsmods.functions.hide("angels-wire-gold")
-    angelsmods.functions.move_item("gilded-copper-cable", "angels-gold-casting", "m")
-    OV.disable_recipe({ "gilded-copper-cable" })
-    data.raw["item"]["gilded-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
-    data.raw["item"]["gilded-copper-cable"].icon_size = 32
+    angelsmods.functions.move_item("bob-gilded-copper-cable", "angels-gold-casting", "m")
+    OV.disable_recipe({ "bob-gilded-copper-cable" })
+    data.raw["item"]["bob-gilded-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
+    data.raw["item"]["bob-gilded-copper-cable"].icon_size = 32
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
@@ -96,8 +96,8 @@ if angelsmods.trigger.smelting_products["gold"].wire then
         ingredients = {
           {
             type = "item",
-            name = angelsmods.trigger.smelting_products["platinum"].wire and "gilded-copper-cable" or "insulated-cable",
-            amount = "tinned-copper-cable",
+            name = angelsmods.trigger.smelting_products["platinum"].wire and "bob-gilded-copper-cable" or "bob-insulated-cable",
+            amount = "bob-tinned-copper-cable",
           },
         },
       },

@@ -3,7 +3,7 @@ local move_item = angelsmods.functions.move_item
 
 if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
   OV.add_prereq("bio-wood-processing", "automation-science-pack")
-  OV.add_prereq("bio-processing-brown", "electricity")
+  OV.add_prereq("bio-processing-brown", "bob-electricity")
 end
 
 if mods["bobplates"] then

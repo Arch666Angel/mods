@@ -461,7 +461,7 @@ if angelsmods.industries.tech then
 
       OV.set_science_pack("steam-power", "angels-science-pack-grey", 1)
       OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)
-      OV.set_science_pack("electricity", "angels-science-pack-grey", 1)
+      OV.set_science_pack("bob-electricity", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
 

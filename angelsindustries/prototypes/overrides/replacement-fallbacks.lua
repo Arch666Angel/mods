@@ -59,9 +59,9 @@ angelsmods.industries.block_replace = {
   ["copper-tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 3 },
   --wire/cable
   ["copper-cable"] = { new = "cable-harness-1", amt_multi = 1 },
-  ["tinned-copper-cable"] = { new = "cable-harness-2", amt_multi = 1 },
-  ["insulated-cable"] = { new = "cable-harness-3", amt_multi = 1 },
-  ["gilded-copper-cable"] = { new = "cable-harness-4", amt_multi = 1 },
+  ["bob-tinned-copper-cable"] = { new = "cable-harness-2", amt_multi = 1 },
+  ["bob-insulated-cable"] = { new = "cable-harness-3", amt_multi = 1 },
+  ["bob-gilded-copper-cable"] = { new = "cable-harness-4", amt_multi = 1 },
   --intermediates (vanilla)
   ["iron-stick"] = { new = "construction-components", amt_multi = 1 },
 }

@@ -188,7 +188,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/rubbers-tech.png",
     icon_size = 128,
     prerequisites = {
-      "rubber",
+      "bob-rubber",
     },
     effects = {
       {
@@ -209,7 +209,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rubber",
+    name = "bob-rubber",
     icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {

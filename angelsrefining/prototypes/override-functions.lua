@@ -161,7 +161,7 @@ local function generate_barrel_icons(fluid, style)
     f_icon = generate_liquid_canister_icons(fluid)
   else
     f_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/barrel.png", icon_size = 64 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png",
         icon_size = 64,

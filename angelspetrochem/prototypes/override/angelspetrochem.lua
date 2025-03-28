@@ -115,22 +115,22 @@ elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.over
     {
       name = "catalyst-metal-green",
       ingredients = {
-        { type = "item", name = "bauxite-ore", amount = 1 },
-        { type = "item", name = "silver-ore", amount = 1 },
+        { type = "item", name = "bob-bauxite-ore", amount = 1 },
+        { type = "item", name = "bob-silver-ore", amount = 1 },
       },
     },
     {
       name = "catalyst-metal-blue",
       ingredients = {
-        { type = "item", name = "rutile-ore", amount = 1 },
-        { type = "item", name = "cobalt-ore", amount = 1 },
+        { type = "item", name = "bob-rutile-ore", amount = 1 },
+        { type = "item", name = "bob-cobalt-ore", amount = 1 },
       },
     },
     {
       name = "catalyst-metal-yellow",
       ingredients = {
-        { type = "item", name = "tungsten-ore", amount = 1 },
-        { type = "item", name = "nickel-ore", amount = 1 },
+        { type = "item", name = "bob-tungsten-ore", amount = 1 },
+        { type = "item", name = "bob-nickel-ore", amount = 1 },
       },
     },
   })
@@ -252,7 +252,7 @@ else
   })
   OV.disable_technology({
     "rubbers",
-    "rubber",
+    "bob-rubber",
   })
 end
 

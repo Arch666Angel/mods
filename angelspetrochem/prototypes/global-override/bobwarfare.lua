@@ -37,7 +37,7 @@ if mods["bobwarfare"] then
 
   OV.patch_recipes({
     {
-      name = "nitroglycerin",
+      name = "bob-nitroglycerin",
       subgroup = "petrochem-rocket",
       order = "ib",
       ingredients = hide_sulfuric_nitric_acid_mixture
@@ -55,16 +55,16 @@ if mods["bobwarfare"] then
       }),
     },
   })
-  data.raw["recipe"]["nitroglycerin"].always_show_products = true
+  data.raw["recipe"]["bob-nitroglycerin"].always_show_products = true
 
-  OV.remove_unlock("nitroglycerin-processing", "glycerol")
+  OV.remove_unlock("nitroglycerin-processing", "bob-glycerol")
   OV.add_prereq("nitroglycerin-processing", "angels-explosives-1")
 
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.converter_fluid("glycerol", "liquid-glycerol")
-  OV.disable_recipe({ "glycerol" })
+  OV.converter_fluid("bob-glycerol", "liquid-glycerol")
+  OV.disable_recipe({ "bob-glycerol" })
   angelsmods.functions.disable_barreling_recipes("glycerol")
 
   -----------------------------------------------------------------------------
@@ -72,7 +72,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   OV.patch_recipes({
     {
-      name = "gun-cotton",
+      name = "bob-gun-cotton",
       ingredients = {
         { name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid" },
       },
@@ -90,7 +90,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   OV.patch_recipes({
     {
-      name = "petroleum-jelly",
+      name = "bob-petroleum-jelly",
       ingredients = {
         { name = "gas-residual", type = "fluid", amount = "liquid-naphtha" },
       },

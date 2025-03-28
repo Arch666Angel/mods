@@ -33,8 +33,8 @@ if angelsmods.industries.overhaul then
 
   -- classes
   if mods["bobclasses"] then
-    data.raw["item-subgroup"]["body-parts"].group = "angels-components"
-    data.raw["item-subgroup"]["body-parts"].order = "z[bob-parts]-a"
+    data.raw["item-subgroup"]["bob-body-parts"].group = "angels-components"
+    data.raw["item-subgroup"]["bob-body-parts"].order = "z[bob-parts]-a"
   end
 end
 

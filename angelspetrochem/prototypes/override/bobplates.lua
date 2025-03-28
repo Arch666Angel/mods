@@ -114,7 +114,7 @@ end
 if mods["bobplates"] then
   -- electronics tech patch ---------------------------------------------------
   if mods["bobelectronics"] then
-    OV.add_prereq("electronics", "angels-coal-processing")
+    OV.add_prereq("bob-electronics", "angels-coal-processing")
   end
 end
 
@@ -167,7 +167,7 @@ if mods["bobplates"] then
     },
   })
   OV.add_unlock("flammables", "bob-liquid-fuel")
-  OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
+  --OV.add_unlock("flammables", "bob-enriched-fuel-from-liquid-fuel")
   OV.remove_prereq("flammables", "gas-processing")
   OV.add_prereq("flammables", "steam-cracking-1")
 end
@@ -177,9 +177,9 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.resin then
-    OV.global_replace_item({ "solid-resin" }, "resin")
+    OV.global_replace_item({ "solid-resin" }, "bob-resin")
     angelsmods.functions.hide("solid-resin")
-    move_item("resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
+    move_item("bob-resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
     local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png"
       or "__bobelectronics__/graphics/icons/resin.png"
 
@@ -228,18 +228,18 @@ if mods["bobplates"] or mods["bobelectronics"] then
       OV.add_prereq("resins", "bob-wood-processing")
     end
   else
-    angelsmods.functions.hide("resin")
+    angelsmods.functions.hide("bob-resin")
     OV.disable_recipe({
       "bob-resin-wood",
       "solid-resin",
     })
   end
 
-  OV.remove_unlock("plastics", "synthetic-wood")
+  OV.remove_unlock("plastics", "bob-synthetic-wood")
   if mods["angelsbioprocessing"] then
-    OV.disable_recipe({ "synthetic-wood" })
+    OV.disable_recipe({ "bob-synthetic-wood" })
   else
-    OV.add_unlock("plastic-1", "synthetic-wood")
+    OV.add_unlock("plastic-1", "bob-synthetic-wood")
   end
 end
 
@@ -248,9 +248,9 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.rubber then
-    OV.global_replace_item("solid-rubber", "rubber")
+    OV.global_replace_item("solid-rubber", "bob-rubber")
     angelsmods.functions.hide("solid-rubber")
-    move_item("rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
+    move_item("bob-rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
 
     if mods["bobelectronics"] then
       OV.patch_recipes({
@@ -258,7 +258,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
           name = "bob-rubber",
           ingredients = {
             { "!!" },
-            { type = "item", name = "resin", amount = 3 },
+            { type = "item", name = "bob-resin", amount = 3 },
           },
           subgroup = "petrochem-solids-2",
           order = "b[rubber]-b[solid]-a",
@@ -285,7 +285,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
       OV.disable_recipe("bob-rubber")
     end
   else
-    angelsmods.functions.hide("rubber")
+    angelsmods.functions.hide("bob-rubber")
     OV.disable_recipe("bob-rubber")
   end
 end
