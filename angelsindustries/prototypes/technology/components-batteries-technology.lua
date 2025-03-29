@@ -157,7 +157,7 @@ if angelsmods.industries.components then
       prerequisites = {
         "angels-gold-smelting-1",
         --"plastic-1",
-        "rubber",
+        "bob-rubber",
         "angels-manganese-smelting-2",
         "angels-components-batteries-3",
       },

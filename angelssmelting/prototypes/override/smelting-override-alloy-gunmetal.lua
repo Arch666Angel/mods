@@ -60,7 +60,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           { type = "fluid", name = "liquid-molten-gunmetal", amount = 40 },
         },
         results = {
-          { type = "item", name = "gunmetal-alloy", amount = 4 },
+          { type = "item", name = "bob-gunmetal-alloy", amount = 4 },
         },
         order = "c[gunmetal]-b[gunmetal-alloy]",
       },

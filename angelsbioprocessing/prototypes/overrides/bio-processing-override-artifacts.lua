@@ -132,7 +132,7 @@ if angelsmods.trigger.artifacts["red"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-red", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-red", amount = 5 },
@@ -149,8 +149,8 @@ if angelsmods.trigger.artifacts["red"] then
     OV.disable_technology("angels-alien-artifact-red")
   end
 else
-  OV.remove_unlock("angels-alien-artifact-red", "alien-artifact-red-from-small")
-  OV.remove_unlock("angels-alien-artifact-red", "alien-artifact-red-from-basic")
+  OV.remove_unlock("angels-alien-artifact-red", "bob-alien-artifact-red-from-small")
+  OV.remove_unlock("angels-alien-artifact-red", "bob-alien-artifact-red-from-basic")
   OV.disable_technology("angels-alien-artifact-red")
 end
 
@@ -284,7 +284,7 @@ if angelsmods.trigger.artifacts["yellow"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-yellow", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-yellow", amount = 5 },
@@ -436,7 +436,7 @@ if angelsmods.trigger.artifacts["orange"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-orange", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-orange", amount = 5 },
@@ -588,7 +588,7 @@ if angelsmods.trigger.artifacts["blue"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-blue", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-blue", amount = 5 },
@@ -740,7 +740,7 @@ if angelsmods.trigger.artifacts["purple"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-purple", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-purple", amount = 5 },
@@ -892,7 +892,7 @@ if angelsmods.trigger.artifacts["green"] then
         energy_required = 5,
         ingredients = {
           { type = "item", name = "alien-artifact-green", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = "bob-alien-artifact", amount = 5 },
         },
         results = {
           { type = "item", name = "alien-artifact-green", amount = 5 },
@@ -954,7 +954,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
       -- SMALL ARTIFACT
       {
         type = "recipe",
-        name = "small-alien-artifact",
+        name = "bob-small-alien-artifact",
         localised_name = { "item-name.small-alien-artifact" },
         category = "crafting",
         subgroup = "bio-processing-alien-small",
@@ -964,7 +964,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
           { type = "item", name = "alien-pre-artifact-base", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact", amount = 1 },
+          { type = "item", name = "bob-small-alien-artifact", amount = 1 },
         },
         icon_size = 32,
         order = "g[base]",
@@ -972,18 +972,18 @@ if angelsmods.trigger.artifacts["base"] then -- pink
     })
 
     OV.add_unlock("bio-processing-alien-3", "alien-pre-artifact-base")
-    OV.add_unlock("bio-processing-alien-3", "small-alien-artifact")
+    OV.add_unlock("bio-processing-alien-3", "bob-small-alien-artifact")
     OV.add_prereq("bio-processing-alien-3", "angels-alien-artifact")
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
     if angelsmods.trigger.bio_pastes["iron"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact", "bio-processing-alien-small", "g[base]")
+      angelsmods.functions.move_item("bob-small-alien-artifact", "bio-processing-alien-small", "g[base]")
     end
-    angelsmods.functions.move_item("alien-artifact", "bio-processing-alien-large", "g[base]")
+    angelsmods.functions.move_item("bob-alien-artifact", "bio-processing-alien-large", "g[base]")
     if angelsmods.exploration then
       OV.patch_recipes({
-        { name = "alien-artifact-from-small", enabled = false },
+        { name = "bob-alien-artifact-from-small", enabled = false },
       })
       if mods["bobclasses"] and not data.raw.item["rtg"] then
         OV.add_prereq("bodies", "angels-alien-artifact")
@@ -1019,10 +1019,10 @@ if angelsmods.trigger.artifacts["base"] then -- pink
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "small-alien-artifact", amount = 25 },
+          { type = "item", name = "bob-small-alien-artifact", amount = 25 },
         },
         results = {
-          { type = "item", name = "alien-artifact", amount = 1 },
+          { type = "item", name = "bob-alien-artifact", amount = 1 },
         },
         icon_size = 32,
         order = "g[base]",

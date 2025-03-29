@@ -11,7 +11,7 @@ end
 -- RUBBER HANDLING ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobelectronics"] then
-  move_item("insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
+  move_item("bob-insulated-cable", "petrochem-solids", "a[petrochem-solids]-c[rubber]-b")
   --[[
     Normal Bob's (w or w/o Greenhouses) is 1 wood per 1 rubber per 2 circuit wires.
     Bob's + Angel's Petrochem is 15 wood per 1 rubber per 2 circuit wires
@@ -32,33 +32,33 @@ if mods["bobelectronics"] then
   if mods["bobplates"] then
     OV.patch_recipes({
       {
-        name = "insulated-cable",
+        name = "bob-insulated-cable",
         ingredients = {
-          { type = "item", name = "tinned-copper-cable", amount = wood_per_rubber * 2 },
-          { type = "item", name = "rubber", amount = 1 },
+          { type = "item", name = "bob-tinned-copper-cable", amount = wood_per_rubber * 2 },
+          { type = "item", name = "bob-rubber", amount = 1 },
         },
       },
     })
   end
   OV.patch_recipes({
     {
-      name = "insulated-cable",
+      name = "bob-insulated-cable",
       subgroup = "petrochem-solids-2",
       order = "b[rubber]-c[cable]-c",
-      results = { { type = "item", name = "insulated-cable", amount = wood_per_rubber * 2 } },
+      results = { { type = "item", name = "bob-insulated-cable", amount = wood_per_rubber * 2 } },
       energy_required = wood_per_rubber / 2,
     },
   })
 
   OV.remove_unlock("bob-wood-processing", "bob-rubber")
-  OV.remove_unlock("electronics", "insulated-cable")
+  OV.remove_unlock("electronics", "bob-insulated-cable")
   if mods["angelsbioprocessing"] then
     OV.add_unlock("bio-wood-processing-2", "bob-rubber")
     OV.add_prereq("circuit-network", "bio-wood-processing-2")
   else
     OV.add_unlock("circuit-network", "bob-rubber")
   end
-  OV.add_unlock("circuit-network", "insulated-cable")
+  OV.add_unlock("circuit-network", "bob-insulated-cable")
   OV.add_prereq("rubbers", "circuit-network")
   OV.add_prereq("processing-unit", "rubbers")
 end

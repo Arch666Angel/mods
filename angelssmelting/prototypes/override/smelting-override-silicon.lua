@@ -79,17 +79,17 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].wafer then
   if mods["bobplates"] then
-    OV.global_replace_item("angels-silicon-wafer", "silicon-wafer")
+    OV.global_replace_item("angels-silicon-wafer", "bob-silicon-wafer")
     angelsmods.functions.hide("angels-silicon-wafer")
     OV.disable_recipe({ "angels-silicon-wafer" })
 
-    angelsmods.functions.move_item("silicon-wafer", "angels-silicon-casting", "l[angels-silicon-wafer]")
+    angelsmods.functions.move_item("bob-silicon-wafer", "angels-silicon-casting", "l[angels-silicon-wafer]")
     OV.patch_recipes({
       {
-        name = "silicon-wafer",
+        name = "bob-silicon-wafer",
         energy_required = 1,
         results = {
-          { type = "item", name = "silicon-wafer", amount = 6 },
+          { type = "item", name = "bob-silicon-wafer", amount = 6 },
         },
         subgroup = "angels-silicon-casting",
         order = "l[angels-silicon-wafer]",

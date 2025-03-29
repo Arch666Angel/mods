@@ -9,7 +9,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["invar"].plate then
   if mods["bobplates"] then
-    OV.hide_recipe("invar-alloy")
+    OV.hide_recipe("bob-invar-alloy")
     data:extend({
       --INVAR
       --ITEMS
@@ -62,7 +62,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           { type = "fluid", name = "liquid-molten-invar", amount = 40 },
         },
         results = {
-          { type = "item", name = "invar-alloy", amount = 4 },
+          { type = "item", name = "bob-invar-alloy", amount = 4 },
         },
         order = "d[invar]-b[invar-alloy]",
       },

@@ -1,11 +1,11 @@
 local OV = angelsmods.functions.OV
 
-local alien_technology = bobmods and bobmods.tech and data.raw.technology["alien-research"] and true or false
+local alien_technology = bobmods and bobmods.tech and data.raw.technology["bob-alien-research"] and true or false
 -------------------------------------------------------------------------------
 -- BASE ARTIFACTS (pink, T0) --------------------------------------------------
 -------------------------------------------------------------------------------
 if alien_technology then
-  OV.add_prereq("alien-research", "angels-alien-artifact")
+  OV.add_prereq("bob-alien-research", "angels-alien-artifact")
 
   for _, tech_name in pairs({
     -- personal equipment
@@ -44,31 +44,31 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-blue",
+      name = "bob-alien-research-blue",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-blue",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-blue",
+          recipe = "bob-alien-science-pack-blue",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-blue")
+  OV.remove_unlock("bob-alien-research", "alien-science-pack-blue")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
@@ -77,7 +77,7 @@ if alien_technology then
       (not bobmods.plates) and "bob-piercing-rocket" or nil,
       bobmods.plates and "alien-blue-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
+      OV.remove_prereq(tech_name, "bob-alien-research")
       OV.add_prereq(tech_name, "alien-research-blue")
     end
   end
@@ -90,41 +90,41 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-orange",
+      name = "bob-alien-research-orange",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-orange",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-orange",
+          recipe = "bob-alien-science-pack-orange",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-orange")
+  OV.remove_unlock("bob-alien-research", "bob-alien-science-pack-orange")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
       (not bobmods.plates) and "bob-acid-bullets" or nil,
       (not bobmods.plates) and "bob-shotgun-acid-shells" or nil,
       (not bobmods.plates) and "bob-acid-rocket" or nil,
-      bobmods.plates and "alien-orange-research" or nil,
+      bobmods.plates and "bob-alien-orange-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
-      OV.add_prereq(tech_name, "alien-research-orange")
+      OV.remove_prereq(tech_name, "bob-alien-research")
+      OV.add_prereq(tech_name, "bob-alien-research-orange")
     end
     if bobmods.plates then -- swap purple and orange artifacts type
       for _, tech_name in pairs({
@@ -132,8 +132,8 @@ if alien_technology then
         "bob-shotgun-acid-shells",
         "bob-acid-rocket",
       }) do
-        OV.remove_prereq(tech_name, "alien-purple-research")
-        OV.add_prereq(tech_name, "alien-orange-research")
+        OV.remove_prereq(tech_name, "bob-alien-purple-research")
+        OV.add_prereq(tech_name, "bob-alien-orange-research")
       end
     end
   end
@@ -146,19 +146,19 @@ if alien_technology then
   for _, tech_name in pairs({
     bobmods.warfare and "bob-power-armor-3" or nil,
     -- personal equipment
-    bobmods.equipment and "fission-reactor-equipment-2" or nil,
+    bobmods.equipment and "bob-fission-reactor-equipment-2" or nil,
     bobmods.equipment and "bob-battery-equipment-4" or nil,
     bobmods.equipment and "bob-energy-shield-equipment-4" or nil,
     -- vehicle equipment
-    bobmods.equipment and "vehicle-fusion-cell-equipment-4" or nil,
-    bobmods.equipment and "vehicle-fusion-reactor-equipment-4" or nil,
-    bobmods.equipment and "vehicle-battery-equipment-4" or nil,
-    bobmods.equipment and "vehicle-energy-shield-equipment-4" or nil,
-    bobmods.equipment and "vehicle-big-turret-equipment-4" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-cell-equipment-4" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-4" or nil,
+    bobmods.equipment and "bob-vehicle-battery-equipment-4" or nil,
+    bobmods.equipment and "bob-vehicle-energy-shield-equipment-4" or nil,
+    bobmods.equipment and "bob-vehicle-big-turret-equipment-4" or nil,
   }) do
-    OV.remove_prereq(tech_name, "alien-research")
-    OV.add_prereq(tech_name, "alien-research-blue")
-    OV.add_prereq(tech_name, "alien-research-orange")
+    OV.remove_prereq(tech_name, "bob-alien-research")
+    OV.add_prereq(tech_name, "bob-alien-research-blue")
+    OV.add_prereq(tech_name, "bob-alien-research-orange")
   end
 end
 
@@ -169,41 +169,41 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-purple",
+      name = "bob-alien-research-purple",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-purple",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-purple",
+          recipe = "bob-alien-science-pack-purple",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-purple")
+  OV.remove_unlock("bob-alien-research", "bob-alien-science-pack-purple")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
       (not bobmods.plates) and "bob-electric-bullets" or nil,
       (not bobmods.plates) and "bob-shotgun-electric-shells" or nil,
       (not bobmods.plates) and "bob-electric-rocket" or nil,
-      bobmods.plates and "alien-purple-research" or nil,
+      bobmods.plates and "bob-alien-purple-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
-      OV.add_prereq(tech_name, "alien-research-purple")
+      OV.remove_prereq(tech_name, "bob-alien-research")
+      OV.add_prereq(tech_name, "bob-alien-research-purple")
     end
     if bobmods.plates then -- swap purple and orange artifacts type
       for _, tech_name in pairs({
@@ -211,8 +211,8 @@ if alien_technology then
         "bob-shotgun-electric-shells",
         "bob-electric-rocket",
       }) do
-        OV.remove_prereq(tech_name, "alien-orange-research")
-        OV.add_prereq(tech_name, "alien-purple-research")
+        OV.remove_prereq(tech_name, "bob-alien-orange-research")
+        OV.add_prereq(tech_name, "bob-alien-purple-research")
       end
     end
   end
@@ -225,31 +225,31 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-yellow",
+      name = "bob-alien-research-yellow",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-yellow",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-yellow",
+          recipe = "bob-alien-science-pack-yellow",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-yellow")
+  OV.remove_unlock("bob-bob-alien-research", "bob-alien-science-pack-yellow")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
@@ -257,10 +257,10 @@ if alien_technology then
       (not bobmods.plates) and "bob-shotgun-explosive-shells" or nil,
       (not bobmods.plates) and "bob-explosive-rocket" or nil,
       (not bobmods.plates) and "bob-explosive-artillery-shells" or nil,
-      bobmods.plates and "alien-yellow-research" or nil,
+      bobmods.plates and "bob-alien-yellow-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
-      OV.add_prereq(tech_name, "alien-research-yellow")
+      OV.remove_prereq(tech_name, "bob-alien-research")
+      OV.add_prereq(tech_name, "bob-alien-research-yellow")
     end
   end
 end
@@ -272,19 +272,19 @@ if alien_technology then
   for _, tech_name in pairs({
     bobmods.warfare and "bob-power-armor-4" or nil,
     -- personal equipment
-    bobmods.equipment and "fission-reactor-equipment-3" or nil,
+    bobmods.equipment and "bob-fission-reactor-equipment-3" or nil,
     bobmods.equipment and "bob-battery-equipment-5" or nil,
     bobmods.equipment and "bob-energy-shield-equipment-5" or nil,
     -- vehicle equipment
-    bobmods.equipment and "vehicle-fusion-cell-equipment-5" or nil,
-    bobmods.equipment and "vehicle-fusion-reactor-equipment-5" or nil,
-    bobmods.equipment and "vehicle-battery-equipment-5" or nil,
-    bobmods.equipment and "vehicle-energy-shield-equipment-5" or nil,
-    bobmods.equipment and "vehicle-big-turret-equipment-5" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-cell-equipment-5" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-5" or nil,
+    bobmods.equipment and "bob-vehicle-battery-equipment-5" or nil,
+    bobmods.equipment and "bob-vehicle-energy-shield-equipment-5" or nil,
+    bobmods.equipment and "bob-vehicle-big-turret-equipment-5" or nil,
   }) do
-    OV.remove_prereq(tech_name, "alien-research")
-    OV.add_prereq(tech_name, "alien-research-purple")
-    OV.add_prereq(tech_name, "alien-research-yellow")
+    OV.remove_prereq(tech_name, "bob-alien-research")
+    OV.add_prereq(tech_name, "bob-alien-research-purple")
+    OV.add_prereq(tech_name, "bob-alien-research-yellow")
   end
 end
 
@@ -295,31 +295,31 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-green",
+      name = "bob-alien-research-green",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-green",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-green",
+          recipe = "bob-alien-science-pack-green",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-green")
+  OV.remove_unlock("bob-alien-research", "bob-alien-science-pack-green")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
@@ -327,10 +327,10 @@ if alien_technology then
       (not bobmods.plates) and "bob-shotgun-poison-shells" or nil,
       (not bobmods.plates) and "bob-poison-rocket" or nil,
       (not bobmods.plates) and "bob-poison-artillery-shells" or nil,
-      bobmods.plates and "alien-green-research" or nil,
+      bobmods.plates and "bob-alien-green-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
-      OV.add_prereq(tech_name, "alien-research-green")
+      OV.remove_prereq(tech_name, "bob-alien-research")
+      OV.add_prereq(tech_name, "bob-alien-research-green")
     end
   end
 end
@@ -342,31 +342,31 @@ if alien_technology then
   data:extend({
     {
       type = "technology",
-      name = "alien-research-red",
+      name = "bob-alien-research-red",
       icon = "__bobtech__/graphics/icons/alien-technology.png",
       icon_size = 128,
       order = "e-f-a",
       prerequisites = {
-        "alien-research",
+        "bob-alien-research",
         "angels-alien-artifact-red",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "alien-science-pack-red",
+          recipe = "bob-alien-science-pack-red",
         },
       },
       unit = {
         count = 250,
         ingredients = {
-          { "science-pack-gold", 1 },
-          { "alien-science-pack", 2 },
+          { "bob-science-pack-gold", 1 },
+          { "bob-alien-science-pack", 2 },
         },
         time = 30,
       },
     },
   })
-  OV.remove_unlock("alien-research", "alien-science-pack-red")
+  OV.remove_unlock("bob-alien-research", "bob-alien-science-pack-red")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
@@ -374,10 +374,10 @@ if alien_technology then
       (not bobmods.plates) and "bob-shotgun-flame-shells" or nil,
       (not bobmods.plates) and "bob-flame-rocket" or nil,
       (not bobmods.plates) and "bob-fire-artillery-shells" or nil,
-      bobmods.plates and "alien-red-research" or nil,
+      bobmods.plates and "bob-alien-red-research" or nil,
     }) do
-      OV.remove_prereq(tech_name, "alien-research")
-      OV.add_prereq(tech_name, "alien-research-red")
+      OV.remove_prereq(tech_name, "bob-alien-research")
+      OV.add_prereq(tech_name, "bob-alien-research-red")
     end
   end
 end
@@ -389,20 +389,20 @@ if alien_technology then
   for _, tech_name in pairs({
     bobmods.warfare and "bob-power-armor-5" or nil,
     -- personal equipment
-    bobmods.equipment and "fission-reactor-equipment-4" or nil,
+    bobmods.equipment and "bob-fission-reactor-equipment-4" or nil,
     bobmods.equipment and "bob-battery-equipment-6" or nil,
     bobmods.equipment and "bob-energy-shield-equipment-6" or nil,
-    bobmods.equipment and "personal-laser-defense-equipment-6" or nil,
+    bobmods.equipment and "bob-personal-laser-defense-equipment-6" or nil,
     -- vehicle equipment
-    bobmods.equipment and "vehicle-fusion-cell-equipment-6" or nil,
-    bobmods.equipment and "vehicle-fusion-reactor-equipment-6" or nil,
-    bobmods.equipment and "vehicle-battery-equipment-6" or nil,
-    bobmods.equipment and "vehicle-energy-shield-equipment-6" or nil,
-    bobmods.equipment and "vehicle-big-turret-equipment-6" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-cell-equipment-6" or nil,
+    bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-6" or nil,
+    bobmods.equipment and "bob-vehicle-battery-equipment-6" or nil,
+    bobmods.equipment and "bob-vehicle-energy-shield-equipment-6" or nil,
+    bobmods.equipment and "bob-vehicle-big-turret-equipment-6" or nil,
   }) do
-    OV.remove_prereq(tech_name, "alien-research")
-    OV.add_prereq(tech_name, "alien-research-green")
-    OV.add_prereq(tech_name, "alien-research-red")
+    OV.remove_prereq(tech_name, "bob-alien-research")
+    OV.add_prereq(tech_name, "bob-alien-research-green")
+    OV.add_prereq(tech_name, "bob-alien-research-red")
   end
 end
 
@@ -415,13 +415,13 @@ if alien_technology then
     bobmods.warfare and "bob-shotgun-plasma-shells" or nil,
     bobmods.warfare and "bob-plasma-rocket" or nil,
   }) do
-    OV.remove_prereq(tech_name, "alien-research")
-    OV.add_prereq(tech_name, "alien-research-blue")
-    OV.add_prereq(tech_name, "alien-research-orange")
-    OV.add_prereq(tech_name, "alien-research-purple")
-    OV.add_prereq(tech_name, "alien-research-yellow")
-    OV.add_prereq(tech_name, "alien-research-green")
-    OV.add_prereq(tech_name, "alien-research-red")
+    OV.remove_prereq(tech_name, "bob-alien-research")
+    OV.add_prereq(tech_name, "bob-alien-research-blue")
+    OV.add_prereq(tech_name, "bob-alien-research-orange")
+    OV.add_prereq(tech_name, "bob-alien-research-purple")
+    OV.add_prereq(tech_name, "bob-alien-research-yellow")
+    OV.add_prereq(tech_name, "bob-alien-research-green")
+    OV.add_prereq(tech_name, "bob-alien-research-red")
   end
 end
 
@@ -452,12 +452,12 @@ if alien_technology then
         end
       end
       for purple_item_name, orange_item_name in pairs({
-        ["electric-bullet-projectile"] = "acid-bullet-projectile",
-        ["electric-bullet"] = "acid-bullet",
-        ["electric-bullet-magazine"] = "acid-bullet-magazine",
-        ["shotgun-electric-shell"] = "shotgun-acid-shell",
+        ["bob-electric-bullet-projectile"] = "bob-acid-bullet-projectile",
+        ["bob-electric-bullet"] = "bob-acid-bullet",
+        ["bob-electric-bullet-magazine"] = "bob-acid-bullet-magazine",
+        ["bob-shotgun-electric-shell"] = "bob-shotgun-acid-shell",
         ["bob-electric-rocket"] = "bob-acid-rocket",
-        ["electric-rocket-warhead"] = "acid-rocket-warhead",
+        ["bob-electric-rocket-warhead"] = "bob-acid-rocket-warhead",
       }) do
         local purple_item = data.raw.item[purple_item_name] or data.raw.ammo[purple_item_name]
         local orange_item = data.raw.item[orange_item_name] or data.raw.ammo[orange_item_name]
@@ -470,50 +470,50 @@ if alien_technology then
     if bobmods.plates then
       OV.patch_recipes({
         {
-          name = "electric-bullet-projectile",
+          name = "bob-electric-bullet-projectile",
           ingredients = {
-            { type = "item", name = "alien-orange-alloy", amount = 0 },
-            { type = "fluid", name = "alien-acid", amount = 10 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 0 },
+            { type = "fluid", name = "bob-alien-acid", amount = 10 },
           },
           category = "crafting-with-fluid",
         },
         {
-          name = "shotgun-electric-shell",
+          name = "bob-shotgun-electric-shell",
           ingredients = {
-            { type = "item", name = "alien-orange-alloy", amount = 0 },
-            { type = "fluid", name = "alien-acid", amount = 10 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 0 },
+            { type = "fluid", name = "bob-alien-acid", amount = 10 },
           },
           category = "crafting-with-fluid",
         },
         {
-          name = "electric-rocket-warhead",
+          name = "bob-electric-rocket-warhead",
           ingredients = {
-            { type = "item", name = "alien-orange-alloy", amount = 0 },
-            { type = "fluid", name = "alien-acid", amount = 20 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 0 },
+            { type = "fluid", name = "bob-alien-acid", amount = 20 },
           },
           category = "crafting-with-fluid",
         },
         {
-          name = "acid-bullet-projectile",
+          name = "bob-acid-bullet-projectile",
           ingredients = {
-            { type = "fluid", name = "alien-acid", amount = 0 },
-            { type = "item", name = "alien-orange-alloy", amount = 1 },
+            { type = "fluid", name = "bob-alien-acid", amount = 0 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 1 },
           },
           category = "crafting",
         },
         {
-          name = "shotgun-acid-shell",
+          name = "bob-shotgun-acid-shell",
           ingredients = {
-            { type = "fluid", name = "alien-acid", amount = 0 },
-            { type = "item", name = "alien-orange-alloy", amount = 1 },
+            { type = "fluid", name = "bob-alien-acid", amount = 0 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 1 },
           },
           category = "crafting",
         },
         {
-          name = "acid-rocket-warhead",
+          name = "bob-acid-rocket-warhead",
           ingredients = {
-            { type = "fluid", name = "alien-acid", amount = 0 },
-            { type = "item", name = "alien-orange-alloy", amount = 2 },
+            { type = "fluid", name = "bob-alien-acid", amount = 0 },
+            { type = "item", name = "bob-alien-orange-alloy", amount = 2 },
           },
           category = "crafting",
         },

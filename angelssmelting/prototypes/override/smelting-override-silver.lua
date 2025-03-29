@@ -92,6 +92,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         icons = {
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
+            icon_size = 32
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
@@ -134,7 +135,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
       {
         name = "electronic-components",
         ingredients = {
-          { type = "item", name = "angels-wire-silver", amount = "tinned-copper-cable" },
+          { type = "item", name = "angels-wire-silver", amount = "bob-tinned-copper-cable" },
         },
       },
     })
@@ -157,11 +158,11 @@ if angelsmods.trigger.smelting_products["silver"].wire then
     OV.patch_recipes({
       {
         name = "basic-silvered-copper-wire",
-        category = "electronics",
+        category = "bob-electronics",
       },
       {
         name = "angels-wire-coil-silver-converting",
-        category = "electronics-machine",
+        category = "bob-electronics-machine",
       },
     })
   end

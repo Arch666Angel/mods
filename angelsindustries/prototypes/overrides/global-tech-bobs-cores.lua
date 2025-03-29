@@ -6,7 +6,7 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.core_replace("grinding", "basic", "processing")
+    AI.core_replace("bob-grinding", "basic", "processing")
     AI.core_replace("polishing", "basic", "processing")
     AI.core_replace("mixing-furnace", "basic", "processing")
     AI.core_replace("steel-mixing-furnace", "basic", "processing")

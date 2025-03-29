@@ -59,7 +59,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 40 },
         },
         results = {
-          { type = "item", name = "cobalt-steel-alloy", amount = 4 },
+          { type = "item", name = "bob-cobalt-steel-alloy", amount = 4 },
         },
         order = "e[cobalt-steel]-b[cobalt-steel-alloy]",
       },

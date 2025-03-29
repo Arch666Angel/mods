@@ -90,7 +90,7 @@ if mods["bobplates"] then
   OV.remove_prereq("gold-processing-2", "electrolysis-2")
   OV.add_prereq("gold-processing", "chlorine-processing-1")
   OV.remove_prereq("battery-3", "electrolysis-2")
-  OV.add_prereq("grinding", "steel-processing")
+  OV.add_prereq("bob-grinding", "steel-processing")
 end
 
 -------------------------------------------------------------------------------
@@ -168,8 +168,8 @@ end
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  move_item("enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
-  OV.patch_recipes({ { name = "enriched-fuel", subgroup = "petrochem-fuel", order = "g" } })
+  move_item("bob-enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
+  OV.patch_recipes({ { name = "bob-enriched-fuel", subgroup = "petrochem-fuel", order = "g" } })
   OV.disable_technology({ "oil-processing-2", "oil-processing-3", "oil-processing-4" })
   --hide disabled
   OV.hide_recipe({

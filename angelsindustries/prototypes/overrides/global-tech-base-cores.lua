@@ -196,7 +196,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("resin-1", "datacore-processing-1", 2)
   OV.set_science_pack("resin-2", "datacore-processing-1", 2)
   OV.set_science_pack("resin-3", "datacore-processing-1", 2)
-  OV.set_science_pack("rubber", "datacore-processing-1", 2)
+  OV.set_science_pack("bob-rubber", "datacore-processing-1", 2)
   AI.core_replace("rocket-booster-1", "war", "processing")
   AI.core_replace("rocket-booster-2", "war", "processing")
   -- BIOPROCESSING

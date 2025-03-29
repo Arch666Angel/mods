@@ -86,7 +86,6 @@ if mods["bobplates"] then
   --angelsmods.trigger.ores["gem-topaz"] = ore_exists("topaz-ore")
   --angelsmods.trigger.ores["gem-diamond"] = ore_exists("diamond-ore")
   angelsmods.trigger.slag = true
-
   bobmods.ores.cobalt.enabled = ore_exists("bob-cobalt-ore")
 end
 angelsmods.trigger.ores["fluorite"] = angelsmods.trigger.ores["fluorite"] or false -- angels petrochem enables this

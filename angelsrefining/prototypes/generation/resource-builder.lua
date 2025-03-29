@@ -733,7 +733,7 @@ function angelsmods.functions.make_resource()
       end
       --Create Particle if resource yields items
       if input.type == "item" then
-        if input.get and data.raw.particle[input.get .. "-particle"] then
+        if input.get and data.raw.particle and data.raw.particle[input.get .. "-particle"] then
           input.particle = input.get .. "-particle"
         else
           make_particle(input)

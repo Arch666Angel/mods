@@ -64,7 +64,7 @@ if mods["bobrevamp"] then
     "dinitrogen-tetroxide",
     "hydrazine",
     "hydrogen-peroxide",
-    "enriched-fuel-from-hydrazine",
+    "bob-enriched-fuel-from-hydrazine",
   })
 
   -----------------------------------------------------------------------------

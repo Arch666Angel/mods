@@ -147,15 +147,15 @@ if angelsmods.industries.overhaul then
   end
   if mods["bobplates"] then
     --basically remove all of bobs things (Sorry bob)
-    OV.global_replace_item("plutonium-240", "plutonium-239") --use bobs plutonium
-    if data.raw.item["plutonium-239"] then
-      data.raw.item["plutonium-239"].icon = data.raw.item["plutonium-240"].icon
-      data.raw.item["plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
-      data.raw.item["plutonium-239"].icons = data.raw.item["plutonium-240"].icons
+    OV.global_replace_item("plutonium-240", "bob-plutonium-239") --use bobs plutonium
+    if data.raw.item["bob-plutonium-239"] then
+      data.raw.item["bob-plutonium-239"].icon = data.raw.item["plutonium-240"].icon
+      data.raw.item["bob-plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
+      data.raw.item["bob-plutonium-239"].icons = data.raw.item["plutonium-240"].icons
     end
 
     angelsmods.functions.move_item(
-      "plutonium-239",
+      "bob-plutonium-239",
       "angels-power-nuclear-processing",
       "a[radioactive-element]-e[plutonium-239]"
     )
@@ -278,7 +278,7 @@ if angelsmods.industries.overhaul then
         {
           name = "atomic-artillery-shell",
           ingredients = {
-            { type = "item", name = "plutonium-239", amount = "uranium-235" },
+            { type = "item", name = "bob-plutonium-239", amount = "uranium-235" },
           },
         },
       })

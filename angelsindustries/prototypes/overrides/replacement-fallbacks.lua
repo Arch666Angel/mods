@@ -41,7 +41,7 @@ angelsmods.industries.block_replace = {
   ["electronic-circuit"] = { new = "block-electronics-1", amt_multi = 1 },
   ["advanced-circuit"] = { new = "block-electronics-2", amt_multi = 1 },
   ["processing-unit"] = { new = "block-electronics-4", amt_multi = 1 }, --always 4 with bobs or vanilla
-  ["basic-circuit-board"] = { new = "block-electronics-0", amt_multi = 1 },
+  ["bob-basic-circuit-board"] = { new = "block-electronics-0", amt_multi = 1 },
   ["basic-electronic-board"] = { new = "block-electronics-1", amt_multi = 1 },
   ["advanced-processing-unit"] = { new = "block-electronics-5", amt_multi = 1 },
   --pipes (fluid box replacements)
@@ -59,15 +59,15 @@ angelsmods.industries.block_replace = {
   ["copper-tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 3 },
   --wire/cable
   ["copper-cable"] = { new = "cable-harness-1", amt_multi = 1 },
-  ["tinned-copper-cable"] = { new = "cable-harness-2", amt_multi = 1 },
-  ["insulated-cable"] = { new = "cable-harness-3", amt_multi = 1 },
-  ["gilded-copper-cable"] = { new = "cable-harness-4", amt_multi = 1 },
+  ["bob-tinned-copper-cable"] = { new = "cable-harness-2", amt_multi = 1 },
+  ["bob-insulated-cable"] = { new = "cable-harness-3", amt_multi = 1 },
+  ["bob-gilded-copper-cable"] = { new = "cable-harness-4", amt_multi = 1 },
   --intermediates (vanilla)
   ["iron-stick"] = { new = "construction-components", amt_multi = 1 },
 }
 angelsmods.industries.general_replace = {
   --electronics
-  ["basic-circuit-board"] = { new = "circuit-grey", amt_multi = 1 },
+  ["bob-basic-circuit-board"] = { new = "circuit-grey", amt_multi = 1 },
   ["basic-electronic-board"] = { new = "circuit-red-loaded", amt_multi = 1, unlock_by = "electronics" },
   ["electronic-circuit"] = { new = "circuit-red-loaded", amt_multi = 1 },
   ["advanced-circuit"] = { new = "circuit-green-loaded", amt_multi = 1, unlock_by = "advanced-circuit" },
@@ -76,7 +76,7 @@ angelsmods.industries.general_replace = {
   --electronic components/boards
   ["wooden-board"] = { new = "circuit-grey-board", amt_multi = 1, alt_rec = "bio-paper-1" },
   ["phenolic-board"] = { new = "circuit-orange-board", amt_multi = 1, unlock_by = "advanced-circuit" },
-  ["fibreglass-board"] = {
+  ["bob-fibreglass-board"] = {
     new = "circuit-blue-board",
     amt_multi = 1,
     unlock_by = "angels-glass-smelting-3",

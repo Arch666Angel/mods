@@ -222,13 +222,13 @@ script.on_event(defines.events.on_entity_died, function(event)
   end
   loot = loot.get_contents()
   for loot_item_name, loot_technology_to_research in pairs({
-    ["small-alien-artifact"] = "angels-alien-artifact",
-    ["small-alien-artifact-red"] = "angels-alien-artifact-red",
-    ["small-alien-artifact-yellow"] = "angels-alien-artifact-yellow",
-    ["small-alien-artifact-orange"] = "angels-alien-artifact-orange",
-    ["small-alien-artifact-blue"] = "angels-alien-artifact-blue",
-    ["small-alien-artifact-purple"] = "angels-alien-artifact-purple",
-    ["small-alien-artifact-green"] = "angels-alien-artifact-green",
+    ["bob-small-alien-artifact"] = "angels-alien-artifact",
+    ["bob-small-alien-artifact-red"] = "angels-alien-artifact-red",
+    ["bob-small-alien-artifact-yellow"] = "angels-alien-artifact-yellow",
+    ["bob-small-alien-artifact-orange"] = "angels-alien-artifact-orange",
+    ["bob-small-alien-artifact-blue"] = "angels-alien-artifact-blue",
+    ["bob-small-alien-artifact-purple"] = "angels-alien-artifact-purple",
+    ["bob-small-alien-artifact-green"] = "angels-alien-artifact-green",
   }) do
     if loot[loot_item_name] then
       local technology = killing_force.technologies[loot_technology_to_research]

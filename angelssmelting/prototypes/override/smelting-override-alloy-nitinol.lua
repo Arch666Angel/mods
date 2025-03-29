@@ -59,7 +59,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           { type = "fluid", name = "liquid-molten-nitinol", amount = 40 },
         },
         results = {
-          { type = "item", name = "nitinol-alloy", amount = 4 },
+          { type = "item", name = "bob-nitinol-alloy", amount = 4 },
         },
         order = "f[nitinol]-b[nitinol-alloy]",
       },

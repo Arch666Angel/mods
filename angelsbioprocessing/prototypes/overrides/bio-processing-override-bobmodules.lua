@@ -200,7 +200,7 @@ if mods["bobmodules"] then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "module-processor-board-3",
+          recipe = "bob-module-processor-board-3",
         },
       },
       unit = {
@@ -217,7 +217,7 @@ if mods["bobmodules"] then
     },
   })
   if data.raw.technology["advanced-electronics-3"] then
-    OV.remove_unlock("advanced-electronics-3", "module-processor-board-3")
+    OV.remove_unlock("advanced-electronics-3", "bob-module-processor-board-3")
     OV.add_prereq("modules-3", "advanced-electronics-3")
     OV.remove_prereq("speed-module-6", "advanced-electronics-3")
     OV.remove_prereq("productivity-module-6", "advanced-electronics-3")
@@ -225,7 +225,7 @@ if mods["bobmodules"] then
     OV.remove_prereq("pollution-clean-module-6", "advanced-electronics-3")
     OV.remove_prereq("pollution-create-module-6", "advanced-electronics-3")
   else
-    OV.remove_unlock("processing-unit", "module-processor-board-3")
+    OV.remove_unlock("processing-unit", "bob-module-processor-board-3")
   end
 
   -----------------------------------------------------------------------------
@@ -257,7 +257,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module",
       ingredients = {
         { "!!" },
-        --{ type = "item", name = "solder", amount = 1 },
+        --{ type = "item", name = "bob-solder", amount = 1 },
         { type = "item", name = "productivity-module", amount = 1 },
         { type = "item", name = "efficiency-module", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -267,7 +267,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-2",
       ingredients = {
         { "!!" },
-        --{ type = "item", name = "solder", amount = 2 },
+        --{ type = "item", name = "bob-solder", amount = 2 },
         { type = "item", name = "productivity-module-2", amount = 1 },
         { type = "item", name = "efficiency-module-2", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -277,7 +277,7 @@ if mods["bobmodules"] then
       name = "angels-bio-yield-module-3",
       ingredients = {
         { "!!" },
-        --{ type = "item", name = "solder", amount = 3 },
+        --{ type = "item", name = "bob-solder", amount = 3 },
         { type = "item", name = "productivity-module-3", amount = 1 },
         { type = "item", name = "efficiency-module-3", amount = 1 },
         { type = "item", name = "token-bio", amount = 1 },
@@ -290,19 +290,19 @@ if mods["bobmodules"] then
       {
         name = "angels-bio-yield-module",
         ingredients = {
-          { type = "item", name = "solder", amount = 1 },
+          { type = "item", name = "bob-solder", amount = 1 },
         },
       },
       {
         name = "angels-bio-yield-module-2",
         ingredients = {
-          { type = "item", name = "solder", amount = 2 },
+          { type = "item", name = "bob-solder", amount = 2 },
         },
       },
       {
         name = "angels-bio-yield-module-3",
         ingredients = {
-          { type = "item", name = "solder", amount = 3 },
+          { type = "item", name = "bob-solder", amount = 3 },
         },
       },
     })
@@ -345,8 +345,8 @@ if mods["bobmodules"] then
     local ingredients = { { "token-bio", 1 } }
     local ingredients_added = { ["token-bio"] = true }
     for _, tech_name in pairs({
-      "productivity-module-" .. (i < 6 and 4 or 6),
-      "efficiency-module-" .. (i < 6 and 4 or 6),
+      "bob-productivity-module-" .. (i < 6 and 4 or 6),
+      "bob-efficiency-module-" .. (i < 6 and 4 or 6),
     }) do
       --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
       local technology = data.raw.technology[tech_name]
@@ -368,86 +368,87 @@ if mods["bobmodules"] then
         solder_amount = solder_amount + 1
       end
     end
-    data:extend({
-      {
-        type = "module",
-        name = "angels-bio-yield-module-" .. i,
-        localised_description = { "item-description.angels-bio-yield-module-" .. i },
-        icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
-        icon_size = 32,
-        subgroup = "bio-yield-module",
-        category = "productivity",
-        tier = i,
-        order = "b-y-" .. i,
-        stack_size = 50,
-        effect = {
-          productivity = { bonus = 0.15 },
-          pollution = { bonus = 0.15 }, -- extra pollution absorption
-        },
-        limitation = {},
-        limitation_message_key = "angels-yield-module-usable-only-on-agriculture",
-      },
-      {
-        type = "recipe",
-        name = "angels-bio-yield-module-" .. i,
-        enabled = false,
-        ingredients = {
-          --{type = "item", name = "solder", amount = solder_amount},
-          { type = "item", name = "productivity-module-" .. i, amount = 1 },
-          { type = "item", name = "efficiency-module-" .. i, amount = 1 },
-          { type = "item", name = "token-bio", amount = 1 },
-        },
-        energy_required = 15,
-        results = {{ type = "item", name = "angels-bio-yield-module-" .. i, amount = 1 }},
-      },
-      {
-        type = "technology",
-        name = "angels-bio-yield-module-" .. i,
-        icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
-        icon_size = 32,
-        order = "c-a",
-        prerequisites = {
-          "angels-bio-yield-module-" .. i - 1,
-          "productivity-module-" .. i,
-          "efficiency-module-" .. i,
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "angels-bio-yield-module-" .. i,
-          },
-        },
-        unit = {
-          count = i < 6 and ((i - 1) * 50) or ((i - 3) * 100),
-          ingredients = ingredients,
-          time = (data.raw.technology["productivity-module-" .. (i<6 and 4 or 6)] and data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit) and data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit.time or 12,
-        },
-      },
-    })
-    angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-" .. i)
-    --adding solder when bobplates is active
-    if mods["bobplates"] then
-      OV.patch_recipes({
+    if data.raw.item["bob-productivity-module-"..i] and data.raw.item["bob-efficiency-module-"..i] then
+      data:extend({
         {
+          type = "module",
           name = "angels-bio-yield-module-" .. i,
+          localised_description = { "item-description.angels-bio-yield-module-" .. i },
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
+          icon_size = 32,
+          subgroup = "bio-yield-module",
+          category = "productivity",
+          tier = i,
+          order = "b-y-" .. i,
+          stack_size = 50,
+          effect = {
+            productivity = { bonus = 0.15 },
+            pollution = { bonus = 0.15 }, -- extra pollution absorption
+          },
+          limitation = {},
+          limitation_message_key = "angels-yield-module-usable-only-on-agriculture",
+        },
+        {
+          type = "recipe",
+          name = "angels-bio-yield-module-" .. i,
+          enabled = false,
           ingredients = {
-            { type = "item", name = "solder", amount = solder_amount },
+            --{type = "item", name = "bob-solder", amount = solder_amount},
+            { type = "item", name = "bob-productivity-module-" .. i, amount = 1 },
+            { type = "item", name = "bob-efficiency-module-" .. i, amount = 1 },
+            { type = "item", name = "token-bio", amount = 1 },
+          },
+          energy_required = 15,
+          results = {{ type = "item", name = "angels-bio-yield-module-" .. i, amount = 1 }},
+        },
+        {
+          type = "technology",
+          name = "angels-bio-yield-module-" .. i,
+          icon = "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
+          icon_size = 32,
+          order = "c-a",
+          prerequisites = {
+            "angels-bio-yield-module-" .. i - 1,
+            "bob-productivity-module-" .. i,
+            "bob-efficiency-module-" .. i,
+          },
+          effects = {
+            {
+              type = "unlock-recipe",
+              recipe = "angels-bio-yield-module-" .. i,
+            },
+          },
+          unit = {
+            count = i < 6 and ((i - 1) * 50) or ((i - 3) * 100),
+            ingredients = ingredients,
+            time = (data.raw.technology["bob-productivity-module-" .. (i<6 and 4 or 6)] and data.raw.technology["bob-productivity-module-" .. (i < 6 and 4 or 6)].unit) and data.raw.technology["bob-productivity-module-" .. (i < 6 and 4 or 6)].unit.time or 12,
           },
         },
       })
+      angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-" .. i)
+    --adding solder when bobplates is active
+      if mods["bobplates"] then
+        OV.patch_recipes({
+          {
+            name = "angels-bio-yield-module-" .. i,
+            ingredients = {
+              { type = "item", name = "bob-solder", amount = solder_amount },
+            },
+          },
+        })
+      end
+      for i = 1, 8 do
+        local name = "angels-bio-yield-module"
+        if i > 1 then
+          name = name .. "-" .. i
+        end
+        data.raw.module[name].effect = {
+          productivity = 0.075 * i,
+          pollution = 0.075 * i, -- extra pollution absorption
+        }
+      end
     end
   end
-  for i = 1, 8 do
-    local name = "angels-bio-yield-module"
-    if i > 1 then
-      name = name .. "-" .. i
-    end
-    data.raw.module[name].effect = {
-      productivity = 0.075 * i,
-      pollution = 0.075 * i, -- extra pollution absorption
-    }
-  end
-
   -----------------------------------------------------------------------------
   -- BEACONS ------------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -460,8 +461,8 @@ if mods["bobmodules"] then
 
   OV.patch_recipes({
     { name = "beacon", ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } } },
-    { name = "beacon-2", ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } } },
-    { name = "beacon-3", ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } } },
+    { name = "bob-beacon-2", ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } } },
+    { name = "bob-beacon-3", ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } } },
   })
 
   OV.add_prereq("effect-transmission", "modules")

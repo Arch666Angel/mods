@@ -44,6 +44,13 @@ function gathering_turret:init_prototype_data()
     ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
     -- a complete list of possible items to loot and the technology name to unlock it
     ["gathering_items"] = { -- technology "angels-void" unlocks the technology from the start
+      ["bob-small-alien-artifact"] = "angels-gathering-turret",
+      ["bob-small-alien-artifact-green"] = "angels-gathering-turret-target_small-alien-artifact-green_",
+      ["bob-small-alien-artifact-purple"] = "angels-gathering-turret-target_small-alien-artifact-purple_",
+      ["bob-small-alien-artifact-blue"] = "angels-gathering-turret-target_small-alien-artifact-blue_",
+      ["bob-small-alien-artifact-orange"] = "angels-gathering-turret-target_small-alien-artifact-orange_",
+      ["bob-small-alien-artifact-yellow"] = "angels-gathering-turret-target_small-alien-artifact-yellow_",
+      ["bob-small-alien-artifact-red"] = "angels-gathering-turret-target_small-alien-artifact-red_",
       ["small-alien-artifact"] = "angels-gathering-turret",
       ["small-alien-artifact-green"] = "angels-gathering-turret-target_small-alien-artifact-green_",
       ["small-alien-artifact-purple"] = "angels-gathering-turret-target_small-alien-artifact-purple_",

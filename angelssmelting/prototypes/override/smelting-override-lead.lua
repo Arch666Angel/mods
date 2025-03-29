@@ -22,7 +22,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-lead-oxide", "lead-oxide")
+    OV.global_replace_item("solid-lead-oxide", "bob-lead-oxide")
     angelsmods.functions.hide("solid-lead-oxide")
     angelsmods.functions.move_item("bob-lead-oxide", "angels-lead", "d")
     data.raw["item"]["bob-lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"

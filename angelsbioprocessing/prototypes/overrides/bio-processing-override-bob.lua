@@ -3,7 +3,7 @@ local move_item = angelsmods.functions.move_item
 
 if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
   OV.add_prereq("bio-wood-processing", "automation-science-pack")
-  OV.add_prereq("bio-processing-brown", "electricity")
+  OV.add_prereq("bio-processing-brown", "bob-electricity")
 end
 
 if mods["bobplates"] then
@@ -44,11 +44,11 @@ if mods["bobplates"] then
   end
 
   -- GEMS
-  OV.add_prereq("bio-processing-alien-3", "gem-processing-2")
+  OV.add_prereq("bio-processing-alien-3", "bob-gem-processing-2")
 
   -- CRYSTALS
   OV.modify_input("crystal-grindstone", { "bob-grinding-wheel", "iron-plate" })
-  OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
+  OV.add_prereq("bio-processing-crystal-splinter-1", "bob-grinding")
 end
 
 -- everything below this should be rewritten and organized as it's becomming a mess
@@ -83,7 +83,7 @@ if mods["bobelectronics"] then
         { type = "fluid", name = "liquid-resin", amount = 10 },
         { type = "item", name = "solid-paper", amount = 5 },
       },
-      category = "electronics-with-fluid",
+      category = "bob-electronics-with-fluid",
     },
   })
   OV.add_prereq("advanced-circuit", "bio-paper-1")

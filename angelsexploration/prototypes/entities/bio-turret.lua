@@ -353,16 +353,19 @@ data:extend({
         percent = 100,
       },
     },
-    fluid_box = {
-      production_type = "input-output",
+    fluid_box =
+    {
+      production_type = "none", -- FluidTurret has its own logic
       secondary_draw_order = 0,
       render_layer = "lower-object",
+      --pipe_picture = fireutil.flamethrower_turret_pipepictures(),
       pipe_covers = pipecoverspictures(),
       volume = 100,
-      pipe_connections = {
-        { position = { -1.5, 1.0 } },
-        { position = { 1.5, 1.0 } },
-      },
+      pipe_connections =
+      {
+        { direction = defines.direction.west, position = { -0.5, 1.0 } },
+        { direction = defines.direction.east, position = { 0.5, 1.0 } }
+      }
     },
     fluid_buffer_size = 100,
     fluid_buffer_input_flow = 250 / 60 / 5, -- 5s to fill the buffer
@@ -616,6 +619,7 @@ data:extend({
     shoot_in_prepare_state = false,
     attack_parameters = {
       type = "stream",
+      ammo_category = "biological",
       cooldown = 4,
       range = 30,
       min_range = 6,

@@ -86,13 +86,13 @@ local function calculate_science_pack_level()
     science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"]
       or science_pack_level["automation-science-pack"]
 
-    science_pack_level["alien-artifact-tool"] = 0
-    science_pack_level["alien-artifact-red-tool"] = 0
-    science_pack_level["alien-artifact-yellow-tool"] = 0
-    science_pack_level["alien-artifact-orange-tool"] = 0
-    science_pack_level["alien-artifact-blue-tool"] = 0
-    science_pack_level["alien-artifact-purple-tool"] = 0
-    science_pack_level["alien-artifact-green-tool"] = 0
+    science_pack_level["bob-alien-artifact-tool"] = 0
+    science_pack_level["bob-alien-artifact-red-tool"] = 0
+    science_pack_level["bob-alien-artifact-yellow-tool"] = 0
+    science_pack_level["bob-alien-artifact-orange-tool"] = 0
+    science_pack_level["bob-alien-artifact-blue-tool"] = 0
+    science_pack_level["bob-alien-artifact-purple-tool"] = 0
+    science_pack_level["bob-alien-artifact-green-tool"] = 0
   end
 
   if script.active_mods["bobtech"] then

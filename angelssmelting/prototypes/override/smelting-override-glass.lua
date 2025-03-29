@@ -57,6 +57,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
         icons = {
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/plate-glass.png",
+            icon_size = 32,
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
@@ -96,7 +97,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
         localised_name = { "item-name.fibreglass-board" },
         results = {
           { "!!" },
-          { name = "fibreglass-board", type = "item", amount = 4 },
+          { name = "bob-fibreglass-board", type = "item", amount = 4 },
         },
         icons = {
           {
@@ -121,15 +122,15 @@ if angelsmods.trigger.smelting_products["glass"].board then
     OV.add_prereq("angels-glass-smelting-2", "resin-1")
 
     -- disable bob variant
-    OV.remove_unlock("processing-unit", "fibreglass-board")
-    OV.disable_recipe({ "fibreglass-board" })
+    OV.remove_unlock("processing-unit", "bob-fibreglass-board")
+    OV.disable_recipe({ "bob-fibreglass-board" })
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
     OV.patch_recipes({
       {
         name = "angels-glass-fiber-board",
-        category = "electronics-with-fluid",
+        category = "bob-electronics-with-fluid",
       },
     })
   end

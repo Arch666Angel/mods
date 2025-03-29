@@ -125,7 +125,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "military-science-pack",
-      "angels-alien-artifact",
+      -- "angels-alien-artifact", TODO where is this defined?
     },
     effects = {
       {

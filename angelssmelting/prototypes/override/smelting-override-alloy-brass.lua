@@ -112,7 +112,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           { type = "fluid", name = "liquid-molten-brass", amount = 40 },
         },
         results = {
-          { type = "item", name = "brass-alloy", amount = 4 },
+          { type = "item", name = "bob-brass-alloy", amount = 4 },
         },
         order = "b[brass]-b[brass-alloy]",
       },

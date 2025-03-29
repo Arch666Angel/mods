@@ -6,10 +6,10 @@ end
 -- CHARACTERS -----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobclasses"] then
-  data.raw["item-subgroup"]["bodies"].group = "angels-logistics"
-  data.raw["item-subgroup"]["bodies"].order = "d-a[armor]-aa"
-  data.raw["item-subgroup"]["body-parts"].group = "angels-logistics"
-  data.raw["item-subgroup"]["body-parts"].order = "d-a[armor]-ab"
+  data.raw["item-subgroup"]["bob-bodies"].group = "angels-logistics"
+  data.raw["item-subgroup"]["bob-bodies"].order = "d-a[armor]-aa"
+  data.raw["item-subgroup"]["bob-body-parts"].group = "angels-logistics"
+  data.raw["item-subgroup"]["bob-body-parts"].order = "d-a[armor]-ab"
 end
 
 -------------------------------------------------------------------------------

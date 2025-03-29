@@ -60,13 +60,13 @@ end
 -- GATHERING TARGETS (can be added by other mods, this list can be extended)
 if angelsmods.trigger.artifacts["base"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact",
+    name = "bob-small-alien-artifact",
     require_tech_unlock = "angels-gathering-turret",
   })
 end
 if angelsmods.trigger.artifacts["red"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-red",
+    name = "bob-small-alien-artifact-red",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -76,7 +76,7 @@ if angelsmods.trigger.artifacts["red"] then
 end
 if angelsmods.trigger.artifacts["yellow"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-yellow",
+    name = "bob-small-alien-artifact-yellow",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -86,7 +86,7 @@ if angelsmods.trigger.artifacts["yellow"] then
 end
 if angelsmods.trigger.artifacts["orange"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-orange",
+    name = "bob-small-alien-artifact-orange",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -96,7 +96,7 @@ if angelsmods.trigger.artifacts["orange"] then
 end
 if angelsmods.trigger.artifacts["blue"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-blue",
+    name = "bob-small-alien-artifact-blue",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -106,7 +106,7 @@ if angelsmods.trigger.artifacts["blue"] then
 end
 if angelsmods.trigger.artifacts["purple"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-purple",
+    name = "bob-small-alien-artifact-purple",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -116,7 +116,7 @@ if angelsmods.trigger.artifacts["purple"] then
 end
 if angelsmods.trigger.artifacts["green"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-green",
+    name = "bob-small-alien-artifact-green",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
