@@ -89,24 +89,23 @@ local barreling_pump = {
       },
     },
   },
-  vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+  impact_category = "metal",
   working_sound = {
     sound = { filename = "__base__/sound/oil-refinery.ogg" },
     idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-    apparent_volume = 2.5,
   },
   fluid_boxes = {
     {
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = { { flow_direction = "input", position = { 0, 1.4 }, direction = defines.direction.south } },
+      pipe_connections = { { flow_direction = "input", position = { 0, 1 }, direction = defines.direction.south } },
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       volume = 100,
-      pipe_connections = { { flow_direction = "output", position = { 0, -1.4 }, direction = defines.direction.north } },
+      pipe_connections = { { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north } },
     },
   },
 }

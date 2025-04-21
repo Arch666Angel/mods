@@ -55,7 +55,7 @@ end
 -- CRUSHED SMELTING -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if ore_exists("lead") then
-  local item_name = mods["angelssmelting"] and "angels-plate-lead" or "lead-plate"
+  local item_name = mods["angelssmelting"] and "angels-plate-lead" or "bob-lead-plate"
 
   OV.patch_recipes({
     {
@@ -73,7 +73,7 @@ else
 end
 
 if ore_exists("tin") then
-  local item_name = mods["angelssmelting"] and "angels-plate-tin" or "tin-plate"
+  local item_name = mods["angelssmelting"] and "angels-plate-tin" or "bob-tin-plate"
 
   OV.patch_recipes({
     {

@@ -232,6 +232,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-glass-fiber-board",
+    localised_name = { "item-name.angels-void" },
     category = "crafting-with-fluid",
     subgroup = "angels-glass-casting",
     energy_required = 1,

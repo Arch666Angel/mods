@@ -1,0 +1,31 @@
+{
+  "recipe":
+  [
+    ["fill-thermal-water-barrel", "thermal-water-barrel"],
+    ["fill-water-saline-barrel", "water-saline-barrel"],
+    ["fill-water-purified-barrel", "water-purified-barrel"],
+    ["fill-water-yellow-waste-barrel", "water-yellow-waste-barrel"],
+    ["fill-water-red-waste-barrel", "water-red-waste-barrel"],
+    ["fill-water-green-waste-barrel", "water-green-waste-barrel"],
+    ["fill-water-greenyellow-waste-barrel", "water-greenyellow-waste-barrel"],
+    ["fill-water-mineralized-barrel", "water-mineralized-barrel"],
+    ["fill-water-viscous-mud-barrel", "water-viscous-mud-barrel"],
+    ["fill-water-heavy-mud-barrel", "water-heavy-mud-barrel"],
+    ["fill-water-concentrated-mud-barrel", "water-concentrated-mud-barrel"],
+    ["fill-water-light-mud-barrel", "water-light-mud-barrel"],
+    ["fill-water-thin-mud-barrel", "water-thin-mud-barrel"],
+    ["fill-angels-ore8-sludge-barrel", "angels-ore8-sludge-barrel"],
+    ["fill-angels-ore9-sludge-barrel", "angels-ore9-sludge-barrel"],
+    ["fill-angels-ore8-solution-barrel", "angels-ore8-solution-barrel"],
+    ["fill-angels-ore8-anode-sludge-barrel", "angels-ore8-anode-sludge-barrel"],
+    ["fill-angels-ore8-slime-barrel", "angels-ore8-slime-barrel"],
+    ["fill-angels-ore9-solution-barrel", "angels-ore9-solution-barrel"],
+    ["fill-angels-ore9-anode-sludge-barrel", "angels-ore9-anode-sludge-barrel"],
+    ["fill-angels-ore9-slime-barrel", "angels-ore9-slime-barrel"],
+    ["fill-slag-slurry-barrel", "slag-slurry-barrel"],
+    ["fill-mineral-sludge-barrel", "mineral-sludge-barrel"],
+    ["fill-crystal-slurry-barrel", "crystal-slurry-barrel"],
+    ["fill-crystal-seedling-barrel", "crystal-seedling-barrel"],
+    ["fill-crystal-matrix-barrel", "crystal-matrix-barrel"]
+  ]
+}

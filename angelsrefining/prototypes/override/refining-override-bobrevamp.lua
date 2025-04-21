@@ -6,18 +6,18 @@ if mods["bobrevamp"] then
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-hardmode"].value then
     if angelsmods.trigger.washing_tech then --washing/limestone is active
-      OV.global_replace_item("limestone", "solid-limestone")
-      angelsmods.functions.hide("limestone")
-      OV.disable_recipe({ "limestone" })
+      OV.global_replace_item("bob-limestone", "solid-limestone")
+      angelsmods.functions.hide("bob-limestone")
+      OV.disable_recipe({ "bob-limestone" })
     else
       if limestone then
-        data.raw.item["limestone"].icon = nil
-        data.raw.item["limestone"].icons = {
+        data.raw.item["bob-limestone"].icon = nil
+        data.raw.item["bob-limestone"].icons = {
           { icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png", icon_size = 32 },
         }
 
-        data.raw.recipe["limestone"].icon = nil
-        data.raw.recipe["limestone"].icons = {
+        data.raw.recipe["bob-limestone"].icon = nil
+        data.raw.recipe["bob-limestone"].icons = {
           { icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png", icon_size = 32 },
         }
       end

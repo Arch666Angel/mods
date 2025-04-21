@@ -57,7 +57,6 @@ data:extend({
     subgroup = "angels-copper-casting",
     order = "g",
     default_temperature = 1085,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 154 / 255, g = 101 / 255, b = 86 / 255 },
     flow_color = { r = 154 / 255, g = 101 / 255, b = 86 / 255 },

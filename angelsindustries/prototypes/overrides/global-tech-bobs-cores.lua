@@ -6,16 +6,16 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.core_replace("grinding", "basic", "processing")
+    AI.core_replace("bob-grinding", "basic", "processing")
     AI.core_replace("polishing", "basic", "processing")
     AI.core_replace("mixing-furnace", "basic", "processing")
     AI.core_replace("steel-mixing-furnace", "basic", "processing")
     AI.core_replace("electric-mixing-furnace", "basic", "processing")
     AI.core_replace("steel-chemical-furnace", "basic", "processing")
     AI.core_replace("electric-chemical-furnace", "basic", "processing")
-    AI.core_replace("fluid-barrel-processing", "logistic", "processing")
-    AI.core_replace("fluid-canister-processing", "logistic", "processing")
-    AI.core_replace("gas-canisters", "basic", "processing")
+    AI.core_replace("bob-fluid-barrel-processing", "logistic", "processing")
+    AI.core_replace("bob-fluid-canister-processing", "logistic", "processing")
+    AI.core_replace("bob-gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
     -- depending on settings and enabled mods, bobingabout-enrichment-process could be using either basic or processing core

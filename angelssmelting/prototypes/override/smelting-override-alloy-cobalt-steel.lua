@@ -19,7 +19,6 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         subgroup = "angels-alloys-casting",
         order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
         default_temperature = 0,
-        base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 61 / 256, g = 107 / 256, b = 153 / 256 },
         flow_color = { r = 61 / 256, g = 107 / 256, b = 153 / 256 },
@@ -60,7 +59,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 40 },
         },
         results = {
-          { type = "item", name = "cobalt-steel-alloy", amount = 4 },
+          { type = "item", name = "bob-cobalt-steel-alloy", amount = 4 },
         },
         order = "e[cobalt-steel]-b[cobalt-steel-alloy]",
       },
@@ -97,12 +96,12 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       },
     })
     angelsmods.functions.move_item(
-      "cobalt-steel-alloy",
+      "bob-cobalt-steel-alloy",
       "angels-alloys-casting",
       "e[cobalt-steel]-b[cobalt-steel-alloy]"
     )
-    data.raw["item"]["cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
-    data.raw["item"]["cobalt-steel-alloy"].icon_size = 32
+    data.raw["item"]["bob-cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
+    data.raw["item"]["bob-cobalt-steel-alloy"].icon_size = 32
     OV.add_prereq("cobalt-processing", "angels-cobalt-steel-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-cobalt-steel")
   end

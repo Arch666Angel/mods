@@ -74,7 +74,6 @@ data:extend({
     subgroup = "angels-cobalt-casting",
     order = "h",
     default_temperature = 1495,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 51 / 255, g = 74 / 255, b = 109 / 255 },
     flow_color = { r = 51 / 255, g = 74 / 255, b = 109 / 255 },

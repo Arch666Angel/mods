@@ -83,7 +83,6 @@ data:extend({
     subgroup = "angels-aluminium-casting",
     order = "i",
     default_temperature = 660.3,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 172 / 255, g = 161 / 255, b = 84 / 255 },
     flow_color = { r = 172 / 255, g = 161 / 255, b = 84 / 255 },

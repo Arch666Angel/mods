@@ -4,6 +4,7 @@ local unit_test_functions = require("unit-test-functions")
 
 local recipes_to_ignore = {
   ["electric-energy-interface"] = true, -- base game
+  ["rocket-part"] = true, -- base game. Recipe is hidden from player crafting but item is hidden
 }
 local products_to_ignore = {
   ["chemical-void"] = true,

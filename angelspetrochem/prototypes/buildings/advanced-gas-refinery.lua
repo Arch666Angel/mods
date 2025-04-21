@@ -33,7 +33,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
@@ -271,20 +271,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -292,7 +292,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -300,7 +300,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -308,16 +308,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
   },
   {
@@ -353,7 +351,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
@@ -591,20 +589,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -612,7 +610,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -620,7 +618,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -628,16 +626,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
   },
   {
@@ -673,7 +669,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
@@ -911,20 +907,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -932,7 +928,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -940,7 +936,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -948,16 +944,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
   },
   {
@@ -992,7 +986,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -6.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "advanced-gas-refining" },
@@ -1230,20 +1224,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1251,7 +1245,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1259,7 +1253,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1267,16 +1261,14 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
   },
 })

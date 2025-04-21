@@ -13,7 +13,7 @@ if angelsmods.industries.components then
             { type = "item", name = "circuit-red-loaded", amount = 1 },
             { type = "item", name = "angels-servo-motor-1", amount = 2 },
             angelsmods.trigger.smelting_products["bronze"].plate
-                and { type = "item", name = "bronze-alloy", amount = 2 }
+                and { type = "item", name = "bob-bronze-alloy", amount = 2 }
               or nil,
           },
         },
@@ -25,7 +25,7 @@ if angelsmods.industries.components then
             { type = "item", name = "circuit-green-loaded", amount = 2 },
             { type = "item", name = "angels-servo-motor-2", amount = 3 },
             angelsmods.trigger.smelting_products["bronze"].plate
-                and { type = "item", name = "bronze-alloy", amount = 8 }
+                and { type = "item", name = "bob-bronze-alloy", amount = 8 }
               or nil,
           },
         },

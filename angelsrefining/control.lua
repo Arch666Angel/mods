@@ -17,7 +17,7 @@ end)
 
 -- built events
 script.on_event(defines.events.on_built_entity, function(event)
-  sea_pump:on_build_entity(event.created_entity, event.tags or {})
+  sea_pump:on_build_entity(event.entity, event.tags or {})
 end)
 script.on_event(defines.events.on_robot_built_entity, function(event)
   sea_pump:on_build_entity(event.created_entity, event.tags or {})

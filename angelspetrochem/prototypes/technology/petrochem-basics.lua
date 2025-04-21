@@ -10,22 +10,6 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "valve-inspector",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "valve-overflow",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "valve-return",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "valve-underflow",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "valve-converter",
       },
       {

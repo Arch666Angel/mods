@@ -394,7 +394,7 @@ data:extend({
       },
     },
     sound_minimum_speed = 0.1,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__angelsaddons-cab__/sound/cab-run.ogg",
@@ -640,7 +640,7 @@ data:extend({
     drawing_box = { { -0.5, -2.8 }, { 0.5, 0.5 } },
     maximum_wire_distance = 0.25,
     supply_area_distance = settings.equipment["energy-interface"].supplyArea / 2,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     pictures = {
       filename = "__core__/graphics/empty.png",
       priority = "low",

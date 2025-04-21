@@ -204,6 +204,7 @@ end
 local loot_to_be_converted = {}
 if angelsmods.trigger.artifacts["base"] then
   loot_to_be_converted["alien-artifact"] = { name = "small-alien-artifact", rate = 2 }
+  loot_to_be_converted["bob-alien-artifact"] = { name = "bob-small-alien-artifact", rate = 2 }
 end
 if angelsmods.trigger.artifacts["red"] then
   loot_to_be_converted["alien-artifact-red"] = { name = "small-alien-artifact-red", rate = 2 }

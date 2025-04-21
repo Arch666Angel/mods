@@ -57,7 +57,7 @@ data:extend({
 
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
 
     inventory_size = 1,
     enable_inventory_bar = false,
@@ -149,7 +149,7 @@ data:extend({
       },
     },
 
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
 
     alert_when_attacking = false,
     --turret_base_has_direction = true,
@@ -165,6 +165,7 @@ data:extend({
         scale = 0.78,
       }),
       damage_modifier = 1,
+      ammo_category = "beam",
       ammo_type = {
         category = "gathering",
         energy_consumption = "800kJ",
@@ -221,7 +222,7 @@ data:extend({
         filename = "__base__/sound/fight/electric-beam.ogg",
         volume = 0.7,
       },
-      max_sounds_per_type = 4,
+      max_sounds_per_prototype = 4,
     },
     graphics_set = {
       beam = {

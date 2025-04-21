@@ -5,10 +5,6 @@ local item_recipes_to_ignore = {}
 
 local fluid_recipes_to_ignore = {}
 
-local recipe_categories_to_ignore = {
-  "barreling-pump",
-}
-
 local function has_recipe(recipe_filters, recipes_to_ignore)
   local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
@@ -25,6 +21,21 @@ local function has_recipe(recipe_filters, recipes_to_ignore)
 
     return used
   end
+end
+
+local function has_generator(fluid_name)
+  local generator_filters = {
+    { filter = "type", type = "fusion-generator", mode = "and" },
+  }
+  local generator_prototypes = prototypes.get_entity_filtered(generator_filters)
+  for _, generator_prototype in pairs(generator_prototypes) do
+    for _, fluidbox in pairs(generator_prototype.fluidbox_prototypes) do
+      if fluidbox.production_type == "input" and fluidbox.filter and fluidbox.filter.name == fluid_name then
+        return true
+      end
+    end
+  end
+  return false
 end
 
 local unit_test_007 = function()
@@ -73,6 +84,10 @@ local unit_test_007 = function()
     end
   end
 
+  -- Add vanilla items that are intentionally not used in crafting
+  table.insert(items_to_ignore, "satellite")
+
+  -- Add SpaceMod items that are intentinally not used in crafting
   if script.active_mods["SpaceMod"] then
     table.insert(items_to_ignore, "drydock-assembly")
     table.insert(items_to_ignore, "drydock-structural")
@@ -103,21 +118,13 @@ local unit_test_007 = function()
     elem_filters = { { filter = "name", name = "water-void" } },
   })
 
-  if #recipe_categories_to_ignore > 0 then
-    for _, category_name in pairs(recipe_categories_to_ignore) do
-      if prototypes.recipe_category[category_name] then
-        table.insert(recipe_filters, { filter = "category", invert = false, mode = "or", category = category_name })
-      end
-    end
-  end
-
   local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for recipe_name, recipe in pairs(recipe_prototypes) do
     fluid_recipes_to_ignore[recipe_name] = true
   end
 
-  -- Check items
+  -- Check items that do not have a purpose specified in their ItemPrototype (such as being placeable as a tile or being fuel)
   local item_filters = {}
   table.insert(item_filters, { filter = "tool", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "selection-tool", invert = true, mode = "and" })
@@ -125,9 +132,10 @@ local unit_test_007 = function()
   table.insert(item_filters, { filter = "place-result", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "place-as-tile", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "placed-as-equipment-result", invert = true, mode = "and" })
-  --table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "type", invert = false, mode = "and", type = "item" })
   table.insert(item_filters, { filter = "name", invert = true, mode = "and", name = items_to_ignore })
+  table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "parameters" })
+  table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "spawnables" })
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
@@ -154,6 +162,7 @@ local unit_test_007 = function()
   local fluid_filters = {}
   table.insert(fluid_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(fluid_filters, { filter = "fuel-value", invert = true, mode = "and", comparison = ">", value = 0.0 })
+  table.insert(fluid_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "parameters" })
 
   local fluid_prototypes = prototypes.get_fluid_filtered(fluid_filters)
 
@@ -167,7 +176,7 @@ local unit_test_007 = function()
       elem_filters = { { filter = "name", name = fluid_name } },
     })
 
-    if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
+    if not has_recipe(recipe_filters, fluid_recipes_to_ignore) and not has_generator(fluid_name) then
       unit_test_functions.print_msg(string.format("No (useful) recipe is using fluid %q as an ingredient.", fluid_name))
       unit_test_result = unit_test_functions.test_failed
     end

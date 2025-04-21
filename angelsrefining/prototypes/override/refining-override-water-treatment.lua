@@ -169,10 +169,10 @@ angelsmods.functions.move_item("offshore-pump", "washing-building", "d")
 if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_consumption == true) then
   angelsmods.trigger.water_saline = true
   if mods["bobplates"] then
-    angelsmods.functions.hide("salt")
+    angelsmods.functions.hide("bob-salt")
 
     if not angelsmods.petrochem then
-      OV.global_replace_item("salt", "solid-salt")
+      OV.global_replace_item("bob-salt", "solid-salt")
 
       data:extend({
         {
@@ -185,23 +185,23 @@ if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_cons
             { type = "fluid", name = "water-saline", amount = 40 },
           },
           results = {
-            { type = "item", name = "sodium-hydroxide", amount = 1 },
-            { type = "fluid", name = "chlorine", amount = 20 },
-            { type = "fluid", name = "hydrogen", amount = 20 },
+            { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
+            { type = "fluid", name = "bob-chlorine", amount = 20 },
+            { type = "fluid", name = "bob-hydrogen", amount = 20 },
           },
           --icon = "__angelsrefininggraphics__/graphics/icons/electrolysis-salt-water.png",
           --icon_size = 32,
           icons = angelsmods.functions.create_viscous_liquid_recipe_icon({
-            "chlorine",
-            "hydrogen",
-            "sodium-hydroxide",
+            "bob-chlorine",
+            "bob-hydrogen",
+            "bob-sodium-hydroxide",
           }, {
             { 039, 112, 194 },
             { 168, 173, 173 },
             { 070, 133, 232 },
             { 185, 185, 185, 0.8 },
           }),
-          crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-saline", "chlorine", "hydrogen" }),
+          crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-saline", "bob-chlorine", "bob-hydrogen" }),
           subgroup = "bob-fluid-electrolysis",
           order = "b[fluid-chemistry]-b[salt-water-electrolysis]",
         },
@@ -249,15 +249,15 @@ end
 -- LITHIA WATER ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.fluid["lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
+  data.raw.fluid["bob-lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
     nil,
     { { 032, 118, 206 }, { 248, 083, 099 }, { 038, 137, 237, 0.8 }, { 255, 073, 072, 0.8 } }
   )
-  data.raw.fluid["lithia-water"].icon = nil
-  data.raw.fluid["lithia-water"].icon_size = nil
-  data.raw.fluid["lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
-  data.raw.fluid["lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
-  angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
+  data.raw.fluid["bob-lithia-water"].icon = nil
+  data.raw.fluid["bob-lithia-water"].icon_size = nil
+  data.raw.fluid["bob-lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
+  data.raw.fluid["bob-lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
+  angelsmods.functions.move_item("bob-lithia-water", "water-treatment-fluid", "ea", "fluid")
 
   data:extend({
     {
@@ -271,13 +271,13 @@ if mods["bobplates"] then
         { type = "fluid", name = "thermal-water", amount = 100 },
       },
       results = {
-        { type = "fluid", name = "lithia-water", amount = 40 },
+        { type = "fluid", name = "bob-lithia-water", amount = 40 },
         { type = "fluid", name = "water-purified", amount = 60 },
       },
       --icon = "__angelsrefininggraphics__/graphics/icons/water-thermal-lithia.png",
       --icon_size = 32,
       icons = angelsmods.functions.create_liquid_recipe_icon({
-        "lithia-water",
+        "bob-lithia-water",
         "water-purified",
       }, {
         { 243, 135, 000 },
@@ -286,45 +286,45 @@ if mods["bobplates"] then
       }),
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "thermal-water",
-        "lithia-water",
+        "bob-lithia-water",
         "water-purified",
       }),
       order = "g[water-thermal-lithia]",
     },
   })
   OV.add_unlock("thermal-water-extraction", "water-thermal-lithia")
-  OV.remove_prereq("lithium-processing", "logistic-science-pack")
-  OV.remove_prereq("lithium-processing", "electrolysis-1")
-  OV.remove_prereq("lithium-processing", "chemical-processing-1")
-  OV.add_prereq("lithium-processing", "thermal-water-extraction")
+  OV.remove_prereq("bob-lithium-processing", "logistic-science-pack")
+  OV.remove_prereq("bob-lithium-processing", "bob-electrolysis-1")
+  OV.remove_prereq("bob-lithium-processing", "bob-chemical-processing-1")
+  OV.add_prereq("bob-lithium-processing", "thermal-water-extraction")
 end
 
 -------------------------------------------------------------------------------
 -- PURE-WATER -----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if data.raw.fluid["pure-water"] then
-    OV.global_replace_item("pure-water", "water-purified")
-    OV.disable_recipe({ "pure-water", "pure-water-from-lithia" })
-    angelsmods.functions.hide("pure-water")
+  if data.raw.fluid["bob-pure-water"] then
+    OV.global_replace_item("bob-pure-water", "water-purified")
+    OV.disable_recipe({ "bob-pure-water", "bob-pure-water-from-lithia" })
+    angelsmods.functions.hide("bob-pure-water")
   end
 
   -- lithium processing -------------------------------------------------------
-  OV.global_replace_item("lithium-chloride", "solid-lithium")
-  angelsmods.functions.hide("lithium-chloride")
+  OV.global_replace_item("bob-lithium-chloride", "solid-lithium")
+  angelsmods.functions.hide("bob-lithium-chloride")
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes({
-    { name = "water-electrolysis", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
-    { name = "nitric-acid", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
-    { name = "sulfuric-acid-2", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
+    { name = "bob-water-electrolysis", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
+    { name = "bob-nitric-acid", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
+    { name = "bob-sulfuric-acid-2", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     {
-      name = "petroleum-gas-cracking",
+      name = "bob-petroleum-gas-cracking",
       ingredients = { { name = "water-purified", type = "fluid", amount = "water" } },
     },
     { name = "coal-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     {
-      name = "lithium-water-electrolysis",
+      name = "bob-lithium-water-electrolysis",
       ingredients = { { name = "water-purified", type = "fluid", amount = "water" } },
     },
     { name = "explosives", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
@@ -337,7 +337,7 @@ if mods["bobplates"] then
       ingredients = { { name = "water-purified", type = "fluid", amount = "water" } },
     },
   })
-  OV.add_prereq("electrolysis-1", "water-treatment")
+  OV.add_prereq("bob-electrolysis-1", "water-treatment")
 else
   if angelsmods.smelting and angelsmods.trigger.smelting_products["lithium"].plate then
   else

@@ -27,6 +27,7 @@ angelsmods.functions.OV = require("prototypes.override-functions")
 --Function set to build recipes and normalize them
 angelsmods.functions.RB = require("prototypes.recipe-builder")
 --Function set to build resources
+require("prototypes.generation.noise-expressions")
 require("prototypes.generation.resource-builder")
 --Functions for tips and tricks
 angelsmods.functions.TNT = require("prototypes.tips-and-tricks-functions")
@@ -65,18 +66,18 @@ angelsmods.trigger.ores["uranium"] = true
 if mods["bobplates"] then
   local ore_exists = angelsmods.functions.ore_exists
   --angelsmods.trigger.ores["uranium"] = true
-  angelsmods.trigger.ores["tin"] = ore_exists("tin-ore")
-  angelsmods.trigger.ores["lead"] = ore_exists("lead-ore")
-  angelsmods.trigger.ores["nickel"] = ore_exists("nickel-ore")
-  angelsmods.trigger.ores["silicon"] = ore_exists("quartz")
-  angelsmods.trigger.ores["aluminium"] = ore_exists("bauxite-ore")
-  angelsmods.trigger.ores["cobalt"] = ore_exists("cobalt-ore")
-  angelsmods.trigger.ores["zinc"] = ore_exists("zinc-ore")
-  angelsmods.trigger.ores["silver"] = ore_exists("silver-ore")
-  angelsmods.trigger.ores["titanium"] = ore_exists("rutile-ore")
-  angelsmods.trigger.ores["gold"] = ore_exists("gold-ore")
-  angelsmods.trigger.ores["tungsten"] = ore_exists("tungsten-ore")
-  angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or ore_exists("thorium-ore")
+  angelsmods.trigger.ores["tin"] = ore_exists("bob-tin-ore")
+  angelsmods.trigger.ores["lead"] = ore_exists("bob-lead-ore")
+  angelsmods.trigger.ores["nickel"] = ore_exists("bob-nickel-ore")
+  angelsmods.trigger.ores["silicon"] = ore_exists("bob-quartz")
+  angelsmods.trigger.ores["aluminium"] = ore_exists("bob-bauxite-ore")
+  angelsmods.trigger.ores["cobalt"] = ore_exists("bob-cobalt-ore")
+  angelsmods.trigger.ores["zinc"] = ore_exists("bob-zinc-ore")
+  angelsmods.trigger.ores["silver"] = ore_exists("bob-silver-ore")
+  angelsmods.trigger.ores["titanium"] = ore_exists("bob-rutile-ore")
+  angelsmods.trigger.ores["gold"] = ore_exists("bob-gold-ore")
+  angelsmods.trigger.ores["tungsten"] = ore_exists("bob-tungsten-ore")
+  angelsmods.trigger.ores["thorium"] = angelsmods.trigger.ores["thorium"] or ore_exists("bob-thorium-ore")
   --angelsmods.trigger.ores["gem-ore"] = ore_exists("gem-ore")
   --angelsmods.trigger.ores["gem-ruby"] = ore_exists("ruby-ore")
   --angelsmods.trigger.ores["gem-sapphire"] = ore_exists("sapphire-ore")
@@ -85,7 +86,7 @@ if mods["bobplates"] then
   --angelsmods.trigger.ores["gem-topaz"] = ore_exists("topaz-ore")
   --angelsmods.trigger.ores["gem-diamond"] = ore_exists("diamond-ore")
   angelsmods.trigger.slag = true
-  bobmods.ores.cobalt.enabled = ore_exists("cobalt-ore")
+  bobmods.ores.cobalt.enabled = ore_exists("bob-cobalt-ore")
 end
 angelsmods.trigger.ores["fluorite"] = angelsmods.trigger.ores["fluorite"] or false -- angels petrochem enables this
 angelsmods.trigger.ores["manganese"] = angelsmods.trigger.ores["manganese"] or false -- angels smelting enables this

@@ -2,7 +2,7 @@ if bobmods and bobmods.ores then
   if angelsmods.refining.disable_ore_override or not angelsmods.refining then
     if bobmods.ores.bauxite.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "bauxite-ore",
+        name = "bob-bauxite-ore",
         order = "b-ca",
         autoplace = {
           starting_area = false,
@@ -16,7 +16,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.cobalt.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "cobalt-ore",
+        name = "bob-cobalt-ore",
         order = "b-cb",
         autoplace = {
           starting_area = false,
@@ -30,7 +30,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.gems.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "gem-ore",
+        name = "bob-gem-ore",
         order = "b-cc",
         autoplace = {
           starting_area = false,
@@ -44,7 +44,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.gold.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "gold-ore",
+        name = "bob-gold-ore",
         order = "b-cd",
         autoplace = {
           starting_area = false,
@@ -58,7 +58,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.lead.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "lead-ore",
+        name = "bob-lead-ore",
         order = "b-ce",
         autoplace = {
           starting_area = true,
@@ -72,7 +72,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.nickel.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "nickel-ore",
+        name = "bob-nickel-ore",
         order = "b-cf",
         autoplace = {
           starting_area = false,
@@ -86,7 +86,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.quartz.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "quartz",
+        name = "bob-quartz",
         order = "b-cg",
         autoplace = {
           starting_area = true,
@@ -100,7 +100,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.rutile.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "rutile-ore",
+        name = "bob-rutile-ore",
         order = "b-ch",
         autoplace = {
           starting_area = false,
@@ -114,7 +114,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.silver.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "silver-ore",
+        name = "bob-silver-ore",
         order = "b-ci",
         autoplace = {
           starting_area = false,
@@ -128,7 +128,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.sulfur.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "sulfur",
+        name = "bob-sulfur",
         order = "b-cj",
         autoplace = {
           starting_area = false,
@@ -142,7 +142,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.tin.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "tin-ore",
+        name = "bob-tin-ore",
         order = "b-ck",
         autoplace = {
           starting_area = true,
@@ -156,7 +156,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.tungsten.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "tungsten-ore",
+        name = "bob-tungsten-ore",
         order = "b-cl",
         autoplace = {
           starting_area = false,
@@ -170,7 +170,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.zinc.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "zinc-ore",
+        name = "bob-zinc-ore",
         order = "b-cm",
         autoplace = {
           starting_area = false,
@@ -184,7 +184,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.thorium.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "thorium-ore",
+        name = "bob-thorium-ore",
         order = "b-cn",
         autoplace = {
           starting_area = false,

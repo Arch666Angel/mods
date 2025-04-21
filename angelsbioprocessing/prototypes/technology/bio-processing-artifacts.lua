@@ -1,4 +1,4 @@
-if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
+--if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
   -- Only load artifacts if bobs is enabled (causes startup halt without this)
   data:extend({
     -------------------------------------------------------------------------------
@@ -28,19 +28,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact-yellow",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-red-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-red-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-red-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-red-tool", 1 },
         },
         time = 30,
       },
@@ -72,19 +72,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact-orange",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-yellow-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-yellow-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-yellow-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-yellow-tool", 1 },
         },
         time = 30,
       },
@@ -115,19 +115,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-orange-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-orange-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-orange-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-orange-tool", 1 },
         },
         time = 30,
       },
@@ -158,19 +158,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-blue-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-blue-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-blue-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-blue-tool", 1 },
         },
         time = 30,
       },
@@ -202,19 +202,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact-orange",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-purple-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-purple-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-purple-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-purple-tool", 1 },
         },
         time = 30,
       },
@@ -246,19 +246,19 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
         "angels-alien-artifact-yellow",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-green-from-small",
         },
         {
           type = "unlock-recipe",
           recipe = "alien-artifact-green-from-basic",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-green-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-green-tool", 1 },
         },
         time = 30,
       },
@@ -286,18 +286,18 @@ if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] th
       order = "c-a",
       prerequisites = {},
       effects = {
-        {
+       --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-from-small",
-        },
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "alien-artifact-tool", 1 },
+          { "chemical-science-pack", 1 }, --alien-artifact-tool not recognised in lab
         },
         time = 30,
       },
     },
   })
-end
+--end

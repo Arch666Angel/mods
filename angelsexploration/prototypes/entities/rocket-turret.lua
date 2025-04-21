@@ -435,7 +435,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     attack_parameters = {
       type = "projectile",
       ammo_category = "rocket",

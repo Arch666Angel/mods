@@ -39,7 +39,7 @@ for _, decoName in pairs({
       corpse = "big-remnants",
       collision_box = { { -5.4, -0.4 }, { 5.4, 10.4 } },
       selection_box = { { -5.5, -0.5 }, { 5.5, 10.5 } },
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       energy_source = {
         type = "electric",
         usage_priority = "lamp",

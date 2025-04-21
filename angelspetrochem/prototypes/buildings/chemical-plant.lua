@@ -1,3 +1,32 @@
+local function angels_chemical_plant_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
+      volume = 1000,
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -29,7 +58,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     fast_replaceable_group = "angels-chemical-plant",
     next_upgrade = "angels-chemical-plant-2",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_speed = 1.75,
     energy_source = {
@@ -100,7 +129,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -116,42 +145,12 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.south },
-        },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, -1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, 1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 1, 1.4 }, direction = defines.direction.north } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
   {
     type = "item",
@@ -183,7 +182,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     fast_replaceable_group = "angels-chemical-plant",
     next_upgrade = "angels-chemical-plant-3",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_speed = 2.25,
     energy_source = {
@@ -254,7 +253,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -270,42 +269,12 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.south },
-        },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, -1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, 1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 1, 1.4 }, direction = defines.direction.north } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
   {
     type = "item",
@@ -337,7 +306,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     fast_replaceable_group = "angels-chemical-plant",
     next_upgrade = "angels-chemical-plant-4",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_speed = 2.75,
     energy_source = {
@@ -408,7 +377,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -424,42 +393,12 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.south },
-        },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, -1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, 1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 1, 1.4 }, direction = defines.direction.north } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
   {
     type = "item",
@@ -490,7 +429,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     fast_replaceable_group = "angels-chemical-plant",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_speed = 3.25,
     energy_source = {
@@ -561,7 +500,7 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -577,41 +516,11 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -1.4 }, direction = defines.direction.south },
-        },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, -1.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, 1.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 1, 1.4 }, direction = defines.direction.north } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
 })

@@ -79,9 +79,8 @@ if angelsmods.industries.tech then
         filename = "__base__/sound/lab.ogg",
         volume = 0.7,
       },
-      apparent_volume = 1,
     },
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
 
@@ -360,12 +359,11 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        audible_distance_modifier = 0.7,
         fade_in_ticks = 4,
         fade_out_ticks = 20,
       },
 
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "default",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
 

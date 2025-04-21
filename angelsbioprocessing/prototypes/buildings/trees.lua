@@ -29,7 +29,7 @@ data:extend({
     map_color = { r = 0.2, g = 0.7, b = 0.8 }, -- {r = 0.2, g = 0.2, b = 0.8},
     subgroup = "trees",
     order = "z-a",
-    vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+    impact_category = "wood",
     autoplace = {
 --       order = "xaa",
 --       max_probability = 0.025,
@@ -96,7 +96,7 @@ data:extend({
     map_color = { r = 0.2, g = 0.7, b = 0.8 }, -- {r = 0.2, g = 0.2, b = 0.8},
     subgroup = "trees",
     order = "z-b",
-    vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+    impact_category = "wood",
     autoplace = {
 --       order = "yaa",
 --       max_probability = 0.025,
@@ -169,7 +169,7 @@ data:extend({
     map_color = { r = 0.2, g = 0.7, b = 0.8 }, -- {r = 0.2, g = 0.2, b = 0.8},
     subgroup = "trees",
     order = "z-b",
-    vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+    impact_category = "wood",
     autoplace = {
 --       order = "yaa",
 --       max_probability = 0.025,

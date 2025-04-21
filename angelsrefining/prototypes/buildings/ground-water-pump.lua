@@ -25,27 +25,17 @@ data:extend({
     icon = "__angelsrefininggraphics__/graphics/icons/water-pump.png",
     icon_size = 48,
     flags = { "placeable-neutral", "player-creation" },
-
     collision_mask = {layers={object=true, train=true, is_object=true, is_lower_object=true}},
     collision_box = { { -0.45, -1.45 }, { 0.45, 0.45 } },
     tile_width = 1,
     tile_height = 1,
-    center_collision_mask = { "water-tile", "object-layer", "player-layer" },
-    fluid_box_tile_collision_test = {},
-    adjacent_tile_collision_test = {},
-    adjacent_tile_collision_mask = {},
-    adjacent_tile_collision_box = { { -0.45, -1.5 }, { 0.45, -0.5 } },
     fluid_source_offset = {0, -1},
     selection_box = { { -0.5, -1.5 }, { 0.5, 0.5 } },
-
     minable = { mining_time = 0.1, result = "ground-water-pump" },
-
     max_health = 100,
     damaged_trigger_effect = hit_effects.entity(),
     corpse = "small-remnants",
     dying_explosion = "pipe-explosion",
-
-    fluid = "water",
     always_draw_fluid = true,
     pumping_speed = 20 / 1200 * 60,
     fluid_box = {
@@ -56,8 +46,8 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          position = { 0, 0.4 },
-          direction = defines.direction.north
+          position = { 0, 0 },
+          direction = defines.direction.south
         },
       },
     },
@@ -78,7 +68,7 @@ data:extend({
       },
     },
 
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     working_sound = {
@@ -89,13 +79,10 @@ data:extend({
         },
       },
       match_volume_to_activity = true,
-      audible_distance_modifier = 0.7,
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-
-    min_perceived_performance = 0.5,
     graphics_set = {
       animation = {
         north = {
@@ -212,7 +199,6 @@ data:extend({
         },
       },
     },
-
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,

@@ -21,21 +21,21 @@ end
 if angelsmods.trigger.smelting_products["silver"].ingot then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-silver-nitrate", "silver-nitrate")
+    OV.global_replace_item("solid-silver-nitrate", "bob-silver-nitrate")
     angelsmods.functions.hide("solid-silver-nitrate")
-    angelsmods.functions.move_item("silver-nitrate", "angels-silver", "d")
-    data.raw["item"]["silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
-    data.raw["item"]["silver-nitrate"].icon_size = 32
-    OV.disable_recipe({ "silver-nitrate", "silver-from-lead" })
+    angelsmods.functions.move_item("bob-silver-nitrate", "angels-silver", "d")
+    data.raw["item"]["bob-silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
+    data.raw["item"]["bob-silver-nitrate"].icon_size = 32
+    OV.disable_recipe({ "bob-silver-nitrate", "silver-from-lead" })
     OV.remove_prereq("battery-3", "nitrogen-processing")
     OV.add_prereq("battery-3", "angels-silver-smelting-2")
     OV.add_prereq("battery-3", "powder-metallurgy-4")
 
-    angelsmods.functions.move_item("silver-oxide", "angels-silver", "e")
-    data.raw.item["silver-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-oxide.png"
-    data.raw.item["silver-oxide"].icon_size = 32
+    angelsmods.functions.move_item("bob-silver-oxide", "angels-silver", "e")
+    data.raw.item["bob-silver-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-oxide.png"
+    data.raw.item["bob-silver-oxide"].icon_size = 32
     OV.patch_recipes({
-      { name = "silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]", category = "powder-mixing-3" },
+      { name = "bob-silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]", category = "powder-mixing-3" },
     })
   end
 
@@ -73,25 +73,26 @@ end
 if angelsmods.trigger.smelting_products["silver"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-silver", "silver-plate")
+    OV.global_replace_item("angels-plate-silver", "bob-silver-plate")
     angelsmods.functions.hide("angels-plate-silver")
-    angelsmods.functions.move_item("silver-plate", "angels-silver-casting", "m")
-    data.raw["item"]["silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
-    data.raw["item"]["silver-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-silver-plate", "angels-silver-casting", "m")
+    data.raw["item"]["bob-silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
+    data.raw["item"]["bob-silver-plate"].icon_size = 32
 
     OV.patch_recipes({
       {
-        name = "silver-plate",
+        name = "bob-silver-plate",
         energy_required = 10.5,
         ingredients = {
           { name = "silver-ore", type = "item", amount = "+3" },
         },
         results = {
-          { name = "silver-plate", type = "item", amount = "+2" },
+          { name = "bob-silver-plate", type = "item", amount = "+2" },
         },
         icons = {
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
+            icon_size = 32
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
@@ -104,7 +105,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         order = "m[angels-plate-silver]-a",
       },
     })
-    OV.hide_recipe({ "silver-plate" })
+    OV.hide_recipe({ "bob-silver-plate" })
   end
 
   if mods["bobelectronics"] then
@@ -112,7 +113,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
       {
         name = "superior-circuit-board",
         ingredients = {
-          { type = "item", name = "silver-plate", amount = "gold-plate" },
+          { type = "item", name = "bob-silver-plate", amount = "bob-gold-plate" },
         },
       },
     })
@@ -134,7 +135,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
       {
         name = "electronic-components",
         ingredients = {
-          { type = "item", name = "angels-wire-silver", amount = "tinned-copper-cable" },
+          { type = "item", name = "angels-wire-silver", amount = "bob-tinned-copper-cable" },
         },
       },
     })
@@ -157,11 +158,11 @@ if angelsmods.trigger.smelting_products["silver"].wire then
     OV.patch_recipes({
       {
         name = "basic-silvered-copper-wire",
-        category = "electronics",
+        category = "bob-electronics",
       },
       {
         name = "angels-wire-coil-silver-converting",
-        category = "electronics-machine",
+        category = "bob-electronics-machine",
       },
     })
   end

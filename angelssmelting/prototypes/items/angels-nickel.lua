@@ -74,7 +74,6 @@ data:extend({
     subgroup = "angels-nickel-casting",
     order = "h",
     default_temperature = 1455,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 60 / 255, g = 125 / 255, b = 119 / 255 },
     flow_color = { r = 60 / 255, g = 125 / 255, b = 119 / 255 },

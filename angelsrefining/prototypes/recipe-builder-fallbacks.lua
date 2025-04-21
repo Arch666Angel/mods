@@ -3,7 +3,7 @@
 angelsmods.functions.RB.set_fallback(
   "item",
   "t0-circuit",
-  { { "block-electronics-0" }, { "basic-circuit-board" }, { "electronic-circuit" } }
+  { { "block-electronics-0" }, { "bob-basic-circuit-board" }, { "electronic-circuit" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
@@ -28,12 +28,12 @@ angelsmods.functions.RB.set_fallback(
 angelsmods.functions.RB.set_fallback(
   "item",
   "t5-circuit",
-  { { "block-electronics-5" }, { "advanced-processing-unit" }, { "processing-unit" } }
+  { { "block-electronics-5" }, { "bob-advanced-processing-unit" }, { "processing-unit" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t6-circuit",
-  { { "block-electronics-5" }, { "advanced-processing-unit" }, { "processing-unit" } }
+  { { "block-electronics-5" }, { "bob-advanced-processing-unit" }, { "processing-unit" } }
 )
 
 --PLATES
@@ -42,7 +42,7 @@ angelsmods.functions.RB.set_fallback("item", "t1-plate", { { "block-construction
 angelsmods.functions.RB.set_fallback("item", "t2-plate", {
   { "block-construction-2" },
   {
-    "bronze-alloy",
+    "bob-bronze-alloy",
     3,
     function(t, n)
       return mods["angelssmelting"] and angelsmods.trigger.smelting_products["bronze"].plate or false
@@ -52,7 +52,7 @@ angelsmods.functions.RB.set_fallback("item", "t2-plate", {
 })
 angelsmods.functions.RB.set_fallback("item", "t3-plate", {
   { "block-construction-3" },
-  { "aluminium-plate", 4 },
+  { "bob-aluminium-plate", 4 },
   {
     "angels-plate-aluminium",
     4,
@@ -64,7 +64,7 @@ angelsmods.functions.RB.set_fallback("item", "t3-plate", {
 })
 angelsmods.functions.RB.set_fallback("item", "t4-plate", {
   { "block-construction-4" },
-  { "titanium-plate", 4 },
+  { "bob-titanium-plate", 4 },
   {
     "angels-plate-titanium",
     4,
@@ -76,7 +76,7 @@ angelsmods.functions.RB.set_fallback("item", "t4-plate", {
 })
 angelsmods.functions.RB.set_fallback("item", "t5-plate", {
   { "block-construction-5" },
-  { "tungsten-plate", 4 },
+  { "bob-tungsten-plate", 4 },
   {
     "angels-plate-tungsten",
     4,
@@ -89,7 +89,7 @@ angelsmods.functions.RB.set_fallback("item", "t5-plate", {
 angelsmods.functions.RB.set_fallback("item", "t6-plate", {
   { "block-construction-5" },
   {
-    "tungsten-carbide",
+    "bob-tungsten-carbide",
     4,
     function(t, n)
       return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false
@@ -143,53 +143,53 @@ angelsmods.functions.RB.set_fallback("item", "t0-gears", { { "block-mechanical-1
 angelsmods.functions.RB.set_fallback(
   "item",
   "t1-gears",
-  { { "block-mechanical-1" }, { "steel-gear-wheel", 3 }, { "iron-gear-wheel", 5 } }
+  { { "block-mechanical-1" }, { "bob-steel-gear-wheel", 3 }, { "iron-gear-wheel", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t2-gears",
-  { { "block-mechanical-1" }, { "steel-gear-wheel", 3 }, { "iron-gear-wheel", 6 } }
+  { { "block-mechanical-1" }, { "bob-steel-gear-wheel", 3 }, { "iron-gear-wheel", 6 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t3-gears",
-  { { "block-mechanical-2" }, { "brass-gear-wheel", 3 }, { "iron-gear-wheel", 7 } }
+  { { "block-mechanical-2" }, { "bob-brass-gear-wheel", 3 }, { "iron-gear-wheel", 7 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t4-gears",
-  { { "block-mechanical-2" }, { "titanium-gear-wheel", 3 }, { "iron-gear-wheel", 8 } }
+  { { "block-mechanical-2" }, { "bob-titanium-gear-wheel", 3 }, { "iron-gear-wheel", 8 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t5-gears",
-  { { "block-mechanical-2" }, { "tungsten-gear-wheel", 3 }, { "iron-gear-wheel", 9 } }
+  { { "block-mechanical-2" }, { "bob-tungsten-gear-wheel", 3 }, { "iron-gear-wheel", 9 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t6-gears",
-  { { "block-mechanical-2" }, { "nitinol-gear-wheel", 3 }, { "iron-gear-wheel", 9 } }
+  { { "block-mechanical-2" }, { "bob-nitinol-gear-wheel", 3 }, { "iron-gear-wheel", 9 } }
 )
 
 --PIPES
 angelsmods.functions.RB.set_fallback("item", "t0-pipe", { { "block-fluidbox-1" }, { "pipe", 3 } })
-angelsmods.functions.RB.set_fallback("item", "t1-pipe", { { "block-fluidbox-1" }, { "steel-pipe", 3 }, { "pipe", 5 } })
-angelsmods.functions.RB.set_fallback("item", "t2-pipe", { { "block-fluidbox-1" }, { "bronze-pipe", 3 }, { "pipe", 6 } })
-angelsmods.functions.RB.set_fallback("item", "t3-pipe", { { "block-fluidbox-2" }, { "brass-pipe", 3 }, { "pipe", 7 } })
+angelsmods.functions.RB.set_fallback("item", "t1-pipe", { { "block-fluidbox-1" }, { "bob-steel-pipe", 3 }, { "pipe", 5 } })
+angelsmods.functions.RB.set_fallback("item", "t2-pipe", { { "block-fluidbox-1" }, { "bob-bronze-pipe", 3 }, { "pipe", 6 } })
+angelsmods.functions.RB.set_fallback("item", "t3-pipe", { { "block-fluidbox-2" }, { "bob-brass-pipe", 3 }, { "pipe", 7 } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "t4-pipe",
-  { { "block-fluidbox-2" }, { "titanium-pipe", 3 }, { "pipe", 8 } }
+  { { "block-fluidbox-2" }, { "bob-titanium-pipe", 3 }, { "pipe", 8 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t5-pipe",
-  { { "block-fluidbox-2" }, { "tungsten-pipe", 3 }, { "pipe", 9 } }
+  { { "block-fluidbox-2" }, { "bob-tungsten-pipe", 3 }, { "pipe", 9 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t6-pipe",
-  { { "block-fluidbox-2" }, { "copper-tungsten-pipe", 3 }, { "pipe", 10 } }
+  { { "block-fluidbox-2" }, { "bob-copper-tungsten-pipe", 3 }, { "pipe", 10 } }
 )
 
 --BIO
@@ -436,7 +436,7 @@ angelsmods.functions.RB.set_fallback("item", "arboretum-1", {})
 
 angelsmods.functions.RB.set_fallback("item", "puffer-1", {
   { "block-bprocessing-3", 2 },
-  { "glass", 5 },
+  { "bob-glass", 5 },
   {
     "angels-plate-glass",
     5,
@@ -448,7 +448,7 @@ angelsmods.functions.RB.set_fallback("item", "puffer-1", {
 
 angelsmods.functions.RB.set_fallback("item", "fish-1", {
   { "block-production-2", 1 },
-  { "glass", 10 },
+  { "bob-glass", 10 },
   {
     "angels-plate-glass",
     10,

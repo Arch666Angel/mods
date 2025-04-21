@@ -146,7 +146,7 @@ if angelsmods.industries.overhaul then
         }),
       },
 
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "default",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
       working_sound = {
@@ -155,7 +155,7 @@ if angelsmods.industries.overhaul then
           { filename = "__base__/sound/nuclear-reactor-2.ogg", volume = 0.55 },
         },
         -- idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-        max_sounds_per_type = 3,
+        max_sounds_per_prototype = 3,
         fade_in_ticks = 4,
         fade_out_ticks = 20,
       },

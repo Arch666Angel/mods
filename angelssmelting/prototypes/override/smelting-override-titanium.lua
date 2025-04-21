@@ -68,11 +68,11 @@ end
 if angelsmods.trigger.smelting_products["titanium"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-titanium", "titanium-plate")
+    OV.global_replace_item("angels-plate-titanium", "bob-titanium-plate")
     angelsmods.functions.hide("angels-plate-titanium")
-    angelsmods.functions.move_item("titanium-plate", "angels-titanium-casting", "j")
-    data.raw["item"]["titanium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png"
-    data.raw["item"]["titanium-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-titanium-plate", "angels-titanium-casting", "j")
+    data.raw["item"]["bob-titanium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png"
+    data.raw["item"]["bob-titanium-plate"].icon_size = 32
     OV.disable_recipe({ "bob-titanium-plate" })
   end
 else

@@ -10,7 +10,7 @@ reorder("item", "laser-turret", "angels-electric-a", "b[turret]-a[laser]")
 
 if mods["bobwarfare"] then
   -- laser
-  reorder("gun", "laser-rifle", "angels-electric-a", "a[gun]-a[rifle]")
+  reorder("gun", "bob-laser-rifle", "angels-electric-a", "a[gun]-a[rifle]")
 
   reorder("item", "laser-turret", "angels-electric-a", "b[turret]-a[laser]")
   reorder("item", "bob-laser-turret-2", "angels-electric-a", "b[turret]-b[laser]")

@@ -62,6 +62,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore5-crushed-smelting",
+    localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
     energy_required = 7,
@@ -77,6 +78,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore6-crushed-smelting",
+    localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
     energy_required = 7,

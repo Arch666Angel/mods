@@ -35,7 +35,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
       selection_box = { { -2, -2 }, { 2, 2 } },
       fast_replaceable_group = "silo",
       inventory_size = 256,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       picture = {
         filename = "__angelsaddons-storage__/graphics/entity/silo.png",
         priority = "extra-high",

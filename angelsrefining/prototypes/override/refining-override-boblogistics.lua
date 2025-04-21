@@ -1,10 +1,5 @@
 local OV = angelsmods.functions.OV
 if mods["boblogistics"] then
-  -- bob valves
-  angelsmods.functions.move_item("bob-valve", "angels-fluid-control", "a[valve]-a", "item")
-  angelsmods.functions.move_item("bob-overflow-valve", "angels-fluid-control", "a[valve]-b", "item")
-  angelsmods.functions.move_item("bob-topup-valve", "angels-fluid-control", "a[valve]-c", "item")
-
   -- bob pumps
   angelsmods.functions.move_item("pump", "angels-fluid-control", "b[pump]-a[mk1]")
   angelsmods.functions.move_item("bob-pump-2", "angels-fluid-control", "b[pump]-b[mk2]")
@@ -57,16 +52,16 @@ if mods["boblogistics"] then
   --repair pack techs
   OV.patch_recipes({
     {
-      name = "repair-pack-3",
+      name = "bob-repair-pack-3",
       ingredients = {
-        { name = "brass-gear-wheel", amount = "cobalt-steel-gear-wheel" },
-        { name = "invar-alloy", amount = "cobalt-steel-alloy" },
+        { name = "bob-brass-gear-wheel", amount = "bob-cobalt-steel-gear-wheel" },
+        { name = "bob-invar-alloy", amount = "bob-cobalt-steel-alloy" },
       },
     },
   })
   OV.add_prereq("bob-repair-pack-3", {
-    mods["bobplates"] and "zinc-processing" or "steel-axe",
-    mods["bobplates"] and "invar-processing" or "steel-processing",
+    mods["bobplates"] and "bob-zinc-processing" or "steel-axe",
+    mods["bobplates"] and "bob-invar-processing" or "steel-processing",
   })
-  OV.remove_prereq("bob-repair-pack-3", "cobalt-processing")
+  OV.remove_prereq("bob-repair-pack-3", "bob-cobalt-processing")
 end

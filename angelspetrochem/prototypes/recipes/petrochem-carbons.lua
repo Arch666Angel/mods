@@ -813,10 +813,11 @@ data:extend({
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       {
-        "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene.png",
-        72,
-        { 11.5 * 32 / 10.24, 0 },
-        32 / 10.24,
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene.png",
+        icon_size = 72,
+        shift = { 11.5 * 32 / 10.24, 0 },
+        scale = 32 / 10.24,
+        floating = true,
       },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "liquid-polyethylene", "gas-ethylene" }),

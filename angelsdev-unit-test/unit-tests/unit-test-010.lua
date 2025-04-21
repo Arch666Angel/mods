@@ -27,11 +27,15 @@ local function process_tech(tech)
       local skip = false
 
       -- Skip unbarelling recipes
-      if
-        recipe.name ~= "empty-barrel"
-        and string.sub(recipe.name, 1, 6) == "empty-"
-        and string.sub(recipe.name, -7, -1) == "-barrel"
-      then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif recipe.subgroup.name == "empty-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-empty-canister" then
+        skip = true
+      elseif string.sub(recipe.name, 1, 6) == "empty-" and string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
       end
 
@@ -40,8 +44,14 @@ local function process_tech(tech)
           if product.type == "item" then
             recipes[recipe.name].products.items[product.name] = true
 
+            -- Check for rocket_launch_products
+            local item = prototypes.item[product.name]
+            for _, launch_product in pairs(item.rocket_launch_products) do
+              recipes[recipe.name].products.items[launch_product.name] = true
+            end
+
             -- Check for entity. Add crafting categories
-            local entity = prototypes.item[product.name].place_result
+            local entity = item.place_result
             if entity then
               if entity.crafting_categories then
                 for category_name, _ in pairs(entity.crafting_categories) do
@@ -58,7 +68,17 @@ local function process_tech(tech)
       skip = false
 
       -- Skip barelling recipes
-      if string.sub(recipe.name, 1, 5) == "fill-" and string.sub(recipe.name, -7, -1) == "-barrel" then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "fill-barrel" then
+        skip = true
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-gas-bottle" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-canister" then
         skip = true
       end
 
@@ -113,10 +133,9 @@ local function process_tech(tech)
             end
           end
         elseif entity.type == "offshore-pump" then
-          if entity.fluidbox_prototypes[1].filter then
-            recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
-          else
-          
+          local filter = entity.fluidbox_prototypes[1].filter
+          if filter then
+            recipes[recipe.name].products.fluids[filter.name] = true
           end
         end
       end
@@ -126,6 +145,41 @@ local function process_tech(tech)
         for _, tile in pairs(planet.prototype.map_gen_settings.autoplace_settings["tile"].settings) do
           if tile.fluid then
             result.fluids[tile.fluid.name] = true
+          end
+        end
+      end
+    end
+  end
+
+  -- Add trigger tech prerequisites
+  if tech.research_trigger and (tech.research_trigger.type == "craft-item" or tech.research_trigger.type == "craft-fluid") then
+    if prototypes.item[tech.research_trigger.item] or prototypes.fluid[tech.research_trigger.fluid] then
+      recipes["__TECH__"..tech.name] = {
+        processed = false,
+        ingredients = { items = {}, fluids = {} },
+        products = { items = {}, fluids = {} },
+        category = "parameters",
+        categories = {},
+      }
+      local resources = prototypes.get_entity_filtered({
+        { filter = "name", mode = "and", name = tech.research_trigger.item or tech.research_trigger.fluid },
+        { filter = "minable", mode = "and" },
+        { filter = "autoplace", mode = "and" },
+      })
+      local drills = prototypes.get_entity_filtered({
+        { filter = "type", mode = "and", type = "mining-drill" }
+      })
+      for _, resource in pairs(resources) do
+        for _, drill in pairs(drills) do
+          for category, _ in pairs(drill.resource_categories) do
+            if resource.resource_category == category then
+              recipes["__TECH__"..tech.name].ingredients.items[drill.name] = true
+
+              -- If the entity requires a fluid to mine, make sure this is a prerequisite too
+              if resource.mineable_properties.required_fluid then
+                recipes["__TECH__"..tech.name].ingredients.fluids[resource.mineable_properties.required_fluid] = true
+              end
+            end
           end
         end
       end
@@ -206,8 +260,14 @@ local function process_tech(tech)
           end
         end
         if not result.categories[recipe.category] then
-          recipe.missing_category = true
-          found_all_prerequisites = false
+          -- Ignore parameter recipes
+          if recipe.category == "parameters" then
+            recipe.missing_category = false
+          else do
+            recipe.missing_category = true
+            found_all_prerequisites = false
+            end
+          end
         end
 
         if found_all_prerequisites then
@@ -322,6 +382,13 @@ local function make_starting_unlocks()
     end
   end
 
+  -- Include fluid mining results from tiles (fluid mining results are no longer tracked by offshore pumps in 2.0)
+  for tile_name, tile in pairs(prototypes.tile) do
+    if tile.fluid then
+      starting_unlocks.fluids[tile.fluid.name] = true
+    end
+  end
+
   local starting_tech = { name = "starting", prerequisites = {}, effects = {} }
 
   local recipe_filters = {}
@@ -343,6 +410,10 @@ local function make_starting_unlocks()
     end
   end
 
+  -- Add "crafting" and "smelting" to starting_unlocks.categories
+  starting_unlocks.categories["crafting"] = true
+  starting_unlocks.categories["smelting"] = true
+
   starting_unlocks = process_tech(starting_tech)
 end
 
@@ -358,10 +429,13 @@ local function add_ignores()
     skip_test = true
   end
 
-  -- base game exception
-  ignored_unlocks["artillery"] = {
+  -- base game exception (base game engine units don't actually have assembling machines as a prereq, but require them to be crafted)
+  ignored_unlocks["engine"] = {
     items = {
-      ["concrete"] = true,
+      ["engine-unit"] = true,
+    },
+    categories = {
+      ["advanced-crafting"] = true,
     },
   }
 
@@ -513,7 +587,7 @@ local function add_ignores()
     ignore_building_recipes = false
     ignored_unlocks["starting"] = {
       items = {
-        ["basic-circuit-board"] = true,
+        ["bob-basic-circuit-board"] = true,
         ["copper-pipe"] = true,
         ["iron-gear-wheel"] = true,
         ["iron-plate"] = true,

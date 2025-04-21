@@ -1,3 +1,32 @@
+local function angels_washing_plant_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south }
+      },
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "input", position = { 2, 0 }, direction = defines.direction.east },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -65,34 +94,12 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2.4, 0 }, direction = defines.direction.east } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_washing_plant_fluid_boxes(),
   },
   {
     type = "item",
@@ -159,33 +166,11 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2.4, 0 }, direction = defines.direction.east } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_washing_plant_fluid_boxes(),
   },
 })
