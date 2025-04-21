@@ -11,10 +11,10 @@ if angelsmods.industries.tech then
     OV.remove_prereq("battery-2", "tech-blue-packs")
     OV.remove_prereq("battery-3", "production-science-pack")
 
-    AI.pack_replace("grinding", "green", "orange")
+    AI.pack_replace("bob-grinding", "green", "orange")
     AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
-    AI.pack_replace("gem-processing-2", "green", "orange")
+    AI.pack_replace("bob-gem-processing-2", "green", "orange")
     AI.pack_replace("gem-processing-3", "green", "orange")
     AI.pack_replace("electric-mixing-furnace", "blue", "orange")
 
@@ -52,7 +52,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("automation-3", "blue", "orange")
     OV.remove_prereq("automation-4", "production-science-pack")
     if settings.startup["bobmods-assembly-electronicmachines"].value == true then
-      AI.pack_replace("electronics-machine-2", "blue", "orange")
+      AI.pack_replace("bob-electronics-machine-2", "blue", "orange")
     end
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
@@ -461,7 +461,7 @@ if angelsmods.industries.tech then
 
       OV.set_science_pack("steam-power", "angels-science-pack-grey", 1)
       OV.set_science_pack("steam-automation", "angels-science-pack-grey", 1)
-      OV.set_science_pack("electricity", "angels-science-pack-grey", 1)
+      OV.set_science_pack("bob-electricity", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "angels-science-pack-grey", 1)
       OV.set_science_pack("bob-steam-engine-1", "datacore-basic", 2)
 

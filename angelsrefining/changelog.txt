@@ -11,6 +11,7 @@ Date: ???
     - Removed references to normal / expensive recipes (945)
     - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
     - Updated for Factorio 2.0 (994)
+    - Made heavy offshore pump ignore mining productivity research (1045)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.7
 Date: 21.02.2024

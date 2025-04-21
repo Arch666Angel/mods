@@ -5,8 +5,8 @@ if mods["bobrevamp"] and mods["bobplates"] then
   -----------------------------------------------------------------------------
   -- SOLID FUEL ---------------------------------------------------------------
   -----------------------------------------------------------------------------
-  data.raw.recipe["solid-fuel-from-hydrogen"].icon = nil
-  data.raw.recipe["solid-fuel-from-hydrogen"].icons = angelsmods.functions.create_solid_recipe_icon({
+  data.raw.recipe["bob-solid-fuel-from-hydrogen"].icon = nil
+  data.raw.recipe["bob-solid-fuel-from-hydrogen"].icons = angelsmods.functions.create_solid_recipe_icon({
     { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
   }, "solid-fuel")
 
@@ -14,13 +14,13 @@ if mods["bobrevamp"] and mods["bobplates"] then
   -- RTG ----------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-rtg"].value then
-    data.raw["item"]["sodium-cobaltate"].icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cobaltate.png"
-    data.raw["item"]["sodium-cobaltate"].icon_size = 32
-    move_item("sodium-cobaltate", "petrochem-sodium", "b[sodium]-d[solid-sodium-cobaltate]")
+    data.raw["item"]["bob-sodium-cobaltate"].icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cobaltate.png"
+    data.raw["item"]["bob-sodium-cobaltate"].icon_size = 32
+    move_item("bob-sodium-cobaltate", "petrochem-sodium", "b[sodium]-d[solid-sodium-cobaltate]")
 
     OV.patch_recipes({
       {
-        name = "sodium-cobaltate",
+        name = "bob-sodium-cobaltate",
         icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cobaltate.png",
         icon_size = 32,
         subgroup = "petrochem-sodium",
@@ -40,6 +40,6 @@ if mods["bobrevamp"] and mods["bobplates"] then
         },
       })
     end
-    OV.add_prereq("rtg", "angels-coal-processing-3")
+    OV.add_prereq("bob-rtg", "angels-coal-processing-3")
   end
 end

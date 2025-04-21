@@ -1,14 +1,28 @@
 local OV = angelsmods.functions.OV
 
-local contais_artifact_creation = false
-
+local contains_artifact_creation = false
+local artifact = {
+  ["reg"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact" or "alien-artifact",
+  ["small-reg"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact" or "small-alien-artifact",
+  ["red"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-red" or "alien-artifact-red",
+  ["small-red"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-red" or "small-alien-artifact-red",
+  ["yellow"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-yellow" or "alien-artifact-yellow",
+  ["small-yellow"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-yellow" or "small-alien-artifact-yellow",
+  ["orange"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-orange" or "alien-artifact-orange",
+  ["small-orange"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-orange" or "small-alien-artifact-orange",
+  ["green"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-green" or "alien-artifact-green",
+  ["small-green"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-green" or "small-alien-artifact-green",
+  ["blue"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-blue" or "alien-artifact-blue",
+  ["small-blue"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-blue" or "small-alien-artifact-blue",
+  ["purple"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-purple" or "alien-artifact-purple",
+  ["small-purple"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-purple" or "small-alien-artifact-purple",
+}
 -------------------------------------------------------------------------------
 -- RED ARTIFACTS --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["red"] then
   if angelsmods.trigger.bio_pastes["copper"] then
-    contais_artifact_creation = true
-
+    contains_artifact_creation = true
     data:extend({
       --PRE ARTIFACT
       {
@@ -53,7 +67,7 @@ if angelsmods.trigger.artifacts["red"] then
           { type = "item", name = "alien-pre-artifact-red", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-red", amount = 1 },
+          { type = "item", name = artifact["small-red"], amount = 1 },
         },
         icon_size = 32,
         order = "a[red]",
@@ -65,16 +79,16 @@ if angelsmods.trigger.artifacts["red"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-red", ingredients = { { type = "item", name = "ruby-4", amount = 1 } } },
+        { name = "alien-pre-artifact-red", ingredients = { { type = "item", name = "bob-ruby-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-red"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-red"] then
     if angelsmods.trigger.bio_pastes["copper"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-red", "bio-processing-alien-small", "a[red]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-red", "bio-processing-alien-small", "a[red]")
     end
-    angelsmods.functions.move_item("alien-artifact-red", "bio-processing-alien-large", "a[red]")
+    angelsmods.functions.move_item("bob-alien-artifact-red", "bio-processing-alien-large", "a[red]")
     OV.patch_recipes({
       { name = "alien-artifact-red-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -131,16 +145,18 @@ if angelsmods.trigger.artifacts["red"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-red", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["red"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-red", amount = 5 },
+          { type = "item", name = artifact["red"], amount = 5 },
         },
         icon_size = 32,
         order = "a[red]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-red","alien-artifact-red-from-small")
+    OV.add_unlock("angels-alien-artifact-red","alien-artifact-red-from-basic")
   end
 
   if angelsmods.exploration then
@@ -159,7 +175,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["yellow"] then
   if angelsmods.trigger.bio_pastes["gold"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -217,16 +233,16 @@ if angelsmods.trigger.artifacts["yellow"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-yellow", ingredients = { { type = "item", name = "diamond-4", amount = 1 } } },
+        { name = "alien-pre-artifact-yellow", ingredients = { { type = "item", name = "bob-diamond-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-yellow"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-yellow"] then
     if angelsmods.trigger.bio_pastes["gold"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-yellow", "bio-processing-alien-small", "b[yellow]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-yellow", "bio-processing-alien-small", "b[yellow]")
     end
-    angelsmods.functions.move_item("alien-artifact-yellow", "bio-processing-alien-large", "b[yellow]")
+    angelsmods.functions.move_item("bob-alien-artifact-yellow", "bio-processing-alien-large", "b[yellow]")
     OV.patch_recipes({
       { name = "alien-artifact-yellow-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -283,16 +299,18 @@ if angelsmods.trigger.artifacts["yellow"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-yellow", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["yellow"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-yellow", amount = 5 },
+          { type = "item", name = artifact["yellow"], amount = 5 },
         },
         icon_size = 32,
         order = "b[yellow]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-yellow","alien-artifact-yellow-from-small")
+    OV.add_unlock("angels-alien-artifact-yellow","alien-artifact-yellow-from-basic")
   end
 
   if angelsmods.exploration then
@@ -311,7 +329,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["orange"] then
   if angelsmods.trigger.bio_pastes["tungsten"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -369,16 +387,16 @@ if angelsmods.trigger.artifacts["orange"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-orange", ingredients = { { type = "item", name = "topaz-4", amount = 1 } } },
+        { name = "alien-pre-artifact-orange", ingredients = { { type = "item", name = "bob-topaz-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-orange"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-orange"] then
     if angelsmods.trigger.bio_pastes["tungsten"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-orange", "bio-processing-alien-small", "c[orange]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-orange", "bio-processing-alien-small", "c[orange]")
     end
-    angelsmods.functions.move_item("alien-artifact-orange", "bio-processing-alien-large", "c[orange]")
+    angelsmods.functions.move_item("bob-alien-artifact-orange", "bio-processing-alien-large", "c[orange]")
     OV.patch_recipes({
       { name = "alien-artifact-orange-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -435,16 +453,18 @@ if angelsmods.trigger.artifacts["orange"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-orange", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["orange"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-orange", amount = 5 },
+          { type = "item", name = artifact["orange"], amount = 5 },
         },
         icon_size = 32,
         order = "c[orange]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-orange","alien-artifact-orange-from-small")
+    OV.add_unlock("angels-alien-artifact-orange","alien-artifact-orange-from-basic")
   end
 
   if angelsmods.exploration then
@@ -463,7 +483,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["blue"] then
   if angelsmods.trigger.bio_pastes["cobalt"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -521,16 +541,16 @@ if angelsmods.trigger.artifacts["blue"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-blue", ingredients = { { type = "item", name = "sapphire-4", amount = 1 } } },
+        { name = "alien-pre-artifact-blue", ingredients = { { type = "item", name = "bob-sapphire-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
     if angelsmods.trigger.bio_pastes["cobalt"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-blue", "bio-processing-alien-small", "d[blue]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-blue", "bio-processing-alien-small", "d[blue]")
     end
-    angelsmods.functions.move_item("alien-artifact-blue", "bio-processing-alien-large", "d[blue]")
+    angelsmods.functions.move_item("bob-alien-artifact-blue", "bio-processing-alien-large", "d[blue]")
     OV.patch_recipes({
       { name = "alien-artifact-blue-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -587,16 +607,19 @@ if angelsmods.trigger.artifacts["blue"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-blue", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["blue"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-blue", amount = 5 },
+          { type = "item", name = artifact["blue"], amount = 5 },
         },
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue.png",
         icon_size = 32,
         order = "d[blue]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-blue","alien-artifact-blue-from-small")
+    OV.add_unlock("angels-alien-artifact-blue","alien-artifact-blue-from-basic")
   end
 
   if angelsmods.exploration then
@@ -615,7 +638,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["purple"] then
   if angelsmods.trigger.bio_pastes["titanium"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -673,16 +696,16 @@ if angelsmods.trigger.artifacts["purple"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-purple", ingredients = { { type = "item", name = "amethyst-4", amount = 1 } } },
+        { name = "alien-pre-artifact-purple", ingredients = { { type = "item", name = "bob-amethyst-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-purple"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-purple"] then
     if angelsmods.trigger.bio_pastes["titanium"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-purple", "bio-processing-alien-small", "e[purple]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-purple", "bio-processing-alien-small", "e[purple]")
     end
-    angelsmods.functions.move_item("alien-artifact-purple", "bio-processing-alien-large", "e[purple]")
+    angelsmods.functions.move_item("bob-alien-artifact-purple", "bio-processing-alien-large", "e[purple]")
     OV.patch_recipes({
       { name = "alien-artifact-purple-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -739,16 +762,19 @@ if angelsmods.trigger.artifacts["purple"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-purple", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["purple"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-purple", amount = 5 },
+          { type = "item", name = artifact["purple"], amount = 5 },
         },
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-purple.png",
         icon_size = 32,
         order = "e[purple]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-purple","alien-artifact-purple-from-small")
+    OV.add_unlock("angels-alien-artifact-purple","alien-artifact-purple-from-basic")
   end
 
   if angelsmods.exploration then
@@ -767,7 +793,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["green"] then
   if angelsmods.trigger.bio_pastes["zinc"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -825,16 +851,16 @@ if angelsmods.trigger.artifacts["green"] then
 
     if bobmods and bobmods.plates then
       OV.patch_recipes({
-        { name = "alien-pre-artifact-green", ingredients = { { type = "item", name = "emerald-4", amount = 1 } } },
+        { name = "alien-pre-artifact-green", ingredients = { { type = "item", name = "bob-emerald-4", amount = 1 } } },
       })
     end
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-green"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-green"] then
     if angelsmods.trigger.bio_pastes["zinc"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact-green", "bio-processing-alien-small", "f[green]")
+      angelsmods.functions.move_item("bob-small-alien-artifact-green", "bio-processing-alien-small", "f[green]")
     end
-    angelsmods.functions.move_item("alien-artifact-green", "bio-processing-alien-large", "f[green]")
+    angelsmods.functions.move_item("bob-alien-artifact-green", "bio-processing-alien-large", "f[green]")
     OV.patch_recipes({
       { name = "alien-artifact-green-from-basic", subgroup = "bio-processing-alien-large-convert" },
     })
@@ -891,16 +917,19 @@ if angelsmods.trigger.artifacts["green"] then
         enabled = false,
         energy_required = 5,
         ingredients = {
-          { type = "item", name = "alien-artifact-green", amount = 1 },
-          { type = "item", name = "alien-artifact", amount = 5 },
+          { type = "item", name = artifact["green"], amount = 1 },
+          { type = "item", name = artifact["reg"], amount = 5 },
         },
         results = {
-          { type = "item", name = "alien-artifact-green", amount = 5 },
+          { type = "item", name = artifact["green"], amount = 5 },
         },
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-pre-artifact-green.png",
         icon_size = 32,
         order = "f[green]",
       },
     })
+    OV.add_unlock("angels-alien-artifact-green","alien-artifact-green-from-small")
+    OV.add_unlock("angels-alien-artifact-green","alien-artifact-green-from-basic")
   end
 
   if angelsmods.exploration then
@@ -919,7 +948,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.artifacts["base"] then -- pink
   if angelsmods.trigger.bio_pastes["iron"] then
-    contais_artifact_creation = true
+    contains_artifact_creation = true
 
     data:extend({
       --PRE ARTIFACT
@@ -976,11 +1005,11 @@ if angelsmods.trigger.artifacts["base"] then -- pink
     OV.add_prereq("bio-processing-alien-3", "angels-alien-artifact")
   end
 
-  if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
+  if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact"] then
     if angelsmods.trigger.bio_pastes["iron"] or angelsmods.exploration then
-      angelsmods.functions.move_item("small-alien-artifact", "bio-processing-alien-small", "g[base]")
+      angelsmods.functions.move_item("bob-small-alien-artifact", "bio-processing-alien-small", "g[base]")
     end
-    angelsmods.functions.move_item("alien-artifact", "bio-processing-alien-large", "g[base]")
+    angelsmods.functions.move_item("bob-alien-artifact", "bio-processing-alien-large", "g[base]")
     if angelsmods.exploration then
       OV.patch_recipes({
         { name = "alien-artifact-from-small", enabled = false },
@@ -1028,6 +1057,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
         order = "g[base]",
       },
     })
+    OV.add_unlock("angels-alien-artifact","alien-artifact-from-small")
   end
 
   if angelsmods.exploration then
@@ -1042,7 +1072,7 @@ else
 end
 
 -------------------------------------------------------------------------------
-if contais_artifact_creation then
+if contains_artifact_creation then
 else
   OV.disable_technology("bio-processing-alien-3")
 end

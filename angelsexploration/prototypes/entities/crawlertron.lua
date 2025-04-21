@@ -1219,7 +1219,6 @@ local create_spider_vehicle_leg = function(entity_name, entity_scale, entity_ide
           volume = 0.2,
         },
       },
-      audible_distance_modifier = 0.5,
       match_progress_to_activity = true,
     },
     walking_sound_volume_modifier = 0.6,

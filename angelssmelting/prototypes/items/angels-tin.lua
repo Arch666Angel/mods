@@ -56,7 +56,6 @@ data:extend({
     subgroup = "angels-tin-casting",
     order = "f",
     default_temperature = 231.9,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 87 / 255, g = 130 / 255, b = 96 / 255 },
     flow_color = { r = 87 / 255, g = 130 / 255, b = 96 / 255 },

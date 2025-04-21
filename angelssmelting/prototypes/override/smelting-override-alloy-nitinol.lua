@@ -19,7 +19,6 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         subgroup = "angels-alloys-casting",
         order = "f[nitinol]-a[liquid-molten-nitinol]",
         default_temperature = 0,
-        base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },
         flow_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },
@@ -60,7 +59,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
           { type = "fluid", name = "liquid-molten-nitinol", amount = 40 },
         },
         results = {
-          { type = "item", name = "nitinol-alloy", amount = 4 },
+          { type = "item", name = "bob-nitinol-alloy", amount = 4 },
         },
         order = "f[nitinol]-b[nitinol-alloy]",
       },
@@ -98,13 +97,13 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
-    data.raw["item"]["nitinol-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png"
-    data.raw["item"]["nitinol-alloy"].icon_size = 32
+    angelsmods.functions.move_item("bob-nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
+    data.raw["item"]["bob-nitinol-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png"
+    data.raw["item"]["bob-nitinol-alloy"].icon_size = 32
     OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")
     OV.add_prereq("nitinol-processing", "lubricant")
     OV.remove_prereq("nitinol-processing", "titanium-processing")
-    OV.disable_recipe({ "nitinol-alloy" })
+    OV.disable_recipe({ "bob-nitinol-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-nitinol")
   end
 end

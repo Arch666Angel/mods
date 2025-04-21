@@ -148,5 +148,5 @@ funcs.generate_train_entities({
   open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
   close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
   sound_minimum_speed = 0.5,
-  vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+  impact_category = "wood",
 })

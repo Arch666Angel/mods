@@ -301,7 +301,7 @@ data:extend({
       },
     },
     sound_minimum_speed = 0.1,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__angelsindustriesgraphics__/sound/crawler-run.ogg",

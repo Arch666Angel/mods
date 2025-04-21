@@ -31,7 +31,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.3,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -84,12 +84,10 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
-      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65, audible_distance_modifier = 0.5, },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
     fluid_boxes = {
       {
@@ -98,7 +96,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -106,7 +104,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -114,7 +112,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -122,7 +120,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -158,7 +156,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.3,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -211,12 +209,10 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
-      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65, audible_distance_modifier = 0.5, },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
     fluid_boxes = {
       {
@@ -225,7 +221,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -233,7 +229,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -241,7 +237,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -249,7 +245,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -285,7 +281,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.3,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -338,12 +334,10 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
-      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65, audible_distance_modifier = 0.5, },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
     fluid_boxes = {
       {
@@ -352,7 +346,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -360,7 +354,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -368,7 +362,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -376,7 +370,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -411,7 +405,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -2.8 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.3,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -464,12 +458,10 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
-      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65 },
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.65, audible_distance_modifier = 0.5, },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      audible_distance_modifier = 0.5,
-      apparent_volume = 2.5,
     },
     fluid_boxes = {
       {
@@ -478,7 +470,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -486,7 +478,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -494,7 +486,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -502,7 +494,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },

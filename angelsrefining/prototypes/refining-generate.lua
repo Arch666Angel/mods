@@ -30,7 +30,7 @@ if angelsmods.refining then
   end
 
   if bobmods and bobmods.plates then
-    angelsmods.functions.make_void("lithia-water", "water")
+    angelsmods.functions.make_void("bob-lithia-water", "water")
   else
     --ADD THE BARRELING PUMP
     angelsmods.functions.OV.add_unlock("fluid-handling", "barreling-pump")

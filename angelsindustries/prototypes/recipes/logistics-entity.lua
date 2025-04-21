@@ -375,7 +375,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = mods["bobelectronics"] and "basic-circuit-board" or "electronic-circuit", amount = 1 },
+      { type = "item", name = mods["bobelectronics"] and "bob-basic-circuit-board" or "electronic-circuit", amount = 1 },
       { type = "item", name = "copper-cable", amount = 3 },
       { type = "item", name = "iron-plate", amount = 1 },
     },

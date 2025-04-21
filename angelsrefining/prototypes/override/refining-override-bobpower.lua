@@ -9,20 +9,20 @@ if mods["bobpower"] then
     --update to blue science level
     OV.patch_recipes({
       {
-        name = "steam-engine-3",
+        name = "bob-steam-engine-3",
         ingredients = {
-          { name = "brass-gear-wheel", amount = "cobalt-steel-gear-wheel" },
-          { name = "steel-bearing", amount = "cobalt-steel-bearing" },
+          { name = "bob-brass-gear-wheel", amount = "bob-cobalt-steel-gear-wheel" },
+          { name = "bob-steel-bearing", amount = "bob-cobalt-steel-bearing" },
         },
       },
       {
-        name = "fluid-generator-2",
+        name = "bob-fluid-generator-2",
         ingredients = {
-          { name = "brass-gear-wheel", amount = "cobalt-steel-gear-wheel" },
-          { name = "steel-bearing", amount = "cobalt-steel-bearing" },
+          { name = "bob-brass-gear-wheel", amount = "bob-cobalt-steel-gear-wheel" },
+          { name = "bob-steel-bearing", amount = "bob-cobalt-steel-bearing" },
         },
       },
     })
-    OV.remove_prereq({ "bob-steam-engine-3", "fluid-generator-2" }, "cobalt-processing")
+    OV.remove_prereq({ "bob-steam-engine-3", "bob-fluid-generator-2" }, "bob-cobalt-processing")
   end
 end

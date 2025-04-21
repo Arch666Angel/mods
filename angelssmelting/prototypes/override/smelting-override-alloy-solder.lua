@@ -10,32 +10,32 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["solder"].wire then
   -- REPLACE ITEMS (use bob version)
-  if mods["bobelectronics"] and data.raw.item["solder"] then
-    OV.global_replace_item("angels-solder", "solder")
+  if mods["bobelectronics"] and data.raw.item["bob-solder"] then
+    OV.global_replace_item("angels-solder", "bob-solder")
     angelsmods.functions.hide("angels-solder")
-    angelsmods.functions.move_item("solder", "angels-solder-casting", "d")
-    data.raw["item"]["solder"].icon = "__angelssmeltinggraphics__/graphics/icons/solder.png"
-    data.raw["item"]["solder"].icon_size = 32
+    angelsmods.functions.move_item("bob-solder", "angels-solder-casting", "d")
+    data.raw["item"]["bob-solder"].icon = "__angelssmeltinggraphics__/graphics/icons/solder.png"
+    data.raw["item"]["bob-solder"].icon_size = 32
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/solder.png",
       "__angelssmeltinggraphics__/graphics/icons/solder.png"
     )
-    OV.remove_unlock("electronics", "solder")
+    OV.remove_unlock("bob-electronics", "bob-solder")
 
-    OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "solder" })
+    OV.disable_recipe({ "solder-alloy", "solder-alloy-lead", "bob-solder" })
     angelsmods.functions.hide("solder-alloy")
-    OV.remove_unlock("electronics", "solder-alloy-lead")
-    OV.remove_prereq("electronics", "alloy-processing")
+    OV.remove_unlock("bob-electronics", "solder-alloy-lead")
+    OV.remove_prereq("bob-electronics", "alloy-processing")
 
     if angelsmods.trigger.smelting_products["solder"].mixture then
-      OV.add_prereq("electronics", "angels-solder-smelting-basic")
+      OV.add_prereq("bob-electronics", "angels-solder-smelting-basic")
     else
-      OV.add_prereq("electronics", "angels-solder-smelting-1")
+      OV.add_prereq("bob-electronics", "angels-solder-smelting-1")
     end
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({ { name = "angels-roll-solder-converting", category = "electronics-machine" } })
+    OV.patch_recipes({ { name = "angels-roll-solder-converting", category = "bob-electronics-machine" } })
   end
 
   if angelsmods.trigger.smelting_products["solder"].mixture then

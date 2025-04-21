@@ -63,13 +63,13 @@ end
 if angelsmods.trigger.smelting_products["zinc"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-zinc", "zinc-plate")
+    OV.global_replace_item("angels-plate-zinc", "bob-zinc-plate")
     angelsmods.functions.hide("angels-plate-zinc")
-    angelsmods.functions.move_item("zinc-plate", "angels-zinc-casting", "j")
-    data.raw["item"]["zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
-    data.raw["item"]["zinc-plate"].icon_size = 32
+    angelsmods.functions.move_item("bob-zinc-plate", "angels-zinc-casting", "j")
+    data.raw["item"]["bob-zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
+    data.raw["item"]["bob-zinc-plate"].icon_size = 32
     OV.disable_recipe({ "bob-zinc-plate" })
-    OV.remove_prereq("battery-3", "zinc-processing")
+    OV.remove_prereq("battery-3", "bob-zinc-processing")
     OV.add_prereq("battery-3", "angels-zinc-smelting-1")
   end
 else

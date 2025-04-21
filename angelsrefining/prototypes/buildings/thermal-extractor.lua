@@ -43,7 +43,7 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          positions = { { 1, -1.4 }, { 1.4, -1 }, { -1, 1.4 }, { -1.4, 1 } },
+          positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
           direction = defines.direction.north,
         },
       },
@@ -83,7 +83,7 @@ data:extend({
       },
     },
     wet_mining_graphics_set = {
-      animations = {
+      animation = {
         north = {
           layers = {
             {
@@ -113,10 +113,9 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
-      apparent_volume = 1.5,
     },
     fast_replaceable_group = "thermal-extractor",
   },
@@ -165,7 +164,7 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          position = { -3, 4.4 },
+          position = { -3, 4 },
           direction = defines.direction.south,
         },
       },
@@ -190,22 +189,23 @@ data:extend({
         shift = { 0, 0 },
       },
     },
-    animations = {
-      north = {
-        priority = "extra-high",
-        width = 288,
-        height = 288,
-        line_length = 4,
-        shift = { 0, 0 },
-        filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
-        frame_count = 16,
-        animation_speed = 0.5,
+    graphics_set = {
+      animation = {
+        north = {
+          priority = "extra-high",
+          width = 288,
+          height = 288,
+          line_length = 4,
+          shift = { 0, 0 },
+          filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
+          frame_count = 16,
+          animation_speed = 0.5,
+        },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
-      apparent_volume = 1.5,
     },
     fast_replaceable_group = "thermal-extractor",
   },

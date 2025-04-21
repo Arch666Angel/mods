@@ -34,7 +34,7 @@ if angelsmods.industries then
       -- sniper turret
       OV.patch_recipes({
         {
-          name = "rifle",
+          name = "bob-rifle",
           ingredients = {
             { "!!" },
             { type = "item", name = "submachine-gun", amount = 1 },
@@ -45,7 +45,7 @@ if angelsmods.industries then
         {
           name = "sniper-rifle",
           ingredients = {
-            { type = "item", name = "rifle", amount = 1 },
+            { type = "item", name = "bob-rifle", amount = 1 },
             { type = "item", name = "iron-gear-wheel", amount = 0 },
             { type = "item", name = "steel-gear-wheel", amount = 0 },
             { type = "item", name = "steel-plate", amount = 0 },
@@ -55,14 +55,14 @@ if angelsmods.industries then
           name = "bob-sniper-turret-1",
           ingredients = {
             { "!!" },
-            { type = "item", name = "rifle", amount = 1 },
+            { type = "item", name = "bob-rifle", amount = 1 },
             { type = "item", name = "iron-plate", amount = 10 },
             { type = "item", name = "copper-plate", amount = 5 },
           },
         },
       })
-      OV.remove_unlock("military-3", "rifle")
-      OV.add_unlock("military-2", "rifle")
+      OV.remove_unlock("military-3", "bob-rifle")
+      OV.add_unlock("military-2", "bob-rifle")
       OV.add_prereq("bob-sniper-turrets-1", "military-science-pack")
     end
 
@@ -166,16 +166,16 @@ if angelsmods.industries then
       -- laser turret
       OV.patch_recipes({
         {
-          name = "laser-rifle",
+          name = "bob-laser-rifle",
           ingredients = {
-            { type = "item", name = "rifle", amount = 1 },
+            { type = "item", name = "bob-rifle", amount = 1 },
             { type = "item", name = "plastic-bar", amount = 0 },
           },
         },
         {
           name = "bob-plasma-turret-1",
           ingredients = {
-            { type = "item", name = "laser-rifle", amount = 1 },
+            { type = "item", name = "bob-laser-rifle", amount = 1 },
             { type = "item", name = "steel-plate", amount = 60 },
           },
         },

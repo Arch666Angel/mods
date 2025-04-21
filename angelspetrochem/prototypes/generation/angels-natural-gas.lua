@@ -1,5 +1,6 @@
 angelsmods.functions.add_resource("make", {
   name = "angels-natural-gas",
+  subgroup = "mineable-fluids",
   order = "c-b-b",
   sheet = 2,
   infinite = true,

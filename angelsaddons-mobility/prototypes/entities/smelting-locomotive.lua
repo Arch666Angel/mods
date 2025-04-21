@@ -313,7 +313,7 @@ funcs.generate_train_entities({
     sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) }),
   },
   tie_distance = 50,
-  vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+  impact_category = "metal",
   working_sound = {
     sound = {
       filename = "__base__/sound/train-engine.ogg",

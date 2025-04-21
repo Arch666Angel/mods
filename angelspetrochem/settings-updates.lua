@@ -5,5 +5,6 @@ else
   angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-chemical-plants", true)
 end
 if mods["bobassembly"] then
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-oilrefineries", true) -- angel does add the refineries anyway...
+  -- To avoid duplication
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-oilrefineries", false)
 end

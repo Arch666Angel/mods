@@ -501,7 +501,7 @@ local function update_equipment_grid(equipment_grid_name, categories_to_add, cat
   for _, equipment_category in pairs(categories_to_remove) do
     local index = flipped_categories[equipment_category]
     if index then
-      categories[index] = nil
+      table.remove(categories, index)--categories[index] = nil
     end
   end
 

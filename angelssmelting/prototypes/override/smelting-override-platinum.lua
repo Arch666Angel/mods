@@ -79,11 +79,11 @@ if angelsmods.trigger.smelting_products["platinum"].wire then
     OV.patch_recipes({
       {
         name = "basic-platinated-copper-wire",
-        category = "electronics",
+        category = "bob-electronics",
       },
       {
         name = "angels-wire-coil-platinum-converting",
-        category = "electronics-machine",
+        category = "bob-electronics-machine",
       },
     })
   end

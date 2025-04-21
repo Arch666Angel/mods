@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix1-processing", --titanium
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
@@ -23,6 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix2-processing", --gold
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
@@ -43,6 +45,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix3-processing", --cobalt
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
@@ -63,6 +66,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix4-processing", --unused
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
@@ -83,6 +87,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix5-processing", --uranium
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,
@@ -104,6 +109,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore8-crystal-processing",
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
@@ -130,6 +136,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore9-crystal-processing",
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
@@ -157,6 +164,7 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore-crystal-mix6-processing", --thorium
+    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
     energy_required = 1.5,

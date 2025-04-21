@@ -53,7 +53,6 @@ data:extend({
     subgroup = "angels-stone-casting",
     order = "g",
     default_temperature = 0,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 99 / 255, g = 99 / 255, b = 99 / 255 },
     flow_color = { r = 99 / 255, g = 99 / 255, b = 99 / 255 },

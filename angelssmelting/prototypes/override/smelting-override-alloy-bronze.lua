@@ -19,7 +19,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         subgroup = "angels-alloys-casting",
         order = "a[bronze]-a[liquid-molten-bronze]",
         default_temperature = 0,
-        base_flow_rate = 100,
         heat_capacity = "0kJ",
         base_color = { r = 224 / 256, g = 155 / 256, b = 58 / 256 },
         flow_color = { r = 224 / 256, g = 155 / 256, b = 58 / 256 },
@@ -113,7 +112,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           { type = "fluid", name = "liquid-molten-bronze", amount = 40 },
         },
         results = {
-          { type = "item", name = "bronze-alloy", amount = 4 },
+          { type = "item", name = "bob-bronze-alloy", amount = 4 },
         },
         order = "a[bronze]-b[bronze-alloy]",
       },
@@ -200,10 +199,10 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
-    data.raw["item"]["bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
-    data.raw["item"]["bronze-alloy"].icon_size = 32
-    OV.disable_recipe({ "bronze-alloy" })
+    angelsmods.functions.move_item("bob-bronze-alloy", "angels-alloys-casting", "a[bronze]-b[bronze-alloy]")
+    data.raw["item"]["bob-bronze-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png"
+    data.raw["item"]["bob-bronze-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-bronze-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-bronze")
     -- alloys shenanigans -------------------------------------------------------
     OV.add_prereq("alloy-processing", "angels-bronze-smelting-1")
@@ -214,7 +213,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     OV.remove_prereq("nitinol-processing", "alloy-processing")
     OV.remove_prereq("tungsten-processing", "alloy-processing")
     OV.remove_prereq("tungsten-alloy-processing", "alloy-processing")
-    OV.remove_prereq("zinc-processing", "alloy-processing")
+    OV.remove_prereq("bob-zinc-processing", "alloy-processing")
     if mods["bobpower"] then
       OV.remove_prereq("fluid-generator-1", "alloy-processing")
       OV.add_prereq("fluid-generator-1", "angels-bronze-smelting-1")

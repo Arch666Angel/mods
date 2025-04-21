@@ -30,8 +30,26 @@ local function has_recipe(recipe_filters, recipes_to_ignore)
   end
 end
 
+local function has_generator(fluid_name)
+  local generator_filters = {
+    { filter = "type", type = "fusion-reactor", mode = "and" },
+  }
+  local generator_prototypes = prototypes.get_entity_filtered(generator_filters)
+  for _, generator_prototype in pairs(generator_prototypes) do
+    for _, fluidbox in pairs(generator_prototype.fluidbox_prototypes) do
+      if fluidbox.production_type == "output" and fluidbox.filter and fluidbox.filter.name == fluid_name then
+        return true
+      end
+    end
+  end
+  return false
+end
+
 local unit_test_008 = function()
   local unit_test_result = unit_test_functions.test_successful
+
+  -- Ignore items that intentionally have no crafting recipe (in Vanilla this only applies to the Pistol)
+  items_to_ignore["pistol"] = true
 
   -- Populate items_to_ignore with script items
   if script.active_mods["angelsindustries"] and (settings.startup["angels-enable-tech"].value == true) then
@@ -171,10 +189,12 @@ local unit_test_008 = function()
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "blueprint-book" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "deconstruction-item" })
   table.insert(item_filters, { filter = "type", invert = true, mode = "and", type = "upgrade-item" })
+  table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "parameters" })
+  table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "spawnables" })
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
-  for item_name, item in pairs(item_prototypes) do
+    for item_name, item in pairs(item_prototypes) do
     -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
     if not item.hidden and not items_to_ignore[item_name] then
       local recipe_filters = {}
@@ -196,6 +216,7 @@ local unit_test_008 = function()
   -- Check fluids
   local fluid_filters = {}
   table.insert(fluid_filters, { filter = "hidden", invert = true, mode = "and" })
+  table.insert(fluid_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "parameters" })
 
   local fluid_prototypes = prototypes.get_fluid_filtered(fluid_filters)
 
@@ -210,7 +231,7 @@ local unit_test_008 = function()
         elem_filters = { { filter = "name", name = fluid_name } },
       })
 
-      if not has_recipe(recipe_filters, fluid_recipes_to_ignore) then
+      if not has_recipe(recipe_filters, fluid_recipes_to_ignore) and not has_generator(fluid_name) then
         unit_test_functions.print_msg(string.format("No recipe is creating fluid %q as a product.", fluid_name))
         unit_test_result = unit_test_functions.test_failed
       end

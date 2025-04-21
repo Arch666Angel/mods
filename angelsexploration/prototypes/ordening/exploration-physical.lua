@@ -30,7 +30,7 @@ if mods["bobwarfare"] then
     },
   })
 
-  reorder("gun", "rifle", "angels-physical-ab", "a[gun]-a[rifle]")
+  reorder("gun", "bob-rifle", "angels-physical-ab", "a[gun]-a[rifle]")
   reorder("gun", "sniper-rifle", "angels-physical-ab", "a[gun]-b[sniper-rifle]")
 
   reorder("item", "bob-sniper-turret-1", "angels-physical-ab", "b[turret]-a[gun]")

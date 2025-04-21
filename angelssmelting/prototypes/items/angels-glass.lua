@@ -20,7 +20,6 @@ data:extend({
     subgroup = "angels-glass-casting",
     order = "b",
     default_temperature = 1500,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 130 / 255, g = 127 / 255, b = 127 / 255 },
     flow_color = { r = 130 / 255, g = 127 / 255, b = 127 / 255 },

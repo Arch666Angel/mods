@@ -112,14 +112,13 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
         volume = 0.7,
       },
-      --max_sounds_per_type = 3,
-      audible_distance_modifier = 0.3,
+      --max_sounds_per_prototype = 3,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -129,8 +128,8 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.west },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.east },
+          { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
+          { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
         },
       },
       {
@@ -138,7 +137,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north },
         },
       },
       {
@@ -146,7 +145,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
         },
       },
     },
@@ -260,14 +259,13 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
         volume = 0.7,
       },
-      --max_sounds_per_type = 3,
-      audible_distance_modifier = 0.3,
+      --max_sounds_per_prototype = 3,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -277,8 +275,8 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.west },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.east },
+          { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
+          { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
         },
       },
       {
@@ -286,7 +284,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north },
         },
       },
       {
@@ -294,7 +292,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
         },
       },
     },
@@ -404,14 +402,13 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__base__/sound/boiler.ogg",
         volume = 0.7,
       },
-      --max_sounds_per_type = 3,
-      audible_distance_modifier = 0.3,
+      --max_sounds_per_prototype = 3,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
@@ -421,8 +418,8 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.east },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.west },
+          { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.east },
+          { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.west },
         },
       },
       {
@@ -430,7 +427,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north },
         },
       },
       {
@@ -438,7 +435,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
         },
       },
     },

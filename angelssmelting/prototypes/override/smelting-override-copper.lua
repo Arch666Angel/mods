@@ -161,11 +161,11 @@ if angelsmods.trigger.smelting_products["copper"].wire then
     OV.patch_recipes({
       {
         name = "copper-cable",
-        category = "electronics",
+        category = "bob-electronics",
       },
       {
         name = "angels-wire-coil-copper-converting",
-        category = "electronics-machine",
+        category = "bob-electronics-machine",
       },
     })
   end

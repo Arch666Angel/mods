@@ -27,7 +27,7 @@ require("prototypes.exploration-category")
 require("prototypes.exploration-debug")
 
 --LOAD FUNCTIONS
---require("prototypes.entities.biter-builder")
+require("prototypes.entities.biter-builder")
 require("prototypes.entities.gathering-turret-builder")
 
 --PROTOTYPES

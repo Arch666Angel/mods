@@ -51,6 +51,7 @@ data:extend({
     icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-1.png",
     icon_size = 32,
     flags = {},
+    ammo_category = "cannon-shell",
     ammo_type = {
       category = "cannon-turret",
       action = {
@@ -126,6 +127,7 @@ data:extend({
     icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-2.png",
     icon_size = 32,
     flags = {},
+    ammo_category = "cannon-shell",
     ammo_type = {
       category = "cannon-turret",
       action = {
@@ -201,6 +203,7 @@ data:extend({
     icon = "__angelsexplorationgraphics__/graphics/icons/turret-shell-3.png",
     icon_size = 32,
     flags = {},
+    ammo_category = "cannon-shell",
     ammo_type = {
       category = "cannon-turret",
       action = {

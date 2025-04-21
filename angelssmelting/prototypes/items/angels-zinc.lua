@@ -74,7 +74,6 @@ data:extend({
     subgroup = "angels-zinc-casting",
     order = "h",
     default_temperature = 419.5,
-    base_flow_rate = 100,
     heat_capacity = "0kJ",
     base_color = { r = 100 / 255, g = 183 / 255, b = 177 / 255 },
     flow_color = { r = 100 / 255, g = 183 / 255, b = 177 / 255 },

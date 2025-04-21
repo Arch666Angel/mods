@@ -142,6 +142,7 @@ angelsmods.functions.add_resource("make", {
 
 angelsmods.functions.add_resource("make", {
   name = "angels-fissure",
+  subgroup = "mineable-fluids",
   order = "c",
   sheet = 1,
   infinite = true,

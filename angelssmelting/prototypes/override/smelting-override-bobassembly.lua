@@ -101,17 +101,17 @@ if mods["bobassembly"] then
     angelsmods.functions.RB.set_fallback(
       "item",
       "elecmach-2",
-      { { "block-mprocessing-3", 1 }, { "electronics-machine-1" } }
+      { { "block-mprocessing-3", 1 }, { "bob-electronics-machine-1" } }
     )
     angelsmods.functions.RB.set_fallback(
       "item",
       "elecmach-3",
-      { { "block-mprocessing-5", 1 }, { "electronics-machine-2" } }
+      { { "block-mprocessing-5", 1 }, { "bob-electronics-machine-2" } }
     )
 
     OV.patch_recipes({
       {
-        name = "electronics-machine-1",
+        name = "bob-electronics-machine-1",
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-1", amount = 1 },
@@ -121,7 +121,7 @@ if mods["bobassembly"] then
         },
       },
       {
-        name = "electronics-machine-2",
+        name = "bob-electronics-machine-2",
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-2", amount = 1 },
@@ -132,7 +132,7 @@ if mods["bobassembly"] then
         },
       },
       {
-        name = "electronics-machine-3",
+        name = "bob-electronics-machine-3",
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-3", amount = 1 },

@@ -85,7 +85,7 @@ if angelsmods.industries.components then
     if settings.startup["bobmods-assembly-electronicmachines"].value then
       OV.patch_recipes({
         { -- corresponds to assembling machine 1.5
-          name = "electronics-machine-1",
+          name = "bob-electronics-machine-1",
           ingredients = {
             { "!!" },
             { type = "item", name = "block-construction-2", amount = 2 },
@@ -94,7 +94,7 @@ if angelsmods.industries.components then
           },
         },
         { -- corresponds to assembling machine 3.5
-          name = "electronics-machine-2",
+          name = "bob-electronics-machine-2",
           ingredients = {
             { "!!" },
             { type = "item", name = "block-construction-4", amount = 2 },
@@ -104,7 +104,7 @@ if angelsmods.industries.components then
           },
         },
         { -- corresponds to assembling machine 4.5
-          name = "electronics-machine-3",
+          name = "bob-electronics-machine-3",
           ingredients = {
             { "!!" },
             { type = "item", name = "block-construction-5", amount = 2 },
@@ -115,22 +115,22 @@ if angelsmods.industries.components then
         },
       })
 
-      OV.add_prereq("electronics-machine-1", "angels-components-construction-2")
-      OV.add_prereq("electronics-machine-1", "electronics")
-      OV.add_prereq("electronics-machine-2", "angels-components-construction-4")
-      OV.add_prereq("electronics-machine-3", "angels-components-construction-5")
+      OV.add_prereq("bob-electronics-machine-1", "angels-components-construction-2")
+      OV.add_prereq("bob-electronics-machine-1", "bob-electronics")
+      OV.add_prereq("bob-electronics-machine-2", "angels-components-construction-4")
+      OV.add_prereq("bob-electronics-machine-3", "angels-components-construction-5")
       if data.raw.technology["advanced-electronics-3"] then
-        OV.add_prereq("electronics-machine-3", "advanced-electronics-3")
+        OV.add_prereq("bob-electronics-machine-3", "advanced-electronics-3")
       end
-      OV.set_science_pack("electronics-machine-3", "utility-science-pack")
+      OV.set_science_pack("bob-electronics-machine-3", "utility-science-pack")
       if angelsmods.industries.tech then
-        OV.add_prereq("electronics-machine-1", "tech-specialised-labs-basic-enhance-1")
-        OV.add_prereq("electronics-machine-2", "tech-specialised-labs-basic-enhance-2")
-        OV.add_prereq("electronics-machine-3", "tech-specialised-labs-advanced-enhance-1")
+        OV.add_prereq("bob-electronics-machine-1", "tech-specialised-labs-basic-enhance-1")
+        OV.add_prereq("bob-electronics-machine-2", "tech-specialised-labs-basic-enhance-2")
+        OV.add_prereq("bob-electronics-machine-3", "tech-specialised-labs-advanced-enhance-1")
       else
-        OV.add_prereq("electronics-machine-1", "angels-basic-blocks-1")
-        OV.add_prereq("electronics-machine-2", "angels-basic-blocks-2")
-        OV.add_prereq("electronics-machine-3", "angels-advanced-blocks-1")
+        OV.add_prereq("bob-electronics-machine-1", "angels-basic-blocks-1")
+        OV.add_prereq("bob-electronics-machine-2", "angels-basic-blocks-2")
+        OV.add_prereq("bob-electronics-machine-3", "angels-advanced-blocks-1")
       end
     end
   end

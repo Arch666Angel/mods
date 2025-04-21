@@ -7,6 +7,21 @@ for spawner_idx, spawner_data in pairs(navive_data) do
   local spawner_name, spawn_data = next(spawner_data)
   data:extend({
     {
+      type = "technology",
+      name = "tips-and-tricks-trigger-angels-native-inhabitants-spawner-" .. spawner_name,
+      icon = "__angelsrefininggraphics__/graphics/icons/void.png",
+      icon_size = 32,
+      hidden = true,
+      prerequisites = nil,
+      effects = nil,
+      unit = {
+        count = 1,
+        ingredients = {},
+        time = 1,
+      },
+      order = "z-z",
+    },
+    {
       type = "tips-and-tricks-item",
       name = "angels-native-inhabitants-spawner-" .. spawner_name,
 
@@ -24,25 +39,10 @@ for spawner_idx, spawner_data in pairs(navive_data) do
       dependencies = { "angelsexploration" },
       trigger = {
         type = "research",
-        technology = "tips-and-tricks-trigger[angels-native-inhabitants-spawner-" .. spawner_name,
+        technology = "tips-and-tricks-trigger-angels-native-inhabitants-spawner-" .. spawner_name,
       },
 
       --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",
-    },
-    {
-      type = "technology",
-      name = "tips-and-tricks-trigger-angels-native-inhabitants-spawner-" .. spawner_name,
-      icon = "__angelsrefininggraphics__/graphics/icons/void.png",
-      icon_size = 32,
-      hidden = true,
-      prerequisites = nil,
-      effects = nil,
-      unit = {
-        count = 1,
-        ingredients = {},
-        time = 1,
-      },
-      order = "z-z",
     },
   })
 end
