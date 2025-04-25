@@ -48,13 +48,12 @@ if angelsmods.addons.storage.warehouses then
       impact_category = "metal",
       picture = {
         filename = "__angelsaddons-storage__/graphics/entity/warehouse.png",
+        size = { 512, 576 },
+        scale = 0.5,
         priority = "extra-high",
-        width = 256,
-        height = 288,
         shift = { 0, -0.5 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["chest"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })

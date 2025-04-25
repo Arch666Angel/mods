@@ -43,8 +43,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
         height = 192,
         shift = { 0, 0 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["chest"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
