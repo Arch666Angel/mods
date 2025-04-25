@@ -91,7 +91,9 @@ end
 ---Appends the speed cap to the `localised_description` of the given `train` prototype.
 ---@param train_prototype data.CargoWagonPrototype|data.FluidWagonPrototype|data.ArtilleryWagonPrototype
 local function append_speed_cap_to_train_locale_description(train_prototype)
-  if not train_prototype then return end
+  if not train_prototype then
+    return
+  end
 
   -- Convert the tile/tick speed to km/h, discarding any digits after the decimal.
   local speed_cap = tostring(math.floor(train_prototype.max_speed * 216 * 100) / 100)
@@ -290,7 +292,7 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
       add_recipe_unlock(technology_name, recipe_name)
     end
   else
-    ref_recipe.ingredients = generate_tiered_ingredients(1, ref_recipe.ingredients)
+    ref_recipe.ingredients = generate_tiered_ingredients(1, tiered_ingredients)
     table.insert(recipes, ref_recipe)
 
     add_recipe_unlock(technology_name, ref_recipe.name)
@@ -300,23 +302,23 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
 end
 
 local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_number_icon_layer
-    or function(icon_layers, number_tier, number_tint)
-      local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
-      local new_icon_layers = table.deepcopy(icon_layers)
-      table.insert(new_icon_layers, {
-        icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
-        icon_size = 64,
-        tint = { 0, 0, 0, 255 },
-        scale = 0.5 * icon_size_scale,
-      })
-      table.insert(new_icon_layers, {
-        icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
-        icon_size = 64,
-        tint = number_tint,
-        scale = 0.5 * icon_size_scale,
-      })
-      return new_icon_layers
-    end
+  or function(icon_layers, number_tier, number_tint)
+    local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
+    local new_icon_layers = table.deepcopy(icon_layers)
+    table.insert(new_icon_layers, {
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
+      icon_size = 64,
+      tint = { 0, 0, 0, 255 },
+      scale = 0.5 * icon_size_scale,
+    })
+    table.insert(new_icon_layers, {
+      icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. ".png",
+      icon_size = 64,
+      tint = number_tint,
+      scale = 0.5 * icon_size_scale,
+    })
+    return new_icon_layers
+  end
 
 ---Generates a tiered train item from the given `ref_item`.
 ---@param ref_item data.ItemWithEntityDataPrototype The item prototype that defines the common base item for all tiers.
@@ -339,12 +341,13 @@ local function generate_train_items(ref_item)
       copy.localised_name = { "", { "item-name." .. ref_item.name }, " MK" .. i }
       copy.localised_description = { "item-description." .. ref_item.name }
       copy.place_result = name
-      copy.icons = ref_item.icons or {
-        {
-          icon = ref_item.icon,
-          icon_size = ref_item.icon_size,
-        },
-      }
+      copy.icons = ref_item.icons
+        or {
+          {
+            icon = ref_item.icon,
+            icon_size = ref_item.icon_size,
+          },
+        }
       copy.icon = nil
       copy.icon_size = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
@@ -381,12 +384,13 @@ local function generate_train_entities(ref_entity)
 
       copy.name = name
       copy.localised_name = { "", { "entity-name." .. ref_entity.name }, " MK" .. i }
-      copy.icons = ref_entity.icons or {
-        {
-          icon = ref_entity.icon,
-          icon_size = ref_entity.icon_size,
-        },
-      }
+      copy.icons = ref_entity.icons
+        or {
+          {
+            icon = ref_entity.icon,
+            icon_size = ref_entity.icon_size,
+          },
+        }
       copy.icon = nil
       copy.icon_size = nil
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
@@ -501,7 +505,7 @@ local function update_equipment_grid(equipment_grid_name, categories_to_add, cat
   for _, equipment_category in pairs(categories_to_remove) do
     local index = flipped_categories[equipment_category]
     if index then
-      table.remove(categories, index)--categories[index] = nil
+      table.remove(categories, index)
     end
   end
 

@@ -29,7 +29,7 @@ if angelsmods.addons.storage.warehouses then
       icon = "__angelsaddons-storage__/graphics/icons/warehouse.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      collision_mask = {layers={item=true, meltable=true, object=true, player=true, water_tile=true, is_object=true, is_lower_object=true, elevated_rail=true}},
+      collision_mask = angelsmods.functions.set_building_collision_mask("container", { "elevated_rail" }),
       minable = { mining_time = 1, result = "angels-warehouse" },
       max_health = 300,
       corpse = "small-remnants",
@@ -53,8 +53,7 @@ if angelsmods.addons.storage.warehouses then
         priority = "extra-high",
         shift = { 0, -0.5 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["chest"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
@@ -63,11 +62,11 @@ if angelsmods.addons.storage.warehouses then
   -- LOGISTIC WAREHOUSES ------------------------------------------------------
   -----------------------------------------------------------------------------
   local log_names = {
-    ["aprovider"] = { order = "i", stacks = 768, mode = "active-provider" },
-    ["pprovider"] = { order = "j", stacks = 512, mode = "passive-provider" },
-    ["storage"] = { order = "k", stacks = 768, mode = "storage", slots = 1 },
-    ["buffer"] = { order = "l", stacks = 512, mode = "buffer" },
-    ["requester"] = { order = "m", stacks = 418, mode = "requester" },
+    ["aprovider"] = { order = "i", mode = "active-provider" },
+    ["pprovider"] = { order = "j", mode = "passive-provider" },
+    ["storage"] = { order = "k", mode = "storage", slots = 1 },
+    ["buffer"] = { order = "l", mode = "buffer" },
+    ["requester"] = { order = "m", mode = "requester" },
   }
   local warehouse_add = {}
   for name, stat in pairs(log_names) do
@@ -77,11 +76,8 @@ if angelsmods.addons.storage.warehouses then
     cont_add.type = "logistic-container"
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/warehouse-log-" .. name .. ".png"
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/warehouse-log-" .. name .. ".png"
-    cont_add.picture.size = { 512, 576 }
-    cont_add.picture.scale = 0.5
     cont_add.minable.result = "angels-warehouse-" .. stat.mode
     cont_add.logistic_mode = stat.mode
-    cont_add.inventory_size = stat.stacks
     if stat.slots then
       cont_add.max_logistic_slots = stat.slots
     end

@@ -13,9 +13,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "iron-plate", amount = 100 },
         { type = "item", name = "stone-brick", amount = 100 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "a",
@@ -36,9 +34,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "angels-warehouse", amount = 1 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse-passive-provider", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse-passive-provider", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "c",
@@ -53,9 +49,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "angels-warehouse", amount = 1 },
         { type = "item", name = "advanced-circuit", amount = 20 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse-active-provider", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse-active-provider", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "b",
@@ -70,9 +64,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "angels-warehouse", amount = 1 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse-storage", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse-storage", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "d",
@@ -87,9 +79,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "angels-warehouse", amount = 1 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 20 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse-requester", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse-requester", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "f",
@@ -104,9 +94,7 @@ if angelsmods.addons.storage.warehouses then
         { type = "item", name = "angels-warehouse", amount = 1 },
         { type = "item", name = "advanced-circuit", amount = 20 },
       },
-      results = {
-        {type = "item", name = "angels-warehouse-buffer", amount = 1}
-      },
+      results = { { type = "item", name = "angels-warehouse-buffer", amount = 1 } },
       icon_size = 32,
       subgroup = "angels-warehouse",
       order = "e",

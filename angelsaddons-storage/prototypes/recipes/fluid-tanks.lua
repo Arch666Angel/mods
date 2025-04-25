@@ -11,7 +11,7 @@ if angelsmods.addons.storage.pressuretank then
         { type = "item", name = "stone-brick", amount = 20 },
         { type = "item", name = "pipe", amount = 50 },
       },
-      results = {{type = "item", name = "angels-pressure-tank-1", amount = 1}},
+      results = { { type = "item", name = "angels-pressure-tank-1", amount = 1 } },
       icon_size = 32,
     },
   })
@@ -28,7 +28,7 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
       ingredients = {
         { type = "item", name = "steel-plate", amount = 10 },
       },
-      results = {{type = "item", name = "angels-storage-tank-3", amount = 1}},
+      results = { { type = "item", name = "angels-storage-tank-3", amount = 1 } },
     },
   })
 end

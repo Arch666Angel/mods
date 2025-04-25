@@ -171,7 +171,7 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
     name = "smelting-locomotive-tender",
     energy_required = 10,
     enabled = false,
-    results = { { type = "item", name = "smelting-locomotive-tender", amound = 1 } },
+    results = { { type = "item", name = "smelting-locomotive-tender", amount = 1 } },
   }, {
     { type = "item", name = "locomotive", amounts = { 1, 0, 0, 0, 0 } },
     { type = "item", name = "engine-unit", amounts = { 25, "+5", 0, 0, 0 } },

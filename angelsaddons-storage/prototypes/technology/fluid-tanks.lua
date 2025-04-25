@@ -24,8 +24,8 @@ if angelsmods.addons.storage.pressuretank then
       unit = {
         count = 50,
         ingredients = {
-          {"automation-science-pack", 1 },
-          {"logistic-science-pack", 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 15,
       },

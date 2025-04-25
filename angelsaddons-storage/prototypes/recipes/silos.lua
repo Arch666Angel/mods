@@ -13,9 +13,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "stone-brick", amount = 20 },
       },
-      results = {
-        {type = "item", name = "silo", amount = 1}
-      },
+      results = { { type = "item", name = "silo", amount = 1 } },
     },
   })
 end
@@ -33,9 +31,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore1", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore1", amount = 1 } },
     },
     {
       type = "recipe",
@@ -45,9 +41,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore2", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore2", amount = 1 } },
     },
     {
       type = "recipe",
@@ -57,9 +51,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore3", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore3", amount = 1 } },
     },
     {
       type = "recipe",
@@ -69,9 +61,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore4", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore4", amount = 1 } },
     },
     {
       type = "recipe",
@@ -81,9 +71,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore5", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore5", amount = 1 } },
     },
     {
       type = "recipe",
@@ -93,9 +81,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-ore6", amount = 1}
-      },
+      results = { { type = "item", name = "silo-ore6", amount = 1 } },
     },
     {
       type = "recipe",
@@ -105,9 +91,7 @@ if angelsmods.addons.storage.oresilos then
       ingredients = {
         { type = "item", name = "silo", amount = 1 },
       },
-      results = {
-        {type = "item", name = "silo-coal", amount = 1}
-      },
+      results = { { type = "item", name = "silo-coal", amount = 1 } },
     },
   })
 end
@@ -127,9 +111,7 @@ if angelsmods.addons.storage.silos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10 },
       },
-      results = {
-        {type = "item", name = "silo-passive-provider", amount = 1}
-      },
+      results = { { type = "item", name = "silo-passive-provider", amount = 1 } },
     },
     {
       type = "recipe",
@@ -141,9 +123,7 @@ if angelsmods.addons.storage.silos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "advanced-circuit", amount = 10 },
       },
-      results = {
-        {type = "item", name = "silo-active-provider", amount = 1}
-      },
+      results = { { type = "item", name = "silo-active-provider", amount = 1 } },
     },
     {
       type = "recipe",
@@ -155,9 +135,7 @@ if angelsmods.addons.storage.silos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10 },
       },
-      results = {
-        {type = "item", name = "silo-requester", amount = 1}
-      },
+      results = { { type = "item", name = "silo-requester", amount = 1 } },
     },
     {
       type = "recipe",
@@ -169,9 +147,7 @@ if angelsmods.addons.storage.silos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = mods["angelsindustries"] and "electronic-circuit" or "advanced-circuit", amount = 10 },
       },
-      results = {
-        {type = "item", name = "silo-storage", amount = 1}
-      },
+      results = { { type = "item", name = "silo-storage", amount = 1 } },
     },
     {
       type = "recipe",
@@ -183,9 +159,7 @@ if angelsmods.addons.storage.silos then
         { type = "item", name = "steel-plate", amount = 10 },
         { type = "item", name = "advanced-circuit", amount = 10 },
       },
-      results = {
-        {type = "item", name = "silo-buffer", amount = 1}
-      },
+      results = { { type = "item", name = "silo-buffer", amount = 1 } },
     },
   })
 end
