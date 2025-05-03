@@ -87,7 +87,7 @@ angelsmods.industries.general_replace = {
   ["multi-layer-circuit-board"] = { new = "circuit-yellow", amt_multi = 1, unlock_by = "advanced-electronics-3" },
   ["basic-electronic-components"] = { new = "circuit-resistor", amt_multi = 1, unlock_by = "electronics" },
   ["electronic-components"] = { new = "circuit-transistor", amt_multi = 1, unlock_by = "advanced-circuit" },
-  ["intergrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
+  ["bob-integrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
   ["processing-electronics"] = { new = "circuit-cpu", amt_multi = 1, unlock_by = "advanced-electronics-3" },
   --gears
   ["iron-gear-wheel"] = { new = "mechanical-parts", amt_multi = 1 },

@@ -15,7 +15,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("polishing", "green", "orange")
     AI.pack_replace("gem-processing-1", "green", "orange")
     AI.pack_replace("bob-gem-processing-2", "green", "orange")
-    AI.pack_replace("gem-processing-3", "green", "orange")
+    AI.pack_replace("bob-gem-processing-3", "green", "orange")
     AI.pack_replace("electric-mixing-furnace", "blue", "orange")
 
     if not mods["bobtech"] then --alien resources
@@ -27,10 +27,10 @@ if angelsmods.industries.tech then
       AI.pack_replace("alien-red-research", "yellow", "blue")
     end
 
-    OV.remove_prereq("nitinol-processing", "production-science-pack")
+    OV.remove_prereq("bob-nitinol-processing", "production-science-pack")
     OV.remove_prereq("tungsten-alloy-processing", "production-science-pack")
     AI.pack_replace("ceramics", "blue", "orange")
-    AI.pack_replace("cobalt-processing", "blue", "orange")
+    AI.pack_replace("bob-cobalt-processing", "blue", "orange")
 
     OV.remove_prereq("advanced-electronics-3", "production-science-pack")
 

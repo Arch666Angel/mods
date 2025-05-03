@@ -77,6 +77,6 @@ if angelsmods.industries.components then
     OV.remove_prereq("radars-3", "bob-zinc-processing")
     OV.remove_prereq("radars-4", "titanium-processing")
     OV.remove_prereq("radars-5", "advanced-electronics-3")
-    OV.remove_prereq("radars-4", "nitinol-processing")
+    OV.remove_prereq("radars-4", "bob-nitinol-processing")
   end
 end
