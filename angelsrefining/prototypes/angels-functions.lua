@@ -1888,25 +1888,25 @@ function angelsmods.functions.get_trigger_names()
     ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
     ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
     -- TIER 1.5 ORES
-    ["bob-tin-ore"] = "tin",
-    ["bob-lead-ore"] = "lead",
-    ["bob-quartz"] = "silicon",
-    ["bob-nickel-ore"] = "nickel",
+    ["tin-ore"] = "tin",
+    ["lead-ore"] = "lead",
+    ["quartz"] = "silicon",
+    ["nickel-ore"] = "nickel",
     ["manganese-ore"] = "manganese",
     -- TIER 2 ORES
-    ["bob-zinc-ore"] = "zinc",
-    ["bob-bauxite-ore"] = "aluminium",
-    ["bob-cobalt-ore"] = "cobalt",
-    ["bob-silver-ore"] = "silver",
+    ["zinc-ore"] = "zinc",
+    ["bauxite-ore"] = "aluminium",
+    ["cobalt-ore"] = "cobalt",
+    ["silver-ore"] = "silver",
     ["fluorite-ore"] = "fluorite", -- byproduct
     -- TIER 2.5 ORES
-    ["bob-gold-ore"] = "gold",
+    ["gold-ore"] = "gold",
     -- TIER 3 ORES
-    ["bob-rutile-ore"] = "titanium",
+    ["rutile-ore"] = "titanium",
     ["uranium-ore"] = "uranium",
     -- TIER 4 ORES
-    ["bob-tungsten-ore"] = "tungsten",
-    ["bob-thorium-ore"] = "thorium",
+    ["tungsten-ore"] = "tungsten",
+    ["thorium-ore"] = "thorium",
     ["chrome-ore"] = "chrome",
     ["platinum-ore"] = "platinum",
   }
