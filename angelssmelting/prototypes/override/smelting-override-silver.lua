@@ -11,8 +11,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silver"] then
+  if mods["bobores"] then
+    OV.global_replace_item("silver-ore", "bob-silver-ore")
+    data.raw["item"]["bob-silver-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png"
+    data.raw["item"]["bob-silver-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("silver-ore")
+  angelsmods.functions.hide("bob-silver-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -84,7 +90,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
         name = "bob-silver-plate",
         energy_required = 10.5,
         ingredients = {
-          { name = "silver-ore", type = "item", amount = "+3" },
+          { name = "bob-silver-ore", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-silver-plate", type = "item", amount = "+2" },

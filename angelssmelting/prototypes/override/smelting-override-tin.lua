@@ -11,8 +11,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["tin"] then
+  if mods["bobores"] then
+    OV.global_replace_item("tin-ore", "bob-tin-ore")
+    data.raw["item"]["bob-tin-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png"
+    data.raw["item"]["bob-tin-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("tin-ore")
+  angelsmods.functions.hide("bob-tin-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -32,7 +38,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     end
   end
   if mods["bobelectronics"] and mods["bobplates"] then --this is the minimum combo to make insulated wire to use tinned wire
-    OV.add_prereq("electronics", "angels-tin-smelting-1")
+    OV.add_prereq("bob-electronics", "angels-tin-smelting-1")
   end
 else
   angelsmods.functions.hide("processed-tin")
@@ -75,7 +81,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
         enabled = false,
         hidden = true,
         ingredients = {
-          { name = "tin-ore", type = "item", amount = "+3" },
+          { name = "bob-tin-ore", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-tin-plate", type = "item", amount = "+2" },
@@ -124,8 +130,8 @@ if angelsmods.trigger.smelting_products["tin"].wire then
       },
     },
   })
-  OV.add_unlock("electronics", "basic-tinned-copper-wire")
-  OV.remove_prereq("electronics", "angels-tin-smelting-1")
+  OV.add_unlock("bob-electronics", "basic-tinned-copper-wire")
+  OV.remove_prereq("bob-electronics", "angels-tin-smelting-1")
 
   if data.raw.item["bob-tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "bob-tinned-copper-cable")

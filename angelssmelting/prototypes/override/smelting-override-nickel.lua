@@ -10,8 +10,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["nickel"] then
+  if mods["bobores"] then
+    OV.global_replace_item("nickel-ore", "bob-nickel-ore")
+    data.raw["item"]["bob-nickel-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png"
+    data.raw["item"]["bob-nickel-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("nickel-ore")
+  angelsmods.functions.hide("bob-nickel-ore")
 end
 
 -------------------------------------------------------------------------------

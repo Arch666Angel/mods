@@ -10,8 +10,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["titanium"] then
+  if mods["bobores"] then
+    OV.global_replace_item("rutile-ore", "bob-rutile-ore")
+    data.raw["item"]["bob-rutile-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png"
+    data.raw["item"]["bob-rutile-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("rutile-ore")
+  angelsmods.functions.hide("bob-rutile-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -20,7 +26,7 @@ end
 if angelsmods.trigger.smelting_products["titanium"].ingot then
   --REPLACE TECHS AND DISABLE RECIPES
   if mods["bobplates"] then
-    OV.add_prereq("titanium-processing", "angels-titanium-smelting-1")
+    OV.add_prereq("bob-titanium-processing", "angels-titanium-smelting-1")
   end
 
   if angelsmods.trigger.smelting_products["titanium"].plate then

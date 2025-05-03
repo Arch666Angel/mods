@@ -10,9 +10,16 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["aluminium"] then
+  if mods["bobores"] then
+    OV.global_replace_item("bauxite-ore", "bob-bauxite-ore")
+    data.raw["item"]["bob-bauxite-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png"
+    data.raw["item"]["bob-bauxite-ore"].icon_size = 32
+  end
 else
-  angelsmods.functions.hide("bauxite-ore")
+  angelsmods.functions.hide("bauxite-ore") -- angels
+  angelsmods.functions.hide("bob-bauxite-ore")
 end
+
 
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
@@ -26,7 +33,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     data.raw["item"]["bob-alumina"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png"
     data.raw["item"]["bob-alumina"].icon_size = 32
 
-    OV.global_replace_technology("aluminium-processing", "angels-aluminium-smelting-1")
+    OV.global_replace_technology("bob-aluminium-processing", "angels-aluminium-smelting-1")
   end
 
   OV.patch_recipes({

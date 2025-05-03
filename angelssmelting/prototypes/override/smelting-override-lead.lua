@@ -10,8 +10,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["lead"] then
+  if mods["bobores"] then
+    OV.global_replace_item("lead-ore", "bob-lead-ore")
+    data.raw["item"]["bob-lead-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png"
+    data.raw["item"]["bob-lead-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("lead-ore")
+  angelsmods.functions.hide("bob-lead-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -91,7 +97,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
         enabled = false,
         hidden = true,
         ingredients = {
-          { name = "lead-ore", type = "item", amount = "+3" },
+          { name = "bob-lead-ore", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-lead-plate", type = "item", amount = "+2" },

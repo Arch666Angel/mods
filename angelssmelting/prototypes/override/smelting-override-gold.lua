@@ -11,8 +11,14 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["gold"] then
+  if mods["bobores"] then
+    OV.global_replace_item("gold-ore", "bob-gold-ore")
+    data.raw["item"]["bob-gold-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png"
+    data.raw["item"]["bob-gold-ore"].icon_size = 32
+  end
 else
   angelsmods.functions.hide("gold-ore")
+  angelsmods.functions.hide("bob-gold-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -60,6 +66,7 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   if mods["bobplates"] then
     OV.hide_recipe("bob-gold-plate")
     OV.global_replace_item("angels-plate-gold", "bob-gold-plate")
+    
     angelsmods.functions.hide("angels-plate-gold")
     angelsmods.functions.move_item("bob-gold-plate", "angels-gold-casting", "l")
     data.raw["item"]["bob-gold-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png"
@@ -92,7 +99,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
 
     OV.patch_recipes({
       {
-        name = "intergrated-electronics",
+        name = "bob-integrated-electronics",
         ingredients = {
           {
             type = "item",
