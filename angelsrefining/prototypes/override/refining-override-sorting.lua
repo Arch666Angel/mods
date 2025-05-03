@@ -702,7 +702,7 @@ OV.patch_recipes(merge_table_of_tables({
         }
       or {
         { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
-        tweaked_icon_lookup("quartz", 0.5, { 10, 10 }),
+        tweaked_icon_lookup("silica-ore", 0.5, { 10, 10 }),
       },
     --[[2]]
     special_vanilla
