@@ -235,8 +235,8 @@ ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq 
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
+    -- guarantee_subtable(modify_table.technologies, technology)
+    -- guarantee_subtable(modify_table.technologies[technology], "prereqs")
     if type(prereq) == "table" then
       for pr, req in pairs(prereq) do
         modify_table.technologies[technology].prereqs[req] = true
