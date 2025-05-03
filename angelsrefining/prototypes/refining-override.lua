@@ -42,10 +42,10 @@ require("prototypes.override.refining-override-bobvehicleequipment")
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
-    angelsmods.functions.hide("brine")
-    OV.disable_recipe({ "brine-electrolysis" }) -- equivalent of angels recipe "water-saline-seperation"
-    OV.global_replace_item("brine", "water-saline")
-    OV.disable_recipe("brine")
+    angelsmods.functions.hide("bob-brine")
+    OV.disable_recipe({ "bob-brine-electrolysis" }) -- equivalent of angels recipe "water-saline-seperation"
+    OV.global_replace_item("bob-brine", "water-saline")
+    OV.disable_recipe("bob-brine")
   end
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
@@ -424,7 +424,10 @@ end
 -- end
 
 --OVERRIDE FOR THORIUM POWER
-if data.raw.item["thorium-ore"] then
+if data.raw.item["bob-thorium-ore"] then
+  -- pure sorting
+  OV.modify_output("angelsore2-pure-processing", { "bob-thorium-ore", "platinum-ore" })
+elseif data.raw.item["thorium-ore"] then
   -- pure sorting
   OV.modify_output("angelsore2-pure-processing", { "thorium-ore", "platinum-ore" })
 end

@@ -918,54 +918,54 @@ OV.patch_recipes(merge_table_of_tables({
     ["fluorite-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.2 },
     ["thorium-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.005 },
   }, {
-    --[[1]]
-    angelsmods.functions.create_liquid_recipe_icon({
+    --1
+    angelsmods.functions.create_liquid_recipe_icon({ 
       "iron-ore",
       not special_vanilla and "copper-ore" or nil,
     }, slag_color),
-    --[[2]]
+    --2
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and "copper-ore" or "lead-ore",
       not special_vanilla and "tin-ore" or nil,
     }, slag_color),
-    --[[3]]
+    --3
     angelsmods.functions.create_liquid_recipe_icon({
       "silver-ore",
       "quartz",
     }, slag_color),
-    --[[4]]
+    --4
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and "angels-iron-pebbles" or "gold-ore",
       not special_vanilla and "nickel-ore" or nil,
     }, slag_color),
-    --[[5]]
+    --5
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and "angels-copper-pebbles" or "zinc-ore",
       not special_vanilla and "rutile-ore" or nil,
     }, slag_color),
-    --[[6]]
+    --6
     angelsmods.functions.create_liquid_recipe_icon({
       "bauxite-ore",
       ore_enabled("manganese-ore") and "manganese-ore" or nil,
       (not ore_enabled("platinum-ore")) and ore_enabled("chrome-ore") and "chrome-ore" or nil,
     }, slag_color),
-    --[[7]]
+    --7
     ore_enabled("platinum-ore")
         and angelsmods.functions.create_liquid_recipe_icon({
           "platinum-ore",
           "chrome-ore",
         }, slag_color)
       or nil,
-    --[[8]]
+    --8
     angelsmods.functions.create_liquid_recipe_icon({
       "cobalt-ore",
       "tungsten-ore",
     }, slag_color),
-    --[[9]]
+    --9
     angelsmods.functions.create_liquid_recipe_icon({
       "uranium-ore",
       ore_enabled("fluorite-ore") and "fluorite-ore" or nil,
-      ore_enabled("thorium-ore") and "thorium-ore" or nil,
+      ore_enabled("thorium-ore") and mods["bobores"] and "bob-thorium-ore" or nil, --Thorium is weird
     }, slag_color),
   }),
 }))
