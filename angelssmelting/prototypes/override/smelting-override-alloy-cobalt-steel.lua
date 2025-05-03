@@ -102,7 +102,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
     )
     data.raw["item"]["bob-cobalt-steel-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png"
     data.raw["item"]["bob-cobalt-steel-alloy"].icon_size = 32
-    OV.add_prereq("cobalt-processing", "angels-cobalt-steel-smelting-1")
+    OV.add_prereq("bob-cobalt-processing", "angels-cobalt-steel-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-cobalt-steel")
   end
 end
