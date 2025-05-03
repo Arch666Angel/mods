@@ -14,8 +14,8 @@ if mods["bobplates"] then
 
   -- Remove prereq alloy-processing
   OV.remove_unlock("bob-alloy-processing", "bob-stone-mixing-furnace")
-  --OV.remove_unlock("bob-alloy-processing", "stone-mixing-furnace-from-stone-furnace")
-  --OV.remove_unlock("bob-alloy-processing", "stone-furnace-from-stone-mixing-furnace")
+  --OV.remove_unlock("bob-alloy-processing", "bob-stone-mixing-furnace-from-stone-furnace")
+  --OV.remove_unlock("bob-alloy-processing", "bob-stone-furnace-from-stone-mixing-furnace")
 
   -- Remove Stone chemical furnaces
   OV.global_replace_item("bob-stone-chemical-furnace", "stone-furnace")
@@ -23,8 +23,8 @@ if mods["bobplates"] then
   angelsmods.functions.set_next_upgrade("assembling-machine", "bob-stone-chemical-furnace", nil)
   OV.disable_recipe("bob-stone-chemical-furnace")
   OV.remove_unlock("bob-chemical-processing-1", "bob-stone-chemical-furnace")
-  --OV.remove_unlock("bob-chemical-processing-1", "stone-chemical-furnace-from-stone-furnace")
-  --OV.remove_unlock("bob-chemical-processing-1", "stone-furnace-from-stone-chemical-furnace")
+  --OV.remove_unlock("bob-chemical-processing-1", "bob-stone-chemical-furnace-from-stone-furnace")
+  --OV.remove_unlock("bob-chemical-processing-1", "bob-stone-furnace-from-stone-chemical-furnace")
 
   -- Remove (fluid) Steel chemical furnaces
   OV.global_replace_item("bob-steel-chemical-furnace", "steel-furnace")
