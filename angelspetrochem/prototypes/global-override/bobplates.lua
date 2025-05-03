@@ -107,7 +107,7 @@ if mods["bobplates"] then
   -- lithium processing -------------------------------------------------------
   OV.patch_recipes({
     {
-      name = "lithium-water-electrolysis",
+      name = "bob-lithium-water-electrolysis",
       results = {
         { name = "gas-hydrogen", type = "fluid", amount = 20 },
       },

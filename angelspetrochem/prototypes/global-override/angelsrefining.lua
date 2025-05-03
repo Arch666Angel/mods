@@ -8,7 +8,10 @@ if data.raw.resource["uranium-ore"] then
   end
 end
 
-if data.raw.resource["thorium-ore"] then
+-- angelssmelting creates its own ore if bobplates isn't active
+if data.raw.resource["bob-thorium-ore"] then
+  data.raw.resource["bob-thorium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
+elseif data.raw.resource["thorium-ore"] then
   data.raw.resource["thorium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
 end
 
