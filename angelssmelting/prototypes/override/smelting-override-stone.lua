@@ -57,7 +57,7 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger
     {
       name = "cement-mixture-1",
       ingredients = {
-        { name = "stone-crushed", type = "item", amount = mods["bobplates"] and "bob-quartz" or "quartz" }, --TODO: figure out what name to use, my guess is bob-quartz if bobplates is enabled ?
+        { name = "stone-crushed", type = "item", amount = mods["bobplates"] and "bob-quartz" or "quartz" },
       },
     },
     {
