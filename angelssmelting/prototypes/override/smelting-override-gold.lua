@@ -72,7 +72,7 @@ if angelsmods.trigger.smelting_products["gold"].plate then
     data.raw["item"]["bob-gold-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png"
     data.raw["item"]["bob-gold-plate"].icon_size = 32
 
-    OV.global_replace_technology("gold-processing", "angels-gold-smelting-1")
+    OV.global_replace_technology("bob-gold-processing", "angels-gold-smelting-1")
   end
 else
   angelsmods.functions.hide("angels-plate-gold")

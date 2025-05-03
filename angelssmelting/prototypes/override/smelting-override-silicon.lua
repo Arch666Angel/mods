@@ -11,7 +11,7 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silicon"] then
-  if mods["bobplates"] then
+  if mods["bobores"] then
     OV.global_replace_item("quartz", "bob-quartz")
     data.raw["item"]["bob-quartz"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png"
     data.raw["item"]["bob-quartz"].icon_size = 32
