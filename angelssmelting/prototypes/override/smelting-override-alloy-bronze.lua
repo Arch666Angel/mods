@@ -103,7 +103,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "recipe",
         name = "angels-plate-bronze",
-        localised_name = { "item-name.bronze-alloy" },
+        localised_name = { "item-name.bob-bronze-alloy" },
         category = "casting",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
