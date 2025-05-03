@@ -65,7 +65,7 @@ if mods["bobplates"] then
       { name = "bob-electric-chemical-mixing-furnace", locale = "angels-electric-ingredient-furnace-2" },
       { name = "bob-electric-chemical-mixing-furnace-2", locale = "angels-electric-ingredient-furnace-3" },
       settings.startup["bobmods-assembly-oilfurnaces"].value
-          and { name = "fluid-mixing-furnace", locale = "angels-fluid-ingredient-furnace" }
+          and { name = "bob-fluid-mixing-furnace", locale = "angels-fluid-ingredient-furnace" }
         or nil,
     }) do
       if data.raw["assembling-machine"][rep.name] then
