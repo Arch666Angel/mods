@@ -139,7 +139,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   if mods["bobelectronics"] then
     OV.patch_recipes({
       {
-        name = "electronic-components",
+        name = "bob-electronic-components",
         ingredients = {
           { type = "item", name = "angels-wire-silver", amount = "bob-tinned-copper-cable" },
         },
