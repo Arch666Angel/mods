@@ -96,6 +96,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
     )
+    OV.add_prereq("processing-unit", "angels-gold-smelting-1") -- TODO: why do we need this now ?
 
     OV.patch_recipes({
       {
