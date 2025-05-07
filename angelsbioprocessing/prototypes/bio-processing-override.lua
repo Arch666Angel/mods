@@ -114,6 +114,11 @@ require("prototypes.overrides.bio-processing-override-bob")
 require("prototypes.overrides.bio-processing-override-bobmodules")
 require("prototypes.overrides.bio-processing-override-bobgreenhouse")
 
+-- Remove bio productivity from all buildings
+for recipeName, _ in pairs(data.raw.recipe) do
+  angelsmods.functions.remove_bio_productivity(recipeName, true)
+end
+
 --ENABLE PRODUCTIVITY
 --angelsmods.functions.allow_productivity("slag-processing-1")
 angelsmods.functions.allow_productivity("bio-resin")

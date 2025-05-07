@@ -24,6 +24,7 @@ data:extend({
     fast_replaceable_group = "crop-farm",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    --allowed_module_categories = { "speed", "bio-productivity", "efficiency" },
     crafting_categories = { "temperate-farming", "desert-farming", "swamp-farming", "basic-farming" },
     crafting_speed = 1,
     energy_source = {

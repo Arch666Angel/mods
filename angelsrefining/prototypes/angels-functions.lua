@@ -1288,74 +1288,79 @@ end
 -------------------------------------------------------------------------------
 -- PRODUCTIVITY RESTRICTION ---------------------------------------------------
 -------------------------------------------------------------------------------
+
+function all_modules()
+  local modules = {} -- {"speed", "productivity", "efficiency"}
+  for _, v in pairs(data.raw["module-category"]) do
+    table.insert(modules, v.name)
+  end
+
+  return modules
+end
+
+function remove_line(array, value)
+  for i,v in pairs(array) do
+    if v == value then
+      table.remove(array, i)
+      return
+    end
+  end
+end
+
+function add_line(array, value)
+  local duplicatedLine = false
+  for _, v in pairs(array) do
+    duplicatedLine = duplicatedLine or v == value
+  end
+  if not duplicatedLine then
+    table.insert(array, value)
+  end
+end
+
 function angelsmods.functions.allow_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
+  local recipe = data.raw.recipe[recipe_name]
+
+  if recipe then
+    if recipe.allowed_module_categories then --if not present, all modules are allowed
+      add_line(recipe.allowed_module_categories, "productivity")
     end
+    recipe.allow_productivity = true
   end
 end
 
-function angelsmods.functions.remove_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
+function angelsmods.functions.remove_productivity(recipe_name, keepProd)
+  local recipe = data.raw.recipe[recipe_name]
+  
+  if recipe then
+    if recipe.allowed_module_categories then
+      remove_line(recipe.allowed_module_categories, "productivity")
     end
-  end
-end
-
-function angelsmods.functions.add_bio_productivity_module(to_add)
-  if --type(to_add) == string and
-    angelsmods.refining and angelsmods.refining.productivity_exception
-  then
-    table.insert(angelsmods.refining.productivity_exception, to_add)
+    if not keepProd then
+      recipe.allow_productivity = false
+    end
   end
 end
 
 function angelsmods.functions.allow_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
-    end
+  local recipe = data.raw.recipe[recipe_name]
+
+  if recipe then
+    local allowed = recipe.allowed_module_categories or all_modules()
+    remove_line(allowed, "productivity")
+    add_line(allowed, "bio-productivity")
+    recipe.allowed_module_categories = allowed
+    recipe.allow_productivity = true
   end
 end
 
-function angelsmods.functions.remove_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
+function angelsmods.functions.remove_bio_productivity(recipe_name, keepProd)
+  local recipe = data.raw.recipe[recipe_name]
+  if recipe then
+    local allowed = recipe.allowed_module_categories or all_modules()
+    remove_line(allowed, "bio-productivity")
+    recipe.allowed_module_categories = allowed
+    if not keepProd then
+      recipe.allow_productivity = false
     end
   end
 end
