@@ -359,3 +359,8 @@ data:extend({
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("algae-farm")
+angelsmods.functions.allow_bio_productivity("algae-farm-2")
+angelsmods.functions.allow_bio_productivity("algae-farm-3")
+angelsmods.functions.allow_bio_productivity("algae-farm-4")

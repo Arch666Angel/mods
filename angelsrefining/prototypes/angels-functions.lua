@@ -1288,76 +1288,28 @@ end
 -------------------------------------------------------------------------------
 -- PRODUCTIVITY RESTRICTION ---------------------------------------------------
 -------------------------------------------------------------------------------
-function angelsmods.functions.allow_productivity(recipe_name) --TODO: convert to new recipe.allowed_module_categories
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
-    end
+function angelsmods.functions.allow_productivity(recipe_name)
+  local recipe = data.raw.recipe[recipe_name] 
+  if recipe then
+    recipe.allow_productivity = true
   end
 end
 
 function angelsmods.functions.remove_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
-    end
+  local recipe = data.raw.recipe[recipe_name] 
+  if recipe then
+    recipe.allow_productivity = nil
   end
 end
 
-function angelsmods.functions.add_bio_productivity_module(to_add)
-  if --type(to_add) == string and
-    angelsmods.refining and angelsmods.refining.productivity_exception
-  then
-    table.insert(angelsmods.refining.productivity_exception, to_add)
+function angelsmods.functions.allow_bio_productivity(entity_name)
+  if data.raw["assembling-machine"][entity_name] then
+    angelsmods.refining.productivity_exception[entity_name] = true
   end
 end
 
-function angelsmods.functions.allow_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
-    end
-  end
-end
-
-function angelsmods.functions.remove_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
-    end
-  end
+function angelsmods.functions.remove_bio_productivity(entity_name)
+  angelsmods.refining.productivity_exception[entity_name] = nil
 end
 
 -------------------------------------------------------------------------------

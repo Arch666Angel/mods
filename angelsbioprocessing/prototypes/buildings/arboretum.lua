@@ -492,3 +492,5 @@ data:extend({
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("bio-arboretum-1")

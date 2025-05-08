@@ -119,6 +119,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     always_show_products = true,
     main_product = "biter-small-egg",
     icons = {
@@ -174,6 +175,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     always_show_products = true,
     main_product = "biter-medium-egg",
     icons = {
@@ -221,6 +223,7 @@ data:extend({
       { type = "item", name = "biter-big-egg", amount = 1 },
       { type = "item", name = "biter-big-egg", amount = 1, probability = 0.5, show_details_in_recipe_tooltip = false },
     },
+    allow_productivity = true,
     always_show_products = true,
     main_product = "biter-big-egg",
     icons = {

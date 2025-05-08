@@ -142,7 +142,7 @@ require("prototypes.technology.refining-technology")
 
 require("prototypes.technology.water-treatment-technology")
 
---require("prototypes.generation.map-gen-presets")
+require("prototypes.generation.map-gen-presets")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()

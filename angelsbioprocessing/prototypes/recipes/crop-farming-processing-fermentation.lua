@@ -289,6 +289,7 @@ data:extend({
       { type = "fluid", name = "liquid-plastic", amount = 15 },
     },
     main_product = "liquid-plastic",
+    allow_productivity = true,
     always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 1, angelsmods.bioprocessing.number_tint),
@@ -349,6 +350,7 @@ data:extend({
       { type = "fluid", name = "liquid-plastic", amount = 25 },
     },
     main_product = "liquid-plastic",
+    allow_productivity = true,
     always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 2, angelsmods.bioprocessing.number_tint),

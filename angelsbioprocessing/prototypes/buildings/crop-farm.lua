@@ -332,3 +332,8 @@ data:extend({
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("crop-farm")
+angelsmods.functions.allow_bio_productivity("temperate-farm")
+angelsmods.functions.allow_bio_productivity("desert-farm")
+angelsmods.functions.allow_bio_productivity("swamp-farm")

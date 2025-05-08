@@ -365,3 +365,7 @@ data:extend({
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("bio-refugium-fish")
+angelsmods.functions.allow_bio_productivity("bio-refugium-puffer")
+angelsmods.functions.allow_bio_productivity("bio-refugium-biter")

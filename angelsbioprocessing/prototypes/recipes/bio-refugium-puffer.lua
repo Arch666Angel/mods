@@ -554,6 +554,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -612,6 +613,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -670,6 +672,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -728,6 +731,7 @@ data:extend({
         show_details_in_recipe_tooltip = false,
       },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -786,6 +790,7 @@ data:extend({
       },
       { type = "item", name = "bio-puffer-egg-5", amount = 1, probability = 0.7 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -835,6 +840,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-1", amount = 1 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -889,6 +895,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-2", amount = 1 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -943,6 +950,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-3", amount = 1 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -997,6 +1005,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-4", amount = 1 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -1051,6 +1060,7 @@ data:extend({
       { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-5", amount = 1 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
