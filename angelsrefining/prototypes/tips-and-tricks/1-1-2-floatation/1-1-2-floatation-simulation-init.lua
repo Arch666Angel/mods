@@ -10,7 +10,6 @@ game.surfaces[1].create_entity({
   position = { 0, 0 },
   direction = defines.direction.east,
   force = "neutral",
-  raise_built = true,
   recipe = "angelsore1-chunk",
 })
 -- inserters (input)
