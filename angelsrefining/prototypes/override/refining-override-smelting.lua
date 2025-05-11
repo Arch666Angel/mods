@@ -56,6 +56,8 @@ end
 -------------------------------------------------------------------------------
 if ore_exists("lead") then
   local item_name = mods["angelssmelting"] and "angels-plate-lead" or "bob-lead-plate"
+  data.raw["item"][item_name].icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png"
+  data.raw["item"][item_name].icon_size = 32
 
   OV.patch_recipes({
     {
@@ -74,6 +76,8 @@ end
 
 if ore_exists("tin") then
   local item_name = mods["angelssmelting"] and "angels-plate-tin" or "bob-tin-plate"
+  data.raw["item"][item_name].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png"
+  data.raw["item"][item_name].icon_size = 32
 
   OV.patch_recipes({
     {
