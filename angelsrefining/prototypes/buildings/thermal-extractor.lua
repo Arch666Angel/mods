@@ -70,7 +70,7 @@ data:extend({
         scale = 0.51,
       },
     },
-    wet_mining_graphics_set = {
+    graphics_set = {
       animation = {
         north = {
           layers = {
