@@ -60,26 +60,14 @@ data:extend({
       height = 12,
     },
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-    graphics_set = {
-        animation = {
-          layers = {
-            {
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-              priority = "extra-high",
-              width = 261,
-              height = 273,
-              shift = util.by_pixel(-2.25, -4.75),
-              scale = 0.5,
-            },
-            {
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-base-shadow.png",
-              width = 220,
-              height = 220,
-              scale = 0.5,
-              draw_as_shadow = true,
-              shift = util.by_pixel(6, 0.5),
-            },
-          },
+    base_picture = {
+      sheet = {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 261,
+        height = 273,
+        shift = util.by_pixel(-2, -4),
+        scale = 0.51,
       },
     },
     wet_mining_graphics_set = {
