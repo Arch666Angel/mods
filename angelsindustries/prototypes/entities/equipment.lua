@@ -192,8 +192,8 @@ data:extend({
     name = "angels-heavy-energy-shield-vequip",
     sprite = {
       filename = "__base__/graphics/equipment/energy-shield-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
