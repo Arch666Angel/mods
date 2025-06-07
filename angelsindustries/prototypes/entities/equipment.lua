@@ -74,7 +74,7 @@ data:extend({
   {
     type = "item",
     name = "angels-repair-roboport-vequip",
-    icon = "__base__/graphics/icons/rocket-part.png",
+    icon = "__angelsindustriesgraphics__/graphics/equipment/repair-roboport-vequip.png",
     place_as_equipment_result = "angels-repair-roboport-vequip",
     icon_size = 64,
     subgroup = "angels-vehicle-equipment",
@@ -85,7 +85,7 @@ data:extend({
     type = "roboport-equipment",
     name = "angels-repair-roboport-vequip",
     sprite = {
-      filename = "__base__/graphics/icons/rocket-part.png",
+      filename = "__angelsindustriesgraphics__/graphics/equipment/repair-roboport-vequip.png",
       width = 64,
       height = 64,
       priority = "medium",
