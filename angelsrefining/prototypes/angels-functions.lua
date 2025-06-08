@@ -1392,10 +1392,6 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  if flag_to_remove == "hidden" then
-    log("angels-functions - remove_flag - Warning : attempt to remove outdated flag 'hidden' from entity : " .. entity.name .. ". Use .hidden = false instead")
-  end
-  
   for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
     local to_remove = data.raw[type][entity]
     if to_remove and to_remove.flags then
