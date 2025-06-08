@@ -686,7 +686,7 @@ OV.patch_recipes(merge_table_of_tables({
       }
       or {
         { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
-        tweaked_icon_lookup("silica-ore", 0.5, { 10, 10 }),
+        tweaked_icon_lookup("quartz", 0.5, { 10, 10 }),
       },
     ingredients_override = special_vanilla and {
       { type = "item", name = "angels-iron-pebbles", amount = 3 },
