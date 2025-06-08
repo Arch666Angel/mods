@@ -7,32 +7,32 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.pack_replace("battery-2", "blue", "orange")
-    OV.remove_prereq("battery-2", "tech-blue-packs")
-    OV.remove_prereq("battery-3", "production-science-pack")
+    AI.pack_replace("bob-battery-2", "blue", "orange")
+    OV.remove_prereq("bob-battery-2", "tech-blue-packs")
+    OV.remove_prereq("bob-battery-3", "production-science-pack")
 
     AI.pack_replace("bob-grinding", "green", "orange")
-    AI.pack_replace("polishing", "green", "orange")
-    AI.pack_replace("gem-processing-1", "green", "orange")
+    AI.pack_replace("bob-polishing", "green", "orange")
+    AI.pack_replace("bob-gem-processing-1", "green", "orange")
     AI.pack_replace("bob-gem-processing-2", "green", "orange")
     AI.pack_replace("bob-gem-processing-3", "green", "orange")
-    AI.pack_replace("electric-mixing-furnace", "blue", "orange")
+    AI.pack_replace("bob-electric-mixing-furnace", "blue", "orange")
 
     if not mods["bobtech"] then --alien resources
-      AI.pack_replace("alien-blue-research", "yellow", "blue")
-      AI.pack_replace("alien-orange-research", "yellow", "blue")
-      AI.pack_replace("alien-purple-research", "yellow", "blue")
-      AI.pack_replace("alien-yellow-research", "yellow", "blue")
-      AI.pack_replace("alien-green-research", "yellow", "blue")
-      AI.pack_replace("alien-red-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-blue-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-orange-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-purple-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-yellow-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-green-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-red-research", "yellow", "blue")
     end
 
     OV.remove_prereq("bob-nitinol-processing", "production-science-pack")
-    OV.remove_prereq("tungsten-alloy-processing", "production-science-pack")
-    AI.pack_replace("ceramics", "blue", "orange")
+    OV.remove_prereq("bob-tungsten-alloy-processing", "production-science-pack")
+    AI.pack_replace("bob-ceramics", "blue", "orange")
     AI.pack_replace("bob-cobalt-processing", "blue", "orange")
 
-    OV.remove_prereq("advanced-electronics-3", "production-science-pack")
+    OV.remove_prereq("bob-advanced-processing-unit", "production-science-pack")
 
     AI.pack_replace("kovarex-enrichment-process", "yellow", "blue")
   end
