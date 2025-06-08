@@ -21,7 +21,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -1.75 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.25,
     crafting_categories = { "bio-hatchery" },
     cant_insert_at_source_message_key = "cant_insert.angels-hatchery-limitation",
     module_slots = 2,

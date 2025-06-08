@@ -21,7 +21,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.5 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-processor",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },

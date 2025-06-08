@@ -11,6 +11,13 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silver"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["silver-ore"]
+    local bob_ore = data.raw.item["bob-silver-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
   angelsmods.functions.hide("bob-silver-ore")
 end
@@ -23,11 +30,9 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-silver-nitrate", "bob-silver-nitrate")
     angelsmods.functions.hide("solid-silver-nitrate")
-    angelsmods.functions.move_item("bob-silver-nitrate", "angels-silver", "d")
-    data.raw["item"]["bob-silver-nitrate"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png"
-    data.raw["item"]["bob-silver-nitrate"].icon_size = 32
+    OV.copy_item_properties("solid-silver-nitrate", "bob-silver-nitrate")
     OV.disable_recipe({ "bob-silver-nitrate", "bob-silver-from-lead" })
-    OV.remove_prereq("bob-battery-3", "bob-nitrogen-processing")
+    OV.remove_prereq("bob-battery-3", "nitrogen-processing")
     OV.add_prereq("bob-battery-3", "angels-silver-smelting-2")
     OV.add_prereq("bob-battery-3", "powder-metallurgy-4")
 
@@ -75,48 +80,8 @@ if angelsmods.trigger.smelting_products["silver"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-silver", "bob-silver-plate")
     angelsmods.functions.hide("angels-plate-silver")
-    angelsmods.functions.move_item("bob-silver-plate", "angels-silver-casting", "m")
-    data.raw["item"]["bob-silver-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png"
-    data.raw["item"]["bob-silver-plate"].icon_size = 32
-
-    OV.patch_recipes({
-      {
-        name = "bob-silver-plate",
-        energy_required = 10.5,
-        ingredients = {
-          { name = "bob-silver-ore", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "bob-silver-plate", type = "item", amount = "+2" },
-        },
-        icons = {
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
-            icon_size = 32
-          },
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
-            scale = 0.4375,
-            shift = { -10, -10 },
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-silver-casting",
-        order = "m[angels-plate-silver]-a",
-      },
-    })
+    OV.copy_item_properties("angels-plate-silver", "bob-silver-plate")
     OV.hide_recipe({ "bob-silver-plate" })
-  end
-
-  if mods["bobelectronics"] then
-    OV.patch_recipes({
-      {
-        name = "superior-circuit-board",
-        ingredients = {
-          { type = "item", name = "bob-silver-plate", amount = "bob-gold-plate" },
-        },
-      },
-    })
   end
 else
   angelsmods.functions.hide("angels-plate-silver")

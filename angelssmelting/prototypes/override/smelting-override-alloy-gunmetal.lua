@@ -105,6 +105,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
     if mods["bobwarfare"] then
       OV.add_prereq("bob-bullets", "angels-gunmetal-smelting-1")
       OV.add_prereq("bob-shotgun-shells", "angels-gunmetal-smelting-1")
+      OV.add_prereq("bob-rocket", "angels-gunmetal-smelting-1")
     end
   end
 end

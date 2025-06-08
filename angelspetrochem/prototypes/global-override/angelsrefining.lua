@@ -1,15 +1,10 @@
 local OV = angelsmods.functions.OV
 
 --ACID OVERRIDE FOR REFINING AND ORES
-if data.raw.resource["uranium-ore"] then
-  data.raw.resource["uranium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
-  if data.raw.resource["infinite-uranium-ore"] then
-    data.raw.resource["infinite-uranium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
+for _, resource in pairs(data.raw.resource) do
+  if resource.minable and (resource.minable.required_fluid == "sulfuric-acid") then
+    resource.minable.required_fluid = "liquid-sulfuric-acid"
   end
-end
-
-if data.raw.resource["thorium-ore"] then
-  data.raw.resource["thorium-ore"].minable.required_fluid = "liquid-sulfuric-acid"
 end
 
 if angelsmods.trigger.enableacids then

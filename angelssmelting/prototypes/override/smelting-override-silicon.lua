@@ -11,6 +11,13 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silicon"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["quartz"]
+    local bob_ore = data.raw.item["bob-quartz"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
   angelsmods.functions.hide("bob-quartz")
 end
@@ -95,7 +102,8 @@ if angelsmods.trigger.smelting_products["silicon"].wafer then
         order = "l[angels-silicon-wafer]",
       },
     })
-    OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
+    OV.global_replace_technology("bob-silicon-processing", "angels-silicon-smelting-1")
+    OV.add_unlock("angels-silicon-smelting-1", "bob-silicon-wafer")
   end
 else
   angelsmods.functions.hide("angels-silicon-wafer")
@@ -134,10 +142,9 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
       },
     })
     angelsmods.functions.remove_productivity("bob-silicon-powder")
-    OV.add_prereq("silicon-processing", "angels-silicon-smelting-1")
-  end
+    OV.global_replace_technology("bob-silicon-processing", "angels-silicon-smelting-1")
+    OV.add_unlock("angels-silicon-smelting-1", "bob-silicon-powder")
 
-  if mods["bobplates"] then
     -- silicon powder derivatives
     angelsmods.functions.move_item("bob-silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
     angelsmods.functions.move_item("bob-silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
@@ -147,6 +154,6 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
     })
   end
 else
-  angelsmods.functions.hide("bob-powder-silicon")
-  OV.disable_recipe({ "bob-powder-silicon" })
+  angelsmods.functions.hide("powder-silicon")
+  OV.disable_recipe({ "powder-silicon" })
 end

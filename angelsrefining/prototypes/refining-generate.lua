@@ -29,12 +29,8 @@ if angelsmods.refining then
     angelsmods.functions.make_void("water-thin-mud", "water")
   end
 
-  if bobmods and bobmods.plates then
-    angelsmods.functions.make_void("bob-lithia-water", "water")
-  else
-    --ADD THE BARRELING PUMP
-    angelsmods.functions.OV.add_unlock("fluid-handling", "barreling-pump")
-  end
+  --ADD THE BARRELING PUMP
+  angelsmods.functions.OV.add_unlock("fluid-handling", "barreling-pump")
 
   --MOVE EMPTY BARREL
   data.raw["item-subgroup"]["fill-barrel"].group = "angels-fluid-control"

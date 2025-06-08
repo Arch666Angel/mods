@@ -31,7 +31,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    drawing_box = { { -0.5, -2.1 }, { 0.5, 0.5 } },
+    drawing_box_vertical_extension = 1.6,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "void",
@@ -73,7 +73,6 @@ data:extend({
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
@@ -128,7 +127,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -0.65, -0.65 }, { 0.65, 0.65 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    drawing_box = { { -1, -4.1 }, { 1, 1 } },
+    drawing_box_vertical_extension = 3.1,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "void",
@@ -170,7 +169,6 @@ data:extend({
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
@@ -225,7 +223,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -6.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 5,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "electric",
@@ -265,7 +263,6 @@ data:extend({
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
     door_animation_up = {
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",

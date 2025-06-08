@@ -39,26 +39,3 @@ if mods["bobassembly"] then
     end
   end
 end
-
--------------------------------------------------------------------------------
--- OIL REFINERIES -------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobassembly"] then
-  if data.raw["assembling-machine"]["bob-oil-refinery-2"] then
-    data.raw["assembling-machine"]["bob-oil-refinery-2"].energy_usage = "720kW"
-    data.raw["assembling-machine"]["bob-oil-refinery-2"].crafting_speed = 1.75
-    data.raw["assembling-machine"]["bob-oil-refinery-2"].module_slots = 3
-  end
-
-  if data.raw["assembling-machine"]["bob-oil-refinery-3"] then
-    data.raw["assembling-machine"]["bob-oil-refinery-3"].energy_usage = "1MW"
-    data.raw["assembling-machine"]["bob-oil-refinery-3"].crafting_speed = 2.5
-    data.raw["assembling-machine"]["bob-oil-refinery-3"].module_slots = 4
-  end
-
-  if data.raw["assembling-machine"]["bob-oil-refinery-4"] then
-    data.raw["assembling-machine"]["bob-oil-refinery-4"].energy_usage = "1.35MW"
-    data.raw["assembling-machine"]["bob-oil-refinery-4"].crafting_speed = 3.5
-    data.raw["assembling-machine"]["bob-oil-refinery-4"].module_slots = 5
-  end
-end

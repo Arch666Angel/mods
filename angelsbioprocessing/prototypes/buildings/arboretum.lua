@@ -30,7 +30,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -153,7 +153,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -276,7 +276,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -2, -2.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -401,7 +401,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -4.0 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 1.5,
     fast_replaceable_group = "bio-arboretum",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -492,3 +492,5 @@ data:extend({
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("bio-arboretum-1")

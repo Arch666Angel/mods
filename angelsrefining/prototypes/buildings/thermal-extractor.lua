@@ -1,3 +1,5 @@
+local hit_effects = require ("__base__.prototypes.entity.hit-effects")
+
 data:extend({
   {
     type = "item",
@@ -23,15 +25,17 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "thermal-bore" },
+    minable = { mining_time = 0.5, result = "thermal-bore" },
     resource_categories = { "angels-fissure" },
     max_health = 100,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
+    corpse = "pumpjack-remnants",
+    dying_explosion = "pumpjack-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box_vertical_extension = 1,
     energy_source = {
       type = "electric",
       emissions_per_minute = { pollution = 1.2 },
@@ -43,14 +47,13 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          positions = { { 1, -1.4 }, { 1.4, -1 }, { -1, 1.4 }, { -1.4, 1 } },
+          positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
           direction = defines.direction.north,
         },
       },
     },
     energy_usage = "90kW",
     mining_speed = 0.75,
-    --mining_power = 3,
     resource_searching_radius = 0.49,
     vector_to_place_result = { 0, 0 },
     module_slots = 2,
@@ -60,29 +63,27 @@ data:extend({
       height = 12,
     },
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-    graphics_set = {
-        animation = {
-          layers = {
-            {
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-              priority = "extra-high",
-              width = 261,
-              height = 273,
-              shift = util.by_pixel(-2.25, -4.75),
-              scale = 0.5,
-            },
-            {
-              filename = "__base__/graphics/entity/pumpjack/pumpjack-base-shadow.png",
-              width = 220,
-              height = 220,
-              scale = 0.5,
-              draw_as_shadow = true,
-              shift = util.by_pixel(6, 0.5),
-            },
-          },
+    base_picture = {
+      sheets = {
+        {
+          filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+          priority = "extra-high",
+          width = 261,
+          height = 273,
+          shift = util.by_pixel(-2.25, -4.75),
+          scale = 0.5,
+        },
+        {
+          filename = "__base__/graphics/entity/pumpjack/pumpjack-base-shadow.png",
+          width = 220,
+          height = 220,
+          scale = 0.5,
+          draw_as_shadow = true,
+          shift = util.by_pixel(6, 0.5),
+        },
       },
     },
-    wet_mining_graphics_set = {
+    graphics_set = {
       animation = {
         north = {
           layers = {
@@ -113,11 +114,18 @@ data:extend({
         },
       },
     },
+    open_sound = {filename = "__base__/sound/open-close/pumpjack-open.ogg", volume = 0.5},
+    close_sound = {filename = "__base__/sound/open-close/pumpjack-close.ogg", volume = 0.5},
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
+      max_sounds_per_prototype = 3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 10
     },
     fast_replaceable_group = "thermal-extractor",
+    circuit_connector = circuit_connector_definitions["pumpjack"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
     type = "item",
@@ -164,7 +172,7 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          position = { -3, 4.4 },
+          position = { -3, 4 },
           direction = defines.direction.south,
         },
       },

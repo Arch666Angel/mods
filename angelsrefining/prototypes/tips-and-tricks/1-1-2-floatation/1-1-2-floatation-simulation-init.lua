@@ -1,6 +1,8 @@
-game.camera_position = { -2.5, 1 }
-game.camera_zoom = 1.7
-game.camera_alt_info = true
+game.simulation.camera_position = { -2.5, 1 }
+game.simulation.camera_zoom = 1.7
+game.simulation.camera_alt_info = true
+
+game.forces.neutral.recipes["angelsore1-chunk"].enabled = true
 
 -- floatation cell
 game.surfaces[1].create_entity({
@@ -8,6 +10,7 @@ game.surfaces[1].create_entity({
   position = { 0, 0 },
   direction = defines.direction.east,
   force = "neutral",
+  raise_built = true,
   recipe = "angelsore1-chunk",
 })
 -- inserters (input)

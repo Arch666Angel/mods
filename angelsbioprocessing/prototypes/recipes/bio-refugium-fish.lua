@@ -199,8 +199,8 @@ data:extend({
         ignored_by_stats = 2,
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
-      --{type="fluid", name="water-yellow-waste", amount=20},
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -237,6 +237,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -273,6 +274,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",
@@ -309,6 +311,7 @@ data:extend({
       },
       { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    allow_productivity = true,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/breeding.png",

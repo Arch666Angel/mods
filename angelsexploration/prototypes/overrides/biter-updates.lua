@@ -203,25 +203,26 @@ end
 --CONVERT LOOT
 local loot_to_be_converted = {}
 if angelsmods.trigger.artifacts["base"] then
+  loot_to_be_converted["alien-artifact"] = { name = "small-alien-artifact", rate = 2 }
   loot_to_be_converted["bob-alien-artifact"] = { name = "bob-small-alien-artifact", rate = 2 }
 end
 if angelsmods.trigger.artifacts["red"] then
-  loot_to_be_converted["bob-alien-artifact-red"] = { name = "bob-small-alien-artifact-red", rate = 2 }
+  loot_to_be_converted["alien-artifact-red"] = { name = "small-alien-artifact-red", rate = 2 }
 end
 if angelsmods.trigger.artifacts["yellow"] then
-  loot_to_be_converted["bob-alien-artifact-yellow"] = { name = "bob-small-alien-artifact-yellow", rate = 2 }
+  loot_to_be_converted["alien-artifact-yellow"] = { name = "small-alien-artifact-yellow", rate = 2 }
 end
 if angelsmods.trigger.artifacts["orange"] then
-  loot_to_be_converted["bob-alien-artifact-orange"] = { name = "bob-small-alien-artifact-orange", rate = 2 }
+  loot_to_be_converted["alien-artifact-orange"] = { name = "small-alien-artifact-orange", rate = 2 }
 end
 if angelsmods.trigger.artifacts["blue"] then
-  loot_to_be_converted["bob-alien-artifact-blue"] = { name = "bob-small-alien-artifact-blue", rate = 2 }
+  loot_to_be_converted["alien-artifact-blue"] = { name = "small-alien-artifact-blue", rate = 2 }
 end
 if angelsmods.trigger.artifacts["purple"] then
-  loot_to_be_converted["bob-alien-artifact-purple"] = { name = "bob-small-alien-artifact-purple", rate = 2 }
+  loot_to_be_converted["alien-artifact-purple"] = { name = "small-alien-artifact-purple", rate = 2 }
 end
 if angelsmods.trigger.artifacts["green"] then
-  loot_to_be_converted["bob-alien-artifact-green"] = { name = "bob-small-alien-artifact-green", rate = 2 }
+  loot_to_be_converted["alien-artifact-green"] = { name = "small-alien-artifact-green", rate = 2 }
 end
 
 local function update_loot_table(loot_table)

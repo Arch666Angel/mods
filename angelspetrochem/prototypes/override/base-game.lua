@@ -167,6 +167,11 @@ OV.patch_recipes({
       { type = "item", name = "rocket-booster", amount = 1 },
     },
     category = "advanced-chemistry",
+    crafting_machine_tint = { --default, has no fluids
+      primary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+      secondary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+      tertiary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+    },
   },
 })
 OV.add_prereq("rocketry", "rocket-booster-1")

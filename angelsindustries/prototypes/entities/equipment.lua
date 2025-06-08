@@ -9,7 +9,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "a[angels-burner-generator-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "generator-equipment",
@@ -48,7 +47,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "b[angels-fusion-reactor-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "generator-equipment",
@@ -82,7 +80,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "d[angels-repair-roboport-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "roboport-equipment",
@@ -135,7 +132,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "c[angels-construction-roboport-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "roboport-equipment",
@@ -261,7 +257,6 @@ data:extend({
         },
       },
       ammo_type = {
-        category = "rocket",
         action = {
           type = "direct",
           action_delivery = {

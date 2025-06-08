@@ -1,5 +1,5 @@
 local OV = angelsmods.functions.OV
--- Modified scripts from https://github.com/KiwiHawk/SeaBlock/commit/1456471326f4a856acda092e865c9780c751f99f
+
 -------------------------------------------------------------------------------
 -- ALLOY HANDLING -------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -14,17 +14,12 @@ if mods["bobplates"] then
 
   -- Remove prereq alloy-processing
   OV.remove_unlock("bob-alloy-processing", "bob-stone-mixing-furnace")
-  --OV.remove_unlock("bob-alloy-processing", "bob-stone-mixing-furnace-from-stone-furnace")
-  --OV.remove_unlock("bob-alloy-processing", "bob-stone-furnace-from-stone-mixing-furnace")
 
   -- Remove Stone chemical furnaces
   OV.global_replace_item("bob-stone-chemical-furnace", "stone-furnace")
   angelsmods.functions.hide("bob-stone-chemical-furnace")
   angelsmods.functions.set_next_upgrade("assembling-machine", "bob-stone-chemical-furnace", nil)
   OV.disable_recipe("bob-stone-chemical-furnace")
-  OV.remove_unlock("bob-chemical-processing-1", "bob-stone-chemical-furnace")
-  --OV.remove_unlock("bob-chemical-processing-1", "bob-stone-chemical-furnace-from-stone-furnace")
-  --OV.remove_unlock("bob-chemical-processing-1", "bob-stone-furnace-from-stone-chemical-furnace")
 
   -- Remove (fluid) Steel chemical furnaces
   OV.global_replace_item("bob-steel-chemical-furnace", "steel-furnace")
@@ -104,7 +99,8 @@ if mods["bobplates"] then
   OV.disable_technology({ "bob-chemical-processing-1", "bob-chemical-processing-2" })
 
   -- Clean up prerequisites
+  OV.remove_prereq("angels-coal-processing", "bob-chemical-processing-1")
   OV.remove_prereq("steel-processing", "bob-chemical-processing-1")
-  OV.remove_prereq("bob-electronics", "bob-chemical-processing-1")
+  OV.remove_prereq("electronics", "bob-chemical-processing-1")
   OV.remove_prereq("bob-silicon-processing", "bob-chemical-processing-2")
 end

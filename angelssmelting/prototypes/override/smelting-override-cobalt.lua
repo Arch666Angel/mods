@@ -10,6 +10,13 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["cobalt"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["cobalt-ore"]
+    local bob_ore = data.raw.item["bob-cobalt-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
   angelsmods.functions.hide("bob-cobalt-ore")
 end
@@ -22,12 +29,10 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-cobalt-oxide", "bob-cobalt-oxide")
     angelsmods.functions.hide("solid-cobalt-oxide")
-    angelsmods.functions.move_item("bob-cobalt-oxide", "angels-cobalt", "e")
-    data.raw["item"]["bob-cobalt-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png"
-    data.raw["item"]["bob-cobalt-oxide"].icon_size = 32
+    OV.copy_item_properties("solid-cobalt-oxide", "bob-cobalt-oxide")
     OV.disable_recipe({ "bob-cobalt-oxide", "bob-cobalt-oxide-from-copper", "bob-cobalt-plate", "bob-cobalt-steel-alloy" })
-    OV.remove_prereq({ "bob-battery-2", "rtg" }, "bob-cobalt-processing") --based on the oxide not the plate
-    OV.add_prereq({ "bob-battery-2", "rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
+    OV.remove_prereq({ "bob-battery-2", "bob-rtg" }, "bob-cobalt-processing") --based on the oxide not the plate
+    OV.add_prereq({ "bob-battery-2", "bob-rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
   end
 
   if angelsmods.trigger.smelting_products["cobalt"].plate then
@@ -90,11 +95,9 @@ end
 if angelsmods.trigger.smelting_products["cobalt"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-cobalt", "cobalt-plate")
+    OV.global_replace_item("angels-plate-cobalt", "bob-cobalt-plate")
     angelsmods.functions.hide("angels-plate-cobalt")
-    angelsmods.functions.move_item("bob-cobalt-plate", "angels-cobalt-casting", "j")
-    data.raw["item"]["bob-cobalt-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt.png"
-    data.raw["item"]["bob-cobalt-plate"].icon_size = 32
+    OV.copy_item_properties("angels-plate-cobalt", "bob-cobalt-plate")
   end
 else
   angelsmods.functions.hide("angels-plate-cobalt")

@@ -44,18 +44,3 @@ data:extend({
     results = { { type = "item", name = "angels-bio-yield-module-3", amount = 1 } },
   },
 })
-
---[[if mods["boblibrary"] then -- function called no longer exists
-  for _, module_name in pairs({
-    "angels-bio-yield-module",
-    "angels-bio-yield-module-2",
-    "angels-bio-yield-module-3",
-    "angels-bio-yield-module-4",
-    "angels-bio-yield-module-5",
-    "angels-bio-yield-module-6",
-    "angels-bio-yield-module-7",
-    "angels-bio-yield-module-8",
-  }) do
-    bobmods.lib.module.exclude_productivity_module(module_name)
-  end
-end]]

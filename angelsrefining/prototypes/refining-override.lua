@@ -42,10 +42,10 @@ require("prototypes.override.refining-override-bobvehicleequipment")
 if mods["bobplates"] then
   --revamp override
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
-    angelsmods.functions.hide("brine")
-    OV.disable_recipe({ "brine-electrolysis" }) -- equivalent of angels recipe "water-saline-seperation"
-    OV.global_replace_item("brine", "water-saline")
-    OV.disable_recipe("brine")
+    angelsmods.functions.hide("bob-brine")
+    OV.disable_recipe({ "bob-brine-electrolysis" }) -- equivalent of angels recipe "water-saline-seperation"
+    OV.global_replace_item("bob-brine", "water-saline")
+    OV.disable_recipe("bob-brine")
   end
   --OVERRIDE BARRELING
   if data.raw["item-subgroup"]["bob-gas-bottle"] then
@@ -361,72 +361,6 @@ if data.raw.item["uraninite"] then
     data.raw.technology["advanced-ore-refining-3"].effects,
     { type = "unlock-recipe", recipe = "angelsore-crystal-mix-up2-processing" }
   )
-end
-
---OVERRIDE FOR NUCULAR
--- if data.raw.item["uranium-ore"] then
---TIER 2
--- data.raw["recipe"]["angelsore5-chunk-processing"].ingredients[1]={"angels-ore5-chunk", 7}
-
--- table.insert(data.raw["recipe"]["angelsore5-chunk-processing"].results,{type = "item", name = "uranium-ore", amount=1})
-
---TIER 3
--- data.raw["recipe"]["angelsore5-crystal-processing"].ingredients[1]={"angels-ore5-crystal", 9}
-
--- table.insert(data.raw["recipe"]["angelsore5-crystal-processing"].results,{type = "item", name = "uranium-ore", amount=1})
-
---TIER 4
--- data.raw["recipe"]["angelsore5-pure-processing"].ingredients[1]={"angels-ore5-pure", 10}
-
--- table.insert(data.raw["recipe"]["angelsore5-pure-processing"].results,{type = "item", name = "uranium-ore", amount=1})
-
--- data:extend({
--- {
--- type = "recipe",
--- name = "slag-processing-nuc",
--- category = "crystallizing",
--- subgroup = "slag-processing-1",
--- energy_required = 8,
--- enabled = false,
--- ingredients ={
--- {type="fluid", name="mineral-sludge", amount=50},
--- },
--- results=
--- {
--- {type="item", name="uranium-ore", amount=1, probability=0.8},
--- },
--- icon = "__angelsrefininggraphics__/graphics/icons/slag-processing-nuc.png",
--- order = "a-a [slag-processing-nuc]",
--- },
--- {
--- type = "recipe",
--- name = "angelsore-crystal-mix-nuc-processing",
--- category = "ore-sorting",
--- subgroup = "ore-sorting-advanced",
--- energy_required = 1.5,
--- enabled = false,
--- ingredients ={
--- {type="item", name="angels-ore3-crystal", amount=2},
--- {type="item", name="angels-ore4-crystal", amount=2},
--- {type="item", name="angels-ore5-crystal", amount=2},
--- {type="item", name="catalysator-brown", amount=1},
--- },
--- results=
--- {
--- {type="item", name="uranium-ore", amount=6},
--- },
--- icon = "__angelsrefininggraphics__/graphics/icons/angels-ore-mix-nuc-sorting.png",
--- order = "c-i-g[angelsore-crystal-mix-nuc-processing]",
--- },
--- })
--- table.insert(data.raw["technology"]["slag-processing-1"].effects,{type = "unlock-recipe", recipe = "slag-processing-nuc"})
--- table.insert(data.raw["technology"]["advanced-ore-refining-3"].effects,{type = "unlock-recipe", recipe = "angelsore-crystal-mix-nuc-processing"})
--- end
-
---OVERRIDE FOR THORIUM POWER
-if data.raw.item["thorium-ore"] then
-  -- pure sorting
-  OV.modify_output("angelsore2-pure-processing", { "thorium-ore", "platinum-ore" })
 end
 
 --ENABLE PRODUCTIVITY

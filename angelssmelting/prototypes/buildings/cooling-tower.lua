@@ -22,7 +22,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -3.0 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 1.5,
     crafting_categories = { "cooling" },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
@@ -56,7 +56,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        volume = 100,
+        volume = 1000,
         pipe_connections = {
           { flow_direction = "output", position = { -1, 1 }, direction = defines.direction.south },
         },
@@ -64,7 +64,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        volume = 100,
+        volume = 1000,
         pipe_connections = { { flow_direction = "output", position = { 1, 1 }, direction = defines.direction.south } },
       },
     },

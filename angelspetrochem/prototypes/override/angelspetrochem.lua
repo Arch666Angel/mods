@@ -1,5 +1,6 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
+local get_ore_name = angelsmods.functions.get_ore_name
 
 -------------------------------------------------------------------------------
 -- WATER ENRICHMENT -----------------------------------------------------------
@@ -19,65 +20,37 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
   OV.disable_technology("bob-deuterium-processing")
   OV.add_prereq("water-chemistry-2", "nuclear-fuel-reprocessing")
 
+  if mods["bobequipment"] then
+    OV.patch_recipes({
+      {
+        name = "fission-reactor-equipment",
+        ingredients = {
+          { type = "fluid", name = "liquid-water-semiheavy-3", amount = "liquid-water-heavy", maximum_temperature = 30 },
+        },
+      },
+    })
+  end
+  if mods["bobvehicleequipment"] then
+    OV.patch_recipes({
+      {
+        name = "bob-vehicle-fission-cell-equipment-2",
+        ingredients = {
+          { type = "fluid", name = "liquid-water-semiheavy-3", amount = "liquid-water-heavy", maximum_temperature = 30 },
+        },
+      },
+      {
+        name = "bob-vehicle-fission-reactor-equipment-2",
+        ingredients = {
+          { type = "fluid", name = "liquid-water-semiheavy-3", amount = "liquid-water-heavy", maximum_temperature = 30 },
+        },
+      },
+    })
+  end
+  
   if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then
     -- deuterium-fuel-cell will be unlocked by bob-nuclear-power-3
   else
     OV.add_unlock("water-chemistry-2", "bob-deuterium-fuel-cell")
-  end
-
-  if mods["bobvehicleequipment"] then
-    -- In Angel's mods Heavy water becomes available way later then in Bob's
-
-    OV.remove_prereq("bob-vehicle-fission-reactor-equipment-2", "water-chemistry-1")
-    OV.remove_prereq("bob-vehicle-fission-cell-equipment-2", "water-chemistry-1")
-
-    OV.add_prereq("bob-vehicle-fission-reactor-equipment-4", "water-chemistry-2")
-    OV.add_prereq("bob-vehicle-fission-cell-equipment-4", "water-chemistry-2")
-    OV.add_prereq("bob-fission-reactor-equipment-3", "water-chemistry-2")
-    OV.patch_recipes({
-        {
-          name = "bob-vehicle-fission-reactor-equipment-2",
-          category = "crafting",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 0 },
-          },
-        },
-        {
-          name = "bob-vehicle-fission-cell-equipment-2",
-          category = "crafting",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 0 },
-          },
-        },
-        {
-          name = "fission-reactor-equipment",
-          category = "crafting",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 0 },
-          },
-        },
-        {
-          name = "bob-vehicle-fission-reactor-equipment-4",
-          category = "crafting-with-fluid",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 50 },
-          },
-        },
-        {
-          name = "bob-vehicle-fission-cell-equipment-4",
-          category = "crafting-with-fluid",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 25 },
-          },
-        },
-        {
-          name = "fission-reactor-equipment-3",
-          category = "crafting-with-fluid",
-          ingredients = {
-            { type = "fluid", name = "liquid-water-heavy", amount = 50 },
-          },
-        },
-    })
   end
 
   OV.set_science_pack("bob-deuterium-fuel-reprocessing", "utility-science-pack", 1)
@@ -132,29 +105,29 @@ if angelsmods.trigger.ores["platinum"] then
     {
       name = "catalyst-metal-red",
       ingredients = {
-        { type = "item", name = "iron-ore", amount = 1 },
-        { type = "item", name = "copper-ore", amount = 1 },
+        { type = "item", name = get_ore_name("iron-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("copper-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-green",
       ingredients = {
-        { type = "item", name = "bob-bauxite-ore", amount = 1 },
-        { type = "item", name = "bob-silver-ore", amount = 1 },
+        { type = "item", name = get_ore_name("bauxite-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("silver-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-blue",
       ingredients = {
-        { type = "item", name = "bob-rutile-ore", amount = 1 },
-        { type = "item", name = "bob-gold-ore", amount = 1 },
+        { type = "item", name = get_ore_name("rutile-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("gold-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-yellow",
       ingredients = {
-        { type = "item", name = "bob-tungsten-ore", amount = 1 },
-        { type = "item", name = "bob-platinum-ore", amount = 1 },
+        { type = "item", name = get_ore_name("tungsten-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("platinum-ore"), amount = 1 },
       },
     },
   })
@@ -164,29 +137,29 @@ elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.over
     {
       name = "catalyst-metal-red",
       ingredients = {
-        { type = "item", name = "iron-ore", amount = 1 },
-        { type = "item", name = "copper-ore", amount = 1 },
+        { type = "item", name = get_ore_name("iron-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("copper-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-green",
       ingredients = {
-        { type = "item", name = "bob-bauxite-ore", amount = 1 },
-        { type = "item", name = "bob-silver-ore", amount = 1 },
+        { type = "item", name = get_ore_name("bauxite-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("silver-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-blue",
       ingredients = {
-        { type = "item", name = "bob-rutile-ore", amount = 1 },
-        { type = "item", name = "bob-cobalt-ore", amount = 1 },
+        { type = "item", name = get_ore_name("rutile-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("cobalt-ore"), amount = 1 },
       },
     },
     {
       name = "catalyst-metal-yellow",
       ingredients = {
-        { type = "item", name = "bob-tungsten-ore", amount = 1 },
-        { type = "item", name = "bob-nickel-ore", amount = 1 },
+        { type = "item", name = get_ore_name("tungsten-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("nickel-ore"), amount = 1 },
       },
     },
   })
@@ -308,7 +281,7 @@ else
   })
   OV.disable_technology({
     "rubbers",
-    "bob-rubber",
+    "rubber",
   })
 end
 

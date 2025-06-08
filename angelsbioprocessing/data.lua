@@ -11,7 +11,7 @@ angelsmods.trigger.lab_ignore_token["lab-alien"] = true
 angelsmods.trigger.lab_ignore_token["lab-module"] = true
 --ARTIFACTS
 angelsmods.trigger.artifacts = angelsmods.trigger.artifacts or {}
-if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
+if bobmods and bobmods.enemies and data.raw.item["small-alien-artifact-blue"] then
   angelsmods.trigger.artifacts["red"] = true
   angelsmods.trigger.artifacts["yellow"] = true
   angelsmods.trigger.artifacts["orange"] = true

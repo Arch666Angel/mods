@@ -3,7 +3,6 @@ data:extend({
   {
     type = "recipe",
     name = "separator",
-    localised_name = { "item-name.separator" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -14,7 +13,6 @@ data:extend({
   {
     type = "recipe",
     name = "separator-2",
-    localised_name = { "item-name.separator-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -25,7 +23,6 @@ data:extend({
   {
     type = "recipe",
     name = "separator-3",
-    localised_name = { "item-name.separator-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -36,7 +33,6 @@ data:extend({
   {
     type = "recipe",
     name = "separator-4",
-    localised_name = { "item-name.separator-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -48,7 +44,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-small",
-    localised_name = { "item-name.gas-refinery-small" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -59,7 +54,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-small-2",
-    localised_name = { "item-name.gas-refinery-small-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -70,7 +64,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-small-3",
-    localised_name = { "item-name.gas-refinery-small-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -81,7 +74,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-small-4",
-    localised_name = { "item-name.gas-refinery-small-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -93,7 +85,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery",
-    localised_name = { "item-name.gas-refinery" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -104,7 +95,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-2",
-    localised_name = { "item-name.gas-refinery-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -115,7 +105,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-3",
-    localised_name = { "item-name.gas-refinery-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -126,7 +115,6 @@ data:extend({
   {
     type = "recipe",
     name = "gas-refinery-4",
-    localised_name = { "item-name.gas-refinery-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -138,7 +126,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-2",
-    localised_name = { "item-name.oil-refinery-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -149,7 +136,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-3",
-    localised_name = { "item-name.oil-refinery-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -160,7 +146,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-4",
-    localised_name = { "item-name.oil-refinery-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -172,7 +157,6 @@ data:extend({
   {
     type = "recipe",
     name = "steam-cracker",
-    localised_name = { "item-name.steam-cracker" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -183,7 +167,6 @@ data:extend({
   {
     type = "recipe",
     name = "steam-cracker-2",
-    localised_name = { "item-name.steam-cracker-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -194,7 +177,6 @@ data:extend({
   {
     type = "recipe",
     name = "steam-cracker-3",
-    localised_name = { "item-name.steam-cracker-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -205,7 +187,6 @@ data:extend({
   {
     type = "recipe",
     name = "steam-cracker-4",
-    localised_name = { "item-name.steam-cracker-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -217,7 +198,6 @@ data:extend({
   {
     type = "recipe",
     name = "advanced-chemical-plant",
-    localised_name = { "item-name.advanced-chemical-plant" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -228,7 +208,6 @@ data:extend({
   {
     type = "recipe",
     name = "advanced-chemical-plant-2",
-    localised_name = { "item-name.advanced-chemical-plant-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -240,7 +219,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-flare-stack",
-    localised_name = { "item-name.angels-flare-stack" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -252,7 +230,6 @@ data:extend({
   {
     type = "recipe",
     name = "valve-converter",
-    localised_name = { "item-name.valve-converter" },
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -264,7 +241,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-storage-tank-1",
-    localised_name = { "item-name.angels-storage-tank-1" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -275,7 +251,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-storage-tank-2",
-    localised_name = { "item-name.angels-storage-tank-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -286,7 +261,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-storage-tank-3",
-    localised_name = { "item-name.angels-storage-tank-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -322,7 +296,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electrolyser",
-    localised_name = { "item-name.angels-electrolyser" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -333,7 +306,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electrolyser-2",
-    localised_name = { "item-name.angels-electrolyser-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -344,7 +316,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electrolyser-3",
-    localised_name = { "item-name.angels-electrolyser-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -355,7 +326,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electrolyser-4",
-    localised_name = { "item-name.angels-electrolyser-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -368,7 +338,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-air-filter",
-    localised_name = { "item-name.angels-air-filter" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -379,7 +348,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-air-filter-2",
-    localised_name = { "item-name.angels-air-filter-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -390,7 +358,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-air-filter-3",
-    localised_name = { "entity-name.angels-air-filter-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -402,7 +369,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-2",
-    localised_name = { "item-name.oil-refinery-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -413,7 +379,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-3",
-    localised_name = { "item-name.oil-refinery-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -424,7 +389,6 @@ data:extend({
   {
     type = "recipe",
     name = "oil-refinery-4",
-    localised_name = { "item-name.oil-refinery-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -436,7 +400,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-chemical-plant",
-    localised_name = { "entity-name.angels-chemical-plant" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -447,7 +410,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-chemical-plant-2",
-    localised_name = { "entity-name.angels-chemical-plant-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -458,7 +420,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-chemical-plant-3",
-    localised_name = { "entity-name.angels-chemical-plant-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -469,7 +430,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-chemical-plant-4",
-    localised_name = { "entity-name.angels-chemical-plant-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -481,7 +441,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electric-boiler",
-    localised_name = { "entity-name.angels-electric-boiler" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -492,7 +451,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electric-boiler-2",
-    localised_name = { "entity-name.angels-electric-boiler-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -503,7 +461,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-electric-boiler-3",
-    localised_name = { "entity-name.angels-electric-boiler-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {

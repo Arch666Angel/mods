@@ -125,7 +125,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "military-science-pack",
-      -- "angels-alien-artifact", TODO where is this defined?
+      "angels-alien-artifact", --TODO where is this defined? [angelsbioprocessing\prototypes\technology\bio-processing-artifacts.lua]
     },
     effects = {
       {

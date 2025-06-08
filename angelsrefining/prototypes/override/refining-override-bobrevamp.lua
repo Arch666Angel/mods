@@ -9,6 +9,7 @@ if mods["bobrevamp"] then
       OV.global_replace_item("bob-limestone", "solid-limestone")
       angelsmods.functions.hide("bob-limestone")
       OV.disable_recipe({ "bob-limestone" })
+      OV.add_prereq("concrete", "angels-stone-smelting-1")
     else
       if limestone then
         data.raw.item["bob-limestone"].icon = nil

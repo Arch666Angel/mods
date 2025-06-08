@@ -1,4 +1,4 @@
-if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
+--if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
   -- Only load artifacts if bobs is enabled (causes startup halt without this)
   data:extend({
     -------------------------------------------------------------------------------
@@ -6,7 +6,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-red-tool",
+      name = "alien-artifact-red-tool",
       localised_name = { "item-name.small-alien-artifact-red" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-red-small.png",
@@ -28,19 +28,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact-yellow",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-red",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-red-from-small",
-        },
+          recipe = "bob-alien-artifact-red-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-red-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-red-tool", 1 },
         },
         time = 30,
       },
@@ -50,7 +50,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-yellow-tool",
+      name = "alien-artifact-yellow-tool",
       localised_name = { "item-name.small-alien-artifact-yellow" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-yellow-small.png",
@@ -72,19 +72,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact-orange",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-yellow",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-yellow-from-small",
-        },
+          recipe = "bob-alien-artifact-yellow-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-yellow-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-yellow-tool", 1 },
         },
         time = 30,
       },
@@ -94,7 +94,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-orange-tool",
+      name = "alien-artifact-orange-tool",
       localised_name = { "item-name.small-alien-artifact-orange" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-orange-small.png",
@@ -115,19 +115,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-orange",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-orange-from-small",
-        },
+          recipe = "bob-alien-artifact-orange-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-orange-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-orange-tool", 1 },
         },
         time = 30,
       },
@@ -137,7 +137,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-blue-tool",
+      name = "alien-artifact-blue-tool",
       localised_name = { "item-name.small-alien-artifact-blue" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue-small.png",
@@ -158,19 +158,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-blue",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-blue-from-small",
-        },
+          recipe = "bob-alien-artifact-blue-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-blue-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-blue-tool", 1 },
         },
         time = 30,
       },
@@ -180,7 +180,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-purple-tool",
+      name = "alien-artifact-purple-tool",
       localised_name = { "item-name.small-alien-artifact-purple" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-purple-small.png",
@@ -202,19 +202,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact-orange",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-purple",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-purple-from-small",
-        },
+          recipe = "bob-alien-artifact-purple-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-purple-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-purple-tool", 1 },
         },
         time = 30,
       },
@@ -224,7 +224,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-green-tool",
+      name = "alien-artifact-green-tool",
       localised_name = { "item-name.small-alien-artifact-green" },
       localised_description = { "item-description.alien-artifact-tool" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-green-small.png",
@@ -246,19 +246,19 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
         "angels-alien-artifact-yellow",
       },
       effects = {
-        {
+        --[[{
           type = "unlock-recipe",
           recipe = "bob-alien-artifact-green",
         },
         {
           type = "unlock-recipe",
-          recipe = "bob-alien-artifact-green-from-small",
-        },
+          recipe = "bob-alien-artifact-green-from-basic",
+        },]]
       },
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --{ "bob-alien-artifact-green-tool", 1 },
+          { "chemical-science-pack", 1 }, --{ "alien-artifact-green-tool", 1 },
         },
         time = 30,
       },
@@ -268,7 +268,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
     -------------------------------------------------------------------------------
     {
       type = "tool",
-      name = "bob-alien-artifact-tool",
+      name = "alien-artifact-tool",
       localised_name = { "item-name.small-alien-artifact" },
       icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-small.png",
       icon_size = 32,
@@ -286,7 +286,7 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       order = "c-a",
       prerequisites = {},
       effects = {
-        --[[{
+       --[[{
           type = "unlock-recipe",
           recipe = "alien-artifact-from-small",
         },]]
@@ -294,10 +294,10 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
       unit = {
         count = 50,
         ingredients = {
-          { "chemical-science-pack", 1 }, --bob-alien-artifact-tool not recognised in lab
+          { "chemical-science-pack", 1 }, --alien-artifact-tool not recognised in lab
         },
         time = 30,
       },
     },
   })
-end
+--end

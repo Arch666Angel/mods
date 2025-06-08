@@ -11,7 +11,6 @@ data:extend({
     layer = 60,
     decorative_removal_probability = 0.75,
     variants = {
-      transition = table.deepcopy(data.raw.tile["concrete"].variants.transition),
       main = {
         {
           picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-small.png",
@@ -19,44 +18,34 @@ data:extend({
           scale = 0.5,
           size = 1,
         },
-        -- {
-        -- picture = "__base__/graphics/terrain/stone-path/stone-path-2.png",
-        -- count = 4,
-        -- size = 2,
-        -- probability = 0.39,
-        -- },
-        -- {
-        -- picture = "__base__/graphics/terrain/stone-path/stone-path-4.png",
-        -- count = 4,
-        -- size = 4,
-        -- probability = 1,
-        -- },
       },
-      inner_corner = {
-        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-inner.png",
-        scale = 0.5,
-        count = 8,
+      transition = {
+        overlay_layout = {
+          inner_corner = {
+            spritesheet = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-inner.png",
+            count = 8,
+            scale = 0.5,
+          },
+          outer_corner = {
+            spritesheet = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-outer.png",
+            count = 1,
+            scale = 0.5,
+          },
+          side = {
+            spritesheet = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-side.png",
+            count = 8,
+            scale = 0.5,
+          },
+          -- u_transition = {
+          --   spritesheet = "__base__/graphics/terrain/stone-path/stone-path-u.png",
+          --   count = 10,
+          -- },
+          -- o_transition = {
+          --   spritesheet = "__base__/graphics/terrain/stone-path/stone-path-o.png",
+          --   count = 10,
+          -- },
+        },
       },
-      outer_corner = {
-        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-outer.png",
-        scale = 0.5,
-        count = 1,
-      },
-      side = {
-        picture = "__angelssmeltinggraphics__/graphics/entity/tiles/clay-bricks-side.png",
-        scale = 0.5,
-        count = 8,
-      },
-      -- u_transition =
-      -- {
-      -- picture = "__base__/graphics/terrain/stone-path/stone-path-u.png",
-      -- count = 10
-      -- },
-      -- o_transition =
-      -- {
-      -- picture = "__base__/graphics/terrain/stone-path/stone-path-o.png",
-      -- count = 10
-      -- }
     },
     walking_sound = {
       {

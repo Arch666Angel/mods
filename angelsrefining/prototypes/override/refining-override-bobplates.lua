@@ -134,7 +134,6 @@ if mods["bobplates"] then
   else
     OV.add_prereq("bob-thorium-processing", "ore-electro-whinning-cell")
     OV.set_science_pack("bob-thorium-processing", "production-science-pack", 1)
-    move_item("bob-thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
 
@@ -156,7 +155,6 @@ if mods["bobplates"] then
   OV.set_science_pack("bob-tungsten-processing", "production-science-pack", 1)
   OV.add_prereq("bob-chemical-processing-2", "ore-crushing")
   if mods["bobwarfare"] then
-    OV.set_science_pack("bob-rocket", "production-science-pack", 1)
     if
       not settings.startup["bobmods-enemies-enableartifacts"]
       or settings.startup["bobmods-enemies-enableartifacts"].value == false
@@ -189,6 +187,47 @@ end
 -- SMELTING -------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
+  OV.patch_recipes({
+    {
+      name = "angelsore1-crushed-smelting",
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angelsore3-crushed-smelting",
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angelsore5-crushed-smelting",
+      localised_name = { "item-name.bob-lead-plate" },
+      results = {
+        { "!!" },
+        { type = "item", name = "bob-lead-plate", amount = 1 },
+      },
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("bob-lead-plate"),
+        angelsmods.functions.get_object_icons("angels-ore5-crushed"),
+        { -10, -10 },
+        0.4375
+      ),
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angelsore6-crushed-smelting",
+      localised_name = { "item-name.bob-tin-plate" },
+      results = {
+        { "!!" },
+        { type = "item", name = "bob-tin-plate", amount = 1 },
+      },
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("bob-tin-plate"),
+        angelsmods.functions.get_object_icons("angels-ore6-crushed"),
+        { -10, -10 },
+        0.4375
+      ),
+      subgroup = "bob-material-smelting",
+    },
+  })
+
   OV.add_unlock("ore-crushing", "bob-tin-plate")
   OV.add_unlock("ore-crushing", "bob-lead-plate")
   OV.add_unlock("ore-crushing", "bob-glass")

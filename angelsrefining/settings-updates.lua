@@ -1,16 +1,12 @@
 -- EXECUTE OVERRIDES
 if mods["boblibrary"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-library-recipe-cleanup", true)
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-library-technology-cleanup", true)
 end
 
 if mods["bobplates"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-groundwater")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-vanillabarrelling")
-
-  if mods["angelspetrochem"] then
-    angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-purewater")
-  end
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-purewater", true)
 
   if mods["angelsindustries"] then
     angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-bluedeuterium")
@@ -33,8 +29,10 @@ if mods["bobores"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enabletinore")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enabletungstenore")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enablezincore")
-  --angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enablewaterores")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enablethoriumore")
+
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-enablewaterores")
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-startinggroundwater")
 
   angelsmods.settings.hide_setting("bool-setting", "bobmods-ores-leadgivesnickel")
   angelsmods.settings.hide_setting("double-setting", "bobmods-ores-leadnickelratio")

@@ -58,6 +58,7 @@ data:extend({
       {
         icon = "__base__/graphics/item-group/intermediate-products.png",
         icon_size = 128,
+        scale = 0.5,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",

@@ -1,3 +1,36 @@
+local function angels_chemical_furnace_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -34,7 +67,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.25 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.75,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "chemical-smelting" },
@@ -128,36 +161,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_chemical_furnace_fluid_boxes(),
   },
   {
     type = "item",
@@ -194,7 +198,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.25 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.75,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "chemical-smelting", "chemical-smelting-2" },
@@ -288,36 +292,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_chemical_furnace_fluid_boxes(),
   },
   {
     type = "item",
@@ -354,7 +329,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.25 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.75,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3" },
@@ -448,36 +423,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_chemical_furnace_fluid_boxes(),
   },
   {
     type = "item",
@@ -513,7 +459,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.25 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.75,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3", "chemical-smelting-4" },
@@ -607,35 +553,6 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_chemical_furnace_fluid_boxes(),
   },
 })

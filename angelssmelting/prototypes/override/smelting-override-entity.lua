@@ -84,6 +84,8 @@ elseif not angelsmods.trigger.early_sintering_oven then
   end
   data.raw["assembling-machine"]["sintering-oven-4"].localised_name = { "entity-name.sintering-oven" }
   data.raw["assembling-machine"]["sintering-oven-5"].localised_name = { "entity-name.sintering-oven-2" }
+  data.raw.recipe["sintering-oven-4"].localised_name = { "entity-name.sintering-oven" }
+  data.raw.recipe["sintering-oven-5"].localised_name = { "entity-name.sintering-oven-2" }
 
   -- rename powder metallurgy techs
   data.raw.technology["powder-metallurgy-2"].localised_name = { "", { "technology-name.powder-metallurgy" }, " 1" }

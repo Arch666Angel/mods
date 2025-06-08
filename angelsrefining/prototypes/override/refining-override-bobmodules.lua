@@ -24,20 +24,20 @@ if mods["bobmodules"] then
         name = "bob-module-contact",
         ingredients = {
           { "!!" },
-          { name = "copper-plate", amount = 1 },
-          { name = "bob-silver-plate", amount = 1 },
+          { type = "item", name = "copper-plate", amount = 1 },
+          { type = "item", name = "bob-silver-plate", amount = 1 },
         },
       },
       {
         name = "bob-module-processor-board",
         ingredients = {
-          { name = "bob-silver-plate", amount = "bob-tin-plate" },
+          { type = "item", name = "bob-silver-plate", amount = "bob-tin-plate" },
         },
       },
       {
         name = "bob-module-processor-board-3",
         ingredients = {
-          { name = "angels-wire-platinum", amount = "bob-gold-plate" },
+          { type = "item", name = "angels-wire-platinum", amount = "bob-gold-plate" },
         },
       },
     })
@@ -47,14 +47,14 @@ if mods["bobmodules"] then
         name = "bob-module-contact",
         ingredients = {
           { "!!" },
-          { name = "copper-plate", amount = 1 },
-          { name = "bob-silver-plate", amount = 1 },
+          { type = "item", name = "copper-plate", amount = 1 },
+          { type = "item", name = "bob-silver-plate", amount = 1 },
         },
       },
       {
         name = "bob-module-processor-board-2",
         ingredients = {
-          { name = "bob-silver-plate", amount = "bob-gold-plate" },
+          { type = "item", name = "bob-silver-plate", amount = "bob-gold-plate" },
         },
       },
     })

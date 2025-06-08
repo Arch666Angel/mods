@@ -22,7 +22,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -4.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-refugium",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -81,20 +81,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -3 }, direction = defines.direction.north },
         },
       },
     },
@@ -124,7 +124,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
-    drawing_box = { { -2.5, -3.5 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 1,
     fast_replaceable_group = "bio-refugium",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -136,7 +136,6 @@ data:extend({
       emissions_per_minute = { pollution = -30 },
     },
     energy_usage = "150kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-puffer-off.png",
@@ -181,26 +180,26 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -208,7 +207,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
@@ -249,7 +248,6 @@ data:extend({
       emissions_per_minute = { pollution = -25 },
     },
     energy_usage = "150kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-biter-off.png",
@@ -258,7 +256,6 @@ data:extend({
         line_length = 1,
         frame_count = 1,
         shift = { 0, 0 },
-        --animation_speed = 0.5,
       },
       working_visualisations = {
         {
@@ -285,13 +282,13 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -3.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -3 }, direction = defines.direction.north } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 3 }, direction = defines.direction.south } },
       },
     },
   },
@@ -320,7 +317,6 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    --drawing_box = {{-2.5, -3}, {2.5, 2.5}},
     fast_replaceable_group = "bio-refugium",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -332,7 +328,6 @@ data:extend({
       emissions_per_minute = { pollution = -0.02 * 60 },
     },
     energy_usage = "150kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/7x7.png",
@@ -365,8 +360,12 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 3 }, direction = defines.direction.south } },
       },
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("bio-refugium-fish")
+angelsmods.functions.allow_bio_productivity("bio-refugium-puffer")
+angelsmods.functions.allow_bio_productivity("bio-refugium-biter")

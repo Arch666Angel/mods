@@ -40,7 +40,6 @@ funcs.generate_train_entities({
   dying_explosion = "medium-explosion",
   collision_box = { { -0.6, -2.6 }, { 0.6, 2.6 } },
   selection_box = { { -1, -3 }, { 1, 3 } },
-  drawing_box = { { -1, -4 }, { 1, 3 } },
   color = tintable_tint,
   allow_manual_color = true,
   weight = 3000,
@@ -287,5 +286,4 @@ funcs.generate_train_entities({
   },
   open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 },
   close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-  sound_minimum_speed = 0.5,
 })

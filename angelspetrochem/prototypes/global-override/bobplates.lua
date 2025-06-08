@@ -98,16 +98,11 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- generic replace items ----------------------------------------------------
-  OV.global_replace_item("bob-carbon", "solid-carbon")
-  angelsmods.functions.hide("bob-carbon")
-  OV.remove_unlock("bob-chemical-processing-1", "carbon")
-  OV.add_prereq("bob-lead-processing", "angels-coal-processing")
-  OV.add_prereq("bob-silicon-processing", "angels-coal-processing")
 
   -- lithium processing -------------------------------------------------------
   OV.patch_recipes({
     {
-      name = "lithium-water-electrolysis",
+      name = "bob-lithium-water-electrolysis",
       results = {
         { name = "gas-hydrogen", type = "fluid", amount = 20 },
       },
@@ -118,7 +113,6 @@ if mods["bobplates"] then
   OV.converter_fluid("bob-oxygen", "gas-oxygen")
   OV.converter_fluid("bob-hydrogen", "gas-hydrogen")
   OV.disable_recipe({ "bob-water-electrolysis", "bob-solid-fuel-from-hydrogen" })
-  --OV.remove_unlock("chemical-processing-2", "solid-fuel-from-hydrogen")
   OV.add_prereq("bob-chemical-processing-1", "basic-chemistry")
 
   -- chloride processing ------------------------------------------------------
@@ -143,6 +137,7 @@ if mods["bobplates"] then
   -- sodium processing --------------------------------------------------------
   OV.global_replace_item("bob-sodium-hydroxide", "solid-sodium-hydroxide")
   angelsmods.functions.hide("bob-sodium-hydroxide")
+  OV.disable_recipe('bob-sodium-hydroxide-sink')
 
   -- nitrogen processing ------------------------------------------------------
   OV.converter_fluid("bob-liquid-air", "gas-compressed-air")
@@ -171,12 +166,13 @@ if mods["bobplates"] then
   move_item("bob-enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({ { name = "bob-enriched-fuel", subgroup = "petrochem-fuel", order = "g" } })
   OV.disable_technology({ "oil-processing-2", "oil-processing-3", "oil-processing-4" })
+
   --hide disabled
   OV.hide_recipe({
     "bob-oil-processing",
     "bob-hydrogen-sulfide",
     "bob-sulfur-dioxide",
-    "coal-cracking",
+    "bob-coal-cracking",
     "bob-hydrogen-chloride",
     "bob-petroleum-gas-cracking",
     "bob-nitric-acid",
@@ -207,7 +203,7 @@ if mods["bobplates"] then
 elseif mods["bobelectronics"] then
   --hide disabled
   OV.hide_recipe({
-    "coal-cracking",
+    "bob-coal-cracking",
     "bob-resin-oil",
   })
 end
@@ -231,7 +227,4 @@ end
 if mods["bobplates"] then
   -- chemical processing tech patch -------------------------------------------
   OV.add_prereq("bob-chemical-processing-2", "logistic-science-pack")
-
-  OV.remove_unlock('sulfur-processing', 'bob-sodium-hydroxide-sink')
-  OV.add_unlock('sodium-processing-1', 'bob-sodium-hydroxide-sink')
 end

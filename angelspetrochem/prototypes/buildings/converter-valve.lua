@@ -42,7 +42,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { 0, -0.25 }, direction = defines.direction.north },
+          { flow_direction = "input", position = { 0, -0 }, direction = defines.direction.north },
         },
       },
       {
@@ -50,7 +50,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 0.25 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { 0, 0 }, direction = defines.direction.south },
         },
       },
     },

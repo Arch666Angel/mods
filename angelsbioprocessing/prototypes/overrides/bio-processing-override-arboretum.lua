@@ -1,9 +1,9 @@
 local OV = angelsmods.functions.OV
 
 if angelsmods.trigger.bio_rubber then
-  OV.remove_prereq("rubbers", "bob-rubber")
+  OV.remove_prereq("rubbers", "rubber")
   OV.add_prereq("rubbers", "automation-2")
-  OV.add_prereq("bob-rubber", "rubbers")
+  OV.add_prereq("rubber", "rubbers")
   OV.remove_science_pack("rubbers", "chemical-science-pack")
 else
   OV.disable_recipe({

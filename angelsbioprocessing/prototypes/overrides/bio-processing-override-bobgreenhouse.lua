@@ -14,8 +14,14 @@ if mods["bobgreenhouse"] then
   OV.global_replace_item("bob-fertiliser", "solid-fertilizer")
   angelsmods.functions.hide("bob-fertiliser")
 
-  data.raw.recipe["bob-fertiliser"].subgroup = "bio-wood"
-  data.raw.recipe["bob-fertiliser"].order = "a[support]-cb"
+  OV.patch_recipes({
+    {
+      name = "bob-fertiliser",
+      localised_name = { "item-name.solid-fertilizer" },
+      subgroup = "bio-wood",
+      order = "a[support]-cb",
+    },
+  })
 
   OV.add_prereq("bob-fertiliser", "bio-farm-2")
 

@@ -235,8 +235,6 @@ ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq 
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
     if type(prereq) == "table" then
       for pr, req in pairs(prereq) do
         modify_table.technologies[technology].prereqs[req] = true
@@ -360,6 +358,18 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
   end
 end
 
+ov_functions.copy_item_properties = function(from, to)
+  local from_item = data.raw.item[from]
+  local to_item = data.raw.item[to]
+  to_item.localised_name = { "item-name."..from_item.name }
+  to_item.icon = from_item.icon
+  to_item.icon_size = from_item.icon_size
+  to_item.icons = from_item.icons
+  to_item.pictures = from_item.pictures
+  to_item.subgroup = from_item.subgroup
+  to_item.order = from_item.order
+end
+
 ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   local new_fluid = data.raw.fluid[new_fluid_name]
   local old_fluid = data.raw.fluid[old_fluid_name]
@@ -403,10 +413,12 @@ ov_functions.hide_recipe = function(recipe) -- hides recipe (may be a table cont
     for _, rec in pairs(recipe) do
       guarantee_subtable(patch_table, rec)
       patch_table[rec].hidden = true
+      patch_table[rec].localised_name = { "item-name.angels-void" }
     end
   else
     guarantee_subtable(patch_table, recipe)
     patch_table[recipe].hidden = true
+    patch_table[recipe].localised_name = { "item-name.angels-void" }
   end
 end
 
@@ -446,7 +458,7 @@ end
 ov_functions.set_science_pack = function(technology, pack, amount)
   -- adds science packs of type pack to technology (both may be tables), may optionally take an amount of science packs (or a table if packs is a table) to set to (default 1)
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do
+    for _, tech in pairs(technology) do
       ov_functions.set_science_pack(tech, pack, amount)
     end
   elseif type(pack) == "table" then
@@ -525,7 +537,7 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
     },
   }
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
+    for _, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
       ov_functions.set_research_difficulty(tech, unit_time, unit_amount,trigger)
     end
   else
@@ -689,7 +701,7 @@ end
 -------------------------------------------------------------------------------
 -- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------
 -------------------------------------------------------------------------------
-local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
+local function adjust_recipe(recipe) -- check a recipe for basic adjustments based on tables and make any necessary changes
   local function adjust_member(parent, member, substitution_type)
     local old = parent[member]
     if old then
@@ -710,6 +722,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
           item.amount = item[2]
           item[1] = nil
           item[2] = nil
+          log("recipe "..parent.name.." "..subtable.." is still using the old format")
         end
         local new = substitution_table[substitution_type][item.name]
         if new then
@@ -909,8 +922,8 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
 end
 
 ov_functions.execute = function()
-  for k, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
-    adjust_recipe(recipe, k)
+  for _, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
+    adjust_recipe(recipe)
   end
   for name, patch in pairs(patch_table) do
     patch.name = name

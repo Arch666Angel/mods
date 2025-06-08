@@ -215,9 +215,7 @@ data:extend({
       { type = "fluid", name = "liquid-rubber", amount = 10 },
     },
     always_show_products = true,
-    icons = AF.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }, {
-      AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
-    }),
+    icons = AF.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }),
     crafting_machine_tint = AF.get_recipe_tints({ "liquid-rubber", "liquid-styrene", "gas-butadiene" }),
     order = "b[rubber]-a[liquid]",
   },

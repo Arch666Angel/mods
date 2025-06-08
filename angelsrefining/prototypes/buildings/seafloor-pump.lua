@@ -18,16 +18,16 @@ data:extend({
     icon = "__angelsrefininggraphics__/graphics/icons/seafloor-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
-    collision_mask = {layers={object=true, train=true, is_object=true, is_lower_object=true}},
+    collision_mask = { layers = { object = true, train = true, is_object = true, is_lower_object = true } },
     tile_buildability_rules =
     {
-      {area = {{-1.4, -1.4}, {1.4, 0.4}}, required_tiles = {layers = { ground_tile = true}}, colliding_tiles = { layers = { water_tile = true }}, remove_on_collision = true },
-      {area = {{-2, -3}, {2, -2}}, required_tiles = {layers={water_tile=true}}, colliding_tiles = {layers={}}},
+      { area = { { -1.4, -1.4 }, { 1.4, 0.4 } }, required_tiles = { layers = { ground_tile = true } }, colliding_tiles = { layers = { water_tile = true } }, remove_on_collision = true },
+      { area = { { -2, -3 }, { 2, -2 } }, required_tiles = { layers = { water_tile = true } }, colliding_tiles = { layers = {} } },
     },
     minable = { mining_time = 0.1, result = "seafloor-pump" },
     max_health = 150,
     corpse = "small-remnants",
-    fluid_source_offset = {0, -1},
+    fluid_source_offset = { 0, -1 },
     resistances = {
       {
         type = "fire",
@@ -36,7 +36,7 @@ data:extend({
       {
         type = "impact",
         percent = 30,
-      }
+      },
     },
     collision_box = { { -1.6, -2.05 }, { 1.6, 0.3 } },
     selection_box = { { -1.6, -2.49 }, { 1.6, 0.49 } },
@@ -55,7 +55,7 @@ data:extend({
       },
     },
     energy_source = {
-      type = "void"
+      type = "void",
     },
     energy_usage = "60kW",
     pumping_speed = 5,

@@ -29,7 +29,6 @@ data:extend({
     decorative_removal_probability = 1,
     absorptions_per_second = {pollution = pollution_absorption_per_second},
     variants = {
-      transition = table.deepcopy(data.raw.tile["concrete"].variants.transition),
       main = {
         {
           picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-small.png",
@@ -38,34 +37,34 @@ data:extend({
           size = 1,
         },
       },
-      inner_corner = {
-        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
-        width = 128,
-        height = 128,
-        scale = 0.5,
-        count = 1,
-      },
-      outer_corner = {
-        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
-        width = 128,
-        height = 128,
-        scale = 0.5,
-        count = 1,
-      },
-      side = {
-        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-side.png",
-        scale = 0.5,
-        count = 4,
-      },
-      u_transition = {
-        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-u.png",
-        scale = 0.5,
-        count = 1,
-      },
-      o_transition = {
-        picture = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-o.png",
-        scale = 0.5,
-        count = 1,
+      transition = {
+        overlay_layout = {
+          inner_corner = {
+            spritesheet = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-inner.png",
+            scale = 0.5,
+            count = 1,
+          },
+          outer_corner = {
+            spritesheet = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-outer.png",
+            scale = 0.5,
+            count = 1,
+          },
+          side = {
+            spritesheet = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-side.png",
+            scale = 0.5,
+            count = 4,
+          },
+          u_transition = {
+            spritesheet = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-u.png",
+            scale = 0.5,
+            count = 1,
+          },
+          o_transition = {
+            spritesheet = "__angelsbioprocessinggraphics__/graphics/entity/tile-bio/bio-tile-corner-o.png",
+            scale = 0.5,
+            count = 1,
+          },
+        },
       },
     },
     walking_sound = {
@@ -111,7 +110,6 @@ data:extend({
       },
     },
     map_color = { r = 50, g = 50, b = 50 },
-    --ageing = 0,
     vehicle_friction_modifier = 1.1,
   },
 })

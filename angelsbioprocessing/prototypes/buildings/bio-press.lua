@@ -32,7 +32,6 @@ data:extend({
       emissions_per_minute = { pollution = 0.03 * 60 },
     },
     energy_usage = "150kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-press/bio-press.png",
@@ -54,7 +53,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 0, 1.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south } },
       },
     },
   },

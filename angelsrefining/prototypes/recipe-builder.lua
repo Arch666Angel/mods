@@ -74,30 +74,24 @@ local function check_ingredients(ingredients)
   local i, l = 1, #ingredients
   while i <= l do
     local item = ingredients[i]
-    local i_type, i_name, i_count
-    if not item.name then
-      i_type = "item"
-      i_name = item[1]
-      i_count = item[2]
-    else
-      i_type = item.type or "item"
-      i_name = item.name
-      i_count = item.amount
-    end
-    local n, m = get_fallback(i_type, i_name)
-    i_name, i_count = n, math.ceil(i_count * m)
-    local j = ingredient_map[i_type][i_name]
-    if j then -- ingredient is already present, add to existing ingredient
-      ingredients[j].amount = ingredients[j].amount + i_count
-      table.remove(ingredients, i)
-      l = l - 1
-    elseif i_count == 0 then -- delete ingredient on fallback sentinel
-      table.remove(ingredients, i)
-      l = l - 1
-    else -- adjust ingredient for fallback
-      ingredients[i] = { type = i_type, name = i_name, amount = i_count }
-      ingredient_map[i_type][i_name] = i
-      i = i + 1
+    if item.type and item.name then
+      local i_name = item.name
+      local i_amount = item.amount
+      local n, m = get_fallback(item.type, i_name)
+      i_name, i_amount = n, math.ceil(i_amount * m)
+      local j = ingredient_map[item.type][i_name]
+      if j then -- ingredient is already present, add to existing ingredient
+        ingredients[j].amount = ingredients[j].amount + i_amount
+        table.remove(ingredients, i)
+        l = l - 1
+      elseif i_amount == 0 then -- delete ingredient on fallback sentinel
+        table.remove(ingredients, i)
+        l = l - 1
+      else -- adjust ingredient for fallback
+        ingredients[i] = { type = item.type, name = i_name, amount = i_amount, maximum_temperature = item.maximum_temperature, minimum_temperature = item.minimum_temperature }
+        ingredient_map[item.type][i_name] = i
+        i = i + 1
+      end
     end
   end
 end

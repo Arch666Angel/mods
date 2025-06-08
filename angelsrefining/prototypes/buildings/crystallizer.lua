@@ -40,12 +40,6 @@ local function angels_crystallizer_fluid_boxes()
       volume = 1000,
       pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
     },
-    -- {
-    -- production_type = "output",
-    -- pipe_covers = pipecoverspictures(),
-    -- volume = 100,
-    -- pipe_connections = {{ position = {0, -3} }}
-    -- },
   }
 end
 

@@ -17,6 +17,7 @@ data:extend({
       { type = "item", name = "temperate-1", amount_min = 40, amount_max = 60 },
     },
     always_show_products = true,
+    allow_productivity = true,
     main_product = "temperate-1",
     icon_size = 32,
     order = "aa",
@@ -42,6 +43,7 @@ data:extend({
     },
     always_show_products = true,
     main_product = "temperate-2",
+    allow_productivity = true,
     icon_size = 32,
     order = "ab",
     crafting_machine_tint = {
@@ -66,6 +68,7 @@ data:extend({
       { type = "item", name = "temperate-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-3",
+    allow_productivity = true,
     icon_size = 32,
     order = "ac",
     crafting_machine_tint = {
@@ -91,6 +94,7 @@ data:extend({
       { type = "item", name = "temperate-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-4",
+    allow_productivity = true,
     icon_size = 32,
     order = "ad",
     crafting_machine_tint = {
@@ -116,6 +120,7 @@ data:extend({
       { type = "item", name = "temperate-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "temperate-5",
+    allow_productivity = true,
     icon_size = 32,
     order = "ae",
     crafting_machine_tint = {
@@ -233,6 +238,7 @@ data:extend({
     },
     always_show_products = true,
     main_product = "desert-1",
+    allow_productivity = true,
     icon_size = 32,
     order = "aa",
     crafting_machine_tint = {
@@ -257,6 +263,7 @@ data:extend({
     },
     always_show_products = true,
     main_product = "desert-2",
+    allow_productivity = true,
     icon_size = 32,
     order = "ab",
     crafting_machine_tint = {
@@ -281,6 +288,7 @@ data:extend({
       { type = "item", name = "desert-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-3",
+    allow_productivity = true,
     icon_size = 32,
     order = "ac",
     crafting_machine_tint = {
@@ -306,6 +314,7 @@ data:extend({
       { type = "item", name = "desert-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-4",
+    allow_productivity = true,
     icon_size = 32,
     order = "ad",
     crafting_machine_tint = {
@@ -331,6 +340,7 @@ data:extend({
       { type = "item", name = "desert-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "desert-5",
+    allow_productivity = true,
     icon_size = 32,
     order = "ae",
     crafting_machine_tint = {
@@ -448,6 +458,7 @@ data:extend({
     },
     always_show_products = true,
     main_product = "swamp-1",
+    allow_productivity = true,
     icon_size = 32,
     order = "aa",
     crafting_machine_tint = {
@@ -472,6 +483,7 @@ data:extend({
     },
     always_show_products = true,
     main_product = "swamp-2",
+    allow_productivity = true,
     icon_size = 32,
     order = "ab",
     crafting_machine_tint = {
@@ -496,6 +508,7 @@ data:extend({
       { type = "item", name = "swamp-3-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-3",
+    allow_productivity = true,
     icon_size = 32,
     order = "ac",
     crafting_machine_tint = {
@@ -521,6 +534,7 @@ data:extend({
       { type = "item", name = "swamp-4-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-4",
+    allow_productivity = true,
     icon_size = 32,
     order = "ad",
     crafting_machine_tint = {
@@ -546,6 +560,7 @@ data:extend({
       { type = "item", name = "swamp-5-seed-dormant", amount = 5, ignored_by_productivity = 5 },
     },
     main_product = "swamp-5",
+    allow_productivity = true,
     icon_size = 32,
     order = "ae",
     crafting_machine_tint = {

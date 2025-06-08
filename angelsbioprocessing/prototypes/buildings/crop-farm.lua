@@ -32,7 +32,6 @@ data:extend({
       emissions_per_minute = { pollution = -40 },
     },
     energy_usage = "100kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -79,7 +78,7 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -2 }, direction = defines.direction.north } },
       },
     },
   },
@@ -116,7 +115,6 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -163,7 +161,7 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -2 }, direction = defines.direction.north } },
       },
     },
   },
@@ -200,7 +198,6 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -247,7 +244,7 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -2 }, direction = defines.direction.north } },
       },
     },
   },
@@ -284,7 +281,6 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -331,8 +327,13 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, -2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "input", position = { 0, -2 }, direction = defines.direction.north } },
       },
     },
   },
 })
+
+angelsmods.functions.allow_bio_productivity("crop-farm")
+angelsmods.functions.allow_bio_productivity("temperate-farm")
+angelsmods.functions.allow_bio_productivity("desert-farm")
+angelsmods.functions.allow_bio_productivity("swamp-farm")

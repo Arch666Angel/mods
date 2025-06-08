@@ -46,7 +46,6 @@ data:extend({
         cooldown = 30,
         range = 0,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",
@@ -79,7 +78,6 @@ data:extend({
         cooldown = 30,
         range = 0,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",
@@ -112,7 +110,6 @@ data:extend({
         cooldown = 30,
         range = 0,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",

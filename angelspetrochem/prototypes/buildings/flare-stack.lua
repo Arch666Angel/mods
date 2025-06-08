@@ -22,7 +22,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    drawing_box = { { -1, -5.25 }, { 1, 1 } },
+    drawing_box_vertical_extension = 4,
     crafting_categories = { "angels-chemical-void" },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },

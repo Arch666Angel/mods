@@ -31,7 +31,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.6,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -111,14 +111,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -126,7 +126,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -135,7 +135,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
@@ -172,7 +172,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.6,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -236,14 +236,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -251,7 +251,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -260,7 +260,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
@@ -297,7 +297,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.6,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -361,14 +361,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -376,7 +376,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -385,7 +385,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
@@ -421,7 +421,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
-    drawing_box = { { -2.5, -3.0 }, { 2.5, 2.5 } },
+    drawing_box_vertical_extension = 0.6,
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
@@ -485,14 +485,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -500,7 +500,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -509,7 +509,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },

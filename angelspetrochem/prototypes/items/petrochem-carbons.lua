@@ -333,10 +333,9 @@ data:extend({
       "(C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font])[font=default-tiny-bold]n[/font]",
     } or nil,
     icons = angelsmods.functions.create_liquid_fluid_icon(
-      { "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene_rotated.png", 72, { -10, 0 }, 32 / 72 },
+      { icon = "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene_rotated.png", icon_size = 72, shift = { -10, 0 }, scale = 32 / 72, floating = true },
       "CHH"
     ),
-    --icon_size = 32,
     subgroup = "petrochem-carbon-fluids",
     order = "ef",
     default_temperature = 0,

@@ -189,7 +189,6 @@ funcs.generate_train_entities({
     match_volume_to_activity = true,
   },
   crash_trigger = crash_trigger(),
-  sound_minimum_speed = 0.5,
   impact_category = "wood",
   equipment_grid = "angels-petro-tank1",
   fast_replaceable_group = "angels-petro-tank1",

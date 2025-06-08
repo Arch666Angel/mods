@@ -123,6 +123,7 @@ data:extend({
     results = {
       { type = "item", name = "solid-tree", amount = 4 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("solid-tree"),
       1,
@@ -150,6 +151,7 @@ data:extend({
     results = {
       { type = "item", name = "solid-tree", amount = 6 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("solid-tree"),
       2,
@@ -178,6 +180,7 @@ data:extend({
     results = {
       { type = "item", name = "solid-tree", amount = 8 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("solid-tree"),
       3,
@@ -433,6 +436,7 @@ data:extend({
       { type = "item", name = "temperate-tree", amount = 1, probability = 0.5 },
     },
     main_product = "temperate-tree",
+    allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
     icons = {
@@ -469,6 +473,7 @@ data:extend({
       { type = "item", name = "bio-resin", amount = 4 },
       { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("temperate-tree"),
       1,
@@ -496,6 +501,7 @@ data:extend({
       { type = "item", name = "bio-resin", amount = 7 },
       { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("temperate-tree"),
       2,
@@ -541,6 +547,7 @@ data:extend({
       { type = "fluid", name = "liquid-resin", amount = 10 },
     },
     main_product = "liquid-resin",
+    allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       "bio-resin",
@@ -569,6 +576,7 @@ data:extend({
       { type = "fluid", name = "liquid-resin", amount_min = 10, amount_max = 40 }, -- average 25 liquid resin / 40 wood
     },
     main_product = "liquid-resin",
+    allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
@@ -702,6 +710,7 @@ data:extend({
       { type = "item", name = "swamp-tree", amount = 1, probability = 0.5 },
     },
     main_product = "swamp-tree",
+    allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
     icons = {
@@ -738,6 +747,7 @@ data:extend({
       { type = "item", name = "bio-plastic", amount = 4 },
       { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("swamp-tree"),
       1,
@@ -765,6 +775,7 @@ data:extend({
       { type = "item", name = "bio-plastic", amount = 7 },
       { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("swamp-tree"),
       2,
@@ -810,6 +821,7 @@ data:extend({
       { type = "fluid", name = "liquid-plastic", amount = 10 },
     },
     main_product = "liquid-plastic",
+    allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       "bio-plastic",
@@ -920,6 +932,7 @@ data:extend({
       { type = "item", name = "desert-tree", amount = 1, probability = 0.5 },
     },
     main_product = "desert-tree",
+    allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
     icons = {
@@ -956,6 +969,7 @@ data:extend({
       { type = "item", name = "bio-rubber", amount = 4 },
       { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("desert-tree"),
       1,
@@ -983,6 +997,7 @@ data:extend({
       { type = "item", name = "bio-rubber", amount = 7 },
       { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
+    allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("desert-tree"),
       2,
@@ -1028,6 +1043,7 @@ data:extend({
       { type = "fluid", name = "liquid-rubber", amount = 10 },
     },
     main_product = "liquid-rubber",
+    allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }, {
       "bio-rubber",

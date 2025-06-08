@@ -3,7 +3,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore1-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -17,7 +16,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -28,7 +27,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore2-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -42,7 +40,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -53,7 +51,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore3-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -70,7 +67,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -81,7 +78,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore4-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -95,7 +91,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -106,7 +102,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore5-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -120,7 +115,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -131,7 +126,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore6-pure-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -145,7 +139,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-pure.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-pure.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
