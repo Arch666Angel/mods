@@ -82,33 +82,6 @@ if angelsmods.trigger.smelting_products["silver"].plate then
     OV.global_replace_item("angels-plate-silver", "bob-silver-plate")
     angelsmods.functions.hide("angels-plate-silver")
     OV.copy_item_properties("angels-plate-silver", "bob-silver-plate")
-
-    OV.patch_recipes({
-      {
-        name = "bob-silver-plate",
-        energy_required = 10.5,
-        ingredients = {
-          { name = "bob-silver-ore", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "bob-silver-plate", type = "item", amount = "+2" },
-        },
-        icons = {
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/plate-silver.png",
-            icon_size = 32
-          },
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
-            scale = 0.4375,
-            shift = { -10, -10 },
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-silver-casting",
-        order = "m[angels-plate-silver]-a",
-      },
-    })
     OV.hide_recipe({ "bob-silver-plate" })
   end
 else

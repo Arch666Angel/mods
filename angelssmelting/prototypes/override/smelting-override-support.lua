@@ -27,6 +27,4 @@ if angelsmods.trigger.sintering_tech and mods["bobrevamp"] then
     },
   })
   OV.add_prereq("bob-heat-shield", "powder-metallurgy-4")
-else
-  OV.add_prereq("bob-heat-shield", "production-science-pack")
 end

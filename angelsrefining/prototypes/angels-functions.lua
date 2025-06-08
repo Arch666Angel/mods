@@ -1387,7 +1387,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
   end
   if type(flag_to_remove) == "table" then
     for _, f in pairs(flag_to_remove) do
-      angelsmods.functions.add_flag(entity, f)
+      angelsmods.functions.remove_flag(entity, f)
     end
     return
   end

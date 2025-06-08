@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 
 --ACID OVERRIDE FOR REFINING AND ORES
 for _, resource in pairs(data.raw.resource) do
-  if resource.minable and resource.minable.required_fluid = "sulfuric-acid" then
+  if resource.minable and (resource.minable.required_fluid == "sulfuric-acid") then
     resource.minable.required_fluid = "liquid-sulfuric-acid"
   end
 end

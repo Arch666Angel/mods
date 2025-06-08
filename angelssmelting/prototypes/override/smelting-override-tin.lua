@@ -78,28 +78,9 @@ if angelsmods.trigger.smelting_products["tin"].plate then
           0.4375
         ),
       },
-      {
-        name = "bob-tin-plate",
-        energy_required = 10.5,
-        enabled = false,
-        hidden = true,
-        ingredients = {
-          { name = "bob-tin-ore", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "bob-tin-plate", type = "item", amount = "+2" },
-        },
-        icons = angelsmods.functions.add_icon_layer(
-          angelsmods.functions.get_object_icons("bob-tin-plate"),
-          angelsmods.functions.get_object_icons("bob-tin-ore"),
-          { -10, -10 },
-          0.4375
-        ),
-        subgroup = "angels-tin-casting",
-        order = "i[angels-plate-tin]-b",
-      },
     })
     OV.remove_unlock("ore-crushing", "bob-tin-plate")
+    OV.hide_recipe({ "bob-tin-plate" })
   end
 else
   angelsmods.functions.hide("angels-plate-tin")
