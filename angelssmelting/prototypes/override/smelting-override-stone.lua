@@ -57,13 +57,13 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger
     {
       name = "cement-mixture-1",
       ingredients = {
-        { name = "stone-crushed", type = "item", amount = mods["bobplates"] and "bob-quartz" or "quartz" },
+        { name = "stone-crushed", type = "item", amount = "quartz" },
       },
     },
     {
       name = "cement-mixture-2",
       ingredients = {
-        { name = "stone-crushed", type = "item", amount = mods["bobplates"] and "bob-quartz" or "quartz" },
+        { name = "stone-crushed", type = "item", amount = "quartz" },
         { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
       },
     },

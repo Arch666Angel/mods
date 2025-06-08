@@ -924,45 +924,45 @@ OV.patch_recipes(merge_table_of_tables({
       get_ore_name("iron-ore"),
       not special_vanilla and get_ore_name("copper-ore") or nil,
     }, slag_color),
-    --2
+    --[[2]]
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and get_ore_name("copper-ore") or get_ore_name("lead-ore"),
       not special_vanilla and get_ore_name("tin-ore") or nil,
     }, slag_color),
-    --3
+    --[[3]]
     angelsmods.functions.create_liquid_recipe_icon({
       get_ore_name("silver-ore"),
       get_ore_name("quartz"),
     }, slag_color),
-    --4
+    --[[4]]
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and get_ore_name("angels-iron-pebbles") or get_ore_name("gold-ore"),
       not special_vanilla and get_ore_name("nickel-ore") or nil,
     }, slag_color),
-    --5
+    --[[5]]
     angelsmods.functions.create_liquid_recipe_icon({
       special_vanilla and get_ore_name("angels-copper-pebbles") or get_ore_name("zinc-ore"),
       not special_vanilla and get_ore_name("rutile-ore") or nil,
     }, slag_color),
-    --6
+    --[[6]]
     angelsmods.functions.create_liquid_recipe_icon({
       get_ore_name("bauxite-ore"),
       ore_enabled("manganese-ore") and get_ore_name("manganese-ore") or nil,
       (not ore_enabled("platinum-ore")) and ore_enabled("chrome-ore") and get_ore_name("chrome-ore") or nil,
     }, slag_color),
-    --7
+    --[[7]]
     ore_enabled("platinum-ore")
         and angelsmods.functions.create_liquid_recipe_icon({
           get_ore_name("platinum-ore"),
           get_ore_name("chrome-ore"),
         }, slag_color)
       or nil,
-    --8
+    --[[8]]
     angelsmods.functions.create_liquid_recipe_icon({
       get_ore_name("cobalt-ore"),
       get_ore_name("tungsten-ore"),
     }, slag_color),
-    --9
+    --[[9]]
     angelsmods.functions.create_liquid_recipe_icon({
       get_ore_name("uranium-ore"),
       ore_enabled("fluorite-ore") and get_ore_name("fluorite-ore") or nil,

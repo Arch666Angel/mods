@@ -68,7 +68,6 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   if mods["bobplates"] then
     OV.hide_recipe("bob-gold-plate")
     OV.global_replace_item("angels-plate-gold", "bob-gold-plate")
-    
     angelsmods.functions.hide("angels-plate-gold")
     OV.copy_item_properties("angels-plate-gold", "bob-gold-plate")
     OV.global_replace_technology("bob-gold-processing", "angels-gold-smelting-1")
@@ -94,7 +93,6 @@ if angelsmods.trigger.smelting_products["gold"].wire then
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
     )
-    OV.add_prereq("processing-unit", "angels-gold-smelting-1") -- TODO: why do we need this now ?
 
     OV.patch_recipes({
       {

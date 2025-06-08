@@ -7,13 +7,6 @@ if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["glass"].board = true
 end
 
--- I think smelting-override-silicon.lua will take charge of this
--- if mods["bobplates"] then
---   OV.global_replace_item("quartz", "bob-quartz")
---   data.raw["item"]["bob-quartz"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png"
---   data.raw["item"]["bob-quartz"].icon_size = 32
--- end
-
 -------------------------------------------------------------------------------
 -- MIXTURE --------------------------------------------------------------------
 -------------------------------------------------------------------------------
