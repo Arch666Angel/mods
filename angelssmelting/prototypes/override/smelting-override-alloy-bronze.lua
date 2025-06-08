@@ -211,6 +211,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     OV.remove_prereq("bob-cobalt-processing", "bob-alloy-processing")
     OV.remove_prereq("logistics-2", "bob-alloy-processing")
     OV.remove_prereq("bob-nitinol-processing", "bob-alloy-processing")
+    OV.remove_prereq("steel-processing", "bob-alloy-processing")
     OV.remove_prereq("bob-tungsten-processing", "bob-alloy-processing")
     OV.remove_prereq("bob-tungsten-alloy-processing", "bob-alloy-processing")
     OV.remove_prereq("bob-zinc-processing", "bob-alloy-processing")

@@ -11,9 +11,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["lead"] then
   if mods["bobores"] then
-    OV.global_replace_item("lead-ore", "bob-lead-ore")
-    data.raw["item"]["bob-lead-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png"
-    data.raw["item"]["bob-lead-ore"].icon_size = 32
+    local angel_ore = data.raw.item["lead-ore"]
+    local bob_ore = data.raw.item["bob-lead-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("lead-ore")
@@ -30,10 +32,8 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-lead-oxide", "bob-lead-oxide")
     angelsmods.functions.hide("solid-lead-oxide")
-    angelsmods.functions.move_item("bob-lead-oxide", "angels-lead", "d")
-    data.raw["item"]["bob-lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
-    data.raw["item"]["bob-lead-oxide"].icon_size = 32
-    OV.hide_recipe({ "bob-lead-plate", "bob-lead-oxide", "lead-oxide-2" })
+    OV.copy_item_properties("solid-lead-oxide", "bob-lead-oxide")
+    OV.hide_recipe({ "bob-lead-plate", "bob-lead-oxide", "bob-lead-oxide-2" })
     OV.global_replace_technology("bob-lead-processing", "angels-lead-smelting-1")
   end
 
@@ -73,51 +73,24 @@ end
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["lead"].plate then
-  if angelsmods.refining then
+  if mods["bobplates"] then
+    OV.global_replace_item("angels-plate-lead", "bob-lead-plate")
+    angelsmods.functions.hide("angels-plate-lead")
+    OV.copy_item_properties("angels-plate-lead", "bob-lead-plate")
+    OV.disable_recipe({"bob-lead-plate", "bob-lead-plate-2"})
     OV.patch_recipes({
       {
         name = "angelsore5-crushed-smelting",
+        icons = angelsmods.functions.add_icon_layer(
+          angelsmods.functions.get_object_icons("bob-lead-plate"),
+          angelsmods.functions.get_object_icons("angels-ore5-crushed"),
+          { -10, -10 },
+          0.4375
+        ),
         subgroup = "angels-lead-casting",
         order = "k[angels-plate-lead]-a",
       },
     })
-  end
-
-  if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-lead", "bob-lead-plate")
-    angelsmods.functions.hide("angels-plate-lead")
-    angelsmods.functions.move_item("bob-lead-plate", "angels-lead-casting", "k")
-    data.raw["item"]["bob-lead-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png"
-    data.raw["item"]["bob-lead-plate"].icon_size = 32
-
-    OV.patch_recipes({
-      {
-        name = "lead-plate",
-        energy_required = 10.5,
-        enabled = false,
-        hidden = true,
-        ingredients = {
-          { name = "bob-lead-ore", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "bob-lead-plate", type = "item", amount = "+2" },
-        },
-        icons = {
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png",
-          },
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
-            scale = 0.4375,
-            shift = { -10, -10 },
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-lead-casting",
-        order = "k[angels-plate-lead]-b",
-      },
-    })
-    OV.remove_unlock("ore-crushing", "lead-plate")
   end
 else
   angelsmods.functions.hide("angels-plate-lead")

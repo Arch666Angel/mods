@@ -1,32 +1,18 @@
 -- ORE
-if data.raw.item["bob-thorium-ore"] then
-  angelsmods.functions.move_item("bob-thorium-ore", "angels-ores", "i[thorium-ore]")
-  data.raw.item["bob-thorium-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png"
-  data.raw.item["bob-thorium-ore"].icon_size = 64
-  data.raw.item["bob-thorium-ore"].icons = nil
-  data.raw.item["bob-thorium-ore"].pictures = {
-    { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", scale = 0.5 },
-    { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-1.png", scale = 0.5 },
-    { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-2.png", scale = 0.5 },
-    { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-3.png", scale = 0.5 },
-  }
-  data.raw.item["bob-thorium-ore"].stack_size = 200
-else
-  data:extend({
-    {
-      type = "item",
-      name = "thorium-ore",
-      icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png",
-      icon_size = 64,
-      pictures = {
-        { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", scale = 0.5 },
-        { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-1.png", scale = 0.5 },
-        { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-2.png", scale = 0.5 },
-        { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-3.png", scale = 0.5 },
-      },
-      subgroup = "angels-ores",
-      order = "i[thorium-ore]",
-      stack_size = 200,
+data:extend({
+  {
+    type = "item",
+    name = "thorium-ore",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png",
+    icon_size = 64,
+    pictures = {
+      { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png", scale = 0.5 },
+      { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-1.png", scale = 0.5 },
+      { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-2.png", scale = 0.5 },
+      { size = 64, filename = "__angelssmeltinggraphics__/graphics/icons/ore-thorium-3.png", scale = 0.5 },
     },
-  })
-end
+    subgroup = "angels-ores",
+    order = "i[thorium-ore]",
+    stack_size = 200,
+  },
+})

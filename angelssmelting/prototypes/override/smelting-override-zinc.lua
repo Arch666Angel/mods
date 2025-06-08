@@ -11,9 +11,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["zinc"] then
   if mods["bobores"] then
-    OV.global_replace_item("zinc-ore", "bob-zinc-ore")
-    data.raw["item"]["bob-zinc-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-zinc.png"
-    data.raw["item"]["bob-zinc-ore"].icon_size = 32
+    local angel_ore = data.raw.item["zinc-ore"]
+    local bob_ore = data.raw.item["bob-zinc-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("zinc-ore")
@@ -71,9 +73,7 @@ if angelsmods.trigger.smelting_products["zinc"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-zinc", "bob-zinc-plate")
     angelsmods.functions.hide("angels-plate-zinc")
-    angelsmods.functions.move_item("bob-zinc-plate", "angels-zinc-casting", "j")
-    data.raw["item"]["bob-zinc-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-zinc.png"
-    data.raw["item"]["bob-zinc-plate"].icon_size = 32
+    OV.copy_item_properties("angels-plate-zinc", "bob-zinc-plate")
     OV.disable_recipe({ "bob-zinc-plate" })
     OV.remove_prereq("battery-3", "bob-zinc-processing")
     OV.add_prereq("battery-3", "angels-zinc-smelting-1")

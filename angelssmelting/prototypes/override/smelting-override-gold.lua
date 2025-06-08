@@ -12,9 +12,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["gold"] then
   if mods["bobores"] then
-    OV.global_replace_item("gold-ore", "bob-gold-ore")
-    data.raw["item"]["bob-gold-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png"
-    data.raw["item"]["bob-gold-ore"].icon_size = 32
+    local angel_ore = data.raw.item["gold-ore"]
+    local bob_ore = data.raw.item["bob-gold-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("gold-ore")
@@ -68,10 +70,7 @@ if angelsmods.trigger.smelting_products["gold"].plate then
     OV.global_replace_item("angels-plate-gold", "bob-gold-plate")
     
     angelsmods.functions.hide("angels-plate-gold")
-    angelsmods.functions.move_item("bob-gold-plate", "angels-gold-casting", "l")
-    data.raw["item"]["bob-gold-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png"
-    data.raw["item"]["bob-gold-plate"].icon_size = 32
-
+    OV.copy_item_properties("angels-plate-gold", "bob-gold-plate")
     OV.global_replace_technology("bob-gold-processing", "angels-gold-smelting-1")
   end
 else
@@ -88,10 +87,9 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   if data.raw.item["bob-gilded-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-gold", "bob-gilded-copper-cable")
     angelsmods.functions.hide("angels-wire-gold")
+    OV.copy_item_properties("angels-wire-gold", "bob-gilded-copper-cable")
     angelsmods.functions.move_item("bob-gilded-copper-cable", "angels-gold-casting", "m")
     OV.disable_recipe({ "bob-gilded-copper-cable" })
-    data.raw["item"]["bob-gilded-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
-    data.raw["item"]["bob-gilded-copper-cable"].icon_size = 32
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"

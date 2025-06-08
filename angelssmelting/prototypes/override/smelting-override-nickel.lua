@@ -11,9 +11,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["nickel"] then
   if mods["bobores"] then
-    OV.global_replace_item("nickel-ore", "bob-nickel-ore")
-    data.raw["item"]["bob-nickel-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png"
-    data.raw["item"]["bob-nickel-ore"].icon_size = 32
+    local angel_ore = data.raw.item["nickel-ore"]
+    local bob_ore = data.raw.item["bob-nickel-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("nickel-ore")
@@ -64,9 +66,7 @@ if angelsmods.trigger.smelting_products["nickel"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-nickel", "bob-nickel-plate")
     angelsmods.functions.hide("angels-plate-nickel")
-    angelsmods.functions.move_item("bob-nickel-plate", "angels-nickel-casting", "j")
-    data.raw["item"]["bob-nickel-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nickel.png"
-    data.raw["item"]["bob-nickel-plate"].icon_size = 32
+    OV.copy_item_properties("angels-plate-nickel", "bob-nickel-plate")
   end
 else
   angelsmods.functions.hide("angels-plate-nickel")

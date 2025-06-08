@@ -173,7 +173,7 @@ data:extend({
       },
     },
     working_sound = sounds.construction_robot(0.7),
-    cargo_centered = { 0.0, 0.2 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
     construction_vector = { 0.30, 0.22 },
   },
 })

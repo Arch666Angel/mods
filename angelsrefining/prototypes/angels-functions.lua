@@ -1878,6 +1878,36 @@ function angelsmods.functions.ore_enabled(ore_name)
   return false
 end
 
+function angelsmods.functions.get_ore_name(ore_name)
+  local ore_lookup_table = {
+    ["angels-copper-nugget"] = "angels-copper-nugget",
+    ["angels-copper-pebbles"] = "angels-copper-pebbles",
+    ["angels-copper-slag"] = "angels-copper-slag",
+    ["angels-iron-nugget"] = "angels-iron-nugget",
+    ["angels-iron-pebbles"] = "angels-iron-pebbles",
+    ["angels-iron-slag"] = "angels-iron-slag",
+    ["bauxite-ore"] = mods["bobores"] and "bob-bauxite-ore" or "bauxite-ore",
+    ["chrome-ore"] = "chrome-ore",
+    ["cobalt-ore"] = mods["bobores"] and "bob-cobalt-ore" or "cobalt-ore",
+    ["copper-ore"] = "copper-ore",
+    ["fluorite-ore"] = "fluorite-ore",
+    ["gold-ore"] = mods["bobores"] and "bob-gold-ore" or "gold-ore",
+    ["iron-ore"] = "iron-ore",
+    ["lead-ore"] = mods["bobores"] and "bob-lead-ore" or "lead-ore",
+    ["nickel-ore"] = mods["bobores"] and "bob-nickel-ore" or "nickel-ore",
+    ["platinum-ore"] = "platinum-ore",
+    ["quartz"] = mods["bobores"] and "bob-quartz" or "quartz",
+    ["rutile-ore"] = mods["bobores"] and "bob-rutile-ore" or "rutile-ore",
+    ["silver-ore"] = mods["bobores"] and "bob-silver-ore" or "silver-ore",
+    ["thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "thorium-ore",
+    ["tin-ore"] = mods["bobores"] and "bob-tin-ore" or "tin-ore",
+    ["tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "tungsten-ore",
+    ["uranium-ore"] = "uranium-ore",
+    ["zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "zinc-ore",
+  }
+  return ore_lookup_table[ore_name] or ore_name
+end
+
 -------------------------------------------------------------------------------
 -- MODIFY CRAFTING_CATEGORY ---------------------------------------------------
 -------------------------------------------------------------------------------

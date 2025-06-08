@@ -109,7 +109,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore8-crystal-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
@@ -136,7 +135,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore9-crystal-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,

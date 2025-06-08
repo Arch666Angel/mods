@@ -98,11 +98,6 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- generic replace items ----------------------------------------------------
-  OV.global_replace_item("bob-carbon", "solid-carbon")
-  angelsmods.functions.hide("bob-carbon")
-  OV.remove_unlock("bob-chemical-processing-1", "carbon")
-  OV.add_prereq("bob-lead-processing", "angels-coal-processing")
-  OV.add_prereq("bob-silicon-processing", "angels-coal-processing")
 
   -- lithium processing -------------------------------------------------------
   OV.patch_recipes({
@@ -171,6 +166,7 @@ if mods["bobplates"] then
   move_item("bob-enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
   OV.patch_recipes({ { name = "bob-enriched-fuel", subgroup = "petrochem-fuel", order = "g" } })
   OV.disable_technology({ "oil-processing-2", "oil-processing-3", "oil-processing-4" })
+
   --hide disabled
   OV.hide_recipe({
     "bob-oil-processing",

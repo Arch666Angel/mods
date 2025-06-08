@@ -11,9 +11,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["aluminium"] then
   if mods["bobores"] then
-    OV.global_replace_item("bauxite-ore", "bob-bauxite-ore")
-    data.raw["item"]["bob-bauxite-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png"
-    data.raw["item"]["bob-bauxite-ore"].icon_size = 32
+    local angel_ore = data.raw.item["bauxite-ore"]
+    local bob_ore = data.raw.item["bob-bauxite-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("bauxite-ore") -- angels
@@ -29,10 +31,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
   if mods["bobplates"] then
     OV.global_replace_item("solid-aluminium-oxide", "bob-alumina")
     angelsmods.functions.hide("solid-aluminium-oxide")
-    angelsmods.functions.move_item("bob-alumina", "angels-aluminium", "f")
-    data.raw["item"]["bob-alumina"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png"
-    data.raw["item"]["bob-alumina"].icon_size = 32
-
+    OV.copy_item_properties("solid-aluminium-oxide", "bob-alumina")
     OV.global_replace_technology("bob-aluminium-processing", "angels-aluminium-smelting-1")
   end
 
@@ -92,9 +91,7 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-aluminium", "bob-aluminium-plate")
     angelsmods.functions.hide("angels-plate-aluminium")
-    angelsmods.functions.move_item("bob-aluminium-plate", "angels-aluminium-casting", "k")
-    data.raw["item"]["bob-aluminium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png"
-    data.raw["item"]["bob-aluminium-plate"].icon_size = 32
+    OV.copy_item_properties("angels-plate-aluminium", "bob-aluminium-plate")
     OV.hide_recipe({ "bob-aluminium-plate", "bob-alumina" })
   end
 else

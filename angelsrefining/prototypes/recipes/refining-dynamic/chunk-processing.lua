@@ -16,7 +16,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -40,7 +40,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -64,7 +64,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -88,7 +88,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -112,7 +112,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }
@@ -136,7 +136,7 @@ data:extend({
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-chunk.png",
+      { icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-chunk.png",
         icon_size = 32,
         scale = 0.5,
         shift = { -10, 10 }

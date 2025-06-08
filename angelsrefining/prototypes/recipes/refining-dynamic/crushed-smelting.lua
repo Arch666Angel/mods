@@ -21,7 +21,7 @@ data:extend({
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-crushed.png",
         icon_size = 32,
         scale = 0.4,
         shift = { -10, -10 },
@@ -50,7 +50,7 @@ data:extend({
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-crushed.png",
         icon_size = 32,
         scale = 0.4,
         shift = { -10, -10 },

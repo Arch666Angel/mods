@@ -148,6 +148,5 @@ funcs.generate_train_entities({
   crash_trigger = crash_trigger(),
   open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
   close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-  sound_minimum_speed = 0.5,
   impact_category = "wood",
 })

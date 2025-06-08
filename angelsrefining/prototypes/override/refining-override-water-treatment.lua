@@ -246,60 +246,6 @@ if angelsmods.trigger.water_saline == false then
 end
 
 -------------------------------------------------------------------------------
--- LITHIA WATER ---------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] then
-  data.raw.fluid["bob-lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-    nil,
-    { { 032, 118, 206 }, { 248, 083, 099 }, { 038, 137, 237, 0.8 }, { 255, 073, 072, 0.8 } }
-  )
-  data.raw.fluid["bob-lithia-water"].icon = nil
-  data.raw.fluid["bob-lithia-water"].icon_size = nil
-  data.raw.fluid["bob-lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
-  data.raw.fluid["bob-lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
-  angelsmods.functions.move_item("bob-lithia-water", "water-treatment-fluid", "ea", "fluid")
-
-  data:extend({
-    {
-      type = "recipe",
-      name = "water-thermal-lithia",
-      category = "water-treatment",
-      subgroup = "water-treatment",
-      enabled = false,
-      energy_required = 1,
-      ingredients = {
-        { type = "fluid", name = "thermal-water", amount = 100 },
-      },
-      results = {
-        { type = "fluid", name = "bob-lithia-water", amount = 40 },
-        { type = "fluid", name = "water-purified", amount = 60 },
-      },
-      --icon = "__angelsrefininggraphics__/graphics/icons/water-thermal-lithia.png",
-      --icon_size = 32,
-      icons = angelsmods.functions.create_liquid_recipe_icon({
-        "bob-lithia-water",
-        "water-purified",
-      }, {
-        { 243, 135, 000 },
-        { 247, 140, 003 },
-        { 247, 140, 003 },
-      }),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-        "thermal-water",
-        "bob-lithia-water",
-        "water-purified",
-      }),
-      order = "g[water-thermal-lithia]",
-    },
-  })
-  OV.add_unlock("thermal-water-extraction", "water-thermal-lithia")
-  OV.remove_prereq("bob-lithium-processing", "logistic-science-pack")
-  OV.remove_prereq("bob-lithium-processing", "bob-electrolysis-1")
-  OV.remove_prereq("bob-lithium-processing", "bob-chemical-processing-1")
-  OV.add_prereq("bob-lithium-processing", "thermal-water-extraction")
-end
-
--------------------------------------------------------------------------------
 -- PURE-WATER -----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
@@ -312,6 +258,16 @@ if mods["bobplates"] then
   -- lithium processing -------------------------------------------------------
   OV.global_replace_item("bob-lithium-chloride", "solid-lithium")
   angelsmods.functions.hide("bob-lithium-chloride")
+  OV.hide_recipe("bob-lithium-chloride")
+  OV.remove_unlock("bob-lithium-processing", "bob-lithium-chloride")
+  OV.remove_prereq("bob-lithium-processing", "logistic-science-pack")
+  OV.remove_prereq("bob-lithium-processing", "bob-electrolysis-1")
+  OV.remove_prereq("bob-lithium-processing", "bob-chemical-processing-1")
+  OV.add_prereq("bob-lithium-processing", "water-treatment-3")
+  OV.add_prereq("bob-lithium-processing", "thermal-water-extraction-2")
+  OV.remove_unlock("water-treatment-3", "solid-lithium")
+  OV.add_unlock("bob-lithium-processing", "solid-lithium")
+  OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes({

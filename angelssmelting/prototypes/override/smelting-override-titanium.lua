@@ -11,9 +11,11 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["titanium"] then
   if mods["bobores"] then
-    OV.global_replace_item("rutile-ore", "bob-rutile-ore")
-    data.raw["item"]["bob-rutile-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png"
-    data.raw["item"]["bob-rutile-ore"].icon_size = 32
+    local angel_ore = data.raw.item["rutile-ore"]
+    local bob_ore = data.raw.item["bob-rutile-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
   end
 else
   angelsmods.functions.hide("rutile-ore")
@@ -76,9 +78,7 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-titanium", "bob-titanium-plate")
     angelsmods.functions.hide("angels-plate-titanium")
-    angelsmods.functions.move_item("bob-titanium-plate", "angels-titanium-casting", "j")
-    data.raw["item"]["bob-titanium-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-titanium.png"
-    data.raw["item"]["bob-titanium-plate"].icon_size = 32
+    OV.copy_item_properties("angels-plate-titanium", "bob-titanium-plate")
     OV.disable_recipe({ "bob-titanium-plate" })
   end
 else

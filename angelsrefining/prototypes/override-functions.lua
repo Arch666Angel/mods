@@ -360,6 +360,18 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
   end
 end
 
+ov_functions.copy_item_properties = function(from, to)
+  local from_item = data.raw.item[from]
+  local to_item = data.raw.item[to]
+  to_item.localised_name = { "item-name."..from_item.name }
+  to_item.icon = from_item.icon
+  to_item.icon_size = from_item.icon_size
+  to_item.icons = from_item.icons
+  to_item.pictures = from_item.pictures
+  to_item.subgroup = from_item.subgroup
+  to_item.order = from_item.order
+end
+
 ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   local new_fluid = data.raw.fluid[new_fluid_name]
   local old_fluid = data.raw.fluid[old_fluid_name]

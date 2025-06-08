@@ -84,7 +84,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore8-crushed-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -111,7 +110,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore8-powder-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1,
@@ -138,7 +136,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore9-crushed-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -165,7 +162,6 @@ data:extend({
   {
     type = "recipe",
     name = "angelsore9-powder-processing",
-    localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1,

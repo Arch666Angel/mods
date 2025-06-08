@@ -54,7 +54,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
       name = "petri-dish",
       ingredients = {
         { "!!" },
-        { type = "item", name = data.raw.item["glass"] and "glass" or "angels-plate-glass", amount = 1 }, -- bob glass
+        { type = "item", name = data.raw.item["bob-glass"] and "bob-glass" or "angels-plate-glass", amount = 1 },
       },
     },
   })

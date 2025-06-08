@@ -63,7 +63,6 @@ data:extend({
     subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
     order = mods["angelsindustries"] and "b[crawlers]-e" or "e[angels-cab-energy-interface]-a",
     stack_size = 50,
-    default_request_amount = 10,
   },
 })
 data:extend({
@@ -160,7 +159,6 @@ data:extend({
   subgroup = "angels-cab",
   order = "e[angels-cab-energy-interface]-b",
   stack_size = 50,
-  default_request_amount = 10
 }}
 data:extend{{
   type = "night-vision-equipment",

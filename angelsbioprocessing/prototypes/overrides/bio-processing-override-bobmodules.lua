@@ -124,9 +124,6 @@ if mods["bobmodules"] then
   -- EXISTING MODULES TECHNOLOGY ----------------------------------------------
   -----------------------------------------------------------------------------
   -- tier 1 modules
-  OV.add_prereq("modules", "bio-processing-crystal-splinter-1")
-  OV.add_prereq("pollution-clean-module-1", "bio-processing-crystal-splinter-2")
-  OV.add_prereq("pollution-create-module-1", "bio-processing-crystal-splinter-2")
   for _, type in pairs({ "speed", "efficiency", "productivity" }) do
     -- remove the marked as upgrade from base game
     local tech = data.raw.technology[type .. "-module-2"]
@@ -134,9 +131,10 @@ if mods["bobmodules"] then
       tech.upgrade = false
     end
   end
+
   -- tier 2 modules
-  OV.add_prereq("pollution-clean-module-3", "bio-processing-crystal-shard-2")
-  OV.add_prereq("pollution-create-module-3", "bio-processing-crystal-shard-2")
+  OV.add_prereq("bob-pollution-clean-module-2", "bio-processing-crystal-splinter-2")
+  OV.add_prereq("bob-pollution-create-module-2", "bio-processing-crystal-splinter-2")
   data:extend({
     {
       type = "technology",
@@ -145,8 +143,57 @@ if mods["bobmodules"] then
       icon_size = 256,
       prerequisites = {
         "modules",
+        "advanced-circuit",
+        "bio-processing-crystal-splinter-1",
+        "bob-gem-processing-3",
+        "chemical-science-pack",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "bob-module-processor-board",
+        },
+      },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+        },
+        time = 30,
+      },
+    },
+  })
+  OV.remove_unlock("advanced-circuit", "bob-module-processor-board")
+  OV.remove_prereq("advanced-circuit", "modules")
+  OV.add_prereq("speed-module-2", "modules-2")
+  OV.add_prereq("productivity-module-2", "modules-2")
+  OV.add_prereq("efficiency-module-2", "modules-2")
+  OV.add_prereq("bob-pollution-create-module-2", "modules-2")
+  OV.add_prereq("bob-pollution-clean-module-2", "modules-2")
+  for _, type in pairs({ "speed", "efficiency", "productivity" }) do
+    -- remove the marked as upgrade from base game
+    local tech = data.raw.technology[type .. "-module-3"]
+    if tech then
+      tech.upgrade = false
+    end
+  end
+
+  -- tier 3 modules
+  OV.add_prereq("bob-pollution-clean-module-3", "bio-processing-crystal-shard-2")
+  OV.add_prereq("bob-pollution-create-module-3", "bio-processing-crystal-shard-2")
+  data:extend({
+    {
+      type = "technology",
+      name = "modules-3",
+      icon = "__base__/graphics/technology/module.png",
+      icon_size = 256,
+      prerequisites = {
+        "modules-2",
         "processing-unit",
         "bio-processing-crystal-shard-1",
+        "production-science-pack",
       },
       effects = {
         {
@@ -160,42 +207,30 @@ if mods["bobmodules"] then
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
         },
         time = 30,
       },
-      order = "i-a",
     },
   })
-  OV.remove_unlock("processing-unit", "module-processor-board-2")
-  for _, type in pairs({ "speed", "efficiency", "productivity" }) do
-    -- remove the marked as upgrade from base game
-    local tech = data.raw.technology[type .. "-module-3"]
-    if tech then
-      tech.upgrade = false
-    end
-  end
-  for _, type in pairs({ "bob-speed", "bob-efficiency", "bob-productivity", "bob-pollution-clean", "bob-pollution-create" }) do
-    OV.add_prereq(type .. "-module-3", "modules-2")
-    OV.set_research_difficulty(type .. "-module-3", 60, 100)
-    OV.set_research_difficulty(type .. "-module-4", 60, 150)
-    OV.set_research_difficulty(type .. "-module-5", 60, 200)
-  end
-  for _, type in pairs({ "raw-speed", "green", "raw-productivity" }) do
-    OV.set_research_difficulty(type .. "-module-3", 60, 100)
-    OV.set_research_difficulty(type .. "-module-4", 60, 150)
-    OV.set_research_difficulty(type .. "-module-5", 60, 200)
-  end
+  OV.remove_unlock("processing-unit", "bob-module-processor-board-2")
+  OV.add_prereq("speed-module-3", "modules-3")
+  OV.add_prereq("productivity-module-3", "modules-3")
+  OV.add_prereq("efficiency-module-3", "modules-3")
+  OV.add_prereq("bob-pollution-create-module-3", "modules-3")
+  OV.add_prereq("bob-pollution-clean-module-3", "modules-3")
 
-  -- tier 3 modules this needs to have some of the above put here now that modules is only to 5
+  -- tier 4 modules
   data:extend({
     {
       type = "technology",
-      name = "modules-3",
+      name = "modules-4",
       icon = "__base__/graphics/technology/module.png",
       icon_size = 256,
       prerequisites = {
-        "modules-2",
+        "modules-3",
         "bio-processing-crystal-full",
+        "utility-science-pack",
       },
       effects = {
         {
@@ -210,20 +245,21 @@ if mods["bobmodules"] then
           { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
           { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 30,
       },
-      order = "i-a",
     },
   })
-  if data.raw.technology["advanced-electronics-3"] then
-    OV.remove_unlock("advanced-electronics-3", "bob-module-processor-board-3")
-    OV.add_prereq("modules-3", "advanced-electronics-3")
-    OV.remove_prereq("speed-module-6", "advanced-electronics-3")
-    OV.remove_prereq("productivity-module-6", "advanced-electronics-3")
-    OV.remove_prereq("efficiency-module-6", "advanced-electronics-3")
-    OV.remove_prereq("pollution-clean-module-6", "advanced-electronics-3")
-    OV.remove_prereq("pollution-create-module-6", "advanced-electronics-3")
+  OV.add_prereq("bob-speed-module-4", "modules-4")
+  OV.add_prereq("bob-productivity-module-4", "modules-4")
+  OV.add_prereq("bob-efficiency-module-4", "modules-4")
+  OV.add_prereq("bob-pollution-create-module-4", "modules-4")
+  OV.add_prereq("bob-pollution-clean-module-4", "modules-4")
+
+  if data.raw.technology["bob-advanced-processing-unit"] then
+    OV.add_prereq("modules-4", "bob-advanced-processing-unit")
+    OV.remove_unlock("bob-advanced-processing-unit", "bob-module-processor-board-3")
   else
     OV.remove_unlock("processing-unit", "bob-module-processor-board-3")
   end
@@ -316,9 +352,7 @@ if mods["bobmodules"] then
   data.raw.technology["angels-bio-yield-module-3"].icon =
     "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/orange-module-3.png"
   data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
-  if data.raw.technology["module-merging"] ~= nil then
-    OV.add_prereq("angels-bio-yield-module", "module-merging")
-  end
+
   for i = 1, 3 do
     local ingredients = { { "token-bio", 1 } }
     local ingredients_added = { ["token-bio"] = true }

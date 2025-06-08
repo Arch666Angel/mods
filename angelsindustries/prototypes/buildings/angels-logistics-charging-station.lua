@@ -26,7 +26,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -2 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.5,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "electric",
@@ -66,15 +66,7 @@ data:extend({
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
-    --[[door_animation =
-      {
-        filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
-        width = 1,
-        height = 1,
-        frame_count = 1
-      },]]
     door_animation_up = {
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,

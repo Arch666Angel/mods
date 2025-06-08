@@ -393,7 +393,6 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
     impact_category = "metal",
     working_sound = {
       sound = {
@@ -637,7 +636,7 @@ data:extend({
     collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
     collision_mask = {},
     --selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    drawing_box = { { -0.5, -2.8 }, { 0.5, 0.5 } },
+    drawing_box_vertical_extension = 2.3,
     maximum_wire_distance = 0.25,
     supply_area_distance = settings.equipment["energy-interface"].supplyArea / 2,
     impact_category = "metal",

@@ -6,10 +6,10 @@ local angel_ore_3 = {
   stack_size = 200,
 }
 if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
-  angel_ore_3.icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3.png"
+  angel_ore_3.icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3.png"
   angel_ore_3.icon_size = 32
 else
-  angel_ore_3.icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-HR.png"
+  angel_ore_3.icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-HR.png"
   angel_ore_3.icon_size = 64
   angel_ore_3.pictures = {
     {
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore1",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-HR.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-HR.png",
     icon_size = 64,
     pictures = {
       {
@@ -110,7 +110,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore2",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2.png",
     icon_size = 32,
     subgroup = "angels-ores",
     order = "b[angels-ore2]",
@@ -120,7 +120,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore4",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4.png",
     icon_size = 32,
     subgroup = "angels-ores",
     order = "d[angels-ore4]",
@@ -129,7 +129,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore5",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-HR.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-HR.png",
     icon_size = 64,
     pictures = {
       {
@@ -180,7 +180,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore6",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6.png",
     icon_size = 32,
     pictures = {
       {

@@ -13,9 +13,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   if mods["bobelectronics"] and data.raw.item["bob-solder"] then
     OV.global_replace_item("angels-solder", "bob-solder")
     angelsmods.functions.hide("angels-solder")
-    angelsmods.functions.move_item("bob-solder", "angels-solder-casting", "d")
-    data.raw["item"]["bob-solder"].icon = "__angelssmeltinggraphics__/graphics/icons/solder.png"
-    data.raw["item"]["bob-solder"].icon_size = 32
+    OV.copy_item_properties("angels-solder", "bob-solder")
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/solder.png",
       "__angelssmeltinggraphics__/graphics/icons/solder.png"
@@ -84,4 +82,15 @@ else
     "angels-solder-smelting-2",
     "angels-solder-smelting-3",
   })
+end
+
+if mods["bobelectronics"] or mods["bobplates"] then
+  -- Disable Bob's Resin from recipe. No longer needed for solder
+  OV.disable_recipe({ "bob-resin-wood" })
+  OV.disable_technology({ "bob-wood-processing" })
+  OV.remove_prereq({
+    "bob-bodies",
+    "bob-electronics",
+    "bob-walking-vehicle",
+  }, "bob-wood-processing")
 end

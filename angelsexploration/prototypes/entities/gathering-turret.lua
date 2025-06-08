@@ -81,7 +81,7 @@ data:extend({
 
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    drawing_box = { { -1, -1.5 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.5,
 
     damaged_trigger_effect = nil,
 

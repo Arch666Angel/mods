@@ -71,7 +71,6 @@ end
 -------------------------------------------------------------------------------
 -- SPIDERTRON -----------------------------------------------------------------
 -------------------------------------------------------------------------------
-move_item("spidertron-remote", "angels-vehicle-spidertron", "a[remote]", "spidertron-remote")
 move_item("spidertron", "angels-vehicle-spidertron", "b[spidertron]", "item-with-entity-data")
 
 if mods["bobwarfare"] then

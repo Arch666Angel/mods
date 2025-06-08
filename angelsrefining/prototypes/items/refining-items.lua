@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore1-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore2-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -123,7 +123,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore3-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -182,7 +182,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore4-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -241,7 +241,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore5-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -300,7 +300,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore6-crushed",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-crushed.png",
     icon_size = 32,
     pictures = {
       {
@@ -401,7 +401,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore1-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "a[angels-ore1-chunk]",
@@ -410,7 +410,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore2-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "b[angels-ore2-chunk]",
@@ -419,7 +419,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore3-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "c[angels-ore3-chunk]",
@@ -428,7 +428,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore4-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "d[angels-ore4-chunk]",
@@ -437,7 +437,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore5-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "e[angels-ore5-chunk]",
@@ -446,7 +446,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore6-chunk",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-chunk.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-chunk.png",
     icon_size = 32,
     subgroup = "ore-processing-b",
     order = "f[angels-ore6-chunk]",
@@ -509,7 +509,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore1-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "a[angels-ore1-crystal]",
@@ -518,7 +518,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore2-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "b[angels-ore2-crystal]",
@@ -527,7 +527,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore3-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "c[angels-ore3-crystal]",
@@ -536,7 +536,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore4-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "d[angels-ore4-crystal]",
@@ -545,7 +545,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore5-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "e[angels-ore5-crystal]",
@@ -554,7 +554,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore6-crystal",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-crystal.png",
     icon_size = 32,
     subgroup = "ore-processing-c",
     order = "f[angels-ore6-crystal]",
@@ -670,7 +670,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore1-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "a[angels-ore1-pure]",
@@ -679,7 +679,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore2-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "b[angels-ore2-pure]",
@@ -688,7 +688,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore3-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "c[angels-ore3-pure]",
@@ -697,7 +697,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore4-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "d[angels-ore4-pure]",
@@ -706,7 +706,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore5-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "e[angels-ore5-pure]",
@@ -715,7 +715,7 @@ data:extend({
   {
     type = "item",
     name = "angels-ore6-pure",
-    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-pure.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-pure.png",
     icon_size = 32,
     subgroup = "ore-processing-d",
     order = "f[angels-ore6-pure]",

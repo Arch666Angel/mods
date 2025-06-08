@@ -222,15 +222,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coke-purification",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "coal-crushed",
       },
       {
         type = "unlock-recipe",
         recipe = "solid-coke",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "coke-purification",
       },
     },
     unit = {

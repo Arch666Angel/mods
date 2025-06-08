@@ -5,9 +5,13 @@ local OV = angelsmods.functions.OV
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["thorium"] then
   if mods["bobores"] then
-    OV.global_replace_item("thorium-ore", "bob-thorium-ore")
-    data.raw.item["bob-thorium-ore"].icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png"
-    data.raw.item["bob-thorium-ore"].icon_size = 64
+    local angel_ore = data.raw.item["thorium-ore"]
+    local bob_ore = data.raw.item["bob-thorium-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+    -- Don't do a full copy properties here as we don't want to change it's icon
+    -- Else we would also have to update thorium-232, the fuel cells, recycling recipe etc.
+    angelsmods.functions.move_item("bob-thorium-ore", "angels-ores", "i[thorium-ore]")
   end
 else
   angelsmods.functions.hide("thorium-ore")

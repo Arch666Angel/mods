@@ -18,8 +18,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore1-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
-    --icon_size = 32,
     order = "a[angelsore1-crushed]",
   },
   {
@@ -38,8 +36,6 @@ data:extend({
     main_product = "angels-ore1-crushed",
     allow_decomposition = false,
     always_show_made_in = true,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
-    --icon_size = 32,
     order = "a[angelsore1-crushed-hand]",
   },
   {
@@ -56,8 +52,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore2-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-crushed.png",
-    --icon_size = 32,
     order = "b[angelsore2-crushed]",
   },
   {
@@ -74,8 +68,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore3-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
-    --icon_size = 32,
     order = "c[angelsore3-crushed]",
   },
   {
@@ -94,8 +86,6 @@ data:extend({
     main_product = "angels-ore3-crushed",
     allow_decomposition = false,
     always_show_made_in = true,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
-    --icon_size = 32,
     order = "b[angelsore3-crushed-hand]",
   },
   {
@@ -112,8 +102,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore4-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-crushed.png",
-    --icon_size = 32,
     order = "d[angelsore4-crushed]",
   },
   {
@@ -130,8 +118,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore5-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-crushed.png",
-    --icon_size = 32,
     order = "e[angelsore5-crushed]",
   },
   {
@@ -148,8 +134,6 @@ data:extend({
       { type = "item", name = "stone-crushed", amount = 1 },
     },
     main_product = "angels-ore6-crushed",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "f[angelsore6-crushed]",
   },
   ---------------------------------------------------------------------------
@@ -173,8 +157,6 @@ data:extend({
     },
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "g",
   },
   {
@@ -194,8 +176,6 @@ data:extend({
       { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore8-powder",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "h",
   },
   {
@@ -216,8 +196,6 @@ data:extend({
     },
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "i",
   },
   {
@@ -237,8 +215,6 @@ data:extend({
       { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore9-powder",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "j",
   },
   ---------------------------------------------------------------------------
@@ -262,8 +238,6 @@ data:extend({
       { type = "item", name = "geode-blue", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore1-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-chunk.png",
-    --icon_size = 32,
     order = "a[angelsore1-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore1"] }),
   },
@@ -285,8 +259,6 @@ data:extend({
       { type = "item", name = "geode-purple", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore2-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-chunk.png",
-    --icon_size = 32,
     order = "b[angelsore2-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore2"] }),
   },
@@ -308,8 +280,6 @@ data:extend({
       { type = "item", name = "geode-yellow", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore3-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-chunk.png",
-    --icon_size = 32,
     order = "c[angelsore3-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore3"] }),
   },
@@ -331,8 +301,6 @@ data:extend({
       { type = "item", name = "geode-lightgreen", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore4-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-chunk.png",
-    --icon_size = 32,
     order = "d[angelsore4-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore4"] }),
   },
@@ -354,8 +322,6 @@ data:extend({
       { type = "item", name = "geode-cyan", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore5-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-chunk.png",
-    --icon_size = 32,
     order = "e[angelsore5-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore5"] }),
   },
@@ -377,8 +343,6 @@ data:extend({
       { type = "item", name = "geode-red", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore6-chunk",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-chunk.png",
-    --icon_size = 32,
     order = "f[angelsore6-chunk]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "water-yellow-waste", ore_tints["ore6"] }),
   },
@@ -412,8 +376,6 @@ data:extend({
       "thermal-water",
       "sulfuric-acid",
     }),
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "g",
   },
   {
@@ -433,8 +395,6 @@ data:extend({
       { type = "fluid", name = "water-yellow-waste", amount = 20 },
     },
     main_product = "angels-ore8-dust",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore8-dust.png",
-    --icon_size = 32,
     order = "h",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-sludge"),
   },
@@ -460,8 +420,6 @@ data:extend({
     main_product = "angels-ore9-sludge",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crushed.png",
-    --icon_size = 32,
     order = "i",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "thermal-water",
@@ -486,8 +444,6 @@ data:extend({
       { type = "fluid", name = "water-yellow-waste", amount = 20 },
     },
     main_product = "angels-ore9-dust",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore9-dust.png",
-    --icon_size = 32,
     order = "j",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-sludge"),
   },
@@ -512,8 +468,6 @@ data:extend({
     main_product = "angels-ore1-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crystal.png",
-    --icon_size = 32,
     order = "a[angelsore1-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore1"] }),
   },
@@ -535,8 +489,6 @@ data:extend({
     main_product = "angels-ore2-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-crystal.png",
-    --icon_size = 32,
     order = "b[angelsore2-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore2"] }),
   },
@@ -558,8 +510,6 @@ data:extend({
     main_product = "angels-ore3-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crystal.png",
-    --icon_size = 32,
     order = "c[angelsore3-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore3"] }),
   },
@@ -581,8 +531,6 @@ data:extend({
     main_product = "angels-ore4-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-crystal.png",
-    --icon_size = 32,
     order = "d[angelsore4-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore4"] }),
   },
@@ -604,8 +552,6 @@ data:extend({
     main_product = "angels-ore5-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-crystal.png",
-    --icon_size = 32,
     order = "e[angelsore5-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore5"] }),
   },
@@ -627,8 +573,6 @@ data:extend({
     main_product = "angels-ore6-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     order = "f[angelsore6-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore6"] }),
   },
@@ -656,8 +600,6 @@ data:extend({
     main_product = "angels-ore8-solution",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-ore8-solution", "sulfuric-acid" }),
     order = "g",
   },
@@ -684,7 +626,6 @@ data:extend({
       "ceramic",
       { { 104, 112, 113 }, { 133, 196, 060 }, { 133, 196, 060 }, { 113, 224, 028, 0.9 } }
     ),
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-ore8-slime",
       "water-purified",
@@ -710,8 +651,6 @@ data:extend({
       { type = "item", name = "slag", amount = 1 },
     },
     main_product = "angels-ore8-anode-sludge",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-ore8-anode-sludge",
       "angels-ore8-slime",
@@ -736,8 +675,6 @@ data:extend({
     main_product = "angels-ore8-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-anode-sludge"),
     order = "h",
   },
@@ -763,8 +700,6 @@ data:extend({
     always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-ore9-solution", "sulfuric-acid" }),
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     order = "i",
   },
   {
@@ -790,7 +725,6 @@ data:extend({
       "ceramic",
       { { 095, 106, 090 }, { 254, 110, 022 }, { 254, 110, 022, 0.8 }, { 252, 103, 005, 0.9 } }
     ),
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-ore9-slime",
       "water-purified",
@@ -816,8 +750,6 @@ data:extend({
       { type = "item", name = "slag", amount = 1 },
     },
     main_product = "angels-ore9-anode-sludge",
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-ore9-anode-sludge",
       "angels-ore9-slime",
@@ -842,8 +774,6 @@ data:extend({
     main_product = "angels-ore9-crystal",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-crystal.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-anode-sludge"),
     order = "j",
   },
@@ -867,8 +797,6 @@ data:extend({
     main_product = "angels-ore1-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore1"] }, 0.6),
     order = "a[angelsore1-pure]",
   },
@@ -889,8 +817,6 @@ data:extend({
     main_product = "angels-ore2-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore2"] }, 0.6),
     order = "b[angelsore2-pure]",
   },
@@ -911,8 +837,6 @@ data:extend({
     main_product = "angels-ore3-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore3"] }, 0.6),
     order = "c[angelsore3-pure]",
   },
@@ -933,8 +857,6 @@ data:extend({
     main_product = "angels-ore4-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore4"] }, 0.6),
     order = "d[angelsore4-pure]",
   },
@@ -955,8 +877,6 @@ data:extend({
     main_product = "angels-ore5-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore5"] }, 0.6),
     order = "e[angelsore5-pure]",
   },
@@ -977,8 +897,6 @@ data:extend({
     main_product = "angels-ore6-pure",
     always_show_products = true,
     show_amount_in_title = false,
-    --icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6-pure.png",
-    --icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore6"] }, 0.6),
     order = "f[angelsore6-pure]",
   },
@@ -1165,7 +1083,6 @@ data:extend({
       "coal",
       { { 140, 073, 029 }, { 230, 116, 017 } }
     ),
-    icon_size = 32,
     order = "a[filtering-mineral]-a[slag-processing]-a[coal]",
   },
   {
@@ -1189,7 +1106,6 @@ data:extend({
       "ceramic",
       { { 140, 073, 029 }, { 230, 116, 017 } }
     ),
-    icon_size = 32,
     order = "a[filtering-mineral]-a[slag-processing]-b[ceramic]",
   },
   {
@@ -1211,7 +1127,6 @@ data:extend({
       "coal",
       { { 243, 135, 000 }, { 230, 116, 017 }, { 247, 140, 003 } }
     ),
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "mineral-sludge", "thermal-water" }),
     order = "a[filtering-mineral]-a[thermal-processing]-a[coal]",
   },
@@ -1234,7 +1149,6 @@ data:extend({
       "ceramic",
       { { 243, 135, 000 }, { 230, 116, 017 }, { 247, 140, 003 } }
     ),
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "mineral-sludge", "thermal-water" }),
     order = "a[filtering-mineral]-a[thermal-processing]-b[ceramic]",
   },
@@ -1424,7 +1338,6 @@ data:extend({
       "coal",
       { { 105, 237, 038 }, { 211, 255, 052 }, { 100, 255, 000 }, { 147, 207, 47 } }
     ),
-    icon_size = 32,
     order = "b[filtering-crystal]-c[crystal-processing]-a[coal]",
   },
   {
@@ -1448,7 +1361,6 @@ data:extend({
       "ceramic",
       { { 105, 237, 038 }, { 211, 255, 052 }, { 100, 255, 000 }, { 147, 207, 47 } }
     ),
-    icon_size = 32,
     order = "b[filtering-crystal]-c[crystal-processing]-b[ceramic]",
   },
   {
@@ -1472,7 +1384,6 @@ data:extend({
       "coal",
       { { 105, 237, 038 }, { 230, 116, 017 }, { 100, 255, 000 } }
     ),
-    icon_size = 32,
     order = "a[filtering-mineral]-c[crystal-processing]-a[coal]",
   },
   {
@@ -1496,7 +1407,6 @@ data:extend({
       "ceramic",
       { { 105, 237, 038 }, { 230, 116, 017 }, { 100, 255, 000 } }
     ),
-    icon_size = 32,
     order = "a[filtering-mineral]-c[crystal-processing]-b[ceramic]",
   },
   --CATALYSTS
@@ -1630,8 +1540,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-iron-pebbles", amount = 4 },
     },
-    --icon = "__angelsrefininggraphics__/graphics/icons/iron-plate-crushed.png",
-    icon_size = 32,
     order = "a[iron]-c[pebbles]",
   },
   --COPPER
@@ -1707,8 +1615,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-copper-pebbles", amount = 4 },
     },
-    --icon = "__angelsrefininggraphics__/graphics/icons/iron-plate-crushed.png",
-    icon_size = 32,
     order = "b[copper]-c[pebbles]",
   },
 })
