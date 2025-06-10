@@ -61,7 +61,7 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "rocket-control-unit" },
+      prerequisites = { "rocket-silo" },
     },
   }
 

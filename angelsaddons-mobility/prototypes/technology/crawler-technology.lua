@@ -70,7 +70,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "rocket-control-unit", "logistic-system" },
+      prerequisites = { "rocket-silo", "logistic-system" },
     },
   }
 

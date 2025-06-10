@@ -61,7 +61,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "rocket-control-unit" },
+      prerequisites = { "rocket-silo" },
     },
   }
 
