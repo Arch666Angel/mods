@@ -29,7 +29,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "algae-brown-burning", --burn for alkali (lithium, iod, kalzium)
+    name = "algae-brown-burning",
+    localised_name = { "item-name.solid-lithium" },
     category = "smelting",
     subgroup = "bio-processing-brown",
     enabled = false,
@@ -38,7 +39,7 @@ data:extend({
       { type = "item", name = "algae-brown", amount = 20 },
     },
     results = {
-      { type = "item", name = "angels-void", amount = 1 },
+      { type = "item", name = "solid-lithium", amount = 1 },
     },
     icon_size = 32,
     order = "b[algae-brown-burning]",

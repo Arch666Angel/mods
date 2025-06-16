@@ -250,7 +250,7 @@ end
 ---@param ref_recipe data.RecipePrototype The recipe prototype that defines the common base recipe for all tiers.
 ---@param tiered_ingredients Angels.Addons.Mobility.TieredIngredient[]
 ---@param base_technology_name data.TechnologyID The name of the base technology that will unlock the created recipe tiers.
-  local function generate_train_recipe(ref_recipe, tiered_ingredients, base_technology_name)
+local function generate_train_recipe(ref_recipe, tiered_ingredients, base_technology_name)
   local recipes = {}
 
   local train_type = get_train_type(ref_recipe.name)
@@ -287,7 +287,6 @@ end
       end
 
       table.insert(recipes, copy)
-
 
       add_recipe_unlock(current_technology_name, recipe_name)
     end
