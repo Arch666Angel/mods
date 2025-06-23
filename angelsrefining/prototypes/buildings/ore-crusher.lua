@@ -34,7 +34,6 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_categories = { "ore-refining-t1" },
     crafting_speed = 1,
-    ingredient_count = 1,
     energy_source = {
       type = "burner",
       effectivity = 1,

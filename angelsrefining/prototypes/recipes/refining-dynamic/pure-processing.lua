@@ -60,9 +60,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    results = {
-      { type = "item", name = "angels-void", amount = 1 },
-    },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
         icon_size = 32
