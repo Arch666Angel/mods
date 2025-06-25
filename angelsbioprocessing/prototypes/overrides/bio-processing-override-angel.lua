@@ -9,22 +9,20 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   OV.patch_recipes({
     {
       name = "algae-brown-burning",
-      localised_name = { "item-name.solid-lithium" },
       results = { { "!!" }, { name = "solid-lithium", amount = 2 } },
     },
   })
-  -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
 
   -- MODULES
-  OV.modify_input("speed-module", { "crystal-splinter-blue" })
-  OV.modify_input("speed-module-2", { "crystal-shard-blue" })
-  OV.modify_input("speed-module-3", { "crystal-full-blue" })
-  OV.modify_input("productivity-module", { "crystal-splinter-red" })
-  OV.modify_input("productivity-module-2", { "crystal-shard-red" })
-  OV.modify_input("productivity-module-3", { "crystal-full-red" })
-  OV.modify_input("efficiency-module", { "crystal-splinter-green" })
-  OV.modify_input("efficiency-module-2", { "crystal-shard-green" })
-  OV.modify_input("efficiency-module-3", { "crystal-full-green" })
+  OV.modify_input("speed-module", { type = "item", name = "crystal-splinter-blue", amount = 1 })
+  OV.modify_input("speed-module-2", { type = "item", name = "crystal-shard-blue", amount = 1 })
+  OV.modify_input("speed-module-3", { type = "item", name = "crystal-full-blue", amount = 1 })
+  OV.modify_input("productivity-module", { type = "item", name = "crystal-splinter-red", amount = 1 })
+  OV.modify_input("productivity-module-2", { type = "item", name = "crystal-shard-red", amount = 1 })
+  OV.modify_input("productivity-module-3", { type = "item", name = "crystal-full-red", amount = 1 })
+  OV.modify_input("efficiency-module", { type = "item", name = "crystal-splinter-green", amount = 1 })
+  OV.modify_input("efficiency-module-2", { type = "item", name = "crystal-shard-green", amount = 1 })
+  OV.modify_input("efficiency-module-3", { type = "item", name = "crystal-full-green", amount = 1 })
   OV.add_prereq("speed-module", "bio-processing-crystal-splinter-1")
   OV.add_prereq("productivity-module", "bio-processing-crystal-splinter-1")
   OV.add_prereq("efficiency-module", "bio-processing-crystal-splinter-1")
@@ -36,7 +34,7 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   OV.add_prereq("efficiency-module-3", "bio-processing-crystal-full")
 
   -- BEACON
-  OV.modify_input("beacon", { "crystal-full-harmonic" })
+  OV.modify_input("beacon", { type = "item", name = "crystal-full-harmonic", amount = 1 })
   OV.add_prereq("effect-transmission", "bio-processing-crystal-full")
 elseif mods["bobplates"] then
   -- nothing to change

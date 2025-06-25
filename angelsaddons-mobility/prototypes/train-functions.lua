@@ -249,8 +249,8 @@ end
 ---Generates a tiered train recipe from the given `ref_recipe`.
 ---@param ref_recipe data.RecipePrototype The recipe prototype that defines the common base recipe for all tiers.
 ---@param tiered_ingredients Angels.Addons.Mobility.TieredIngredient[]
----@param technology_name data.TechnologyID The name of the technology that will unlock the created recipe.
-local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_name)
+---@param base_technology_name data.TechnologyID The name of the base technology that will unlock the created recipe tiers.
+local function generate_train_recipe(ref_recipe, tiered_ingredients, base_technology_name)
   local recipes = {}
 
   local train_type = get_train_type(ref_recipe.name)
@@ -262,8 +262,11 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
       local recipe_name = ref_recipe.name
       local ingredients = generate_tiered_ingredients(i, tiered_ingredients)
 
+      local current_technology_name = base_technology_name -- Reset for each tier's calculation
+
       if i > 1 then
         recipe_name = recipe_name .. "-" .. i
+        current_technology_name = base_technology_name .. "-" .. i
 
         local name_of_previous_tier = i == 2 and ref_recipe.name or (ref_recipe.name .. "-" .. (i - 1))
 
@@ -285,17 +288,13 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
 
       table.insert(recipes, copy)
 
-      if i > 1 then
-        technology_name = technology_name .. "-" .. i
-      end
-
-      add_recipe_unlock(technology_name, recipe_name)
+      add_recipe_unlock(current_technology_name, recipe_name)
     end
   else
     ref_recipe.ingredients = generate_tiered_ingredients(1, tiered_ingredients)
     table.insert(recipes, ref_recipe)
 
-    add_recipe_unlock(technology_name, ref_recipe.name)
+    add_recipe_unlock(base_technology_name, ref_recipe.name)
   end
 
   data:extend(recipes)

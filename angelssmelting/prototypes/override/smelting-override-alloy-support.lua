@@ -43,14 +43,6 @@ if mods["bobplates"] then
     else
       OV.add_unlock("automation", "bob-stone-mixing-furnace")
     end
-    OV.patch_recipes({
-      {
-        name = "bob-electric-chemical-mixing-furnace",
-        ingredients = {
-          { "bob-electric-mixing-furnace", "electric-furnace" },
-        },
-      },
-    })
 
     --update metal mixing furnace localisation
     for _, rep in pairs({

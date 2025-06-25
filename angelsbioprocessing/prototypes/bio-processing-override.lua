@@ -75,24 +75,6 @@ else
   })
 end
 
-if angelsmods.industries then
-else
-  OV.remove_unlock("bio-paper-1", "circuit-paper-board")
-
-  if bobmods and bobmods.plates then
-    OV.patch_recipes({
-      {
-        name = "algae-brown-burning",
-        localised_name = { "item-name.solid-lithium" },
-        results = { { "!!" }, { name = "solid-lithium", amount = 1, type = "item" } },
-      },
-    })
-  else
-    OV.modify_input("substrate-dish", { "paste-copper", "paste-silver" })
-    OV.disable_recipe("algae-brown-burning")
-  end
-end
-
 --ADD TILE RESTRICTION FOR ALIEN BIOMES
 if data.raw.tile["frozen-snow-0"] then
   data.raw.tree["temperate-garden"].autoplace.tile_restriction =
