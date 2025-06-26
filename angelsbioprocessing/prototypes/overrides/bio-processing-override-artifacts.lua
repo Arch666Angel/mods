@@ -221,7 +221,7 @@ if angelsmods.trigger.artifacts["yellow"] then
           { type = "item", name = "alien-pre-artifact-yellow", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-yellow", amount = 1 },
+          { type = "item", name = artifact["small-yellow"], amount = 1 },
         },
         icon_size = 32,
         order = "b[yellow]",
@@ -375,7 +375,7 @@ if angelsmods.trigger.artifacts["orange"] then
           { type = "item", name = "alien-pre-artifact-orange", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-orange", amount = 1 },
+          { type = "item", name = artifact["small-orange"], amount = 1 },
         },
         icon_size = 32,
         order = "c[orange]",
@@ -529,7 +529,7 @@ if angelsmods.trigger.artifacts["blue"] then
           { type = "item", name = "alien-pre-artifact-blue", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-blue", amount = 1 },
+          { type = "item", name = artifact["small-blue"], amount = 1 },
         },
         icon_size = 32,
         order = "d[blue]",
@@ -684,7 +684,7 @@ if angelsmods.trigger.artifacts["purple"] then
           { type = "item", name = "alien-pre-artifact-purple", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-purple", amount = 1 },
+          { type = "item", name = artifact["small-purple"], amount = 1 },
         },
         icon_size = 32,
         order = "e[purple]",
@@ -839,7 +839,7 @@ if angelsmods.trigger.artifacts["green"] then
           { type = "item", name = "alien-pre-artifact-green", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact-green", amount = 1 },
+          { type = "item", name = artifact["small-green"], amount = 1 },
         },
         icon_size = 32,
         order = "f[green]",
@@ -993,7 +993,7 @@ if angelsmods.trigger.artifacts["base"] then -- pink
           { type = "item", name = "alien-pre-artifact-base", amount = 1 },
         },
         results = {
-          { type = "item", name = "small-alien-artifact", amount = 1 },
+          { type = "item", name = artifact["small-reg"], amount = 1 },
         },
         icon_size = 32,
         order = "g[base]",

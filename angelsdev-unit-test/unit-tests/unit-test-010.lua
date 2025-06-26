@@ -488,7 +488,7 @@ local function add_ignores()
         ["powder-iron"] = true,
         ["powder-titanium"] = true,
         ["powder-tungsten"] = true,
-        ["powdered-tungsten"] = true,
+        ["bob-powdered-tungsten"] = true,
         ["powder-zinc"] = true,
       },
     }

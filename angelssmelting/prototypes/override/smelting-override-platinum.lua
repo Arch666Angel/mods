@@ -76,16 +76,8 @@ if angelsmods.trigger.smelting_products["platinum"].wire then
     },
   })
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({
-      {
-        name = "basic-platinated-copper-wire",
-        category = "bob-electronics",
-      },
-      {
-        name = "angels-wire-coil-platinum-converting",
-        category = "bob-electronics-machine",
-      },
-    })
+    OV.add_additional_category("basic-platinated-copper-wire", "electronics")
+    OV.add_additional_category("angels-wire-coil-platinum-converting", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-platinum")

@@ -104,16 +104,8 @@ if angelsmods.trigger.smelting_products["tin"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({
-      {
-        name = "basic-tinned-copper-wire",
-        category = "bob-electronics",
-      },
-      {
-        name = "angels-wire-coil-tin-converting",
-        category = "bob-electronics-machine",
-      },
-    })
+    OV.add_additional_category("basic-tinned-copper-wire", "electronics")
+    OV.add_additional_category("angels-wire-coil-tin-converting", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-tin")

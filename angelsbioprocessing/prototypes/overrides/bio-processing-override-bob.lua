@@ -83,9 +83,10 @@ if mods["bobelectronics"] then
         { type = "fluid", name = "liquid-resin", amount = 10 },
         { type = "item", name = "solid-paper", amount = 5 },
       },
-      category = "bob-electronics-with-fluid",
     },
   })
+  OV.remove_additional_category("bob-phenolic-board", "electronics")
+  OV.add_additional_category("bob-phenolic-board", "electronics-with-fluid")
   OV.add_prereq("advanced-circuit", "bio-paper-1")
   OV.add_prereq("advanced-circuit", "resins")
   angelsmods.functions.remove_productivity("bob-phenolic-board")

@@ -120,16 +120,8 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   OV.add_prereq("advanced-circuit", "angels-silver-smelting-1")
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({
-      {
-        name = "basic-silvered-copper-wire",
-        category = "bob-electronics",
-      },
-      {
-        name = "angels-wire-coil-silver-converting",
-        category = "bob-electronics-machine",
-      },
-    })
+    OV.add_additional_category("basic-silvered-copper-wire", "electronics")
+    OV.add_additional_category("angels-wire-coil-silver-converting", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-silver")

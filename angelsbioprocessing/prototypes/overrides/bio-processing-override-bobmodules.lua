@@ -174,6 +174,9 @@ if mods["bobmodules"] then
   OV.add_prereq("efficiency-module-2", "modules-2")
   OV.add_prereq("bob-pollution-create-module-2", "modules-2")
   OV.add_prereq("bob-pollution-clean-module-2", "modules-2")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-2", "modules-2")
+  end
   for _, type in pairs({ "speed", "efficiency", "productivity" }) do
     -- remove the marked as upgrade from base game
     local tech = data.raw.technology[type .. "-module-3"]
@@ -221,6 +224,9 @@ if mods["bobmodules"] then
   OV.add_prereq("efficiency-module-3", "modules-3")
   OV.add_prereq("bob-pollution-create-module-3", "modules-3")
   OV.add_prereq("bob-pollution-clean-module-3", "modules-3")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-3", "modules-3")
+  end
 
   -- tier 4 modules
   data:extend({
@@ -258,6 +264,9 @@ if mods["bobmodules"] then
   OV.add_prereq("bob-efficiency-module-4", "modules-4")
   OV.add_prereq("bob-pollution-create-module-4", "modules-4")
   OV.add_prereq("bob-pollution-clean-module-4", "modules-4")
+  if mods["quality"] then
+    OV.add_prereq("bob-quality-module-4", "modules-4")
+  end
 
   if data.raw.technology["bob-advanced-processing-unit"] then
     OV.add_prereq("modules-4", "bob-advanced-processing-unit")
