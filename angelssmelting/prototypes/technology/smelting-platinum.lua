@@ -134,7 +134,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-processed-processing",
+        recipe = "pellet-platinum",
       },
       {
         type = "unlock-recipe",

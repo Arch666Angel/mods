@@ -1,0 +1,74 @@
+{
+  "recipe":
+  [
+    ["aluminium-processed-processing", "pellet-aluminium"],
+    ["pellet-aluminium-smelting", "solid-sodium-aluminate"],
+    ["bauxite-ore-processing", "processed-aluminium"],
+    ["solid-aluminium-oxide-smelting", "ingot-aluminium"],
+    ["chrome-processed-processing", "pellet-chrome"],
+    ["pellet-chrome-smelting", "solid-chromate"],
+    ["solid-dichromate-smelting", "solid-chrome-oxide"],
+    ["chrome-ore-processing", "processed-chrome"],
+    ["solid-chromate-smelting", "solid-dichromate"],
+    ["cobalt-processed-processing", "pellet-cobalt"],
+    ["cobalt-ore-processing", "processed-cobalt"],
+    ["cobalt-processed-processing", "pellet-cobalt"],
+    ["pellet-cobalt-smelting", "solid-cobalt-hydroxide"],
+    ["copper-processed-processing", "pellet-copper"],
+    ["copper-ore-processing", "processed-copper"],
+    ["pellet-copper-smelting", "anode-copper"],
+    ["gold-processed-processing", "pellet-gold"],
+    ["gold-ore-processing", "processed-gold"],
+    ["pellet-gold-smelting", "solid-sodium-gold-cyanide"],
+    ["iron-processed-processing", "pellet-iron"],
+    ["iron-ore-processing", "processed-iron"],
+    ["ingot-iron-smelting", "ingot-steel"],
+    ["lead-processed-processing", "pellet-lead"],
+    ["lead-ore-processing", "processed-lead"],
+    ["processed-lead-smelting", "solid-lead-oxide"],
+    ["pellet-lead-smelting", "anode-lead"],
+    ["manganese-processed-processing", "pellet-manganese"],
+    ["manganese-ore-processing", "processed-manganese"],
+    ["pellet-manganese-smelting", "solid-manganese-oxide"],
+    ["nickel-processed-processing", "pellet-nickel"],
+    ["nickel-ore-processing", "processed-nickel"],
+    ["processed-nickel-smelting", "cathode-nickel"],
+    ["pellet-nickel-smelting", "solid-nickel-carbonyl"],
+
+    ["platinum-processed-processing", "pellet-platinum"],
+
+    ["silica-processed-processing", "pellet-silica"],
+    ["silica-ore-processing", "processed-silica"],
+    ["processed-silicon-smelting", "liquid-trichlorosilan"],
+    ["pellet-silicon-smelting", "gas-silane"],
+    ["silver-processed-processing", "pellet-silver"],
+    ["silver-ore-processingr", "processed-silver"],
+    ["processed-silver-smelting", "solid-silver-nitrate"],
+    ["pellet-silver-smelting", "solid-sodium-silver-cyanide"],
+    ["solid-sodium-silver-cyanide-smelting", "cathode-silver"],
+    ["tin-processed-processing", "pellet-tin"],
+    ["tin-ore-processing", "processed-tin"],
+    ["titanium-processed-processing", "pellet-titanium"],
+    ["titanium-ore-processing", "processed-titanium"],
+    ["liquid-titanium-tetrachloride-smelting", "sponge-titanium"],
+    ["tungsten-processed-processing", "pellet-tungsten"],
+    ["tungsten-ore-processing", "processed-tungsten"],
+    ["pellet-tungsten-smelting", "liquid-tungstic-acid"],
+    ["solid-tungsten-oxide-smelting", "gas-tungsten-hexafluoride"],
+    ["gas-tungsten-hexafluoride-smelting", "powder-tungsten"],
+    ["zinc-processed-processing", "pellet-zinc"],
+    ["zinc-ore-processing", "processed-zinc"],
+    ["pellet-zinc-smelting", "solid-zinc-oxide"],
+    ["zinc-processed-processing", "cathode-zinc"]
+  ],
+  "item":
+  [
+    ["clay-brick-raw", "angels-clay-brick-raw"],
+    ["clay-brick", "angels-clay-brick"]
+  ],
+  "tile":
+  [
+    ["clay-bricks", "angels-clay-bricks"]
+  ]
+}
+

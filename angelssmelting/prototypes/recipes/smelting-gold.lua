@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "gold-ore-processing",
+    name = "processed-gold",
     localised_name = { "item-name.processed-gold" },
     category = "ore-processing-3",
     subgroup = "angels-gold",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "gold-processed-processing",
+    name = "pellet-gold",
     --icon = "__angelssmeltinggraphics__/graphics/icons/pellet-gold.png",
     localised_name = { "item-name.pellet-gold" },
     category = "pellet-pressing-3",
@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-gold-smelting",
+    name = "solid-sodium-gold-cyanide",
     localised_name = { "item-name.solid-sodium-gold-cyanide" },
     category = "chemical-smelting-4",
     subgroup = "angels-gold",

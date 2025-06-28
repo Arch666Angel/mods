@@ -48,11 +48,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-ore-processing",
+        recipe = "processed-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-nickel-smelting",
+        recipe = "cathode-nickel",
       },
       {
         type = "unlock-recipe",
@@ -119,11 +119,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-processed-processing",
+        recipe = "pellet-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-nickel-smelting",
+        recipe = "solid-nickel-carbonyl",
       },
       {
         type = "unlock-recipe",

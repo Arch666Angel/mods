@@ -50,7 +50,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "chrome-ore-processing",
+        recipe = "processed-chrome",
       },
       {
         type = "unlock-recipe",
@@ -121,19 +121,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "chrome-processed-processing",
+        recipe = "pellet-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-chrome-smelting",
+        recipe = "solid-chromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-chromate-smelting",
+        recipe = "solid-dichromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-dichromate-smelting",
+        recipe = "solid-chrome-oxide",
       },
       {
         type = "unlock-recipe",

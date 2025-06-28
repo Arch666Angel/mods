@@ -5,7 +5,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "silver-ore-processing",
+    name = "processed-silver",
     localised_name = { "item-name.processed-silver" },
     category = "ore-processing-2",
     subgroup = "angels-silver",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "silver-processed-processing",
+    name = "pellet-silver",
     localised_name = { "item-name.pellet-silver" },
     category = "pellet-pressing-2",
     subgroup = "angels-silver",
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "processed-silver-smelting",
+    name = "solid-silver-nitrate",
     localised_name = { "item-name.solid-silver-nitrate" },
     category = "liquifying",
     subgroup = "angels-silver",
@@ -56,7 +56,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-silver-smelting",
+    name = "solid-sodium-silver-cyanide",
     localised_name = { "item-name.solid-sodium-silver-cyanide" },
     category = "chemical-smelting-3",
     subgroup = "angels-silver",
@@ -77,7 +77,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-sodium-silver-cyanide-smelting",
+    name = "cathode-silver",
     localised_name = { "item-name.cathode-silver" },
     category = "chemical-smelting-3",
     subgroup = "angels-silver",

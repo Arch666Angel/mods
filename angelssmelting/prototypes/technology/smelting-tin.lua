@@ -50,7 +50,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tin-ore-processing",
+        recipe = "processed-tin",
       },
       {
         type = "unlock-recipe",
@@ -123,7 +123,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tin-processed-processing",
+        recipe = "pellet-tin",
       },
       {
         type = "unlock-recipe",

@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "titanium-ore-processing",
+    name = "processed-titanium",
     localised_name = { "item-name.processed-titanium" },
     category = "ore-processing-3",
     subgroup = "angels-titanium",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "titanium-processed-processing",
+    name = "pellet-titanium",
     localised_name = { "item-name.pellet-titanium" },
     category = "pellet-pressing-3",
     subgroup = "angels-titanium",
@@ -90,7 +90,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "liquid-titanium-tetrachloride-smelting",
+    name = "sponge-titanium",
     localised_name = { "item-name.sponge-titanium" },
     category = "chemical-smelting-2",
     subgroup = "angels-titanium",

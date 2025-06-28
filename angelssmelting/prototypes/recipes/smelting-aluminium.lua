@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "bauxite-ore-processing",
+    name = "processed-aluminium",
     localised_name = { "item-name.processed-aluminium" },
     category = "ore-processing-2",
     subgroup = "angels-aluminium",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "aluminium-processed-processing",
+    name = "pellet-aluminium",
     localised_name = { "item-name.pellet-aluminium" },
     category = "pellet-pressing-2",
     subgroup = "angels-aluminium",
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-aluminium-smelting",
+    name = "solid-sodium-aluminate",
     localised_name = { "item-name.solid-sodium-aluminate" },
     category = "chemical-smelting-3",
     subgroup = "angels-aluminium",
@@ -57,7 +57,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bauxite-ore-smelting",
+    name = "solid-aluminium-hydroxid",
     localised_name = { "item-name.solid-aluminium-hydroxide" },
     category = "powder-mixing",
     subgroup = "angels-aluminium",
@@ -148,7 +148,7 @@ data:extend({
   -- SMELTING RESULT
   {
     type = "recipe",
-    name = "solid-aluminium-oxide-smelting",
+    name = "ingot-aluminium",
     localised_name = { "item-name.ingot-aluminium" },
     category = "blast-smelting-2",
     subgroup = "angels-aluminium",

@@ -54,7 +54,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-ore-processing",
+        recipe = "processed-gold",
       },
       {
         type = "unlock-recipe",
@@ -140,11 +140,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-processed-processing",
+        recipe = "pellet-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-gold-smelting",
+        recipe = "solid-sodium-gold-cyanide",
       },
       {
         type = "unlock-recipe",

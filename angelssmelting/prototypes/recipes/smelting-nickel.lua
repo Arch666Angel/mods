@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "nickel-ore-processing",
+    name = "processed-nickel",
     localised_name = { "item-name.processed-nickel" },
     category = "ore-processing-2",
     subgroup = "angels-nickel",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nickel-processed-processing",
+    name = "pellet-nickel",
     localised_name = { "item-name.pellet-nickel" },
     category = "pellet-pressing-2",
     subgroup = "angels-nickel",
@@ -36,7 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "processed-nickel-smelting",
+    name = "cathode-nickel",
     localised_name = { "item-name.cathode-nickel" },
     category = "chemical-smelting-2",
     subgroup = "angels-nickel",
@@ -53,7 +53,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-nickel-smelting",
+    name = "solid-nickel-carbonyl",
     localised_name = { "item-name.solid-nickel-carbonyl" },
     category = "blast-smelting-4",
     subgroup = "angels-nickel",

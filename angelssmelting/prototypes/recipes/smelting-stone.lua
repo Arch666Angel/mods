@@ -69,7 +69,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-clay-brick-raw",
-    localised_name = { "item-name.clay-brick-raw" },
+    localised_name = { "item-name.angels-clay-brick-raw" },
     category = "crafting",
     subgroup = "angels-stone",
     energy_required = 4,
@@ -80,25 +80,25 @@ data:extend({
       { type = "item", name = "solid-lime", amount = 2 },
     },
     results = {
-      { type = "item", name = "clay-brick-raw", amount = 4 },
+      { type = "item", name = "angels-clay-brick-raw", amount = 4 },
     },
-    order = "d[clay-brick-raw]",
+    order = "d[angels-clay-brick-raw]",
   },
   {
     type = "recipe",
     name = "angels-clay-brick",
-    localised_name = { "item-name.clay-brick" },
+    localised_name = { "item-name.angels-clay-brick" },
     category = "smelting",
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "clay-brick-raw", amount = 4 },
+      { type = "item", name = "angels-clay-brick-raw", amount = 4 },
     },
     results = {
-      { type = "item", name = "clay-brick", amount = 4 },
+      { type = "item", name = "angels-clay-brick", amount = 4 },
     },
-    order = "e[clay-brick]",
+    order = "e[angels-clay-brick]",
   },
   -- CASTING INTERMEDIATE
   -- order f reserved for stone brick (see override)

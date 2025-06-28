@@ -57,11 +57,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silica-ore-processing",
+        recipe = "processed-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-silicon-smelting",
+        recipe = "liquid-trichlorosilane",
       },
       {
         type = "unlock-recipe",
@@ -97,11 +97,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silica-processed-processing",
+        recipe = "pellet-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-silicon-smelting",
+        recipe = "gas-silane",
       },
       {
         type = "unlock-recipe",

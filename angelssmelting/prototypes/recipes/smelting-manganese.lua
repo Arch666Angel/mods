@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "manganese-ore-processing",
+    name = "processed-manganese",
     localised_name = { "item-name.processed-manganese" },
     category = "ore-processing",
     subgroup = "angels-manganese",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "manganese-processed-processing",
+    name = "pellet-manganese",
     localised_name = { "item-name.pellet-manganese" },
     category = "pellet-pressing",
     subgroup = "angels-manganese",
@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-manganese-smelting",
+    name = "solid-manganese-oxide",
     localised_name = { "item-name.solid-manganese-oxide" },
     category = "chemical-smelting-2",
     subgroup = "angels-manganese",

@@ -43,7 +43,7 @@ else
   angelsmods.functions.hide("pellet-tin")
   angelsmods.functions.hide("ingot-tin")
   angelsmods.functions.hide("liquid-molten-tin")
-  OV.disable_recipe({ "tin-ore-processing", "tin-processed-processing" })
+  OV.disable_recipe({ "processed-tin", "pellet-tin" })
   OV.disable_recipe({ "tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting" })
   OV.disable_recipe({ "molten-tin-smelting" })
   OV.disable_technology({ "angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3" })

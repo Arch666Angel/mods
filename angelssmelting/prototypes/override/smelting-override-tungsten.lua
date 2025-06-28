@@ -117,14 +117,14 @@ if
   and not angelsmods.trigger.smelting_products["tungsten"].powder
 then
   OV.hide_recipe({
-    "tungsten-ore-processing",
-    "tungsten-processed-processing",
+    "processed-tungsten",
+    "pellet-tungsten",
     "tungsten-ore-smelting",
     "liquid-tungstic-acid-smelting",
-    "pellet-tungsten-smelting",
-    "solid-tungsten-oxide-smelting",
+    "liquid-tungstic-acid",
+    "gas-tungsten-hexafluoride",
     "processed-tungsten-smelting",
-    "gas-tungsten-hexafluoride-smelting",
+    "powder-tungsten",
     "solid-ammonium-paratungstate-smelting",
   })
 end

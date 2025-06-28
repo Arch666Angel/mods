@@ -46,9 +46,9 @@ else
   angelsmods.functions.hide("cathode-gold")
   angelsmods.functions.hide("ingot-gold")
   angelsmods.functions.hide("liquid-molten-gold")
-  OV.disable_recipe({ "gold-ore-processing", "gold-processed-processing" })
+  OV.disable_recipe({ "processed-gold", "pellet-gold" })
   OV.disable_recipe({
-    "pellet-gold-smelting",
+    "solid-sodium-gold-cyanide",
     "liquid-chlorauric-acid",
     "processed-gold-smelting",
     "solid-sodium-gold-cyanide-smelting",

@@ -35,7 +35,7 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   else
     OV.disable_recipe({ "manganese-processed-processing-alt" })
     -- remove number icon as there is only one tier...
-    local maganese_oxide = data.raw["recipe"]["pellet-manganese-smelting"]
+    local maganese_oxide = data.raw["recipe"]["solid-manganese-oxide"]
     if maganese_oxide then
       maganese_oxide.icons = nil
     end
@@ -48,9 +48,9 @@ else
   angelsmods.functions.hide("ingot-manganese")
   angelsmods.functions.hide("liquid-molten-manganese")
   angelsmods.functions.hide("solid-iron-hydroxide")
-  OV.disable_recipe({ "manganese-ore-processing", "manganese-processed-processing" })
+  OV.disable_recipe({ "processed-manganese", "pellet-manganese" })
   OV.disable_recipe({
-    "pellet-manganese-smelting",
+    "solid-manganese-oxide",
     "processed-manganese-smelting",
     "manganese-processed-processing-alt",
     "solid-manganese-oxide-smelting",

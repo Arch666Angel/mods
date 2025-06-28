@@ -47,11 +47,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-ore-processing",
+        recipe = "processed-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-lead-smelting",
+        recipe = "solid-lead-oxide",
       },
       {
         type = "unlock-recipe",
@@ -117,11 +117,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-processed-processing",
+        recipe = "pellet-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-lead-smelting",
+        recipe = "anode-lead",
       },
       {
         type = "unlock-recipe",

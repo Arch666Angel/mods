@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ingot-iron-smelting",
+        recipe = "ingot-steel",
       },
       {
         type = "unlock-recipe",

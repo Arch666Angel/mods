@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "clay-brick-raw",
+    name = "angels-clay-brick-raw",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay-raw.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -31,14 +31,14 @@ data:extend({
   },
   {
     type = "item",
-    name = "clay-brick",
+    name = "angels-clay-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "e",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "clay-bricks",
+      result = "angels-clay-bricks",
       condition_size = 2,
       condition = {layers = {water_tile = true}},
     },

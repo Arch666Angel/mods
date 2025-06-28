@@ -4,7 +4,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "copper-ore-processing",
+    name = "processed-copper",
     localised_name = { "item-name.processed-copper" },
     category = "ore-processing",
     subgroup = "angels-copper",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "copper-processed-processing",
+    name = "pellet-copper",
     localised_name = { "item-name.pellet-copper" },
     category = "pellet-pressing",
     subgroup = "angels-copper",
@@ -37,7 +37,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-copper-smelting",
+    name = "anode-copper",
     localised_name = { "item-name.anode-copper" },
     category = "blast-smelting-3",
     subgroup = "angels-copper",

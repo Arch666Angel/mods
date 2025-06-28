@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "platinum-processed-processing",
+    name = "pellet-platinum",
     localised_name = { "item-name.pellet-platinum" },
     category = "pellet-pressing-4",
     subgroup = "angels-platinum",

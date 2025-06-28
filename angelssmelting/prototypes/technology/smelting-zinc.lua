@@ -54,7 +54,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-processing",
+        recipe = "processed-zinc",
       },
       {
         type = "unlock-recipe",
@@ -121,15 +121,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-processed-processing",
+        recipe = "pellet-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-zinc-smelting",
+        recipe = "solid-zinc-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-zinc-oxide-smelting",
+        recipe = "cathode-zinc",
       },
       {
         type = "unlock-recipe",

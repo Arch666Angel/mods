@@ -5,7 +5,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "chrome-ore-processing",
+    name = "processed-chrome",
     localised_name = { "item-name.processed-chrome" },
     category = "ore-processing-4",
     subgroup = "angels-chrome",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "chrome-processed-processing",
+    name = "pellet-chrome",
     localised_name = { "item-name.pellet-chrome" },
     category = "pellet-pressing-4",
     subgroup = "angels-chrome",
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-chrome-smelting",
+    name = "solid-chromate",
     localised_name = { "item-name.solid-chromate" },
     category = "blast-smelting-4",
     subgroup = "angels-chrome",
@@ -56,7 +56,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-chromate-smelting",
+    name = "solid-dichromate",
     localised_name = { "item-name.solid-dichromate" },
     category = "liquifying",
     subgroup = "angels-chrome",
@@ -82,7 +82,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-dichromate-smelting",
+    name = "solid-chrome-oxide",
     localised_name = { "item-name.solid-chrome-oxide" },
     category = "chemical-smelting-4",
     subgroup = "angels-chrome",

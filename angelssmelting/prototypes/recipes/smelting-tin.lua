@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "tin-ore-processing",
+    name = "processed-tin",
     localised_name = { "item-name.processed-tin" },
     category = "ore-processing",
     subgroup = "angels-tin",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "tin-processed-processing",
+    name = "pellet-tin",
     localised_name = { "item-name.pellet-tin" },
     category = "pellet-pressing",
     subgroup = "angels-tin",
