@@ -2,7 +2,7 @@ data:extend({
   --TIER 3 MIX
   {
     type = "recipe",
-    name = "angelsore-crystal-mix1-processing", --titanium
+    name = "angels-ore-crystal-mix1-processing", --titanium
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-crystal-mix2-processing", --gold
+    name = "angels-ore-crystal-mix2-processing", --gold
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
@@ -44,7 +44,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-crystal-mix3-processing", --cobalt
+    name = "angels-ore-crystal-mix3-processing", --cobalt
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
@@ -65,7 +65,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-crystal-mix4-processing", --unused
+    name = "angels-ore-crystal-mix4-processing", --unused
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
@@ -86,7 +86,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-crystal-mix5-processing", --uranium
+    name = "angels-ore-crystal-mix5-processing", --uranium
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",
@@ -108,7 +108,7 @@ data:extend({
   --TIER 3.5
   {
     type = "recipe",
-    name = "angelsore8-crystal-processing",
+    name = "angels-ore8-crystal-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
@@ -134,7 +134,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore9-crystal-processing",
+    name = "angels-ore9-crystal-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 1.5,
@@ -161,7 +161,7 @@ data:extend({
   -- TIER 4 MIX
   {
     type = "recipe",
-    name = "angelsore-crystal-mix6-processing", --thorium
+    name = "angels-ore-crystal-mix6-processing", --thorium
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-4",
     subgroup = "ore-sorting-advanced",

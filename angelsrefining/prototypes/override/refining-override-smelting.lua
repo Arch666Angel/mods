@@ -56,12 +56,12 @@ end
 -------------------------------------------------------------------------------
 if ore_exists("lead") then
 else
-  OV.disable_recipe("angelsore5-crushed-smelting")
+  OV.disable_recipe("angels-ore5-crushed-smelting")
 end
 
 if ore_exists("tin") then
 else
-  OV.disable_recipe("angelsore6-crushed-smelting")
+  OV.disable_recipe("angels-ore6-crushed-smelting")
 end
 
 -------------------------------------------------------------------------------

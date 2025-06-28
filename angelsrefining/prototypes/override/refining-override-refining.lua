@@ -100,21 +100,21 @@ else
   angelsmods.functions.hide("angels-ore8-slime")
 
   OV.disable_recipe({
-    "angelsore8-powder",
-    "angelsore8-powder-processing",
-    "angelsore8-sludge",
-    "angelsore8-dust",
-    "angelsore8-dust-processing",
-    "angelsore8-solution",
-    "angelsore8-anode-sludge",
-    "angelsore8-anode-sludge-filtering",
-    "angelsore8-crystal",
-    "angelsore8-crystal-processing",
+    "angels-ore8-powder",
+    "angels-ore8-powder-processing",
+    "angels-ore8-sludge",
+    "angels-ore8-dust",
+    "angels-ore8-dust-processing",
+    "angels-ore8-solution",
+    "angels-ore8-anode-sludge",
+    "angels-ore8-anode-sludge-filtering",
+    "angels-ore8-crystal",
+    "angels-ore8-crystal-processing",
   })
 
   OV.patch_recipes({
     {
-      name = "angelsore-chunk-mix6-processing",
+      name = "angels-ore-chunk-mix6-processing",
       ingredients = {
         { name = "angels-ore3-chunk", amount = "angels-ore8-powder" },
       },
@@ -142,16 +142,16 @@ else
   angelsmods.functions.hide("angels-ore9-slime")
 
   OV.disable_recipe({
-    "angelsore9-powder",
-    "angelsore9-powder-processing",
-    "angelsore9-sludge",
-    "angelsore9-dust",
-    "angelsore9-dust-processing",
-    "angelsore9-solution",
-    "angelsore9-anode-sludge",
-    "angelsore9-anode-sludge-filtering",
-    "angelsore9-crystal",
-    "angelsore9-crystal-processing",
+    "angels-ore9-powder",
+    "angels-ore9-powder-processing",
+    "angels-ore9-sludge",
+    "angels-ore9-dust",
+    "angels-ore9-dust-processing",
+    "angels-ore9-solution",
+    "angels-ore9-anode-sludge",
+    "angels-ore9-anode-sludge-filtering",
+    "angels-ore9-crystal",
+    "angels-ore9-crystal-processing",
   })
 end
 

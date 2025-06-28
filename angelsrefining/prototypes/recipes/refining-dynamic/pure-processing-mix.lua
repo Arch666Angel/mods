@@ -2,7 +2,7 @@ data:extend({
   --TIER 4 MIX
   {
     type = "recipe",
-    name = "angelsore-pure-mix1-processing", --tungsten
+    name = "angels-ore-pure-mix1-processing", --tungsten
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-pure-mix2-processing", --platinum
+    name = "angels-ore-pure-mix2-processing", --platinum
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",
@@ -44,7 +44,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-pure-mix3-processing",
+    name = "angels-ore-pure-mix3-processing",
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-5",
     subgroup = "ore-sorting-advanced",

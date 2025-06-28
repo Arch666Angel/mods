@@ -318,7 +318,6 @@ data:extend({
     name = "basic-silvered-copper-wire",
     localised_name = { "item-name.angels-wire-silver" },
     subgroup = "angels-silver-casting",
-    order = "m",
     enabled = false,
     category = "crafting",
     energy_required = 0.5,

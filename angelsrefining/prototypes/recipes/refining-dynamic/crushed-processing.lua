@@ -2,7 +2,7 @@ data:extend({
   --Tier 1
   {
     type = "recipe",
-    name = "angelsore1-crushed-processing",
+    name = "angels-ore1-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -22,11 +22,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "a[angelsore1-crushed-processing]",
+    order = "a[angels-ore1-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore2-crushed-processing",
+    name = "angels-ore2-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -46,11 +46,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "b[angelsore2-crushed-processing]",
+    order = "b[angels-ore2-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore3-crushed-processing",
+    name = "angels-ore3-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -70,11 +70,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "c[angelsore3-crushed-processing]",
+    order = "c[angels-ore3-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore4-crushed-processing",
+    name = "angels-ore4-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -94,11 +94,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "d[angelsore4-crushed-processing]",
+    order = "d[angels-ore4-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore5-crushed-processing",
+    name = "angels-ore5-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -118,11 +118,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "e[angelsore5-crushed-processing]",
+    order = "e[angels-ore5-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore6-crushed-processing",
+    name = "angels-ore6-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -142,6 +142,6 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "f[angelsore6-crushed-processing]",
+    order = "f[angels-ore6-crushed-processing]",
   },
 })

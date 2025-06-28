@@ -2,7 +2,7 @@ data:extend({
   --TIER 4
   {
     type = "recipe",
-    name = "angelsore1-pure-processing",
+    name = "angels-ore1-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -22,11 +22,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "a[angelsore1-pure-processing]",
+    order = "a[angels-ore1-pure-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore2-pure-processing",
+    name = "angels-ore2-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -46,11 +46,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "b[angelsore2-pure-processing]",
+    order = "b[angels-ore2-pure-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore3-pure-processing",
+    name = "angels-ore3-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -70,11 +70,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "c[angelsore3-pure-processing]",
+    order = "c[angels-ore3-pure-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore4-pure-processing",
+    name = "angels-ore4-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -94,11 +94,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "d[angelsore4-pure-processing]",
+    order = "d[angels-ore4-pure-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore5-pure-processing",
+    name = "angels-ore5-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -118,11 +118,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "e[angelsore5-pure-processing]",
+    order = "e[angels-ore5-pure-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore6-pure-processing",
+    name = "angels-ore6-pure-processing",
     category = "ore-sorting-4",
     subgroup = "ore-sorting-t4",
     energy_required = 2,
@@ -142,6 +142,6 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "f[angelsore6-pure-processing]",
+    order = "f[angels-ore6-pure-processing]",
   },
 })

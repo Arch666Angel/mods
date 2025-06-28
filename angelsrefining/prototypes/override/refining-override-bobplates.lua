@@ -72,27 +72,27 @@ if mods["bobplates"] then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-1",
+          recipe = "angels-ore7-crystallization-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-2",
+          recipe = "angels-ore7-crystallization-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-3",
+          recipe = "angels-ore7-crystallization-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-4",
+          recipe = "angels-ore7-crystallization-4",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-5",
+          recipe = "angels-ore7-crystallization-5",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-6",
+          recipe = "angels-ore7-crystallization-6",
         },
       },
       unit = {
@@ -189,15 +189,15 @@ end
 if mods["bobplates"] then
   OV.patch_recipes({
     {
-      name = "angelsore1-crushed-smelting",
+      name = "angels-ore1-crushed-smelting",
       subgroup = "bob-material-smelting",
     },
     {
-      name = "angelsore3-crushed-smelting",
+      name = "angels-ore3-crushed-smelting",
       subgroup = "bob-material-smelting",
     },
     {
-      name = "angelsore5-crushed-smelting",
+      name = "angels-ore5-crushed-smelting",
       localised_name = { "item-name.bob-lead-plate" },
       results = {
         { "!!" },
@@ -212,7 +212,7 @@ if mods["bobplates"] then
       subgroup = "bob-material-smelting",
     },
     {
-      name = "angelsore6-crushed-smelting",
+      name = "angels-ore6-crushed-smelting",
       localised_name = { "item-name.bob-tin-plate" },
       results = {
         { "!!" },

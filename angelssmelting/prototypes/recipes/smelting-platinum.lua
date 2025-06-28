@@ -303,7 +303,6 @@ data:extend({
     name = "basic-platinated-copper-wire",
     localised_name = { "item-name.angels-wire-platinum" },
     subgroup = "angels-platinum-casting",
-    order = "m",
     enabled = false,
     category = "crafting",
     energy_required = 0.5,

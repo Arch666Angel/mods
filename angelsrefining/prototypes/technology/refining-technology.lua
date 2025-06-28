@@ -19,43 +19,43 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crushed",
+        recipe = "angels-ore2-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crushed",
+        recipe = "angels-ore4-crushed",
       },
       -- {
       -- type = "unlock-recipe",
-      -- recipe = "angelsore5-crushed"
+      -- recipe = "angels-ore5-crushed"
       -- },
       -- {
       -- type = "unlock-recipe",
-      -- recipe = "angelsore6-crushed"
+      -- recipe = "angels-ore6-crushed"
       -- },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-crushed-processing",
+        recipe = "angels-ore1-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crushed-processing",
+        recipe = "angels-ore2-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crushed-processing",
+        recipe = "angels-ore3-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crushed-processing",
+        recipe = "angels-ore4-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crushed-processing",
+        recipe = "angels-ore5-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crushed-processing",
+        recipe = "angels-ore6-crushed-processing",
       },
       {
         type = "unlock-recipe",
@@ -91,19 +91,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix1-processing",
+        recipe = "angels-ore-crushed-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix2-processing",
+        recipe = "angels-ore-crushed-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix3-processing",
+        recipe = "angels-ore-crushed-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix4-processing",
+        recipe = "angels-ore-crushed-mix4-processing",
       },
     },
     unit = {
@@ -260,51 +260,51 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-chunk",
+        recipe = "angels-ore1-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-chunk",
+        recipe = "angels-ore2-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-chunk",
+        recipe = "angels-ore3-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-chunk",
+        recipe = "angels-ore4-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-chunk",
+        recipe = "angels-ore5-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-chunk",
+        recipe = "angels-ore6-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-chunk-processing",
+        recipe = "angels-ore1-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-chunk-processing",
+        recipe = "angels-ore2-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-chunk-processing",
+        recipe = "angels-ore3-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-chunk-processing",
+        recipe = "angels-ore4-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-chunk-processing",
+        recipe = "angels-ore5-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-chunk-processing",
+        recipe = "angels-ore6-chunk-processing",
       },
     },
     unit = {
@@ -344,31 +344,31 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix1-processing",
+        recipe = "angels-ore-chunk-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix2-processing",
+        recipe = "angels-ore-chunk-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix3-processing",
+        recipe = "angels-ore-chunk-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix4-processing",
+        recipe = "angels-ore-chunk-mix4-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix5-processing",
+        recipe = "angels-ore-chunk-mix5-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix6-processing",
+        recipe = "angels-ore-chunk-mix6-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix7-processing",
+        recipe = "angels-ore-chunk-mix7-processing",
       },
     },
     unit = {
@@ -644,51 +644,51 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-crystal",
+        recipe = "angels-ore1-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crystal",
+        recipe = "angels-ore2-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crystal",
+        recipe = "angels-ore3-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crystal",
+        recipe = "angels-ore4-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crystal",
+        recipe = "angels-ore5-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crystal",
+        recipe = "angels-ore6-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-crystal-processing",
+        recipe = "angels-ore1-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crystal-processing",
+        recipe = "angels-ore2-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crystal-processing",
+        recipe = "angels-ore3-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crystal-processing",
+        recipe = "angels-ore4-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crystal-processing",
+        recipe = "angels-ore5-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crystal-processing",
+        recipe = "angels-ore6-crystal-processing",
       },
     },
     unit = {
@@ -732,23 +732,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix1-processing",
+        recipe = "angels-ore-crystal-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix2-processing",
+        recipe = "angels-ore-crystal-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix3-processing",
+        recipe = "angels-ore-crystal-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix4-processing",
+        recipe = "angels-ore-crystal-mix4-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix5-processing",
+        recipe = "angels-ore-crystal-mix5-processing",
       },
     },
     unit = {
@@ -812,51 +812,51 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-pure",
+        recipe = "angels-ore1-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-pure",
+        recipe = "angels-ore2-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-pure",
+        recipe = "angels-ore3-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-pure",
+        recipe = "angels-ore4-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-pure",
+        recipe = "angels-ore5-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-pure",
+        recipe = "angels-ore6-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-pure-processing",
+        recipe = "angels-ore1-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-pure-processing",
+        recipe = "angels-ore2-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-pure-processing",
+        recipe = "angels-ore3-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-pure-processing",
+        recipe = "angels-ore4-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-pure-processing",
+        recipe = "angels-ore5-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-pure-processing",
+        recipe = "angels-ore6-pure-processing",
       },
     },
     unit = {
@@ -901,15 +901,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix1-processing",
+        recipe = "angels-ore-pure-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix2-processing",
+        recipe = "angels-ore-pure-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix3-processing",
+        recipe = "angels-ore-pure-mix3-processing",
       },
     },
     unit = {
@@ -937,19 +937,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crushed",
+        recipe = "angels-ore8-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crushed",
+        recipe = "angels-ore9-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crushed-processing",
+        recipe = "angels-ore8-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crushed-processing",
+        recipe = "angels-ore9-crushed-processing",
       },
     },
     unit = {
@@ -978,19 +978,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-powder",
+        recipe = "angels-ore8-powder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-powder",
+        recipe = "angels-ore9-powder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-powder-processing",
+        recipe = "angels-ore8-powder-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-powder-processing",
+        recipe = "angels-ore9-powder-processing",
       },
       {
         type = "unlock-recipe",
@@ -1029,27 +1029,27 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-sludge",
+        recipe = "angels-ore8-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-dust",
+        recipe = "angels-ore8-dust",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-sludge",
+        recipe = "angels-ore9-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-dust",
+        recipe = "angels-ore9-dust",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-dust-processing",
+        recipe = "angels-ore8-dust-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-dust-processing",
+        recipe = "angels-ore9-dust-processing",
       },
     },
     unit = {
@@ -1079,47 +1079,47 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-solution",
+        recipe = "angels-ore8-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-anode-sludge-filtering",
+        recipe = "angels-ore8-anode-sludge-filtering",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-anode-sludge",
+        recipe = "angels-ore8-anode-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crystal",
+        recipe = "angels-ore8-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-solution",
+        recipe = "angels-ore9-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-anode-sludge-filtering",
+        recipe = "angels-ore9-anode-sludge-filtering",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-anode-sludge",
+        recipe = "angels-ore9-anode-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crystal",
+        recipe = "angels-ore9-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crystal-processing",
+        recipe = "angels-ore8-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crystal-processing",
+        recipe = "angels-ore9-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix6-processing",
+        recipe = "angels-ore-crystal-mix6-processing",
       },
     },
     unit = {

@@ -2,7 +2,7 @@ data:extend({
   --TIER 1 MIX
   {
     type = "recipe",
-    name = "angelsore-crushed-mix1-processing", --iron
+    name = "angels-ore-crushed-mix1-processing", --iron
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-advanced",
@@ -18,11 +18,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "a[angelsore-crushed-mix1-processing]",
+    order = "a[angels-ore-crushed-mix1-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore-crushed-mix2-processing", --copper
+    name = "angels-ore-crushed-mix2-processing", --copper
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-advanced",
@@ -38,11 +38,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "b[angelsore-crushed-mix2-processing]",
+    order = "b[angels-ore-crushed-mix2-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore-crushed-mix3-processing", --lead
+    name = "angels-ore-crushed-mix3-processing", --lead
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-advanced",
@@ -58,11 +58,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "c[angelsore-crushed-mix3-processing]",
+    order = "c[angels-ore-crushed-mix3-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore-crushed-mix4-processing", --tin
+    name = "angels-ore-crushed-mix4-processing", --tin
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-2",
     subgroup = "ore-sorting-advanced",
@@ -78,12 +78,12 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "d[angelsore-crushed-mix4-processing]",
+    order = "d[angels-ore-crushed-mix4-processing]",
   },
   --TIER 1.5
   {
     type = "recipe",
-    name = "angelsore8-crushed-processing",
+    name = "angels-ore8-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -109,7 +109,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore8-powder-processing",
+    name = "angels-ore8-powder-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1,
@@ -135,7 +135,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore9-crushed-processing",
+    name = "angels-ore9-crushed-processing",
     category = "ore-sorting",
     subgroup = "ore-sorting-t1",
     energy_required = 1,
@@ -161,7 +161,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore9-powder-processing",
+    name = "angels-ore9-powder-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1,

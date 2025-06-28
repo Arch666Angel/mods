@@ -284,7 +284,6 @@ data:extend({
     name = "basic-tinned-copper-wire",
     localised_name = { "item-name.angels-wire-tin" },
     subgroup = "angels-tin-casting",
-    order = "m",
     enabled = false,
     category = "crafting",
     energy_required = 0.5,
