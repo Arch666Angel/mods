@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-lead",
+    name = "lead-ore-processing",
     localised_name = { "item-name.processed-lead" },
     category = "ore-processing",
     subgroup = "angels-lead",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-lead",
+    name = "lead-processed-processing",
     localised_name = { "item-name.pellet-lead" },
     category = "pellet-pressing",
     subgroup = "angels-lead",
@@ -36,7 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-lead-oxide",
+    name = "processed-lead-smelting",
     localised_name = { "item-name.solid-lead-oxide" },
     category = "blast-smelting-2",
     subgroup = "angels-lead",
@@ -55,7 +55,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "anode-lead",
+    name = "pellet-lead-smelting",
     localised_name = { "item-name.anode-lead" },
     category = "blast-smelting-3",
     subgroup = "angels-lead",
@@ -188,7 +188,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "liquid-molten-lead",
+    name = "molten-lead-smelting",
     localised_name = { "fluid-name.liquid-molten-lead" },
     category = "induction-smelting",
     subgroup = "angels-lead-casting",

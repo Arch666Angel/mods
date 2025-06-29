@@ -52,7 +52,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-manganese",
+        recipe = "manganese-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -122,7 +122,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-manganese",
+        recipe = "manganese-processed-processing",
       },
       {
         type = "unlock-recipe",
@@ -130,7 +130,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-manganese-oxide",
+        recipe = "pellet-manganese-smelting",
       },
       {
         type = "unlock-recipe",

@@ -18,11 +18,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-tungsten-hexafluoride",
+        recipe = "solid-tungsten-oxide-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-tungsten",
+        recipe = "gas-tungsten-hexafluoride-smelting",
       },
       {
         type = "unlock-recipe",
@@ -60,7 +60,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-tungsten",
+        recipe = "tungsten-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -100,11 +100,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-tungsten",
+        recipe = "tungsten-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-tungstic-acid",
+        recipe = "pellet-tungsten-smelting",
       },
       {
         type = "unlock-recipe",

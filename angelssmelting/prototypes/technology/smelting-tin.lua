@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-tin",
+        recipe = "molten-tin-smelting",
       },
       {
         type = "unlock-recipe",
@@ -50,7 +50,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-tin",
+        recipe = "tin-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -123,7 +123,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-tin",
+        recipe = "tin-processed-processing",
       },
       {
         type = "unlock-recipe",

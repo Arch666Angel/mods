@@ -55,7 +55,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-cobalt",
+        recipe = "cobalt-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -128,11 +128,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-cobalt",
+        recipe = "cobalt-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-cobalt-hydroxide",
+        recipe = "pellet-cobalt-smelting",
       },
       {
         type = "unlock-recipe",

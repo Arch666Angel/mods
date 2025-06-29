@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-tungsten",
+    name = "tungsten-ore-processing",
     localised_name = { "item-name.processed-tungsten" },
     category = "ore-processing-4",
     subgroup = "angels-tungsten",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-tungsten",
+    name = "tungsten-processed-processing",
     localised_name = { "item-name.pellet-tungsten" },
     category = "pellet-pressing-4",
     subgroup = "angels-tungsten",
@@ -81,7 +81,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "liquid-tungstic-acid",
+    name = "pellet-tungsten-smelting",
     localised_name = { "fluid-name.liquid-tungstic-acid" },
     category = "liquifying",
     subgroup = "angels-tungsten",
@@ -105,7 +105,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "gas-tungsten-hexafluoride",
+    name = "solid-tungsten-oxide-smelting",
     localised_name = { "fluid-name.gas-tungsten-hexafluoride" },
     category = "liquifying",
     subgroup = "angels-tungsten",
@@ -153,7 +153,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "powder-tungsten",
+    name = "gas-tungsten-hexafluoride-smelting",
     localised_name = { "item-name.powder-tungsten" },
     category = "blast-smelting-4",
     subgroup = "angels-tungsten",

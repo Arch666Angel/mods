@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-silver",
+        recipe = "molten-silver-smelting",
       },
       {
         type = "unlock-recipe",
@@ -52,11 +52,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-silver",
+        recipe = "silver-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-silver-nitrate",
+        recipe = "processed-silver-smelting",
       },
       {
         type = "unlock-recipe",
@@ -132,15 +132,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-silver",
+        recipe = "silver-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-silver-cyanide",
+        recipe = "pellet-silver-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-silver",
+        recipe = "solid-sodium-silver-cyanide-smelting",
       },
       {
         type = "unlock-recipe",

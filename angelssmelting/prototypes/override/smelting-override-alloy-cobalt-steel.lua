@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "liquid-molten-cobalt-steel",
+        name = "angels-cobalt-steel-smelting-1",
         localised_name = { "fluid-name.liquid-molten-cobalt-steel" },
         category = "induction-smelting-3",
         subgroup = "angels-alloys-casting",
@@ -76,7 +76,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "liquid-molten-cobalt-steel",
+            recipe = "angels-cobalt-steel-smelting-1",
           },
           {
             type = "unlock-recipe",

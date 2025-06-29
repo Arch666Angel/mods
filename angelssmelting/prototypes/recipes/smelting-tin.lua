@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-tin",
+    name = "tin-ore-processing",
     localised_name = { "item-name.processed-tin" },
     category = "ore-processing",
     subgroup = "angels-tin",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-tin",
+    name = "tin-processed-processing",
     localised_name = { "item-name.pellet-tin" },
     category = "pellet-pressing",
     subgroup = "angels-tin",
@@ -119,7 +119,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "liquid-molten-tin",
+    name = "molten-tin-smelting",
     localised_name = { "fluid-name.liquid-molten-tin" },
     category = "induction-smelting",
     subgroup = "angels-tin-casting",
@@ -284,6 +284,7 @@ data:extend({
     name = "basic-tinned-copper-wire",
     localised_name = { "item-name.angels-wire-tin" },
     subgroup = "angels-tin-casting",
+    order = "m",
     enabled = false,
     category = "crafting",
     energy_required = 0.5,

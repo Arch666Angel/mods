@@ -55,8 +55,8 @@ else
   angelsmods.functions.hide("sponge-titanium")
   angelsmods.functions.hide("ingot-titanium")
   angelsmods.functions.hide("liquid-molten-titanium")
-  OV.disable_recipe({ "processed-titanium", "pellet-titanium" })
-  OV.disable_recipe({ "titanium-ore-smelting", "processed-titanium-smelting", "sponge-titanium" })
+  OV.disable_recipe({ "titanium-ore-processing", "titanium-processed-processing" })
+  OV.disable_recipe({ "titanium-ore-smelting", "processed-titanium-smelting", "liquid-titanium-tetrachloride-smelting" })
   OV.disable_recipe({ "sponge-titanium-smelting", "pellet-titanium-smelting" })
   OV.disable_recipe({
     "molten-titanium-smelting-1",

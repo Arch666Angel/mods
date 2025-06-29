@@ -20,12 +20,12 @@ local function copyGrid(name, tile_data)
 end
 
 data:extend({
-  copyGrid("angels-concrete-brick", {
+  copyGrid("concrete-brick", {
     walking_speed_modifier = 1.50,
     decorative_removal_probability = 0.33, --0.25,
     layer = 61,
   }),
-  copyGrid("angels-reinforced-concrete-brick", {
+  copyGrid("reinforced-concrete-brick", {
     walking_speed_modifier = 1.55,
     decorative_removal_probability = 1.00, --0.25,
     layer = 64,

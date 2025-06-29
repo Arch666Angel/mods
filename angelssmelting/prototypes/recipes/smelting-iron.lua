@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-iron",
+    name = "iron-ore-processing",
     localised_name = { "item-name.processed-iron" },
     category = "ore-processing",
     subgroup = "angels-iron",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-iron",
+    name = "iron-processed-processing",
     localised_name = { "item-name.pellet-iron" },
     category = "pellet-pressing",
     subgroup = "angels-iron",
@@ -417,6 +417,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
     enabled = true,
+    allow_decomposition = true,
     ingredients = {
       { type = "item", name = "angels-plate-iron", amount = 2 },
     },

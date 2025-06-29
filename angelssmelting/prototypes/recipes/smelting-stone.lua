@@ -69,7 +69,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-clay-brick-raw",
-    localised_name = { "item-name.angels-clay-brick-raw" },
+    localised_name = { "item-name.clay-brick-raw" },
     category = "crafting",
     subgroup = "angels-stone",
     energy_required = 4,
@@ -80,25 +80,25 @@ data:extend({
       { type = "item", name = "solid-lime", amount = 2 },
     },
     results = {
-      { type = "item", name = "angels-clay-brick-raw", amount = 4 },
+      { type = "item", name = "clay-brick-raw", amount = 4 },
     },
-    order = "d[angels-clay-brick-raw]",
+    order = "d[clay-brick-raw]",
   },
   {
     type = "recipe",
     name = "angels-clay-brick",
-    localised_name = { "item-name.angels-clay-brick" },
+    localised_name = { "item-name.clay-brick" },
     category = "smelting",
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-clay-brick-raw", amount = 4 },
+      { type = "item", name = "clay-brick-raw", amount = 4 },
     },
     results = {
-      { type = "item", name = "angels-clay-brick", amount = 4 },
+      { type = "item", name = "clay-brick", amount = 4 },
     },
-    order = "e[angels-clay-brick]",
+    order = "e[clay-brick]",
   },
   -- CASTING INTERMEDIATE
   -- order f reserved for stone brick (see override)
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-concrete-brick",
-    localised_name = { "item-name.angels-concrete-brick" },
+    localised_name = { "item-name.concrete-brick" },
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",
     energy_required = 4,
@@ -184,14 +184,14 @@ data:extend({
       { type = "item", name = "stone-brick", amount = 4 },
     },
     results = {
-      { type = "item", name = "angels-concrete-brick", amount = 4 },
+      { type = "item", name = "concrete-brick", amount = 4 },
     },
-    order = "i[angels-concrete-brick]",
+    order = "i[concrete-brick]",
   },
   {
     type = "recipe",
     name = "angels-reinforced-concrete-brick",
-    localised_name = { "item-name.angels-reinforced-concrete-brick" },
+    localised_name = { "item-name.reinforced-concrete-brick" },
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",
     energy_required = 4,
@@ -202,8 +202,8 @@ data:extend({
       { type = "item", name = "angels-plate-steel", amount = 4 },
     },
     results = {
-      { type = "item", name = "angels-reinforced-concrete-brick", amount = 4 },
+      { type = "item", name = "reinforced-concrete-brick", amount = 4 },
     },
-    order = "j[angels-reinforced-concrete-brick]",
+    order = "j[reinforced-concrete-brick]",
   },
 })

@@ -2,7 +2,7 @@ data:extend({
   --TIER 2 MIX
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix1-processing", --quartz
+    name = "angelsore-chunk-mix1-processing", --quartz
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -18,11 +18,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "e[angels-ore-chunk-mix1-processing]",
+    order = "e[angelsore-chunk-mix1-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix2-processing", --nickel
+    name = "angelsore-chunk-mix2-processing", --nickel
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -38,11 +38,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "f[angels-ore-chunk-mix2-processing]",
+    order = "f[angelsore-chunk-mix2-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix3-processing", --aluminium
+    name = "angelsore-chunk-mix3-processing", --aluminium
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -58,11 +58,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "g[angels-ore-chunk-mix3-processing]",
+    order = "g[angelsore-chunk-mix3-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix4-processing", --zinc
+    name = "angelsore-chunk-mix4-processing", --zinc
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -78,11 +78,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "h[angels-ore-chunk-mix4-processing]",
+    order = "h[angelsore-chunk-mix4-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix5-processing", --silver-ore
+    name = "angelsore-chunk-mix5-processing", --silver-ore
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -98,11 +98,11 @@ data:extend({
       { type = "item", name = "angels-void", amount = 1 },
     },
     icon_size = 32,
-    order = "i[angels-ore-chunk-mix5-processing]",
+    order = "i[angelsore-chunk-mix5-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix6-processing", --fluorite
+    name = "angelsore-chunk-mix6-processing", --fluorite
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -122,7 +122,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-ore-chunk-mix7-processing", --unused
+    name = "angelsore-chunk-mix7-processing", --unused
     localised_name = { "item-name.angels-void" },
     category = "ore-sorting-3",
     subgroup = "ore-sorting-advanced",
@@ -143,7 +143,7 @@ data:extend({
   --TIER 2.5
   {
     type = "recipe",
-    name = "angels-ore8-dust-processing",
+    name = "angelsore8-dust-processing",
     category = "ore-sorting-3",
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,
@@ -169,7 +169,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-ore9-dust-processing",
+    name = "angelsore9-dust-processing",
     category = "ore-sorting-3",
     subgroup = "ore-sorting-t3",
     energy_required = 1.5,

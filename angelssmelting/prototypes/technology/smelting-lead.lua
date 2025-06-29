@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-lead",
+        recipe = "molten-lead-smelting",
       },
       {
         type = "unlock-recipe",
@@ -47,11 +47,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-lead",
+        recipe = "lead-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lead-oxide",
+        recipe = "processed-lead-smelting",
       },
       {
         type = "unlock-recipe",
@@ -117,11 +117,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-lead",
+        recipe = "lead-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-lead",
+        recipe = "pellet-lead-smelting",
       },
       {
         type = "unlock-recipe",

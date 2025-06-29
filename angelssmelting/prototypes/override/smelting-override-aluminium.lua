@@ -47,7 +47,7 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
   if angelsmods.trigger.smelting_products["aluminium"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("molten-aluminium-smelting-1")
+    angelsmods.functions.hide("liquid-molten-aluminium")
     OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
     OV.disable_technology({ "angels-aluminium-casting-2", "angels-aluminium-casting-3" })
     -- swap tech tier 1 to ingots
@@ -63,19 +63,19 @@ else
   angelsmods.functions.hide("solid-aluminium-hydroxide")
   angelsmods.functions.hide("solid-aluminium-oxide")
   angelsmods.functions.hide("ingot-aluminium")
-  angelsmods.functions.hide("molten-aluminium-smelting-1")
+  angelsmods.functions.hide("liquid-molten-aluminium")
   OV.disable_recipe({
-    "processed-aluminium",
-    "pellet-aluminium",
-    "solid-sodium-aluminate",
-    "solid-aluminium-hydroxid",
+    "bauxite-ore-processing",
+    "aluminium-processed-processing",
+    "pellet-aluminium-smelting",
+    "bauxite-ore-smelting",
   })
   OV.disable_recipe({
     "processed-aluminium-smelting",
     "solid-aluminium-hydroxide-smelting",
     "solid-sodium-aluminate-smelting",
   })
-  OV.disable_recipe({ "ingot-aluminium" })
+  OV.disable_recipe({ "solid-aluminium-oxide-smelting" })
   OV.disable_recipe({ "molten-aluminium-smelting-1", "molten-aluminium-smelting-2", "molten-aluminium-smelting-3" })
   OV.disable_technology({ "angels-aluminium-smelting-1", "angels-aluminium-smelting-2", "angels-aluminium-smelting-3" })
   OV.disable_technology({ "angels-aluminium-casting-2", "angels-aluminium-casting-3" })
@@ -94,7 +94,7 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
   end
 else
   angelsmods.functions.hide("angels-plate-aluminium")
-  angelsmods.functions.hide("roll-aluminium-casting")
+  angelsmods.functions.hide("angels-roll-aluminium")
   OV.disable_recipe({ "roll-aluminium-casting", "roll-aluminium-casting-fast" })
   OV.disable_recipe({ "angels-plate-aluminium", "angels-roll-aluminium-converting" })
 end

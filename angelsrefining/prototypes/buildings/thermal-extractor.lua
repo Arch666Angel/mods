@@ -56,6 +56,7 @@ data:extend({
     mining_speed = 0.75,
     resource_searching_radius = 0.49,
     vector_to_place_result = { 0, 0 },
+    module_slots = 2,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
       width = 12,

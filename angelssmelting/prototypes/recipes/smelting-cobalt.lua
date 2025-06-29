@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-cobalt",
+    name = "cobalt-ore-processing",
     localised_name = { "item-name.processed-cobalt" },
     category = "ore-processing-3",
     subgroup = "angels-cobalt",
@@ -20,7 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-cobalt",
+    name = "cobalt-processed-processing",
     localised_name = { "item-name.pellet-cobalt" },
     category = "pellet-pressing-3",
     subgroup = "angels-cobalt",
@@ -36,7 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-cobalt-hydroxide",
+    name = "pellet-cobalt-smelting",
     localised_name = { "item-name.solid-cobalt-hydroxide" },
     category = "liquifying",
     subgroup = "angels-cobalt",

@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "liquid-molten-gunmetal",
+        name = "angels-gunmetal-smelting-1",
         localised_name = { "fluid-name.liquid-molten-gunmetal" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
@@ -78,7 +78,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "liquid-molten-gunmetal",
+            recipe = "angels-gunmetal-smelting-1",
           },
           {
             type = "unlock-recipe",
@@ -103,9 +103,9 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
     angelsmods.functions.allow_productivity("angels-plate-gunmetal")
 
     if mods["bobwarfare"] then
-      OV.add_prereq("bob-bullets", "liquid-molten-gunmetal")
-      OV.add_prereq("bob-shotgun-shells", "liquid-molten-gunmetal")
-      OV.add_prereq("bob-rocket", "liquid-molten-gunmetal")
+      OV.add_prereq("bob-bullets", "angels-gunmetal-smelting-1")
+      OV.add_prereq("bob-shotgun-shells", "angels-gunmetal-smelting-1")
+      OV.add_prereq("bob-rocket", "angels-gunmetal-smelting-1")
     end
   end
 end

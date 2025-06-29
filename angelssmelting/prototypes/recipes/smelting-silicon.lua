@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-silica",
+    name = "silica-ore-processing",
     localised_name = { "item-name.processed-silica" },
     category = "ore-processing-2",
     subgroup = "angels-silicon",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-silica",
+    name = "silica-processed-processing",
     localised_name = { "item-name.pellet-silica" },
     category = "pellet-pressing-2",
     subgroup = "angels-silicon",
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "liquid-trichlorosilane",
+    name = "processed-silicon-smelting",
     localised_name = { "fluid-name.liquid-trichlorosilane" },
     category = "chemical-smelting-2",
     subgroup = "angels-silicon",
@@ -61,7 +61,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "gas-silane",
+    name = "pellet-silicon-smelting",
     localised_name = { "fluid-name.gas-silane" },
     category = "chemical-smelting-3",
     subgroup = "angels-silicon",
@@ -169,7 +169,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "liquid-molten-silicon",
+    name = "molten-silicon-smelting",
     localised_name = { "fluid-name.liquid-molten-silicon" },
     category = "induction-smelting-2",
     subgroup = "angels-silicon-casting",

@@ -16,7 +16,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-aluminium-hydroxid",
+        recipe = "bauxite-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -24,7 +24,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "ingot-aluminium",
+        recipe = "solid-aluminium-oxide-smelting",
       },
       {
         type = "unlock-recipe",
@@ -59,7 +59,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-aluminium",
+        recipe = "bauxite-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -131,11 +131,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-aluminium",
+        recipe = "aluminium-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-aluminate",
+        recipe = "pellet-aluminium-smelting",
       },
       {
         type = "unlock-recipe",

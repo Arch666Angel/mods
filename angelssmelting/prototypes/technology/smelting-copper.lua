@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-copper",
+        recipe = "molten-copper-smelting",
       },
       {
         type = "unlock-recipe",
@@ -46,7 +46,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-copper",
+        recipe = "copper-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -119,11 +119,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-copper",
+        recipe = "copper-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-copper",
+        recipe = "pellet-copper-smelting",
       },
       {
         type = "unlock-recipe",

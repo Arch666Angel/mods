@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-silicon",
+        recipe = "molten-silicon-smelting",
       },
       {
         type = "unlock-recipe",
@@ -57,11 +57,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-silica",
+        recipe = "silica-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-trichlorosilane",
+        recipe = "processed-silicon-smelting",
       },
       {
         type = "unlock-recipe",
@@ -97,11 +97,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-silica",
+        recipe = "silica-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-silane",
+        recipe = "pellet-silicon-smelting",
       },
       {
         type = "unlock-recipe",

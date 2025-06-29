@@ -40,7 +40,7 @@ else
   angelsmods.functions.hide("solid-ammonium-chloroplatinate")
   angelsmods.functions.hide("ingot-platinum")
   angelsmods.functions.hide("liquid-molten-platinum")
-  OV.disable_recipe({ "platinum-ore-processing", "pellet-platinum" })
+  OV.disable_recipe({ "platinum-ore-processing", "platinum-processed-processing" })
   OV.disable_recipe({ "pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting" })
   OV.disable_recipe({
     "platinum-ore-smelting",

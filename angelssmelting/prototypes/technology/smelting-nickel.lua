@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-molten-nickel",
+        recipe = "molten-nickel-smelting",
       },
       {
         type = "unlock-recipe",
@@ -48,11 +48,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-nickel",
+        recipe = "nickel-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-nickel",
+        recipe = "processed-nickel-smelting",
       },
       {
         type = "unlock-recipe",
@@ -119,11 +119,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-nickel",
+        recipe = "nickel-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nickel-carbonyl",
+        recipe = "pellet-nickel-smelting",
       },
       {
         type = "unlock-recipe",

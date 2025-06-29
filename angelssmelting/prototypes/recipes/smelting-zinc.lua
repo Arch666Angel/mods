@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-zinc",
+    name = "zinc-ore-processing",
     localised_name = { "item-name.processed-zinc" },
     category = "ore-processing-2",
     subgroup = "angels-zinc",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-zinc",
+    name = "zinc-processed-processing",
     localised_name = { "item-name.pellet-zinc" },
     category = "pellet-pressing-2",
     subgroup = "angels-zinc",
@@ -62,7 +62,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-zinc-oxide",
+    name = "pellet-zinc-smelting",
     localised_name = { "item-name.solid-zinc-oxide" },
     category = "chemical-smelting-3",
     subgroup = "angels-zinc",
@@ -86,7 +86,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cathode-zinc",
+    name = "solid-zinc-oxide-smelting",
     localised_name = { "item-name.cathode-zinc" },
     category = "chemical-smelting-3",
     subgroup = "angels-zinc",

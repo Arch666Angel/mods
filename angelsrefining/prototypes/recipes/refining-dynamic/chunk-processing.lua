@@ -2,7 +2,7 @@ data:extend({
   --TIER 2
   {
     type = "recipe",
-    name = "angels-ore1-chunk-processing",
+    name = "angelsore1-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -22,11 +22,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "a[angels-ore1-chunk-processing]",
+    order = "a[angelsore1-chunk-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore2-chunk-processing",
+    name = "angelsore2-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -46,11 +46,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "b[angels-ore2-chunk-processing]",
+    order = "b[angelsore2-chunk-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore3-chunk-processing",
+    name = "angelsore3-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -70,11 +70,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "c[angels-ore3-chunk-processing]",
+    order = "c[angelsore3-chunk-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore4-chunk-processing",
+    name = "angelsore4-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -94,11 +94,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "d[angels-ore4-chunk-processing]",
+    order = "d[angelsore4-chunk-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore5-chunk-processing",
+    name = "angelsore5-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -118,11 +118,11 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "e[angels-ore5-chunk-processing]",
+    order = "e[angelsore5-chunk-processing]",
   },
   {
     type = "recipe",
-    name = "angels-ore6-chunk-processing",
+    name = "angelsore6-chunk-processing",
     category = "ore-sorting-2",
     subgroup = "ore-sorting-t2",
     energy_required = 1.5,
@@ -142,6 +142,6 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "f[angels-ore6-chunk-processing]",
+    order = "f[angelsore6-chunk-processing]",
   },
 })

@@ -4,7 +4,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "processed-copper",
+    name = "copper-ore-processing",
     localised_name = { "item-name.processed-copper" },
     category = "ore-processing",
     subgroup = "angels-copper",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-copper",
+    name = "copper-processed-processing",
     localised_name = { "item-name.pellet-copper" },
     category = "pellet-pressing",
     subgroup = "angels-copper",
@@ -37,7 +37,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "anode-copper",
+    name = "pellet-copper-smelting",
     localised_name = { "item-name.anode-copper" },
     category = "blast-smelting-3",
     subgroup = "angels-copper",
@@ -138,7 +138,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "liquid-molten-copper",
+    name = "molten-copper-smelting",
     localised_name = { "fluid-name.liquid-molten-copper" },
     category = "induction-smelting",
     subgroup = "angels-copper-casting",

@@ -147,8 +147,8 @@ if angelsmods.trigger.smelting_products["copper"].wire then
     },
   })
   angelsmods.functions.remove_productivity("copper-cable")
-  OV.global_replace_item("angels-wire-coil-copper-converting", "copper-cable")
-  angelsmods.functions.hide("angels-wire-coil-copper-converting")
+  OV.global_replace_item("angels-wire-copper", "copper-cable")
+  angelsmods.functions.hide("angels-wire-copper")
   angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
   data.raw["item"]["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png"
   data.raw["item"]["copper-cable"].icon_size = 32

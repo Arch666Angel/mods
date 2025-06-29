@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "sponge-titanium",
+        recipe = "liquid-titanium-tetrachloride-smelting",
       },
       {
         type = "unlock-recipe",
@@ -58,7 +58,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-titanium",
+        recipe = "titanium-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -137,7 +137,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-titanium",
+        recipe = "titanium-processed-processing",
       },
       {
         type = "unlock-recipe",

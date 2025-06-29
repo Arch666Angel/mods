@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-platinum",
+    name = "platinum-processed-processing",
     localised_name = { "item-name.pellet-platinum" },
     category = "pellet-pressing-4",
     subgroup = "angels-platinum",
@@ -303,6 +303,7 @@ data:extend({
     name = "basic-platinated-copper-wire",
     localised_name = { "item-name.angels-wire-platinum" },
     subgroup = "angels-platinum-casting",
+    order = "m",
     enabled = false,
     category = "crafting",
     energy_required = 0.5,

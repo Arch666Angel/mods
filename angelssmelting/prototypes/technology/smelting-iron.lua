@@ -46,7 +46,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "processed-iron",
+        recipe = "iron-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -125,7 +125,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-iron",
+        recipe = "iron-processed-processing",
       },
       {
         type = "unlock-recipe",
