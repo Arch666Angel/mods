@@ -33,7 +33,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-invar-smelting-1",
+        name = "liquid-molten-invar",
         localised_name = { "fluid-name.liquid-molten-invar" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
@@ -80,7 +80,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-invar-smelting-1",
+            recipe = "liquid-molten-invar",
           },
           {
             type = "unlock-recipe",
@@ -101,7 +101,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
     angelsmods.functions.move_item("bob-invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
     data.raw["item"]["bob-invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
     data.raw["item"]["bob-invar-alloy"].icon_size = 32
-    OV.global_replace_technology("bob-invar-processing", "angels-invar-smelting-1")
+    OV.global_replace_technology("bob-invar-processing", "liquid-molten-invar")
     angelsmods.functions.allow_productivity("angels-plate-invar")
   end
 end

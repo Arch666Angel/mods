@@ -169,7 +169,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-silicon-smelting",
+    name = "liquid-molten-silicon",
     localised_name = { "fluid-name.liquid-molten-silicon" },
     category = "induction-smelting-2",
     subgroup = "angels-silicon-casting",

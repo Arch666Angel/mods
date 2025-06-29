@@ -138,7 +138,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-copper-smelting",
+    name = "liquid-molten-copper",
     localised_name = { "fluid-name.liquid-molten-copper" },
     category = "induction-smelting",
     subgroup = "angels-copper-casting",

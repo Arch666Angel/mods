@@ -162,7 +162,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-silver-smelting",
+    name = "liquid-molten-silver",
     localised_name = { "fluid-name.liquid-molten-silver" },
     category = "induction-smelting-2",
     subgroup = "angels-silver-casting",

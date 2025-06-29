@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("liquid-molten-tin")
-    OV.disable_recipe({ "molten-tin-smelting" })
+    OV.disable_recipe({ "liquid-molten-tin" })
     OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -45,7 +45,7 @@ else
   angelsmods.functions.hide("liquid-molten-tin")
   OV.disable_recipe({ "processed-tin", "pellet-tin" })
   OV.disable_recipe({ "tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting" })
-  OV.disable_recipe({ "molten-tin-smelting" })
+  OV.disable_recipe({ "liquid-molten-tin" })
   OV.disable_technology({ "angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3" })
   OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
 end

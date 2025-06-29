@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silver-smelting",
+        recipe = "liquid-molten-silver",
       },
       {
         type = "unlock-recipe",

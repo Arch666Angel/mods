@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-nitinol-smelting-1",
+        name = "liquid-molten-nitinol",
         localised_name = { "fluid-name.liquid-molten-nitinol" },
         category = "induction-smelting-4",
         subgroup = "angels-alloys-casting",
@@ -77,7 +77,7 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-nitinol-smelting-1",
+            recipe = "liquid-molten-nitinol",
           },
           {
             type = "unlock-recipe",

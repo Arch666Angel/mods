@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-nickel-smelting",
+        recipe = "liquid-molten-nickel",
       },
       {
         type = "unlock-recipe",

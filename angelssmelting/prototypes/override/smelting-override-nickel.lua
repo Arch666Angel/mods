@@ -34,7 +34,7 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("liquid-molten-nickel")
-    OV.disable_recipe({ "molten-nickel-smelting" })
+    OV.disable_recipe({ "liquid-molten-nickel" })
     OV.disable_technology({ "angels-nickel-casting-2", "angels-nickel-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -52,7 +52,7 @@ else
   OV.disable_recipe({ "processed-nickel", "nickel-pellet" })
   OV.disable_recipe({ "cathode-nickel", "solid-nickel-carbonyl" })
   OV.disable_recipe({ "nickel-ore-smelting", "cathode-nickel-smelting", "solid-nickel-carbonyl-smelting" })
-  OV.disable_recipe({ "molten-nickel-smelting" })
+  OV.disable_recipe({ "liquid-molten-nickel" })
   OV.disable_technology({ "angels-nickel-smelting-1", "angels-nickel-smelting-2", "angels-nickel-smelting-3" })
   OV.disable_technology({ "angels-nickel-casting-2", "angels-nickel-casting-3" })
 end

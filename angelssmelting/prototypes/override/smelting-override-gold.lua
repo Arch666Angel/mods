@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("liquid-molten-gold")
-    OV.disable_recipe({ "molten-gold-smelting" })
+    OV.disable_recipe({ "liquid-molten-gold" })
     OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -54,7 +54,7 @@ else
     "solid-sodium-gold-cyanide-smelting",
   })
   OV.disable_recipe({ "gold-ore-smelting", "cathode-gold-smelting" })
-  OV.disable_recipe({ "molten-gold-smelting" })
+  OV.disable_recipe({ "liquid-molten-gold" })
   OV.disable_technology({ "angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3" })
   OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
 end
@@ -73,7 +73,7 @@ if angelsmods.trigger.smelting_products["gold"].plate then
   end
 else
   angelsmods.functions.hide("angels-plate-gold")
-  angelsmods.functions.hide("angels-roll-gold")
+  angelsmods.functions.hide("roll-gold-casting")
   OV.disable_recipe({ "roll-gold-casting", "roll-gold-casting-fast" })
   OV.disable_recipe({ "angels-plate-gold", "angels-roll-gold-converting" })
 end
@@ -123,7 +123,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   end
 else
   angelsmods.functions.hide("angels-wire-gold")
-  angelsmods.functions.hide("angels-wire-coil-gold")
+  angelsmods.functions.hide("angels-wire-coil-gold-casting")
   OV.disable_recipe({ "angels-wire-coil-gold-casting", "angels-wire-coil-gold-casting-fast" })
   OV.disable_recipe({ "angels-wire-gold", "angels-wire-coil-gold-converting" })
 end

@@ -154,7 +154,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-nickel-smelting",
+    name = "liquid-molten-nickel",
     localised_name = { "fluid-name.liquid-molten-nickel" },
     category = "induction-smelting-2",
     subgroup = "angels-nickel-casting",

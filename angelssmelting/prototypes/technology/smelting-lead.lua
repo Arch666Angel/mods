@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-lead-smelting",
+        recipe = "liquid-molten-lead",
       },
       {
         type = "unlock-recipe",

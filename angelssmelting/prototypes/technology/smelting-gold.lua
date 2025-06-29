@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-gold-smelting",
+        recipe = "liquid-molten-gold",
       },
       {
         type = "unlock-recipe",

@@ -63,14 +63,14 @@ data:extend({
   -- order h reserved for base game concrete
   {
     type = "item",
-    name = "concrete-brick",
+    name = "angels-concrete-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-concrete.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "i",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "tile-concrete-brick",
+      result = "tile-angels-concrete-brick",
       -- result = "tutorial-grid",
       condition_size = 1,
       condition = {layers = {water_tile = true}},
@@ -78,14 +78,14 @@ data:extend({
   },
   {
     type = "item",
-    name = "reinforced-concrete-brick",
+    name = "angels-reinforced-concrete-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-reinforced.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "j",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "tile-reinforced-concrete-brick",
+      result = "tile-angels-reinforced-concrete-brick",
       condition_size = 1,
       condition = {layers = {water_tile = true}},
     },

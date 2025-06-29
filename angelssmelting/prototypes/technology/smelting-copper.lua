@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-copper-smelting",
+        recipe = "liquid-molten-copper",
       },
       {
         type = "unlock-recipe",

@@ -15,7 +15,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-glass-smelting",
+        recipe = "liquid-molten-glass",
       },
       {
         type = "unlock-recipe",

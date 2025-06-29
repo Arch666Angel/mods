@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-tin-smelting",
+        recipe = "liquid-molten-tin",
       },
       {
         type = "unlock-recipe",

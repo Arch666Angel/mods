@@ -119,7 +119,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-tin-smelting",
+    name = "liquid-molten-tin",
     localised_name = { "fluid-name.liquid-molten-tin" },
     category = "induction-smelting",
     subgroup = "angels-tin-casting",

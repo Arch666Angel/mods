@@ -95,7 +95,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-glass-smelting",
+    name = "liquid-molten-glass",
     localised_name = { "fluid-name.liquid-molten-glass" },
     category = "induction-smelting-2",
     subgroup = "angels-glass-casting",

@@ -191,7 +191,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-gold-smelting",
+    name = "liquid-molten-gold",
     localised_name = { "fluid-name.liquid-molten-gold" },
     category = "induction-smelting-3",
     subgroup = "angels-gold-casting",

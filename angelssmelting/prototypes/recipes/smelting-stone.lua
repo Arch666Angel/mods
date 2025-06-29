@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-concrete-brick",
-    localised_name = { "item-name.concrete-brick" },
+    localised_name = { "item-name.angels-concrete-brick" },
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",
     energy_required = 4,
@@ -184,14 +184,14 @@ data:extend({
       { type = "item", name = "stone-brick", amount = 4 },
     },
     results = {
-      { type = "item", name = "concrete-brick", amount = 4 },
+      { type = "item", name = "angels-concrete-brick", amount = 4 },
     },
-    order = "i[concrete-brick]",
+    order = "i[angels-concrete-brick]",
   },
   {
     type = "recipe",
     name = "angels-reinforced-concrete-brick",
-    localised_name = { "item-name.reinforced-concrete-brick" },
+    localised_name = { "item-name.angels-reinforced-concrete-brick" },
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",
     energy_required = 4,
@@ -202,8 +202,8 @@ data:extend({
       { type = "item", name = "angels-plate-steel", amount = 4 },
     },
     results = {
-      { type = "item", name = "reinforced-concrete-brick", amount = 4 },
+      { type = "item", name = "angels-reinforced-concrete-brick", amount = 4 },
     },
-    order = "j[reinforced-concrete-brick]",
+    order = "j[angels-reinforced-concrete-brick]",
   },
 })

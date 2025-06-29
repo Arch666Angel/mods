@@ -188,7 +188,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-lead-smelting",
+    name = "liquid-molten-lead",
     localised_name = { "fluid-name.liquid-molten-lead" },
     category = "induction-smelting",
     subgroup = "angels-lead-casting",
