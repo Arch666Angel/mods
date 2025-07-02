@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-silver-nitrate",
+    name = "angels-solid-silver-nitrate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-nitrate.png",
     icon_size = 32,
     subgroup = "angels-silver",
@@ -40,7 +40,7 @@ data:extend({
   -- e reserved for bob silver oxide (see silver override)
   {
     type = "item",
-    name = "solid-sodium-silver-cyanide",
+    name = "angels-solid-sodium-silver-cyanide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-silver-cyanide.png",
     icon_size = 32,
     subgroup = "angels-silver",
@@ -78,7 +78,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-silver",
+    name = "angels-liquid-molten-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-silver.png",
     icon_size = 64,
     subgroup = "angels-silver-casting",

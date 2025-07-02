@@ -7,7 +7,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-platinum-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-electro-whinning-cell",
+      "angels-ore-electro-whinning-cell",
       "angels-metallurgy-4",
     },
     effects = {
@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-platinum-smelting",
+        recipe = "angels-molten-platinum-smelting",
       },
       {
         type = "unlock-recipe",
@@ -47,7 +47,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-platinum-smelting-1",
       "angels-sulfur-processing-1",
     },
@@ -127,7 +127,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-5",
+      "angels-ore-processing-5",
       "angels-platinum-smelting-2",
       "angels-nitrogen-processing-4",
     },
@@ -142,11 +142,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hexachloroplatinic-acid-smelting",
+        recipe = "angels-liquid-hexachloroplatinic-acid-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-ammonium-chloroplatinate-smelting",
+        recipe = "angels-solid-ammonium-chloroplatinate-smelting",
       },
     },
     unit = {

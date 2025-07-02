@@ -90,7 +90,7 @@ data:extend({
     fuel_value = "1.4641GJ", --1.21*1.21
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 1.15,
-    subgroup = "petrochem-fuel",
+    subgroup = "angels-petrochem-fuel",
     order = "k",
     stack_size = 2,
   },
@@ -103,7 +103,7 @@ data:extend({
     fuel_value = "2.1962GJ", --1.21*(1.21*1.5)
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 1.15,
-    subgroup = "petrochem-fuel",
+    subgroup = "angels-petrochem-fuel",
     order = "l",
     stack_size = 2,
   },
@@ -227,7 +227,7 @@ muon-fusion-catalyst
 == LIST OF RECIPES
 angels-uranium-reprocessing
 10 cells + 20 HF.acid -> 5 U-238 + 2 Np-240 + 1 slag + 20 FWW
-"advanced-chemistry" (big chem plant)
+"angels-advanced-chemistry" (big chem plant)
 
 angels-plutonium-synth
 8 Np-240 -> 8 Pu-240

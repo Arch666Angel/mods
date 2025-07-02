@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-manganese-oxide",
+    name = "angels-solid-manganese-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-manganese-oxide.png",
     icon_size = 32,
     subgroup = "angels-manganese",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-manganese",
+    name = "angels-liquid-molten-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese-casting",

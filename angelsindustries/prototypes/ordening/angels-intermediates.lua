@@ -27,7 +27,7 @@ if angelsmods.industries.overhaul then
 
   -- fluid stuffs
   if mods["bobplates"] then
-    data.raw["item-subgroup"]["bob-fluid-pump"].group = "water-treatment"
+    data.raw["item-subgroup"]["bob-fluid-pump"].group = "angels-water-treatment"
     data.raw["item-subgroup"]["bob-fluid-pump"].order = "c[water]-z[bob-fluid-pump]"
   end
 

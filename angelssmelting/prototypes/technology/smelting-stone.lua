@@ -8,24 +8,24 @@ data:extend({
       --"angels-metallurgy-1",
       "logistic-science-pack",
       "powder-metallurgy-1",
-      "water-washing-1",
+      "angels-water-washing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-clay",
+        recipe = "angels-solid-clay",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-limestone",
+        recipe = "angels-solid-limestone",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sand",
+        recipe = "angels-solid-sand",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lime",
+        recipe = "angels-solid-lime",
       },
       {
         type = "unlock-recipe",
@@ -65,7 +65,7 @@ data:extend({
       "powder-metallurgy-2",
       "angels-stone-smelting-1",
       "concrete",
-      "resins",
+      "angels-resins",
     },
     effects = {
       {

@@ -6,43 +6,43 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- water
-  OV.converter_fluid("bob-pure-water", "water-purified")
+  OV.converter_fluid("bob-pure-water", "angels-water-purified")
   angelsmods.functions.disable_barreling_recipes("bob-pure-water")
 
-  OV.converter_fluid("bob-oxygen", "gas-oxygen")
+  OV.converter_fluid("bob-oxygen", "angels-gas-oxygen")
   angelsmods.functions.disable_barreling_recipes("bob-oxygen")
 
-  OV.converter_fluid("bob-hydrogen", "gas-hydrogen")
+  OV.converter_fluid("bob-hydrogen", "angels-gas-hydrogen")
   angelsmods.functions.disable_barreling_recipes("bob-hydrogen")
 
   -- nitrogen (air)
-  OV.converter_fluid("bob-liquid-air", "gas-oxygen")
+  OV.converter_fluid("bob-liquid-air", "angels-gas-oxygen")
   angelsmods.functions.disable_barreling_recipes("bob-liquid-air")
 
-  OV.converter_fluid("bob-nitrogen", "gas-nitrogen")
+  OV.converter_fluid("bob-nitrogen", "angels-gas-nitrogen")
   angelsmods.functions.disable_barreling_recipes("bob-nitrogen")
 
-  OV.converter_fluid("bob-nitrogen-dioxide", "gas-nitrogen-dioxide")
+  OV.converter_fluid("bob-nitrogen-dioxide", "angels-gas-nitrogen-dioxide")
   angelsmods.functions.disable_barreling_recipes("bob-nitrogen-dioxide")
 
-  OV.converter_fluid("bob-nitric-acid", "liquid-nitric-acid")
+  OV.converter_fluid("bob-nitric-acid", "angels-liquid-nitric-acid")
   angelsmods.functions.disable_barreling_recipes("bob-nitric-acid")
 
   -- sulfur
-  OV.converter_fluid("bob-hydrogen-sulfide", "gas-hydrogen-sulfide")
+  OV.converter_fluid("bob-hydrogen-sulfide", "angels-gas-hydrogen-sulfide")
   angelsmods.functions.disable_barreling_recipes("bob-hydrogen-sulfide")
 
-  OV.converter_fluid("bob-sulfur-dioxide", "gas-sulfur-dioxide")
+  OV.converter_fluid("bob-sulfur-dioxide", "angels-gas-sulfur-dioxide")
   angelsmods.functions.disable_barreling_recipes("bob-sulfur-dioxide")
 
   -- chlorine
-  OV.converter_fluid("bob-chlorine", "gas-chlorine")
+  OV.converter_fluid("bob-chlorine", "angels-gas-chlorine")
   angelsmods.functions.disable_barreling_recipes("bob-chlorine")
 
-  OV.converter_fluid("bob-hydrogen-chloride", "gas-hydrogen-chloride")
+  OV.converter_fluid("bob-hydrogen-chloride", "angels-gas-hydrogen-chloride")
   angelsmods.functions.disable_barreling_recipes("bob-hydrogen-chloride")
 
-  OV.converter_fluid("bob-ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.converter_fluid("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
   angelsmods.functions.disable_barreling_recipes("bob-ferric-chloride-solution")
 end
 
@@ -55,36 +55,36 @@ end
 --==BASED ON VOULMETRIC NUMBERS divided by 10, using methane as the base
 local Energy_table = {
   --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
-  ["liquid-naphtha"] = { fv = 244.7, em = 3, turr = false },
+  ["angels-liquid-naphtha"] = { fv = 244.7, em = 3, turr = false },
   ["heavy-oil"] = {
     fv = angelsmods.trigger.enableconverter and 244.7 or nil,
     turr = angelsmods.trigger.enableconverter and true or false,
   },
   --liquid Fuel oil (light oil), bobs value 1.5MJ (light fuel oil 39 MJ/L)(40.6 MJ/kg)
-  ["liquid-fuel-oil"] = { fv = 249.9, em = 2, turr = false }, --was 24.99kJ
+  ["angels-liquid-fuel-oil"] = { fv = 249.9, em = 2, turr = false }, --was 24.99kJ
   ["light-oil"] = {
     fv = angelsmods.trigger.enableconverter and 249.9 or nil,
     turr = angelsmods.trigger.enableconverter and true or false,
   },
   --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg)
-  ["gas-methane"] = { fv = 230 },
+  ["angels-gas-methane"] = { fv = 230 },
   ["petroleum-gas"] = {
     fv = angelsmods.trigger.enableconverter and 230 or nil,
     turr = angelsmods.trigger.enableconverter and true or false,
   },
-  ["gas-ethane"] = { fv = 388.9, em = 1.5 }, --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
-  ["gas-butane"] = { fv = 710.5, em = 1.8 }, --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
-  ["gas-propene"] = { fv = 521.5, em = 5 }, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
-  ["gas-methanol"] = { fv = 101.2 }, --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
-  ["gas-ethylene"] = { fv = 365.2 }, --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
+  ["angels-gas-ethane"] = { fv = 388.9, em = 1.5 }, --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
+  ["angels-gas-butane"] = { fv = 710.5, em = 1.8 }, --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
+  ["angels-gas-propene"] = { fv = 521.5, em = 5 }, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
+  ["angels-gas-methanol"] = { fv = 101.2 }, --gas methanol (), - (methanol(L) 15.8 MJ/L)(19.9 MJ/kg)
+  ["angels-gas-ethylene"] = { fv = 365.2 }, --gas ethylene (), - (ethylene 57.0 MJ/L)(47.7 MJ/kg)
   ["crude-oil"] = { fv = 350, turr = false }, --liquid crude (crude oil)
-  ["gas-hydrogen"] = {
+  ["angels-gas-hydrogen"] = {
     fv = 33,
     em = 0.2,--[[>>(may need to go much lower) meant to be 66kJ, but dropped to 33 for reasons.]]
   }, --gas hydrogen (), bobs value is 45kJ (hydrogen 10.3 MJ/L)(120.1 MJ/kg)
-  ["gas-hydrazine"] = { fv = 126.9, em = 0.1 }, --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
+  ["angels-gas-hydrazine"] = { fv = 126.9, em = 0.1 }, --gas hydrazine (), bobs value is 340kJ (hydrazine 19.8 MJ/L)(19.4 MJ/kg)
   ["bob-liquid-fuel"] = { fv = 300, em = 1.5, turr = false }, --down from 2.3MJ
-  ["gas-ethanol"] = { fv = mods["angelsbioprocessing"] and 135.2 or nil }, --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
+  ["angels-gas-ethanol"] = { fv = mods["angelsbioprocessing"] and 135.2 or nil }, --liquid ethanol (), - (ethanol(L) 21.1 MJ/L)(26.7 MJ/kg)
 }
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
 
@@ -96,7 +96,7 @@ if mods["bobplates"] then
       if vals.turr ~= false then
         table.insert(
           turret_params,
-          { type = fluid, damage_modifier = math.floor(vals.fv / Energy_table["gas-methane"].fv * 10 + 0.5) / 10 }
+          { type = fluid, damage_modifier = math.floor(vals.fv / Energy_table["angels-gas-methane"].fv * 10 + 0.5) / 10 }
         )
       end
     end
@@ -111,7 +111,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- liquid fuel --------------------------------------------------------------
-  move_item("bob-liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
+  move_item("bob-liquid-fuel", "angels-petrochem-carbon-fluids", "dac", "fluid")
   data.raw["fluid"]["bob-liquid-fuel"].icon = nil
   data.raw["fluid"]["bob-liquid-fuel"].icons =
     angelsmods.functions.create_liquid_fluid_icon(nil, { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } })
@@ -136,13 +136,13 @@ if mods["bobplates"] then
       name = "bob-liquid-fuel",
       ingredients = {
         { "!!" },
-        { name = "liquid-fuel-oil", type = "fluid", amount = 40 },
-        { name = "gas-residual", type = "fluid", amount = 10 },
+        { name = "angels-liquid-fuel-oil", type = "fluid", amount = 40 },
+        { name = "angels-gas-residual", type = "fluid", amount = 10 },
       },
       results = {
         { name = "bob-liquid-fuel", type = "fluid", amount = 50 },
       },
-      subgroup = "petrochem-carbon-oil-feed",
+      subgroup = "angels-petrochem-carbon-oil-feed",
       order = "h",
     },
     {
@@ -156,8 +156,8 @@ if mods["bobplates"] then
   })
   OV.add_unlock("flammables", "bob-liquid-fuel")
   OV.add_unlock("flammables", "bob-enriched-fuel")
-  OV.remove_prereq("flammables", "gas-processing")
-  OV.add_prereq("flammables", "steam-cracking-1")
+  OV.remove_prereq("flammables", "angels-gas-processing")
+  OV.add_prereq("flammables", "angels-steam-cracking-1")
 end
 
 -------------------------------------------------------------------------------
@@ -165,15 +165,15 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.resin then
-    OV.global_replace_item({ "solid-resin" }, "bob-resin")
-    angelsmods.functions.hide("solid-resin")
-    move_item("bob-resin", "petrochem-solids", "a[petrochem-solids]-b[resin]")
+    OV.global_replace_item({ "angels-solid-resin" }, "bob-resin")
+    angelsmods.functions.hide("angels-solid-resin")
+    move_item("bob-resin", "angels-petrochem-solids", "a[petrochem-solids]-b[resin]")
 
     local resin_icon = mods["bobplates"] and "__bobplates__/graphics/icons/resin.png"
       or "__bobelectronics__/graphics/icons/resin.png"
     OV.patch_recipes({
       {
-        name = "solid-resin",
+        name = "angels-solid-resin",
         order = "b[resin]-b[solid]-b",
         icons = mods["angelssmelting"] and {
           {
@@ -193,7 +193,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
     angelsmods.functions.hide("bob-resin")
     OV.disable_recipe({
       "bob-resin-wood",
-      "solid-resin",
+      "angels-solid-resin",
     })
   end
 
@@ -201,7 +201,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
   if mods["angelsbioprocessing"] then
     OV.disable_recipe({ "bob-synthetic-wood" })
   else
-    OV.add_unlock("plastic-1", "bob-synthetic-wood")
+    OV.add_unlock("angels-plastic-1", "bob-synthetic-wood")
   end
 end
 
@@ -210,9 +210,9 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] or mods["bobelectronics"] then
   if angelsmods.trigger.rubber then
-    OV.global_replace_item("solid-rubber", "bob-rubber")
-    angelsmods.functions.hide("solid-rubber")
-    move_item("bob-rubber", "petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
+    OV.global_replace_item("angels-solid-rubber", "bob-rubber")
+    angelsmods.functions.hide("angels-solid-rubber")
+    move_item("bob-rubber", "angels-petrochem-solids", "a[petrochem-solids]-c[rubber]-a")
     OV.disable_recipe("bob-rubber")
 
     local rubber_icon = mods["bobplates"] and "__bobplates__/graphics/icons/rubber.png"
@@ -220,8 +220,8 @@ if mods["bobplates"] or mods["bobelectronics"] then
 
     OV.patch_recipes({
       {
-        name = "solid-rubber",
-        subgroup = "petrochem-solids-2",
+        name = "angels-solid-rubber",
+        subgroup = "angels-petrochem-solids-2",
         order = "b[rubber]-b[solid]-a",
         icons = {
           {
@@ -278,7 +278,7 @@ end
 -- CARBON PROCESSING ----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.global_replace_item("bob-carbon", "solid-carbon")
+  OV.global_replace_item("bob-carbon", "angels-solid-carbon")
   angelsmods.functions.hide("bob-carbon")
   OV.remove_unlock("bob-chemical-processing-1", "bob-carbon")
   OV.remove_unlock("bob-chemical-processing-1", "bob-carbon-from-wood")

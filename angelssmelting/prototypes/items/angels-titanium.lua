@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-titanium-tetrachloride",
+    name = "angels-liquid-titanium-tetrachloride",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "TiCl[font=default-tiny-bold]4[/font]" }
       or nil,
@@ -79,7 +79,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-titanium",
+    name = "angels-liquid-molten-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-titanium.png",
     icon_size = 64,
     subgroup = "angels-titanium-casting",

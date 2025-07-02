@@ -66,7 +66,7 @@ if angelsmods.industries.overhaul then
       results = {
         { "!!" },
         { type = "item", name = "uranium-238", amount = 3 },
-        { type = "item", name = "slag", amount = 5 },
+        { type = "item", name = "angels-slag", amount = 5 },
       },
       crafting_machine_tint = {
         primary = tint_colors.green,

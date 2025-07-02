@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-1",
+        recipe = "angels-molten-iron-smelting-1",
       },
       {
         type = "unlock-recipe",
@@ -39,7 +39,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-iron-smelting-1",
       "angels-coal-processing",
     },
@@ -82,7 +82,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-3",
+        recipe = "angels-molten-iron-smelting-3",
       },
       {
         type = "unlock-recipe",
@@ -118,7 +118,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-iron-smelting-2",
       "angels-stone-smelting-1",
     },
@@ -158,7 +158,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-4",
+        recipe = "angels-molten-iron-smelting-4",
       },
       {
         type = "unlock-recipe",
@@ -193,7 +193,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-5",
+        recipe = "angels-molten-iron-smelting-5",
       },
     },
     unit = {

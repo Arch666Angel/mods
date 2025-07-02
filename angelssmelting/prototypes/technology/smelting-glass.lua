@@ -15,7 +15,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-glass-smelting",
+        recipe = "angels-molten-glass-smelting",
       },
       {
         type = "unlock-recipe",
@@ -82,7 +82,7 @@ data:extend({
       "angels-glass-smelting-2",
       "angels-aluminium-smelting-2",
       "angels-tin-casting-3",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
       --"angels-nitrogen-processing-1"
     },
     effects = {

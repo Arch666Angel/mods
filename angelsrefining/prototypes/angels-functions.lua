@@ -1542,11 +1542,11 @@ function angelsmods.functions.modify_barreling_recipes()
       if data.raw.item[fn .. "-barrel"] then
         if recipes[fn .. "-barrel"] then
           recipes[fn .. "-barrel"].hidden = true
-          recipes[fn .. "-barrel"].category = "barreling-pump"
+          recipes[fn .. "-barrel"].category = "angels-barreling-pump"
         end
         if recipes["empty-" .. fn .. "-barrel"] then
           recipes["empty-" .. fn .. "-barrel"].hidden = true
-          recipes["empty-" .. fn .. "-barrel"].category = "barreling-pump"
+          recipes["empty-" .. fn .. "-barrel"].category = "angels-barreling-pump"
         end
       end
     end
@@ -1635,7 +1635,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 5
-      void_output_item = "water-void"
+      void_output_item = "angels-water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
@@ -1645,7 +1645,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "chemical-void"
+      void_output_item = "angels-chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
@@ -1659,7 +1659,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "item"
       void_input_subgroup = data.raw.item[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "solid-compost"
+      void_output_item = "angels-solid-compost"
       void_output_amount = void_amount < 1 and 1 / void_amount or 1
       void_output_probability = 1
     else
@@ -1850,7 +1850,7 @@ function angelsmods.functions.get_trigger_names()
     ["bauxite-ore"] = "aluminium",
     ["cobalt-ore"] = "cobalt",
     ["silver-ore"] = "silver",
-    ["fluorite-ore"] = "fluorite", -- byproduct
+    ["angels-fluorite-ore"] = "fluorite", -- byproduct
     -- TIER 2.5 ORES
     ["gold-ore"] = "gold",
     -- TIER 3 ORES
@@ -1886,7 +1886,7 @@ function angelsmods.functions.get_ore_name(ore_name)
     ["chrome-ore"] = "chrome-ore",
     ["cobalt-ore"] = mods["bobores"] and "bob-cobalt-ore" or "cobalt-ore",
     ["copper-ore"] = "copper-ore",
-    ["fluorite-ore"] = "fluorite-ore",
+    ["angels-fluorite-ore"] = "angels-fluorite-ore",
     ["gold-ore"] = mods["bobores"] and "bob-gold-ore" or "gold-ore",
     ["iron-ore"] = "iron-ore",
     ["lead-ore"] = mods["bobores"] and "bob-lead-ore" or "lead-ore",

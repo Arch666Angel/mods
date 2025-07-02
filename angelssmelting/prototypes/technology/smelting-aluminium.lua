@@ -7,10 +7,10 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-aluminium-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       --"angels-metallurgy-2",
       "powder-metallurgy-2",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
       --"angels-coal-processing"
     },
     effects = {
@@ -20,15 +20,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-aluminium-hydroxide-smelting",
+        recipe = "angels-solid-aluminium-hydroxide-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-aluminium-oxide-smelting",
+        recipe = "angels-solid-aluminium-oxide-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-1",
+        recipe = "angels-molten-aluminium-smelting-1",
       },
       {
         type = "unlock-recipe",
@@ -52,7 +52,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "powder-metallurgy-3",
       "angels-aluminium-smelting-1",
     },
@@ -95,7 +95,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-2",
+        recipe = "angels-molten-aluminium-smelting-2",
       },
       {
         type = "unlock-recipe",
@@ -124,9 +124,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-aluminium-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
@@ -139,7 +139,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-aluminate-smelting",
+        recipe = "angels-solid-sodium-aluminate-smelting",
       },
     },
     unit = {
@@ -169,7 +169,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-3",
+        recipe = "angels-molten-aluminium-smelting-3",
       },
       {
         type = "unlock-recipe",

@@ -5,7 +5,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/fluid-splitter-tech.png",
     icon_size = 128,
     prerequisites = {
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {

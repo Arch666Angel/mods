@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 
 if angelsmods.trigger.smelting_products["glass"].mixture then --only change it if glass is actually active
-  OV.modify_input("bio-tile", { type = "item", name = "solid-glass-mixture", amount = 1 })
+  OV.modify_input("bio-tile", { type = "item", name = "angels-solid-glass-mixture", amount = 1 })
   OV.add_prereq("gardens-3", "angels-glass-smelting-1")
 end
 
@@ -9,7 +9,7 @@ if angelsmods.industries and angelsmods.industries.overhaul then
   OV.patch_recipes({
     {
       name = "algae-brown-burning",
-      results = { { "!!" }, { name = "solid-lithium", amount = 2 } },
+      results = { { "!!" }, { name = "angels-solid-lithium", amount = 2 } },
     },
   })
 
@@ -44,7 +44,7 @@ else
 end
 
 -- FARMING TOOLTIPS
-for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-nuts", "solid-pips", "solid-fruit" }) do
+for _, item_name in pairs({ "angels-solid-beans", "angels-solid-corn", "angels-solid-leafs", "angels-solid-nuts", "angels-solid-pips", "angels-solid-fruit" }) do
   local item = data.raw["item"][item_name]
   if item then
     local origin_items = {}

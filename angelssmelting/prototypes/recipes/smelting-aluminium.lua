@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "bauxite-ore-processing",
     localised_name = { "item-name.processed-aluminium" },
-    category = "ore-processing-2",
+    category = "angels-ore-processing-2",
     subgroup = "angels-aluminium",
     energy_required = 2,
     enabled = false,
@@ -17,7 +17,7 @@ data:extend({
     },
     main_product = "processed-aluminium",
     order = "b[processed-aluminium]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
@@ -46,13 +46,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-aluminium", amount = 6 },
-      { type = "item", name = "solid-sodium-carbonate", amount = 3 },
-      { type = "item", name = "solid-coke", amount = 3 },
+      { type = "item", name = "angels-solid-sodium-carbonate", amount = 3 },
+      { type = "item", name = "angels-solid-coke", amount = 3 },
     },
     results = {
-      { type = "item", name = "solid-sodium-aluminate", amount = 18 },
+      { type = "item", name = "angels-solid-sodium-aluminate", amount = 18 },
     },
-    main_product = "solid-sodium-aluminate",
+    main_product = "angels-solid-sodium-aluminate",
     order = "d[solid-sodium-aluminate]",
   },
   {
@@ -65,13 +65,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "bauxite-ore", amount = 12 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 3 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
     },
     results = {
-      { type = "item", name = "solid-aluminium-hydroxide", amount = 12 },
+      { type = "item", name = "angels-solid-aluminium-hydroxide", amount = 12 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-aluminium-hydroxide"),
+      angelsmods.functions.get_object_icons("angels-solid-aluminium-hydroxide"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -87,13 +87,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-aluminium", amount = 4 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 3 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
     },
     results = {
-      { type = "item", name = "solid-aluminium-hydroxide", amount = 12 },
+      { type = "item", name = "angels-solid-aluminium-hydroxide", amount = 12 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-aluminium-hydroxide"),
+      angelsmods.functions.get_object_icons("angels-solid-aluminium-hydroxide"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -101,20 +101,20 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-aluminium-hydroxide-smelting",
+    name = "angels-solid-aluminium-hydroxide-smelting",
     localised_name = { "item-name.solid-aluminium-oxide" },
     category = "blast-smelting-2",
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-aluminium-hydroxide", amount = 24 },
+      { type = "item", name = "angels-solid-aluminium-hydroxide", amount = 24 },
     },
     results = {
-      { type = "item", name = "solid-aluminium-oxide", amount = 24 },
+      { type = "item", name = "angels-solid-aluminium-oxide", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-aluminium-oxide"),
+      angelsmods.functions.get_object_icons("angels-solid-aluminium-oxide"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -122,24 +122,24 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-sodium-aluminate-smelting",
+    name = "angels-solid-sodium-aluminate-smelting",
     localised_name = { "item-name.solid-aluminium-oxide" },
     category = "blast-smelting-4",
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-sodium-aluminate", amount = 24 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 3 },
-      { type = "fluid", name = "gas-carbon-dioxide", amount = 60 },
+      { type = "item", name = "angels-solid-sodium-aluminate", amount = 24 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
+      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-aluminium-oxide", amount = 24 },
-      { type = "item", name = "solid-sodium-carbonate", amount = 2 },
+      { type = "item", name = "angels-solid-aluminium-oxide", amount = 24 },
+      { type = "item", name = "angels-solid-sodium-carbonate", amount = 2 },
     },
-    main_product = "solid-aluminium-oxide",
+    main_product = "angels-solid-aluminium-oxide",
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-aluminium-oxide"),
+      angelsmods.functions.get_object_icons("angels-solid-aluminium-oxide"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -148,15 +148,15 @@ data:extend({
   -- SMELTING RESULT
   {
     type = "recipe",
-    name = "solid-aluminium-oxide-smelting",
+    name = "angels-solid-aluminium-oxide-smelting",
     localised_name = { "item-name.ingot-aluminium" },
     category = "blast-smelting-2",
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-aluminium-oxide", amount = 24 },
-      { type = "item", name = "solid-carbon", amount = 3 },
+      { type = "item", name = "angels-solid-aluminium-oxide", amount = 24 },
+      { type = "item", name = "angels-solid-carbon", amount = 3 },
     },
     results = {
       { type = "item", name = "ingot-aluminium", amount = 24 },
@@ -182,8 +182,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-aluminium-smelting-1",
-    localised_name = { "fluid-name.liquid-molten-aluminium" },
+    name = "angels-molten-aluminium-smelting-1",
+    localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
     category = "induction-smelting-2",
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
@@ -192,20 +192,20 @@ data:extend({
       { type = "item", name = "ingot-aluminium", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 120 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
       1,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-aluminium]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
-    name = "molten-aluminium-smelting-2",
-    localised_name = { "fluid-name.liquid-molten-aluminium" },
+    name = "angels-molten-aluminium-smelting-2",
+    localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
     category = "induction-smelting-3",
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
@@ -215,20 +215,20 @@ data:extend({
       { type = "item", name = "ingot-manganese", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-aluminium]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
-    name = "molten-aluminium-smelting-3",
-    localised_name = { "fluid-name.liquid-molten-aluminium" },
+    name = "angels-molten-aluminium-smelting-3",
+    localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
     category = "induction-smelting-4",
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
@@ -239,15 +239,15 @@ data:extend({
       { type = "item", name = "ingot-copper", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
       3,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-aluminium]-c",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
@@ -258,7 +258,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -270,7 +270,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-aluminium]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
@@ -281,12 +281,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-aluminium", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-aluminium",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -295,7 +295,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-aluminium]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-aluminium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   -- CASTING RESULT
   {
@@ -307,14 +307,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-aluminium", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-aluminium", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-aluminium"),
-      angelsmods.functions.get_object_icons("liquid-molten-aluminium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-aluminium"),
       { -10, -10 },
       0.4375
     ),

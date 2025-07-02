@@ -21,8 +21,8 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   if angelsmods.trigger.smelting_products["manganese"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-manganese")
-    OV.disable_recipe({ "molten-manganese-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-manganese")
+    OV.disable_recipe({ "angels-molten-manganese-smelting" })
     OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -43,20 +43,20 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
 else
   angelsmods.functions.hide("processed-manganese")
   angelsmods.functions.hide("pellet-manganese")
-  angelsmods.functions.hide("solid-manganese-oxide")
+  angelsmods.functions.hide("angels-solid-manganese-oxide")
   angelsmods.functions.hide("cathode-manganese")
   angelsmods.functions.hide("ingot-manganese")
-  angelsmods.functions.hide("liquid-molten-manganese")
-  angelsmods.functions.hide("solid-iron-hydroxide")
+  angelsmods.functions.hide("angels-liquid-molten-manganese")
+  angelsmods.functions.hide("angels-solid-iron-hydroxide")
   OV.disable_recipe({ "manganese-ore-processing", "manganese-processed-processing" })
   OV.disable_recipe({
     "pellet-manganese-smelting",
     "processed-manganese-smelting",
     "manganese-processed-processing-alt",
-    "solid-manganese-oxide-smelting",
+    "angels-solid-manganese-oxide-smelting",
   })
   OV.disable_recipe({ "manganese-ore-smelting", "cathode-manganese-smelting" })
-  OV.disable_recipe({ "molten-manganese-smelting", "solid-iron-hydroxide-smelting" })
+  OV.disable_recipe({ "angels-molten-manganese-smelting", "angels-solid-iron-hydroxide-smelting" })
   OV.disable_technology({ "angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3" })
   OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
 end

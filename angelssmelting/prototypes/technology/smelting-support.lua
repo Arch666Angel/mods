@@ -8,7 +8,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-crushing",
+      "angels-ore-crushing",
     },
     effects = {
       {
@@ -437,7 +437,7 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "ore-processing-1",
+    name = "angels-ore-processing-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/processing-machine-tech.png",
     icon_size = 256,
     prerequisites = {
@@ -446,7 +446,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine",
+        recipe = "angels-ore-processing-machine",
       },
     },
     unit = {
@@ -461,17 +461,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-2",
+    name = "angels-ore-processing-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-3",
-      "ore-processing-1",
+      "angels-ore-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-2",
+        recipe = "angels-ore-processing-machine-2",
       },
       {
         type = "unlock-recipe",
@@ -491,17 +491,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-3",
+    name = "angels-ore-processing-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
-      "ore-processing-2",
+      "angels-ore-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-3",
+        recipe = "angels-ore-processing-machine-3",
       },
       {
         type = "unlock-recipe",
@@ -522,17 +522,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-4",
+    name = "angels-ore-processing-4",
     icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "ore-processing-3",
+      "angels-ore-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-4",
+        recipe = "angels-ore-processing-machine-4",
       },
       {
         type = "unlock-recipe",
@@ -554,11 +554,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-5",
+    name = "angels-ore-processing-5",
     icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-processing-4",
+      "angels-ore-processing-4",
     },
     effects = {
       {
@@ -589,7 +589,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "advanced-material-processing",
-      "water-treatment",
+      "angels-water-treatment",
     },
     effects = {
       {
@@ -598,7 +598,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-steam",
+        recipe = "angels-coolant-cool-steam",
       },
     },
     unit = {
@@ -619,28 +619,28 @@ data:extend({
     prerequisites = {
       "angels-cooling",
       "angels-oil-processing",
-      "slag-processing-2",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coolant",
+        recipe = "angels-coolant",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-used-filtration-1",
+        recipe = "angels-coolant-used-filtration-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-100",
+        recipe = "angels-coolant-cool-100",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-200",
+        recipe = "angels-coolant-cool-200",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-300",
+        recipe = "angels-coolant-cool-300",
       },
     },
     unit = {
@@ -661,12 +661,12 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-coolant-1",
-      "slag-processing-3",
+      "angels-slag-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coolant-used-filtration-2",
+        recipe = "angels-coolant-used-filtration-2",
       },
     },
     unit = {

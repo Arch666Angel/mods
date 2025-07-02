@@ -39,7 +39,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-brown",
-      "water-treatment",
+      "angels-water-treatment",
     },
     effects = {
       {
@@ -56,7 +56,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-methanol-from-wood",
+        recipe = "angels-gas-methanol-from-wood",
       },
       {
         type = "unlock-recipe",
@@ -85,7 +85,7 @@ data:extend({
       --"bio-processing-brown",
       "bio-processing-green",
       "angels-nitrogen-processing-2",
-      "thermal-water-extraction",
+      "angels-thermal-water-extraction",
     },
     effects = {
       {
@@ -102,7 +102,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-calcium-carbonate",
+        recipe = "angels-solid-calcium-carbonate",
       },
     },
     unit = {
@@ -139,7 +139,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonia-from-blue-fiber",
+        recipe = "angels-gas-ammonia-from-blue-fiber",
       },
     },
     unit = {

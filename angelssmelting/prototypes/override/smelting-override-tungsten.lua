@@ -26,16 +26,16 @@ end
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods["bobplates"] then
-    OV.converter_fluid("bob-tungstic-acid", "liquid-tungstic-acid")
+    OV.converter_fluid("bob-tungstic-acid", "angels-liquid-tungstic-acid")
     angelsmods.functions.disable_barreling_recipes("bob-tungstic-acid")
     OV.disable_recipe({ "bob-tungstic-acid" })
   end
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-tungsten-oxide", "bob-tungsten-oxide")
-    angelsmods.functions.hide("solid-tungsten-oxide")
-    OV.copy_item_properties("solid-tungsten-oxide", "bob-tungsten-oxide")
+    OV.global_replace_item("angels-solid-tungsten-oxide", "bob-tungsten-oxide")
+    angelsmods.functions.hide("angels-solid-tungsten-oxide")
+    OV.copy_item_properties("angels-solid-tungsten-oxide", "bob-tungsten-oxide")
     OV.disable_recipe({ "bob-tungsten-oxide" })
   end
 
@@ -48,10 +48,10 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
 else
   angelsmods.functions.hide("processed-tungsten")
   angelsmods.functions.hide("pellet-tungsten")
-  angelsmods.functions.hide("liquid-tungstic-acid")
-  angelsmods.functions.hide("solid-tungsten-oxide")
-  angelsmods.functions.hide("gas-tungsten-hexafluoride")
-  angelsmods.functions.hide("solid-ammonium-paratungstate")
+  angelsmods.functions.hide("angels-liquid-tungstic-acid")
+  angelsmods.functions.hide("angels-solid-tungsten-oxide")
+  angelsmods.functions.hide("angels-gas-tungsten-hexafluoride")
+  angelsmods.functions.hide("angels-solid-ammonium-paratungstate")
   angelsmods.functions.hide("powder-tungsten")
   OV.disable_technology({ "angels-tungsten-smelting-1", "angels-tungsten-smelting-2", "angels-tungsten-smelting-3" })
 end
@@ -120,12 +120,12 @@ then
     "tungsten-ore-processing",
     "tungsten-processed-processing",
     "tungsten-ore-smelting",
-    "liquid-tungstic-acid-smelting",
+    "angels-liquid-tungstic-acid-smelting",
     "pellet-tungsten-smelting",
-    "solid-tungsten-oxide-smelting",
+    "angels-solid-tungsten-oxide-smelting",
     "processed-tungsten-smelting",
-    "gas-tungsten-hexafluoride-smelting",
-    "solid-ammonium-paratungstate-smelting",
+    "angels-gas-tungsten-hexafluoride-smelting",
+    "angels-solid-ammonium-paratungstate-smelting",
   })
 end
 -------------------------------------------------------------------------------

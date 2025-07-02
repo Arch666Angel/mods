@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-zinc-oxide",
+    name = "angels-solid-zinc-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-zinc-oxide.png",
     icon_size = 32,
     subgroup = "angels-zinc",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-zinc",
+    name = "angels-liquid-molten-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc-casting",

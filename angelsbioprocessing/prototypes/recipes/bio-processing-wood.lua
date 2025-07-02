@@ -9,7 +9,7 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -31,8 +31,8 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -54,10 +54,10 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
-      { type = "fluid", name = "gas-carbon-dioxide", amount = 20 },
+      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
     results = {
       { type = "item", name = "tree-seed", amount = 8 },
@@ -80,7 +80,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "token-bio", amount = 16 },
       { type = "item", name = "tree-seed", amount = 2 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -117,15 +117,15 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-seed", amount = 2 },
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "solid-tree", amount = 4 },
+      { type = "item", name = "angels-solid-tree", amount = 4 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-tree"),
+      angelsmods.functions.get_object_icons("angels-solid-tree"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -144,16 +144,16 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-seed", amount = 2 },
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "solid-tree", amount = 6 },
+      { type = "item", name = "angels-solid-tree", amount = 6 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-tree"),
+      angelsmods.functions.get_object_icons("angels-solid-tree"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -172,17 +172,17 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-seed", amount = 2 },
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 10 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 10 },
     },
     results = {
-      { type = "item", name = "solid-tree", amount = 8 },
+      { type = "item", name = "angels-solid-tree", amount = 8 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-tree"),
+      angelsmods.functions.get_object_icons("angels-solid-tree"),
       3,
       angelsmods.bioprocessing.number_tint
     ),
@@ -194,7 +194,7 @@ data:extend({
   -- RAW WOOD PROCESSING
   {
     type = "recipe",
-    name = "solid-saw",
+    name = "angels-solid-saw",
     --icon_size = 32,
     localised_name = { "item-name.solid-saw" },
     category = "crafting",
@@ -205,7 +205,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-saw", amount = 1 },
+      { type = "item", name = "angels-solid-saw", amount = 1 },
     },
     allow_decomposition = false,
     --icon_size = 32,
@@ -213,7 +213,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-crystal-tipped-saw",
+    name = "angels-solid-crystal-tipped-saw",
     --icon_size = 32,
     localised_name = { "item-name.solid-crystal-tipped-saw" },
     category = "crafting",
@@ -221,11 +221,11 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "solid-saw", amount = 1 },
+      { type = "item", name = "angels-solid-saw", amount = 1 },
       { type = "item", name = "crystal-splinter-harmonic", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-crystal-tipped-saw", amount = 1 },
+      { type = "item", name = "angels-solid-crystal-tipped-saw", amount = 1 },
     },
     allow_decomposition = false,
     --icon_size = 32,
@@ -233,7 +233,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-crystal-full-saw",
+    name = "angels-solid-crystal-full-saw",
     --icon_size = 32,
     localised_name = { "item-name.solid-crystal-full-saw" },
     category = "crafting",
@@ -241,11 +241,11 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "solid-crystal-tipped-saw", amount = 1 },
+      { type = "item", name = "angels-solid-crystal-tipped-saw", amount = 1 },
       { type = "item", name = "crystal-shard-harmonic", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-crystal-full-saw", amount = 1 },
+      { type = "item", name = "angels-solid-crystal-full-saw", amount = 1 },
     },
     allow_decomposition = false,
     --icon_size = 32,
@@ -260,14 +260,14 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-saw", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-solid-tree", amount = 1 },
+      { type = "item", name = "angels-solid-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
       {
         type = "item",
-        name = "solid-saw",
+        name = "angels-solid-saw",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
@@ -292,14 +292,14 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-crystal-tipped-saw", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-solid-tree", amount = 1 },
+      { type = "item", name = "angels-solid-crystal-tipped-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
       {
         type = "item",
-        name = "solid-crystal-tipped-saw",
+        name = "angels-solid-crystal-tipped-saw",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
@@ -324,14 +324,14 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "solid-tree", amount = 1 },
-      { type = "item", name = "solid-crystal-full-saw", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-solid-tree", amount = 1 },
+      { type = "item", name = "angels-solid-crystal-full-saw", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "wood", amount_min = 6, amount_max = 8 },
       {
         type = "item",
-        name = "solid-crystal-full-saw",
+        name = "angels-solid-crystal-full-saw",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
@@ -357,7 +357,7 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -379,8 +379,8 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -402,10 +402,10 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
-      { type = "fluid", name = "gas-carbon-dioxide", amount = 20 },
+      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
     results = {
       { type = "item", name = "tree-temperate-seed", amount = 8 },
@@ -429,7 +429,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "token-bio", amount = 16 },
       { type = "item", name = "tree-temperate-seed", amount = 2 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -466,12 +466,12 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-temperate-seed", amount = 2 },
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-resin", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
+      { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -493,13 +493,13 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-temperate-seed", amount = 2 },
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-resin", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
+      { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -534,59 +534,59 @@ data:extend({
   {
     type = "recipe",
     name = "bio-resin",
-    localised_name = { "fluid-name.liquid-resin" },
-    category = "liquifying",
+    localised_name = { "fluid-name.angels-liquid-resin" },
+    category = "angels-liquifying",
     subgroup = "bio-arboretum-temperate",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "gas-ethanol", amount = 40 },
+      { type = "fluid", name = "angels-gas-ethanol", amount = 40 },
       { type = "item", name = "bio-resin", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "liquid-resin", amount = 10 },
+      { type = "fluid", name = "angels-liquid-resin", amount = 10 },
     },
-    main_product = "liquid-resin",
+    main_product = "angels-liquid-resin",
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       "bio-resin",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "liquid-resin",
-      "gas-ethanol",
-      "liquid-resin",
-      "gas-ethanol",
+      "angels-liquid-resin",
+      "angels-gas-ethanol",
+      "angels-liquid-resin",
+      "angels-gas-ethanol",
     }),
     order = "c[processing]-a[bio-resin]",
   },
   {
     type = "recipe",
     name = "bio-resin-resin-liquification",
-    localised_name = { "fluid-name.liquid-resin" },
-    category = "liquifying",
+    localised_name = { "fluid-name.angels-liquid-resin" },
+    category = "angels-liquifying",
     subgroup = "bio-arboretum-temperate",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "fluid", name = "gas-ethanol", amount = 100 }, -- 20 ethanol / 5 liquid resin
-      { type = "item", name = "solid-resin", amount = 4 },
+      { type = "fluid", name = "angels-gas-ethanol", amount = 100 }, -- 20 ethanol / 5 liquid resin
+      { type = "item", name = "angels-solid-resin", amount = 4 },
     },
     results = {
-      { type = "fluid", name = "liquid-resin", amount_min = 10, amount_max = 40 }, -- average 25 liquid resin / 40 wood
+      { type = "fluid", name = "angels-liquid-resin", amount_min = 10, amount_max = 40 }, -- average 25 liquid resin / 40 wood
     },
-    main_product = "liquid-resin",
+    main_product = "angels-liquid-resin",
     allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
-      mods["bobplates"] and { "__bobplates__/graphics/icons/resin.png", 32 } or "solid-resin",
+      mods["bobplates"] and { "__bobplates__/graphics/icons/resin.png", 32 } or "angels-solid-resin",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "liquid-resin",
-      "gas-ethanol",
-      "liquid-resin",
-      "gas-ethanol",
+      "angels-liquid-resin",
+      "angels-gas-ethanol",
+      "angels-liquid-resin",
+      "angels-gas-ethanol",
     }),
     order = "c[processing]-b[solid-resin]-a[liquification]",
   },
@@ -602,9 +602,9 @@ data:extend({
       { type = "item", name = "wood", amount = 10 },
     },
     results = {
-      { type = "item", name = "solid-resin", amount = 1 },
+      { type = "item", name = "angels-solid-resin", amount = 1 },
     },
-    main_product = "solid-resin",
+    main_product = "angels-solid-resin",
     always_show_products = true,
     order = "c[processing]-b[solid-resin]-b[wood-reprocessing]",
     crafting_machine_tint = {
@@ -622,8 +622,8 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-mud", amount = 5 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 5 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "tree-swamp-seed", amount = 4 },
@@ -647,9 +647,9 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-mud", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "tree-swamp-seed", amount = 6 },
@@ -673,10 +673,10 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-mud", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
-      { type = "fluid", name = "gas-nitrogen", amount = 20 },
+      { type = "item", name = "angels-solid-mud", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
+      { type = "fluid", name = "angels-gas-nitrogen", amount = 20 },
     },
     results = {
       { type = "item", name = "tree-swamp-seed", amount = 8 },
@@ -703,8 +703,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "token-bio", amount = 16 },
       { type = "item", name = "tree-swamp-seed", amount = 2 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-tree", amount = 1, probability = 0.5 },
@@ -740,12 +740,12 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-swamp-seed", amount = 2 },
-      { type = "item", name = "solid-mud", amount = 5 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 5 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-plastic", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
+      { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -767,13 +767,13 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-swamp-seed", amount = 2 },
-      { type = "item", name = "solid-mud", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-plastic", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
+      { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -808,29 +808,29 @@ data:extend({
   {
     type = "recipe",
     name = "bio-plastic",
-    localised_name = { "fluid-name.liquid-plastic" },
-    category = "liquifying",
+    localised_name = { "fluid-name.angels-liquid-plastic" },
+    category = "angels-liquifying",
     subgroup = "bio-arboretum-swamp",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "gas-acetone", amount = 40 },
+      { type = "fluid", name = "angels-gas-acetone", amount = 40 },
       { type = "item", name = "bio-plastic", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "liquid-plastic", amount = 10 },
+      { type = "fluid", name = "angels-liquid-plastic", amount = 10 },
     },
-    main_product = "liquid-plastic",
+    main_product = "angels-liquid-plastic",
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       "bio-plastic",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "liquid-plastic",
-      "gas-acetone",
-      "liquid-plastic",
-      "gas-acetone",
+      "angels-liquid-plastic",
+      "angels-gas-acetone",
+      "angels-liquid-plastic",
+      "angels-gas-acetone",
     }),
     order = "c[processing]",
   },
@@ -844,8 +844,8 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-sand", amount = 5 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 5 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "tree-desert-seed", amount = 4 },
@@ -869,9 +869,9 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-sand", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "tree-desert-seed", amount = 6 },
@@ -895,10 +895,10 @@ data:extend({
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "solid-sand", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-saline", amount = 50 },
-      { type = "fluid", name = "gas-nitrogen", amount = 20 },
+      { type = "item", name = "angels-solid-sand", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
+      { type = "fluid", name = "angels-gas-nitrogen", amount = 20 },
     },
     results = {
       { type = "item", name = "tree-desert-seed", amount = 8 },
@@ -925,8 +925,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "token-bio", amount = 16 },
       { type = "item", name = "tree-desert-seed", amount = 2 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-tree", amount = 1, probability = 0.5 },
@@ -962,12 +962,12 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-desert-seed", amount = 2 },
-      { type = "item", name = "solid-sand", amount = 5 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 5 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-rubber", amount = 4 },
-      { type = "item", name = "solid-tree", amount = 2, ignored_by_productivity = 2 },
+      { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -989,13 +989,13 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "tree-desert-seed", amount = 2 },
-      { type = "item", name = "solid-sand", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "bio-rubber", amount = 7 },
-      { type = "item", name = "solid-tree", amount = 3, ignored_by_productivity = 3 },
+      { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -1030,29 +1030,29 @@ data:extend({
   {
     type = "recipe",
     name = "bio-rubber",
-    localised_name = { "fluid-name.liquid-rubber" },
-    category = "liquifying",
+    localised_name = { "fluid-name.angels-liquid-rubber" },
+    category = "angels-liquifying",
     subgroup = "bio-arboretum-desert",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "gas-acetone", amount = 40 },
+      { type = "fluid", name = "angels-gas-acetone", amount = 40 },
       { type = "item", name = "bio-rubber", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "liquid-rubber", amount = 10 },
+      { type = "fluid", name = "angels-liquid-rubber", amount = 10 },
     },
-    main_product = "liquid-rubber",
+    main_product = "angels-liquid-rubber",
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }, {
       "bio-rubber",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "liquid-rubber",
-      "gas-acetone",
-      "liquid-rubber",
-      "gas-acetone",
+      "angels-liquid-rubber",
+      "angels-gas-acetone",
+      "angels-liquid-rubber",
+      "angels-gas-acetone",
     }),
     order = "c[processing]",
   },

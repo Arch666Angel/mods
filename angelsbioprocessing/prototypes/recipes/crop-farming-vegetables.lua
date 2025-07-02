@@ -10,7 +10,7 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "temperate-1-seed", amount = 5 },
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -35,7 +35,7 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "temperate-2-seed", amount = 5 },
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -60,7 +60,7 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "temperate-3-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -85,8 +85,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "temperate-4-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -111,8 +111,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "temperate-5-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-soil", amount = 5 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 5 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
@@ -230,8 +230,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "desert-1-seed", amount = 5 },
-      { type = "item", name = "solid-sand", amount = 10 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 10 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-1", amount_min = 30, amount_max = 40 },
@@ -255,8 +255,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "desert-2-seed", amount = 5 },
-      { type = "item", name = "solid-sand", amount = 10 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 10 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-2", amount_min = 30, amount_max = 40 },
@@ -280,8 +280,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "desert-3-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-sand", amount = 10 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 10 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-3", amount_min = 30, amount_max = 40 },
@@ -305,9 +305,9 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "desert-4-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-sand", amount = 10 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 10 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-4", amount_min = 30, amount_max = 40 },
@@ -331,9 +331,9 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "desert-5-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-sand", amount = 10 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-saline", amount = 50 },
+      { type = "item", name = "angels-solid-sand", amount = 10 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-5", amount_min = 30, amount_max = 40 },
@@ -450,8 +450,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "swamp-1-seed", amount = 5 },
-      { type = "item", name = "solid-mud", amount = 10 },
-      { type = "fluid", name = "water-viscous-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 10 },
+      { type = "fluid", name = "angels-water-viscous-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-1", amount_min = 40, amount_max = 50 },
@@ -475,8 +475,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "swamp-2-seed", amount = 5 },
-      { type = "item", name = "solid-mud", amount = 10 },
-      { type = "fluid", name = "water-heavy-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 10 },
+      { type = "fluid", name = "angels-water-heavy-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-2", amount_min = 40, amount_max = 50 },
@@ -500,8 +500,8 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "swamp-3-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-mud", amount = 10 },
-      { type = "fluid", name = "water-concentrated-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 10 },
+      { type = "fluid", name = "angels-water-concentrated-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-3", amount_min = 40, amount_max = 50 },
@@ -525,9 +525,9 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "swamp-4-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-mud", amount = 10 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-light-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 10 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-4", amount_min = 40, amount_max = 50 },
@@ -551,9 +551,9 @@ data:extend({
     energy_required = 30,
     ingredients = {
       { type = "item", name = "swamp-5-seed", amount = 5, ignored_by_stats = 5 },
-      { type = "item", name = "solid-mud", amount = 10 },
-      { type = "item", name = "solid-fertilizer", amount = 1 },
-      { type = "fluid", name = "water-thin-mud", amount = 50 },
+      { type = "item", name = "angels-solid-mud", amount = 10 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
+      { type = "fluid", name = "angels-water-thin-mud", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-5", amount_min = 40, amount_max = 50 },

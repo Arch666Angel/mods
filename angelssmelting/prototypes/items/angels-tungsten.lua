@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-tungstic-acid",
+    name = "angels-liquid-tungstic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "H[font=default-tiny-bold]2[/font]WO[font=default-tiny-bold]4[/font]",
@@ -51,7 +51,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-tungsten-oxide",
+    name = "angels-solid-tungsten-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
@@ -60,7 +60,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-tungsten-hexafluoride",
+    name = "angels-gas-tungsten-hexafluoride",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "WF[font=default-tiny-bold]6[/font]" }
       or nil,
@@ -78,7 +78,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-ammonium-paratungstate",
+    name = "angels-solid-ammonium-paratungstate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-ammonium-paratungstate.png",
     icon_size = 32,
     subgroup = "angels-tungsten",

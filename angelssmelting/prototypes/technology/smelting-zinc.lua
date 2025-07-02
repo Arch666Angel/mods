@@ -7,10 +7,10 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-zinc-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       "angels-metallurgy-2",
       "angels-lead-smelting-1",
-      --"basic-chemistry"
+      --"angels-basic-chemistry"
     },
     effects = {
       {
@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-zinc-smelting",
+        recipe = "angels-molten-zinc-smelting",
       },
       {
         type = "unlock-recipe",
@@ -47,7 +47,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-zinc-smelting-1",
       "angels-coal-processing",
     },
@@ -114,7 +114,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-zinc-smelting-2",
       "angels-sulfur-processing-2",
     },
@@ -129,7 +129,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-zinc-oxide-smelting",
+        recipe = "angels-solid-zinc-oxide-smelting",
       },
       {
         type = "unlock-recipe",

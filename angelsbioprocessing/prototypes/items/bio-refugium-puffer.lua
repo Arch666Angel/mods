@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "fluid",
-    name = "gas-puffer-atmosphere",
+    name = "angels-gas-puffer-atmosphere",
     icons = angelsmods.functions.create_gas_fluid_icon(
       nil,
       { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }

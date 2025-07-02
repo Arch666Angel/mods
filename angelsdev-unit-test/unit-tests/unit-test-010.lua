@@ -441,17 +441,17 @@ local function add_ignores()
 
   if script.active_mods["angelsrefining"] then
     ignore_building_recipes = true
-    ignored_unlocks["ore-powderizer"] = {
+    ignored_unlocks["angels-ore-powderizer"] = {
       items = {
-        ["milling-drum-used"] = true,
+        ["angels-milling-drum-used"] = true,
       },
     }
-    ignored_unlocks["water-treatment-2"] = {
+    ignored_unlocks["angels-water-treatment-2"] = {
       items = {},
       fluids = {
-        ["water-greenyellow-waste"] = true,
-        ["water-green-waste"] = true,
-        ["water-red-waste"] = true,
+        ["angels-water-greenyellow-waste"] = true,
+        ["angels-water-green-waste"] = true,
+        ["angels-water-red-waste"] = true,
       },
     }
   end
@@ -459,7 +459,7 @@ local function add_ignores()
   if script.active_mods["angelssmelting"] then
     ignored_unlocks["angels-coolant-1"] = {
       fluids = {
-        ["liquid-coolant-used"] = true,
+        ["angels-liquid-coolant-used"] = true,
       },
     }
   end
@@ -467,17 +467,17 @@ local function add_ignores()
   if script.active_mods["angelsbioprocessing"] then
     ignored_unlocks["plastics"] = {
       fluids = {
-        ["liquid-plastic"] = true,
+        ["angels-liquid-plastic"] = true,
       },
     }
-    ignored_unlocks["rubbers"] = {
+    ignored_unlocks["angels-rubbers"] = {
       fluids = {
-        ["liquid-rubber"] = true,
+        ["angels-liquid-rubber"] = true,
       },
     }
-    ignored_unlocks["resins"] = {
+    ignored_unlocks["angels-resins"] = {
       fluids = {
-        ["liquid-resin"] = true,
+        ["angels-liquid-resin"] = true,
       },
     }
     ignored_unlocks["bio-processing-paste"] = {
@@ -503,25 +503,25 @@ local function add_ignores()
     }
     ignored_unlocks["bio-fermentation"] = {
       items = {
-        ["solid-corn"] = true,
-        ["solid-fruit"] = true,
+        ["angels-solid-corn"] = true,
+        ["angels-solid-fruit"] = true,
       },
     }
     ignored_unlocks["bio-nutrient-paste"] = {
       items = {
-        ["solid-beans"] = true,
-        ["solid-corn"] = true,
-        ["solid-leafs"] = true,
-        ["solid-nuts"] = true,
-        ["solid-pips"] = true,
-        ["solid-fruit"] = true,
+        ["angels-solid-beans"] = true,
+        ["angels-solid-corn"] = true,
+        ["angels-solid-leafs"] = true,
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-fruit"] = true,
       },
     }
     ignored_unlocks["bio-pressing-1"] = {
       items = {
-        ["solid-nuts"] = true,
-        ["solid-pips"] = true,
-        ["solid-beans"] = true,
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-beans"] = true,
       },
     }
     -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
@@ -578,7 +578,7 @@ local function add_ignores()
         ["angels-muon-fusion-catalyst"] = true,
       },
       fluids = {
-        ["gas-deuterium"] = true,
+        ["angels-gas-deuterium"] = true,
       },
     }
   end

@@ -16,7 +16,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "water-treatment",
+      technology = "angels-water-treatment",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-3-water-processing.1-3-water-processing-simulation",

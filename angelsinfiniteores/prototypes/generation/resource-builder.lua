@@ -980,7 +980,7 @@ if not angelsmods.functions.make_resource then
                 if angelsmods.trigger.enableacids then
                   input.acid_req = input.acid_to_mine
                 else
-                  input.acid_req = "liquid-sulfuric-acid"
+                  input.acid_req = "angels-liquid-sulfuric-acid"
                 end
               else
                 if data.raw.fluid[input.acid_to_mine] then

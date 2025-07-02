@@ -18,7 +18,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "ore-floatation",
+      technology = "angels-ore-floatation",
     },
 
     simulation = {

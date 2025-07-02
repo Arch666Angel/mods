@@ -23,7 +23,7 @@ if angelsmods.industries.tech then
   AI.core_replace("flammables", "war", "enhance")
   -- REFINING
   -- PETROCHEM
-  AI.core_replace("basic-chemistry", "processing", "basic")
+  AI.core_replace("angels-basic-chemistry", "processing", "basic")
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
@@ -186,19 +186,19 @@ if angelsmods.industries.tech then
   OV.set_science_pack("lubricant", "datacore-processing-1", 2)
   OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
   -- REFINING
-  OV.set_science_pack("geode-crystallization-1", "datacore-processing-1", 2)
-  OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-geode-crystallization-1", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
-  OV.set_science_pack("oil-gas-extraction", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-oil-gas-extraction", "datacore-processing-1", 2)
   OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
-  OV.set_science_pack("gas-synthesis", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-1", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-2", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-3", "datacore-processing-1", 2)
-  OV.set_science_pack("rubber", "datacore-processing-1", 2)
-  AI.core_replace("rocket-booster-1", "war", "processing")
-  AI.core_replace("rocket-booster-2", "war", "processing")
+  OV.set_science_pack("angels-gas-synthesis", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-1", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-2", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-3", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-rubber", "datacore-processing-1", 2)
+  AI.core_replace("angels-rocket-booster-1", "war", "processing")
+  AI.core_replace("angels-rocket-booster-2", "war", "processing")
   -- BIOPROCESSING
   AI.core_replace("angels-composting", "basic", "processing")
   OV.execute() ------------------------------------------------------------------

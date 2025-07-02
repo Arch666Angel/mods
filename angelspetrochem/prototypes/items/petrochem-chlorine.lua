@@ -4,7 +4,7 @@ data:extend({
   --CHLORINE
   {
     type = "fluid",
-    name = "gas-chlorine",
+    name = "angels-gas-chlorine",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "Cl[font=default-tiny-bold]2[/font]" }
       or nil,
@@ -13,7 +13,7 @@ data:extend({
       "ClClCl"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "a",
     default_temperature = 0,
     gas_temperature = 0,
@@ -24,14 +24,14 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-hydrogen-chloride",
+    name = "angels-gas-hydrogen-chloride",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "HCl" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
       "ClClH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "b",
     default_temperature = 0,
     gas_temperature = 0,
@@ -42,7 +42,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-hydrochloric-acid",
+    name = "angels-liquid-hydrochloric-acid",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HCl[font=default-tiny-bold](aq)[/font]" }
       or nil,
@@ -51,7 +51,7 @@ data:extend({
       "ClHO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "c",
     default_temperature = 0,
     gas_temperature = 0,
@@ -62,7 +62,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-allylchlorid",
+    name = "angels-gas-allylchlorid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]ClO",
@@ -72,7 +72,7 @@ data:extend({
       "CClH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "d",
     default_temperature = 0,
     gas_temperature = 0,
@@ -83,7 +83,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-epichlorhydrin",
+    name = "angels-gas-epichlorhydrin",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]Cl",
@@ -93,7 +93,7 @@ data:extend({
       "CHCl"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "e",
     default_temperature = 0,
     gas_temperature = 0,
@@ -104,7 +104,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-chlor-methane",
+    name = "angels-gas-chlor-methane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]3[/font]Cl" }
       or nil,
@@ -113,7 +113,7 @@ data:extend({
       "CClH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "f",
     default_temperature = 0,
     gas_temperature = 0,
@@ -124,25 +124,25 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-sodium-chlorate",
+    name = "angels-solid-sodium-chlorate",
     icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-chlorate.png",
     icon_size = 32,
-    subgroup = "petrochem-sodium",
+    subgroup = "angels-petrochem-sodium",
     order = "f[liquid-sodium-hydroxide]-b[solid-sodium-chlorate]",
     stack_size = 200,
   },
   {
     type = "item",
-    name = "solid-sodium-perchlorate",
+    name = "angels-solid-sodium-perchlorate",
     icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-perchlorate.png",
     icon_size = 32,
-    subgroup = "petrochem-sodium",
+    subgroup = "angels-petrochem-sodium",
     order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]",
     stack_size = 200,
   },
   {
     type = "fluid",
-    name = "liquid-perchloric-acid",
+    name = "angels-liquid-perchloric-acid",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HClO[font=default-tiny-bold]4[/font]" }
       or nil,
@@ -151,7 +151,7 @@ data:extend({
       "ClHO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "g",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -161,7 +161,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-phosgene",
+    name = "angels-gas-phosgene",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "COCl[font=default-tiny-bold]2[/font]" }
       or nil,
@@ -170,7 +170,7 @@ data:extend({
       "CClO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "h",
     default_temperature = 0,
     gas_temperature = 0,
@@ -181,7 +181,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-ferric-chloride-solution",
+    name = "angels-liquid-ferric-chloride-solution",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "Fe(III)Cl[font=default-tiny-bold]3[/font]" }
       or nil,
@@ -189,7 +189,7 @@ data:extend({
       nil,
       { { 104, 112, 113 }, { 104, 112, 113 }, { 099, 146, 191 }, { 099, 146, 191 } }
     ),
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "ia",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -199,7 +199,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-cupric-chloride-solution",
+    name = "angels-liquid-cupric-chloride-solution",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "Cu(II)Cl[font=default-tiny-bold]2[/font]" }
       or nil,
@@ -207,7 +207,7 @@ data:extend({
       nil,
       { { 095, 106, 090 }, { 095, 106, 090 }, { 165, 093, 051 }, { 165, 093, 051 } }
     ),
-    subgroup = "petrochem-chlorine-fluids",
+    subgroup = "angels-petrochem-chlorine-fluids",
     order = "ib",
     default_temperature = 0,
     heat_capacity = "0.1kJ",

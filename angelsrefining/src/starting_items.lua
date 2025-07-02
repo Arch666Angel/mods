@@ -28,7 +28,7 @@ function starting_items:configure_starting_items()
     or (script.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value)
     or false
 
-  self:increment_freeplay_starting_item("burner-ore-crusher", 1)
+  self:increment_freeplay_starting_item("angels-burner-ore-crusher", 1)
 
   if script.active_mods["bobclasses"] then -- fix character classes starting point
     if components_overhaul then

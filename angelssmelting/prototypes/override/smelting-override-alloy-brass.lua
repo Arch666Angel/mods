@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-brass",
+        name = "angels-liquid-molten-brass",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-brass.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -31,7 +31,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "recipe",
         name = "angels-brass-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-brass" },
+        localised_name = { "fluid-name.angels-liquid-molten-brass" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -41,20 +41,20 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           { type = "item", name = "ingot-zinc", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-brass", amount = 240 },
+          { type = "fluid", name = "angels-liquid-molten-brass", amount = 240 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-brass"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-brass"),
           1,
           angelsmods.smelting.number_tint
         ),
         order = "b[brass]-a[liquid-molten-brass]-a",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-brass"),
       },
       {
         type = "recipe",
         name = "angels-brass-smelting-2",
-        localised_name = { "fluid-name.liquid-molten-brass" },
+        localised_name = { "fluid-name.angels-liquid-molten-brass" },
         category = "induction-smelting-3",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -65,20 +65,20 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           { type = "item", name = "ingot-tin", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-brass", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-brass", amount = 360 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-brass"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-brass"),
           2,
           angelsmods.smelting.number_tint
         ),
         order = "b[brass]-a[liquid-molten-brass]-b",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-brass"),
       },
       {
         type = "recipe",
         name = "angels-brass-smelting-3",
-        localised_name = { "fluid-name.liquid-molten-brass" },
+        localised_name = { "fluid-name.angels-liquid-molten-brass" },
         category = "induction-smelting-4",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -89,15 +89,15 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           { type = "item", name = "ingot-lead", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-brass", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-brass", amount = 360 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-brass"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-brass"),
           3,
           angelsmods.smelting.number_tint
         ),
         order = "b[brass]-a[liquid-molten-brass]-c",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-brass"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-brass"),
       },
       --CASTING
       {
@@ -109,7 +109,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-brass", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-brass", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-brass-alloy", amount = 4 },

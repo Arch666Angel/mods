@@ -29,8 +29,8 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
   if angelsmods.trigger.smelting_products["gold"].plate or angelsmods.trigger.smelting_products["gold"].wire then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-gold")
-    OV.disable_recipe({ "molten-gold-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-gold")
+    OV.disable_recipe({ "angels-molten-gold-smelting" })
     OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -41,20 +41,20 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
 else
   angelsmods.functions.hide("processed-gold")
   angelsmods.functions.hide("pellet-gold")
-  angelsmods.functions.hide("solid-sodium-gold-cyanide")
-  angelsmods.functions.hide("liquid-chlorauric-acid")
+  angelsmods.functions.hide("angels-solid-sodium-gold-cyanide")
+  angelsmods.functions.hide("angels-liquid-chlorauric-acid")
   angelsmods.functions.hide("cathode-gold")
   angelsmods.functions.hide("ingot-gold")
-  angelsmods.functions.hide("liquid-molten-gold")
+  angelsmods.functions.hide("angels-liquid-molten-gold")
   OV.disable_recipe({ "gold-ore-processing", "gold-processed-processing" })
   OV.disable_recipe({
     "pellet-gold-smelting",
-    "liquid-chlorauric-acid",
+    "angels-liquid-chlorauric-acid",
     "processed-gold-smelting",
-    "solid-sodium-gold-cyanide-smelting",
+    "angels-solid-sodium-gold-cyanide-smelting",
   })
   OV.disable_recipe({ "gold-ore-smelting", "cathode-gold-smelting" })
-  OV.disable_recipe({ "molten-gold-smelting" })
+  OV.disable_recipe({ "angels-molten-gold-smelting" })
   OV.disable_technology({ "angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3" })
   OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
 end

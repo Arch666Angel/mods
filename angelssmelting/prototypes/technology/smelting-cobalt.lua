@@ -7,9 +7,9 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-leaching",
+      "angels-ore-leaching",
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-coal-processing",
       "angels-stone-smelting-1",
     },
@@ -20,7 +20,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-cobalt-smelting",
+        recipe = "angels-molten-cobalt-smelting",
       },
       {
         type = "unlock-recipe",
@@ -49,7 +49,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-cobalt-smelting-1",
     },
     effects = {
@@ -63,7 +63,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-cobalt-oxide-smelting",
+        recipe = "angels-solid-cobalt-oxide-smelting",
       },
       {
         type = "unlock-recipe",
@@ -120,10 +120,10 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-cobalt-smelting-2",
       "angels-sulfur-processing-1",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
     },
     effects = {
       {
@@ -136,7 +136,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-cobalt-hydroxide-smelting",
+        recipe = "angels-solid-cobalt-hydroxide-smelting",
       },
     },
     unit = {

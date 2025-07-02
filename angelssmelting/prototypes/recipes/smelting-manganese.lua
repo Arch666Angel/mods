@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "manganese-ore-processing",
     localised_name = { "item-name.processed-manganese" },
-    category = "ore-processing",
+    category = "angels-ore-processing",
     subgroup = "angels-manganese",
     energy_required = 2,
     enabled = false,
@@ -16,7 +16,7 @@ data:extend({
       { type = "item", name = "processed-manganese", amount = 2 },
     },
     order = "b[processed-manganese]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-manganese"),
   },
   {
     type = "recipe",
@@ -44,13 +44,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-manganese", amount = 4 },
-      { type = "fluid", name = "gas-synthesis", amount = 60 },
+      { type = "fluid", name = "angels-gas-synthesis", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-manganese-oxide", amount = 6 },
+      { type = "item", name = "angels-solid-manganese-oxide", amount = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-manganese-oxide"),
+      angelsmods.functions.get_object_icons("angels-solid-manganese-oxide"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -66,13 +66,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-manganese", amount = 8 },
-      { type = "fluid", name = "gas-natural-1", amount = 60 },
+      { type = "fluid", name = "angels-gas-natural-1", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-manganese-oxide", amount = 24 },
+      { type = "item", name = "angels-solid-manganese-oxide", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-manganese-oxide"),
+      angelsmods.functions.get_object_icons("angels-solid-manganese-oxide"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -88,7 +88,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-manganese", amount = 4 },
-      { type = "fluid", name = "liquid-sulfuric-acid", amount = 40 },
+      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
     },
     results = {
       { type = "item", name = "cathode-manganese", amount = 12 },
@@ -102,20 +102,20 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-manganese-oxide-smelting",
+    name = "angels-solid-manganese-oxide-smelting",
     localised_name = { "item-name.cathode-manganese" },
     category = "chemical-smelting-2",
     subgroup = "angels-manganese",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-manganese-oxide", amount = 12 },
+      { type = "item", name = "angels-solid-manganese-oxide", amount = 12 },
       { type = "item", name = "ingot-iron", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-sulfuric-acid", amount = 40 },
+      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
     },
     results = {
       { type = "item", name = "cathode-manganese", amount = 12 },
-      { type = "item", name = "solid-iron-hydroxide", amount = 4 },
+      { type = "item", name = "angels-solid-iron-hydroxide", amount = 4 },
     },
     main_product = "cathode-manganese",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -136,7 +136,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "manganese-ore", amount = 24 },
-      { type = "item", name = "solid-coke", amount = 6 },
+      { type = "item", name = "angels-solid-coke", amount = 6 },
     },
     results = {
       { type = "item", name = "ingot-manganese", amount = 24 },
@@ -188,8 +188,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-manganese-smelting",
-    localised_name = { "fluid-name.liquid-molten-manganese" },
+    name = "angels-molten-manganese-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-manganese" },
     category = "induction-smelting",
     subgroup = "angels-manganese-casting",
     energy_required = 4,
@@ -198,10 +198,10 @@ data:extend({
       { type = "item", name = "ingot-manganese", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-manganese", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-manganese", amount = 120 },
     },
     order = "h[liquid-molten-manganese]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-manganese"),
   },
   {
     type = "recipe",
@@ -212,7 +212,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-manganese", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-manganese", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -224,7 +224,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-manganese]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-manganese"),
   },
   {
     type = "recipe",
@@ -235,12 +235,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-manganese", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-manganese", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-manganese", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-manganese",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -249,7 +249,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-manganese]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-manganese"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-manganese"),
   },
   -- CASTING RESULT
   {
@@ -261,14 +261,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-manganese", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-manganese", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-manganese", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-manganese"),
-      angelsmods.functions.get_object_icons("liquid-molten-manganese"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-manganese"),
       { -10, -10 },
       0.4375
     ),

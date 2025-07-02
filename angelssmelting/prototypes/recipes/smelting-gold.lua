@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "gold-ore-processing",
     localised_name = { "item-name.processed-gold" },
-    category = "ore-processing-3",
+    category = "angels-ore-processing-3",
     subgroup = "angels-gold",
     energy_required = 2,
     enabled = false,
@@ -18,7 +18,7 @@ data:extend({
     main_product = "processed-gold",
     --icon = "__angelssmeltinggraphics__/graphics/icons/processed-gold.png",
     order = "b[processed-gold]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   {
     type = "recipe",
@@ -49,40 +49,40 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-gold", amount = 6 },
-      { type = "item", name = "solid-sodium-cyanide", amount = 4 },
-      { type = "fluid", name = "water-purified", amount = 40 },
-      { type = "fluid", name = "gas-oxygen", amount = 40 },
+      { type = "item", name = "angels-solid-sodium-cyanide", amount = 4 },
+      { type = "fluid", name = "angels-water-purified", amount = 40 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
     },
     results = {
-      { type = "item", name = "solid-sodium-gold-cyanide", amount = 18 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 4 },
+      { type = "item", name = "angels-solid-sodium-gold-cyanide", amount = 18 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 4 },
     },
-    main_product = "solid-sodium-gold-cyanide",
+    main_product = "angels-solid-sodium-gold-cyanide",
     order = "d[solid-sodium-gold-cyanide]",
   },
   {
     type = "recipe",
-    name = "liquid-chlorauric-acid",
-    localised_name = { "fluid-name.liquid-chlorauric-acid" },
+    name = "angels-liquid-chlorauric-acid",
+    localised_name = { "fluid-name.angels-liquid-chlorauric-acid" },
     category = "chemistry",
     subgroup = "angels-gold",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "ingot-gold", amount = 12 },
-      { type = "fluid", name = "liquid-nitric-acid", amount = 30 },
-      { type = "fluid", name = "liquid-hydrochloric-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-nitric-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "liquid-chlorauric-acid", amount = 120 },
+      { type = "fluid", name = "angels-liquid-chlorauric-acid", amount = 120 },
     },
-    main_product = "liquid-chlorauric-acid",
+    main_product = "angels-liquid-chlorauric-acid",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 241, 214, 020 }, { 120, 203, 000 }, { 120, 203, 000 } }
     ),
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
     order = "e[liquid-chlorauric-acid]",
   },
   {
@@ -95,7 +95,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-gold", amount = 2 },
-      { type = "fluid", name = "liquid-chlorauric-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-chlorauric-acid", amount = 60 },
     },
     results = {
       { type = "item", name = "cathode-gold", amount = 12 },
@@ -109,14 +109,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-sodium-gold-cyanide-smelting",
+    name = "angels-solid-sodium-gold-cyanide-smelting",
     localised_name = { "item-name.cathode-gold" },
     category = "chemical-smelting-4",
     subgroup = "angels-gold",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-sodium-gold-cyanide", amount = 12 },
+      { type = "item", name = "angels-solid-sodium-gold-cyanide", amount = 12 },
     },
     results = {
       { type = "item", name = "cathode-gold", amount = 12 },
@@ -139,7 +139,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "gold-ore", amount = 24 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "fluid", name = "angels-gas-chlorine", amount = 60 },
     },
     results = {
       { type = "item", name = "ingot-gold", amount = 24 },
@@ -191,8 +191,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-gold-smelting",
-    localised_name = { "fluid-name.liquid-molten-gold" },
+    name = "angels-molten-gold-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-gold" },
     category = "induction-smelting-3",
     subgroup = "angels-gold-casting",
     energy_required = 4,
@@ -201,11 +201,11 @@ data:extend({
       { type = "item", name = "ingot-gold", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 120 },
     },
-    main_product = "liquid-molten-gold",
+    main_product = "angels-liquid-molten-gold",
     order = "i[liquid-molten-gold]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   {
     type = "recipe",
@@ -216,7 +216,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -228,7 +228,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-gold]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   {
     type = "recipe",
@@ -239,12 +239,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-gold", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-gold",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -253,7 +253,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-gold]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   {
     type = "recipe",
@@ -264,8 +264,8 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 40 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 40 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -277,7 +277,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "k[angels-wire-coil-gold]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   {
     type = "recipe",
@@ -288,13 +288,13 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 70 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 70 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-gold", amount = 8 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-wire-coil-gold",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -303,7 +303,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "k[angels-wire-coil-gold]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gold"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gold"),
   },
   -- CASTING RESULT
   {
@@ -315,14 +315,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-gold", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-gold", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-gold", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-gold"),
-      angelsmods.functions.get_object_icons("liquid-molten-gold"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-gold"),
       { -10, -10 },
       0.4375
     ),

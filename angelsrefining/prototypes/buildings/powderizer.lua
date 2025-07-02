@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "ore-powderizer",
+    name = "angels-ore-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-powderizer",
+    subgroup = "angels-ore-powderizer",
     order = "a",
-    place_result = "ore-powderizer",
+    place_result = "angels-ore-powderizer",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-powderizer",
+    name = "angels-ore-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -23,9 +23,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-powderizer" },
-    fast_replaceable_group = "ore-powderizer",
-    next_upgrade = "ore-powderizer-2",
+    minable = { mining_time = 1, result = "angels-ore-powderizer" },
+    fast_replaceable_group = "angels-ore-powderizer",
+    next_upgrade = "angels-ore-powderizer-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -33,7 +33,7 @@ data:extend({
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1-5" },
+    crafting_categories = { "angels-ore-refining-t1-5" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -63,21 +63,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-powderizer-2",
+    name = "angels-ore-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-powderizer",
+    subgroup = "angels-ore-powderizer",
     order = "b",
-    place_result = "ore-powderizer-2",
+    place_result = "angels-ore-powderizer-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-powderizer-2",
+    name = "angels-ore-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -85,9 +85,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-powderizer-2" },
-    fast_replaceable_group = "ore-powderizer",
-    next_upgrade = "ore-powderizer-3",
+    minable = { mining_time = 1, result = "angels-ore-powderizer-2" },
+    fast_replaceable_group = "angels-ore-powderizer",
+    next_upgrade = "angels-ore-powderizer-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -95,7 +95,7 @@ data:extend({
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1-5" },
+    crafting_categories = { "angels-ore-refining-t1-5" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -125,21 +125,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-powderizer-3",
+    name = "angels-ore-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "ore-powderizer",
+    subgroup = "angels-ore-powderizer",
     order = "c",
-    place_result = "ore-powderizer-3",
+    place_result = "angels-ore-powderizer-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-powderizer-3",
+    name = "angels-ore-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -147,8 +147,8 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-powderizer-3" },
-    fast_replaceable_group = "ore-powderizer",
+    minable = { mining_time = 1, result = "angels-ore-powderizer-3" },
+    fast_replaceable_group = "angels-ore-powderizer",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -156,7 +156,7 @@ data:extend({
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1-5" },
+    crafting_categories = { "angels-ore-refining-t1-5" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

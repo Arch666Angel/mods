@@ -31,7 +31,7 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "crystal-seed", amount = 1 },
-      { type = "item", name = "crystal-dust", amount = 1 },
+      { type = "item", name = "angels-crystal-dust", amount = 1 },
       { type = "item", name = "bio-puffer-egg-3", amount = 1 },
     },
     results = {
@@ -97,7 +97,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-queen-small", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-alien-processed-meat", amount = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "biter-queen-small", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -153,7 +153,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-queen-medium", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-alien-processed-meat", amount = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 40 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 40 },
     },
     results = {
       { type = "item", name = "biter-queen-medium", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -207,7 +207,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-queen-big", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-alien-processed-meat", amount = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 60 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 60 },
     },
     results = {
       { type = "item", name = "biter-queen-big", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -258,7 +258,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-small-egg", amount = 1 },
       { type = "item", name = "bio-alien-processed-meat", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 10 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 10 },
     },
     results = {
       { type = "item", name = "biter-small", amount = 1, probability = 0.95 },
@@ -280,7 +280,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-medium-egg", amount = 1 },
       { type = "item", name = "bio-alien-processed-meat", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "biter-medium", amount = 1, probability = 0.975 },
@@ -302,7 +302,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-big-egg", amount = 1 },
       { type = "item", name = "bio-alien-processed-meat", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 30 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 30 },
     },
     results = {
       { type = "item", name = "biter-big", amount = 1, probability = 0.99 },
@@ -327,7 +327,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-small", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "bio-alien-processed-meat", amount = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "biter-small", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -358,7 +358,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-medium", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "bio-alien-processed-meat", amount = 3 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 40 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 40 },
     },
     results = {
       { type = "item", name = "biter-medium", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -389,7 +389,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "biter-big", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "bio-alien-processed-meat", amount = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 60 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 60 },
     },
     results = {
       { type = "item", name = "biter-big", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },

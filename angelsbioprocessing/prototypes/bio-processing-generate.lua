@@ -52,7 +52,7 @@ angelsmods.functions.make_void("swamp-5", "bio", 2)
 angelsmods.functions.make_void("swamp-5-seed", "bio", 20)
 angelsmods.functions.make_void("swamp-5-seed-dormant", "bio", 20)
 
-angelsmods.functions.make_void("gas-ethanol", "chemical")
+angelsmods.functions.make_void("angels-gas-ethanol", "chemical")
 
 angelsmods.functions.make_void("alien-spores", "chemical")
 angelsmods.functions.make_void("alien-bacteria", "bio")

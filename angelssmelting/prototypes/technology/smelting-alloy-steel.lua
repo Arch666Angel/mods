@@ -6,7 +6,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-iron-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
@@ -15,7 +15,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-1",
+        recipe = "angels-molten-steel-smelting-1",
       },
       {
         type = "unlock-recipe",
@@ -46,11 +46,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-2",
+        recipe = "angels-molten-steel-smelting-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-3",
+        recipe = "angels-molten-steel-smelting-3",
       },
       {
         type = "unlock-recipe",
@@ -98,7 +98,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-4",
+        recipe = "angels-molten-steel-smelting-4",
       },
       {
         type = "unlock-recipe",
@@ -134,7 +134,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-5",
+        recipe = "angels-molten-steel-smelting-5",
       },
     },
     unit = {

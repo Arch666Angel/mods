@@ -8,7 +8,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-2",
-      "basic-chemistry-2",
+      "angels-basic-chemistry-2",
     },
     effects = {
       {
@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-nickel-smelting",
+        recipe = "angels-molten-nickel-smelting",
       },
       {
         type = "unlock-recipe",
@@ -41,7 +41,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-nickel-smelting-1",
       "angels-sulfur-processing-1",
     },
@@ -112,7 +112,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-nickel-smelting-2",
       "angels-sulfur-processing-3",
     },
@@ -127,7 +127,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nickel-carbonyl-smelting",
+        recipe = "angels-solid-nickel-carbonyl-smelting",
       },
     },
     unit = {

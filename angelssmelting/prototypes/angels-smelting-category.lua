@@ -1,9 +1,9 @@
 data:extend({
   --RESOURCE CATEGORIES
-  { type = "recipe-category", name = "ore-processing" },
-  { type = "recipe-category", name = "ore-processing-2" },
-  { type = "recipe-category", name = "ore-processing-3" },
-  { type = "recipe-category", name = "ore-processing-4" },
+  { type = "recipe-category", name = "angels-ore-processing" },
+  { type = "recipe-category", name = "angels-ore-processing-2" },
+  { type = "recipe-category", name = "angels-ore-processing-3" },
+  { type = "recipe-category", name = "angels-ore-processing-4" },
 
   { type = "recipe-category", name = "pellet-pressing" },
   { type = "recipe-category", name = "pellet-pressing-2" },

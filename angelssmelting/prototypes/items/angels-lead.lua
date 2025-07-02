@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-lead-oxide",
+    name = "angels-solid-lead-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png",
     icon_size = 32,
     subgroup = "angels-lead",
@@ -50,7 +50,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-hexafluorosilicic-acid",
+    name = "angels-liquid-hexafluorosilicic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "F[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]2[/font]Si",
@@ -89,7 +89,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-lead",
+    name = "angels-liquid-molten-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-lead.png",
     icon_size = 64,
     subgroup = "angels-lead-casting",

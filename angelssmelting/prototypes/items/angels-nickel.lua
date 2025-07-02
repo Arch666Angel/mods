@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-nickel-carbonyl",
+    name = "angels-solid-nickel-carbonyl",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-nickel-carbonyl.png",
     icon_size = 32,
     subgroup = "angels-nickel",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-nickel",
+    name = "angels-liquid-molten-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel-casting",

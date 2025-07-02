@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-hexachloroplatinic-acid",
+    name = "angels-liquid-hexachloroplatinic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "H[font=default-tiny-bold]6[/font]Cl[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]2[/font]Pt",
@@ -51,7 +51,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-ammonium-chloroplatinate",
+    name = "angels-solid-ammonium-chloroplatinate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-ammonium-chloroplatinate.png",
     icon_size = 32,
     subgroup = "angels-platinum",
@@ -80,7 +80,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-platinum",
+    name = "angels-liquid-molten-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum-casting",

@@ -46,26 +46,26 @@ if angelsmods.industries.components then
     local category2
     if metal == "iron" then
       num = 1
-      molten1 = { type = "fluid", name = "liquid-molten-iron", amount = 15 }
-      molten2 = { type = "fluid", name = "liquid-molten-iron", amount = 20 }
+      molten1 = { type = "fluid", name = "angels-liquid-molten-iron", amount = 15 }
+      molten2 = { type = "fluid", name = "angels-liquid-molten-iron", amount = 20 }
       category1 = "casting-2"
       category2 = "casting-3"
     elseif metal == "steel" then
       num = 2
-      molten1 = { type = "fluid", name = "liquid-molten-steel", amount = 15 }
-      molten2 = { type = "fluid", name = "liquid-molten-steel", amount = 20 }
+      molten1 = { type = "fluid", name = "angels-liquid-molten-steel", amount = 15 }
+      molten2 = { type = "fluid", name = "angels-liquid-molten-steel", amount = 20 }
       category1 = "casting"
       category2 = "casting-3"
     elseif metal == "aluminium" then
       num = 3
-      molten1 = { type = "fluid", name = "liquid-molten-aluminium", amount = 15 }
-      molten2 = { type = "fluid", name = "liquid-molten-aluminium", amount = 20 }
+      molten1 = { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 15 }
+      molten2 = { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 20 }
       category1 = "casting-2"
       category2 = "casting-3"
     elseif metal == "titanium" then
       num = 4
-      molten1 = { type = "fluid", name = "liquid-molten-titanium", amount = 15 }
-      molten2 = { type = "fluid", name = "liquid-molten-titanium", amount = 20 }
+      molten1 = { type = "fluid", name = "angels-liquid-molten-titanium", amount = 15 }
+      molten2 = { type = "fluid", name = "angels-liquid-molten-titanium", amount = 20 }
       category1 = "casting-3"
       category2 = "casting-4"
       --[[elseif metal=="tungsten" then
@@ -86,12 +86,12 @@ if angelsmods.industries.components then
         energy_required = 3 * num,
         ingredients = {
           molten1,
-          --{type = "fluid", name = "liquid-molten-steel", amount = 15},
+          --{type = "fluid", name = "angels-liquid-molten-steel", amount = 15},
           { type = "item", name = "mold-expendable", amount = 1 },
         },
         results = {
           { type = "item", name = "motor-casing-" .. num, amount = 1 },
-          { type = "item", name = "solid-sand", amount = 10 },
+          { type = "item", name = "angels-solid-sand", amount = 10 },
         },
         icons = {
           {
@@ -118,14 +118,14 @@ if angelsmods.industries.components then
         energy_required = 2 * num,
         ingredients = {
           molten2,
-          --{type = "fluid", name = "liquid-molten-steel", amount = 20},
+          --{type = "fluid", name = "angels-liquid-molten-steel", amount = 20},
           { type = "item", name = "mold-non-expendable", amount = 1 },
-          { type = "fluid", name = "liquid-coolant", amount = 10, ignored_by_stats = 8 },
+          { type = "fluid", name = "angels-liquid-coolant", amount = 10, ignored_by_stats = 8 },
         },
         results = {
           { type = "item", name = "motor-casing-" .. num, amount = 2 },
           { type = "item", name = "spent-mold-non-expendable", amount = 1 },
-          { type = "fluid", name = "liquid-coolant-used", amount = 10, temperature = 300 },
+          { type = "fluid", name = "angels-liquid-coolant-used", amount = 10, temperature = 300 },
         },
         icons = {
           {
@@ -158,7 +158,7 @@ if angelsmods.industries.components then
       },
       results = {
         { type = "item", name = "motor-casing-5", amount = 1 },
-        { type = "item", name = "solid-sand", amount = 10 },
+        { type = "item", name = "angels-solid-sand", amount = 10 },
       },
       main_product = "motor-casing-5",
       icons = {
@@ -281,7 +281,7 @@ if angelsmods.industries.components then
       energy_required = 3, -- 3:4 ratio with motor
       ingredients = {
         { type = "item", name = "motor-casing-3", amount = 1 },
-        { type = "item", name = "solid-rubber", amount = 1 },
+        { type = "item", name = "angels-solid-rubber", amount = 1 },
         --{type = "fluid", name = "lubricant", amount = 10}
       },
       results = {
@@ -298,7 +298,7 @@ if angelsmods.industries.components then
       energy_required = 4, -- 4:7 ratio with motor
       ingredients = {
         { type = "item", name = "motor-casing-4", amount = 1 },
-        { type = "item", name = "solid-rubber", amount = 1 },
+        { type = "item", name = "angels-solid-rubber", amount = 1 },
         { type = "fluid", name = "lubricant", amount = 10 },
       },
       results = {
@@ -315,7 +315,7 @@ if angelsmods.industries.components then
       energy_required = 6, -- 3:5 ratio with motor
       ingredients = {
         { type = "item", name = "motor-casing-5", amount = 1 },
-        { type = "item", name = "solid-rubber", amount = 1 },
+        { type = "item", name = "angels-solid-rubber", amount = 1 },
         { type = "fluid", name = "lubricant", amount = 15 },
       },
       results = {

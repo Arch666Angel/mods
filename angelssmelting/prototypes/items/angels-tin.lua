@@ -50,7 +50,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-tin",
+    name = "angels-liquid-molten-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-tin.png",
     icon_size = 64,
     subgroup = "angels-tin-casting",

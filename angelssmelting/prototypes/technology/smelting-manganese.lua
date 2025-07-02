@@ -6,7 +6,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-manganese-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-advanced-crushing",
+      "angels-ore-advanced-crushing",
       "angels-metallurgy-1",
       "angels-coal-processing",
       "angels-iron-smelting-1",
@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-manganese-smelting",
+        recipe = "angels-molten-manganese-smelting",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-2",
+        recipe = "angels-molten-iron-smelting-2",
       },
     },
     unit = {
@@ -45,7 +45,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-manganese-smelting-1",
       "angels-sulfur-processing-1",
     },
@@ -114,10 +114,10 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-manganese-smelting-2",
       "angels-iron-smelting-3",
-      "oil-gas-extraction",
+      "angels-oil-gas-extraction",
     },
     effects = {
       {
@@ -134,11 +134,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-manganese-oxide-smelting",
+        recipe = "angels-solid-manganese-oxide-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-iron-hydroxide-smelting",
+        recipe = "angels-solid-iron-hydroxide-smelting",
       },
     },
     unit = {

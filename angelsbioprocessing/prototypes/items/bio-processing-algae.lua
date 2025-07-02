@@ -11,7 +11,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-alginic-acid",
+    name = "angels-solid-alginic-acid",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-alginic-acid.png",
     icon_size = 32,
     subgroup = "bio-processing-brown",
@@ -77,7 +77,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-calcium-carbonate",
+    name = "angels-solid-calcium-carbonate",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-calcium-carbonate.png",
     icon_size = 32,
     subgroup = "bio-processing-red",

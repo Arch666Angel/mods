@@ -8,7 +8,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-lead-smelting",
+        recipe = "angels-molten-lead-smelting",
       },
       {
         type = "unlock-recipe",
@@ -40,7 +40,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-lead-smelting-1",
       "angels-coal-processing",
     },
@@ -55,7 +55,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lead-oxide-smelting",
+        recipe = "angels-solid-lead-oxide-smelting",
       },
       {
         type = "unlock-recipe",
@@ -109,7 +109,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-lead-smelting-2",
       "angels-sulfur-processing-2",
       "angels-stone-smelting-1",
@@ -125,7 +125,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hexafluorosilicic-acid",
+        recipe = "angels-liquid-hexafluorosilicic-acid",
       },
       {
         type = "unlock-recipe",

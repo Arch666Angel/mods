@@ -15,7 +15,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-invar",
+        name = "angels-liquid-molten-invar",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-invar.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -34,7 +34,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       {
         type = "recipe",
         name = "angels-invar-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-invar" },
+        localised_name = { "fluid-name.angels-liquid-molten-invar" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -44,10 +44,10 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           { type = "item", name = "ingot-nickel", amount = 12 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-invar", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-invar", amount = 360 },
         },
         order = "d[invar]-a[liquid-molten-invar]",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-invar"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-invar"),
       },
       --CASTING
       {
@@ -59,7 +59,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-invar", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-invar", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-invar-alloy", amount = 4 },

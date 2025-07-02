@@ -13,7 +13,7 @@ data:extend({
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-solder",
+    name = "angels-liquid-molten-solder",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
     icon_size = 64,
     subgroup = "angels-solder-casting",

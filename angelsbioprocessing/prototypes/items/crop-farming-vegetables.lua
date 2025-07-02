@@ -4,7 +4,7 @@ data:extend({
   -----------------------------------------------------------------------------
   {
     type = "item",
-    name = "solid-compost",
+    name = "angels-solid-compost",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-compost.png",
     icon_size = 32,
     subgroup = "bio-wood",
@@ -13,7 +13,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-soil",
+    name = "angels-solid-soil",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-soil.png",
     icon_size = 32,
     subgroup = "bio-wood",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-fertilizer",
+    name = "angels-solid-fertilizer",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-fertilizer.png",
     icon_size = 32,
     subgroup = "bio-wood",
@@ -31,7 +31,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-alienated-fertilizer",
+    name = "angels-solid-alienated-fertilizer",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-alienated-fertilizer.png",
     icon_size = 32,
     subgroup = "bio-wood",
@@ -40,7 +40,7 @@ data:extend({
   },
   --{
   --  type = "item",
-  --  name = "solid-nuclear-fertilizer",
+  --  name = "angels-solid-nuclear-fertilizer",
   --  icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-nuclear-fertilizer.png",
   --  icon_size = 32,
   --  subgroup = "bio-wood",

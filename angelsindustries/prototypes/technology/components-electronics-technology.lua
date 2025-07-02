@@ -3,10 +3,10 @@ if angelsmods.industries.components then
   OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
   OV.remove_science_pack("bio-paper-1", "logistic-science-pack")
   OV.remove_prereq("bio-paper-1", "logistic-science-pack")
-  OV.remove_prereq("bio-paper-1", "basic-chemistry")
+  OV.remove_prereq("bio-paper-1", "angels-basic-chemistry")
   OV.patch_recipes({
     {
-      name = "solid-wood-pulp",
+      name = "angels-solid-wood-pulp",
       category = "crafting",
       ingredients = {
         { type = "fluid", name = "water", amount = 0 },
@@ -71,7 +71,7 @@ if angelsmods.industries.components then
         "angels-components-construction-2",
         "angels-components-cabling-2",
         "automation-2",
-        "resins",
+        "angels-resins",
       },
       effects = {
         {

@@ -43,9 +43,9 @@ data:extend({
     overload_multiplier = 1,
     ingredients = {
       { type = "item", name = "temperate-garden", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
-      { type = "fluid", name = "water-mineralized", amount = 50 },
+      { type = "fluid", name = "angels-water-mineralized", amount = 50 },
     },
     results = {
       { type = "item", name = "temperate-garden", amount = 2, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -219,9 +219,9 @@ data:extend({
     overload_multiplier = 1,
     ingredients = {
       { type = "item", name = "desert-garden", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
-      { type = "fluid", name = "water-mineralized", amount = 50 },
+      { type = "fluid", name = "angels-water-mineralized", amount = 50 },
     },
     results = {
       { type = "item", name = "desert-garden", amount = 2, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -393,9 +393,9 @@ data:extend({
     overload_multiplier = 1,
     ingredients = {
       { type = "item", name = "swamp-garden", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-alienated-fertilizer", amount = 2 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "item", name = "token-bio", amount = 30 },
-      { type = "fluid", name = "water-mineralized", amount = 50 },
+      { type = "fluid", name = "angels-water-mineralized", amount = 50 },
     },
     results = {
       { type = "item", name = "swamp-garden", amount = 2, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -528,74 +528,74 @@ data:extend({
   --COMPOST
   {
     type = "recipe",
-    name = "solid-soil",
+    name = "angels-solid-soil",
     localised_name = { "item-name.solid-soil" },
     category = "crafting",
     subgroup = "bio-wood",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "solid-mud", amount = 1 },
-      { type = "item", name = "solid-compost", amount = 1 },
+      { type = "item", name = "angels-solid-mud", amount = 1 },
+      { type = "item", name = "angels-solid-compost", amount = 1 },
     },
     results = {
-      { type = "item", name = "solid-soil", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 1 },
     },
-    icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-soil", { "solid-mud" }),
+    icons = angelsmods.functions.create_solid_recipe_icon(nil, "angels-solid-soil", { "angels-solid-mud" }),
     icon_size = 32,
     order = "a[support]-aa",
   },
   {
     type = "recipe",
-    name = "solid-soil-alternative",
+    name = "angels-solid-soil-alternative",
     localised_name = { "item-name.solid-soil" },
     category = "crafting",
     subgroup = "bio-wood",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "solid-sand", amount = 1 },
-      { type = "item", name = "solid-compost", amount = 2 },
+      { type = "item", name = "angels-solid-sand", amount = 1 },
+      { type = "item", name = "angels-solid-compost", amount = 2 },
     },
     results = {
-      { type = "item", name = "solid-soil", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 1 },
     },
-    icons = angelsmods.functions.create_solid_recipe_icon(nil, "solid-soil", { "solid-sand" }),
+    icons = angelsmods.functions.create_solid_recipe_icon(nil, "angels-solid-soil", { "angels-solid-sand" }),
     icon_size = 32,
     order = "a[support]-ab",
   },
   {
     type = "recipe",
-    name = "solid-fertilizer",
+    name = "angels-solid-fertilizer",
     localised_name = { "item-name.solid-fertilizer" },
     category = "crafting-with-fluid",
     subgroup = "bio-wood",
     enabled = false,
     energy_required = 1,
     ingredients = {
-      { type = "item", name = "solid-compost", amount = 2 },
-      { type = "fluid", name = "gas-urea", amount = 20 },
+      { type = "item", name = "angels-solid-compost", amount = 2 },
+      { type = "fluid", name = "angels-gas-urea", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
     },
     icon_size = 32,
     order = "a[support]-ca", -- order a[support]-cb reserved for bob fertilizer
   },
   {
     type = "recipe",
-    name = "solid-alienated-fertilizer",
+    name = "angels-solid-alienated-fertilizer",
     localised_name = { "item-name.solid-alienated-fertilizer" },
     category = "crafting-with-fluid",
     subgroup = "bio-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "solid-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "alien-goo", amount = 5 },
     },
     results = {
-      { type = "item", name = "solid-alienated-fertilizer", amount = 1 },
+      { type = "item", name = "angels-solid-alienated-fertilizer", amount = 1 },
     },
     icon_size = 32,
     order = "a[support]-d",
@@ -667,8 +667,8 @@ data:extend({
     energy_required = 100,
     ingredients = {
       { type = "item", name = "token-bio", amount = 1 },
-      { type = "item", name = "solid-wood-pulp", amount = 5 },
-      { type = "fluid", name = "water-mineralized", amount = 50 },
+      { type = "item", name = "angels-solid-wood-pulp", amount = 5 },
+      { type = "fluid", name = "angels-water-mineralized", amount = 50 },
     },
     results = {
       { type = "item", name = "temperate-garden", amount = 1, probability = 0.01 },

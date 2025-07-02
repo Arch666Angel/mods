@@ -16,7 +16,7 @@ if angelsmods.industries.tech then
     "turrets",
     -- REFINING
     -- PETROCHEM
-    "basic-chemistry",
+    "angels-basic-chemistry",
     -- SMELTING
     "angels-solder-smelting-basic",
     -- BIO PROCESSING
@@ -33,8 +33,8 @@ if angelsmods.industries.tech then
   OV.remove_prereq("turrets", "military")
   OV.add_prereq("turrets", "angels-components-weapons-basic")
   -- REFINING
-  OV.remove_prereq("water-treatment", "electronics")
-  OV.remove_prereq("water-treatment", "steel-processing")
+  OV.remove_prereq("angels-water-treatment", "electronics")
+  OV.remove_prereq("angels-water-treatment", "steel-processing")
   -- INDUSTRIES
   OV.remove_prereq("tech-red-circuit", "angels-components-batteries-1")
 
@@ -55,16 +55,16 @@ if angelsmods.industries.tech then
   OV.remove_prereq("bio-fermentation", "tech-green-packs")
   OV.remove_science_pack("bio-fermentation", "token-bio")
   AI.pack_replace("bio-arboretum-temperate-1", "green", "red")
-  OV.remove_prereq("bio-arboretum-temperate-1", "resins")
+  OV.remove_prereq("bio-arboretum-temperate-1", "angels-resins")
   OV.remove_science_pack("bio-arboretum-temperate-1", "token-bio")
-  OV.add_prereq("bio-arboretum-temperate-2", "resins")
+  OV.add_prereq("bio-arboretum-temperate-2", "angels-resins")
   AI.pack_replace("bio-desert-farming-1", "green", "red")
   AI.pack_replace("bio-swamp-farming-1", "green", "red")
   AI.pack_replace("bio-temperate-farming-1", "green", "red")
   AI.pack_replace("gardens", "green", "red")
   -- INDUSTRIES
   AI.pack_replace("tech-green-circuit", "green", "red")
-  OV.remove_prereq("tech-green-circuit", "resins")
+  OV.remove_prereq("tech-green-circuit", "angels-resins")
   OV.add_prereq("tech-green-circuit", "bio-arboretum-temperate-1")
   OV.remove_prereq("tech-green-circuit", "angels-components-batteries-2")
   OV.add_prereq("tech-green-circuit", "angels-components-batteries-1")
@@ -78,11 +78,11 @@ if angelsmods.industries.tech then
   AI.pack_replace("advanced-material-processing", "red", "green") --move advanced material processing up a tier
   AI.pack_replace("lubricant", "blue", "green")
   -- PETROCHEM
-  AI.pack_replace("sodium-processing-1", "blue", "green")
+  AI.pack_replace("angels-sodium-processing-1", "blue", "green")
   -- SMELTING
   AI.pack_replace("angels-stone-smelting-2", "blue", "green")
   -- BIO PROCESSING
-  OV.add_prereq("bio-refugium-fish-1", "water-treatment-2")
+  OV.add_prereq("bio-refugium-fish-1", "angels-water-treatment-2")
   AI.pack_replace("bio-paper-2", "blue", "green")
   -- INDUSTRIES
   OV.remove_prereq("tech-orange-circuit", "angels-components-batteries-3")
@@ -127,17 +127,17 @@ if angelsmods.industries.tech then
   AI.pack_replace("electric-energy-distribution-2", "blue", "orange")
   AI.pack_replace("advanced-material-processing-2", "blue", "orange")
   --REFINING
-  AI.pack_replace("ore-leaching", "blue", "orange")
-  OV.remove_prereq("ore-leaching", "tech-blue-packs")
-  AI.pack_replace("geode-processing-2", "green", "orange")
-  AI.pack_replace("advanced-ore-refining-2", "blue", "orange")
-  AI.pack_replace("water-treatment-3", "blue", "orange")
-  AI.pack_replace("slag-processing-2", "blue", "orange")
+  AI.pack_replace("angels-ore-leaching", "blue", "orange")
+  OV.remove_prereq("angels-ore-leaching", "tech-blue-packs")
+  AI.pack_replace("angels-geode-processing-2", "green", "orange")
+  AI.pack_replace("angels-advanced-ore-refining-2", "blue", "orange")
+  AI.pack_replace("angels-water-treatment-3", "blue", "orange")
+  AI.pack_replace("angels-slag-processing-2", "blue", "orange")
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
   AI.pack_replace("powder-metallurgy-3", "blue", "orange")
-  AI.pack_replace("ore-processing-2", "blue", "orange")
+  AI.pack_replace("angels-ore-processing-2", "blue", "orange")
   AI.pack_replace("angels-coolant-1", "blue", "orange")
   AI.pack_replace("strand-casting-2", "blue", "orange")
   AI.pack_replace("angels-titanium-smelting-1", "blue", "orange")
@@ -174,15 +174,15 @@ if angelsmods.industries.tech then
   AI.pack_replace("bio-wood-processing-3", "green", "orange")
   AI.pack_replace("bio-processing-alien-2", "green", "orange")
   AI.pack_replace("bio-processing-alien-3", "green", "orange")
-  AI.pack_replace("geode-crystallization-1", "green", "orange")
+  AI.pack_replace("angels-geode-crystallization-1", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
   AI.pack_replace("bio-arboretum-2", "green", "orange")
   --PETROCHEM
-  AI.pack_replace("plastic-1", "green", "orange")
-  --AI.pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
-  --AI.pack_replace("rocket-booster-1", "green", "orange")
+  AI.pack_replace("angels-plastic-1", "green", "orange")
+  --AI.pack_replace("angels-resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
+  --AI.pack_replace("angels-rocket-booster-1", "green", "orange")
   AI.pack_replace("rocket-explosives-1", "green", "orange")
   --INDUSTRIES
   AI.pack_replace("tech-blue-circuit", "blue", "orange")
@@ -207,12 +207,12 @@ if angelsmods.industries.tech then
   OV.remove_prereq("automation-3", "production-science-pack")
   OV.remove_prereq("kovarex-enrichment-process", "production-science-pack")
   -- REFINING
-  OV.remove_prereq("ore-refining", "production-science-pack")
-  OV.remove_prereq("water-treatment-4", "production-science-pack")
+  OV.remove_prereq("angels-ore-refining", "production-science-pack")
+  OV.remove_prereq("angels-water-treatment-4", "production-science-pack")
   -- PETROCHEM
-  OV.remove_prereq("water-chemistry-1", "production-science-pack")
+  OV.remove_prereq("angels-water-chemistry-1", "production-science-pack")
   OV.remove_prereq("angels-advanced-chemistry-4", "production-science-pack")
-  OV.remove_prereq("slag-processing-3", "production-science-pack")
+  OV.remove_prereq("angels-slag-processing-3", "production-science-pack")
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
   OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
@@ -244,7 +244,7 @@ if angelsmods.industries.tech then
   OV.set_science_pack("rocket-silo", "angels-science-pack-blue")
   OV.set_special_technology_override("rocket-silo", "ignore_tech_cost_multiplier")
   -- REFINING
-  AI.pack_replace("advanced-ore-refining-4", "blue", "yellow")
+  AI.pack_replace("angels-advanced-ore-refining-4", "blue", "yellow")
   -- BIO PROCESSING
   AI.pack_replace("angels-bio-yield-module-3", "blue", "yellow")
   -- ADDONS

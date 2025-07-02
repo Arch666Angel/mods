@@ -12,10 +12,10 @@ end
 if settings.startup["angels-enable-industries"].value then -- overhaul enabled
   for _, force in pairs(game.forces) do
     for newTech, oldTechs in pairs({
-      ["water-chemistry-1"] = {
+      ["angels-water-chemistry-1"] = {
         "heavy-water-processing",
       },
-      ["water-chemistry-2"] = {
+      ["angels-water-chemistry-2"] = {
         "deuterium-processing",
       },
       ["angels-plutonium-power"] = {
@@ -43,9 +43,9 @@ if settings.startup["angels-enable-industries"].value then -- overhaul enabled
     for techname, enabled in pairs({
       -- deuterium
       ["heavy-water-processing"] = false,
-      ["water-chemistry-1"] = true,
+      ["angels-water-chemistry-1"] = true,
       ["deuterium-processing"] = false,
-      ["water-chemistry-2"] = true,
+      ["angels-water-chemistry-2"] = true,
 
       -- bob recipes to disable
       ["thorium-processing"] = false,

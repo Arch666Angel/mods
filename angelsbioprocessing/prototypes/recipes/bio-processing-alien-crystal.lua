@@ -56,7 +56,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-splinter-blue-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-splinter-blue", amount = 1 },
@@ -87,7 +87,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-splinter-red-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-splinter-red", amount = 1 },
@@ -118,7 +118,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-splinter-green-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-splinter-green", amount = 1 },
@@ -162,17 +162,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-splinter-blue",
     localised_name = { "recipe-name.crystal-powder-from-splinter" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-splinter",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-splinter-blue-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 5 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -193,17 +193,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-splinter-red",
     localised_name = { "recipe-name.crystal-powder-from-splinter" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-splinter",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-splinter-red-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 5 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -224,17 +224,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-splinter-green",
     localised_name = { "recipe-name.crystal-powder-from-splinter" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-splinter",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-splinter-green-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 5 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -308,7 +308,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-shard-blue-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-shard-blue", amount = 1 },
@@ -339,7 +339,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-shard-red-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-shard-red", amount = 1 },
@@ -370,7 +370,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-shard-green-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-shard-green", amount = 1 },
@@ -414,17 +414,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-shard-blue",
     localised_name = { "recipe-name.crystal-powder-from-shard" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-shard",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-shard-blue-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 10 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -445,17 +445,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-shard-red",
     localised_name = { "recipe-name.crystal-powder-from-shard" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-shard",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-shard-red-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 10 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -476,17 +476,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-shard-green",
     localised_name = { "recipe-name.crystal-powder-from-shard" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-shard",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-shard-green-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 10 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -560,7 +560,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-full-blue-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-full-blue", amount = 1 },
@@ -591,7 +591,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-full-red-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-full-red", amount = 1 },
@@ -622,7 +622,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "crystal-full-green-cut", amount = 1 },
       { type = "item", name = "crystal-grindstone", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 2 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 2 },
     },
     results = {
       { type = "item", name = "crystal-full-green", amount = 1 },
@@ -666,17 +666,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-full-blue",
     localised_name = { "recipe-name.crystal-powder-from-full" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-full",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-full-blue-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 15 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -697,17 +697,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-full-red",
     localised_name = { "recipe-name.crystal-powder-from-full" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-full",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-full-red-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 15 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -728,17 +728,17 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-full-green",
     localised_name = { "recipe-name.crystal-powder-from-full" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-full",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-full-green-cut", amount = 5 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 15 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {

@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-copper-smelting",
+        recipe = "angels-molten-copper-smelting",
       },
       {
         type = "unlock-recipe",
@@ -39,9 +39,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-copper-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
@@ -112,7 +112,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-copper-smelting-2",
       "angels-sulfur-processing-1",
     },

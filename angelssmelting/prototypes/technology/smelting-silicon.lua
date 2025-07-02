@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silicon-smelting",
+        recipe = "angels-molten-silicon-smelting",
       },
       {
         type = "unlock-recipe",
@@ -50,9 +50,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-silicon-smelting-1",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -65,7 +65,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-trichlorosilane-smelting",
+        recipe = "angels-liquid-trichlorosilane-smelting",
       },
       {
         type = "unlock-recipe",
@@ -90,7 +90,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-silicon-smelting-2",
       "angels-aluminium-smelting-2",
     },
@@ -105,7 +105,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-silane-smelting",
+        recipe = "angels-gas-silane-smelting",
       },
     },
     unit = {

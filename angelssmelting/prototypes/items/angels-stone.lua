@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "solid-lime",
+    name = "angels-solid-lime",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-lime.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -13,7 +13,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "solid-cement",
+    name = "angels-solid-cement",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cement.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -47,7 +47,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-concrete",
+    name = "angels-liquid-concrete",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-concrete.png",
     icon_size = 64,
     subgroup = "angels-stone-casting",

@@ -7,7 +7,7 @@ data:extend({
     type = "recipe",
     name = "silver-ore-processing",
     localised_name = { "item-name.processed-silver" },
-    category = "ore-processing-2",
+    category = "angels-ore-processing-2",
     subgroup = "angels-silver",
     energy_required = 2,
     enabled = false,
@@ -18,7 +18,7 @@ data:extend({
       { type = "item", name = "processed-silver", amount = 2 },
     },
     order = "b[processed-silver]",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   {
     type = "recipe",
@@ -40,18 +40,18 @@ data:extend({
     type = "recipe",
     name = "processed-silver-smelting",
     localised_name = { "item-name.solid-silver-nitrate" },
-    category = "liquifying",
+    category = "angels-liquifying",
     subgroup = "angels-silver",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-silver", amount = 4 },
-      { type = "fluid", name = "liquid-nitric-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-nitric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-silver-nitrate", amount = 12 },
+      { type = "item", name = "angels-solid-silver-nitrate", amount = 12 },
     },
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
     order = "d[solid-silver-nitrate]",
   },
   {
@@ -64,27 +64,27 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-silver", amount = 8 },
-      { type = "item", name = "solid-sodium-cyanide", amount = 6 },
-      { type = "fluid", name = "water-purified", amount = 60 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
+      { type = "item", name = "angels-solid-sodium-cyanide", amount = 6 },
+      { type = "fluid", name = "angels-water-purified", amount = 60 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-sodium-silver-cyanide", amount = 24 },
-      { type = "item", name = "solid-sodium-hydroxide", amount = 4 },
+      { type = "item", name = "angels-solid-sodium-silver-cyanide", amount = 24 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 4 },
     },
-    main_product = "solid-sodium-silver-cyanide",
+    main_product = "angels-solid-sodium-silver-cyanide",
     order = "f[solid-sodium-silver-cyanide]",
   },
   {
     type = "recipe",
-    name = "solid-sodium-silver-cyanide-smelting",
+    name = "angels-solid-sodium-silver-cyanide-smelting",
     localised_name = { "item-name.cathode-silver" },
     category = "chemical-smelting-3",
     subgroup = "angels-silver",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-sodium-silver-cyanide", amount = 12 },
+      { type = "item", name = "angels-solid-sodium-silver-cyanide", amount = 12 },
     },
     results = {
       { type = "item", name = "cathode-silver", amount = 12 },
@@ -111,14 +111,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-silver-nitrate-smelting",
+    name = "angels-solid-silver-nitrate-smelting",
     localised_name = { "item-name.ingot-silver" },
     category = "blast-smelting-3",
     subgroup = "angels-silver",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-silver-nitrate", amount = 24 },
+      { type = "item", name = "angels-solid-silver-nitrate", amount = 24 },
     },
     results = {
       { type = "item", name = "ingot-silver", amount = 24 },
@@ -162,8 +162,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-silver-smelting",
-    localised_name = { "fluid-name.liquid-molten-silver" },
+    name = "angels-molten-silver-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-silver" },
     category = "induction-smelting-2",
     subgroup = "angels-silver-casting",
     energy_required = 4,
@@ -172,10 +172,10 @@ data:extend({
       { type = "item", name = "ingot-silver", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 120 },
     },
     order = "j[liquid-molten-silver]",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   {
     type = "recipe",
@@ -186,7 +186,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -194,7 +194,7 @@ data:extend({
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-silver"), 1, angelsmods.smelting.number_tint),
     order = "k[angels-roll-silver]-a",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   {
     type = "recipe",
@@ -205,17 +205,17 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-silver", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-silver",
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-silver"), 2, angelsmods.smelting.number_tint),
     order = "k[angels-roll-silver]-b",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   {
     type = "recipe",
@@ -226,8 +226,8 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 40 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 40 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -239,7 +239,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "l[angels-wire-coil-silver]-a",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   {
     type = "recipe",
@@ -250,13 +250,13 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 70 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 70 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-silver", amount = 8 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-wire-coil-silver",
     icons = AF.add_number_icon_layer(
@@ -265,7 +265,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "l[angels-wire-coil-silver]-b",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-silver"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-silver"),
   },
   -- CASTING RESULT
   {
@@ -277,14 +277,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silver", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-silver", amount = 4 },
     },
     icons = AF.add_icon_layer(
       AF.get_object_icons("angels-plate-silver"),
-      AF.get_object_icons("liquid-molten-silver"),
+      AF.get_object_icons("angels-liquid-molten-silver"),
       { -10, -10 },
       0.4375
     ),

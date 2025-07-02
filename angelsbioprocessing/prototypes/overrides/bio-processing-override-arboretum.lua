@@ -1,10 +1,10 @@
 local OV = angelsmods.functions.OV
 
 if angelsmods.trigger.bio_rubber then
-  OV.remove_prereq("rubbers", "rubber")
-  OV.add_prereq("rubbers", "automation-2")
-  OV.add_prereq("rubber", "rubbers")
-  OV.remove_science_pack("rubbers", "chemical-science-pack")
+  OV.remove_prereq("angels-rubbers", "angels-rubber")
+  OV.add_prereq("angels-rubbers", "automation-2")
+  OV.add_prereq("angels-rubber", "angels-rubbers")
+  OV.remove_science_pack("angels-rubbers", "chemical-science-pack")
 else
   OV.disable_recipe({
     "desert-tree-generator-1",
@@ -26,9 +26,9 @@ else
 end
 
 if angelsmods.trigger.bio_resin then
-  OV.remove_prereq("resins", "resin-1")
-  OV.add_prereq("resins", "basic-chemistry-3")
-  OV.add_prereq("resin-1", "resins")
+  OV.remove_prereq("angels-resins", "angels-resin-1")
+  OV.add_prereq("angels-resins", "angels-basic-chemistry-3")
+  OV.add_prereq("angels-resin-1", "angels-resins")
 else
   OV.disable_recipe({
     "temperate-tree-generator-1",
@@ -54,9 +54,9 @@ else
 end
 
 if angelsmods.trigger.bio_plastic then
-  OV.remove_prereq("plastics", "plastic-1")
+  OV.remove_prereq("plastics", "angels-plastic-1")
   OV.add_prereq("plastics", "angels-advanced-chemistry-1")
-  OV.add_prereq("plastic-1", "plastics")
+  OV.add_prereq("angels-plastic-1", "plastics")
 else
   OV.hide_recipe({
     "swamp-tree-generator-1",
@@ -78,37 +78,37 @@ else
 end
 
 if angelsmods.trigger.paper then
-  OV.add_unlock("sodium-processing-1", "solid-sodium-hypochlorite-decomposition")
-  OV.remove_unlock("chlorine-processing-3", "solid-salt-separation")
-  OV.add_unlock("sodium-processing-1", "solid-salt-separation")
-  OV.add_prereq("sodium-processing-1", "angels-metallurgy-2")
-  OV.add_prereq("sodium-processing-1", "bio-paper-2")
+  OV.add_unlock("angels-sodium-processing-1", "angels-solid-sodium-hypochlorite-decomposition")
+  OV.remove_unlock("angels-chlorine-processing-3", "angels-solid-salt-separation")
+  OV.add_unlock("angels-sodium-processing-1", "angels-solid-salt-separation")
+  OV.add_prereq("angels-sodium-processing-1", "angels-metallurgy-2")
+  OV.add_prereq("angels-sodium-processing-1", "bio-paper-2")
 else
   OV.hide_recipe({
-    "solid-wood-pulp",
+    "angels-solid-wood-pulp",
     "paper-bleaching-1",
     "paper-bleaching-2",
     "sulfite-pulping",
     "brown-liquor-recovery",
-    "liquid-pulping-liquor",
+    "angels-liquid-pulping-liquor",
     "paper-bleaching-3",
-    "liquid-white-liquor",
+    "angels-liquid-white-liquor",
     "kraft-cooking-washing",
     "kraft-recovery",
     "kraft-causting",
-    "solid-alginic-acid",
-    "solid-sodium-hypochlorite-decomposition",
+    "angels-solid-alginic-acid",
+    "angels-solid-sodium-hypochlorite-decomposition",
   })
   angelsmods.functions.hide({
     "pulping-liquor",
-    "liquid-brown-liquor",
-    "liquid-white-liquor",
-    "liquid-black-liquor",
-    "liquid-green-liquor",
-    "liquid-pulping-liquor",
-    "solid-paper",
-    "solid-wood-pulp",
-    "solid-alginic-acid",
+    "angels-liquid-brown-liquor",
+    "angels-liquid-white-liquor",
+    "angels-liquid-black-liquor",
+    "angels-liquid-green-liquor",
+    "angels-liquid-pulping-liquor",
+    "angels-solid-paper",
+    "angels-solid-wood-pulp",
+    "angels-solid-alginic-acid",
   })
   OV.disable_technology({
     "bio-paper-1",
@@ -118,11 +118,11 @@ else
   OV.patch_recipes({
     {
       name = "garden-cultivating",
-      ingredients = { { name = "paste-cellulose", amount = "solid-wood-pulp" } },
+      ingredients = { { name = "paste-cellulose", amount = "angels-solid-wood-pulp" } },
     },
   })
   --prereq clean-out
   OV.remove_prereq("gardens-3", "bio-paper-1")
   OV.add_prereq("gardens-3", "bio-processing-paste")
-  OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
+  OV.remove_unlock("bio-processing-brown", "angels-solid-alginic-acid")
 end

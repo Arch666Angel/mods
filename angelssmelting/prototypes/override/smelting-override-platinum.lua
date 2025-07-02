@@ -24,8 +24,8 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
   then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-platinum")
-    OV.disable_recipe({ "molten-platinum-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-platinum")
+    OV.disable_recipe({ "angels-molten-platinum-smelting" })
     OV.disable_technology({ "angels-platinum-casting-2", "angels-platinum-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -36,18 +36,18 @@ if angelsmods.trigger.smelting_products["platinum"].ingot then
 else
   angelsmods.functions.hide("processed-platinum")
   angelsmods.functions.hide("pellet-platinum")
-  angelsmods.functions.hide("liquid-hexachloroplatinic-acid")
-  angelsmods.functions.hide("solid-ammonium-chloroplatinate")
+  angelsmods.functions.hide("angels-liquid-hexachloroplatinic-acid")
+  angelsmods.functions.hide("angels-solid-ammonium-chloroplatinate")
   angelsmods.functions.hide("ingot-platinum")
-  angelsmods.functions.hide("liquid-molten-platinum")
+  angelsmods.functions.hide("angels-liquid-molten-platinum")
   OV.disable_recipe({ "platinum-ore-processing", "platinum-processed-processing" })
-  OV.disable_recipe({ "pellet-platinum-smelting", "liquid-hexachloroplatinic-acid-smelting" })
+  OV.disable_recipe({ "pellet-platinum-smelting", "angels-liquid-hexachloroplatinic-acid-smelting" })
   OV.disable_recipe({
     "platinum-ore-smelting",
     "processed-platinum-smelting",
-    "solid-ammonium-chloroplatinate-smelting",
+    "angels-solid-ammonium-chloroplatinate-smelting",
   })
-  OV.disable_recipe({ "molten-platinum-smelting" })
+  OV.disable_recipe({ "angels-molten-platinum-smelting" })
   OV.disable_technology({ "angels-platinum-smelting-1", "angels-platinum-smelting-2", "angels-platinum-smelting-3" })
   OV.disable_technology({ "angels-platinum-casting-2", "angels-platinum-casting-3" })
 end

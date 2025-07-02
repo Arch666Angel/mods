@@ -13,10 +13,10 @@ data:extend({
       { type = "item", name = "temperate-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 10 },
+      { type = "item", name = "angels-solid-corn", amount = 10 },
     },
     always_show_products = true,
-    main_product = "solid-corn",
+    main_product = "angels-solid-corn",
     order = "ba",
     crafting_machine_tint = {
       primary = { r = 222 / 255, g = 209 / 255, b = 95 / 255, a = 1 }, -- Wheathon
@@ -84,7 +84,7 @@ data:extend({
       { type = "item", name = "temperate-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 32 },
+      { type = "item", name = "angels-solid-leafs", amount = 32 },
       { type = "item", name = "cellulose-fiber", amount = 10 },
     },
     order = "bc",
@@ -118,8 +118,8 @@ data:extend({
       { type = "item", name = "temperate-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 10 },
-      { type = "item", name = "solid-pips", amount = 28 },
+      { type = "item", name = "angels-solid-fruit", amount = 10 },
+      { type = "item", name = "angels-solid-pips", amount = 28 },
     },
     order = "bd",
     crafting_machine_tint = {
@@ -152,9 +152,9 @@ data:extend({
       { type = "item", name = "temperate-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 10 },
+      { type = "item", name = "angels-solid-corn", amount = 10 },
       { type = "item", name = "cellulose-fiber", amount = 8 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "be",
     crafting_machine_tint = {
@@ -189,7 +189,7 @@ data:extend({
       { type = "item", name = "desert-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-beans", amount = 12 },
+      { type = "item", name = "angels-solid-beans", amount = 12 },
     },
     always_show_products = true,
     order = "ba",
@@ -225,7 +225,7 @@ data:extend({
       { type = "item", name = "desert-2", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 12 },
+      { type = "item", name = "angels-solid-corn", amount = 12 },
     },
     always_show_products = true,
     order = "bb",
@@ -260,8 +260,8 @@ data:extend({
       { type = "item", name = "desert-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-pips", amount = 24 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-solid-pips", amount = 24 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "bc",
     crafting_machine_tint = {
@@ -295,7 +295,7 @@ data:extend({
       { type = "item", name = "desert-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 12 },
+      { type = "item", name = "angels-solid-fruit", amount = 12 },
       { type = "item", name = "cellulose-fiber", amount = 14 },
     },
     order = "bd",
@@ -330,9 +330,9 @@ data:extend({
       { type = "item", name = "desert-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-nuts", amount = 4 },
-      { type = "item", name = "solid-corn", amount = 12 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-solid-nuts", amount = 4 },
+      { type = "item", name = "angels-solid-corn", amount = 12 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "be",
     crafting_machine_tint = {
@@ -367,7 +367,7 @@ data:extend({
       { type = "item", name = "swamp-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-nuts", amount = 16 },
+      { type = "item", name = "angels-solid-nuts", amount = 16 },
     },
     always_show_products = true,
     order = "ba",
@@ -402,7 +402,7 @@ data:extend({
       { type = "item", name = "swamp-2", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-beans", amount = 14 },
+      { type = "item", name = "angels-solid-beans", amount = 14 },
     },
     always_show_products = true,
     order = "bb",
@@ -437,8 +437,8 @@ data:extend({
       { type = "item", name = "swamp-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 36 },
-      { type = "item", name = "solid-nuts", amount = 6 },
+      { type = "item", name = "angels-solid-leafs", amount = 36 },
+      { type = "item", name = "angels-solid-nuts", amount = 6 },
     },
     order = "bc",
     crafting_machine_tint = {
@@ -471,8 +471,8 @@ data:extend({
       { type = "item", name = "swamp-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 24 },
-      { type = "item", name = "crystal-dust", amount = 6 },
+      { type = "item", name = "angels-solid-leafs", amount = 24 },
+      { type = "item", name = "angels-crystal-dust", amount = 6 },
     },
     order = "bd",
     crafting_machine_tint = {
@@ -506,8 +506,8 @@ data:extend({
       { type = "item", name = "swamp-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 16 },
-      { type = "item", name = "solid-pips", amount = 12 },
+      { type = "item", name = "angels-solid-fruit", amount = 16 },
+      { type = "item", name = "angels-solid-pips", amount = 12 },
       { type = "item", name = "alien-bacteria", amount = 4 },
     },
     order = "be",

@@ -7,7 +7,7 @@ data:extend({
     type = "recipe",
     name = "platinum-ore-processing",
     localised_name = { "item-name.processed-platinum" },
-    category = "ore-processing-4",
+    category = "angels-ore-processing-4",
     subgroup = "angels-platinum",
     energy_required = 2,
     enabled = false,
@@ -18,7 +18,7 @@ data:extend({
       { type = "item", name = "processed-platinum", amount = 2 },
     },
     order = "b[processed-platinum]",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   {
     type = "recipe",
@@ -39,39 +39,39 @@ data:extend({
   {
     type = "recipe",
     name = "pellet-platinum-smelting",
-    localised_name = { "fluid-name.liquid-hexachloroplatinic-acid" },
+    localised_name = { "fluid-name.angels-liquid-hexachloroplatinic-acid" },
     category = "chemistry",
     subgroup = "angels-platinum",
     energy_required = 6,
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-platinum", amount = 4 },
-      { type = "fluid", name = "liquid-hydrochloric-acid", amount = 30 },
-      { type = "fluid", name = "liquid-nitric-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-nitric-acid", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "liquid-hexachloroplatinic-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-hexachloroplatinic-acid", amount = 60 },
     },
-    main_product = "liquid-hexachloroplatinic-acid",
+    main_product = "angels-liquid-hexachloroplatinic-acid",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon(nil, { { 230, 191, 163 }, { 092, 218, 079 }, { 086, 112, 192 } }),
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
     order = "d[liquid-hexachloroplatinic-acid]",
   },
   {
     type = "recipe",
-    name = "liquid-hexachloroplatinic-acid-smelting",
+    name = "angels-liquid-hexachloroplatinic-acid-smelting",
     localised_name = { "item-name.solid-ammonium-chloroplatinate" },
     category = "chemical-smelting-4",
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-hexachloroplatinic-acid", amount = 120 },
-      { type = "fluid", name = "gas-ammonium-chloride", amount = 60 },
+      { type = "fluid", name = "angels-liquid-hexachloroplatinic-acid", amount = 120 },
+      { type = "fluid", name = "angels-gas-ammonium-chloride", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-ammonium-chloroplatinate", amount = 24 },
+      { type = "item", name = "angels-solid-ammonium-chloroplatinate", amount = 24 },
     },
     order = "e[solid-ammonium-chloroplatinate]",
   },
@@ -103,7 +103,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-platinum", amount = 8 },
-      { type = "fluid", name = "liquid-sulfuric-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
     },
     results = {
       { type = "item", name = "ingot-platinum", amount = 24 },
@@ -113,14 +113,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-ammonium-chloroplatinate-smelting",
+    name = "angels-solid-ammonium-chloroplatinate-smelting",
     localised_name = { "item-name.ingot-platinum" },
     category = "blast-smelting-4",
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-ammonium-chloroplatinate", amount = 24 },
+      { type = "item", name = "angels-solid-ammonium-chloroplatinate", amount = 24 },
     },
     results = {
       { type = "item", name = "ingot-platinum", amount = 24 },
@@ -147,8 +147,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-platinum-smelting",
-    localised_name = { "fluid-name.liquid-molten-platinum" },
+    name = "angels-molten-platinum-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-platinum" },
     category = "induction-smelting-4",
     subgroup = "angels-platinum-casting",
     energy_required = 4,
@@ -157,10 +157,10 @@ data:extend({
       { type = "item", name = "ingot-platinum", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 120 },
     },
     order = "h[liquid-molten-platinum]",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   {
     type = "recipe",
@@ -171,7 +171,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -179,7 +179,7 @@ data:extend({
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-platinum"), 1, angelsmods.smelting.number_tint),
     order = "i[angels-roll-platinum]-a",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   {
     type = "recipe",
@@ -190,17 +190,17 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-platinum", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-platinum",
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-roll-platinum"), 2, angelsmods.smelting.number_tint),
     order = "i[angels-roll-platinum]-b",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   {
     type = "recipe",
@@ -211,8 +211,8 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 40 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -224,7 +224,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-wire-coil-platinum]-a",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   {
     type = "recipe",
@@ -235,13 +235,13 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 70 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 70 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-platinum", amount = 8 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-wire-coil-platinum",
     icons = AF.add_number_icon_layer(
@@ -250,7 +250,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-wire-coil-platinum]-b",
-    crafting_machine_tint = AF.get_fluid_recipe_tint("liquid-molten-platinum"),
+    crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
   },
   -- CASTING RESULT
   {
@@ -262,14 +262,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-platinum", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-platinum", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-platinum", amount = 4 },
     },
     icons = AF.add_icon_layer(
       AF.get_object_icons("angels-plate-platinum"),
-      AF.get_object_icons("liquid-molten-platinum"),
+      AF.get_object_icons("angels-liquid-molten-platinum"),
       { -10, -10 },
       0.4375
     ),

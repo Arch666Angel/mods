@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "salination-plant",
+    name = "angels-salination-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "d[salination-plant]",
-    place_result = "salination-plant",
+    place_result = "angels-salination-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "salination-plant",
+    name = "angels-salination-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "salination-plant" },
-    fast_replaceable_group = "salination-plant",
-    next_upgrade = "salination-plant-2",
+    minable = { mining_time = 1, result = "angels-salination-plant" },
+    fast_replaceable_group = "angels-salination-plant",
+    next_upgrade = "angels-salination-plant-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -34,7 +34,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "salination-plant" },
+    crafting_categories = { "angels-salination-plant" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -97,21 +97,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "salination-plant-2",
+    name = "angels-salination-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "e[salination-plant2-]",
-    place_result = "salination-plant-2",
+    place_result = "angels-salination-plant-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "salination-plant-2",
+    name = "angels-salination-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
@@ -120,8 +120,8 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "salination-plant-2" },
-    fast_replaceable_group = "salination-plant",
+    minable = { mining_time = 1, result = "angels-salination-plant-2" },
+    fast_replaceable_group = "angels-salination-plant",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -129,7 +129,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "salination-plant" },
+    crafting_categories = { "angels-salination-plant" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",

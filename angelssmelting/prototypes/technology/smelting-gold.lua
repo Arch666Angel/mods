@@ -7,9 +7,9 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-gold-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-leaching",
+      "angels-ore-leaching",
       "angels-metallurgy-3",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-gold-smelting",
+        recipe = "angels-molten-gold-smelting",
       },
       {
         type = "unlock-recipe",
@@ -47,7 +47,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-gold-smelting-1",
       "angels-nitrogen-processing-2",
     },
@@ -58,7 +58,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-chlorauric-acid",
+        recipe = "angels-liquid-chlorauric-acid",
       },
       {
         type = "unlock-recipe",
@@ -133,9 +133,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-gold-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
@@ -148,7 +148,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-gold-cyanide-smelting",
+        recipe = "angels-solid-sodium-gold-cyanide-smelting",
       },
     },
     unit = {

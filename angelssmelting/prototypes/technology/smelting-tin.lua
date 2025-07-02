@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-tin-smelting",
+        recipe = "angels-molten-tin-smelting",
       },
       {
         type = "unlock-recipe",
@@ -43,7 +43,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-tin-smelting-1",
       "angels-coal-processing",
     },
@@ -117,7 +117,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-tin-smelting-2",
     },
     effects = {

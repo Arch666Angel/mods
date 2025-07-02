@@ -1,31 +1,31 @@
 data:extend({
   {
     type = "recipe",
-    name = "gas-puffer-atmosphere",
-    localised_name = { "fluid-name.gas-puffer-atmosphere" },
-    category = "advanced-chemistry",
+    name = "angels-gas-puffer-atmosphere",
+    localised_name = { "fluid-name.angels-gas-puffer-atmosphere" },
+    category = "angels-advanced-chemistry",
     subgroup = "bio-puffer-1",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 20 },
-      { type = "fluid", name = "gas-hydrogen-fluoride", amount = 10 },
-      { type = "fluid", name = "gas-oxygen", amount = 10 },
+      { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 20 },
+      { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 10 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 10 },
     },
     results = {
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 60 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 60 },
     },
-    main_product = "gas-puffer-atmosphere",
+    main_product = "angels-gas-puffer-atmosphere",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       nil,
       { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
     ),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-      "gas-puffer-atmosphere",
-      "gas-sulfur-dioxide",
-      "gas-oxygen",
-      "gas-hydrogen-fluoride",
+      "angels-gas-puffer-atmosphere",
+      "angels-gas-sulfur-dioxide",
+      "angels-gas-oxygen",
+      "angels-gas-hydrogen-fluoride",
     }),
     order = "b",
   },
@@ -33,17 +33,17 @@ data:extend({
     type = "recipe",
     name = "bio-puffer-egg-shell-powder",
     localised_name = { "item-name.bio-puffer-egg-shell-powder" },
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-puffer-egg",
     enabled = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "bio-puffer-egg-shell", amount = 2 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "bio-puffer-egg-shell-powder", amount = 2 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     main_product = "bio-puffer-egg-shell-powder",
     icon_size = 32,
@@ -61,9 +61,9 @@ data:extend({
     energy_required = 15,
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-compressed-air", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-compressed-air", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -76,7 +76,7 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 220, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 220, ignored_by_productivity = 20 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-icon.png",
     icon_size = 32,
@@ -91,9 +91,9 @@ data:extend({
     energy_required = 15,
     ingredients = {
       { type = "item", name = "bio-puffer-2", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-ammonia", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-2", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -106,8 +106,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-raw-1", amount = 200 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-raw-1", amount = 200 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-2-icon.png",
     icon_size = 32,
@@ -122,9 +122,9 @@ data:extend({
     energy_required = 15,
     ingredients = {
       { type = "item", name = "bio-puffer-3", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-carbon-monoxide", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-3", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -137,8 +137,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-urea", amount = 200 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-urea", amount = 200 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-3-icon.png",
     icon_size = 32,
@@ -153,9 +153,9 @@ data:extend({
     energy_required = 15,
     ingredients = {
       { type = "item", name = "bio-puffer-4", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-4", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -168,8 +168,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-synthesis", amount = 200 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-synthesis", amount = 200 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-4-icon.png",
     icon_size = 32,
@@ -184,9 +184,9 @@ data:extend({
     energy_required = 15,
     ingredients = {
       { type = "item", name = "bio-puffer-5", amount = 4, ignored_by_stats = 4 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-hydrogen-chloride", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-5", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
@@ -199,8 +199,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-hydrazine", amount = 200 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-hydrazine", amount = 200 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-5-icon.png",
     icon_size = 32,
@@ -219,9 +219,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-2", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-puffer-3", amount = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "gas-acid", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-2", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -246,12 +246,12 @@ data:extend({
       },
       {
         type = "fluid",
-        name = "gas-acid",
+        name = "angels-gas-acid",
         amount = 20,
         ignored_by_productivity = 20,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 100 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 100 },
     },
     icons = {
       {
@@ -283,9 +283,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-puffer-2", amount = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "water-yellow-waste", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -308,8 +308,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-hydrogen-sulfide", amount = 100 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-hydrogen-sulfide", amount = 100 },
     },
     icons = {
       {
@@ -341,9 +341,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-puffer-3", amount = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "water-red-waste", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-water-red-waste", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -366,8 +366,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-ammonia", amount = 100 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
     },
     icons = {
       {
@@ -399,9 +399,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-puffer-4", amount = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-water-greenyellow-waste", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -424,8 +424,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-hydrogen-fluoride", amount = 100 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 100 },
     },
     icons = {
       {
@@ -457,9 +457,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "bio-puffer-5", amount = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
-      { type = "fluid", name = "water-green-waste", amount = 100 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
+      { type = "fluid", name = "angels-water-green-waste", amount = 100 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
@@ -482,8 +482,8 @@ data:extend({
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
-      { type = "fluid", name = "gas-hydrogen-chloride", amount = 100 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
     },
     icons = {
       {
@@ -517,13 +517,13 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_stats = 2 },
-      { type = "item", name = "solid-beans", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-beans", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-1", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-1", amount = 1, probability = 0.75 },
       {
         type = "item",
@@ -576,13 +576,13 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-puffer-2", amount = 2, ignored_by_stats = 2 },
-      { type = "item", name = "solid-leafs", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-leafs", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-2", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       {
         type = "item",
         name = "bio-puffer-egg-1",
@@ -635,13 +635,13 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-puffer-3", amount = 2, ignored_by_stats = 2 },
-      { type = "item", name = "solid-nuts", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-nuts", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-3", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       {
         type = "item",
         name = "bio-puffer-egg-1",
@@ -694,13 +694,13 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-puffer-4", amount = 2, ignored_by_stats = 2 },
-      { type = "item", name = "solid-pips", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-pips", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-4", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       {
         type = "item",
         name = "bio-puffer-egg-1",
@@ -753,13 +753,13 @@ data:extend({
     energy_required = 60,
     ingredients = {
       { type = "item", name = "bio-puffer-5", amount = 2, ignored_by_stats = 2 },
-      { type = "item", name = "solid-fruit", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-fruit", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-puffer-5", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       {
         type = "item",
         name = "bio-puffer-egg-1",
@@ -816,9 +816,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-2", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "bio-puffer-3", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-fruit", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-fruit", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       {
@@ -837,7 +837,7 @@ data:extend({
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-1", amount = 1 },
     },
     allow_productivity = true,
@@ -871,9 +871,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "bio-puffer-2", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-pips", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-pips", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       {
@@ -892,7 +892,7 @@ data:extend({
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-2", amount = 1 },
     },
     allow_productivity = true,
@@ -926,9 +926,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "bio-puffer-3", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-beans", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-beans", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       {
@@ -947,7 +947,7 @@ data:extend({
         ignored_by_productivity = 1,
         ignored_by_stats = 11,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-3", amount = 1 },
     },
     allow_productivity = true,
@@ -981,9 +981,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "bio-puffer-4", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-corn", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-corn", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       {
@@ -1002,7 +1002,7 @@ data:extend({
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-4", amount = 1 },
     },
     allow_productivity = true,
@@ -1036,9 +1036,9 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-puffer-1", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "bio-puffer-5", amount = 1, ignored_by_stats = 1 },
-      { type = "item", name = "solid-leafs", amount = 5 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
-      { type = "fluid", name = "gas-puffer-atmosphere", amount = 20 },
+      { type = "item", name = "angels-solid-leafs", amount = 5 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 20 },
     },
     results = {
       {
@@ -1057,7 +1057,7 @@ data:extend({
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
       },
-      { type = "fluid", name = "gas-acid", amount = 20, ignored_by_productivity = 20 },
+      { type = "fluid", name = "angels-gas-acid", amount = 20, ignored_by_productivity = 20 },
       { type = "item", name = "bio-puffer-egg-5", amount = 1 },
     },
     allow_productivity = true,
@@ -1289,13 +1289,13 @@ data:extend({
     type = "recipe",
     name = "crystal-shard-crystalization-1",
     localised_name = { "item-name.crystal-shard-raw" },
-    category = "crystallizing-2",
+    category = "angels-crystallizing-2",
     subgroup = "bio-biter-processing-crystal-shard",
     enabled = false,
     hidden = false,
     energy_required = 8,
     ingredients = {
-      { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50 },
+      { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },
       { type = "item", name = "egg-shell-seed", amount = 1 },
     },
     results = {
@@ -1313,13 +1313,13 @@ data:extend({
     type = "recipe",
     name = "crystal-shard-crystalization-2",
     localised_name = { "item-name.crystal-shard-raw" },
-    category = "crystallizing-2",
+    category = "angels-crystallizing-2",
     subgroup = "bio-biter-processing-crystal-shard",
     enabled = false,
     hidden = false,
     energy_required = 8,
     ingredients = {
-      { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 50 },
+      { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },
       { type = "item", name = "egg-shell-seed", amount = 1 },
       { type = "item", name = "crystal-enhancer", amount = 1 },
     },

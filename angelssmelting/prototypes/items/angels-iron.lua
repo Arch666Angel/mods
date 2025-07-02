@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-iron-hydroxide",
+    name = "angels-solid-iron-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-iron-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-iron",
@@ -53,7 +53,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-iron",
+    name = "angels-liquid-molten-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-iron.png",
     icon_size = 64,
     subgroup = "angels-iron-casting",

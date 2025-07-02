@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "lead-ore-processing",
     localised_name = { "item-name.processed-lead" },
-    category = "ore-processing",
+    category = "angels-ore-processing",
     subgroup = "angels-lead",
     energy_required = 2,
     enabled = false,
@@ -16,7 +16,7 @@ data:extend({
       { type = "item", name = "processed-lead", amount = 2 },
     },
     order = "b[processed-lead]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-lead"),
   },
   {
     type = "recipe",
@@ -44,13 +44,13 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-lead", amount = 8 },
-      { type = "fluid", name = "gas-oxygen", amount = 120 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 120 },
     },
     results = {
-      { type = "item", name = "solid-lead-oxide", amount = 24 },
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 120 },
+      { type = "item", name = "angels-solid-lead-oxide", amount = 24 },
+      { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 120 },
     },
-    main_product = "solid-lead-oxide",
+    main_product = "angels-solid-lead-oxide",
     order = "d[solid-lead-oxide]",
   },
   {
@@ -63,38 +63,38 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-lead", amount = 8 },
-      { type = "item", name = "solid-limestone", amount = 2 },
-      { type = "item", name = "solid-coke", amount = 2 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
+      { type = "item", name = "angels-solid-limestone", amount = 2 },
+      { type = "item", name = "angels-solid-coke", amount = 2 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
     },
     results = {
       { type = "item", name = "anode-lead", amount = 24 },
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 60 },
+      { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 60 },
     },
     main_product = "anode-lead",
     order = "e[anode-lead]",
   },
   {
     type = "recipe",
-    name = "liquid-hexafluorosilicic-acid",
-    localised_name = { "fluid-name.liquid-hexafluorosilicic-acid" },
-    category = "liquifying",
+    name = "angels-liquid-hexafluorosilicic-acid",
+    localised_name = { "fluid-name.angels-liquid-hexafluorosilicic-acid" },
+    category = "angels-liquifying",
     subgroup = "angels-lead",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "quartz", amount = 3 },
-      { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "liquid-hexafluorosilicic-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-hexafluorosilicic-acid", amount = 60 },
     },
-    main_product = "liquid-hexafluorosilicic-acid",
+    main_product = "angels-liquid-hexafluorosilicic-acid",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 },
     }, "SiFF"),
-    crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "liquid-molten-lead", "liquid-molten-silicon" }),
+    crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-liquid-molten-lead", "angels-liquid-molten-silicon" }),
     order = "f[liquid-hexafluorosilicic-acid]",
   },
   -- SMELTING RESULTS
@@ -108,11 +108,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "lead-ore", amount = 24 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
     },
     results = {
       { type = "item", name = "ingot-lead", amount = 24 },
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 60 },
+      { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 60 },
     },
     main_product = "ingot-lead",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -124,15 +124,15 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-lead-oxide-smelting",
+    name = "angels-solid-lead-oxide-smelting",
     localised_name = { "item-name.ingot-lead" },
     category = "blast-smelting-2",
     subgroup = "angels-lead",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-lead-oxide", amount = 24 },
-      { type = "item", name = "solid-carbon", amount = 2 },
+      { type = "item", name = "angels-solid-lead-oxide", amount = 24 },
+      { type = "item", name = "angels-solid-carbon", amount = 2 },
     },
     results = {
       { type = "item", name = "ingot-lead", amount = 24 },
@@ -155,11 +155,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "anode-lead", amount = 12 },
-      { type = "fluid", name = "liquid-hexafluorosilicic-acid", amount = 30 },
+      { type = "fluid", name = "angels-liquid-hexafluorosilicic-acid", amount = 30 },
     },
     results = {
       { type = "item", name = "ingot-lead", amount = 12 },
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     main_product = "ingot-lead",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -188,8 +188,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-lead-smelting",
-    localised_name = { "fluid-name.liquid-molten-lead" },
+    name = "angels-molten-lead-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-lead" },
     category = "induction-smelting",
     subgroup = "angels-lead-casting",
     energy_required = 4,
@@ -198,10 +198,10 @@ data:extend({
       { type = "item", name = "ingot-lead", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-lead", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-lead", amount = 120 },
     },
     order = "i[liquid-molten-lead]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-lead"),
   },
   {
     type = "recipe",
@@ -212,7 +212,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-lead", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-lead", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -224,7 +224,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-lead]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-lead"),
   },
   {
     type = "recipe",
@@ -235,12 +235,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-lead", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-lead", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-lead", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-lead",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -249,7 +249,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-lead]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-lead"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-lead"),
   },
   -- CASTING RESULT
   {
@@ -261,14 +261,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-lead", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-lead", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-lead", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-lead"),
-      angelsmods.functions.get_object_icons("liquid-molten-lead"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-lead"),
       { -10, -10 },
       0.4375
     ),

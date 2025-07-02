@@ -47,24 +47,24 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     OV.remove_prereq("angels-solder-smelting-1", "angels-solder-smelting-basic")
     OV.remove_unlock("angels-solder-smelting-1", "angels-solder-smelting-1")
     data.raw.recipe["angels-solder-smelting-2"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       1,
       angelsmods.smelting.number_tint
     )
     data.raw.recipe["angels-solder-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       2,
       angelsmods.smelting.number_tint
     )
     data.raw.recipe["angels-solder-smelting-4"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       3,
       angelsmods.smelting.number_tint
     )
   end
 else
   angelsmods.functions.hide("angels-solder-mixture")
-  angelsmods.functions.hide("liquid-molten-solder")
+  angelsmods.functions.hide("angels-liquid-molten-solder")
   angelsmods.functions.hide("angels-roll-solder")
   angelsmods.functions.hide("angels-solder")
   OV.disable_recipe({ "angels-solder-mixture" })

@@ -28,8 +28,8 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
   if angelsmods.trigger.smelting_products["zinc"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-zinc")
-    OV.disable_recipe({ "molten-zinc-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-zinc")
+    OV.disable_recipe({ "angels-molten-zinc-smelting" })
     OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -44,22 +44,22 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
     OV.patch_recipes({
       {
         name = "pellet-zinc-smelting",
-        icons = angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        icons = angelsmods.functions.get_object_icons("angels-solid-zinc-oxide"),
       },
     })
   end
 else
   angelsmods.functions.hide("processed-zinc")
   angelsmods.functions.hide("pellet-zinc")
-  angelsmods.functions.hide("solid-zinc-oxide")
+  angelsmods.functions.hide("angels-solid-zinc-oxide")
   angelsmods.functions.hide("cathode-zinc")
   angelsmods.functions.hide("ingot-zinc")
-  angelsmods.functions.hide("liquid-molten-zinc")
+  angelsmods.functions.hide("angels-liquid-molten-zinc")
   OV.disable_recipe({ "zinc-ore-processing", "zinc-processed-processing", "zinc-ore-processing-alt" })
-  OV.disable_recipe({ "pellet-zinc-smelting", "solid-zinc-oxide-smelting" })
+  OV.disable_recipe({ "pellet-zinc-smelting", "angels-solid-zinc-oxide-smelting" })
   OV.disable_recipe({ "zinc-ore-smelting", "processed-zinc-smelting", "cathode-zinc-smelting" })
-  OV.disable_recipe({ "molten-zinc-smelting" })
-  OV.disable_recipe({ "molten-zinc-smelting" })
+  OV.disable_recipe({ "angels-molten-zinc-smelting" })
+  OV.disable_recipe({ "angels-molten-zinc-smelting" })
   OV.disable_technology({ "angels-zinc-smelting-1", "angels-zinc-smelting-2", "angels-zinc-smelting-3" })
   OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
 end

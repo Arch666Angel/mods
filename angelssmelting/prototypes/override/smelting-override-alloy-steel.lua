@@ -23,10 +23,10 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
     -- special vanilla
     OV.disable_recipe({
-      "molten-steel-smelting-2",
-      "molten-steel-smelting-3",
-      "molten-steel-smelting-4",
-      "molten-steel-smelting-5",
+      "angels-molten-steel-smelting-2",
+      "angels-molten-steel-smelting-3",
+      "angels-molten-steel-smelting-4",
+      "angels-molten-steel-smelting-5",
     })
     OV.disable_technology("angels-steel-smelting-4")
   end
@@ -74,14 +74,14 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   end
 else
   angelsmods.functions.hide("ingot-steel")
-  angelsmods.functions.hide("liquid-molten-steel")
+  angelsmods.functions.hide("angels-liquid-molten-steel")
   OV.disable_recipe({ "ingot-iron-smelting" })
   OV.disable_recipe({
-    "molten-steel-smelting-1",
-    "molten-steel-smelting-2",
-    "molten-steel-smelting-3",
-    "molten-steel-smelting-4",
-    "molten-steel-smelting-5",
+    "angels-molten-steel-smelting-1",
+    "angels-molten-steel-smelting-2",
+    "angels-molten-steel-smelting-3",
+    "angels-molten-steel-smelting-4",
+    "angels-molten-steel-smelting-5",
   })
   OV.disable_technology({
     "angels-steel-smelting-1",

@@ -109,13 +109,13 @@ local unit_test_007 = function()
     filter = "has-product-item",
     invert = false,
     mode = "or",
-    elem_filters = { { filter = "name", name = "chemical-void" } },
+    elem_filters = { { filter = "name", name = "angels-chemical-void" } },
   })
   table.insert(recipe_filters, {
     filter = "has-product-item",
     invert = false,
     mode = "or",
-    elem_filters = { { filter = "name", name = "water-void" } },
+    elem_filters = { { filter = "name", name = "angels-water-void" } },
   })
 
   local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)

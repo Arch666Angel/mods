@@ -11,7 +11,7 @@ data:extend({
       { type = "item", name = "bio-hogger-1", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "iron-ore", amount = 10 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-1", amount_min = 3, amount_max = 5, ignored_by_productivity = 5, ignored_by_stats = 4 },
@@ -32,7 +32,7 @@ data:extend({
       { type = "item", name = "bio-hogger-2", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "iron-ore", amount = 10 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-2", amount_min = 3, amount_max = 5, ignored_by_productivity = 5, ignored_by_stats = 4 },
@@ -53,7 +53,7 @@ data:extend({
       { type = "item", name = "bio-hogger-3", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "iron-ore", amount = 10 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-3", amount_min = 3, amount_max = 5, ignored_by_productivity = 5, ignored_by_stats = 4 },
@@ -74,7 +74,7 @@ data:extend({
       { type = "item", name = "bio-hogger-4", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "iron-ore", amount = 10 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-4", amount_min = 3, amount_max = 5, ignored_by_productivity = 5, ignored_by_stats = 4 },
@@ -95,7 +95,7 @@ data:extend({
       { type = "item", name = "bio-hogger-5", amount = 4, ignored_by_stats = 4 },
       { type = "item", name = "iron-ore", amount = 10 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-5", amount_min = 3, amount_max = 5, ignored_by_productivity = 5, ignored_by_stats = 4 },
@@ -116,7 +116,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-hogger-1", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-1", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
@@ -148,7 +148,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-hogger-2", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-2", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
@@ -180,7 +180,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-hogger-3", amount = 2, ignored_by_stats = 21 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-3", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
@@ -212,7 +212,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-hogger-4", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-4", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
@@ -244,7 +244,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "bio-hogger-5", amount = 2, ignored_by_stats = 2 },
       { type = "item", name = "iron-plate", amount = 1 },
-      { type = "fluid", name = "liquid-nutrient-pulp", amount = 20 },
+      { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     results = {
       { type = "item", name = "bio-hogger-5", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },

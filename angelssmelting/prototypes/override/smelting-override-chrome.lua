@@ -21,8 +21,8 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
   if angelsmods.trigger.smelting_products["chrome"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-chrome")
-    OV.disable_recipe({ "molten-chrome-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-chrome")
+    OV.disable_recipe({ "angels-molten-chrome-smelting" })
     OV.disable_technology({ "angels-chrome-casting-2", "angels-chrome-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -33,15 +33,15 @@ if angelsmods.trigger.smelting_products["chrome"].ingot then
 else
   angelsmods.functions.hide("processed-chrome")
   angelsmods.functions.hide("pellet-chrome")
-  angelsmods.functions.hide("solid-chromate")
-  angelsmods.functions.hide("solid-dichromate")
-  angelsmods.functions.hide("solid-chrome-oxide")
+  angelsmods.functions.hide("angels-solid-chromate")
+  angelsmods.functions.hide("angels-solid-dichromate")
+  angelsmods.functions.hide("angels-solid-chrome-oxide")
   angelsmods.functions.hide("ingot-chrome")
-  angelsmods.functions.hide("liquid-molten-chrome")
+  angelsmods.functions.hide("angels-liquid-molten-chrome")
   OV.disable_recipe({ "chrome-ore-processing", "chrome-processed-processing", "pellet-chrome-smelting" })
-  OV.disable_recipe({ "solid-chromate-smelting", "solid-dichromate-smelting" })
-  OV.disable_recipe({ "chrome-ore-smelting", "processed-chrome-smelting", "solid-chrome-oxide-smelting" })
-  OV.disable_recipe({ "molten-chrome-smelting" })
+  OV.disable_recipe({ "angels-solid-chromate-smelting", "angels-solid-dichromate-smelting" })
+  OV.disable_recipe({ "chrome-ore-smelting", "processed-chrome-smelting", "angels-solid-chrome-oxide-smelting" })
+  OV.disable_recipe({ "angels-molten-chrome-smelting" })
   OV.disable_technology({ "angels-chrome-smelting-1", "angels-chrome-smelting-2", "angels-chrome-smelting-3" })
   OV.disable_technology({ "angels-chrome-casting-2", "angels-chrome-casting-3" })
 end

@@ -18,15 +18,15 @@ require("prototypes.overrides.bio-processing-override-base-game")
 --REFINING
 if angelsmods.refining then
   --MOVE UNLOCKS
-  OV.add_unlock("bio-processing-green", "water-mineralized")
-  OV.remove_unlock("water-treatment", "water-mineralized")
+  OV.add_unlock("bio-processing-green", "angels-water-mineralized")
+  OV.remove_unlock("angels-water-treatment", "angels-water-mineralized")
 end
 
 --SMELTING
 if not angelsmods.smelting then
   OV.disable_recipe("algae-brown-burning-wash")
 
-  OV.remove_prereq("angels-stone-smelting-2", "resins")
+  OV.remove_prereq("angels-stone-smelting-2", "angels-resins")
   OV.add_prereq("angels-stone-smelting-2", "bio-arboretum-1")
 end
 
@@ -68,8 +68,8 @@ else
       name = "crystal-enhancer",
       category = "advanced-crafting",
       ingredients = {
-        { name = "catalysator-green", amount = 1 },
-        { name = "crystal-slurry", amount = 0, type = "fluid" },
+        { name = "angels-catalysator-green", amount = 1 },
+        { name = "angels-crystal-slurry", amount = 0, type = "fluid" },
       },
     },
   })

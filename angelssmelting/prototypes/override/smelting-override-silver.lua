@@ -28,9 +28,9 @@ end
 if angelsmods.trigger.smelting_products["silver"].ingot then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-silver-nitrate", "bob-silver-nitrate")
-    angelsmods.functions.hide("solid-silver-nitrate")
-    OV.copy_item_properties("solid-silver-nitrate", "bob-silver-nitrate")
+    OV.global_replace_item("angels-solid-silver-nitrate", "bob-silver-nitrate")
+    angelsmods.functions.hide("angels-solid-silver-nitrate")
+    OV.copy_item_properties("angels-solid-silver-nitrate", "bob-silver-nitrate")
     OV.disable_recipe({ "bob-silver-nitrate", "bob-silver-from-lead" })
     OV.remove_prereq("bob-battery-3", "nitrogen-processing")
     OV.add_prereq("bob-battery-3", "angels-silver-smelting-2")
@@ -47,8 +47,8 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   if angelsmods.trigger.smelting_products["silver"].plate or angelsmods.trigger.smelting_products["silver"].wire then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-silver")
-    OV.disable_recipe({ "molten-silver-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-silver")
+    OV.disable_recipe({ "angels-molten-silver-smelting" })
     OV.disable_technology({ "angels-silver-casting-2", "angels-silver-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -59,15 +59,15 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
 else
   angelsmods.functions.hide("processed-silver")
   angelsmods.functions.hide("pellet-silver")
-  angelsmods.functions.hide("solid-silver-nitrate")
-  angelsmods.functions.hide("solid-sodium-silver-cyanide")
+  angelsmods.functions.hide("angels-solid-silver-nitrate")
+  angelsmods.functions.hide("angels-solid-sodium-silver-cyanide")
   angelsmods.functions.hide("cathode-silver")
   angelsmods.functions.hide("ingot-silver")
-  angelsmods.functions.hide("liquid-molten-silver")
+  angelsmods.functions.hide("angels-liquid-molten-silver")
   OV.disable_recipe({ "silver-ore-processing", "silver-processed-processing" })
-  OV.disable_recipe({ "processed-silver-smelting", "pellet-silver-smelting", "solid-sodium-silver-cyanide-smelting" })
-  OV.disable_recipe({ "silver-ore-smelting", "solid-silver-nitrate-smelting", "cathode-silver-smelting" })
-  OV.disable_recipe({ "molten-silver-smelting" })
+  OV.disable_recipe({ "processed-silver-smelting", "pellet-silver-smelting", "angels-solid-sodium-silver-cyanide-smelting" })
+  OV.disable_recipe({ "silver-ore-smelting", "angels-solid-silver-nitrate-smelting", "cathode-silver-smelting" })
+  OV.disable_recipe({ "angels-molten-silver-smelting" })
   OV.disable_technology({ "angels-silver-smelting-1", "angels-silver-smelting-2", "angels-silver-smelting-3" })
   OV.disable_technology({ "angels-silver-casting-2", "angels-silver-casting-3" })
 end

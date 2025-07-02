@@ -131,7 +131,7 @@ local function calculate_science_pack_level()
 
   if script.active_mods["SeaBlock"] then
     for pack_name, pack_level in pairs({
-      ["sb-angelsore3-tool"] = 0,
+      ["sb-angels-ore3-tool"] = 0,
       ["sb-algae-brown-tool"] = 0,
       ["sb-lab-tool"] = 0,
       ["sb-basic-circuit-board-tool"] = 0,

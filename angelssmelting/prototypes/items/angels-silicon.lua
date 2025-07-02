@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-trichlorosilane",
+    name = "angels-liquid-trichlorosilane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HCl[font=default-tiny-bold]3[/font]Si" }
       or nil,
@@ -50,7 +50,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-silane",
+    name = "angels-gas-silane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "H[font=default-tiny-bold]4[/font]Si" }
       or nil,
@@ -88,7 +88,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-silicon",
+    name = "angels-liquid-molten-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-silicon.png",
     icon_size = 64,
     subgroup = "angels-silicon-casting",

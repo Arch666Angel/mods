@@ -1,9 +1,9 @@
 game.reload_script()
 
 local change_tech = {
-  "ore-powderizer",
-  "ore-advanced-floatation",
-  "ore-electro-whinning-cell",
+  "angels-ore-powderizer",
+  "angels-ore-advanced-floatation",
+  "angels-ore-electro-whinning-cell",
 }
 --Enable recipes
 for index, force in pairs(game.forces) do

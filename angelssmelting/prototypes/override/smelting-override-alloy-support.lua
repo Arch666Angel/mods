@@ -86,8 +86,8 @@ if mods["bobplates"] then
   end
 
   -- Remove Chemical Processing techs
-  OV.global_replace_technology("bob-chemical-processing-1", "basic-chemistry")
-  OV.global_replace_technology("bob-chemical-processing-2", "basic-chemistry-3")
+  OV.global_replace_technology("bob-chemical-processing-1", "angels-basic-chemistry")
+  OV.global_replace_technology("bob-chemical-processing-2", "angels-basic-chemistry-3")
   OV.disable_technology({ "bob-chemical-processing-1", "bob-chemical-processing-2" })
 
   -- Clean up prerequisites

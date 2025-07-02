@@ -16,7 +16,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "ore-crushing",
+      technology = "angels-ore-crushing",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",

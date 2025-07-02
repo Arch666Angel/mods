@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "fluid",
-    name = "liquid-fish-atmosphere",
+    name = "angels-liquid-fish-atmosphere",
     icons = angelsmods.functions.create_liquid_fluid_icon(
       nil,
       { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
@@ -16,7 +16,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-polluted-fish-atmosphere",
+    name = "angels-liquid-polluted-fish-atmosphere",
     icons = angelsmods.functions.create_liquid_fluid_icon(
       nil,
       { { 194, 227, 091 }, { 241, 050, 238 }, { 241, 050, 238 } }
@@ -133,7 +133,7 @@ data:extend({
   -----------------------------------------------------------------------------
   {
     type = "fluid",
-    name = "liquid-raw-fish-oil",
+    name = "angels-liquid-raw-fish-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       nil,
       { { 200, 113, 048 }, { 200, 113, 048 }, { 241, 155, 057, 0.8 }, { 241, 155, 057, 0.8 } }
@@ -148,7 +148,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-fish-oil",
+    name = "angels-liquid-fish-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       nil,
       { { 191, 155, 037 }, { 191, 155, 037 }, { 244, 191, 015, 0.8 }, { 244, 191, 015, 0.8 } }

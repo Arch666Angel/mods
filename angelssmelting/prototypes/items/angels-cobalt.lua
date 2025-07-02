@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-cobalt-hydroxide",
+    name = "angels-solid-cobalt-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-cobalt-oxide",
+    name = "angels-solid-cobalt-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-cobalt",
+    name = "angels-liquid-molten-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt-casting",

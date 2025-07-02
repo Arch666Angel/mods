@@ -2,7 +2,7 @@ angelsmods.functions.RB.build({
   --ORE PROCESSING MACHINE
   {
     type = "recipe",
-    name = "ore-processing-machine",
+    name = "angels-ore-processing-machine",
     localised_name = { "entity-name.ore-processing-machine" },
     energy_required = 5,
     enabled = false,
@@ -12,11 +12,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-gears", amount = 2 },
       { type = "item", name = "t2-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-2",
+    name = "angels-ore-processing-machine-2",
     localised_name = { "entity-name.ore-processing-machine-2" },
     energy_required = 5,
     enabled = false,
@@ -26,11 +26,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 2 },
       { type = "item", name = "t3-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-2", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-3",
+    name = "angels-ore-processing-machine-3",
     localised_name = { "entity-name.ore-processing-machine-3" },
     energy_required = 5,
     enabled = false,
@@ -40,11 +40,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 2 },
       { type = "item", name = "t4-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-3", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-4",
+    name = "angels-ore-processing-machine-4",
     localised_name = { "entity-name.ore-processing-machine-4" },
     energy_required = 5,
     enabled = false,
@@ -54,7 +54,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 2 },
       { type = "item", name = "t5-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-4", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-4", amount = 1 } },
   },
   --PELLET PRESS
   {

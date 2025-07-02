@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-sodium-aluminate",
+    name = "angels-solid-sodium-aluminate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-aluminate.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-aluminium-hydroxide",
+    name = "angels-solid-aluminium-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -48,7 +48,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-aluminium-oxide",
+    name = "angels-solid-aluminium-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -77,7 +77,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-aluminium",
+    name = "angels-liquid-molten-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium-casting",

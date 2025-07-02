@@ -33,13 +33,13 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
   if angelsmods.trigger.smelting_products["titanium"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-titanium")
+    angelsmods.functions.hide("angels-liquid-molten-titanium")
     OV.disable_recipe({
-      "molten-titanium-smelting-1",
-      "molten-titanium-smelting-2",
-      "molten-titanium-smelting-3",
-      "molten-titanium-smelting-4",
-      "molten-titanium-smelting-5",
+      "angels-molten-titanium-smelting-1",
+      "angels-molten-titanium-smelting-2",
+      "angels-molten-titanium-smelting-3",
+      "angels-molten-titanium-smelting-4",
+      "angels-molten-titanium-smelting-5",
     })
     OV.disable_technology({ "angels-titanium-casting-2", "angels-titanium-casting-3" })
     -- swap tech tier 1 to ingots
@@ -51,19 +51,19 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
 else
   angelsmods.functions.hide("processed-titanium")
   angelsmods.functions.hide("pellet-titanium")
-  angelsmods.functions.hide("liquid-titanium-tetrachloride")
+  angelsmods.functions.hide("angels-liquid-titanium-tetrachloride")
   angelsmods.functions.hide("sponge-titanium")
   angelsmods.functions.hide("ingot-titanium")
-  angelsmods.functions.hide("liquid-molten-titanium")
+  angelsmods.functions.hide("angels-liquid-molten-titanium")
   OV.disable_recipe({ "titanium-ore-processing", "titanium-processed-processing" })
-  OV.disable_recipe({ "titanium-ore-smelting", "processed-titanium-smelting", "liquid-titanium-tetrachloride-smelting" })
+  OV.disable_recipe({ "titanium-ore-smelting", "processed-titanium-smelting", "angels-liquid-titanium-tetrachloride-smelting" })
   OV.disable_recipe({ "sponge-titanium-smelting", "pellet-titanium-smelting" })
   OV.disable_recipe({
-    "molten-titanium-smelting-1",
-    "molten-titanium-smelting-2",
-    "molten-titanium-smelting-3",
-    "molten-titanium-smelting-4",
-    "molten-titanium-smelting-5",
+    "angels-molten-titanium-smelting-1",
+    "angels-molten-titanium-smelting-2",
+    "angels-molten-titanium-smelting-3",
+    "angels-molten-titanium-smelting-4",
+    "angels-molten-titanium-smelting-5",
   })
   OV.disable_technology({ "angels-titanium-smelting-1", "angels-titanium-smelting-2", "angels-titanium-smelting-3" })
   OV.disable_technology({ "angels-titanium-casting-2", "angels-titanium-casting-3" })

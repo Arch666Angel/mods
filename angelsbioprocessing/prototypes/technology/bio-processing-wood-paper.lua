@@ -71,11 +71,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon-from-charcoal",
+        recipe = "angels-carbon-from-charcoal",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-carbon-dioxide-from-wood",
+        recipe = "angels-gas-carbon-dioxide-from-wood",
       },
     },
     unit = {
@@ -132,7 +132,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-saw",
+        recipe = "angels-solid-saw",
       },
     },
     unit = {
@@ -178,7 +178,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-crystal-tipped-saw",
+        recipe = "angels-solid-crystal-tipped-saw",
       },
     },
     unit = {
@@ -220,7 +220,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-crystal-full-saw",
+        recipe = "angels-solid-crystal-full-saw",
       },
     },
     unit = {
@@ -247,7 +247,7 @@ data:extend({
     prerequisites = {
       "bio-arboretum-1",
       "bio-fermentation",
-      "resins",
+      "angels-resins",
     },
     effects = {
       {
@@ -473,7 +473,7 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "rubbers",
+      "angels-rubbers",
       "bio-arboretum-1",
       "bio-nutrient-paste",
     },
@@ -581,18 +581,18 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "basic-chemistry",
+      "angels-basic-chemistry",
       "bio-processing-brown",
       "logistic-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-alginic-acid",
+        recipe = "angels-solid-alginic-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-wood-pulp",
+        recipe = "angels-solid-wood-pulp",
       },
       {
         type = "unlock-recipe",
@@ -618,7 +618,7 @@ data:extend({
       "angels-nitrogen-processing-2",
       "bio-paper-1",
       "chemical-science-pack",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -635,7 +635,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-pulping-liquor",
+        recipe = "angels-liquid-pulping-liquor",
       },
     },
     unit = {
@@ -656,7 +656,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-paper-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
       "production-science-pack",
     },
     effects = {
@@ -666,7 +666,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-white-liquor",
+        recipe = "angels-liquid-white-liquor",
       },
       {
         type = "unlock-recipe",

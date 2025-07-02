@@ -72,7 +72,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
     },
   })
   if not angelsmods.functions.is_special_vanilla() then
-    OV.remove_unlock("ore-crushing", "copper-plate")
+    OV.remove_unlock("angels-ore-crushing", "copper-plate")
   end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.hide("angels-plate-copper")
@@ -93,7 +93,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
   if angelsmods.refining then
     OV.patch_recipes({
       {
-        name = "angelsore3-crushed-smelting",
+        name = "angels-ore3-crushed-smelting",
         subgroup = "angels-copper-casting",
         order = "j[angels-plate-copper]-a",
       },

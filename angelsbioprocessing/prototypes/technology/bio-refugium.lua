@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-fish-atmosphere",
+        recipe = "angels-liquid-fish-atmosphere",
       },
       {
         type = "unlock-recipe",
@@ -143,7 +143,7 @@ data:extend({
       "angels-sulfur-processing-2",
       "angels-nitrogen-processing-2",
       "advanced-circuit",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -152,7 +152,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-puffer-atmosphere",
+        recipe = "angels-gas-puffer-atmosphere",
       },
       {
         type = "unlock-recipe",
@@ -237,7 +237,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-refugium-puffer-2",
-      --"water-treatment-2"
+      --"angels-water-treatment-2"
     },
     effects = {
       {
@@ -591,7 +591,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-polluted-fish-atmosphere",
+        recipe = "angels-liquid-polluted-fish-atmosphere",
       },
     },
     unit = {

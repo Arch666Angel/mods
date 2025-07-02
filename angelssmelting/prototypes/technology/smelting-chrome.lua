@@ -7,7 +7,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-chrome-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-electro-whinning-cell",
+      "angels-ore-electro-whinning-cell",
       "angels-metallurgy-4",
       "angels-coal-processing-3",
     },
@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-chrome-smelting",
+        recipe = "angels-molten-chrome-smelting",
       },
       {
         type = "unlock-recipe",
@@ -44,7 +44,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-chrome-smelting-1",
     },
     effects = {
@@ -114,9 +114,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-5",
+      "angels-ore-processing-5",
       "angels-chrome-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
@@ -129,15 +129,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-chromate-smelting",
+        recipe = "angels-solid-chromate-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-dichromate-smelting",
+        recipe = "angels-solid-dichromate-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-chrome-oxide-smelting",
+        recipe = "angels-solid-chrome-oxide-smelting",
       },
     },
     unit = {

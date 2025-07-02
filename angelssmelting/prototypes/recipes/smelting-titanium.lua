@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "titanium-ore-processing",
     localised_name = { "item-name.processed-titanium" },
-    category = "ore-processing-3",
+    category = "angels-ore-processing-3",
     subgroup = "angels-titanium",
     energy_required = 2,
     enabled = false,
@@ -16,7 +16,7 @@ data:extend({
       { type = "item", name = "processed-titanium", amount = 2 },
     },
     order = "b[processed-titanium]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
@@ -37,20 +37,20 @@ data:extend({
   {
     type = "recipe",
     name = "titanium-ore-smelting",
-    localised_name = { "fluid-name.liquid-titanium-tetrachloride" },
+    localised_name = { "fluid-name.angels-liquid-titanium-tetrachloride" },
     category = "chemical-smelting-2",
     subgroup = "angels-titanium",
     energy_required = 8,
     enabled = false,
     ingredients = {
       { type = "item", name = "rutile-ore", amount = 24 },
-      { type = "item", name = "solid-carbon", amount = 6 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "item", name = "angels-solid-carbon", amount = 6 },
+      { type = "fluid", name = "angels-gas-chlorine", amount = 60 },
     },
     results = {
-      { type = "fluid", name = "liquid-titanium-tetrachloride", amount = 120 },
+      { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
     },
-    main_product = "liquid-titanium-tetrachloride",
+    main_product = "angels-liquid-titanium-tetrachloride",
     always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
@@ -64,20 +64,20 @@ data:extend({
   {
     type = "recipe",
     name = "processed-titanium-smelting",
-    localised_name = { "fluid-name.liquid-titanium-tetrachloride" },
+    localised_name = { "fluid-name.angels-liquid-titanium-tetrachloride" },
     category = "chemical-smelting-3",
     subgroup = "angels-titanium",
     energy_required = 8,
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-titanium", amount = 8 },
-      { type = "item", name = "solid-carbon", amount = 6 },
-      { type = "fluid", name = "gas-chlorine", amount = 60 },
+      { type = "item", name = "angels-solid-carbon", amount = 6 },
+      { type = "fluid", name = "angels-gas-chlorine", amount = 60 },
     },
     results = {
-      { type = "fluid", name = "liquid-titanium-tetrachloride", amount = 120 },
+      { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
     },
-    main_product = "liquid-titanium-tetrachloride",
+    main_product = "angels-liquid-titanium-tetrachloride",
     always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
@@ -90,14 +90,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "liquid-titanium-tetrachloride-smelting",
+    name = "angels-liquid-titanium-tetrachloride-smelting",
     localised_name = { "item-name.sponge-titanium" },
     category = "chemical-smelting-2",
     subgroup = "angels-titanium",
     energy_required = 6,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-titanium-tetrachloride", amount = 120 },
+      { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
       --{type="item", name="ingot-manganese", amount=6},
     },
     results = {
@@ -137,12 +137,12 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "pellet-titanium", amount = 8 },
-      { type = "item", name = "solid-calcium-chloride", amount = 6 },
-      { type = "item", name = "solid-carbon", amount = 6 },
+      { type = "item", name = "angels-solid-calcium-chloride", amount = 6 },
+      { type = "item", name = "angels-solid-carbon", amount = 6 },
     },
     results = {
       { type = "item", name = "ingot-titanium", amount = 24 },
-      { type = "item", name = "solid-limestone", amount = 6 },
+      { type = "item", name = "angels-solid-limestone", amount = 6 },
     },
     main_product = "ingot-titanium",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -171,8 +171,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-titanium-smelting-1",
-    localised_name = { "fluid-name.liquid-molten-titanium" },
+    name = "angels-molten-titanium-smelting-1",
+    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "induction-smelting-3",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -181,20 +181,20 @@ data:extend({
       { type = "item", name = "ingot-titanium", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 120 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       1,
       angelsmods.smelting.number_tint
     ),
     order = "h[liquid-molten-titanium]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
-    name = "molten-titanium-smelting-2",
-    localised_name = { "fluid-name.liquid-molten-titanium" },
+    name = "angels-molten-titanium-smelting-2",
+    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "induction-smelting-4",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -204,20 +204,20 @@ data:extend({
       { type = "item", name = "ingot-manganese", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "h[liquid-molten-titanium]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
-    name = "molten-titanium-smelting-3",
-    localised_name = { "fluid-name.liquid-molten-titanium" },
+    name = "angels-molten-titanium-smelting-3",
+    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "induction-smelting-4",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -227,20 +227,20 @@ data:extend({
       { type = "item", name = "ingot-nickel", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       3,
       angelsmods.smelting.number_tint
     ),
     order = "h[liquid-molten-titanium]-c",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
-    name = "molten-titanium-smelting-4",
-    localised_name = { "fluid-name.liquid-molten-titanium" },
+    name = "angels-molten-titanium-smelting-4",
+    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "induction-smelting-4",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -251,20 +251,20 @@ data:extend({
       { type = "item", name = "ingot-tin", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       4,
       angelsmods.smelting.number_tint
     ),
     order = "h[liquid-molten-titanium]-d",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
-    name = "molten-titanium-smelting-5",
-    localised_name = { "fluid-name.liquid-molten-titanium" },
+    name = "angels-molten-titanium-smelting-5",
+    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "induction-smelting-4",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -275,15 +275,15 @@ data:extend({
       { type = "item", name = "ingot-chrome", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       5,
       angelsmods.smelting.number_tint
     ),
     order = "h[liquid-molten-titanium]-e",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
@@ -294,7 +294,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -306,7 +306,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-titanium]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
@@ -317,12 +317,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-titanium", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-titanium",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -331,7 +331,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-titanium]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-titanium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-titanium"),
   },
   {
     type = "recipe",
@@ -342,14 +342,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-titanium", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-titanium", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-titanium", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-titanium"),
-      angelsmods.functions.get_object_icons("liquid-molten-titanium"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-titanium"),
       { -10, -10 },
       0.4375
     ),

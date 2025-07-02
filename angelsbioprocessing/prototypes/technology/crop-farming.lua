@@ -7,7 +7,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-brown",
-      "water-washing-1",
+      "angels-water-washing-1",
     },
     effects = {
       {
@@ -16,15 +16,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-soil",
+        recipe = "angels-solid-soil",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sand",
+        recipe = "angels-solid-sand",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-soil-alternative",
+        recipe = "angels-solid-soil-alternative",
       },
     },
     unit = {
@@ -181,7 +181,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-fertilizer",
+        recipe = "angels-solid-fertilizer",
       },
     },
     unit = {
@@ -211,7 +211,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-alienated-fertilizer",
+        recipe = "angels-solid-alienated-fertilizer",
       },
       {
         type = "unlock-recipe",
@@ -666,7 +666,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
-      "gas-processing",
+      "angels-gas-processing",
     },
     effects = {
       {
@@ -675,27 +675,27 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-beans-nutrients",
+        recipe = "angels-solid-beans-nutrients",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-corn-nutrients",
+        recipe = "angels-solid-corn-nutrients",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-leafs-nutrients",
+        recipe = "angels-solid-leafs-nutrients",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nuts-nutrients",
+        recipe = "angels-solid-nuts-nutrients",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-pips-nutrients",
+        recipe = "angels-solid-pips-nutrients",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fruit-nutrients",
+        recipe = "angels-solid-fruit-nutrients",
       },
       {
         type = "unlock-recipe",
@@ -727,7 +727,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
-      "slag-processing-1",
+      "angels-slag-processing-1",
       "angels-oil-processing",
     },
     effects = {
@@ -737,23 +737,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-vegetable-oil-nuts",
+        recipe = "angels-liquid-raw-vegetable-oil-nuts",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-vegetable-oil-pips",
+        recipe = "angels-liquid-raw-vegetable-oil-pips",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-vegetable-oil-beans",
+        recipe = "angels-liquid-raw-vegetable-oil-beans",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-vegetable-oil-filtering-1",
+        recipe = "angels-liquid-raw-vegetable-oil-filtering-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-vegetable-oil-refining",
+        recipe = "angels-liquid-vegetable-oil-refining",
       },
     },
     unit = {
@@ -774,12 +774,12 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-pressing-1",
-      "slag-processing-2",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-vegetable-oil-filtering-2",
+        recipe = "angels-liquid-raw-vegetable-oil-filtering-2",
       },
     },
     unit = {
@@ -803,7 +803,7 @@ data:extend({
       "bio-pressing-1",
       "bio-refugium-fish-1",
       "bio-fermentation",
-      "thermal-water-extraction",
+      "angels-thermal-water-extraction",
     },
     effects = {
       {
@@ -828,11 +828,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-fish-oil-filtering-1",
+        recipe = "angels-liquid-raw-fish-oil-filtering-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-fish-oil-refining",
+        recipe = "angels-liquid-fish-oil-refining",
       },
     },
     unit = {
@@ -858,7 +858,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-raw-fish-oil-filtering-2",
+        recipe = "angels-liquid-raw-fish-oil-filtering-2",
       },
       {
         type = "unlock-recipe",
@@ -936,19 +936,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-acetic-acid-catalyst",
+        recipe = "angels-liquid-acetic-acid-catalyst",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-acetic-anhydride",
+        recipe = "angels-liquid-acetic-anhydride",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-acetate-mixture",
+        recipe = "angels-liquid-acetate-mixture",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-cellulose-acetate",
+        recipe = "angels-liquid-cellulose-acetate",
       },
       {
         type = "unlock-recipe",
@@ -978,7 +978,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-propionic-acid-catalyst",
+        recipe = "angels-liquid-propionic-acid-catalyst",
       },
       {
         type = "unlock-recipe",
@@ -1013,7 +1013,7 @@ data:extend({
   --  effects = {
   --    {
   --      type = "unlock-recipe",
-  --      recipe = "solid-nuclear-fertilizer"
+  --      recipe = "angels-solid-nuclear-fertilizer"
   --    },
   --    {
   --      type = "unlock-recipe",

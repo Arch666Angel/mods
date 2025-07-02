@@ -2,47 +2,47 @@ data:extend({
   --ORE PROCESSING MACHINE
   {
     type = "recipe",
-    name = "ore-processing-machine",
+    name = "angels-ore-processing-machine",
     localised_name = { "entity-name.ore-processing-machine" },
     energy_required = 5,
     enabled = false,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 10 },
     },
-    results = { { type = "item", name = "ore-processing-machine", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-2",
+    name = "angels-ore-processing-machine-2",
     localised_name = { "entity-name.ore-processing-machine-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ore-processing-machine", amount = 1 },
+      { type = "item", name = "angels-ore-processing-machine", amount = 1 },
     },
-    results = { { type = "item", name = "ore-processing-machine-2", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-3",
+    name = "angels-ore-processing-machine-3",
     localised_name = { "entity-name.ore-processing-machine-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ore-processing-machine-2", amount = 1 },
+      { type = "item", name = "angels-ore-processing-machine-2", amount = 1 },
     },
-    results = { { type = "item", name = "ore-processing-machine-3", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-4",
+    name = "angels-ore-processing-machine-4",
     localised_name = { "entity-name.ore-processing-machine-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ore-processing-machine-3", amount = 1 },
+      { type = "item", name = "angels-ore-processing-machine-3", amount = 1 },
     },
-    results = { { type = "item", name = "ore-processing-machine-4", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-4", amount = 1 } },
   },
   --PELLET PRESS
   {

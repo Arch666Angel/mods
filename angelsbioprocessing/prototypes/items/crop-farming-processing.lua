@@ -7,7 +7,7 @@ data:extend({
   -----------------------------------------------------------------------------
   {
     type = "item",
-    name = "solid-beans",
+    name = "angels-solid-beans",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-beans.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -16,7 +16,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-corn",
+    name = "angels-solid-corn",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-corn.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -25,7 +25,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-leafs",
+    name = "angels-solid-leafs",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-leafs.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -34,7 +34,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-nuts",
+    name = "angels-solid-nuts",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-nuts.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -43,7 +43,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-pips",
+    name = "angels-solid-pips",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-pips.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -52,7 +52,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-fruit",
+    name = "angels-solid-fruit",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-fruit.png",
     icon_size = 32,
     subgroup = "bio-processor-nutrient",
@@ -64,7 +64,7 @@ data:extend({
   -----------------------------------------------------------------------------
   {
     type = "fluid",
-    name = "liquid-nutrient-pulp",
+    name = "angels-liquid-nutrient-pulp",
     icons = AF.create_viscous_liquid_fluid_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }),
     subgroup = "bio-processor-nutrient",
     order = "b[processing]-a[vegetables]-a[pulp]",
@@ -76,7 +76,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-raw-vegetable-oil",
+    name = "angels-liquid-raw-vegetable-oil",
     icons = AF.create_viscous_liquid_fluid_icon(
       nil,
       { { 255, 184, 062 }, { 255, 184, 062 }, { 255, 221, 061, 0.8 }, { 255, 221, 061, 0.8 } }
@@ -91,7 +91,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-vegetable-oil",
+    name = "angels-liquid-vegetable-oil",
     icons = AF.create_viscous_liquid_fluid_icon(
       nil,
       { { 255, 255, 060 }, { 255, 255, 060 }, { 255, 255, 000, 0.8 }, { 255, 255, 000, 0.8 } }
@@ -106,7 +106,7 @@ data:extend({
   },
   --[[{
     type = "item",
-    name = "solid-flour",
+    name = "angels-solid-flour",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-flour.png",
     icon_size = 32,
     subgroup = "bio-processor-press-vegetables",
@@ -115,7 +115,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-plant-milk",
+    name = "angels-liquid-plant-milk",
     icons = AF.create_viscous_liquid_fluid_icon(nil, { {255,255,255}, nil, {245,245,245,0.9} }),
     subgroup = "bio-processor-press-vegetables",
     order = "b[processing]-b[results]-b[milk]",
@@ -127,7 +127,7 @@ data:extend({
   },]]
   {
     type = "fluid",
-    name = "gas-ethanol",
+    name = "angels-gas-ethanol",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]6[/font]O",
@@ -144,7 +144,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-fermentation-raw",
+    name = "angels-liquid-fermentation-raw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/liquid-fermentation-raw.png",
     icon_size = 32,
     subgroup = "bio-processor-fermentation",
@@ -157,7 +157,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-acetic-acid",
+    name = "angels-liquid-acetic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]O[font=default-tiny-bold]2[/font]",
@@ -176,7 +176,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-acetic-anhydride",
+    name = "angels-liquid-acetic-anhydride",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]3[/font]",
@@ -195,7 +195,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-cellulose-acetate-mixture",
+    name = "angels-liquid-cellulose-acetate-mixture",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/liquid-cellulose-acetate-mixture.png",
     icon_size = 32,
     subgroup = "bio-plastic",
@@ -208,7 +208,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-cellulose-acetate",
+    name = "angels-liquid-cellulose-acetate",
     localised_description = show_formula
         and {
           "tooltip-description.chemical-formula",
@@ -229,7 +229,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-propionic-acid",
+    name = "angels-liquid-propionic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]2[/font]",

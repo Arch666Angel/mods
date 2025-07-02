@@ -119,7 +119,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-wire-silver", amount = 1 },
         { type = "item", name = "cable-shielding-3", amount = 1 },
-        { type = "fluid", name = "liquid-rubber", amount = 1 },
+        { type = "fluid", name = "angels-liquid-rubber", amount = 1 },
       },
       results = { { type = "item", name = "cable-harness-3", amount = 1 } },
       icon_size = 32,
@@ -136,7 +136,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-wire-gold", amount = 1 },
         { type = "item", name = "cable-shielding-4", amount = 1 },
-        { type = "fluid", name = "liquid-plastic", amount = 1 },
+        { type = "fluid", name = "angels-liquid-plastic", amount = 1 },
       },
       results = { { type = "item", name = "cable-harness-4", amount = 1 } },
       icon_size = 32,
@@ -153,7 +153,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-wire-platinum", amount = 1 },
         { type = "item", name = "cable-shielding-5", amount = 1 },
-        { type = "fluid", name = "liquid-plastic", amount = 1 },
+        { type = "fluid", name = "angels-liquid-plastic", amount = 1 },
       },
       results = { { type = "item", name = "cable-harness-5", amount = 1 } },
       icon_size = 32,

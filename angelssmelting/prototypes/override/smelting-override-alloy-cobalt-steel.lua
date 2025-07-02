@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-cobalt-steel",
+        name = "angels-liquid-molten-cobalt-steel",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt-steel.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -31,7 +31,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       {
         type = "recipe",
         name = "angels-cobalt-steel-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-cobalt-steel" },
+        localised_name = { "fluid-name.angels-liquid-molten-cobalt-steel" },
         category = "induction-smelting-3",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -41,10 +41,10 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
           { type = "item", name = "ingot-cobalt", amount = 12 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-cobalt-steel", amount = 360 },
         },
         order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt-steel"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-cobalt-steel"),
       },
       --CASTING
       {
@@ -56,7 +56,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-cobalt-steel", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-cobalt-steel-alloy", amount = 4 },

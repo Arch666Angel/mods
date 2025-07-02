@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "separator",
+    name = "angels-separator",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "a[separator]-a",
-    place_result = "separator",
+    place_result = "angels-separator",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "separator",
+    name = "angels-separator",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "separator" },
-    fast_replaceable_group = "separator",
-    next_upgrade = "separator-2",
+    minable = { mining_time = 1, result = "angels-separator" },
+    fast_replaceable_group = "angels-separator",
+    next_upgrade = "angels-separator-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +35,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-separation" },
+    crafting_categories = { "angels-petrochem-separation" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -111,7 +111,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "separator-2",
+    name = "angels-separator-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
@@ -119,14 +119,14 @@ data:extend({
       },
     }, 2, angelsmods.petrochem.number_tint),
     icon_size = 32,
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "a[separator]-b",
-    place_result = "separator-2",
+    place_result = "angels-separator-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "separator-2",
+    name = "angels-separator-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
@@ -135,9 +135,9 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "separator-2" },
-    fast_replaceable_group = "separator",
-    next_upgrade = "separator-3",
+    minable = { mining_time = 1, result = "angels-separator-2" },
+    fast_replaceable_group = "angels-separator",
+    next_upgrade = "angels-separator-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -146,7 +146,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-separation" },
+    crafting_categories = { "angels-petrochem-separation" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -222,21 +222,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "separator-3",
+    name = "angels-separator-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "a[separator]-c",
-    place_result = "separator-3",
+    place_result = "angels-separator-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "separator-3",
+    name = "angels-separator-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
@@ -245,9 +245,9 @@ data:extend({
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "separator-3" },
-    fast_replaceable_group = "separator",
-    next_upgrade = "separator-4",
+    minable = { mining_time = 1, result = "angels-separator-3" },
+    fast_replaceable_group = "angels-separator",
+    next_upgrade = "angels-separator-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -256,7 +256,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-separation" },
+    crafting_categories = { "angels-petrochem-separation" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -332,21 +332,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "separator-4",
+    name = "angels-separator-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
         icon_size = 32,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "a[separator]-d",
-    place_result = "separator-4",
+    place_result = "angels-separator-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "separator-4",
+    name = "angels-separator-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/separator.png",
@@ -355,8 +355,8 @@ data:extend({
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "separator-4" },
-    fast_replaceable_group = "separator",
+    minable = { mining_time = 1, result = "angels-separator-4" },
+    fast_replaceable_group = "angels-separator",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -365,7 +365,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-separation" },
+    crafting_categories = { "angels-petrochem-separation" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",

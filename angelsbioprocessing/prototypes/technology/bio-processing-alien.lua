@@ -8,7 +8,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-processing-brown",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
     },
     effects = {
       {
@@ -66,7 +66,7 @@ data:extend({
     prerequisites = {
       "bio-refugium-fish-1",
       "bio-processing-red",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -153,7 +153,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-refugium-fish-1",
-      "geode-processing-1",
+      "angels-geode-processing-1",
     },
     effects = {
       {
@@ -234,7 +234,7 @@ data:extend({
     prerequisites = {
       "bio-processing-crystal-splinter-2",
       "bio-processing-alien-2",
-      "ore-powderizer",
+      "angels-ore-powderizer",
     },
     effects = {
       {
@@ -279,8 +279,8 @@ data:extend({
       "bio-processing-alien-2",
       "bio-refugium-puffer-2",
       "bio-processing-crystal-splinter-1",
-      "ore-powderizer",
-      "slag-processing-2",
+      "angels-ore-powderizer",
+      "angels-slag-processing-2",
     },
     effects = {
       {
@@ -333,7 +333,7 @@ data:extend({
       "bio-processing-alien-2",
       "bio-processing-crystal-shard-1",
       "bio-processing-crystal-splinter-2",
-      "geode-processing-2",
+      "angels-geode-processing-2",
     },
     effects = {
       {

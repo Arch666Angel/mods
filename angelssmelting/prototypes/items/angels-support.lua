@@ -2,10 +2,10 @@ data:extend({
   --COOLANT
   {
     type = "fluid",
-    name = "liquid-coolant",
+    name = "angels-liquid-coolant",
     icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fa",
     default_temperature = 0,
     base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
@@ -13,10 +13,10 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-coolant-used",
+    name = "angels-liquid-coolant-used",
     icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant-used.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fb",
     default_temperature = 25,
     heat_capacity = "0.1kJ",

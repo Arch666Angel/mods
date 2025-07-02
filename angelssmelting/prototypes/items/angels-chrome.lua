@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-chromate",
+    name = "angels-solid-chromate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-chromate.png",
     icon_size = 32,
     subgroup = "angels-chrome",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-dichromate",
+    name = "angels-solid-dichromate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-dichromate.png",
     icon_size = 32,
     subgroup = "angels-chrome",
@@ -48,7 +48,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-chrome-oxide",
+    name = "angels-solid-chrome-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-chrome-oxide.png",
     icon_size = 32,
     subgroup = "angels-chrome",
@@ -77,7 +77,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-chrome",
+    name = "angels-liquid-molten-chrome",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-chrome.png",
     icon_size = 64,
     subgroup = "angels-chrome-casting",

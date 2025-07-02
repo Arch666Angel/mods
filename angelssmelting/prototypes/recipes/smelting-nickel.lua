@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "nickel-ore-processing",
     localised_name = { "item-name.processed-nickel" },
-    category = "ore-processing-2",
+    category = "angels-ore-processing-2",
     subgroup = "angels-nickel",
     energy_required = 2,
     enabled = false,
@@ -16,7 +16,7 @@ data:extend({
       { type = "item", name = "processed-nickel", amount = 2 },
     },
     order = "b[processed-nickel]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-nickel"),
   },
   {
     type = "recipe",
@@ -44,7 +44,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-nickel", amount = 4 },
-      { type = "fluid", name = "liquid-sulfuric-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
     },
     results = {
       { type = "item", name = "cathode-nickel", amount = 12 },
@@ -62,10 +62,10 @@ data:extend({
     ingredients = {
       { type = "item", name = "pellet-nickel", amount = 8 },
       { type = "item", name = "sulfur", amount = 1 },
-      { type = "fluid", name = "gas-carbon-monoxide", amount = 60 },
+      { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-nickel-carbonyl", amount = 24 },
+      { type = "item", name = "angels-solid-nickel-carbonyl", amount = 24 },
     },
     order = "e[solid-nickel-carbonyl]",
   },
@@ -80,7 +80,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "nickel-ore", amount = 24 },
-      { type = "fluid", name = "gas-carbon-monoxide", amount = 60 },
+      { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 60 },
     },
     results = {
       { type = "item", name = "ingot-nickel", amount = 24 },
@@ -115,14 +115,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-nickel-carbonyl-smelting",
+    name = "angels-solid-nickel-carbonyl-smelting",
     localised_name = { "item-name.ingot-nickel" },
     category = "blast-smelting-4",
     subgroup = "angels-nickel",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "solid-nickel-carbonyl", amount = 18 },
+      { type = "item", name = "angels-solid-nickel-carbonyl", amount = 18 },
       { type = "item", name = "ingot-nickel", amount = 6, ignored_by_stats = 6 },
     },
     results = {
@@ -154,8 +154,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-nickel-smelting",
-    localised_name = { "fluid-name.liquid-molten-nickel" },
+    name = "angels-molten-nickel-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-nickel" },
     category = "induction-smelting-2",
     subgroup = "angels-nickel-casting",
     energy_required = 4,
@@ -164,10 +164,10 @@ data:extend({
       { type = "item", name = "ingot-nickel", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-nickel", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-nickel", amount = 120 },
     },
     order = "h[liquid-molten-nickel]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-nickel"),
   },
   {
     type = "recipe",
@@ -178,7 +178,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-nickel", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-nickel", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -190,7 +190,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-nickel]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-nickel"),
   },
   {
     type = "recipe",
@@ -201,12 +201,12 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-nickel", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-nickel", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-nickel", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-nickel",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -215,7 +215,7 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "i[angels-roll-nickel]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nickel"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-nickel"),
   },
   -- CASTING RESULT
   {
@@ -227,14 +227,14 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-nickel", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-nickel", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-nickel", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-nickel"),
-      angelsmods.functions.get_object_icons("liquid-molten-nickel"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-nickel"),
       { -10, -10 },
       0.4375
     ),

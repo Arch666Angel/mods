@@ -61,8 +61,8 @@ end
 if mods["bobassembly"] and data.raw.technology["basic-automation"] then
   OV.remove_prereq("bio-processing-brown", "automation")
   OV.add_prereq("bio-processing-brown", "basic-automation")
-  OV.remove_prereq("basic-chemistry", "automation")
-  OV.add_prereq("basic-chemistry", "basic-automation")
+  OV.remove_prereq("angels-basic-chemistry", "automation")
+  OV.add_prereq("angels-basic-chemistry", "basic-automation")
 end
 
 if mods["bobelectronics"] then
@@ -80,14 +80,14 @@ if mods["bobelectronics"] then
       energy_required = 2,
       ingredients = {
         { "!!" },
-        { type = "fluid", name = "liquid-resin", amount = 10 },
-        { type = "item", name = "solid-paper", amount = 5 },
+        { type = "fluid", name = "angels-liquid-resin", amount = 10 },
+        { type = "item", name = "angels-solid-paper", amount = 5 },
       },
     },
   })
   OV.remove_additional_category("bob-phenolic-board", "electronics")
   OV.add_additional_category("bob-phenolic-board", "electronics-with-fluid")
   OV.add_prereq("advanced-circuit", "bio-paper-1")
-  OV.add_prereq("advanced-circuit", "resins")
+  OV.add_prereq("advanced-circuit", "angels-resins")
   angelsmods.functions.remove_productivity("bob-phenolic-board")
 end

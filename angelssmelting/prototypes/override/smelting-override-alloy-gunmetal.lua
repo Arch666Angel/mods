@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-gunmetal",
+        name = "angels-liquid-molten-gunmetal",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-gunmetal.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -31,7 +31,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       {
         type = "recipe",
         name = "angels-gunmetal-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-gunmetal" },
+        localised_name = { "fluid-name.angels-liquid-molten-gunmetal" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -42,10 +42,10 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           { type = "item", name = "ingot-copper", amount = 18 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-gunmetal", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-gunmetal", amount = 360 },
         },
         order = "c[gunmetal]-a[liquid-molten-gunmetal]",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gunmetal"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gunmetal"),
       },
       --CASTING
       {
@@ -57,7 +57,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-gunmetal", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-gunmetal", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-gunmetal-alloy", amount = 4 },

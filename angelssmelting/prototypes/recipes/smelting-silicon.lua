@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "silica-ore-processing",
     localised_name = { "item-name.processed-silica" },
-    category = "ore-processing-2",
+    category = "angels-ore-processing-2",
     subgroup = "angels-silicon",
     energy_required = 2,
     enabled = false,
@@ -17,7 +17,7 @@ data:extend({
     },
     main_product = "processed-silica",
     order = "b[processed-silica]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-silicon"),
   },
   {
     type = "recipe",
@@ -39,20 +39,20 @@ data:extend({
   {
     type = "recipe",
     name = "processed-silicon-smelting",
-    localised_name = { "fluid-name.liquid-trichlorosilane" },
+    localised_name = { "fluid-name.angels-liquid-trichlorosilane" },
     category = "chemical-smelting-2",
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "processed-silica", amount = 8 },
-      { type = "fluid", name = "gas-hydrogen-chloride", amount = 60 },
+      { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 60 },
     },
     results = {
-      { type = "fluid", name = "liquid-trichlorosilane", amount = 120 },
-      { type = "fluid", name = "gas-hydrogen", amount = 30 },
+      { type = "fluid", name = "angels-liquid-trichlorosilane", amount = 120 },
+      { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
     },
-    main_product = "liquid-trichlorosilane",
+    main_product = "angels-liquid-trichlorosilane",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-trichlorosilane.png", 72 },
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "recipe",
     name = "pellet-silicon-smelting",
-    localised_name = { "fluid-name.gas-silane" },
+    localised_name = { "fluid-name.angels-gas-silane" },
     category = "chemical-smelting-3",
     subgroup = "angels-silicon",
     energy_required = 4,
@@ -70,13 +70,13 @@ data:extend({
     ingredients = {
       { type = "item", name = "pellet-silica", amount = 8 },
       { type = "item", name = "ingot-aluminium", amount = 6 },
-      { type = "fluid", name = "gas-hydrogen", amount = 60 },
+      { type = "fluid", name = "angels-gas-hydrogen", amount = 60 },
     },
     results = {
-      { type = "fluid", name = "gas-silane", amount = 120 },
-      { type = "item", name = "solid-aluminium-oxide", amount = 6 },
+      { type = "fluid", name = "angels-gas-silane", amount = 120 },
+      { type = "item", name = "angels-solid-aluminium-oxide", amount = 6 },
     },
-    main_product = "gas-silane",
+    main_product = "angels-gas-silane",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-silane.png", 72 },
@@ -94,7 +94,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "quartz", amount = 24 },
-      { type = "item", name = "solid-carbon", amount = 6 },
+      { type = "item", name = "angels-solid-carbon", amount = 6 },
     },
     results = {
       { type = "item", name = "ingot-silicon", amount = 24 },
@@ -108,14 +108,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "liquid-trichlorosilane-smelting",
+    name = "angels-liquid-trichlorosilane-smelting",
     localised_name = { "item-name.ingot-silicon" },
     category = "chemical-smelting-2",
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "liquid-trichlorosilane", amount = 90 },
+      { type = "fluid", name = "angels-liquid-trichlorosilane", amount = 90 },
       { type = "item", name = "ingot-silicon", amount = 6, ignored_by_stats = 6 },
     },
     results = {
@@ -130,14 +130,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "gas-silane-smelting",
+    name = "angels-gas-silane-smelting",
     localised_name = { "item-name.ingot-silicon" },
     category = "chemical-smelting-3",
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "gas-silane", amount = 90 },
+      { type = "fluid", name = "angels-gas-silane", amount = 90 },
       { type = "item", name = "ingot-silicon", amount = 6, ignored_by_stats = 6 },
     },
     results = {
@@ -169,8 +169,8 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-silicon-smelting",
-    localised_name = { "fluid-name.liquid-molten-silicon" },
+    name = "angels-molten-silicon-smelting",
+    localised_name = { "fluid-name.angels-liquid-molten-silicon" },
     category = "induction-smelting-2",
     subgroup = "angels-silicon-casting",
     energy_required = 4,
@@ -179,11 +179,11 @@ data:extend({
       { type = "item", name = "ingot-silicon", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-silicon", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-silicon", amount = 120 },
     },
-    main_product = "liquid-molten-silicon",
+    main_product = "angels-liquid-molten-silicon",
     order = "h[liquid-molten-silicon]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-silicon"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-silicon"),
   },
   {
     type = "recipe",
@@ -194,8 +194,8 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silicon", amount = 5 },
-      { type = "fluid", name = "gas-nitrogen", amount = 10 },
+      { type = "fluid", name = "angels-liquid-molten-silicon", amount = 5 },
+      { type = "fluid", name = "angels-gas-nitrogen", amount = 10 },
     },
     results = {
       { type = "item", name = "angels-mono-silicon-seed", amount = 5 },
@@ -228,7 +228,7 @@ data:extend({
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-silicon", amount = 40 },
       { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
     },
     results = {
@@ -250,7 +250,7 @@ data:extend({
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-silicon", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-silicon", amount = 40 },
       { type = "item", name = "angels-quartz-crucible", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "angels-mono-silicon-seed", amount = 1 },
     },

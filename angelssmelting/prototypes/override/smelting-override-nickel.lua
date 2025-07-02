@@ -33,8 +33,8 @@ if angelsmods.trigger.smelting_products["nickel"].ingot then
   if angelsmods.trigger.smelting_products["nickel"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-nickel")
-    OV.disable_recipe({ "molten-nickel-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-nickel")
+    OV.disable_recipe({ "angels-molten-nickel-smelting" })
     OV.disable_technology({ "angels-nickel-casting-2", "angels-nickel-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -46,13 +46,13 @@ else
   angelsmods.functions.hide("processed-nickel")
   angelsmods.functions.hide("pellet-nickel")
   angelsmods.functions.hide("cathode-nickel")
-  angelsmods.functions.hide("solid-nickel-carbonyl")
+  angelsmods.functions.hide("angels-solid-nickel-carbonyl")
   angelsmods.functions.hide("ingot-nickel")
-  angelsmods.functions.hide("liquid-molten-nickel")
+  angelsmods.functions.hide("angels-liquid-molten-nickel")
   OV.disable_recipe({ "nickel-ore-processing", "nickel-processed-processing" })
   OV.disable_recipe({ "processed-nickel-smelting", "pellet-nickel-smelting" })
-  OV.disable_recipe({ "nickel-ore-smelting", "cathode-nickel-smelting", "solid-nickel-carbonyl-smelting" })
-  OV.disable_recipe({ "molten-nickel-smelting" })
+  OV.disable_recipe({ "nickel-ore-smelting", "cathode-nickel-smelting", "angels-solid-nickel-carbonyl-smelting" })
+  OV.disable_recipe({ "angels-molten-nickel-smelting" })
   OV.disable_technology({ "angels-nickel-smelting-1", "angels-nickel-smelting-2", "angels-nickel-smelting-3" })
   OV.disable_technology({ "angels-nickel-casting-2", "angels-nickel-casting-3" })
 end

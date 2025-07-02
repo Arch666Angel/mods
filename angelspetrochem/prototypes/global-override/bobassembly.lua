@@ -14,12 +14,12 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
     "chemistry",
   })
 else
-  OV.add_unlock("basic-chemistry-2", "chemical-plant") --give the item a new home if still active
+  OV.add_unlock("angels-basic-chemistry-2", "chemical-plant") --give the item a new home if still active
 end
 
 if mods["bobassembly"] then
   -- Chemical plant 2
-  move_item("bob-chemical-plant-2", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-a")
+  move_item("bob-chemical-plant-2", "angels-petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-a")
   if angelsmods.trigger.disable_bobs_chemical_plants then
     angelsmods.functions.hide("bob-chemical-plant-2")
     angelsmods.functions.set_next_upgrade("assembling-machine", "bob-chemical-plant-2", nil)
@@ -32,7 +32,7 @@ if mods["bobassembly"] then
   end
 
   -- Chemical plant 3
-  move_item("bob-chemical-plant-3", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-b")
+  move_item("bob-chemical-plant-3", "angels-petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-b")
   if angelsmods.trigger.disable_bobs_chemical_plants then
     angelsmods.functions.hide("bob-chemical-plant-3")
     angelsmods.functions.set_next_upgrade("assembling-machine", "bob-chemical-plant-3", nil)
@@ -45,7 +45,7 @@ if mods["bobassembly"] then
   end
 
   -- Chemical plant 4
-  move_item("bob-chemical-plant-4", "petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-c")
+  move_item("bob-chemical-plant-4", "angels-petrochem-buildings-chemical-plant", "a[regular]-ab[bob]-c")
   if angelsmods.trigger.disable_bobs_chemical_plants then
     angelsmods.functions.hide("bob-chemical-plant-4")
     angelsmods.functions.set_next_upgrade("assembling-machine", "bob-chemical-plant-4", nil)
@@ -63,7 +63,7 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- Electrolyser 1
-  move_item("bob-electrolyser", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
+  move_item("bob-electrolyser", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
   angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser", "bob-electrolysis")
   if angelsmods.trigger.disable_bobs_electrolysers then
     angelsmods.functions.hide("bob-electrolyser")
@@ -71,14 +71,14 @@ if mods["bobplates"] then
     OV.global_replace_item("bob-electrolyser", "angels-electrolyser")
     OV.disable_recipe("bob-electrolyser")
   else
-    angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser", "petrochem-electrolyser")
-    OV.add_unlock("basic-chemistry", "bob-electrolyser") --give the item a new home if still active
+    angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser", "angels-petrochem-electrolyser")
+    OV.add_unlock("angels-basic-chemistry", "bob-electrolyser") --give the item a new home if still active
   end
 
   -- Electrolyser 2
   angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser-2", "bob-electrolysis")
   if mods["bobassembly"] then
-    move_item("bob-electrolyser-2", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
+    move_item("bob-electrolyser-2", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-b")
     if angelsmods.trigger.disable_bobs_electrolysers then
       angelsmods.functions.hide("bob-electrolyser-2")
       angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser-2", nil)
@@ -86,14 +86,14 @@ if mods["bobplates"] then
       OV.disable_recipe("bob-electrolyser-2")
       OV.disable_technology("bob-electrolyser-2")
     else
-      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-2", "petrochem-electrolyser")
+      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-2", "angels-petrochem-electrolyser")
     end
   end
 
   -- Electrolyser 3
   angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser-3", "bob-electrolysis")
   if mods["bobassembly"] then
-    move_item("bob-electrolyser-3", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-c")
+    move_item("bob-electrolyser-3", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-c")
     if angelsmods.trigger.disable_bobs_electrolysers then
       angelsmods.functions.hide("bob-electrolyser-3")
       angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser-3", nil)
@@ -105,14 +105,14 @@ if mods["bobplates"] then
       OV.remove_prereq("production-science-pack", "bob-electrolyser-3")
       OV.add_prereq("production-science-pack", "angels-advanced-chemistry-2")
     else
-      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-3", "petrochem-electrolyser")
+      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-3", "angels-petrochem-electrolyser")
     end
   end
 
   -- Electrolyser 4
   angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser-4", "bob-electrolysis")
   if mods["bobassembly"] then
-    move_item("bob-electrolyser-4", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-d")
+    move_item("bob-electrolyser-4", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-d")
     if angelsmods.trigger.disable_bobs_electrolysers then
       angelsmods.functions.hide("bob-electrolyser-4")
       angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser-4", nil)
@@ -120,13 +120,13 @@ if mods["bobplates"] then
       OV.disable_recipe("bob-electrolyser-4")
       OV.disable_technology("bob-electrolyser-4")
     else
-      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-4", "petrochem-electrolyser")
+      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-4", "angels-petrochem-electrolyser")
     end
   end
 
   -- Electrolyser 5
   if mods["bobassembly"] then
-    move_item("bob-electrolyser-5", "petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-e")
+    move_item("bob-electrolyser-5", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-e")
     if angelsmods.trigger.disable_bobs_electrolysers then
       angelsmods.functions.hide("bob-electrolyser-5")
       angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser-5", nil)
@@ -134,7 +134,7 @@ if mods["bobplates"] then
       OV.disable_recipe("bob-electrolyser-5")
       OV.disable_technology("bob-electrolyser-5")
     else
-      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-5", "petrochem-electrolyser")
+      angelsmods.functions.add_crafting_category("assembling-machine", "bob-electrolyser-5", "angels-petrochem-electrolyser")
     end
   end
 end

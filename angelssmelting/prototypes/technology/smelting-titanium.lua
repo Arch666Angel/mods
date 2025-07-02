@@ -7,10 +7,10 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-titanium-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-leaching",
+      "angels-ore-leaching",
       "angels-metallurgy-3",
       "angels-coal-processing-2",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-titanium-tetrachloride-smelting",
+        recipe = "angels-liquid-titanium-tetrachloride-smelting",
       },
       {
         type = "unlock-recipe",
@@ -27,7 +27,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-titanium-smelting-1",
+        recipe = "angels-molten-titanium-smelting-1",
       },
       {
         type = "unlock-recipe",
@@ -52,7 +52,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-titanium-smelting-1",
     },
     effects = {
@@ -96,11 +96,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-titanium-smelting-2",
+        recipe = "angels-molten-titanium-smelting-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-titanium-smelting-3",
+        recipe = "angels-molten-titanium-smelting-3",
       },
       {
         type = "unlock-recipe",
@@ -130,9 +130,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-titanium-smelting-2",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
     },
     effects = {
       {
@@ -174,11 +174,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-titanium-smelting-4",
+        recipe = "angels-molten-titanium-smelting-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-titanium-smelting-5",
+        recipe = "angels-molten-titanium-smelting-5",
       },
       {
         type = "unlock-recipe",

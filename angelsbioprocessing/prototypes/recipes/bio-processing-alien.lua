@@ -7,16 +7,16 @@ data:extend({
     --icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-spores.png",
     --icon_size = 32,
     localised_name = { "fluid-name.alien-spores" },
-    category = "water-treatment",
+    category = "angels-water-treatment",
     subgroup = "bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "fluid", name = "liquid-polluted-fish-atmosphere", amount = 100 },
+      { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
     },
     results = {
       { type = "fluid", name = "alien-spores", amount_min = 70, amount_max = 80 },
-      { type = "fluid", name = "water-yellow-waste", amount_min = 30, amount_max = 40 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount_min = 30, amount_max = 40 },
     },
     main_product = "alien-spores",
     --icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-spores.png",
@@ -35,8 +35,8 @@ data:extend({
     energy_required = 3,
     ingredients = {
       { type = "fluid", name = "alien-spores", amount = 50 },
-      { type = "item", name = "solid-calcium-carbonate", amount = 1 },
-      { type = "fluid", name = "liquid-hydrochloric-acid", amount = 50 },
+      { type = "item", name = "angels-solid-calcium-carbonate", amount = 1 },
+      { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 50 },
     },
     results = {
       { type = "item", name = "alien-bacteria", amount = 1 },
@@ -50,7 +50,7 @@ data:extend({
     type = "recipe",
     name = "alien-goo",
     localised_name = { "fluid-name.alien-goo" },
-    category = "liquifying",
+    category = "angels-liquifying",
     subgroup = "bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 3,
@@ -142,7 +142,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "seeded-dish", amount = 1 },
-      { type = "item", name = "crystal-dust", amount = 1 },
+      { type = "item", name = "angels-crystal-dust", amount = 1 },
     },
     results = {
       { type = "item", name = "crystal-seed", amount = 1 },
@@ -187,7 +187,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "seeded-dish", amount = 1 },
       { type = "item", name = "crystal-powder", amount = 1 },
-      { type = "fluid", name = "crystal-slurry", amount = 5 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 5 },
     },
     results = {
       { type = "item", name = "crystal-enhancer", amount = 1 },
@@ -222,17 +222,17 @@ data:extend({
   {
     type = "recipe",
     name = "crystal-powder-from-dust",
-    category = "ore-refining-t1-5",
+    category = "angels-ore-refining-t1-5",
     subgroup = "bio-biter-processing-crystal-full",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "crystal-dust", amount = 10 },
-      { type = "item", name = "milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-crystal-dust", amount = 10 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "item", name = "crystal-powder", amount = 20 },
-      { type = "item", name = "milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
     },
     icons = {
       {
@@ -252,25 +252,25 @@ data:extend({
     type = "recipe",
     name = "crystal-powder-slurry",
     localised_name = { "fluid-name.crystal-slurry" },
-    category = "liquifying",
+    category = "angels-liquifying",
     subgroup = "bio-biter-processing-crystal-full",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "crystal-powder", amount = 1 },
-      { type = "fluid", name = "water-purified", amount = 1 },
+      { type = "fluid", name = "angels-water-purified", amount = 1 },
     },
     results = {
-      { type = "fluid", name = "crystal-slurry", amount = 1 },
+      { type = "fluid", name = "angels-crystal-slurry", amount = 1 },
     },
-    main_product = "crystal-slurry",
+    main_product = "angels-crystal-slurry",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
       { "crystal-powder" }
     ),
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("crystal-slurry"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-crystal-slurry"),
     order = "a[creation]-b[slurry]",
   },
 })

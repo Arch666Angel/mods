@@ -7,7 +7,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       "angels-metallurgy-2",
     },
     effects = {
@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silver-smelting",
+        recipe = "angels-molten-silver-smelting",
       },
       {
         type = "unlock-recipe",
@@ -45,7 +45,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-silver-smelting-1",
       "angels-nitrogen-processing-2",
     },
@@ -60,7 +60,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-silver-nitrate-smelting",
+        recipe = "angels-solid-silver-nitrate-smelting",
       },
       {
         type = "unlock-recipe",
@@ -125,9 +125,9 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-silver-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
@@ -140,7 +140,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-silver-cyanide-smelting",
+        recipe = "angels-solid-sodium-silver-cyanide-smelting",
       },
       {
         type = "unlock-recipe",

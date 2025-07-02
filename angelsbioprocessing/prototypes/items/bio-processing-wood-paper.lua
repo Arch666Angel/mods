@@ -54,7 +54,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-wood-pulp",
+    name = "angels-solid-wood-pulp",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-wood-pulp.png",
     icon_size = 32,
     subgroup = "bio-paper",
@@ -63,7 +63,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-pulping-liquor",
+    name = "angels-liquid-pulping-liquor",
     default_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
@@ -76,7 +76,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-brown-liquor",
+    name = "angels-liquid-brown-liquor",
     default_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
@@ -89,7 +89,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-white-liquor",
+    name = "angels-liquid-white-liquor",
     default_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
@@ -102,7 +102,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-black-liquor",
+    name = "angels-liquid-black-liquor",
     default_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
@@ -115,7 +115,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-green-liquor",
+    name = "angels-liquid-green-liquor",
     default_temperature = 0,
     max_temperature = 0,
     heat_capacity = "1kJ",
@@ -128,7 +128,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-paper",
+    name = "angels-solid-paper",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-paper.png",
     icon_size = 32,
     subgroup = "bio-paper",
@@ -200,7 +200,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-saw",
+    name = "angels-solid-saw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-saw.png",
     icon_size = 64,
     subgroup = "bio-wood",
@@ -209,7 +209,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-crystal-tipped-saw",
+    name = "angels-solid-crystal-tipped-saw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-crystal-tipped-saw.png",
     icon_size = 64,
     subgroup = "bio-wood",
@@ -218,7 +218,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-crystal-full-saw",
+    name = "angels-solid-crystal-full-saw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/solid-crystal-full-saw.png",
     icon_size = 64,
     subgroup = "bio-wood",
@@ -227,7 +227,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-tree",
+    name = "angels-solid-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree.png",
     icon_size = 64,
     subgroup = "bio-arboretum-temperate",

@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-bronze",
+        name = "angels-liquid-molten-bronze",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-bronze.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -31,7 +31,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       {
         type = "recipe",
         name = "angels-bronze-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-bronze" },
+        localised_name = { "fluid-name.angels-liquid-molten-bronze" },
         category = "induction-smelting",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -41,20 +41,20 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           { type = "item", name = "ingot-tin", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-bronze", amount = 240 },
+          { type = "fluid", name = "angels-liquid-molten-bronze", amount = 240 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-bronze"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"),
           1,
           angelsmods.smelting.number_tint
         ),
         order = "a[bronze]-a[liquid-molten-bronze]-a",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-bronze"),
       },
       {
         type = "recipe",
         name = "angels-bronze-smelting-2",
-        localised_name = { "fluid-name.liquid-molten-bronze" },
+        localised_name = { "fluid-name.angels-liquid-molten-bronze" },
         category = "induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -65,20 +65,20 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           { type = "item", name = "ingot-nickel", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-bronze", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-bronze", amount = 360 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-bronze"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"),
           2,
           angelsmods.smelting.number_tint
         ),
         order = "a[bronze]-a[liquid-molten-bronze]-b",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-bronze"),
       },
       {
         type = "recipe",
         name = "angels-bronze-smelting-3",
-        localised_name = { "fluid-name.liquid-molten-bronze" },
+        localised_name = { "fluid-name.angels-liquid-molten-bronze" },
         category = "induction-smelting-3",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -89,15 +89,15 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
           { type = "item", name = "ingot-zinc", amount = 6 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-bronze", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-bronze", amount = 360 },
         },
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("liquid-molten-bronze"),
+          angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"),
           3,
           angelsmods.smelting.number_tint
         ),
         order = "a[bronze]-a[liquid-molten-bronze]-c",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-bronze"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-bronze"),
       },
       --CASTING
       {
@@ -109,7 +109,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-bronze", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-bronze", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-bronze-alloy", amount = 4 },

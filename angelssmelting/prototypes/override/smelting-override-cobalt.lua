@@ -27,9 +27,9 @@ end
 if angelsmods.trigger.smelting_products["cobalt"].ingot then
   --REPLACE TECHS AND DISABLE RECIPES
   if mods["bobplates"] then
-    OV.global_replace_item("solid-cobalt-oxide", "bob-cobalt-oxide")
-    angelsmods.functions.hide("solid-cobalt-oxide")
-    OV.copy_item_properties("solid-cobalt-oxide", "bob-cobalt-oxide")
+    OV.global_replace_item("angels-solid-cobalt-oxide", "bob-cobalt-oxide")
+    angelsmods.functions.hide("angels-solid-cobalt-oxide")
+    OV.copy_item_properties("angels-solid-cobalt-oxide", "bob-cobalt-oxide")
     OV.disable_recipe({ "bob-cobalt-oxide", "bob-cobalt-oxide-from-copper", "bob-cobalt-plate", "bob-cobalt-steel-alloy" })
     OV.remove_prereq({ "bob-battery-2", "bob-rtg" }, "bob-cobalt-processing") --based on the oxide not the plate
     OV.add_prereq({ "bob-battery-2", "bob-rtg" }, "angels-cobalt-smelting-1") --based on the oxide not the plate
@@ -38,8 +38,8 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
   if angelsmods.trigger.smelting_products["cobalt"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-cobalt")
-    OV.disable_recipe({ "molten-cobalt-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-cobalt")
+    OV.disable_recipe({ "angels-molten-cobalt-smelting" })
     OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -55,15 +55,15 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
       {
         name = "processed-cobalt-smelting",
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+          angelsmods.functions.get_object_icons("angels-solid-cobalt-oxide"),
           1,
           angelsmods.smelting.number_tint
         ),
       },
       {
-        name = "solid-cobalt-hydroxide-smelting",
+        name = "angels-solid-cobalt-hydroxide-smelting",
         icons = angelsmods.functions.add_number_icon_layer(
-          angelsmods.functions.get_object_icons("solid-cobalt-oxide"),
+          angelsmods.functions.get_object_icons("angels-solid-cobalt-oxide"),
           2,
           angelsmods.smelting.number_tint
         ),
@@ -71,20 +71,20 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     })
     OV.remove_prereq("angels-cobalt-smelting-1", "angels-stone-smelting-1")
     OV.add_prereq("angels-cobalt-smelting-2", "angels-stone-smelting-1")
-    OV.remove_prereq("angels-cobalt-smelting-1", "ore-processing-2")
+    OV.remove_prereq("angels-cobalt-smelting-1", "angels-ore-processing-2")
     OV.add_prereq("angels-cobalt-smelting-1", "angels-metallurgy-3")
   end
 else
   angelsmods.functions.hide("processed-cobalt")
   angelsmods.functions.hide("pellet-cobalt")
-  angelsmods.functions.hide("solid-cobalt-hydroxide")
-  angelsmods.functions.hide("solid-cobalt-oxide")
+  angelsmods.functions.hide("angels-solid-cobalt-hydroxide")
+  angelsmods.functions.hide("angels-solid-cobalt-oxide")
   angelsmods.functions.hide("ingot-cobalt")
-  angelsmods.functions.hide("liquid-molten-cobalt")
+  angelsmods.functions.hide("angels-liquid-molten-cobalt")
   OV.disable_recipe({ "cobalt-ore-processing", "cobalt-processed-processing", "cobalt-ore-processing-alt" })
-  OV.disable_recipe({ "pellet-cobalt-smelting", "processed-cobalt-smelting", "solid-cobalt-hydroxide-smelting" })
-  OV.disable_recipe({ "cobalt-ore-smelting", "solid-cobalt-oxide-smelting" })
-  OV.disable_recipe({ "molten-cobalt-smelting" })
+  OV.disable_recipe({ "pellet-cobalt-smelting", "processed-cobalt-smelting", "angels-solid-cobalt-hydroxide-smelting" })
+  OV.disable_recipe({ "cobalt-ore-smelting", "angels-solid-cobalt-oxide-smelting" })
+  OV.disable_recipe({ "angels-molten-cobalt-smelting" })
   OV.disable_technology({ "angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3" })
   OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
 end

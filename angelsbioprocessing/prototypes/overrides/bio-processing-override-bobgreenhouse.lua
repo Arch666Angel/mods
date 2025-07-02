@@ -11,7 +11,7 @@ if mods["bobgreenhouse"] then
   -----------------------------------------------------------------------------
   -- FERTILIEZR ---------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.global_replace_item("bob-fertiliser", "solid-fertilizer")
+  OV.global_replace_item("bob-fertiliser", "angels-solid-fertilizer")
   angelsmods.functions.hide("bob-fertiliser")
 
   OV.patch_recipes({
@@ -45,8 +45,8 @@ if mods["bobgreenhouse"] then
       energy_required = 60,
       --results =
       --{ {"!!"},
-      --  { type = "item", name = "solid-tree", amount = 2 },
-      --  { type = "item", name = "solid-tree", amount = 1, probability = 1/3 }
+      --  { type = "item", name = "angels-solid-tree", amount = 2 },
+      --  { type = "item", name = "angels-solid-tree", amount = 1, probability = 1/3 }
       --},
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -69,8 +69,8 @@ if mods["bobgreenhouse"] then
       energy_required = 45,
       --results =
       --{ {"!!"},
-      --  { type = "item", name = "solid-tree", amount = 4 },
-      --  { type = "item", name = "solid-tree", amount = 1, probability = 2/3 }
+      --  { type = "item", name = "angels-solid-tree", amount = 4 },
+      --  { type = "item", name = "angels-solid-tree", amount = 1, probability = 2/3 }
       --},
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -90,11 +90,11 @@ if mods["bobgreenhouse"] then
   -- manually patch the result as the recipe builder is failing
   data.raw.recipe["bob-basic-greenhouse-cycle"].result = nil
   data.raw.recipe["bob-basic-greenhouse-cycle"].results = {
-    { type = "item", name = "solid-tree", amount_min = 2, amount_max = 4 },
+    { type = "item", name = "angels-solid-tree", amount_min = 2, amount_max = 4 },
   }
   data.raw.recipe["bob-advanced-greenhouse-cycle"].result = nil
   data.raw.recipe["bob-advanced-greenhouse-cycle"].results = {
-    { type = "item", name = "solid-tree", amount_min = 4, amount_max = 8 },
+    { type = "item", name = "angels-solid-tree", amount_min = 4, amount_max = 8 },
   }
 
   -- also update the other tree icons
@@ -176,7 +176,7 @@ if mods["bobgreenhouse"] then
       enabled = false,
       energy_required = 1 / 3,
       ingredients = {
-        { type = "item", name = "solid-tree", amount = 1 },
+        { type = "item", name = "angels-solid-tree", amount = 1 },
       },
       results = {
         { type = "item", name = "wood", amount = 5 },

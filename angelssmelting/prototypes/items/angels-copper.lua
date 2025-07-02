@@ -51,7 +51,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-copper",
+    name = "angels-liquid-molten-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-copper.png",
     icon_size = 64,
     subgroup = "angels-copper-casting",
