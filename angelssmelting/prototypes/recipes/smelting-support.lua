@@ -9,7 +9,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "steam", amount = 100 },
+      { type = "fluid", name = "steam", amount = 1000 },
     },
     results = {
       { type = "fluid", name = "water-purified", amount = 100 },

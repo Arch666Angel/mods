@@ -13,7 +13,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
-      { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
+      { type = "fluid", name = "steam", amount = 400, temperature = 165, fluidbox_index = 2 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon(
@@ -40,7 +40,7 @@ data:extend({
       { type = "fluid", name = "water-purified", amount = 40 },
     },
     results = {
-      { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
+      { type = "fluid", name = "steam", amount = 400, temperature = 165, fluidbox_index = 2 },
     },
     always_show_products = true,
     icons = AF.create_gas_recipe_icon(
