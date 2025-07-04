@@ -12,14 +12,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["tin"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["tin-ore"]
+    local angel_ore = data.raw.item["angels-tin-ore"]
     local bob_ore = data.raw.item["bob-tin-ore"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("tin-ore")
+  angelsmods.functions.hide("angels-tin-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -39,12 +39,12 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     end
   end
 else
-  angelsmods.functions.hide("processed-tin")
-  angelsmods.functions.hide("pellet-tin")
-  angelsmods.functions.hide("ingot-tin")
+  angelsmods.functions.hide("angels-processed-tin")
+  angelsmods.functions.hide("angels-pellet-tin")
+  angelsmods.functions.hide("angels-ingot-tin")
   angelsmods.functions.hide("angels-liquid-molten-tin")
-  OV.disable_recipe({ "tin-ore-processing", "tin-processed-processing" })
-  OV.disable_recipe({ "tin-ore-smelting", "processed-tin-smelting", "pellet-tin-smelting" })
+  OV.disable_recipe({ "angels-tin-ore-processing", "angels-tin-processed-processing" })
+  OV.disable_recipe({ "angels-tin-ore-smelting", "angels-processed-tin-smelting", "angels-pellet-tin-smelting" })
   OV.disable_recipe({ "angels-molten-tin-smelting" })
   OV.disable_technology({ "angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3" })
   OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
@@ -84,7 +84,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
 else
   angelsmods.functions.hide("angels-plate-tin")
   angelsmods.functions.hide("angels-roll-tin")
-  OV.disable_recipe({ "roll-tin-casting", "roll-tin-casting-fast" })
+  OV.disable_recipe({ "angels-roll-tin-casting", "angels-roll-tin-casting-fast" })
   OV.disable_recipe({ "angels-plate-tin", "angels-roll-tin-converting" })
 end
 
@@ -119,6 +119,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].powder then
 else
-  angelsmods.functions.hide("powder-tin")
-  OV.disable_recipe({ "powder-tin" })
+  angelsmods.functions.hide("angels-powder-tin")
+  OV.disable_recipe({ "angels-powder-tin" })
 end

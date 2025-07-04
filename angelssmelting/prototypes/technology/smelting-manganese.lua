@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "manganese-ore-smelting",
+        recipe = "angels-manganese-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -52,19 +52,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "manganese-ore-processing",
+        recipe = "angels-manganese-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-manganese-smelting",
+        recipe = "angels-processed-manganese-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-manganese-smelting",
+        recipe = "angels-cathode-manganese-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-manganese",
+        recipe = "angels-powder-manganese",
       },
     },
     unit = {
@@ -84,13 +84,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-manganese-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-manganese-casting",
+        recipe = "angels-roll-manganese-casting",
       },
       {
         type = "unlock-recipe",
@@ -122,15 +122,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "manganese-processed-processing",
+        recipe = "angels-manganese-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "manganese-processed-processing-alt",
+        recipe = "angels-manganese-processed-processing-alt",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-manganese-smelting",
+        recipe = "angels-pellet-manganese-smelting",
       },
       {
         type = "unlock-recipe",
@@ -159,13 +159,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-manganese-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-manganese-casting-fast",
+        recipe = "angels-roll-manganese-casting-fast",
       },
     },
     unit = {

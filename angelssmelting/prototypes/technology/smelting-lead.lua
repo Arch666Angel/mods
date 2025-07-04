@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-ore-smelting",
+        recipe = "angels-lead-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -47,11 +47,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-ore-processing",
+        recipe = "angels-lead-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-lead-smelting",
+        recipe = "angels-processed-lead-smelting",
       },
       {
         type = "unlock-recipe",
@@ -59,7 +59,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-lead",
+        recipe = "angels-powder-lead",
       },
     },
     unit = {
@@ -79,13 +79,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-lead-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-lead-casting",
+        recipe = "angels-roll-lead-casting",
       },
       {
         type = "unlock-recipe",
@@ -117,11 +117,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-processed-processing",
+        recipe = "angels-lead-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-lead-smelting",
+        recipe = "angels-pellet-lead-smelting",
       },
       {
         type = "unlock-recipe",
@@ -129,7 +129,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-lead-smelting",
+        recipe = "angels-anode-lead-smelting",
       },
     },
     unit = {
@@ -150,13 +150,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-lead-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-lead-casting-fast",
+        recipe = "angels-roll-lead-casting-fast",
       },
     },
     unit = {

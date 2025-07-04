@@ -270,7 +270,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "item", name = "concrete-brick", amount = 2 },
+      { type = "item", name = "angels-concrete-brick", amount = 2 },
       { type = "item", name = "token-bio", amount = 1 },
       { type = "item", name = "angels-solid-soil", amount = 2 },
       --{type = "item", name = "steel-plate", amount = 1}

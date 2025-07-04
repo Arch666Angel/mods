@@ -3,47 +3,47 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "cobalt-ore-processing",
-    localised_name = { "item-name.processed-cobalt" },
+    name = "angels-cobalt-ore-processing",
+    localised_name = { "item-name.angels-processed-cobalt" },
     category = "angels-ore-processing-3",
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 4 },
+      { type = "item", name = "angels-cobalt-ore", amount = 4 },
     },
     results = {
-      { type = "item", name = "processed-cobalt", amount = 2 },
+      { type = "item", name = "angels-processed-cobalt", amount = 2 },
     },
     order = "b[processed-cobalt]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-cobalt"),
   },
   {
     type = "recipe",
-    name = "cobalt-processed-processing",
-    localised_name = { "item-name.pellet-cobalt" },
-    category = "pellet-pressing-3",
+    name = "angels-cobalt-processed-processing",
+    localised_name = { "item-name.angels-pellet-cobalt" },
+    category = "angels-pellet-pressing-3",
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "processed-cobalt", amount = 3 },
+      { type = "item", name = "angels-processed-cobalt", amount = 3 },
     },
     results = {
-      { type = "item", name = "pellet-cobalt", amount = 4 },
+      { type = "item", name = "angels-pellet-cobalt", amount = 4 },
     },
     order = "c[pellet-cobalt]",
   },
   {
     type = "recipe",
-    name = "pellet-cobalt-smelting",
-    localised_name = { "item-name.solid-cobalt-hydroxide" },
+    name = "angels-pellet-cobalt-smelting",
+    localised_name = { "item-name.angels-solid-cobalt-hydroxide" },
     category = "angels-liquifying",
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "pellet-cobalt", amount = 2 },
+      { type = "item", name = "angels-pellet-cobalt", amount = 2 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 20 },
     },
     results = {
@@ -54,14 +54,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cobalt-ore-processing-alt",
-    localised_name = { "item-name.solid-cobalt-oxide" },
-    category = "chemical-smelting-2",
+    name = "angels-cobalt-ore-processing-alt",
+    localised_name = { "item-name.angels-solid-cobalt-oxide" },
+    category = "angels-chemical-smelting-2",
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 8 },
+      { type = "item", name = "angels-cobalt-ore", amount = 8 },
       { type = "item", name = "angels-solid-limestone", amount = 3 },
     },
     results = {
@@ -76,14 +76,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "processed-cobalt-smelting",
-    localised_name = { "item-name.solid-cobalt-oxide" },
-    category = "chemical-smelting-3",
+    name = "angels-processed-cobalt-smelting",
+    localised_name = { "item-name.angels-solid-cobalt-oxide" },
+    category = "angels-chemical-smelting-3",
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "processed-cobalt", amount = 8 },
+      { type = "item", name = "angels-processed-cobalt", amount = 8 },
       { type = "item", name = "angels-solid-limestone", amount = 6 },
     },
     results = {
@@ -99,8 +99,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-cobalt-hydroxide-smelting",
-    localised_name = { "item-name.solid-cobalt-oxide" },
-    category = "chemical-smelting-4",
+    localised_name = { "item-name.angels-solid-cobalt-oxide" },
+    category = "angels-chemical-smelting-4",
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
@@ -121,21 +121,21 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "cobalt-ore-smelting",
-    localised_name = { "item-name.ingot-cobalt" },
-    category = "blast-smelting-3",
+    name = "angels-cobalt-ore-smelting",
+    localised_name = { "item-name.angels-ingot-cobalt" },
+    category = "angels-blast-smelting-3",
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cobalt-ore", amount = 24 },
+      { type = "item", name = "angels-cobalt-ore", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
     },
     results = {
-      { type = "item", name = "ingot-cobalt", amount = 24 },
+      { type = "item", name = "angels-ingot-cobalt", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-cobalt"),
+      angelsmods.functions.get_object_icons("angels-ingot-cobalt"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -144,8 +144,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-cobalt-oxide-smelting",
-    localised_name = { "item-name.ingot-cobalt" },
-    category = "blast-smelting-4",
+    localised_name = { "item-name.angels-ingot-cobalt" },
+    category = "angels-blast-smelting-4",
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
@@ -154,10 +154,10 @@ data:extend({
       { type = "item", name = "angels-solid-carbon", amount = 6 },
     },
     results = {
-      { type = "item", name = "ingot-cobalt", amount = 24 },
+      { type = "item", name = "angels-ingot-cobalt", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-cobalt"),
+      angelsmods.functions.get_object_icons("angels-ingot-cobalt"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -165,17 +165,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "powder-cobalt",
-    localised_name = { "item-name.powder-cobalt" },
+    name = "angels-powder-cobalt",
     category = "advanced-crafting",
     subgroup = "angels-cobalt",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ingot-cobalt", amount = 1 },
+      { type = "item", name = "angels-ingot-cobalt", amount = 1 },
     },
     results = {
-      { type = "item", name = "powder-cobalt", amount = 1 },
+      { type = "item", name = "angels-powder-cobalt", amount = 1 },
     },
     order = "g[powder-cobalt]",
   },
@@ -184,12 +183,12 @@ data:extend({
     type = "recipe",
     name = "angels-molten-cobalt-smelting",
     localised_name = { "fluid-name.angels-liquid-molten-cobalt" },
-    category = "induction-smelting-3",
+    category = "angels-induction-smelting-3",
     subgroup = "angels-cobalt-casting",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ingot-cobalt", amount = 12 },
+      { type = "item", name = "angels-ingot-cobalt", amount = 12 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-molten-cobalt", amount = 120 },
@@ -199,9 +198,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "roll-cobalt-casting",
+    name = "angels-roll-cobalt-casting",
     localised_name = { "item-name.angels-roll-cobalt" },
-    category = "strand-casting-3",
+    category = "angels-strand-casting-3",
     subgroup = "angels-cobalt-casting",
     enabled = false,
     energy_required = 4,
@@ -222,9 +221,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "roll-cobalt-casting-fast",
+    name = "angels-roll-cobalt-casting-fast",
     localised_name = { "item-name.angels-roll-cobalt" },
-    category = "strand-casting-4",
+    category = "angels-strand-casting-4",
     subgroup = "angels-cobalt-casting",
     enabled = false,
     energy_required = 2,
@@ -250,7 +249,7 @@ data:extend({
     type = "recipe",
     name = "angels-plate-cobalt",
     localised_name = { "item-name.angels-plate-cobalt" },
-    category = "casting-3",
+    category = "angels-casting-3",
     subgroup = "angels-cobalt-casting",
     enabled = false,
     energy_required = 4,

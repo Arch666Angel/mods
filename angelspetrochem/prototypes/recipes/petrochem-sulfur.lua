@@ -160,7 +160,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-hydrogen-fluoride",
-    localised_name = { "recipe-name.liquid-hydrogen-fluoride" },
+    localised_name = { "recipe-name.angels-liquid-hydrogen-fluoride" },
     category = "chemistry",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -194,7 +194,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-hydrogen-fluoride",
-    localised_name = { "recipe-name.gas-hydrogen-fluoride" },
+    localised_name = { "recipe-name.angels-gas-hydrogen-fluoride" },
     category = "chemistry",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-filter-lime",
-    localised_name = { "item-name.filter-lime" },
+    localised_name = { "item-name.angels-filter-lime" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,

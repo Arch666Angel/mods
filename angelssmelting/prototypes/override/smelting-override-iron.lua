@@ -158,8 +158,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].powder then
 else
-  angelsmods.functions.hide("powder-iron")
-  OV.disable_recipe({ "powder-iron" })
+  angelsmods.functions.hide("angels-powder-iron")
+  OV.disable_recipe({ "angels-powder-iron" })
 end
 
 -------------------------------------------------------------------------------
@@ -172,6 +172,6 @@ if angelsmods.trigger.smelting_products["iron"].rod then
 else
   angelsmods.functions.hide("angels-rod-iron")
   angelsmods.functions.hide("angels-rod-stack-iron")
-  OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast" })
+  OV.disable_recipe({ "angels-rod-stack-iron-casting", "angels-rod-stack-iron-casting-fast" })
   OV.disable_recipe({ "angels-rod-iron-plate", "angels-rod-stack-iron-converting" })
 end

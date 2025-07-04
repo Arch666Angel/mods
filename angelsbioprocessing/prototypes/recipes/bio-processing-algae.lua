@@ -30,7 +30,7 @@ data:extend({
   {
     type = "recipe",
     name = "algae-brown-burning",
-    localised_name = { "item-name.solid-lithium" },
+    localised_name = { "item-name.angels-solid-lithium" },
     category = "smelting",
     subgroup = "bio-processing-brown",
     enabled = false,
@@ -47,7 +47,7 @@ data:extend({
   {
     type = "recipe",
     name = "algae-brown-burning-wash",
-    localised_name = { "item-name.solid-sodium-carbonate" },
+    localised_name = { "item-name.angels-solid-sodium-carbonate" },
     category = "angels-liquifying",
     subgroup = "bio-processing-brown",
     enabled = false,
@@ -71,7 +71,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-alginic-acid",
-    localised_name = { "item-name.solid-alginic-acid" },
+    localised_name = { "item-name.angels-solid-alginic-acid" },
     category = "crafting",
     subgroup = "bio-processing-brown",
     enabled = false,
@@ -294,7 +294,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-calcium-carbonate",
-    localised_name = { "item-name.solid-calcium-carbonate" },
+    localised_name = { "item-name.angels-solid-calcium-carbonate" },
     category = "angels-liquifying",
     subgroup = "bio-processing-red",
     enabled = false,

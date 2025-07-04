@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-ore-smelting",
+        recipe = "angels-gold-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -54,7 +54,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-ore-processing",
+        recipe = "angels-gold-ore-processing",
       },
       {
         type = "unlock-recipe",
@@ -62,15 +62,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-gold-smelting",
+        recipe = "angels-processed-gold-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-gold-smelting",
+        recipe = "angels-cathode-gold-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-gold",
+        recipe = "angels-powder-gold",
       },
     },
     unit = {
@@ -92,7 +92,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-gold-smelting-1",
       "angels-copper-casting-2",
     },
@@ -107,7 +107,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-gold-casting",
+        recipe = "angels-roll-gold-casting",
       },
       {
         type = "unlock-recipe",
@@ -140,11 +140,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-processed-processing",
+        recipe = "angels-gold-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-gold-smelting",
+        recipe = "angels-pellet-gold-smelting",
       },
       {
         type = "unlock-recipe",
@@ -171,7 +171,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-gold-casting-2",
     },
     effects = {
@@ -181,7 +181,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-gold-casting-fast",
+        recipe = "angels-roll-gold-casting-fast",
       },
     },
     unit = {

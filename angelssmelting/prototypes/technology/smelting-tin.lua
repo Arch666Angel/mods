@@ -12,7 +12,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tin-ore-smelting",
+        recipe = "angels-tin-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -50,15 +50,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tin-ore-processing",
+        recipe = "angels-tin-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-tin-smelting",
+        recipe = "angels-processed-tin-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-tin",
+        recipe = "angels-powder-tin",
       },
     },
     unit = {
@@ -78,7 +78,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-tin-smelting-1",
       "angels-copper-casting-2",
     },
@@ -93,7 +93,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-tin-casting",
+        recipe = "angels-roll-tin-casting",
       },
       {
         type = "unlock-recipe",
@@ -123,11 +123,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tin-processed-processing",
+        recipe = "angels-tin-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-tin-smelting",
+        recipe = "angels-pellet-tin-smelting",
       },
     },
     unit = {
@@ -148,7 +148,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-tin-casting-2",
     },
     effects = {
@@ -158,7 +158,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-tin-casting-fast",
+        recipe = "angels-roll-tin-casting-fast",
       },
     },
     unit = {

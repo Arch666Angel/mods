@@ -46,15 +46,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-ore-processing",
+        recipe = "angels-iron-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-iron-smelting",
+        recipe = "angels-processed-iron-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-iron",
+        recipe = "angels-powder-iron",
       },
     },
     unit = {
@@ -74,7 +74,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-iron-smelting-1",
       "angels-manganese-smelting-1",
       "angels-silicon-smelting-1",
@@ -86,7 +86,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-iron-casting",
+        recipe = "angels-roll-iron-casting",
       },
       {
         type = "unlock-recipe",
@@ -94,7 +94,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-iron-casting",
+        recipe = "angels-rod-stack-iron-casting",
       },
       {
         type = "unlock-recipe",
@@ -125,11 +125,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-processed-processing",
+        recipe = "angels-iron-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-iron-smelting",
+        recipe = "angels-pellet-iron-smelting",
       },
     },
     unit = {
@@ -150,7 +150,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-iron-casting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",
@@ -162,11 +162,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-iron-casting-fast",
+        recipe = "angels-roll-iron-casting-fast",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-iron-casting-fast",
+        recipe = "angels-rod-stack-iron-casting-fast",
       },
     },
     unit = {

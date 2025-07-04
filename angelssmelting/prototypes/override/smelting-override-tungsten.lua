@@ -10,14 +10,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["tungsten"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["tungsten-ore"]
+    local angel_ore = data.raw.item["angels-tungsten-ore"]
     local bob_ore = data.raw.item["bob-tungsten-ore"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("tungsten-ore")
+  angelsmods.functions.hide("angels-tungsten-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -40,19 +40,19 @@ if angelsmods.trigger.smelting_products["tungsten"].powder then
   end
 
   if mods["bobplates"] then
-    OV.global_replace_item("powder-tungsten", "bob-powdered-tungsten")
-    angelsmods.functions.hide("powder-tungsten")
-    OV.copy_item_properties("powder-tungsten", "bob-powdered-tungsten")
+    OV.global_replace_item("angels-powder-tungsten", "bob-powdered-tungsten")
+    angelsmods.functions.hide("angels-powder-tungsten")
+    OV.copy_item_properties("angels-powder-tungsten", "bob-powdered-tungsten")
     OV.disable_recipe({ "bob-powdered-tungsten" })
   end
 else
-  angelsmods.functions.hide("processed-tungsten")
-  angelsmods.functions.hide("pellet-tungsten")
+  angelsmods.functions.hide("angels-processed-tungsten")
+  angelsmods.functions.hide("angels-pellet-tungsten")
   angelsmods.functions.hide("angels-liquid-tungstic-acid")
   angelsmods.functions.hide("angels-solid-tungsten-oxide")
   angelsmods.functions.hide("angels-gas-tungsten-hexafluoride")
   angelsmods.functions.hide("angels-solid-ammonium-paratungstate")
-  angelsmods.functions.hide("powder-tungsten")
+  angelsmods.functions.hide("angels-powder-tungsten")
   OV.disable_technology({ "angels-tungsten-smelting-1", "angels-tungsten-smelting-2", "angels-tungsten-smelting-3" })
 end
 
@@ -106,9 +106,9 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     OV.add_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-1")
   end
 else
-  angelsmods.functions.hide("casting-powder-tungsten")
+  angelsmods.functions.hide("angels-casting-powder-tungsten")
   angelsmods.functions.hide("angels-plate-tungsten")
-  OV.disable_recipe({ "casting-powder-tungsten-1", "casting-powder-tungsten-2" })
+  OV.disable_recipe({ "angels-casting-powder-tungsten-1", "angels-casting-powder-tungsten-2" })
   OV.disable_recipe({ "angels-plate-tungsten" })
 end
 --hide all if not used
@@ -117,13 +117,13 @@ if
   and not angelsmods.trigger.smelting_products["tungsten"].powder
 then
   OV.hide_recipe({
-    "tungsten-ore-processing",
-    "tungsten-processed-processing",
-    "tungsten-ore-smelting",
+    "angels-tungsten-ore-processing",
+    "angels-tungsten-processed-processing",
+    "angels-tungsten-ore-smelting",
     "angels-liquid-tungstic-acid-smelting",
-    "pellet-tungsten-smelting",
+    "angels-pellet-tungsten-smelting",
     "angels-solid-tungsten-oxide-smelting",
-    "processed-tungsten-smelting",
+    "angels-processed-tungsten-smelting",
     "angels-gas-tungsten-hexafluoride-smelting",
     "angels-solid-ammonium-paratungstate-smelting",
   })
@@ -140,7 +140,7 @@ if mods["bobplates"] then
 
   for _, name in pairs(alloy_recipes) do
     if data.raw.recipe[name] then
-      data.raw.recipe[name].category = "sintering-4"
+      data.raw.recipe[name].category = "angels-sintering-4"
     end
   end
 end

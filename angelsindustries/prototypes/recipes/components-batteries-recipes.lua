@@ -781,10 +781,10 @@ if angelsmods.industries.components then
       subgroup = "angels-cathodes",
       order = "l",
       enabled = false,
-      category = "sintering-5",
+      category = "angels-sintering-5",
       energy_required = 5,
       ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 1 },
+        { type = "item", name = "angels-casting-powder-tungsten", amount = 1 },
       },
       results = {
         { type = "item", name = "battery-frame-6", amount = 1 },

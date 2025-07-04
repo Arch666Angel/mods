@@ -3,8 +3,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-steam",
-    localised_name = { "fluid-name.water-purified" },
-    category = "cooling",
+    localised_name = { "fluid-name.angels-water-purified" },
+    category = "angels-cooling",
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -89,7 +89,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-300",
-    category = "cooling",
+    category = "angels-cooling",
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-200",
-    category = "cooling",
+    category = "angels-cooling",
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -149,7 +149,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-100",
-    category = "cooling",
+    category = "angels-cooling",
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -189,9 +189,9 @@ data:extend({
       { type = "item", name = "angels-solid-resin", amount = 2 },
     },
     results = {
-      { type = "item", name = "motor-casing-0", amount = 1 },
+      { type = "item", name = "angels-motor-casing-0", amount = 1 },
     },
-    main_product = "motor-casing-0",
+    main_product = "angels-motor-casing-0",
     --allow_decomposition = false,
     --icons = {
     --  {
@@ -208,21 +208,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "mold-expendable",
+    name = "angels-mold-expendable",
     localised_name = { "item-name.mold-expendable" },
-    category = "sintering",
+    category = "angels-sintering",
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 40 },
-      { type = "item", name = "motor-casing-0", amount = 1 },
+      { type = "item", name = "angels-motor-casing-0", amount = 1 },
     },
     results = {
-      { type = "item", name = "mold-expendable", amount = 1 },
+      { type = "item", name = "angels-mold-expendable", amount = 1 },
       { type = "item", name = "angels-slag", amount = 1 },
     },
-    main_product = "mold-expendable",
+    main_product = "angels-mold-expendable",
     icons = {
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
@@ -239,21 +239,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "mold-non-expendable",
+    name = "angels-mold-non-expendable",
     localised_name = { "item-name.mold-non-expendable" },
-    category = "sintering-3",
+    category = "angels-sintering-3",
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-solid-clay", amount = 50 },
-      { type = "item", name = "motor-casing-0", amount = 1 },
+      { type = "item", name = "angels-motor-casing-0", amount = 1 },
     },
     results = {
-      { type = "item", name = "mold-non-expendable", amount = 1 },
+      { type = "item", name = "angels-mold-non-expendable", amount = 1 },
       { type = "item", name = "angels-slag", amount = 1 },
     },
-    main_product = "mold-non-expendable",
+    main_product = "angels-mold-non-expendable",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
@@ -270,17 +270,17 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "mold-non-expendable-wash",
+    name = "angels-mold-non-expendable-wash",
     category = "crafting-with-fluid",
     subgroup = "angels-mold-casting",
     energy_required = 3,
     enabled = false,
     ingredients = {
-      { type = "item", name = "spent-mold-non-expendable", amount = 1 },
+      { type = "item", name = "angels-spent-mold-non-expendable", amount = 1 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 20 },
     },
     results = {
-      { type = "item", name = "mold-non-expendable", amount = 1, probability = 0.975 },
+      { type = "item", name = "angels-mold-non-expendable", amount = 1, probability = 0.975 },
       { type = "fluid", name = "angels-water-red-waste", amount = 20 },
     },
     icons = angelsmods.functions.add_number_icon_layer({

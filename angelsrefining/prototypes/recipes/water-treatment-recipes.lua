@@ -233,7 +233,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-salt-from-saline",
-    localised_name = { "item-name.solid-salt" },
+    localised_name = { "item-name.angels-solid-salt" },
     category = "angels-salination-plant",
     subgroup = "angels-water-salination",
     energy_required = 5,
@@ -252,7 +252,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-salt",
-    localised_name = { "item-name.solid-salt" },
+    localised_name = { "item-name.angels-solid-salt" },
     category = "angels-salination-plant",
     subgroup = "angels-water-salination",
     energy_required = 5,
@@ -271,7 +271,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-lithium",
-    localised_name = { "item-name.solid-lithium" },
+    localised_name = { "item-name.angels-solid-lithium" },
     category = "angels-salination-plant",
     subgroup = "angels-water-salination",
     energy_required = 5,
@@ -472,7 +472,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-clay",
-    localised_name = { "item-name.solid-clay" },
+    localised_name = { "item-name.angels-solid-clay" },
     category = "angels-washing-plant",
     subgroup = "angels-water-washing-filtering",
     energy_required = 5,
@@ -495,7 +495,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-limestone",
-    localised_name = { "item-name.solid-limestone" },
+    localised_name = { "item-name.angels-solid-limestone" },
     category = "angels-washing-plant",
     subgroup = "angels-water-washing-filtering",
     energy_required = 5,
@@ -518,7 +518,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sand",
-    localised_name = { "item-name.solid-sand" },
+    localised_name = { "item-name.angels-solid-sand" },
     category = "angels-washing-plant",
     subgroup = "angels-water-washing-filtering",
     energy_required = 5,

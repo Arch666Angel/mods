@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-ore-smelting",
+        recipe = "angels-platinum-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -54,15 +54,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-ore-processing",
+        recipe = "angels-platinum-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-platinum-smelting",
+        recipe = "angels-processed-platinum-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-platinum",
+        recipe = "angels-powder-platinum",
       },
     },
     unit = {
@@ -85,7 +85,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-platinum-smelting-1",
       "angels-copper-casting-3",
     },
@@ -100,7 +100,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-platinum-casting",
+        recipe = "angels-roll-platinum-casting",
       },
       {
         type = "unlock-recipe",
@@ -134,11 +134,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-processed-processing",
+        recipe = "angels-platinum-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-platinum-smelting",
+        recipe = "angels-pellet-platinum-smelting",
       },
       {
         type = "unlock-recipe",
@@ -169,7 +169,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      --"strand-casting-4",
+      --"angels-strand-casting-4",
       "angels-platinum-casting-2",
     },
     effects = {
@@ -179,7 +179,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-platinum-casting-fast",
+        recipe = "angels-roll-platinum-casting-fast",
       },
     },
     unit = {

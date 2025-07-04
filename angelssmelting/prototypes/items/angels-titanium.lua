@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "rutile-ore",
+    name = "angels-rutile-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png",
     icon_size = 32,
     subgroup = "angels-titanium",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-titanium",
+    name = "angels-processed-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-titanium.png",
     icon_size = 64,
     subgroup = "angels-titanium",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-titanium",
+    name = "angels-pellet-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-titanium.png",
     icon_size = 64,
     subgroup = "angels-titanium",
@@ -50,7 +50,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sponge-titanium",
+    name = "angels-sponge-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/sponge-titanium.png",
     icon_size = 32,
     subgroup = "angels-titanium",
@@ -60,7 +60,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-titanium",
+    name = "angels-ingot-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-titanium.png",
     icon_size = 64,
     subgroup = "angels-titanium",
@@ -69,7 +69,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-titanium",
+    name = "angels-powder-titanium",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-titanium.png",
     icon_size = 64,
     subgroup = "angels-titanium",

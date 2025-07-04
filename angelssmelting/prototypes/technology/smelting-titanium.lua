@@ -15,7 +15,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "titanium-ore-smelting",
+        recipe = "angels-titanium-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -23,7 +23,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "sponge-titanium-smelting",
+        recipe = "angels-sponge-titanium-smelting",
       },
       {
         type = "unlock-recipe",
@@ -58,15 +58,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "titanium-ore-processing",
+        recipe = "angels-titanium-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-titanium-smelting",
+        recipe = "angels-processed-titanium-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-titanium",
+        recipe = "angels-powder-titanium",
       },
     },
     unit = {
@@ -88,7 +88,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-titanium-smelting-1",
       "angels-manganese-smelting-3",
       "angels-nickel-smelting-2",
@@ -104,7 +104,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-titanium-casting",
+        recipe = "angels-roll-titanium-casting",
       },
       {
         type = "unlock-recipe",
@@ -137,11 +137,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "titanium-processed-processing",
+        recipe = "angels-titanium-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-titanium-smelting",
+        recipe = "angels-pellet-titanium-smelting",
       },
     },
     unit = {
@@ -164,7 +164,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-titanium-casting-2",
       "angels-tin-smelting-3",
       "angels-aluminium-smelting-3",
@@ -182,7 +182,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-titanium-casting-fast",
+        recipe = "angels-roll-titanium-casting-fast",
       },
     },
     unit = {

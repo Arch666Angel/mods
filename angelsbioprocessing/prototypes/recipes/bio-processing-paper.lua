@@ -103,7 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-carbon-from-charcoal",
-    localised_name = { "item-name.solid-carbon" },
+    localised_name = { "item-name.angels-solid-carbon" },
     category = "angels-liquifying",
     subgroup = "bio-processing-wood",
     enabled = false,
@@ -129,7 +129,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-wood-pulp",
-    localised_name = { "item-name.solid-wood-pulp" },
+    localised_name = { "item-name.angels-solid-wood-pulp" },
     category = "angels-liquifying",
     subgroup = "bio-paper",
     enabled = false,
@@ -392,7 +392,7 @@ data:extend({
     type = "recipe",
     name = "angels-solid-sodium-hypochlorite-decomposition",
     localised_name = { "recipe-name.solid-sodium-hypochlorite-decomposition" },
-    category = "chemical-smelting",
+    category = "angels-chemical-smelting",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,

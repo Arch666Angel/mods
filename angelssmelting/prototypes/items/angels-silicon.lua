@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "quartz",
+    name = "angels-quartz",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
     icon_size = 32,
     subgroup = "angels-silicon",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-silica",
+    name = "angels-processed-silica",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-silica",
+    name = "angels-pellet-silica",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -69,7 +69,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-silicon",
+    name = "angels-ingot-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-silicon.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -78,7 +78,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-silicon",
+    name = "angels-powder-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",

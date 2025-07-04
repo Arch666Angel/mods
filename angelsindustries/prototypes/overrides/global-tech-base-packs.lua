@@ -136,10 +136,10 @@ if angelsmods.industries.tech then
   --SMELTING
   AI.pack_replace("angels-metallurgy-3", "blue", "orange")
   OV.remove_prereq("angels-metallurgy-3", "tech-blue-packs")
-  AI.pack_replace("powder-metallurgy-3", "blue", "orange")
+  AI.pack_replace("angels-powder-metallurgy-3", "blue", "orange")
   AI.pack_replace("angels-ore-processing-2", "blue", "orange")
   AI.pack_replace("angels-coolant-1", "blue", "orange")
-  AI.pack_replace("strand-casting-2", "blue", "orange")
+  AI.pack_replace("angels-strand-casting-2", "blue", "orange")
   AI.pack_replace("angels-titanium-smelting-1", "blue", "orange")
   AI.pack_replace("angels-aluminium-smelting-2", "blue", "orange")
   AI.pack_replace("angels-aluminium-casting-2", "blue", "orange")

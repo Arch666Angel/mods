@@ -112,22 +112,22 @@ if angelsmods.trigger.ores["platinum"] then
     {
       name = "angels-catalyst-metal-green",
       ingredients = {
-        { type = "item", name = get_ore_name("bauxite-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("silver-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-bauxite-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-silver-ore"), amount = 1 },
       },
     },
     {
       name = "angels-catalyst-metal-blue",
       ingredients = {
-        { type = "item", name = get_ore_name("rutile-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("gold-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-rutile-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-gold-ore"), amount = 1 },
       },
     },
     {
       name = "angels-catalyst-metal-yellow",
       ingredients = {
-        { type = "item", name = get_ore_name("tungsten-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("platinum-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-tungsten-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-platinum-ore"), amount = 1 },
       },
     },
   })
@@ -144,22 +144,22 @@ elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.over
     {
       name = "angels-catalyst-metal-green",
       ingredients = {
-        { type = "item", name = get_ore_name("bauxite-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("silver-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-bauxite-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-silver-ore"), amount = 1 },
       },
     },
     {
       name = "angels-catalyst-metal-blue",
       ingredients = {
-        { type = "item", name = get_ore_name("rutile-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("cobalt-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-rutile-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-cobalt-ore"), amount = 1 },
       },
     },
     {
       name = "angels-catalyst-metal-yellow",
       ingredients = {
-        { type = "item", name = get_ore_name("tungsten-ore"), amount = 1 },
-        { type = "item", name = get_ore_name("nickel-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-tungsten-ore"), amount = 1 },
+        { type = "item", name = get_ore_name("angels-nickel-ore"), amount = 1 },
       },
     },
   })

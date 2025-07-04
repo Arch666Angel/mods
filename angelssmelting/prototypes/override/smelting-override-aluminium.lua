@@ -11,14 +11,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["aluminium"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["bauxite-ore"]
+    local angel_ore = data.raw.item["angels-bauxite-ore"]
     local bob_ore = data.raw.item["bob-bauxite-ore"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("bauxite-ore")
+  angelsmods.functions.hide("angels-bauxite-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -57,28 +57,26 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
     end
   end
 else
-  angelsmods.functions.hide("processed-aluminium")
-  angelsmods.functions.hide("pellet-aluminium")
+  angelsmods.functions.hide("angels-processed-aluminium")
+  angelsmods.functions.hide("angels-pellet-aluminium")
   angelsmods.functions.hide("angels-solid-sodium-aluminate")
   angelsmods.functions.hide("angels-solid-aluminium-hydroxide")
   angelsmods.functions.hide("angels-solid-aluminium-oxide")
-  angelsmods.functions.hide("ingot-aluminium")
+  angelsmods.functions.hide("angels-ingot-aluminium")
   angelsmods.functions.hide("angels-liquid-molten-aluminium")
   OV.disable_recipe({
-    "bauxite-ore-processing",
-    "aluminium-processed-processing",
-    "pellet-aluminium-smelting",
-    "bauxite-ore-smelting",
+    "angels-bauxite-ore-processing",
+    "angels-aluminium-processed-processing",
+    "angels-pellet-aluminium-smelting",
+    "angels-bauxite-ore-smelting",
   })
   OV.disable_recipe({
-    "processed-aluminium-smelting",
+    "angels-processed-aluminium-smelting",
     "angels-solid-aluminium-hydroxide-smelting",
     "angels-solid-sodium-aluminate-smelting",
   })
   OV.disable_recipe({ "angels-solid-aluminium-oxide-smelting" })
   OV.disable_recipe({ "angels-molten-aluminium-smelting-1", "angels-molten-aluminium-smelting-2", "angels-molten-aluminium-smelting-3" })
-  OV.disable_technology({ "angels-aluminium-smelting-1", "angels-aluminium-smelting-2", "angels-aluminium-smelting-3" })
-  OV.disable_technology({ "angels-aluminium-casting-2", "angels-aluminium-casting-3" })
 end
 
 -------------------------------------------------------------------------------
@@ -95,7 +93,7 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
 else
   angelsmods.functions.hide("angels-plate-aluminium")
   angelsmods.functions.hide("angels-roll-aluminium")
-  OV.disable_recipe({ "roll-aluminium-casting", "roll-aluminium-casting-fast" })
+  OV.disable_recipe({ "angels-roll-aluminium-casting", "angels-roll-aluminium-casting-fast" })
   OV.disable_recipe({ "angels-plate-aluminium", "angels-roll-aluminium-converting" })
 end
 
@@ -104,6 +102,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["aluminium"].powder then
 else
-  angelsmods.functions.hide("powder-aluminium")
-  OV.disable_recipe({ "powder-aluminium" })
+  angelsmods.functions.hide("angels-powder-aluminium")
+  OV.disable_recipe({ "angels-powder-aluminium" })
 end

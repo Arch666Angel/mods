@@ -6,9 +6,9 @@ local OV = angelsmods.functions.OV
 if mods["bobplates"] then
   for k, v in pairs(data.raw.recipe) do
     if v.category == "bob-mixing-furnace" then --alien-blue-alloy, alien-orange-alloy
-      data.raw.recipe[v.name].category = "blast-smelting"
+      data.raw.recipe[v.name].category = "angels-blast-smelting"
     elseif v.category == "bob-chemical-furnace" then -- silicon-nitride, silicon-carbide, lithium-cobalt-oxide
-      data.raw.recipe[v.name].category = "chemical-smelting"
+      data.raw.recipe[v.name].category = "angels-chemical-smelting"
     end
   end
 

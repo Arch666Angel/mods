@@ -65,7 +65,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-solder-smelting-1",
       "angels-zinc-smelting-1",
     },
@@ -76,7 +76,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-solder-casting",
+        recipe = "angels-roll-solder-casting",
       },
       {
         type = "unlock-recipe",
@@ -100,7 +100,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-solder-smelting-2",
       "angels-copper-smelting-2",
       "angels-silver-smelting-1",
@@ -112,7 +112,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-solder-casting-fast",
+        recipe = "angels-roll-solder-casting-fast",
       },
     },
     unit = {

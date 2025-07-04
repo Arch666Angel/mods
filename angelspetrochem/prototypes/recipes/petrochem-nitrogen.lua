@@ -424,7 +424,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-ammonium-nitrate",
-    localised_name = { "item-name.solid-ammonium-nitrate" },
+    localised_name = { "item-name.angels-solid-ammonium-nitrate" },
     category = "chemistry",
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
@@ -443,7 +443,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-ammonium-perchlorate",
-    localised_name = { "item-name.solid-ammonium-perchlorate" },
+    localised_name = { "item-name.angels-solid-ammonium-perchlorate" },
     category = "chemistry",
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
@@ -470,7 +470,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-oxidizer-capsule",
-    localised_name = { "item-name.rocket-oxidizer-capsule" },
+    localised_name = { "item-name.angels-rocket-oxidizer-capsule" },
     category = "chemistry",
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
@@ -489,7 +489,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-fuel-capsule",
-    localised_name = { "item-name.rocket-fuel-capsule" },
+    localised_name = { "item-name.angels-rocket-fuel-capsule" },
     category = "chemistry",
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
@@ -509,7 +509,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-booster-1",
-    localised_name = { "item-name.rocket-booster" },
+    localised_name = { "item-name.angels-rocket-booster" },
     category = "advanced-crafting",
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,
@@ -527,7 +527,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-booster-2",
-    localised_name = { "item-name.rocket-booster" },
+    localised_name = { "item-name.angels-rocket-booster" },
     category = "advanced-crafting",
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,

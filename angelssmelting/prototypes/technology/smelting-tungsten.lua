@@ -6,7 +6,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-ore-refining",
-      "powder-metallurgy-4",
+      "angels-powder-metallurgy-4",
       "angels-cobalt-smelting-2",
       "angels-chlorine-processing-2",
       "angels-sulfur-processing-2",
@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-ore-smelting",
+        recipe = "angels-tungsten-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-powder-tungsten-1",
+        recipe = "angels-casting-powder-tungsten-1",
       },
       {
         type = "unlock-recipe",
@@ -52,7 +52,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-ore-processing-4",
-      "powder-metallurgy-5",
+      "angels-powder-metallurgy-5",
       "angels-tungsten-smelting-1",
       "angels-nickel-smelting-2",
       "angels-nitrogen-processing-2",
@@ -60,11 +60,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-ore-processing",
+        recipe = "angels-tungsten-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-tungsten-smelting",
+        recipe = "angels-processed-tungsten-smelting",
       },
       {
         type = "unlock-recipe",
@@ -72,7 +72,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-powder-tungsten-2",
+        recipe = "angels-casting-powder-tungsten-2",
       },
     },
     unit = {
@@ -100,11 +100,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-processed-processing",
+        recipe = "angels-tungsten-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-tungsten-smelting",
+        recipe = "angels-pellet-tungsten-smelting",
       },
       {
         type = "unlock-recipe",

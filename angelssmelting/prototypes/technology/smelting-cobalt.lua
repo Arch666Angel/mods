@@ -16,7 +16,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-smelting",
+        recipe = "angels-cobalt-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -28,7 +28,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-processing-alt",
+        recipe = "angels-cobalt-ore-processing-alt",
       },
     },
     unit = {
@@ -55,11 +55,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-processing",
+        recipe = "angels-cobalt-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-cobalt-smelting",
+        recipe = "angels-processed-cobalt-smelting",
       },
       {
         type = "unlock-recipe",
@@ -67,7 +67,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-cobalt",
+        recipe = "angels-powder-cobalt",
       },
     },
     unit = {
@@ -89,13 +89,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-cobalt-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-cobalt-casting",
+        recipe = "angels-roll-cobalt-casting",
       },
       {
         type = "unlock-recipe",
@@ -128,11 +128,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-processed-processing",
+        recipe = "angels-cobalt-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-cobalt-smelting",
+        recipe = "angels-pellet-cobalt-smelting",
       },
       {
         type = "unlock-recipe",
@@ -159,13 +159,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-cobalt-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-cobalt-casting-fast",
+        recipe = "angels-roll-cobalt-casting-fast",
       },
     },
     unit = {

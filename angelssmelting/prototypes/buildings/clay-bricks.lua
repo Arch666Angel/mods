@@ -1,9 +1,9 @@
 data:extend({
   {
     type = "tile",
-    name = "clay-bricks",
+    name = "angels-tile-clay-brick",
     needs_correction = false,
-    minable = { mining_time = 0.5, result = "clay-brick" },
+    minable = { mining_time = 0.5, result = "angels-clay-brick" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {layers={
       ground_tile=true}},

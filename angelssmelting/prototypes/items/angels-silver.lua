@@ -2,7 +2,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "silver-ore",
+    name = "angels-silver-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-silver.png",
     icon_size = 32,
     subgroup = "angels-silver",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-silver",
+    name = "angels-processed-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-silver.png",
     icon_size = 64,
     subgroup = "angels-silver",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-silver",
+    name = "angels-pellet-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-silver.png",
     icon_size = 64,
     subgroup = "angels-silver",
@@ -49,7 +49,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cathode-silver",
+    name = "angels-cathode-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/cathode-silver.png",
     icon_size = 32,
     subgroup = "angels-silver",
@@ -59,7 +59,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-silver",
+    name = "angels-ingot-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-silver.png",
     icon_size = 64,
     subgroup = "angels-silver",
@@ -68,7 +68,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-silver",
+    name = "angels-powder-silver",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-silver.png",
     icon_size = 64,
     subgroup = "angels-silver",

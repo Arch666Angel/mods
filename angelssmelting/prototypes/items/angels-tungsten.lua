@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "tungsten-ore",
+    name = "angels-tungsten-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-tungsten.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-tungsten",
+    name = "angels-processed-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-tungsten",
+    name = "angels-pellet-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -88,7 +88,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "powder-tungsten",
+    name = "angels-powder-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -98,7 +98,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "item",
-    name = "casting-powder-tungsten",
+    name = "angels-casting-powder-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten-mixture.png",
     icon_size = 64,
     subgroup = "angels-tungsten-casting",

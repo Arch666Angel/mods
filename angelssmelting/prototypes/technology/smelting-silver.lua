@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-smelting",
+        recipe = "angels-silver-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -52,11 +52,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-processing",
+        recipe = "angels-silver-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-silver-smelting",
+        recipe = "angels-processed-silver-smelting",
       },
       {
         type = "unlock-recipe",
@@ -64,7 +64,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-silver",
+        recipe = "angels-powder-silver",
       },
     },
     unit = {
@@ -85,7 +85,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-silver-smelting-1",
       "angels-copper-casting-2",
     },
@@ -100,7 +100,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting",
+        recipe = "angels-roll-silver-casting",
       },
       {
         type = "unlock-recipe",
@@ -132,11 +132,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-processed-processing",
+        recipe = "angels-silver-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-silver-smelting",
+        recipe = "angels-pellet-silver-smelting",
       },
       {
         type = "unlock-recipe",
@@ -144,7 +144,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-silver-smelting",
+        recipe = "angels-cathode-silver-smelting",
       },
     },
     unit = {
@@ -166,7 +166,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-silver-casting-2",
     },
     effects = {
@@ -176,7 +176,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting-fast",
+        recipe = "angels-roll-silver-casting-fast",
       },
     },
     unit = {

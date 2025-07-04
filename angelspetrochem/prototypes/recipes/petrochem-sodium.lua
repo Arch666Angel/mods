@@ -29,7 +29,7 @@ data:extend({
     -- from hydroxide
     type = "recipe",
     name = "angels-solid-sodium",
-    localised_name = { "item-name.solid-sodium" },
+    localised_name = { "item-name.angels-solid-sodium" },
     category = "angels-petrochem-electrolyser",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -53,7 +53,7 @@ data:extend({
     -- from sulfate
     type = "recipe",
     name = "angels-solid-sodium-sulfate-separation",
-    localised_name = { "item-name.solid-sodium" },
+    localised_name = { "item-name.angels-solid-sodium" },
     category = "angels-petrochem-electrolyser",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -74,7 +74,7 @@ data:extend({
     -- carbonate
     type = "recipe",
     name = "angels-solid-sodium-carbonate",
-    localised_name = { "item-name.solid-sodium-carbonate" },
+    localised_name = { "item-name.angels-solid-sodium-carbonate" },
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -94,7 +94,7 @@ data:extend({
     -- cyanide
     type = "recipe",
     name = "angels-solid-sodium-cyanide",
-    localised_name = { "item-name.solid-sodium-cyanide" },
+    localised_name = { "item-name.angels-solid-sodium-cyanide" },
     category = "chemistry",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -126,7 +126,7 @@ data:extend({
     -- generation
     type = "recipe",
     name = "angels-solid-sodium-hydroxide",
-    localised_name = { "item-name.solid-sodium-hydroxide" },
+    localised_name = { "item-name.angels-solid-sodium-hydroxide" },
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -147,7 +147,7 @@ data:extend({
     -- from hydroxide
     type = "recipe",
     name = "angels-liquid-aqueous-sodium-hydroxide-reverse",
-    localised_name = { "item-name.solid-sodium-hydroxide" },
+    localised_name = { "item-name.angels-solid-sodium-hydroxide" },
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -250,7 +250,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-hypochlorite",
-    localised_name = { "item-name.solid-sodium-hypochlorite" },
+    localised_name = { "item-name.angels-solid-sodium-hypochlorite" },
     category = "chemistry",
     subgroup = "angels-petrochem-sodium",
     energy_required = 4,
@@ -274,7 +274,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-chlorate",
-    localised_name = { "item-name.solid-sodium-chlorate" },
+    localised_name = { "item-name.angels-solid-sodium-chlorate" },
     category = "chemistry",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -298,7 +298,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-perchlorate",
-    localised_name = { "item-name.solid-sodium-perchlorate" },
+    localised_name = { "item-name.angels-solid-sodium-perchlorate" },
     category = "chemistry",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,

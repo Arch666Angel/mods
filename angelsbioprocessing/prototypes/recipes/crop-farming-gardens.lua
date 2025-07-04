@@ -529,7 +529,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-soil",
-    localised_name = { "item-name.solid-soil" },
+    localised_name = { "item-name.angels-solid-soil" },
     category = "crafting",
     subgroup = "bio-wood",
     enabled = false,
@@ -548,7 +548,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-soil-alternative",
-    localised_name = { "item-name.solid-soil" },
+    localised_name = { "item-name.angels-solid-soil" },
     category = "crafting",
     subgroup = "bio-wood",
     enabled = false,
@@ -567,7 +567,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-fertilizer",
-    localised_name = { "item-name.solid-fertilizer" },
+    localised_name = { "item-name.angels-solid-fertilizer" },
     category = "crafting-with-fluid",
     subgroup = "bio-wood",
     enabled = false,
@@ -585,7 +585,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-alienated-fertilizer",
-    localised_name = { "item-name.solid-alienated-fertilizer" },
+    localised_name = { "item-name.angels-solid-alienated-fertilizer" },
     category = "crafting-with-fluid",
     subgroup = "bio-wood",
     enabled = false,

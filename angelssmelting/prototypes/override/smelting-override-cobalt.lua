@@ -11,14 +11,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["cobalt"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["cobalt-ore"]
+    local angel_ore = data.raw.item["angels-cobalt-ore"]
     local bob_ore = data.raw.item["bob-cobalt-ore"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("cobalt-ore")
+  angelsmods.functions.hide("angels-cobalt-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -50,10 +50,10 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
 
   if (mods["angelsindustries"] and angelsmods.industries.components) or mods["bobplates"] then
   else
-    OV.disable_recipe({ "cobalt-ore-processing-alt" })
+    OV.disable_recipe({ "angels-cobalt-ore-processing-alt" })
     OV.patch_recipes({
       {
-        name = "processed-cobalt-smelting",
+        name = "angels-processed-cobalt-smelting",
         icons = angelsmods.functions.add_number_icon_layer(
           angelsmods.functions.get_object_icons("angels-solid-cobalt-oxide"),
           1,
@@ -75,15 +75,15 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
     OV.add_prereq("angels-cobalt-smelting-1", "angels-metallurgy-3")
   end
 else
-  angelsmods.functions.hide("processed-cobalt")
-  angelsmods.functions.hide("pellet-cobalt")
+  angelsmods.functions.hide("angels-processed-cobalt")
+  angelsmods.functions.hide("angels-pellet-cobalt")
   angelsmods.functions.hide("angels-solid-cobalt-hydroxide")
   angelsmods.functions.hide("angels-solid-cobalt-oxide")
-  angelsmods.functions.hide("ingot-cobalt")
+  angelsmods.functions.hide("angels-ingot-cobalt")
   angelsmods.functions.hide("angels-liquid-molten-cobalt")
-  OV.disable_recipe({ "cobalt-ore-processing", "cobalt-processed-processing", "cobalt-ore-processing-alt" })
-  OV.disable_recipe({ "pellet-cobalt-smelting", "processed-cobalt-smelting", "angels-solid-cobalt-hydroxide-smelting" })
-  OV.disable_recipe({ "cobalt-ore-smelting", "angels-solid-cobalt-oxide-smelting" })
+  OV.disable_recipe({ "angels-cobalt-ore-processing", "angels-cobalt-processed-processing", "cobalt-ore-processing-alt" })
+  OV.disable_recipe({ "angels-pellet-cobalt-smelting", "angels-processed-cobalt-smelting", "angels-solid-cobalt-hydroxide-smelting" })
+  OV.disable_recipe({ "angels-cobalt-ore-smelting", "angels-solid-cobalt-oxide-smelting" })
   OV.disable_recipe({ "angels-molten-cobalt-smelting" })
   OV.disable_technology({ "angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3" })
   OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
@@ -102,7 +102,7 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
 else
   angelsmods.functions.hide("angels-plate-cobalt")
   angelsmods.functions.hide("angels-roll-cobalt")
-  OV.disable_recipe({ "roll-cobalt-casting", "roll-cobalt-casting-fast" })
+  OV.disable_recipe({ "angels-roll-cobalt-casting", "angels-roll-cobalt-casting-fast" })
   OV.disable_recipe({ "angels-plate-cobalt", "angels-roll-cobalt-converting" })
   angelsmods.functions.hide("bob-cobalt-plate")
 end
@@ -113,10 +113,10 @@ end
 if angelsmods.trigger.smelting_products["cobalt"].powder then
   if mods["angelsindustries"] and angelsmods.industries.tech then
   else -- not angels industry tech mode
-    OV.remove_unlock("angels-cobalt-smelting-2", "powder-cobalt")
-    OV.add_unlock("angels-cobalt-smelting-1", "powder-cobalt")
+    OV.remove_unlock("angels-cobalt-smelting-2", "angels-powder-cobalt")
+    OV.add_unlock("angels-cobalt-smelting-1", "angels-powder-cobalt")
   end
 else
-  angelsmods.functions.hide("powder-cobalt")
-  OV.disable_recipe({ "powder-cobalt" })
+  angelsmods.functions.hide("angels-powder-cobalt")
+  OV.disable_recipe({ "angels-powder-cobalt" })
 end

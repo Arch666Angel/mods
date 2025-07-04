@@ -74,7 +74,7 @@ else
     "angels-solder-smelting-3",
     "angels-solder-smelting-4",
   })
-  OV.disable_recipe({ "roll-solder-casting", "roll-solder-casting-fast" })
+  OV.disable_recipe({ "angels-roll-solder-casting", "angels-roll-solder-casting-fast" })
   OV.disable_recipe({ "angels-solder-mixture-smelting", "angels-solder", "angels-roll-solder-converting" })
   OV.disable_technology({
     "angels-solder-smelting-basic",

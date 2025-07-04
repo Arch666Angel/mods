@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "lead-ore",
+    name = "angels-lead-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
     icon_size = 32,
     subgroup = "angels-lead",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-lead",
+    name = "angels-processed-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-lead.png",
     icon_size = 64,
     subgroup = "angels-lead",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-lead",
+    name = "angels-pellet-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-lead.png",
     icon_size = 64,
     subgroup = "angels-lead",
@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "anode-lead",
+    name = "angels-anode-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/anode-lead.png",
     icon_size = 32,
     subgroup = "angels-lead",
@@ -70,7 +70,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-lead",
+    name = "angels-ingot-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-lead.png",
     icon_size = 64,
     subgroup = "angels-lead",
@@ -79,7 +79,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-lead",
+    name = "angels-powder-lead",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-lead.png",
     icon_size = 64,
     subgroup = "angels-lead",

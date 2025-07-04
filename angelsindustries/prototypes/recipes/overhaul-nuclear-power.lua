@@ -118,7 +118,7 @@ data:extend({
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
     ingredients = {
-      { type = "item", name = "thorium-ore", amount = 5 },
+      { type = "item", name = "angels-thorium-ore", amount = 5 },
     },
     results = {
       { type = "item", name = "thorium-232", amount = 4 },

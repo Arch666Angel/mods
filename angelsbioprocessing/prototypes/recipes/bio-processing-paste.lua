@@ -31,7 +31,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-copper", amount = 2 },
+      { type = "item", name = "angels-powder-copper", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-copper", amount = 1 },
@@ -50,7 +50,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-gold", amount = 2 },
+      { type = "item", name = "angels-powder-gold", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-gold", amount = 1 },
@@ -69,7 +69,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-tungsten", amount = 2 },
+      { type = "item", name = "angels-powder-tungsten", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-tungsten", amount = 1 },
@@ -88,7 +88,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-cobalt", amount = 2 },
+      { type = "item", name = "angels-powder-cobalt", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-cobalt", amount = 1 },
@@ -107,7 +107,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-titanium", amount = 2 },
+      { type = "item", name = "angels-powder-titanium", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-titanium", amount = 1 },
@@ -126,7 +126,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-zinc", amount = 2 },
+      { type = "item", name = "angels-powder-zinc", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-zinc", amount = 1 },
@@ -145,7 +145,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-iron", amount = 2 },
+      { type = "item", name = "angels-powder-iron", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-iron", amount = 1 },
@@ -164,7 +164,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "paste-cellulose", amount = 1 },
-      { type = "item", name = "powder-silver", amount = 2 },
+      { type = "item", name = "angels-powder-silver", amount = 2 },
     },
     results = {
       { type = "item", name = "paste-silver", amount = 1 },

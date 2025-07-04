@@ -1,9 +1,9 @@
 local angelsmods = require("__angelsrefining__/prototypes/migration-functions")
 
 for _, upgrade in pairs({
-  { oldEntity = "sintering-oven", newEntity = "sintering-oven-4" },
-  { oldEntity = "sintering-oven-2", newEntity = "sintering-oven-4" },
-  { oldEntity = "sintering-oven-3", newEntity = "sintering-oven-4" },
+  { oldEntity = "angels-sintering-oven", newEntity = "angels-sintering-oven-4" },
+  { oldEntity = "angels-sintering-oven-2", newEntity = "angels-sintering-oven-4" },
+  { oldEntity = "angels-sintering-oven-3", newEntity = "angels-sintering-oven-4" },
   { oldEntity = "angels-chemical-furnace", newEntity = "angels-chemical-furnace-2" },
 }) do
   local entity = prototypes.entity[upgrade.oldEntity]

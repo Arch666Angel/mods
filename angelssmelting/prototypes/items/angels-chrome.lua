@@ -2,7 +2,7 @@ data:extend({
   --ORE
   {
     type = "item",
-    name = "chrome-ore",
+    name = "angels-chrome-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-chrome.png",
     icon_size = 32,
     subgroup = "angels-chrome",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-chrome",
+    name = "angels-processed-chrome",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-chrome.png",
     icon_size = 64,
     subgroup = "angels-chrome",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-chrome",
+    name = "angels-pellet-chrome",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-chrome.png",
     icon_size = 64,
     subgroup = "angels-chrome",
@@ -58,7 +58,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-chrome",
+    name = "angels-ingot-chrome",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-chrome.png",
     icon_size = 64,
     subgroup = "angels-chrome",
@@ -67,7 +67,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-chrome",
+    name = "angels-powder-chrome",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-chrome.png",
     icon_size = 64,
     subgroup = "angels-chrome",

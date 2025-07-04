@@ -17,7 +17,7 @@ if mods["bobgreenhouse"] then
   OV.patch_recipes({
     {
       name = "bob-fertiliser",
-      localised_name = { "item-name.solid-fertilizer" },
+      localised_name = { "item-name.angels-solid-fertilizer" },
       subgroup = "bio-wood",
       order = "a[support]-cb",
     },

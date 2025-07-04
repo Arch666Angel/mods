@@ -15,8 +15,8 @@ data:extend({
   {
     type = "offshore-pump",
     name = "angels-sea-pump-placeable",
-    localised_name = { "entity-name.sea-pump" },
-    localised_description = { "entity-description.sea-pump" },
+    localised_name = { "entity-name.angels-sea-pump" },
+    localised_description = { "entity-description.angels-sea-pump" },
     icon = "__angelsrefininggraphics__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
@@ -182,8 +182,8 @@ data:extend({
   {
     type = "mining-drill",
     name = "angels-sea-pump",
-    localised_name = { "entity-name.sea-pump" },
-    localised_description = { "entity-description.sea-pump" },
+    localised_name = { "entity-name.angels-sea-pump" },
+    localised_description = { "entity-description.angels-sea-pump" },
     icon = "__angelsrefininggraphics__/graphics/icons/sea-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },

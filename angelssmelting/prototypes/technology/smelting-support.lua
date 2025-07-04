@@ -13,15 +13,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace",
+        recipe = "angels-blast-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace",
+        recipe = "angels-induction-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine",
+        recipe = "angels-casting-machine",
       },
     },
     unit = {
@@ -45,7 +45,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-2",
+        recipe = "angels-blast-furnace-2",
       },
       {
         type = "unlock-recipe",
@@ -53,11 +53,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-2",
+        recipe = "angels-induction-furnace-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-2",
+        recipe = "angels-casting-machine-2",
       },
     },
     unit = {
@@ -82,7 +82,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-3",
+        recipe = "angels-blast-furnace-3",
       },
       {
         type = "unlock-recipe",
@@ -90,11 +90,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-3",
+        recipe = "angels-induction-furnace-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-3",
+        recipe = "angels-casting-machine-3",
       },
     },
     unit = {
@@ -120,7 +120,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-4",
+        recipe = "angels-blast-furnace-4",
       },
       {
         type = "unlock-recipe",
@@ -128,11 +128,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-4",
+        recipe = "angels-induction-furnace-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-4",
+        recipe = "angels-casting-machine-4",
       },
     },
     unit = {
@@ -180,7 +180,7 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "powder-metallurgy-1",
+    name = "angels-powder-metallurgy-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
     prerequisites = {
@@ -189,7 +189,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven",
+        recipe = "angels-sintering-oven",
       },
     },
     unit = {
@@ -203,21 +203,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-2",
+    name = "angels-powder-metallurgy-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-2",
-      "powder-metallurgy-1",
+      "angels-powder-metallurgy-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-2",
+        recipe = "angels-sintering-oven-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer",
+        recipe = "angels-powder-mixer",
       },
     },
     unit = {
@@ -232,21 +232,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-3",
+    name = "angels-powder-metallurgy-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-3",
-      "powder-metallurgy-2",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-3",
+        recipe = "angels-sintering-oven-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-2",
+        recipe = "angels-powder-mixer-2",
       },
     },
     unit = {
@@ -262,21 +262,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-4",
+    name = "angels-powder-metallurgy-4",
     icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
-      "powder-metallurgy-3",
+      "angels-powder-metallurgy-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-4",
+        recipe = "angels-sintering-oven-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-3",
+        recipe = "angels-powder-mixer-3",
       },
     },
     unit = {
@@ -293,21 +293,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-5",
+    name = "angels-powder-metallurgy-5",
     icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "powder-metallurgy-4",
+      "angels-powder-metallurgy-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-5",
+        recipe = "angels-sintering-oven-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-4",
+        recipe = "angels-powder-mixer-4",
       },
     },
     unit = {
@@ -328,7 +328,7 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "strand-casting-1",
+    name = "angels-strand-casting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
     prerequisites = {
@@ -337,7 +337,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine",
+        recipe = "angels-strand-casting-machine",
       },
     },
     unit = {
@@ -352,18 +352,18 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-2",
+    name = "angels-strand-casting-2",
     icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-3",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-coolant-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-2",
+        recipe = "angels-strand-casting-machine-2",
       },
     },
     unit = {
@@ -379,17 +379,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-3",
+    name = "angels-strand-casting-3",
     icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
-      "strand-casting-2",
+      "angels-strand-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-3",
+        recipe = "angels-strand-casting-machine-3",
       },
     },
     unit = {
@@ -406,17 +406,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-4",
+    name = "angels-strand-casting-4",
     icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "strand-casting-3",
+      "angels-strand-casting-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-4",
+        recipe = "angels-strand-casting-machine-4",
       },
     },
     unit = {
@@ -475,7 +475,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press",
+        recipe = "angels-pellet-press",
       },
     },
     unit = {
@@ -505,7 +505,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-2",
+        recipe = "angels-pellet-press-2",
       },
     },
     unit = {
@@ -536,7 +536,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-3",
+        recipe = "angels-pellet-press-3",
       },
     },
     unit = {
@@ -563,7 +563,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-4",
+        recipe = "angels-pellet-press-4",
       },
     },
     unit = {
@@ -594,7 +594,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cooling-tower",
+        recipe = "angels-cooling-tower",
       },
       {
         type = "unlock-recipe",

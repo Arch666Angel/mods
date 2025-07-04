@@ -142,7 +142,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-crushed",
-    localised_name = { "recipe-name.angels-ore8-crushed" },
     category = "angels-ore-refining-t1",
     subgroup = "angels-ore-processing-a",
     energy_required = 1,
@@ -181,7 +180,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-crushed",
-    localised_name = { "recipe-name.angels-ore9-crushed" },
     category = "angels-ore-refining-t1",
     subgroup = "angels-ore-processing-a",
     energy_required = 1,
@@ -352,7 +350,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-sludge",
-    localised_name = { "recipe-name.angels-ore8-sludge" },
     category = "chemistry",
     subgroup = "angels-ore-processing-b",
     energy_required = 4,
@@ -401,7 +398,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-sludge",
-    localised_name = { "recipe-name.angels-ore9-sludge" },
     category = "chemistry",
     subgroup = "angels-ore-processing-b",
     energy_required = 4,
@@ -453,7 +449,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore1-crystal",
-    localised_name = { "recipe-name.angels-ore1-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -474,7 +469,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore2-crystal",
-    localised_name = { "recipe-name.angels-ore2-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -495,7 +489,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore3-crystal",
-    localised_name = { "recipe-name.angels-ore3-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -516,7 +509,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore4-crystal",
-    localised_name = { "recipe-name.angels-ore4-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -537,7 +529,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore5-crystal",
-    localised_name = { "recipe-name.angels-ore5-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -558,7 +549,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore6-crystal",
-    localised_name = { "recipe-name.angels-ore6-crystal" },
     category = "angels-ore-refining-t3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -582,7 +572,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-solution",
-    localised_name = { "recipe-name.angels-ore8-solution" },
     category = "angels-ore-refining-t3b",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -661,7 +650,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-crystal",
-    localised_name = { "recipe-name.angels-ore8-crystal" },
     category = "angels-crystallizing-3",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -681,7 +669,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-solution",
-    localised_name = { "recipe-name.angels-ore9-solution" },
     category = "angels-ore-refining-t3b",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -760,7 +747,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-crystal",
-    localised_name = { "recipe-name.angels-ore9-crystal" },
     category = "angels-crystallizing-3",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -783,7 +769,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore1-pure",
-    localised_name = { "recipe-name.angels-ore1-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -803,7 +788,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore2-pure",
-    localised_name = { "recipe-name.angels-ore2-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -823,7 +807,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore3-pure",
-    localised_name = { "recipe-name.angels-ore3-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -843,7 +826,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore4-pure",
-    localised_name = { "recipe-name.angels-ore4-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -863,7 +845,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore5-pure",
-    localised_name = { "recipe-name.angels-ore5-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -883,7 +864,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore6-pure",
-    localised_name = { "recipe-name.angels-ore6-pure" },
     category = "angels-ore-refining-t4",
     subgroup = "angels-ore-processing-d",
     energy_required = 2,
@@ -904,7 +884,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-filter-frame",
-    localised_name = { "item-name.filter-frame" },
     category = "crafting",
     subgroup = "angels-geode-crystallization",
     energy_required = 1,
@@ -923,7 +902,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-filter-coal",
-    localised_name = { "item-name.filter-coal" },
     category = "crafting",
     subgroup = "angels-geode-crystallization",
     energy_required = 1,
@@ -942,7 +920,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-filter-ceramic",
-    localised_name = { "item-name.filter-ceramic" },
     category = "crafting",
     subgroup = "angels-geode-crystallization",
     energy_required = 1,
@@ -961,7 +938,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-filter-ceramic-refurbish",
-    localised_name = { "item-name.filter-ceramic" },
+    localised_name = { "item-name.angels-filter-ceramic" },
     category = "crafting-with-fluid",
     subgroup = "angels-geode-crystallization",
     energy_required = 0.5,
@@ -980,7 +957,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-milling-drum",
-    localised_name = { "item-name.milling-drum" },
     category = "crafting-with-fluid",
     subgroup = "angels-ore-powderizer",
     energy_required = 1,
@@ -999,7 +975,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-milling-drum-used",
-    localised_name = { "item-name.milling-drum" },
+    localised_name = { "item-name.angels-milling-drum" },
     category = "crafting-with-fluid",
     subgroup = "angels-ore-powderizer",
     energy_required = 1,
@@ -1413,7 +1389,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalysator-brown",
-    localised_name = { "item-name.catalysator-brown" },
     category = "angels-crystallizing",
     subgroup = "angels-geode-crystallization",
     --subgroup = "angels-slag-processing-1",
@@ -1432,7 +1407,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalysator-green",
-    localised_name = { "item-name.catalysator-green" },
     category = "angels-crystallizing-2",
     subgroup = "angels-geode-crystallization",
     energy_required = 0.5,
@@ -1450,7 +1424,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalysator-orange",
-    localised_name = { "item-name.catalysator-orange" },
     category = "angels-crystallizing-3",
     subgroup = "angels-geode-crystallization",
     energy_required = 0.5,

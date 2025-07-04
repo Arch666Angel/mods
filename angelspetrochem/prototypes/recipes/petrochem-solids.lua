@@ -89,7 +89,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-resin",
-    localised_name = { "item-name.solid-resin" },
+    localised_name = { "item-name.angels-solid-resin" },
     category = "crafting-with-fluid",
     subgroup = "angels-petrochem-solids",
     enabled = false,
@@ -179,7 +179,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-rubber",
-    localised_name = { "item-name.solid-rubber" },
+    localised_name = { "item-name.angels-solid-rubber" },
     category = "crafting-with-fluid",
     subgroup = "angels-petrochem-solids-2",
     enabled = false,
@@ -362,7 +362,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalyst-metal-carrier",
-    localised_name = { "item-name.catalyst-metal-carrier" },
+    localised_name = { "item-name.angels-catalyst-metal-carrier" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 4,
@@ -380,7 +380,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalyst-metal-red",
-    localised_name = { "item-name.catalyst-metal-red" },
+    localised_name = { "item-name.angels-catalyst-metal-red" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,
@@ -400,15 +400,15 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalyst-metal-green",
-    localised_name = { "item-name.catalyst-metal-green" },
+    localised_name = { "item-name.angels-catalyst-metal-green" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
-      -- {type="item", name="bauxite-ore", amount=1},
-      -- {type="item", name="silver-ore", amount=1},
+      -- {type="item", name="angels-bauxite-ore", amount=1},
+      -- {type="item", name="angels-silver-ore", amount=1},
     },
     results = {
       { type = "item", name = "angels-catalyst-metal-green", amount = 10 },
@@ -420,15 +420,15 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalyst-metal-blue",
-    localised_name = { "item-name.catalyst-metal-blue" },
+    localised_name = { "item-name.angels-catalyst-metal-blue" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
-      -- {type="item", name="rutile-ore", amount=1},
-      -- {type="item", name="cobalt-ore", amount=1},
+      -- {type="item", name="angels-rutile-ore", amount=1},
+      -- {type="item", name="angels-cobalt-ore", amount=1},
     },
     results = {
       { type = "item", name = "angels-catalyst-metal-blue", amount = 10 },
@@ -440,15 +440,15 @@ data:extend({
   {
     type = "recipe",
     name = "angels-catalyst-metal-yellow",
-    localised_name = { "item-name.catalyst-metal-yellow" },
+    localised_name = { "item-name.angels-catalyst-metal-yellow" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
-      -- {type="item", name="tungsten-ore", amount=1},
-      -- {type="item", name="nickel-ore", amount=1},
+      -- {type="item", name="angels-tungsten-ore", amount=1},
+      -- {type="item", name="angels-nickel-ore", amount=1},
     },
     results = {
       { type = "item", name = "angels-catalyst-metal-yellow", amount = 10 },

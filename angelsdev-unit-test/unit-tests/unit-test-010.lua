@@ -482,14 +482,14 @@ local function add_ignores()
     }
     ignored_unlocks["bio-processing-paste"] = {
       items = {
-        ["powder-cobalt"] = true,
-        ["powder-copper"] = true,
-        ["powder-gold"] = true,
-        ["powder-iron"] = true,
-        ["powder-titanium"] = true,
-        ["powder-tungsten"] = true,
+        ["angels-powder-cobalt"] = true,
+        ["angels-powder-copper"] = true,
+        ["angels-powder-gold"] = true,
+        ["angels-powder-iron"] = true,
+        ["angels-powder-titanium"] = true,
+        ["angels-powder-tungsten"] = true,
         ["bob-powdered-tungsten"] = true,
-        ["powder-zinc"] = true,
+        ["angels-powder-zinc"] = true,
       },
     }
     -- TODO: Tidy up puffer / crop prerequisites
@@ -543,7 +543,7 @@ local function add_ignores()
 
     ignored_unlocks["bio-desert-farm"] = {
       items = {
-        ["clay-brick"] = true,
+        ["angels-clay-brick"] = true,
       },
     }
     ignored_unlocks["bio-swamp-farm"] = {
@@ -554,7 +554,7 @@ local function add_ignores()
     ignored_unlocks["bio-temperate-farm"] = {
       items = {
         ["bob-bronze-pipe"] = true,
-        ["clay-brick"] = true,
+        ["angels-clay-brick"] = true,
       },
     }
   end

@@ -9,14 +9,14 @@ data:extend({
     prerequisites = {
       "angels-ore-floatation",
       --"angels-metallurgy-2",
-      "powder-metallurgy-2",
+      "angels-powder-metallurgy-2",
       "angels-chlorine-processing-1",
       --"angels-coal-processing"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bauxite-ore-smelting",
+        recipe = "angels-bauxite-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -53,21 +53,21 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-3",
       "angels-ore-processing-2",
-      "powder-metallurgy-3",
+      "angels-powder-metallurgy-3",
       "angels-aluminium-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bauxite-ore-processing",
+        recipe = "angels-bauxite-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-aluminium-smelting",
+        recipe = "angels-processed-aluminium-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-aluminium",
+        recipe = "angels-powder-aluminium",
       },
     },
     unit = {
@@ -88,7 +88,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-aluminium-smelting-1",
       "angels-manganese-smelting-2",
     },
@@ -99,7 +99,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-aluminium-casting",
+        recipe = "angels-roll-aluminium-casting",
       },
       {
         type = "unlock-recipe",
@@ -131,11 +131,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "aluminium-processed-processing",
+        recipe = "angels-aluminium-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-aluminium-smelting",
+        recipe = "angels-pellet-aluminium-smelting",
       },
       {
         type = "unlock-recipe",
@@ -161,7 +161,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-aluminium-casting-2",
       "angels-copper-smelting-3",
       "angels-silicon-smelting-2",
@@ -173,7 +173,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-aluminium-casting-fast",
+        recipe = "angels-roll-aluminium-casting-fast",
       },
     },
     unit = {

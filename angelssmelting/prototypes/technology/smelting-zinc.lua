@@ -15,7 +15,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-smelting",
+        recipe = "angels-zinc-ore-smelting",
       },
       {
         type = "unlock-recipe",
@@ -27,7 +27,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-processing-alt",
+        recipe = "angels-zinc-ore-processing-alt",
       },
     },
     unit = {
@@ -54,15 +54,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-processing",
+        recipe = "angels-zinc-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-zinc-smelting",
+        recipe = "angels-processed-zinc-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-zinc",
+        recipe = "angels-powder-zinc",
       },
     },
     unit = {
@@ -83,13 +83,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-zinc-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-zinc-casting",
+        recipe = "angels-roll-zinc-casting",
       },
       {
         type = "unlock-recipe",
@@ -121,11 +121,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-processed-processing",
+        recipe = "angels-zinc-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-zinc-smelting",
+        recipe = "angels-pellet-zinc-smelting",
       },
       {
         type = "unlock-recipe",
@@ -133,7 +133,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-zinc-smelting",
+        recipe = "angels-cathode-zinc-smelting",
       },
     },
     unit = {
@@ -155,13 +155,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-zinc-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-zinc-casting-fast",
+        recipe = "angels-roll-zinc-casting-fast",
       },
     },
     unit = {

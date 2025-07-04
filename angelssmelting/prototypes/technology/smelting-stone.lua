@@ -7,7 +7,7 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-1",
       "logistic-science-pack",
-      "powder-metallurgy-1",
+      "angels-powder-metallurgy-1",
       "angels-water-washing-1",
     },
     effects = {
@@ -41,7 +41,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "mold-expendable",
+        recipe = "angels-mold-expendable",
       },
     },
     unit = {
@@ -62,7 +62,7 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-2",
       "chemical-science-pack",
-      "powder-metallurgy-2",
+      "angels-powder-metallurgy-2",
       "angels-stone-smelting-1",
       "concrete",
       "angels-resins",
@@ -70,11 +70,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cement-mixture-1",
+        recipe = "angels-cement-mixture-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "concrete-mixture-1",
+        recipe = "angels-concrete-mixture-1",
       },
       {
         type = "unlock-recipe",
@@ -86,11 +86,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "mold-non-expendable",
+        recipe = "angels-mold-non-expendable",
       },
       {
         type = "unlock-recipe",
-        recipe = "mold-non-expendable-wash",
+        recipe = "angels-mold-non-expendable-wash",
       },
     },
     unit = {
@@ -111,7 +111,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       --"angels-metallurgy-3",
-      "powder-metallurgy-3",
+      "angels-powder-metallurgy-3",
       "angels-stone-smelting-2",
       "angels-aluminium-smelting-1",
       "angels-steel-smelting-1",
@@ -120,11 +120,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cement-mixture-2",
+        recipe = "angels-cement-mixture-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "concrete-mixture-2",
+        recipe = "angels-concrete-mixture-2",
       },
       {
         type = "unlock-recipe",

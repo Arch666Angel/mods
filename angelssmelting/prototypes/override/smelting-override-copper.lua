@@ -118,8 +118,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].powder then
 else
-  angelsmods.functions.hide("powder-copper")
-  OV.disable_recipe({ "powder-copper" })
+  angelsmods.functions.hide("angels-powder-copper")
+  OV.disable_recipe({ "angels-powder-copper" })
 end
 
 -------------------------------------------------------------------------------
