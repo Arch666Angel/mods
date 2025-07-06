@@ -7,7 +7,6 @@ if angelsmods.refining then
   angelsmods.functions.make_void("slag-slurry", "water")
   angelsmods.functions.make_void("crystal-slurry", "water")
   angelsmods.functions.make_void("crystal-seedling", "water")
-  angelsmods.functions.make_void("crystal-matrix", "water")
 
   angelsmods.functions.make_void("water", "water")
   angelsmods.functions.make_void("water-purified", "water")

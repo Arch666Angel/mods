@@ -25,7 +25,6 @@
     ["fill-slag-slurry-barrel", "slag-slurry-barrel"],
     ["fill-mineral-sludge-barrel", "mineral-sludge-barrel"],
     ["fill-crystal-slurry-barrel", "crystal-slurry-barrel"],
-    ["fill-crystal-seedling-barrel", "crystal-seedling-barrel"],
-    ["fill-crystal-matrix-barrel", "crystal-matrix-barrel"]
+    ["fill-crystal-seedling-barrel", "crystal-seedling-barrel"]
   ]
 }

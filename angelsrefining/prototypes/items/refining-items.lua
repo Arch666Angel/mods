@@ -963,21 +963,6 @@ data:extend({
     flow_color = { r = 100 / 255, g = 255 / 255, b = 0 / 255 },
     max_temperature = 0,
   },
-  {
-    type = "fluid",
-    name = "crystal-matrix",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 105, 237, 038 }, { 135, 071, 028 }, { 100, 255, 000 } }
-    ),
-    subgroup = "ore-sorting-fluid",
-    order = "c[crystal]-c",
-    default_temperature = 0,
-    heat_capacity = "1kJ",
-    base_color = { r = 153 / 255, g = 71 / 255, b = 28 / 255 },
-    flow_color = { r = 100 / 255, g = 255 / 255, b = 0 / 255 },
-    max_temperature = 0,
-  },
   ---------------------------------------------------------------------------
   -- CATALYSTS --------------------------------------------------------------
   ---------------------------------------------------------------------------
