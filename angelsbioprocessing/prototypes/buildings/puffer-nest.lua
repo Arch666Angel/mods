@@ -49,7 +49,7 @@ data:extend({
 --           water_max_range = 0.5,
 --         },
 --       },
-      probability_expression = 0.0025
+      probability_expression = 0.0025,
       tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {

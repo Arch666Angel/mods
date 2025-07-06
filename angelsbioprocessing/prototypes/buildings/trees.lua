@@ -47,7 +47,7 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-      probability_expression = 0.00025
+      probability_expression = 0.00025,
       tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
@@ -114,7 +114,7 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-      probability_expression = 0.00025
+      probability_expression = 0.00025,
       tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
@@ -187,7 +187,7 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-      probability_expression = 0.00025
+      probability_expression = 0.00025,
       tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
