@@ -68,7 +68,6 @@ if angelsmods.refining then
   angelsmods.functions.make_void("gas-epichlorhydrin", "chemical")
   angelsmods.functions.make_void("gas-chlor-methane", "chemical")
   angelsmods.functions.make_void("liquid-perchloric-acid", "chemical")
-  angelsmods.functions.make_void("gas-phosgene", "chemical")
   if data.raw.fluid["ferric-chloride-solution"] then
     angelsmods.functions.make_void("ferric-chloride-solution", "chemical")
   end

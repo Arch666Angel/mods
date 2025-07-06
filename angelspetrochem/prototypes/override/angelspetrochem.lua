@@ -330,11 +330,8 @@ end
 --Hydrogen peroxide may be used at a later date, but for now, it is a dead-end
 angelsmods.functions.hide({
   "gas-hydrogen-peroxide",
-  "gas-phosgene",
 })
-OV.disable_recipe({
-  "gas-phosgene",
-})
+
 
 -----------------------------------------------------------------------------
 -- SULFURIC ACID ------------------------------------------------------------

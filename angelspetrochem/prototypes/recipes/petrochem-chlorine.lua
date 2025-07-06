@@ -298,32 +298,4 @@ data:extend({
     }),
     order = "k[liquid-perchloric-acid]",
   },
-  {
-    type = "recipe",
-    name = "gas-phosgene",
-    localised_name = { "fluid-name.gas-phosgene" },
-    category = "chemistry",
-    subgroup = "petrochem-chlorine-2",
-    energy_required = 2,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "solid-carbon", amount = 1 },
-      { type = "fluid", name = "gas-carbon-monoxide", amount = 60 },
-      { type = "fluid", name = "gas-chlorine", amount = 40 },
-    },
-    results = {
-      { type = "fluid", name = "gas-phosgene", amount = 100 },
-    },
-    always_show_products = true,
-    icons = angelsmods.functions.create_gas_recipe_icon({
-      { "__angelspetrochemgraphics__/graphics/icons/molecules/phosgene.png", 72 },
-    }, "CClC"),
-    crafting_machine_tint = AF.get_recipe_tints({
-      "gas-phosgene",
-      "gas-carbon-monoxide",
-      "gas-chlorine",
-      AF.fluid_color("Cb"),--[[C]]
-    }),
-    order = "l",
-  },
 })

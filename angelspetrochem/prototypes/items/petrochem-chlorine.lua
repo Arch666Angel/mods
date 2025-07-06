@@ -161,26 +161,6 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-phosgene",
-    localised_description = show_formula
-        and { "tooltip-description.chemical-formula", "COCl[font=default-tiny-bold]2[/font]" }
-      or nil,
-    icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochemgraphics__/graphics/icons/molecules/phosgene.png", 72 },
-      "CClO"
-    ),
-    --icon_size = 32,
-    subgroup = "petrochem-chlorine-fluids",
-    order = "h",
-    default_temperature = 0,
-    gas_temperature = 0,
-    heat_capacity = "0.1kJ",
-    base_color = angelsmods.functions.fluid_color("COCl2"), --{r = 0.4, g = 1, b = 0.4},
-    flow_color = angelsmods.functions.flow_color("COCl2"), --{r = 0.4, g = 1, b = 0.4},
-    max_temperature = 0,
-  },
-  {
-    type = "fluid",
     name = "liquid-ferric-chloride-solution",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "Fe(III)Cl[font=default-tiny-bold]3[/font]" }

@@ -726,10 +726,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "liquid-hydrochloric-acid-solid-sodium-sulfate",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "gas-phosgene",
-      },
     },
     unit = {
       count = 50,
