@@ -16,14 +16,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-storage-tank-3",
       },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "fluid-splitter-2-way"
-      -- },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "fluid-splitter-3-way"
-      -- },
     },
     unit = {
       count = 50,

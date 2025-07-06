@@ -268,29 +268,6 @@ data:extend({
     },
     results = { { type = "item", name = "angels-storage-tank-3", amount = 1 } },
   },
-  --FLUID SPLITTER
-  -- {
-  -- type = "recipe",
-  -- name = "fluid-splitter-2-way",
-  -- energy_required = 2,
-  -- enabled = false,
-  -- ingredients =
-  -- {
-  -- {type="item", name="steel-plate", amount = 1},
-  -- },
-  -- results = {{ type = "item", name = "angels-fluid-splitter-2-way", amount = 1 }},
-  -- },
-  -- {
-  -- type = "recipe",
-  -- name = "fluid-splitter-3-way",
-  -- energy_required = 2,
-  -- enabled = false,
-  -- ingredients =
-  -- {
-  -- {type="item", name="steel-plate", amount = 1},
-  -- },
-  -- results = {{ type = "item", name = "angels-fluid-splitter-3-way", amount = 1 }},
-  -- },
 
   --ELECTROLYSER
   {
