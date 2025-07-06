@@ -97,10 +97,6 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "bio-refugium-hogger",
-  },
-  {
-    type = "recipe-category",
     name = "bio-refugium-fish",
   },
   {
@@ -387,24 +383,6 @@ data:extend({
     name = "bio-puffer-butchery",
     group = "bio-processing-alien",
     order = "b[puffer]-c[processing]-a[butchering]",
-  },
-  {
-    type = "item-subgroup",
-    name = "bio-hogger",
-    group = "bio-processing-alien",
-    order = "c[hogger]-a[producing]",
-  },
-  {
-    type = "item-subgroup",
-    name = "bio-hogger-breeding",
-    group = "bio-processing-alien",
-    order = "c[hogger]-b[breeding]",
-  },
-  {
-    type = "item-subgroup",
-    name = "bio-hogger-butchery",
-    group = "bio-processing-alien",
-    order = "c[hogger]-c[processing]",
   },
   {
     type = "item-subgroup",

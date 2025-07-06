@@ -209,17 +209,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bio-refugium-hogger",
-    localised_name = { "entity-name.bio-refugium-hogger" },
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "iron-plate", amount = 1 },
-    },
-    results = { { type = "item", name = "bio-refugium-hogger", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "bio-refugium-fish",
     localised_name = { "entity-name.bio-refugium-fish" },
     energy_required = 5,
