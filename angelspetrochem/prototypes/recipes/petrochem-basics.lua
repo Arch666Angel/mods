@@ -834,7 +834,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-heavy-water-extraction",
-    localised_name = { "recipe-name.angels-heavy-water-extraction" },
     category = "angels-petrochem-boiler",
     subgroup = "angels-water-enrichment",
     energy_required = 2,
@@ -862,7 +861,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-heavy-water-cooling",
-    localised_name = { "recipe-name.angels-heavy-water-cooling" },
     category = mods["angelssmelting"] and "angels-cooling" or "chemistry",
     subgroup = "angels-water-enrichment",
     energy_required = 4,

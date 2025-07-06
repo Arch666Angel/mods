@@ -105,7 +105,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-iron-hydroxide-smelting",
-    localised_name = { "recipe-name.angels-solid-iron-hydroxide-smelting" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-iron",
     energy_required = 4,
