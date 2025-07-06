@@ -1,5 +1,7 @@
 local def_shift = { 0.75, -2 }
 
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["puffer-nest"] = {}
+
 data:extend({
   {
     type = "item",
@@ -33,7 +35,7 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "za",
+      order = "za",
 --       max_probability = 0.025,
 --       peaks = {
 --         -- {
@@ -47,8 +49,8 @@ data:extend({
 --           water_max_range = 0.5,
 --         },
 --       },
-        probability_expression = 0.01
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      probability_expression = 0.0025
+      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {

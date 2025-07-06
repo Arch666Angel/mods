@@ -1,5 +1,8 @@
 local enemy_autoplace = require("__base__/prototypes/entity/enemy-autoplace-utils")
 
+-- this one may not be needed, in fact it might be overriding preexisting data
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["biter-spwaner"] = {}
+
 data:extend({
   {
     type = "simple-entity-with-force",
