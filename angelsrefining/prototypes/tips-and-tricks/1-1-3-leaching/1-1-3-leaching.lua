@@ -6,7 +6,7 @@ data:extend({
     name = "angels-leaching",
 
     is_title = false,
-    tag = "[item=ore-leaching-plant]",
+    tag = "[item=angels-ore-leaching-plant]",
     localised_name = { "tips-and-tricks-name.angels-leaching" },
     localised_description = require("prototypes.tips-and-tricks.1-1-3-leaching.1-1-3-leaching-description"),
 

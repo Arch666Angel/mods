@@ -4,7 +4,7 @@ data:extend({
     name = "angels-ore-sorting",
 
     is_title = false,
-    tag = "[item=ore-sorting-facility]",
+    tag = "[item=angels-ore-sorting-facility]",
     localised_name = { "tips-and-tricks-name.angels-ore-sorting" },
     localised_description = require("prototypes.tips-and-tricks.1-2-ore-sorting.1-2-ore-sorting-description"),
 
