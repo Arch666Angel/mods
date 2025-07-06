@@ -7,7 +7,7 @@ data:extend({
     prerequisites = {
       "productivity-module",
       "efficiency-module",
-      "gardens-2",
+      "angels-gardens-2",
     },
     effects = {
       {
@@ -20,7 +20,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
@@ -47,7 +47,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
@@ -75,7 +75,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },

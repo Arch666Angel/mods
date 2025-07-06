@@ -6,7 +6,7 @@ data:extend({
       nil,
       { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
     ),
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "ba",
     default_temperature = 0,
     max_temperature = 0,
@@ -21,7 +21,7 @@ data:extend({
       nil,
       { { 194, 227, 091 }, { 241, 050, 238 }, { 241, 050, 238 } }
     ),
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "bb",
     default_temperature = 0,
     max_temperature = 0,
@@ -34,7 +34,7 @@ data:extend({
   -----------------------------------------------------------------------------
   {
     type = "capsule",
-    name = "alien-fish-1-raw",
+    name = "angels-alien-fish-1-raw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-1.png",
     icon_size = 32,
     capsule_action = {
@@ -60,13 +60,13 @@ data:extend({
         },
       },
     },
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "ab",
     stack_size = 100,
   },
   {
     type = "capsule",
-    name = "alien-fish-2-raw",
+    name = "angels-alien-fish-2-raw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-2.png",
     icon_size = 32,
     capsule_action = {
@@ -92,13 +92,13 @@ data:extend({
         },
       },
     },
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "ac",
     stack_size = 100,
   },
   {
     type = "capsule",
-    name = "alien-fish-3-raw",
+    name = "angels-alien-fish-3-raw",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-fish-3.png",
     icon_size = 32,
     capsule_action = {
@@ -124,7 +124,7 @@ data:extend({
         },
       },
     },
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "ad",
     stack_size = 100,
   },
@@ -138,7 +138,7 @@ data:extend({
       nil,
       { { 200, 113, 048 }, { 200, 113, 048 }, { 241, 155, 057, 0.8 }, { 241, 155, 057, 0.8 } }
     ),
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "da",
     default_temperature = 0,
     max_temperature = 0,
@@ -153,7 +153,7 @@ data:extend({
       nil,
       { { 191, 155, 037 }, { 191, 155, 037 }, { 244, 191, 015, 0.8 }, { 244, 191, 015, 0.8 } }
     ),
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "db",
     default_temperature = 0,
     max_temperature = 0,
@@ -163,10 +163,10 @@ data:extend({
   },
   {
     type = "item",
-    name = "fish-pulp",
+    name = "angels-fish-pulp",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/fish-pulp.png",
     icon_size = 32,
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     order = "dc",
     stack_size = 200,
   },

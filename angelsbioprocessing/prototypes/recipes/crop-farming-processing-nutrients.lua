@@ -3,8 +3,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-beans-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -27,8 +27,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-corn-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -51,8 +51,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-leafs-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -75,8 +75,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-nuts-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -99,8 +99,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-pips-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -123,8 +123,8 @@ data:extend({
     type = "recipe",
     name = "angels-solid-fruit-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-nutrient",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -146,9 +146,9 @@ data:extend({
   -- REFINING
   {
     type = "recipe",
-    name = "nutrients-refining-1",
+    name = "angels-nutrients-refining-1",
     category = "angels-gas-refining",
-    subgroup = "bio-processor-nutrient",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -169,9 +169,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nutrients-refining-2",
+    name = "angels-nutrients-refining-2",
     category = "angels-gas-refining",
-    subgroup = "bio-processor-nutrient",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -192,9 +192,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nutrients-refining-3",
+    name = "angels-nutrients-refining-3",
     category = "angels-gas-refining",
-    subgroup = "bio-processor-nutrient",
+    subgroup = "angels-bio-processor-nutrient",
     enabled = false,
     energy_required = 4,
     ingredients = {

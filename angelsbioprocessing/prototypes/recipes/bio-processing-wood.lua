@@ -2,10 +2,10 @@ data:extend({
   -- RAW WOOD GENERATOR
   {
     type = "recipe",
-    name = "tree-generator-1",
-    localised_name = { "item-name.tree-seed" },
+    name = "angels-tree-generator-1",
+    localised_name = { "item-name.angels-tree-seed" },
     category = "angels-tree",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -13,10 +13,10 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-seed", amount = 4 },
+      { type = "item", name = "angels-tree-seed", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-seed"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -24,10 +24,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "tree-generator-2",
-    localised_name = { "item-name.tree-seed" },
+    name = "angels-tree-generator-2",
+    localised_name = { "item-name.angels-tree-seed" },
     category = "angels-tree",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -36,10 +36,10 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-seed", amount = 6 },
+      { type = "item", name = "angels-tree-seed", amount = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-seed"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -47,10 +47,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "tree-generator-3",
-    localised_name = { "item-name.tree-seed" },
+    name = "angels-tree-generator-3",
+    localised_name = { "item-name.angels-tree-seed" },
     category = "angels-tree",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -60,10 +60,10 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
     results = {
-      { type = "item", name = "tree-seed", amount = 8 },
+      { type = "item", name = "angels-tree-seed", amount = 8 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-seed"),
       3,
       angelsmods.bioprocessing.number_tint
     ),
@@ -72,21 +72,21 @@ data:extend({
   -- SPECIAL TREE GENERATION
   {
     type = "recipe",
-    name = "tree-arboretum-0",
+    name = "angels-tree-arboretum-0",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "token-bio", amount = 16 },
-      { type = "item", name = "tree-seed", amount = 2 },
+      { type = "item", name = "angels-token-bio", amount = 16 },
+      { type = "item", name = "angels-tree-seed", amount = 2 },
       { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "temperate-tree", amount = 1, probability = 0.25 },
-      { type = "item", name = "swamp-tree", amount = 1, probability = 0.25 },
-      { type = "item", name = "desert-tree", amount = 1, probability = 0.25 },
+      { type = "item", name = "angels-temperate-tree", amount = 1, probability = 0.25 },
+      { type = "item", name = "angels-swamp-tree", amount = 1, probability = 0.25 },
+      { type = "item", name = "angels-desert-tree", amount = 1, probability = 0.25 },
     },
     icons = {
       {
@@ -109,14 +109,14 @@ data:extend({
   -- RAW WOOD ARBORETUM
   {
     type = "recipe",
-    name = "tree-arboretum-1",
+    name = "angels-tree-arboretum-1",
     localised_name = { "item-name.angels-solid-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-seed", amount = 2 },
+      { type = "item", name = "angels-tree-seed", amount = 2 },
       { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
@@ -136,14 +136,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "tree-arboretum-2",
+    name = "angels-tree-arboretum-2",
     localised_name = { "item-name.angels-solid-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-seed", amount = 2 },
+      { type = "item", name = "angels-tree-seed", amount = 2 },
       { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
@@ -164,14 +164,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "tree-arboretum-3",
+    name = "angels-tree-arboretum-3",
     localised_name = { "item-name.angels-solid-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum",
+    subgroup = "angels-bio-arboretum",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-seed", amount = 2 },
+      { type = "item", name = "angels-tree-seed", amount = 2 },
       { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
@@ -195,10 +195,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-saw",
-    --icon_size = 32,
-    localised_name = { "item-name.angels-solid-saw" },
     category = "crafting",
-    subgroup = "bio-wood",
+    subgroup = "angels-bio-wood",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -208,55 +206,48 @@ data:extend({
       { type = "item", name = "angels-solid-saw", amount = 1 },
     },
     allow_decomposition = false,
-    --icon_size = 32,
     order = "b[saw]-a[iron]",
   },
   {
     type = "recipe",
     name = "angels-solid-crystal-tipped-saw",
-    --icon_size = 32,
-    localised_name = { "item-name.angels-solid-crystal-tipped-saw" },
     category = "crafting",
-    subgroup = "bio-wood",
+    subgroup = "angels-bio-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-saw", amount = 1 },
-      { type = "item", name = "crystal-splinter-harmonic", amount = 1 },
+      { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-solid-crystal-tipped-saw", amount = 1 },
     },
     allow_decomposition = false,
-    --icon_size = 32,
     order = "b[saw]-b[crystal-tipped]",
   },
   {
     type = "recipe",
     name = "angels-solid-crystal-full-saw",
-    --icon_size = 32,
-    localised_name = { "item-name.angels-solid-crystal-full-saw" },
     category = "crafting",
-    subgroup = "bio-wood",
+    subgroup = "angels-bio-wood",
     enabled = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-solid-crystal-tipped-saw", amount = 1 },
-      { type = "item", name = "crystal-shard-harmonic", amount = 1 },
+      { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-solid-crystal-full-saw", amount = 1 },
     },
     allow_decomposition = false,
-    --icon_size = 32,
     order = "b[saw]-c[crystal-full]",
   },
   {
     type = "recipe",
-    name = "wood-sawing-1",
+    name = "angels-wood-sawing-1",
     localised_name = { "item-name.wood" },
     category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -285,10 +276,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "wood-sawing-2",
+    name = "angels-wood-sawing-2",
     localised_name = { "item-name.wood" },
     category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -317,10 +308,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "wood-sawing-3",
+    name = "angels-wood-sawing-3",
     localised_name = { "item-name.wood" },
     category = "advanced-crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -350,10 +341,10 @@ data:extend({
   -- TEMPERATE WOOD GENERATOR
   {
     type = "recipe",
-    name = "temperate-tree-generator-1",
-    localised_name = { "item-name.tree-temperate-seed" },
+    name = "angels-temperate-tree-generator-1",
+    localised_name = { "item-name.angels-tree-temperate-seed" },
     category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -361,10 +352,10 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-temperate-seed", amount = 4 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-temperate-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-temperate-seed"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -372,10 +363,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "temperate-tree-generator-2",
-    localised_name = { "item-name.tree-temperate-seed" },
+    name = "angels-temperate-tree-generator-2",
+    localised_name = { "item-name.angels-tree-temperate-seed" },
     category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -384,10 +375,10 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-temperate-seed", amount = 6 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-temperate-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-temperate-seed"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -395,10 +386,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "temperate-tree-generator-3",
-    localised_name = { "item-name.tree-temperate-seed" },
+    name = "angels-temperate-tree-generator-3",
+    localised_name = { "item-name.angels-tree-temperate-seed" },
     category = "angels-tree-temperate",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -408,10 +399,10 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
     results = {
-      { type = "item", name = "tree-temperate-seed", amount = 8 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 8 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-temperate-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-temperate-seed"),
       3,
       angelsmods.bioprocessing.number_tint
     ),
@@ -420,22 +411,22 @@ data:extend({
   -- TEMPERATE WOOD ARBORETUM
   {
     type = "recipe",
-    name = "temperate-tree-arboretum-0",
-    localised_name = { "entity-name.temperate-tree" },
+    name = "angels-temperate-tree-arboretum-0",
+    localised_name = { "entity-name.angels-temperate-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "token-bio", amount = 16 },
-      { type = "item", name = "tree-temperate-seed", amount = 2 },
+      { type = "item", name = "angels-token-bio", amount = 16 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 2 },
       { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "temperate-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-temperate-tree", amount = 1, probability = 0.5 },
     },
-    main_product = "temperate-tree",
+    main_product = "angels-temperate-tree",
     allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
@@ -459,23 +450,23 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "temperate-tree-arboretum-1",
+    name = "angels-temperate-tree-arboretum-1",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-temperate-seed", amount = 2 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 2 },
       { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-resin", amount = 4 },
+      { type = "item", name = "angels-bio-resin", amount = 4 },
       { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("temperate-tree"),
+      angelsmods.functions.get_object_icons("angels-temperate-tree"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -486,24 +477,24 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "temperate-tree-arboretum-2",
+    name = "angels-temperate-tree-arboretum-2",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-temperate-seed", amount = 2 },
+      { type = "item", name = "angels-tree-temperate-seed", amount = 2 },
       { type = "item", name = "angels-solid-soil", amount = 5 },
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-resin", amount = 7 },
+      { type = "item", name = "angels-bio-resin", amount = 7 },
       { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("temperate-tree"),
+      angelsmods.functions.get_object_icons("angels-temperate-tree"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -515,33 +506,33 @@ data:extend({
   -- TEMPERATE WOOD PROCESSING
   {
     type = "recipe",
-    name = "bio-resin-tree",
-    localised_name = { "item-name.bio-resin" },
-    category = "seed-extractor",
-    subgroup = "bio-arboretum-temperate",
+    name = "angels-bio-resin-tree",
+    localised_name = { "item-name.angels-bio-resin" },
+    category = "angels-seed-extractor",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-tree", amount = 1 },
+      { type = "item", name = "angels-temperate-tree", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-resin", amount = 10 },
+      { type = "item", name = "angels-bio-resin", amount = 10 },
     },
-    main_product = "bio-resin",
+    main_product = "angels-bio-resin",
     always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
     type = "recipe",
-    name = "bio-resin",
+    name = "angels-bio-resin",
     localised_name = { "fluid-name.angels-liquid-resin" },
     category = "angels-liquifying",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 40 },
-      { type = "item", name = "bio-resin", amount = 1 },
+      { type = "item", name = "angels-bio-resin", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-resin", amount = 10 },
@@ -550,7 +541,7 @@ data:extend({
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
-      "bio-resin",
+      "angels-bio-resin",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-liquid-resin",
@@ -562,10 +553,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bio-resin-resin-liquification",
+    name = "angels-bio-resin-resin-liquification",
     localised_name = { "fluid-name.angels-liquid-resin" },
     category = "angels-liquifying",
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -592,10 +583,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bio-resin-wood-reprocessing",
-    localised_name = { "recipe-name.solid-resin" },
-    category = "bio-processor",
-    subgroup = "bio-arboretum-temperate",
+    name = "angels-bio-resin-wood-reprocessing",
+    localised_name = { "item-name.angels-solid-resin" },
+    category = "angels-bio-processor",
+    subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -615,10 +606,10 @@ data:extend({
   -- SWAMP WOOD GENERATOR
   {
     type = "recipe",
-    name = "swamp-tree-generator-1",
-    localised_name = { "item-name.tree-swamp-seed" },
+    name = "angels-swamp-tree-generator-1",
+    localised_name = { "item-name.angels-tree-swamp-seed" },
     category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -626,10 +617,10 @@ data:extend({
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-swamp-seed", amount = 4 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-swamp-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-swamp-seed"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -640,10 +631,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "swamp-tree-generator-2",
-    localised_name = { "item-name.tree-swamp-seed" },
+    name = "angels-swamp-tree-generator-2",
+    localised_name = { "item-name.angels-tree-swamp-seed" },
     category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -652,10 +643,10 @@ data:extend({
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-swamp-seed", amount = 6 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-swamp-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-swamp-seed"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -666,10 +657,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "swamp-tree-generator-3",
-    localised_name = { "item-name.tree-swamp-seed" },
+    name = "angels-swamp-tree-generator-3",
+    localised_name = { "item-name.angels-tree-swamp-seed" },
     category = "angels-tree-swamp",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -679,10 +670,10 @@ data:extend({
       { type = "fluid", name = "angels-gas-nitrogen", amount = 20 },
     },
     results = {
-      { type = "item", name = "tree-swamp-seed", amount = 8 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 8 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-swamp-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-swamp-seed"),
       3,
       angelsmods.bioprocessing.number_tint
     ),
@@ -694,22 +685,22 @@ data:extend({
   -- SWAMP WOOD ARBORETUM
   {
     type = "recipe",
-    name = "swamp-tree-arboretum-0",
-    localised_name = { "entity-name.swamp-tree" },
+    name = "angels-swamp-tree-arboretum-0",
+    localised_name = { "entity-name.angels-swamp-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "token-bio", amount = 16 },
-      { type = "item", name = "tree-swamp-seed", amount = 2 },
+      { type = "item", name = "angels-token-bio", amount = 16 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 2 },
       { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "swamp-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-swamp-tree", amount = 1, probability = 0.5 },
     },
-    main_product = "swamp-tree",
+    main_product = "angels-swamp-tree",
     allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
@@ -733,23 +724,23 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "swamp-tree-arboretum-1",
+    name = "angels-swamp-tree-arboretum-1",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-swamp-seed", amount = 2 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 2 },
       { type = "item", name = "angels-solid-mud", amount = 5 },
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-plastic", amount = 4 },
+      { type = "item", name = "angels-bio-plastic", amount = 4 },
       { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("swamp-tree"),
+      angelsmods.functions.get_object_icons("angels-swamp-tree"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -760,24 +751,24 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "swamp-tree-arboretum-2",
+    name = "angels-swamp-tree-arboretum-2",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-swamp-seed", amount = 2 },
+      { type = "item", name = "angels-tree-swamp-seed", amount = 2 },
       { type = "item", name = "angels-solid-mud", amount = 5 },
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-plastic", amount = 7 },
+      { type = "item", name = "angels-bio-plastic", amount = 7 },
       { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("swamp-tree"),
+      angelsmods.functions.get_object_icons("angels-swamp-tree"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -789,33 +780,33 @@ data:extend({
   -- SWAMP WOOD PROCESSING
   {
     type = "recipe",
-    name = "bio-plastic-tree",
-    localised_name = { "item-name.bio-plastic" },
-    category = "seed-extractor",
-    subgroup = "bio-arboretum-swamp",
+    name = "angels-bio-plastic-tree",
+    localised_name = { "item-name.angels-bio-plastic" },
+    category = "angels-seed-extractor",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-tree", amount = 1 },
+      { type = "item", name = "angels-swamp-tree", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-plastic", amount = 10 },
+      { type = "item", name = "angels-bio-plastic", amount = 10 },
     },
-    main_product = "bio-plastic",
+    main_product = "angels-bio-plastic",
     always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
     type = "recipe",
-    name = "bio-plastic",
+    name = "angels-bio-plastic",
     localised_name = { "fluid-name.angels-liquid-plastic" },
     category = "angels-liquifying",
-    subgroup = "bio-arboretum-swamp",
+    subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-acetone", amount = 40 },
-      { type = "item", name = "bio-plastic", amount = 1 },
+      { type = "item", name = "angels-bio-plastic", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-plastic", amount = 10 },
@@ -824,7 +815,7 @@ data:extend({
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
-      "bio-plastic",
+      "angels-bio-plastic",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-liquid-plastic",
@@ -837,10 +828,10 @@ data:extend({
   -- DESERT WOOD GENERATOR
   {
     type = "recipe",
-    name = "desert-tree-generator-1",
-    localised_name = { "item-name.tree-desert-seed" },
+    name = "angels-desert-tree-generator-1",
+    localised_name = { "item-name.angels-tree-desert-seed" },
     category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -848,10 +839,10 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-desert-seed", amount = 4 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-desert-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-desert-seed"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -862,10 +853,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "desert-tree-generator-2",
-    localised_name = { "item-name.tree-desert-seed" },
+    name = "angels-desert-tree-generator-2",
+    localised_name = { "item-name.angels-tree-desert-seed" },
     category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -874,10 +865,10 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "tree-desert-seed", amount = 6 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 6 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-desert-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-desert-seed"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -888,10 +879,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "desert-tree-generator-3",
-    localised_name = { "item-name.tree-desert-seed" },
+    name = "angels-desert-tree-generator-3",
+    localised_name = { "item-name.angels-tree-desert-seed" },
     category = "angels-tree-desert",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -901,10 +892,10 @@ data:extend({
       { type = "fluid", name = "angels-gas-nitrogen", amount = 20 },
     },
     results = {
-      { type = "item", name = "tree-desert-seed", amount = 8 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 8 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("tree-desert-seed"),
+      angelsmods.functions.get_object_icons("angels-tree-desert-seed"),
       3,
       angelsmods.bioprocessing.number_tint
     ),
@@ -916,22 +907,22 @@ data:extend({
   -- DESERT WOOD ARBORETUM
   {
     type = "recipe",
-    name = "desert-tree-arboretum-0",
-    localised_name = { "entity-name.desert-tree" },
+    name = "angels-desert-tree-arboretum-0",
+    localised_name = { "entity-name.angels-desert-tree" },
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "token-bio", amount = 16 },
-      { type = "item", name = "tree-desert-seed", amount = 2 },
+      { type = "item", name = "angels-token-bio", amount = 16 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 2 },
       { type = "item", name = "angels-solid-alienated-fertilizer", amount = 2 },
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "desert-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-desert-tree", amount = 1, probability = 0.5 },
     },
-    main_product = "desert-tree",
+    main_product = "angels-desert-tree",
     allow_productivity = true,
     always_show_products = true,
     show_amount_in_title = false,
@@ -955,23 +946,23 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "desert-tree-arboretum-1",
+    name = "angels-desert-tree-arboretum-1",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-desert-seed", amount = 2 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 2 },
       { type = "item", name = "angels-solid-sand", amount = 5 },
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-rubber", amount = 4 },
+      { type = "item", name = "angels-bio-rubber", amount = 4 },
       { type = "item", name = "angels-solid-tree", amount = 2, ignored_by_productivity = 2 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("desert-tree"),
+      angelsmods.functions.get_object_icons("angels-desert-tree"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -982,24 +973,24 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "desert-tree-arboretum-2",
+    name = "angels-desert-tree-arboretum-2",
     category = "angels-arboretum",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "tree-desert-seed", amount = 2 },
+      { type = "item", name = "angels-tree-desert-seed", amount = 2 },
       { type = "item", name = "angels-solid-sand", amount = 5 },
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "bio-rubber", amount = 7 },
+      { type = "item", name = "angels-bio-rubber", amount = 7 },
       { type = "item", name = "angels-solid-tree", amount = 3, ignored_by_productivity = 3 },
     },
     allow_productivity = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("desert-tree"),
+      angelsmods.functions.get_object_icons("angels-desert-tree"),
       2,
       angelsmods.bioprocessing.number_tint
     ),
@@ -1011,33 +1002,33 @@ data:extend({
   -- DESERT WOOD PROCESSING
   {
     type = "recipe",
-    name = "bio-rubber-tree",
-    localised_name = { "item-name.bio-rubber" },
-    category = "seed-extractor",
-    subgroup = "bio-arboretum-desert",
+    name = "angels-bio-rubber-tree",
+    localised_name = { "item-name.angels-bio-rubber" },
+    category = "angels-seed-extractor",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-tree", amount = 1 },
+      { type = "item", name = "angels-desert-tree", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-rubber", amount = 10 },
+      { type = "item", name = "angels-bio-rubber", amount = 10 },
     },
-    main_product = "bio-rubber",
+    main_product = "angels-bio-rubber",
     always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
     type = "recipe",
-    name = "bio-rubber",
+    name = "angels-bio-rubber",
     localised_name = { "fluid-name.angels-liquid-rubber" },
     category = "angels-liquifying",
-    subgroup = "bio-arboretum-desert",
+    subgroup = "angels-bio-arboretum-desert",
     enabled = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-acetone", amount = 40 },
-      { type = "item", name = "bio-rubber", amount = 1 },
+      { type = "item", name = "angels-bio-rubber", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-rubber", amount = 10 },
@@ -1046,7 +1037,7 @@ data:extend({
     allow_productivity = true,
     always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }, {
-      "bio-rubber",
+      "angels-bio-rubber",
     }),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-liquid-rubber",

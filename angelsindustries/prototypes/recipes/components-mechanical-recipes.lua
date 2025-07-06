@@ -248,7 +248,7 @@ if angelsmods.industries.components then
       energy_required = 1, -- 1:2 ratio with motor
       ingredients = {
         { type = "item", name = "angels-motor-casing-1", amount = 1 },
-        { type = "item", name = "cellulose-fiber", amount = 1 },
+        { type = "item", name = "angels-cellulose-fiber", amount = 1 },
       },
       results = {
         { type = "item", name = "motor-block-1", amount = 1 },
@@ -265,7 +265,7 @@ if angelsmods.industries.components then
       energy_required = 2, -- 2:3 ratio with motor
       ingredients = {
         { type = "item", name = "angels-motor-casing-2", amount = 1 },
-        { type = "item", name = "cellulose-fiber", amount = 1 },
+        { type = "item", name = "angels-cellulose-fiber", amount = 1 },
       },
       results = {
         { type = "item", name = "motor-block-2", amount = 1 },

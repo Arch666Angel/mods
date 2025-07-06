@@ -2,17 +2,17 @@ data:extend({
   -- FISH
   {
     type = "technology",
-    name = "bio-refugium-fish-1",
+    name = "angels-bio-refugium-fish-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-fish-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-nutrient-paste",
+      "angels-bio-nutrient-paste",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-refugium-fish",
+        recipe = "angels-bio-refugium-fish",
       },
       {
         type = "unlock-recipe",
@@ -20,19 +20,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-keeping-0",
+        recipe = "angels-fish-keeping-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-keeping-1",
+        recipe = "angels-fish-keeping-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-keeping-2",
+        recipe = "angels-fish-keeping-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-keeping-3",
+        recipe = "angels-fish-keeping-3",
       },
     },
     unit = {
@@ -46,31 +46,31 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-refugium-fish-2",
+    name = "angels-bio-refugium-fish-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-fish-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-fish-1",
-      "bio-refugium-butchery-1",
-      "bio-processing-green",
+      "angels-bio-refugium-fish-1",
+      "angels-bio-refugium-butchery-1",
+      "angels-bio-processing-green",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fish-breeding-0",
+        recipe = "angels-fish-breeding-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-breeding-1",
+        recipe = "angels-fish-breeding-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-breeding-2",
+        recipe = "angels-fish-breeding-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-breeding-3",
+        recipe = "angels-fish-breeding-3",
       },
     },
     unit = {
@@ -85,7 +85,7 @@ data:extend({
   -- PUFFER
   {
     type = "technology",
-    name = "bio-refugium-hatchery",
+    name = "angels-bio-refugium-hatchery",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-hatchery-tech.png",
     icon_size = 160,
     order = "c-a",
@@ -96,27 +96,27 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-hatchery",
+        recipe = "angels-bio-hatchery",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-egg-1",
+        recipe = "angels-puffer-egg-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-egg-2",
+        recipe = "angels-puffer-egg-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-egg-3",
+        recipe = "angels-puffer-egg-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-egg-4",
+        recipe = "angels-puffer-egg-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-egg-5",
+        recipe = "angels-puffer-egg-5",
       },
     },
     unit = {
@@ -125,21 +125,21 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-puffer-1",
+    name = "angels-bio-refugium-puffer-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-hatchery",
-      --"bio-refugium-fish-1"
-      "bio-nutrient-paste",
+      "angels-bio-refugium-hatchery",
+      --"angels-bio-refugium-fish-1"
+      "angels-bio-nutrient-paste",
       "angels-sulfur-processing-2",
       "angels-nitrogen-processing-2",
       "advanced-circuit",
@@ -148,7 +148,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-refugium-puffer",
+        recipe = "angels-bio-refugium-puffer",
       },
       {
         type = "unlock-recipe",
@@ -156,23 +156,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-1",
+        recipe = "angels-puffer-puffing-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-2",
+        recipe = "angels-puffer-puffing-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-3",
+        recipe = "angels-puffer-puffing-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-4",
+        recipe = "angels-puffer-puffing-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-5",
+        recipe = "angels-puffer-puffing-5",
       },
     },
     unit = {
@@ -181,41 +181,41 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-puffer-2",
+    name = "angels-bio-refugium-puffer-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-puffer-1",
+      "angels-bio-refugium-puffer-1",
       "angels-advanced-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-1",
+        recipe = "angels-puffer-breeding-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-2",
+        recipe = "angels-puffer-breeding-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-3",
+        recipe = "angels-puffer-breeding-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-4",
+        recipe = "angels-puffer-breeding-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-5",
+        recipe = "angels-puffer-breeding-5",
       },
     },
     unit = {
@@ -224,41 +224,41 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-puffer-3",
+    name = "angels-bio-refugium-puffer-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-puffer-2",
+      "angels-bio-refugium-puffer-2",
       --"angels-water-treatment-2"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-23",
+        recipe = "angels-puffer-puffing-23",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-12",
+        recipe = "angels-puffer-puffing-12",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-13",
+        recipe = "angels-puffer-puffing-13",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-14",
+        recipe = "angels-puffer-puffing-14",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-puffing-15",
+        recipe = "angels-puffer-puffing-15",
       },
     },
     unit = {
@@ -267,40 +267,40 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-puffer-4",
+    name = "angels-bio-refugium-puffer-4",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-puffer-3",
+      "angels-bio-refugium-puffer-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-23",
+        recipe = "angels-puffer-breeding-23",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-12",
+        recipe = "angels-puffer-breeding-12",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-13",
+        recipe = "angels-puffer-breeding-13",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-14",
+        recipe = "angels-puffer-breeding-14",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-breeding-15",
+        recipe = "angels-puffer-breeding-15",
       },
     },
     unit = {
@@ -309,7 +309,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
@@ -317,50 +317,50 @@ data:extend({
   -- BITER
   {
     type = "technology",
-    name = "bio-refugium-biter-1",
+    name = "angels-bio-refugium-biter-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-farm-alien",
-      "bio-refugium-butchery-2",
-      "bio-refugium-puffer-2",
-      "bio-processing-crystal-splinter-2",
+      "angels-bio-farm-alien",
+      "angels-bio-refugium-butchery-2",
+      "angels-bio-refugium-puffer-2",
+      "angels-bio-processing-crystal-splinter-2",
       "production-science-pack",
       "stone-wall",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-refugium-biter",
+        recipe = "angels-bio-refugium-biter",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-eggsperiment",
+        recipe = "angels-biter-small-eggsperiment",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small",
+        recipe = "angels-biter-small",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-breeding",
+        recipe = "angels-biter-small-breeding",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-keeping",
+        recipe = "angels-biter-small-keeping",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-small-butchering",
+        recipe = "angels-biter-small-butchering",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-queen-small-butchering",
+        recipe = "angels-biter-queen-small-butchering",
       },
       {
         type = "unlock-recipe",
-        recipe = "alien-processed-meat",
+        recipe = "angels-bio-alien-processed-meat",
       },
     },
     unit = {
@@ -370,45 +370,45 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-biter-2",
+    name = "angels-bio-refugium-biter-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-biter-1",
-      "bio-processing-crystal-shard-2",
+      "angels-bio-refugium-biter-1",
+      "angels-bio-processing-crystal-shard-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "biter-medium-eggsperiment",
+        recipe = "angels-biter-medium-eggsperiment",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-medium",
+        recipe = "angels-biter-medium",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-medium-breeding",
+        recipe = "angels-biter-medium-breeding",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-medium-keeping",
+        recipe = "angels-biter-medium-keeping",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-medium-butchering",
+        recipe = "angels-biter-medium-butchering",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-queen-medium-butchering",
+        recipe = "angels-biter-queen-medium-butchering",
       },
     },
     unit = {
@@ -418,45 +418,45 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-refugium-biter-3",
+    name = "angels-bio-refugium-biter-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-biter-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-biter-2",
-      "bio-refugium-puffer-4",
+      "angels-bio-refugium-biter-2",
+      "angels-bio-refugium-puffer-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "biter-big-eggsperiment",
+        recipe = "angels-biter-big-eggsperiment",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-big",
+        recipe = "angels-biter-big",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-big-breeding",
+        recipe = "angels-biter-big-breeding",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-big-keeping",
+        recipe = "angels-biter-big-keeping",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-big-butchering",
+        recipe = "angels-biter-big-butchering",
       },
       {
         type = "unlock-recipe",
-        recipe = "biter-queen-big-butchering",
+        recipe = "angels-biter-queen-big-butchering",
       },
     },
     unit = {
@@ -466,7 +466,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
@@ -474,79 +474,79 @@ data:extend({
   -- HOGGER
   {
     type = "technology",
-    name = "bio-refugium-hogger",
+    name = "angels-bio-refugium-hogger",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-puffer-breeding-tech.png",
     icon_size = 128,
     hidden = true,
     enabled = false,
     order = "c-a",
     prerequisites = {
-      "bio-nutrient-paste",
+      "angels-bio-nutrient-paste",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "hogger-hogging-1",
+        recipe = "angels-hogger-hogging-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-breeding-1",
+        recipe = "angels-hogger-breeding-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-butchery-1",
+        recipe = "angels-hogger-butchery-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-hogging-2",
+        recipe = "angels-hogger-hogging-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-breeding-2",
+        recipe = "angels-hogger-breeding-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-butchery-2",
+        recipe = "angels-hogger-butchery-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-hogging-3",
+        recipe = "angels-hogger-hogging-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-breeding-3",
+        recipe = "angels-hogger-breeding-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-butchery-3",
+        recipe = "angels-hogger-butchery-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-hogging-4",
+        recipe = "angels-hogger-hogging-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-breeding-4",
+        recipe = "angels-hogger-breeding-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-butchery-4",
+        recipe = "angels-hogger-butchery-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-hogging-5",
+        recipe = "angels-hogger-hogging-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-breeding-5",
+        recipe = "angels-hogger-breeding-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "hogger-butchery-5",
+        recipe = "angels-hogger-butchery-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-refugium-hogger",
+        recipe = "angels-bio-refugium-hogger",
       },
     },
     unit = {
@@ -561,33 +561,33 @@ data:extend({
   -- BUTCHERY
   {
     type = "technology",
-    name = "bio-refugium-butchery-1",
+    name = "angels-bio-refugium-butchery-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-butchery-tech.png",
     icon_size = 160,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-fish-1",
+      "angels-bio-refugium-fish-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-butchery",
+        recipe = "angels-bio-butchery",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-butchery-0",
+        recipe = "angels-fish-butchery-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-butchery-1",
+        recipe = "angels-fish-butchery-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-butchery-2",
+        recipe = "angels-fish-butchery-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "fish-butchery-3",
+        recipe = "angels-fish-butchery-3",
       },
       {
         type = "unlock-recipe",
@@ -605,34 +605,34 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-refugium-butchery-2",
+    name = "angels-bio-refugium-butchery-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-refugium-butchery-tech.png",
     icon_size = 160,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-butchery-1",
-      "bio-refugium-hatchery",
+      "angels-bio-refugium-butchery-1",
+      "angels-bio-refugium-hatchery",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "puffer-butchery-1",
+        recipe = "angels-puffer-butchery-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-butchery-2",
+        recipe = "angels-puffer-butchery-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-butchery-3",
+        recipe = "angels-puffer-butchery-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-butchery-4",
+        recipe = "angels-puffer-butchery-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "puffer-butchery-5",
+        recipe = "angels-puffer-butchery-5",
       },
     },
     unit = {
@@ -641,7 +641,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },

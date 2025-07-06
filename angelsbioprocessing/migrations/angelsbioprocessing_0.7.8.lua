@@ -13,8 +13,8 @@ for index, force in pairs(game.forces) do
       tech.enabled = tech.prototype.enabled
     end
   end
-  if force.technologies["bio-processing-alien-2"].researched then
-    force.technologies["bio-processing-alien-2"].researched = false
+  if force.technologies["angels-bio-processing-alien-2"].researched then
+    force.technologies["angels-bio-processing-alien-2"].researched = false
   end
 
   force.reset_recipes()

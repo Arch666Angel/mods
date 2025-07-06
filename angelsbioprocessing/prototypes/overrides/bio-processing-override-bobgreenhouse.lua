@@ -5,7 +5,7 @@ if mods["bobgreenhouse"] then
   -----------------------------------------------------------------------------
   -- CATEGORY -----------------------------------------------------------------
   -----------------------------------------------------------------------------
-  data.raw["item-subgroup"]["bob-greenhouse-items"].group = "bio-processing-nauvis"
+  data.raw["item-subgroup"]["bob-greenhouse-items"].group = "angels-bio-processing-nauvis"
   data.raw["item-subgroup"]["bob-greenhouse-items"].order = "i"
 
   -----------------------------------------------------------------------------
@@ -18,29 +18,29 @@ if mods["bobgreenhouse"] then
     {
       name = "bob-fertiliser",
       localised_name = { "item-name.angels-solid-fertilizer" },
-      subgroup = "bio-wood",
+      subgroup = "angels-bio-wood",
       order = "a[support]-cb",
     },
   })
 
-  OV.add_prereq("bob-fertiliser", "bio-farm-2")
+  OV.add_prereq("bob-fertiliser", "angels-bio-farm-2")
 
   -----------------------------------------------------------------------------
   -- INTEGRATE BOBS WOOD PROCESSING -------------------------------------------
   -----------------------------------------------------------------------------
-  move_item("bob-seedling", "bio-arboretum-swamp", "a")
-  move_item("bob-greenhouse", "bio-processing-buildings-nauvis-a", "c[arboretum]-b")
+  move_item("bob-seedling", "angels-bio-arboretum-swamp", "a")
+  move_item("bob-greenhouse", "angels-bio-processing-buildings-nauvis-a", "c[arboretum]-b")
 
   OV.patch_recipes({
     {
       name = "bob-seedling",
-      subgroup = "bio-wood",
+      subgroup = "angels-bio-wood",
       order = "c[seedling]",
-      category = "seed-extractor",
+      category = "angels-seed-extractor",
     },
     {
       name = "bob-basic-greenhouse-cycle",
-      subgroup = "bio-arboretum",
+      subgroup = "angels-bio-arboretum",
       order = "b[arboretum]-b[tree-generation]-a[basic-greenhouse]",
       energy_required = 60,
       --results =
@@ -64,7 +64,7 @@ if mods["bobgreenhouse"] then
     },
     {
       name = "bob-advanced-greenhouse-cycle",
-      subgroup = "bio-arboretum",
+      subgroup = "angels-bio-arboretum",
       order = "b[arboretum]-b[tree-generation]-b[advanced-greenhouse]",
       energy_required = 45,
       --results =
@@ -100,7 +100,7 @@ if mods["bobgreenhouse"] then
   -- also update the other tree icons
   OV.patch_recipes({
     {
-      name = "tree-arboretum-1",
+      name = "angels-tree-arboretum-1",
       order = "b[arboretum]-b[tree-generation]-c",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -117,7 +117,7 @@ if mods["bobgreenhouse"] then
       }, 1, angelsmods.bioprocessing.number_tint),
     },
     {
-      name = "tree-arboretum-2",
+      name = "angels-tree-arboretum-2",
       order = "b[arboretum]-b[tree-generation]-d",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -134,7 +134,7 @@ if mods["bobgreenhouse"] then
       }, 2, angelsmods.bioprocessing.number_tint),
     },
     {
-      name = "tree-arboretum-3",
+      name = "angels-tree-arboretum-3",
       order = "b[arboretum]-b[tree-generation]-e",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -156,7 +156,7 @@ if mods["bobgreenhouse"] then
   if bobmods and bobmods.electronics then
     OV.patch_recipes({
       {
-        name = "seed-extractor",
+        name = "angels-seed-extractor",
         ingredients = {
           { name = "electronic-circuit", amount = 0 },
           { name = "bob-basic-circuit-board", amount = 4 },
@@ -195,30 +195,30 @@ if mods["bobgreenhouse"] then
         },
       },
       icon_size = 32,
-      subgroup = "bio-processing-wood",
+      subgroup = "angels-bio-processing-wood",
       order = "a[wood]-a[manual]",
     },
   })
 
   -- alter angels wood production to require seedlings
   OV.patch_recipes({
-    { name = "temperate-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "temperate-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "temperate-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
-    { name = "swamp-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "swamp-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "swamp-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
-    { name = "desert-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "desert-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "desert-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-temperate-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-temperate-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-temperate-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-swamp-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-swamp-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-swamp-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-desert-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-desert-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-desert-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
   })
 
   -- update tech
   OV.set_science_pack("bob-greenhouse", "logistic-science-pack", 1)
-  OV.add_prereq("bob-greenhouse", "gardens")
+  OV.add_prereq("bob-greenhouse", "angels-gardens")
   OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
-  OV.add_prereq("bob-greenhouse", "bio-arboretum-1")
-  OV.add_prereq("bio-arboretum-desert-1", "bob-greenhouse")
-  OV.add_prereq("bio-arboretum-swamp-1", "bob-greenhouse")
-  OV.add_prereq("bio-arboretum-temperate-1", "bob-greenhouse")
+  OV.add_prereq("bob-greenhouse", "angels-bio-arboretum-1")
+  OV.add_prereq("angels-bio-arboretum-desert-1", "bob-greenhouse")
+  OV.add_prereq("angels-bio-arboretum-swamp-1", "bob-greenhouse")
+  OV.add_prereq("angels-bio-arboretum-temperate-1", "bob-greenhouse")
 end

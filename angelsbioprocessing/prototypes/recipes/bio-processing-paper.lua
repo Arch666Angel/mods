@@ -2,17 +2,16 @@ local AF = angelsmods.functions
 data:extend({
   {
     type = "recipe",
-    name = "cellulose-fiber-raw-wood",
-    localised_name = { "recipe-name.cellulose-fiber-raw-wood" },
+    name = "angels-cellulose-fiber-raw-wood",
     category = "crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = true,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "wood", amount = 2 },
     },
     results = {
-      { type = "item", name = "cellulose-fiber", amount = 4 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 4 },
     },
     always_show_products = true,
     show_amount_in_title = false,
@@ -22,17 +21,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "wood-pellets",
-    localised_name = { "item-name.wood-pellets" },
+    name = "angels-wood-pellets",
     category = "crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 12 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 12 },
     },
     results = {
-      { type = "item", name = "wood-pellets", amount = 2 },
+      { type = "item", name = "angels-wood-pellets", amount = 2 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-pellets.png",
     icon_size = 32,
@@ -40,17 +38,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "wood-bricks",
-    localised_name = { "item-name.wood-bricks" },
+    name = "angels-wood-bricks",
     category = "crafting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "wood-pellets", amount = 8 },
+      { type = "item", name = "angels-wood-pellets", amount = 8 },
     },
     results = {
-      { type = "item", name = "wood-bricks", amount = 4 },
+      { type = "item", name = "angels-wood-bricks", amount = 4 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-bricks.png",
     icon_size = 32,
@@ -59,13 +56,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-carbon-dioxide-from-wood",
-    localised_name = { "recipe-name.gas-carbon-dioxide-from-wood" },
     category = "angels-liquifying",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "wood-pellets", amount = 1 },
+      { type = "item", name = "angels-wood-pellets", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 70 },
@@ -85,17 +81,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "wood-charcoal",
-    localised_name = { "item-name.wood-charcoal" },
+    name = "angels-wood-charcoal",
     category = "smelting",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "wood-pellets", amount = 2 },
+      { type = "item", name = "angels-wood-pellets", amount = 2 },
     },
     results = {
-      { type = "item", name = "wood-charcoal", amount = 3 },
+      { type = "item", name = "angels-wood-charcoal", amount = 3 },
     },
     icon_size = 32,
     order = "f",
@@ -105,11 +100,11 @@ data:extend({
     name = "angels-carbon-from-charcoal",
     localised_name = { "item-name.angels-solid-carbon" },
     category = "angels-liquifying",
-    subgroup = "bio-processing-wood",
+    subgroup = "angels-bio-processing-wood",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "wood-charcoal", amount = 1 },
+      { type = "item", name = "angels-wood-charcoal", amount = 1 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 20 },
     },
     results = {
@@ -129,13 +124,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-wood-pulp",
-    localised_name = { "item-name.angels-solid-wood-pulp" },
     category = "angels-liquifying",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 20,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 20 },
       { type = "item", name = "angels-solid-alginic-acid", amount = 5 },
       { type = "fluid", name = "water", amount = 20 },
     },
@@ -152,9 +146,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-pulping-liquor",
-    localised_name = { "fluid-name.angels-liquid-pulping-liquor" },
     category = "angels-advanced-chemistry",
-    subgroup = "bio-liquor",
+    subgroup = "angels-bio-liquor",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -177,9 +170,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "brown-liquor-recovery",
+    name = "angels-brown-liquor-recovery",
     category = "angels-liquifying",
-    subgroup = "bio-liquor",
+    subgroup = "angels-bio-liquor",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -212,13 +205,13 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "sulfite-pulping",
+    name = "angels-sulfite-pulping",
     category = "angels-advanced-chemistry",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 20 },
       { type = "fluid", name = "angels-liquid-pulping-liquor", amount = 75 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 25 },
       { type = "fluid", name = "water", amount = 50 },
@@ -240,9 +233,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-white-liquor",
-    localised_name = { "fluid-name.angels-liquid-white-liquor" },
     category = "angels-liquifying",
-    subgroup = "bio-liquor",
+    subgroup = "angels-bio-liquor",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -265,10 +257,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "kraft-recovery",
-    localised_name = { "recipe-name.kraft-recovery" },
+    name = "angels-kraft-recovery",
     category = "angels-liquifying",
-    subgroup = "bio-liquor",
+    subgroup = "angels-bio-liquor",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -290,10 +281,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "kraft-causting",
-    localised_name = { "recipe-name.kraft-causting" },
+    name = "angels-kraft-causting",
     category = "chemistry",
-    subgroup = "bio-liquor",
+    subgroup = "angels-bio-liquor",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -317,13 +307,13 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "kraft-cooking-washing",
+    name = "angels-kraft-cooking-washing",
     category = "angels-liquifying",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 20 },
       { type = "fluid", name = "angels-liquid-white-liquor", amount = 40 },
     },
     results = {
@@ -343,10 +333,9 @@ data:extend({
   --PAPER BLEACHING
   {
     type = "recipe",
-    name = "paper-bleaching-1",
-    localised_name = { "recipe-name.paper-bleaching-1" },
+    name = "angels-paper-bleaching-1",
     category = "crafting",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -363,9 +352,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "paper-bleaching-2",
+    name = "angels-paper-bleaching-2",
     category = "angels-liquifying",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -391,7 +380,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-hypochlorite-decomposition",
-    localised_name = { "recipe-name.solid-sodium-hypochlorite-decomposition" },
     category = "angels-chemical-smelting",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
@@ -410,9 +398,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "paper-bleaching-3",
+    name = "angels-paper-bleaching-3",
     category = "chemistry",
-    subgroup = "bio-paper",
+    subgroup = "angels-bio-paper",
     enabled = false,
     energy_required = 2,
     ingredients = {

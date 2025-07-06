@@ -7,21 +7,21 @@ if angelsmods.trigger.bio_rubber then
   OV.remove_science_pack("angels-rubbers", "chemical-science-pack")
 else
   OV.disable_recipe({
-    "desert-tree-generator-1",
-    "desert-tree-generator-2",
-    "desert-tree-generator-3",
-    "desert-tree-arboretum-0",
-    "desert-tree-arboretum-1",
-    "desert-tree-arboretum-2",
-    "bio-rubber-tree",
-    "bio-rubber",
+    "angels-desert-tree-generator-1",
+    "angels-desert-tree-generator-2",
+    "angels-desert-tree-generator-3",
+    "angels-desert-tree-arboretum-0",
+    "angels-desert-tree-arboretum-1",
+    "angels-desert-tree-arboretum-2",
+    "angels-bio-rubber-tree",
+    "angels-bio-rubber",
   })
-  angelsmods.functions.hide("tree-desert-seed")
-  angelsmods.functions.hide("bio-rubber")
+  angelsmods.functions.hide("angels-tree-desert-seed")
+  angelsmods.functions.hide("angels-bio-rubber")
   OV.disable_technology({
-    "bio-arboretum-desert-1",
-    "bio-arboretum-desert-2",
-    "bio-arboretum-desert-3",
+    "angels-bio-arboretum-desert-1",
+    "angels-bio-arboretum-desert-2",
+    "angels-bio-arboretum-desert-3",
   })
 end
 
@@ -31,26 +31,26 @@ if angelsmods.trigger.bio_resin then
   OV.add_prereq("angels-resin-1", "angels-resins")
 else
   OV.disable_recipe({
-    "temperate-tree-generator-1",
-    "temperate-tree-generator-2",
-    "temperate-tree-generator-3",
-    "temperate-tree-arboretum-0",
-    "temperate-tree-arboretum-1",
-    "temperate-tree-arboretum-2",
-    "bio-resin-tree",
-    "bio-resin-resin-liquification",
-    "bio-resin",
-    "bio-resin-wood-reprocessing",
+    "angels-temperate-tree-generator-1",
+    "angels-temperate-tree-generator-2",
+    "angels-temperate-tree-generator-3",
+    "angels-temperate-tree-arboretum-0",
+    "angels-temperate-tree-arboretum-1",
+    "angels-temperate-tree-arboretum-2",
+    "angels-bio-resin-tree",
+    "angels-bio-resin-resin-liquification",
+    "angels-bio-resin",
+    "angels-bio-resin-wood-reprocessing",
   })
-  angelsmods.functions.hide("tree-temperate-seed")
-  angelsmods.functions.hide("bio-resin")
+  angelsmods.functions.hide("angels-tree-temperate-seed")
+  angelsmods.functions.hide("angels-bio-resin")
   OV.disable_technology({
-    "bio-arboretum-temperate-1",
-    "bio-arboretum-temperate-2",
-    "bio-arboretum-temperate-3",
+    "angels-bio-arboretum-temperate-1",
+    "angels-bio-arboretum-temperate-2",
+    "angels-bio-arboretum-temperate-3",
   })
-  OV.remove_prereq("bio-wood-processing-2", "bio-farm-1")
-  OV.remove_unlock("bio-wood-processing-2", "bio-processor")
+  OV.remove_prereq("angels-bio-wood-processing-2", "angels-bio-farm-1")
+  OV.remove_unlock("angels-bio-wood-processing-2", "angels-bio-processor")
 end
 
 if angelsmods.trigger.bio_plastic then
@@ -59,21 +59,21 @@ if angelsmods.trigger.bio_plastic then
   OV.add_prereq("angels-plastic-1", "plastics")
 else
   OV.hide_recipe({
-    "swamp-tree-generator-1",
-    "swamp-tree-generator-2",
-    "swamp-tree-generator-3",
-    "swamp-tree-arboretum-0",
-    "swamp-tree-arboretum-1",
-    "swamp-tree-arboretum-2",
-    "bio-plastic-tree",
-    "bio-plastic",
+    "angels-swamp-tree-generator-1",
+    "angels-swamp-tree-generator-2",
+    "angels-swamp-tree-generator-3",
+    "angels-swamp-tree-arboretum-0",
+    "angels-swamp-tree-arboretum-1",
+    "angels-swamp-tree-arboretum-2",
+    "angels-bio-plastic-tree",
+    "angels-bio-plastic",
   })
-  angelsmods.functions.hide("tree-swamp-seed")
-  angelsmods.functions.hide("bio-plastic")
+  angelsmods.functions.hide("angels-tree-swamp-seed")
+  angelsmods.functions.hide("angels-bio-plastic")
   OV.disable_technology({
-    "bio-arboretum-swamp-1",
-    "bio-arboretum-swamp-2",
-    "bio-arboretum-swamp-3",
+    "angels-bio-arboretum-swamp-1",
+    "angels-bio-arboretum-swamp-2",
+    "angels-bio-arboretum-swamp-3",
   })
 end
 
@@ -82,20 +82,20 @@ if angelsmods.trigger.paper then
   OV.remove_unlock("angels-chlorine-processing-3", "angels-solid-salt-separation")
   OV.add_unlock("angels-sodium-processing-1", "angels-solid-salt-separation")
   OV.add_prereq("angels-sodium-processing-1", "angels-metallurgy-2")
-  OV.add_prereq("angels-sodium-processing-1", "bio-paper-2")
+  OV.add_prereq("angels-sodium-processing-1", "angels-bio-paper-2")
 else
   OV.hide_recipe({
     "angels-solid-wood-pulp",
-    "paper-bleaching-1",
-    "paper-bleaching-2",
-    "sulfite-pulping",
-    "brown-liquor-recovery",
+    "angels-paper-bleaching-1",
+    "angels-paper-bleaching-2",
+    "angels-sulfite-pulping",
+    "angels-brown-liquor-recovery",
     "angels-liquid-pulping-liquor",
-    "paper-bleaching-3",
+    "angels-paper-bleaching-3",
     "angels-liquid-white-liquor",
-    "kraft-cooking-washing",
-    "kraft-recovery",
-    "kraft-causting",
+    "angels-kraft-cooking-washing",
+    "angels-kraft-recovery",
+    "angels-kraft-causting",
     "angels-solid-alginic-acid",
     "angels-solid-sodium-hypochlorite-decomposition",
   })
@@ -111,18 +111,18 @@ else
     "angels-solid-alginic-acid",
   })
   OV.disable_technology({
-    "bio-paper-1",
-    "bio-paper-2",
-    "bio-paper-3",
+    "angels-bio-paper-1",
+    "angels-bio-paper-2",
+    "angels-bio-paper-3",
   })
   OV.patch_recipes({
     {
-      name = "garden-cultivating",
-      ingredients = { { name = "paste-cellulose", amount = "angels-solid-wood-pulp" } },
+      name = "angels-garden-cultivating",
+      ingredients = { { name = "angels-paste-cellulose", amount = "angels-solid-wood-pulp" } },
     },
   })
   --prereq clean-out
-  OV.remove_prereq("gardens-3", "bio-paper-1")
-  OV.add_prereq("gardens-3", "bio-processing-paste")
-  OV.remove_unlock("bio-processing-brown", "angels-solid-alginic-acid")
+  OV.remove_prereq("angels-gardens-3", "angels-bio-paper-1")
+  OV.add_prereq("angels-gardens-3", "angels-bio-processing-paste")
+  OV.remove_unlock("angels-bio-processing-brown", "angels-solid-alginic-acid")
 end

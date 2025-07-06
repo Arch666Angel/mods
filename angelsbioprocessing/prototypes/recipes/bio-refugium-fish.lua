@@ -3,9 +3,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-fish-atmosphere",
-    localised_name = { "fluid-name.angels-liquid-fish-atmosphere" },
     category = "chemistry",
-    subgroup = "bio-fish",
+    subgroup = "angels-bio-fish",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -29,14 +28,13 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-polluted-fish-atmosphere",
-    localised_name = { "fluid-name.angels-liquid-polluted-fish-atmosphere" },
     category = "angels-liquifying",
-    subgroup = "bio-fish-breeding",
+    subgroup = "angels-bio-fish-breeding",
     enabled = false,
     energy_required = 15,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
-      { type = "item", name = "bio-raw-meat", amount = 25 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 25 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
@@ -52,9 +50,9 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "fish-keeping-0",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish",
+    name = "angels-fish-keeping-0",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -90,21 +88,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-keeping-1",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish",
+    name = "angels-fish-keeping-1",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-1-raw", amount = 4, ignored_by_stats = 4 },
+      { type = "item", name = "angels-alien-fish-1-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-1-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
+      { type = "item", name = "angels-alien-fish-1-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
-        name = "alien-fish-1-raw",
+        name = "angels-alien-fish-1-raw",
         amount = 1,
         probability = 0.85,
         ignored_by_productivity = 1,
@@ -119,21 +117,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-keeping-2",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish",
+    name = "angels-fish-keeping-2",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-2-raw", amount = 4, ignored_by_stats = 4 },
+      { type = "item", name = "angels-alien-fish-2-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-2-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
+      { type = "item", name = "angels-alien-fish-2-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
-        name = "alien-fish-2-raw",
+        name = "angels-alien-fish-2-raw",
         amount = 1,
         probability = 0.85,
         ignored_by_productivity = 1,
@@ -148,21 +146,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-keeping-3",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish",
+    name = "angels-fish-keeping-3",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "alien-fish-3-raw", amount = 4, ignored_by_stats = 4 },
+      { type = "item", name = "angels-alien-fish-3-raw", amount = 4, ignored_by_stats = 4 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "alien-fish-3-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
+      { type = "item", name = "angels-alien-fish-3-raw", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
-        name = "alien-fish-3-raw",
+        name = "angels-alien-fish-3-raw",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
@@ -179,9 +177,9 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "fish-breeding-0",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish-breeding",
+    name = "angels-fish-breeding-0",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish-breeding",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -215,21 +213,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-breeding-1",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish-breeding",
+    name = "angels-fish-breeding-1",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish-breeding",
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "algae-brown", amount = 2 },
-      { type = "item", name = "alien-fish-1-raw", amount = 2, ignored_by_stats = 2 },
+      { type = "item", name = "angels-algae-brown", amount = 2 },
+      { type = "item", name = "angels-alien-fish-1-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
       {
         type = "item",
-        name = "alien-fish-1-raw",
+        name = "angels-alien-fish-1-raw",
         amount_min = 5,
         amount_max = 10,
         ignored_by_productivity = 2,
@@ -252,21 +250,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-breeding-2",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish-breeding",
+    name = "angels-fish-breeding-2",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish-breeding",
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "algae-green", amount = 2 },
-      { type = "item", name = "alien-fish-2-raw", amount = 2, ignored_by_stats = 2 },
+      { type = "item", name = "angels-algae-green", amount = 2 },
+      { type = "item", name = "angels-alien-fish-2-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
       {
         type = "item",
-        name = "alien-fish-2-raw",
+        name = "angels-alien-fish-2-raw",
         amount_min = 5,
         amount_max = 10,
         ignored_by_productivity = 2,
@@ -289,21 +287,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-breeding-3",
-    category = "bio-refugium-fish",
-    subgroup = "bio-fish-breeding",
+    name = "angels-fish-breeding-3",
+    category = "angels-bio-refugium-fish",
+    subgroup = "angels-bio-fish-breeding",
     enabled = false,
     energy_required = 60,
     ingredients = {
-      { type = "item", name = "bio-raw-meat", amount = 2 },
-      { type = "item", name = "alien-fish-3-raw", amount = 2, ignored_by_stats = 2 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 2 },
+      { type = "item", name = "angels-alien-fish-3-raw", amount = 2, ignored_by_stats = 2 },
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
       {
         type = "item",
-        name = "alien-fish-3-raw",
+        name = "angels-alien-fish-3-raw",
         amount_min = 5,
         amount_max = 10,
         ignored_by_productivity = 2,
@@ -329,17 +327,17 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "fish-butchery-0",
-    localised_name = { "item-name.bio-raw-meat" },
-    category = "bio-butchery",
-    subgroup = "bio-fish-butchery",
+    name = "angels-fish-butchery-0",
+    localised_name = { "item-name.angels-bio-raw-meat" },
+    category = "angels-bio-butchery",
+    subgroup = "angels-bio-fish-butchery",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-raw-meat", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 1, probability = 0.5 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
@@ -347,17 +345,17 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-butchery-1",
-    localised_name = { "item-name.bio-raw-meat" },
-    category = "bio-butchery",
-    subgroup = "bio-fish-butchery",
+    name = "angels-fish-butchery-1",
+    localised_name = { "item-name.angels-bio-raw-meat" },
+    category = "angels-bio-butchery",
+    subgroup = "angels-bio-fish-butchery",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "alien-fish-1-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-1-raw", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-raw-meat", amount = 1 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
@@ -365,17 +363,17 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-butchery-2",
-    localised_name = { "item-name.bio-raw-meat" },
-    category = "bio-butchery",
-    subgroup = "bio-fish-butchery",
+    name = "angels-fish-butchery-2",
+    localised_name = { "item-name.angels-bio-raw-meat" },
+    category = "angels-bio-butchery",
+    subgroup = "angels-bio-fish-butchery",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "alien-fish-2-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-2-raw", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-raw-meat", amount = 1 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
@@ -383,17 +381,17 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-butchery-3",
-    localised_name = { "item-name.bio-raw-meat" },
-    category = "bio-butchery",
-    subgroup = "bio-fish-butchery",
+    name = "angels-fish-butchery-3",
+    localised_name = { "item-name.angels-bio-raw-meat" },
+    category = "angels-bio-butchery",
+    subgroup = "angels-bio-fish-butchery",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "alien-fish-3-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-3-raw", amount = 1 },
     },
     results = {
-      { type = "item", name = "bio-raw-meat", amount = 2 },
+      { type = "item", name = "angels-bio-raw-meat", amount = 2 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
     icon_size = 32,
@@ -404,10 +402,10 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "fish-pressing-0",
+    name = "angels-fish-pressing-0",
     localised_name = { "fluid-name.angels-liquid-raw-fish-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-fish",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 12,
     ingredients = {
@@ -415,7 +413,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 200 },
-      { type = "item", name = "fish-pulp", amount = 5 },
+      { type = "item", name = "angels-fish-pulp", amount = 5 },
     },
     main_product = "angels-liquid-raw-fish-oil",
     always_show_products = true,
@@ -431,18 +429,18 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-pressing-1",
+    name = "angels-fish-pressing-1",
     localised_name = { "fluid-name.angels-liquid-raw-fish-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-fish",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "alien-fish-1-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-1-raw", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 200 },
-      { type = "item", name = "fish-pulp", amount = 1 },
+      { type = "item", name = "angels-fish-pulp", amount = 1 },
     },
     main_product = "angels-liquid-raw-fish-oil",
     always_show_products = true,
@@ -450,7 +448,7 @@ data:extend({
       nil,
       { { 200, 113, 048 }, { 200, 113, 048 }, { 241, 155, 057, 0.8 }, { 241, 155, 057, 0.8 } },
       {
-        "alien-fish-1-raw",
+        "angels-alien-fish-1-raw",
       }
     ),
     icon_size = 32,
@@ -458,18 +456,18 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-pressing-2",
+    name = "angels-fish-pressing-2",
     localised_name = { "fluid-name.angels-liquid-raw-fish-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-fish",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 8,
     ingredients = {
-      { type = "item", name = "alien-fish-2-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-2-raw", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 100 },
-      { type = "item", name = "fish-pulp", amount = 2 },
+      { type = "item", name = "angels-fish-pulp", amount = 2 },
     },
     main_product = "angels-liquid-raw-fish-oil",
     always_show_products = true,
@@ -477,7 +475,7 @@ data:extend({
       nil,
       { { 200, 113, 048 }, { 200, 113, 048 }, { 241, 155, 057, 0.8 }, { 241, 155, 057, 0.8 } },
       {
-        "alien-fish-2-raw",
+        "angels-alien-fish-2-raw",
       }
     ),
     icon_size = 32,
@@ -485,18 +483,18 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-pressing-3",
+    name = "angels-fish-pressing-3",
     localised_name = { "fluid-name.angels-liquid-raw-fish-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-fish",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { type = "item", name = "alien-fish-3-raw", amount = 1 },
+      { type = "item", name = "angels-alien-fish-3-raw", amount = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 50 },
-      { type = "item", name = "fish-pulp", amount = 1 },
+      { type = "item", name = "angels-fish-pulp", amount = 1 },
     },
     main_product = "angels-liquid-raw-fish-oil",
     always_show_products = true,
@@ -504,7 +502,7 @@ data:extend({
       nil,
       { { 200, 113, 048 }, { 200, 113, 048 }, { 241, 155, 057, 0.8 }, { 241, 155, 057, 0.8 } },
       {
-        "alien-fish-3-raw",
+        "angels-alien-fish-3-raw",
       }
     ),
     icon_size = 32,
@@ -512,21 +510,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fish-pulp-nutrients",
+    name = "angels-fish-pulp-nutrients",
     localised_name = { "fluid-name.angels-liquid-nutrient-pulp" },
-    category = "nutrient-extractor",
-    subgroup = "bio-processor-press-fish",
+    category = "angels-nutrient-extractor",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "item", name = "fish-pulp", amount = 5 },
+      { type = "item", name = "angels-fish-pulp", amount = 5 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
     always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 214, 135, 010 }, nil, { 239, 168, 044 } }, {
-      "fish-pulp",
+      "angels-fish-pulp",
     }),
     order = "c[nutrient-extraction]",
   },
@@ -534,7 +532,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-fish-oil-filtering-1",
     category = "angels-filtering",
-    subgroup = "bio-processor-press-fish",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -559,7 +557,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-fish-oil-filtering-2",
     category = "angels-filtering-2",
-    subgroup = "bio-processor-press-fish",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -584,7 +582,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-fish-oil-refining",
     category = "oil-processing",
-    subgroup = "bio-processor-press-fish",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -603,9 +601,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "advanced-liquid-fish-oil-refining",
+    name = "angels-advanced-liquid-fish-oil-refining",
     category = "oil-processing",
-    subgroup = "bio-processor-press-fish",
+    subgroup = "angels-bio-processor-press-fish",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -627,21 +625,21 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "crystal-splinter-crystalization-1",
-    localised_name = { "item-name.crystal-splinter-raw" },
+    name = "angels-crystal-splinter-crystalization-1",
+    localised_name = { "item-name.angels-crystal-splinter-raw" },
     category = "angels-crystallizing",
-    subgroup = "bio-biter-processing-crystal-splinter",
+    subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },
     },
     results = {
-      { type = "item", name = "crystal-splinter-raw", amount = 1, probability = 0.4 },
+      { type = "item", name = "angels-crystal-splinter-raw", amount = 1, probability = 0.4 },
     },
     always_show_products = true,
     icons = AF.add_number_icon_layer(
-      AF.get_object_icons("crystal-splinter-raw"),
+      AF.get_object_icons("angels-crystal-splinter-raw"),
       1,
       angelsmods.bioprocessing.number_tint
     ),
@@ -649,22 +647,22 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "crystal-splinter-crystalization-2",
-    localised_name = { "item-name.crystal-splinter-raw" },
+    name = "angels-crystal-splinter-crystalization-2",
+    localised_name = { "item-name.angels-crystal-splinter-raw" },
     category = "angels-crystallizing",
-    subgroup = "bio-biter-processing-crystal-splinter",
+    subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },
-      { type = "item", name = "crystal-seed", amount = 1 },
+      { type = "item", name = "angels-crystal-seed", amount = 1 },
     },
     results = {
-      { type = "item", name = "crystal-splinter-raw", amount = 1 },
+      { type = "item", name = "angels-crystal-splinter-raw", amount = 1 },
     },
     always_show_products = true,
     icons = AF.add_number_icon_layer(
-      AF.get_object_icons("crystal-splinter-raw"),
+      AF.get_object_icons("angels-crystal-splinter-raw"),
       2,
       angelsmods.bioprocessing.number_tint
     ),

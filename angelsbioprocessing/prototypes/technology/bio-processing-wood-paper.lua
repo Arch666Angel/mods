@@ -1,17 +1,17 @@
 data:extend({
   {
     type = "technology",
-    name = "bio-wood-processing",
+    name = "angels-bio-wood-processing",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
+      "angels-bio-processing-brown",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "wood-pellets",
+        recipe = "angels-wood-pellets",
       },
     },
     unit = {
@@ -24,25 +24,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-wood-processing-2",
+    name = "angels-bio-wood-processing-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-wood-processing",
+      "angels-bio-wood-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-processor",
+        recipe = "angels-bio-processor",
       },
       {
         type = "unlock-recipe",
-        recipe = "wood-charcoal",
+        recipe = "angels-wood-charcoal",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing",
+        recipe = "angels-bio-resin-wood-reprocessing",
       },
     },
     unit = {
@@ -55,19 +55,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-wood-processing-3",
+    name = "angels-bio-wood-processing-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/wood-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
       "angels-coal-processing",
-      "bio-wood-processing-2",
+      "angels-bio-wood-processing-2",
       "logistic-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "wood-bricks",
+        recipe = "angels-wood-bricks",
       },
       {
         type = "unlock-recipe",
@@ -89,7 +89,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-arboretum-1",
+    name = "angels-bio-arboretum-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
@@ -99,36 +99,36 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-composting",
-      "bio-processing-brown",
+      "angels-bio-processing-brown",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-generator-temperate-1",
+        recipe = "angels-bio-generator-temperate-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-generator-swamp-1",
+        recipe = "angels-bio-generator-swamp-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-generator-desert-1",
+        recipe = "angels-bio-generator-desert-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-arboretum-1",
+        recipe = "angels-bio-arboretum-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-generator-1",
+        recipe = "angels-tree-generator-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-arboretum-1",
+        recipe = "angels-tree-arboretum-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "wood-sawing-1",
+        recipe = "angels-wood-sawing-1",
       },
       {
         type = "unlock-recipe",
@@ -146,7 +146,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-arboretum-2",
+    name = "angels-bio-arboretum-2",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
@@ -155,26 +155,26 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-1",
-      "bio-processing-crystal-splinter-2",
-      "bio-farm-alien",
+      "angels-bio-arboretum-1",
+      "angels-bio-processing-crystal-splinter-2",
+      "angels-bio-farm-alien",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tree-generator-2",
+        recipe = "angels-tree-generator-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-arboretum-0",
+        recipe = "angels-tree-arboretum-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-arboretum-2",
+        recipe = "angels-tree-arboretum-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "wood-sawing-2",
+        recipe = "angels-wood-sawing-2",
       },
       {
         type = "unlock-recipe",
@@ -186,14 +186,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-3",
+    name = "angels-bio-arboretum-3",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-arboretum-tech.png",
@@ -202,21 +202,21 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-2",
-      "bio-processing-crystal-shard-2",
+      "angels-bio-arboretum-2",
+      "angels-bio-processing-crystal-shard-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tree-generator-3",
+        recipe = "angels-tree-generator-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "tree-arboretum-3",
+        recipe = "angels-tree-arboretum-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "wood-sawing-3",
+        recipe = "angels-wood-sawing-3",
       },
       {
         type = "unlock-recipe",
@@ -229,14 +229,14 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-temperate-1",
+    name = "angels-bio-arboretum-temperate-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
@@ -245,26 +245,26 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-1",
-      "bio-fermentation",
+      "angels-bio-arboretum-1",
+      "angels-bio-fermentation",
       "angels-resins",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-generator-1",
+        recipe = "angels-temperate-tree-generator-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-arboretum-1",
+        recipe = "angels-temperate-tree-arboretum-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-resin",
+        recipe = "angels-bio-resin",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-resin-resin-liquification",
+        recipe = "angels-bio-resin-resin-liquification",
       },
     },
     unit = {
@@ -272,14 +272,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-temperate-2",
+    name = "angels-bio-arboretum-temperate-2",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
@@ -288,21 +288,21 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-temperate-1",
-      "bio-farm-alien",
+      "angels-bio-arboretum-temperate-1",
+      "angels-bio-farm-alien",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-generator-2",
+        recipe = "angels-temperate-tree-generator-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-arboretum-0",
+        recipe = "angels-temperate-tree-arboretum-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-resin-tree",
+        recipe = "angels-bio-resin-tree",
       },
     },
     unit = {
@@ -310,14 +310,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-temperate-3",
+    name = "angels-bio-arboretum-temperate-3",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-temperate-generator-tech.png",
@@ -326,17 +326,17 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-temperate-2",
+      "angels-bio-arboretum-temperate-2",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-generator-3",
+        recipe = "angels-temperate-tree-generator-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "temperate-tree-arboretum-2",
+        recipe = "angels-temperate-tree-arboretum-2",
       },
     },
     unit = {
@@ -345,14 +345,14 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-swamp-1",
+    name = "angels-bio-arboretum-swamp-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
@@ -361,22 +361,22 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-1",
-      "bio-nutrient-paste",
+      "angels-bio-arboretum-1",
+      "angels-bio-nutrient-paste",
       "plastics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-generator-1",
+        recipe = "angels-swamp-tree-generator-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-arboretum-1",
+        recipe = "angels-swamp-tree-arboretum-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-plastic",
+        recipe = "angels-bio-plastic",
       },
     },
     unit = {
@@ -384,14 +384,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-swamp-2",
+    name = "angels-bio-arboretum-swamp-2",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
@@ -400,21 +400,21 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-swamp-1",
-      "bio-farm-alien",
+      "angels-bio-arboretum-swamp-1",
+      "angels-bio-farm-alien",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-generator-2",
+        recipe = "angels-swamp-tree-generator-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-arboretum-0",
+        recipe = "angels-swamp-tree-arboretum-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-plastic-tree",
+        recipe = "angels-bio-plastic-tree",
       },
     },
     unit = {
@@ -422,14 +422,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-swamp-3",
+    name = "angels-bio-arboretum-swamp-3",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-swamp-generator-tech.png",
@@ -438,17 +438,17 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-swamp-2",
+      "angels-bio-arboretum-swamp-2",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-generator-3",
+        recipe = "angels-swamp-tree-generator-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "swamp-tree-arboretum-2",
+        recipe = "angels-swamp-tree-arboretum-2",
       },
     },
     unit = {
@@ -457,14 +457,14 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-desert-1",
+    name = "angels-bio-arboretum-desert-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
@@ -474,21 +474,21 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-rubbers",
-      "bio-arboretum-1",
-      "bio-nutrient-paste",
+      "angels-bio-arboretum-1",
+      "angels-bio-nutrient-paste",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-generator-1",
+        recipe = "angels-desert-tree-generator-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-arboretum-1",
+        recipe = "angels-desert-tree-arboretum-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-rubber",
+        recipe = "angels-bio-rubber",
       },
     },
     unit = {
@@ -496,14 +496,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-desert-2",
+    name = "angels-bio-arboretum-desert-2",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
@@ -512,21 +512,21 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-desert-1",
-      "bio-farm-alien",
+      "angels-bio-arboretum-desert-1",
+      "angels-bio-farm-alien",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-generator-2",
+        recipe = "angels-desert-tree-generator-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-arboretum-0",
+        recipe = "angels-desert-tree-arboretum-0",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-rubber-tree",
+        recipe = "angels-bio-rubber-tree",
       },
     },
     unit = {
@@ -534,14 +534,14 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-arboretum-desert-3",
+    name = "angels-bio-arboretum-desert-3",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/technology/bio-desert-generator-tech.png",
@@ -550,17 +550,17 @@ data:extend({
     },
     order = "c-a",
     prerequisites = {
-      "bio-arboretum-desert-2",
+      "angels-bio-arboretum-desert-2",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-generator-3",
+        recipe = "angels-desert-tree-generator-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "desert-tree-arboretum-2",
+        recipe = "angels-desert-tree-arboretum-2",
       },
     },
     unit = {
@@ -569,20 +569,20 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-paper-1",
+    name = "angels-bio-paper-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
       "angels-basic-chemistry",
-      "bio-processing-brown",
+      "angels-bio-processing-brown",
       "logistic-science-pack",
     },
     effects = {
@@ -596,7 +596,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "paper-bleaching-1",
+        recipe = "angels-paper-bleaching-1",
       },
     },
     unit = {
@@ -610,28 +610,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-paper-2",
+    name = "angels-bio-paper-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
       "angels-nitrogen-processing-2",
-      "bio-paper-1",
+      "angels-bio-paper-1",
       "chemical-science-pack",
       "angels-chlorine-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "paper-bleaching-2",
+        recipe = "angels-paper-bleaching-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "sulfite-pulping",
+        recipe = "angels-sulfite-pulping",
       },
       {
         type = "unlock-recipe",
-        recipe = "brown-liquor-recovery",
+        recipe = "angels-brown-liquor-recovery",
       },
       {
         type = "unlock-recipe",
@@ -650,19 +650,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-paper-3",
+    name = "angels-bio-paper-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/paper-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-paper-2",
+      "angels-bio-paper-2",
       "angels-sodium-processing-2",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "paper-bleaching-3",
+        recipe = "angels-paper-bleaching-3",
       },
       {
         type = "unlock-recipe",
@@ -670,15 +670,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "kraft-cooking-washing",
+        recipe = "angels-kraft-cooking-washing",
       },
       {
         type = "unlock-recipe",
-        recipe = "kraft-recovery",
+        recipe = "angels-kraft-recovery",
       },
       {
         type = "unlock-recipe",
-        recipe = "kraft-causting",
+        recipe = "angels-kraft-causting",
       },
     },
     unit = {

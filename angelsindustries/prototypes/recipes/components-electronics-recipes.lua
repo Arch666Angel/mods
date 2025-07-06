@@ -31,7 +31,7 @@ if angelsmods.industries.components then
     --  ingredients =
     --  {
     --    {type = "item", name = "plastic", amount = 1},
-    --    {type = "item", name = "paste-cellulose", amount = 1},
+    --    {type = "item", name = "angels-paste-cellulose", amount = 1},
     --    {type = "item", name = "angels-solid-carbon", amount = 1},
     --    {type = "item", name = "copper-cable", amount = 1},
     --  },
@@ -324,7 +324,7 @@ if angelsmods.industries.components then
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
-        { type = "item", name = "cellulose-fiber", amount = 1 },
+        { type = "item", name = "angels-cellulose-fiber", amount = 1 },
         { type = "fluid", name = "angels-liquid-plastic", amount = 2 },
       },
       results = { { type = "item", name = "circuit-orange-board", amount = 1 } },

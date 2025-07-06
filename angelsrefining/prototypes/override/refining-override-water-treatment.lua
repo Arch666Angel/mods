@@ -56,7 +56,7 @@ else
   end
   if angelsmods.bioprocessing then
     OV.disable_recipe({
-      "puffer-puffing-13",
+      "angels-puffer-puffing-13",
     })
   end
 end
@@ -77,7 +77,7 @@ else
   })
   if angelsmods.bioprocessing then
     OV.disable_recipe({
-      "puffer-puffing-15",
+      "angels-puffer-puffing-15",
     })
   end
 end
@@ -107,7 +107,7 @@ else
   end
   if angelsmods.bioprocessing then
     OV.disable_recipe({
-      "puffer-puffing-14",
+      "angels-puffer-puffing-14",
     })
   end
 end
@@ -299,7 +299,7 @@ else
   else
     angelsmods.functions.hide("angels-solid-lithium")
     OV.disable_recipe("angels-solid-lithium")
-    OV.disable_recipe("algae-brown-burning")
+    OV.disable_recipe("angels-algae-brown-burning")
   end
 end
 

@@ -14,7 +14,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plutonium-synthesis",
-    localised_name = { "recipe-name.angels-plutonium-synthesis" },
     enabled = false,
     category = "centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
@@ -169,7 +168,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-uranium-fuel-cell",
-    localised_name = { "recipe-name.angels-uranium-fuel-cell" },
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",

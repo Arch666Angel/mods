@@ -3,24 +3,24 @@ local pollution_absorption_per_second = data.raw["tile"]["out-of-map"].absorptio
 data:extend({
   {
     type = "item",
-    name = "bio-tile",
-    localised_description = { "item-description.bio-tile", string.format("%.6f", pollution_absorption_per_second) },
+    name = "angels-bio-tile",
+    localised_description = { "item-description.angels-bio-tile", string.format("%.6f", pollution_absorption_per_second) },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-tile.png",
     icon_size = 64,
     subgroup = "angels-stone",
     order = "f",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "bio-tile",
+      result = "angels-bio-tile",
       condition_size = 4,
       condition = {layers = {water_tile = true}},
     },
   },
   {
     type = "tile",
-    name = "bio-tile",
+    name = "angels-bio-tile",
     needs_correction = false,
-    minable = { mining_time = 0.5, result = "bio-tile" },
+    minable = { mining_time = 0.5, result = "angels-bio-tile" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {layers={
       ground_tile=true}},

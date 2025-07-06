@@ -3,13 +3,13 @@ local enemy_autoplace = require("__base__/prototypes/entity/enemy-autoplace-util
 data:extend({
   {
     type = "simple-entity-with-force",
-    name = "puffer-egg",
+    name = "angels-puffer-egg",
     render_layer = "object",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-1-egg.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
     order = "s-e-w-f",
-    minable = { mining_time = 1, result = "bio-puffer-egg-1" },
+    minable = { mining_time = 1, result = "angels-bio-puffer-egg-1" },
     max_health = 100,
     corpse = "small-remnants",
     collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
@@ -24,7 +24,7 @@ data:extend({
   },
   {
     type = "unit-spawner",
-    name = "biter-spawner",
+    name = "angels-biter-spawner",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
     icon_size = 32,
     flags = { "placeable-player", "placeable-enemy", "not-repairable" },
@@ -118,7 +118,7 @@ data:extend({
       },
     },
     result_units = {
-      { "puffer-egg", { { 0, 0 }, { 1, 1 } } },
+      { "angels-puffer-egg", { { 0, 0 }, { 1, 1 } } },
     },
     spawning_cooldown = { 360, 150 },
     spawning_radius = 10,

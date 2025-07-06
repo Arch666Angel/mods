@@ -27,8 +27,8 @@ if angelsmods.industries.tech then
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
-  AI.core_replace("bio-processing-brown", "processing", "basic")
-  AI.core_replace("bio-paper-1", "processing", "basic")
+  AI.core_replace("angels-bio-processing-brown", "processing", "basic")
+  AI.core_replace("angels-bio-paper-1", "processing", "basic")
   -- INDUSTRIES
   OV.set_science_pack("tech-red-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-green-circuit", "datacore-basic", 2)
@@ -58,19 +58,19 @@ if angelsmods.industries.tech then
   AI.core_replace("space-science-pack", "processing", "exploration")
   AI.core_replace("artillery-shell-range-1", "war", "exploration")
   -- BIO PROCESSING
-  AI.core_replace("bio-refugium-hatchery", "processing", "exploration")
-  AI.core_replace("bio-refugium-fish-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-fish-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-3", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-4", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-3", "processing", "exploration")
-  OV.set_science_pack("bio-temperate-farm", "datacore-processing-1", 2)
-  OV.set_science_pack("bio-desert-farm", "datacore-processing-1", 2)
-  OV.set_science_pack("bio-swamp-farm", "datacore-processing-1", 2)
+  AI.core_replace("angels-bio-refugium-hatchery", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-fish-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-fish-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-3", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-4", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-3", "processing", "exploration")
+  OV.set_science_pack("angels-bio-temperate-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-bio-desert-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-bio-swamp-farm", "datacore-processing-1", 2)
   -- INDUSTRIES
   AI.core_replace("angels-rocket", "war", "exploration")
   -- EXPLORATION

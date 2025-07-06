@@ -2,21 +2,21 @@ data:extend({
   -- GENERATOR
   {
     type = "item",
-    name = "bio-generator-temperate-1",
+    name = "angels-bio-generator-temperate-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
         icon_size = 32,
       },
     },
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "b[generator]-a",
-    place_result = "bio-generator-temperate-1",
+    place_result = "angels-bio-generator-temperate-1",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "bio-generator-temperate-1",
+    name = "angels-bio-generator-temperate-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-temperate-generator.png",
@@ -24,14 +24,14 @@ data:extend({
       },
     },
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "bio-generator-temperate-1" },
+    minable = { mining_time = 1, result = "angels-bio-generator-temperate-1" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 1,
-    fast_replaceable_group = "bio-generator",
+    fast_replaceable_group = "angels-bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-temperate", "angels-tree" },
@@ -125,21 +125,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "bio-generator-swamp-1",
+    name = "angels-bio-generator-swamp-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-swamp-generator.png",
         icon_size = 32,
       },
     },
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "b[generator]-b",
-    place_result = "bio-generator-swamp-1",
+    place_result = "angels-bio-generator-swamp-1",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "bio-generator-swamp-1",
+    name = "angels-bio-generator-swamp-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-swamp-generator.png",
@@ -147,14 +147,14 @@ data:extend({
       },
     },
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "bio-generator-swamp-1" },
+    minable = { mining_time = 1, result = "angels-bio-generator-swamp-1" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 1,
-    fast_replaceable_group = "bio-generator",
+    fast_replaceable_group = "angels-bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-swamp", "angels-tree" },
@@ -248,21 +248,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "bio-generator-desert-1",
+    name = "angels-bio-generator-desert-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-desert-generator.png",
         icon_size = 32,
       },
     },
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "b[generator]-c",
-    place_result = "bio-generator-desert-1",
+    place_result = "angels-bio-generator-desert-1",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "bio-generator-desert-1",
+    name = "angels-bio-generator-desert-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-desert-generator.png",
@@ -270,14 +270,14 @@ data:extend({
       },
     },
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "bio-generator-desert-1" },
+    minable = { mining_time = 1, result = "angels-bio-generator-desert-1" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 1,
-    fast_replaceable_group = "bio-generator",
+    fast_replaceable_group = "angels-bio-generator",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-desert", "angels-tree" },
@@ -373,21 +373,21 @@ data:extend({
   --ARBORETUM
   {
     type = "item",
-    name = "bio-arboretum-1",
+    name = "angels-bio-arboretum-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
         icon_size = 32,
       },
     },
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "c[arboretum]-a", -- c[arboretum]-b reserved for bob greenhouse (see override)
-    place_result = "bio-arboretum-1",
+    place_result = "angels-bio-arboretum-1",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "bio-arboretum-1",
+    name = "angels-bio-arboretum-1",
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-arboretum.png",
@@ -395,14 +395,14 @@ data:extend({
       },
     },
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "bio-arboretum-1" },
+    minable = { mining_time = 1, result = "angels-bio-arboretum-1" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     drawing_box_vertical_extension = 1.5,
-    fast_replaceable_group = "bio-arboretum",
+    fast_replaceable_group = "angels-bio-arboretum",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-arboretum" },
@@ -493,4 +493,4 @@ data:extend({
   },
 })
 
-angelsmods.functions.allow_bio_productivity("bio-arboretum-1")
+angelsmods.functions.allow_bio_productivity("angels-bio-arboretum-1")

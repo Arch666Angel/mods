@@ -1,9 +1,9 @@
 local OV = angelsmods.functions.OV
 if angelsmods.industries.components then
-  OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
-  OV.remove_science_pack("bio-paper-1", "logistic-science-pack")
-  OV.remove_prereq("bio-paper-1", "logistic-science-pack")
-  OV.remove_prereq("bio-paper-1", "angels-basic-chemistry")
+  OV.add_unlock("angels-bio-paper-1", "circuit-grey-board-alternative")
+  OV.remove_science_pack("angels-bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("angels-bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("angels-bio-paper-1", "angels-basic-chemistry")
   OV.patch_recipes({
     {
       name = "angels-solid-wood-pulp",
@@ -23,7 +23,7 @@ if angelsmods.industries.components then
       icon_size = 128,
       prerequisites = {
         "angels-solder-smelting-basic",
-        "bio-paper-1",
+        "angels-bio-paper-1",
       },
       effects = {
         {

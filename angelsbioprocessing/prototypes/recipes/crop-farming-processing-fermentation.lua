@@ -5,7 +5,7 @@ data:extend({
     name = "fermentation-corn",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
-    subgroup = "bio-processor-fermentation",
+    subgroup = "angels-bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -41,7 +41,7 @@ data:extend({
     name = "fermentation-fruit",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
-    subgroup = "bio-processor-fermentation",
+    subgroup = "angels-bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -74,9 +74,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "aerobic-fermentation",
+    name = "angels-aerobic-fermentation",
     category = "angels-liquifying",
-    subgroup = "bio-processor-fermentation",
+    subgroup = "angels-bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -102,9 +102,9 @@ data:extend({
   -- PROCESSING
   {
     type = "recipe",
-    name = "anaerobic-fermentation",
+    name = "angels-anaerobic-fermentation",
     category = "angels-liquifying",
-    subgroup = "bio-processor-fermentation",
+    subgroup = "angels-bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -132,7 +132,7 @@ data:extend({
     name = "ethanol-to-ethylene-synthesis",
     localised_name = { "fluid-name.angels-gas-ethylene" },
     category = "chemistry",
-    subgroup = "bio-processor-fermentation",
+    subgroup = "angels-bio-processor-fermentation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -162,7 +162,7 @@ data:extend({
     name = "angels-liquid-acetic-acid-catalyst",
     localised_name = { "fluid-name.angels-liquid-acetic-acid" },
     category = "angels-advanced-chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -193,7 +193,7 @@ data:extend({
     name = "angels-liquid-acetic-anhydride",
     localised_name = { "fluid-name.angels-liquid-acetic-anhydride" },
     category = "angels-advanced-chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -222,11 +222,11 @@ data:extend({
     name = "angels-liquid-acetate-mixture",
     localised_name = { "fluid-name.angels-liquid-cellulose-acetate-mixture" },
     category = "angels-advanced-chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 10 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 10 },
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 40 },
       { type = "fluid", name = "angels-liquid-acetic-anhydride", amount = 40 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 20 },
@@ -249,7 +249,7 @@ data:extend({
     name = "angels-liquid-cellulose-acetate",
     localised_name = { "fluid-name.angels-liquid-cellulose-acetate" },
     category = "chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -275,10 +275,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bio-plastic-1",
+    name = "angels-bio-plastic-1",
     localised_name = { "fluid-name.angels-liquid-plastic" },
     category = "chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -307,7 +307,7 @@ data:extend({
     name = "angels-liquid-propionic-acid-catalyst",
     localised_name = { "fluid-name.angels-liquid-propionic-acid" },
     category = "angels-advanced-chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -335,14 +335,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "bio-plastic-2",
+    name = "angels-bio-plastic-2",
     localised_name = { "fluid-name.angels-liquid-plastic" },
     category = "chemistry",
-    subgroup = "bio-plastic",
+    subgroup = "angels-bio-plastic",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 10 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 10 },
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 25 },
       { type = "fluid", name = "angels-liquid-propionic-acid", amount = 25 },
     },

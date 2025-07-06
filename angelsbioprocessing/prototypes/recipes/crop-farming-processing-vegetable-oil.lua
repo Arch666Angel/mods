@@ -3,8 +3,8 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-vegetable-oil-nuts",
     localised_name = { "fluid-name.angels-liquid-raw-vegetable-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-vegetables",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -27,8 +27,8 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-vegetable-oil-pips",
     localised_name = { "fluid-name.angels-liquid-raw-vegetable-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-vegetables",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -51,8 +51,8 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-vegetable-oil-beans",
     localised_name = { "fluid-name.angels-liquid-raw-vegetable-oil" },
-    category = "bio-pressing",
-    subgroup = "bio-processor-press-vegetables",
+    category = "angels-bio-pressing",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -76,7 +76,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-vegetable-oil-filtering-1",
     category = "angels-filtering",
-    subgroup = "bio-processor-press-vegetables",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -100,7 +100,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-raw-vegetable-oil-filtering-2",
     category = "angels-filtering-2",
-    subgroup = "bio-processor-press-vegetables",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -124,7 +124,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-vegetable-oil-refining",
     category = "oil-processing",
-    subgroup = "bio-processor-press-vegetables",
+    subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
     energy_required = 4,
     ingredients = {

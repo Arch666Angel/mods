@@ -2,26 +2,25 @@ local AF = angelsmods.functions
 local tints = {
   ["angels-solid-sodium-carbonate"] = AF.fluid_color("Na2CO3"),
   ["angels-solid-alginic-acid"] = AF.fluid_color("C6H8O6"),
-  ["algae-brown"] = { r = 225 / 255, g = 160 / 255, b = 106 / 255 },
-  ["algae-green"] = { r = 84 / 255, g = 118 / 255, b = 76 / 255 },
-  ["algae-blue"] = { r = 89 / 255, g = 89 / 255, b = 188 / 255 },
-  ["algae-red"] = { r = 188 / 255, g = 89 / 255, b = 89 / 255 },
+  ["angels-algae-brown"] = { r = 225 / 255, g = 160 / 255, b = 106 / 255 },
+  ["angels-algae-green"] = { r = 84 / 255, g = 118 / 255, b = 76 / 255 },
+  ["angels-algae-blue"] = { r = 89 / 255, g = 89 / 255, b = 188 / 255 },
+  ["angels-algae-red"] = { r = 188 / 255, g = 89 / 255, b = 89 / 255 },
 }
 data:extend({
   --BROWN
   {
     type = "recipe",
-    name = "algae-brown",
-    localised_name = { "item-name.algae-brown" },
-    category = "bio-processing-2",
-    subgroup = "bio-processing-brown",
+    name = "angels-algae-brown",
+    category = "angels-bio-processing-2",
+    subgroup = "angels-bio-processing-brown",
     enabled = false,
     energy_required = 30,
     ingredients = {
       { type = "fluid", name = "angels-water-saline", amount = 100 },
     },
     results = {
-      { type = "item", name = "algae-brown", amount = 40 },
+      { type = "item", name = "angels-algae-brown", amount = 40 },
     },
     allow_productivity = true,
     icon_size = 32,
@@ -29,14 +28,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "algae-brown-burning",
+    name = "angels-algae-brown-burning",
     localised_name = { "item-name.angels-solid-lithium" },
     category = "smelting",
-    subgroup = "bio-processing-brown",
+    subgroup = "angels-bio-processing-brown",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "algae-brown", amount = 20 },
+      { type = "item", name = "angels-algae-brown", amount = 20 },
     },
     results = {
       { type = "item", name = "angels-solid-lithium", amount = 1 },
@@ -46,14 +45,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "algae-brown-burning-wash",
+    name = "angels-algae-brown-burning-wash",
     localised_name = { "item-name.angels-solid-sodium-carbonate" },
     category = "angels-liquifying",
-    subgroup = "bio-processing-brown",
+    subgroup = "angels-bio-processing-brown",
     enabled = false,
     energy_required = 7.5,
     ingredients = {
-      { type = "item", name = "algae-brown", amount = 20 },
+      { type = "item", name = "angels-algae-brown", amount = 20 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
@@ -62,7 +61,7 @@ data:extend({
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       tints["angels-solid-sodium-carbonate"],
-      tints["algae-brown"],
+      tints["angels-algae-brown"],
       "angels-water-purified",
       tints["angels-solid-sodium-carbonate"],
     }),
@@ -71,13 +70,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-alginic-acid",
-    localised_name = { "item-name.angels-solid-alginic-acid" },
     category = "crafting",
-    subgroup = "bio-processing-brown",
+    subgroup = "angels-bio-processing-brown",
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { type = "item", name = "algae-brown", amount = 10 },
+      { type = "item", name = "angels-algae-brown", amount = 10 },
     },
     results = {
       { type = "item", name = "angels-solid-alginic-acid", amount = 2 },
@@ -85,42 +83,22 @@ data:extend({
     icon_size = 32,
     order = "c[solid-alginic-acid]",
   },
-  --[[{
-      type = "recipe",
-      name = "circuit-wood-fiber-board",
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/wood-fiber-board.png",
-      category = "advanced-crafting",
-      subgroup = "bio-processing-brown",
-      enabled = false,
-      energy_required = 4,
-      ingredients =
-      {
-        {type="item", name="cellulose-fiber", amount=4},
-        {type="item", name="angels-solid-alginic-acid", amount=1},
-      },
-      results=
-      {
-        {type="item", name="circuit-wood-fiber-board", amount=3},
-      },
-      icon_size = 32,
-      order = "c[circuit-wood-fiber-board]",
-    },]]
 
   --GREEN
   {
     type = "recipe",
-    name = "algae-green-simple",
-    category = "bio-processing",
-    subgroup = "bio-processing-green",
+    name = "angels-algae-green-simple",
+    category = "angels-bio-processing",
+    subgroup = "angels-bio-processing-green",
     enabled = false,
     energy_required = 30,
-    main_product = "algae-green",
+    main_product = "angels-algae-green",
     ingredients = {
       { type = "fluid", name = "water", amount = 100 },
     },
     results = {
-      { type = "item", name = "algae-green", amount = 25 },
-      { type = "item", name = "algae-brown", amount = 5 },
+      { type = "item", name = "angels-algae-green", amount = 25 },
+      { type = "item", name = "angels-algae-brown", amount = 5 },
     },
     allow_productivity = true,
     icons = AF.add_number_icon_layer({
@@ -133,10 +111,9 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "algae-green",
-    localised_name = { "item-name.algae-green" },
-    category = "bio-processing-2",
-    subgroup = "bio-processing-green",
+    name = "angels-algae-green",
+    category = "angels-bio-processing-2",
+    subgroup = "angels-bio-processing-green",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -144,7 +121,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 80 },
     },
     results = {
-      { type = "item", name = "algae-green", amount = 50 },
+      { type = "item", name = "angels-algae-green", amount = 50 },
     },
     allow_productivity = true,
     icons = AF.add_number_icon_layer({
@@ -157,16 +134,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cellulose-fiber-algae",
+    name = "angels-cellulose-fiber-algae",
     category = "crafting",
-    subgroup = "bio-processing-green",
+    subgroup = "angels-bio-processing-green",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { type = "item", name = "algae-green", amount = 10 },
+      { type = "item", name = "angels-algae-green", amount = 10 },
     },
     results = {
-      { type = "item", name = "cellulose-fiber", amount = 5 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 5 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/cellulose-fiber-algae.png",
     icon_size = 32,
@@ -176,11 +153,11 @@ data:extend({
     type = "recipe",
     name = "angels-gas-methanol-from-wood",
     category = "angels-liquifying",
-    subgroup = "bio-processing-green",
+    subgroup = "angels-bio-processing-green",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 20 },
     },
     results = {
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
@@ -195,10 +172,9 @@ data:extend({
   --BLUE
   {
     type = "recipe",
-    name = "algae-blue",
-    localised_name = { "item-name.algae-blue" },
-    category = "bio-processing-4",
-    subgroup = "bio-processing-blue",
+    name = "angels-algae-blue",
+    category = "angels-bio-processing-4",
+    subgroup = "angels-bio-processing-blue",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -206,7 +182,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 100 },
     },
     results = {
-      { type = "item", name = "algae-blue", amount = 40 },
+      { type = "item", name = "angels-algae-blue", amount = 40 },
     },
     allow_productivity = true,
     icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-blue.png",
@@ -215,17 +191,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "blue-fiber-algae",
-    localised_name = { "item-name.blue-cellulose-fiber" },
+    name = "angels-blue-cellulose-fiber",
     category = "crafting",
-    subgroup = "bio-processing-blue",
+    subgroup = "angels-bio-processing-blue",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { type = "item", name = "algae-blue", amount = 10 },
+      { type = "item", name = "angels-algae-blue", amount = 10 },
     },
     results = {
-      { type = "item", name = "blue-cellulose-fiber", amount = 5 },
+      { type = "item", name = "angels-blue-cellulose-fiber", amount = 5 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/blue-cellulose-fiber.png",
     icon_size = 32,
@@ -234,13 +209,13 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-ammonia-from-blue-fiber",
-    localised_name = { "recipe-name.gas-ammonia" },
+    localised_name = { "fluid-name.angels-gas-ammonia" },
     category = "angels-liquifying",
-    subgroup = "bio-processing-blue",
+    subgroup = "angels-bio-processing-blue",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "blue-cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-blue-cellulose-fiber", amount = 20 },
     },
     results = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
@@ -255,10 +230,9 @@ data:extend({
   --RED
   {
     type = "recipe",
-    name = "algae-red",
-    localised_name = { "item-name.algae-red" },
-    category = "bio-processing-3",
-    subgroup = "bio-processing-red",
+    name = "angels-algae-red",
+    category = "angels-bio-processing-3",
+    subgroup = "angels-bio-processing-red",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -266,7 +240,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
     },
     results = {
-      { type = "item", name = "algae-red", amount = 40 },
+      { type = "item", name = "angels-algae-red", amount = 40 },
     },
     allow_productivity = true,
     icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-red.png",
@@ -275,17 +249,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "red-fiber-algae",
-    localised_name = { "item-name.red-cellulose-fiber" },
+    name = "angels-red-cellulose-fiber",
     category = "crafting",
-    subgroup = "bio-processing-red",
+    subgroup = "angels-bio-processing-red",
     enabled = false,
     energy_required = 3,
     ingredients = {
-      { type = "item", name = "algae-red", amount = 10 },
+      { type = "item", name = "angels-algae-red", amount = 10 },
     },
     results = {
-      { type = "item", name = "red-cellulose-fiber", amount = 5 },
+      { type = "item", name = "angels-red-cellulose-fiber", amount = 5 },
     },
     icon = "__angelsbioprocessinggraphics__/graphics/icons/red-cellulose-fiber.png",
     icon_size = 32,
@@ -294,13 +267,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-calcium-carbonate",
-    localised_name = { "item-name.angels-solid-calcium-carbonate" },
     category = "angels-liquifying",
-    subgroup = "bio-processing-red",
+    subgroup = "angels-bio-processing-red",
     enabled = false,
     energy_required = 30,
     ingredients = {
-      { type = "item", name = "red-cellulose-fiber", amount = 20 },
+      { type = "item", name = "angels-red-cellulose-fiber", amount = 20 },
     },
     results = {
       { type = "item", name = "angels-solid-calcium-carbonate", amount = 5 },
@@ -309,9 +281,9 @@ data:extend({
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       tints["angels-solid-calcium-carbonate"],
-      tints["algae-red"],
+      tints["angels-algae-red"],
       tints["angels-solid-calcium-carbonate"],
-      tints["algae-red"],
+      tints["angels-algae-red"],
     }),
     order = "c[solid-calcium-carbonate]",
   },

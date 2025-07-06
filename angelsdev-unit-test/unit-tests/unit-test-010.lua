@@ -480,7 +480,7 @@ local function add_ignores()
         ["angels-liquid-resin"] = true,
       },
     }
-    ignored_unlocks["bio-processing-paste"] = {
+    ignored_unlocks["angels-bio-processing-paste"] = {
       items = {
         ["angels-powder-cobalt"] = true,
         ["angels-powder-copper"] = true,
@@ -493,21 +493,21 @@ local function add_ignores()
       },
     }
     -- TODO: Tidy up puffer / crop prerequisites
-    ignored_unlocks["bio-refugium-hatchery"] = {
+    ignored_unlocks["angels-bio-refugium-hatchery"] = {
       items = {
-        ["bio-puffer-egg-2"] = true,
-        ["bio-puffer-egg-3"] = true,
-        ["bio-puffer-egg-4"] = true,
-        ["bio-puffer-egg-5"] = true,
+        ["angels-bio-puffer-egg-2"] = true,
+        ["angels-bio-puffer-egg-3"] = true,
+        ["angels-bio-puffer-egg-4"] = true,
+        ["angels-bio-puffer-egg-5"] = true,
       },
     }
-    ignored_unlocks["bio-fermentation"] = {
+    ignored_unlocks["angels-bio-fermentation"] = {
       items = {
         ["angels-solid-corn"] = true,
         ["angels-solid-fruit"] = true,
       },
     }
-    ignored_unlocks["bio-nutrient-paste"] = {
+    ignored_unlocks["angels-bio-nutrient-paste"] = {
       items = {
         ["angels-solid-beans"] = true,
         ["angels-solid-corn"] = true,
@@ -517,7 +517,7 @@ local function add_ignores()
         ["angels-solid-fruit"] = true,
       },
     }
-    ignored_unlocks["bio-pressing-1"] = {
+    ignored_unlocks["angels-bio-pressing-1"] = {
       items = {
         ["angels-solid-nuts"] = true,
         ["angels-solid-pips"] = true,
@@ -527,31 +527,31 @@ local function add_ignores()
     -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
     ignored_unlocks["angels-bio-yield-module"] = {
       items = {
-        ["crystal-splinter-green"] = true,
+        ["angels-crystal-splinter-green"] = true,
       },
     }
     ignored_unlocks["angels-bio-yield-module-2"] = {
       items = {
-        ["crystal-shard-green"] = true,
+        ["angels-crystal-shard-green"] = true,
       },
     }
     ignored_unlocks["angels-bio-yield-module-3"] = {
       items = {
-        ["crystal-full-green"] = true,
+        ["angels-crystal-full-green"] = true,
       },
     }
 
-    ignored_unlocks["bio-desert-farm"] = {
+    ignored_unlocks["angels-bio-desert-farm"] = {
       items = {
         ["angels-clay-brick"] = true,
       },
     }
-    ignored_unlocks["bio-swamp-farm"] = {
+    ignored_unlocks["angels-bio-swamp-farm"] = {
       items = {
         ["bob-bronze-pipe"] = true,
       },
     }
-    ignored_unlocks["bio-temperate-farm"] = {
+    ignored_unlocks["angels-bio-temperate-farm"] = {
       items = {
         ["bob-bronze-pipe"] = true,
         ["angels-clay-brick"] = true,
