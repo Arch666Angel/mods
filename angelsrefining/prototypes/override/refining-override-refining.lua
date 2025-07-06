@@ -106,8 +106,8 @@ else
     "angels-ore8-dust",
     "angels-ore8-dust-processing",
     "angels-ore8-solution",
+    "angels-ore8-solution-filtering",
     "angels-ore8-anode-sludge",
-    "angels-ore8-anode-sludge-filtering",
     "angels-ore8-crystal",
     "angels-ore8-crystal-processing",
   })
@@ -148,8 +148,8 @@ else
     "angels-ore9-dust",
     "angels-ore9-dust-processing",
     "angels-ore9-solution",
+    "angels-ore9-solution-filtering",
     "angels-ore9-anode-sludge",
-    "angels-ore9-anode-sludge-filtering",
     "angels-ore9-crystal",
     "angels-ore9-crystal-processing",
   })

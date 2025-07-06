@@ -1083,7 +1083,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-ore8-anode-sludge-filtering",
+        recipe = "angels-ore8-solution-filtering",
       },
       {
         type = "unlock-recipe",
@@ -1099,7 +1099,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-ore9-anode-sludge-filtering",
+        recipe = "angels-ore9-solution-filtering",
       },
       {
         type = "unlock-recipe",
