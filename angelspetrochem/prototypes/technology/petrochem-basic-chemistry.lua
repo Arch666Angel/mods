@@ -391,7 +391,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-hydrogen-fluoride",
+        recipe = "angels-hydrogen-fluoride-dissolving",
       },
     },
     unit = {
@@ -421,11 +421,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-filter-lime-used",
+        recipe = "angels-sulfur-air-scrubbing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-sulfur-scrubber",
+        recipe = "angels-filter-lime-used-recycling",
       },
     },
     unit = {

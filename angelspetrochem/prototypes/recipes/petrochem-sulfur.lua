@@ -159,8 +159,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-hydrogen-fluoride",
-    localised_name = { "recipe-name.angels-liquid-hydrogen-fluoride" },
+    name = "angels-hydrogen-fluoride-dissolving",
     category = "chemistry",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -194,7 +193,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-hydrogen-fluoride",
-    localised_name = { "recipe-name.angels-gas-hydrogen-fluoride" },
     category = "chemistry",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -239,7 +237,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-sulfur-scrubber",
+    name = "angels-sulfur-air-scrubbing",
     category = "angels-petrochem-air-filtering",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 10,
@@ -261,8 +259,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-filter-lime-used",
-    localised_name = { "recipe-name.angels-sulfur-air-scrubbing" },
+    name = "angels-filter-lime-used-recycling",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -285,7 +282,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-hydrogen-sulfide-enrichment",
-    localised_name = { "recipe-name.angels-hydrogen-sulfide-enrichment" },
     category = "angels-steam-cracking",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2.5,
