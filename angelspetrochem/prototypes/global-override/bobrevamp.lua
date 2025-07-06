@@ -53,8 +53,6 @@ if mods["bobrevamp"] then
   OV.converter_fluid("bob-dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
   angelsmods.functions.disable_barreling_recipes("bob-dinitrogen-tetroxide")
 
-  OV.converter_fluid("bob-hydrogen-peroxide", "gas-hydrogen-peroxide")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrogen-peroxide")
 
   OV.converter_fluid("bob-hydrazine", "gas-hydrazine")
   angelsmods.functions.disable_barreling_recipes("bob-hydrazine")
@@ -63,7 +61,6 @@ if mods["bobrevamp"] then
   OV.disable_recipe({
     "bob-dinitrogen-tetroxide",
     "bob-hydrazine",
-    "bob-hydrogen-peroxide",
     "bob-enriched-fuel-from-hydrazine",
   })
 

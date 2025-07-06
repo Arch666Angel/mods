@@ -61,27 +61,6 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-hydrogen-peroxide",
-    localised_description = show_formula and {
-      "tooltip-description.chemical-formula",
-      "H[font=default-tiny-bold]2[/font]O[font=default-tiny-bold]2[/font]",
-    } or nil,
-    icons = angelsmods.functions.create_gas_fluid_icon(
-      { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-peroxide.png", 72 },
-      "OOH"
-    ),
-    --icon_size = 32,
-    subgroup = "petrochem-basic-fluids",
-    order = "e",
-    default_temperature = 0,
-    gas_temperature = 0,
-    heat_capacity = "0.1kJ",
-    base_color = angelsmods.functions.fluid_color("HO"), --{r = 1, g = 0, b = 0},
-    flow_color = angelsmods.functions.flow_color("HO"), --{r = 1, g = 0, b = 0},
-    max_temperature = 0,
-  },
-  {
-    type = "fluid",
     name = "gas-carbon-monoxide",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "CO" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
