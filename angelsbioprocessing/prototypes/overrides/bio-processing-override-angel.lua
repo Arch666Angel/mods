@@ -82,8 +82,6 @@ for _, item_name in pairs({ "solid-beans", "solid-corn", "solid-leafs", "solid-n
   end
 end
 
--- Puffer nests cannot be created
-angelsmods.functions.hide("puffer-nest")
 
 if angelsmods.trigger.crystals_full == true then
 else

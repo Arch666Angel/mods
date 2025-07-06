@@ -2,16 +2,6 @@ local def_shift = { 0.75, -2 }
 
 data:extend({
   {
-    type = "item",
-    name = "puffer-nest",
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
-    icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "a",
-    stack_size = 200,
-    place_result = "puffer-nest",
-  },
-  {
     type = "tree",
     name = "puffer-nest",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
