@@ -1,0 +1,35 @@
+{
+  "entity":
+  [
+    ["blast-furnace", "angels-blast-furnace"],
+    ["blast-furnace-2", "angels-blast-furnace-2"],
+    ["blast-furnace-3", "angels-blast-furnace-3"],
+    ["blast-furnace-4", "angels-blast-furnace-4"],
+    ["casting-machine", "angels-casting-machine"],
+    ["casting-machine-2", "angels-casting-machine-2"],
+    ["casting-machine-3", "angels-casting-machine-3"],
+    ["casting-machine-4", "angels-casting-machine-4"],
+    ["cooling-tower", "angels-cooling-tower"],
+    ["ore-processing-machine", "angels-ore-processing-machine"],
+    ["ore-processing-machine-2", "angels-ore-processing-machine-2"],
+    ["ore-processing-machine-3", "angels-ore-processing-machine-3"],
+    ["ore-processing-machine-4", "angels-ore-processing-machine-4"],
+    ["pellet-press", "angels-pellet-press"],
+    ["pellet-press-2", "angels-pellet-press-2"],
+    ["pellet-press-3", "angels-pellet-press-3"],
+    ["pellet-press-4", "angels-pellet-press-4"],
+    ["powder-mixer", "angels-powder-mixer"],
+    ["powder-mixer-2", "angels-powder-mixer-2"],
+    ["powder-mixer-3", "angels-powder-mixer-3"],
+    ["powder-mixer-4", "angels-powder-mixer-4"],
+    ["sintering-oven", "angels-sintering-oven"],
+    ["sintering-oven-2", "angels-sintering-oven-2"],
+    ["sintering-oven-3", "angels-sintering-oven-3"],
+    ["sintering-oven-4", "angels-sintering-oven-4"],
+    ["sintering-oven-5", "angels-sintering-oven-5"],
+    ["strand-casting-machine", "angels-strand-casting-machine"],
+    ["strand-casting-machine-2", "angels-strand-casting-machine-2"],
+    ["strand-casting-machine-3", "angels-strand-casting-machine-3"],
+    ["strand-casting-machine-4", "angels-strand-casting-machine-4"]
+  ]
+}

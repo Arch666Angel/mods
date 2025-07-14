@@ -1,0 +1,38 @@
+{
+  "entity":
+  [
+    ["algae-farm", "angels-algae-farm"],
+    ["algae-farm-2", "angels-algae-farm-2"],
+    ["algae-farm-3", "angels-algae-farm-3"],
+    ["algae-farm-4", "angels-algae-farm-4"],
+    ["alien-fish-1", "angels-alien-fish-1"],
+    ["alien-fish-2", "angels-alien-fish-2"],
+    ["alien-fish-3", "angels-alien-fish-3"],
+    ["bio-arboretum-1", "angels-bio-arboretum-1"],
+    ["bio-butchery", "angels-bio-butchery"],
+    ["bio-generator-desert-1", "angels-bio-generator-desert-1"],
+    ["bio-generator-swamp-1", "angels-bio-generator-swamp-1"],
+    ["bio-generator-temperate-1", "angels-bio-generator-temperate-1"],
+    ["bio-hatchery", "angels-bio-hatchery"],
+    ["bio-press", "angels-bio-press"],
+    ["bio-processor", "angels-bio-processor"],
+    ["bio-refugium-biter", "angels-bio-refugium-biter"],
+    ["bio-refugium-fish", "angels-bio-refugium-fish"],
+    ["bio-refugium-hogger", "angels-bio-refugium-hogger"],
+    ["bio-refugium-puffer", "angels-bio-refugium-puffer"],
+    ["composter", "angels-composter"],
+    ["crop-farm", "angels-crop-farm"],
+    ["desert-farm", "angels-desert-farm"],
+    ["desert-garden", "angels-desert-garden"],
+    ["desert-tree", "angels-desert-tree"],
+    ["nutrient-extractor", "angels-nutrient-extractor"],
+    ["puffer-nest", "angels-puffer-nest"],
+    ["seed-extractor", "angels-seed-extractor"],
+    ["swamp-farm", "angels-swamp-farm"],
+    ["swamp-garden", "angels-swamp-garden"],
+    ["swamp-tree", "angels-swamp-tree"],
+    ["temperate-farm", "angels-temperate-farm"],
+    ["temperate-garden", "angels-temperate-garden"],
+    ["temperate-tree", "angels-temperate-tree"]
+  ] 
+}

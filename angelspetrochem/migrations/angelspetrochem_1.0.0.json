@@ -1,4 +1,28 @@
 {
+  "entity":
+  [
+    ["advanced-chemical-plant", "angels-advanced-chemical-plant"],
+    ["advanced-chemical-plant-2", "angels-advanced-chemical-plant-2"],
+    ["gas-refinery", "angels-gas-refinery"],
+    ["gas-refinery-2", "angels-gas-refinery-2"],
+    ["gas-refinery-3", "angels-gas-refinery-3"],
+    ["gas-refinery-4", "angels-gas-refinery-4"],
+    ["gas-refinery-small", "angels-gas-refinery-small"],
+    ["gas-refinery-small-2", "angels-gas-refinery-small-2"],
+    ["gas-refinery-small-3", "angels-gas-refinery-small-3"],
+    ["gas-refinery-small-4", "angels-gas-refinery-small-4"],
+    ["oil-refinery-2", "angels-oil-refinery-2"],
+    ["oil-refinery-3", "angels-oil-refinery-3"],
+    ["oil-refinery-4", "angels-oil-refinery-4"],
+    ["separator", "angels-separator"],
+    ["separator-2", "angels-separator-2"],
+    ["separator-3", "angels-separator-3"],
+    ["separator-4", "angels-separator-4"],
+    ["steam-cracker", "angels-steam-cracker"],
+    ["steam-cracker-2", "angels-steam-cracker-2"],
+    ["steam-cracker-3", "angels-steam-cracker-3"],
+    ["steam-cracker-4", "angels-steam-cracker-4"]
+  ],
   "recipe":
   [
     ["fill-gas-acetone-barrel", "gas-acetone-barrel"],
