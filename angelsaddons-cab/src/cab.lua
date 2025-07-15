@@ -137,7 +137,7 @@ return {
     end
 
     -- check if the vehicle has at least one interface equipment
-    if not deployedCab["angels-cab"].grid.count("angels-cab-energy-interface-mk1") > 0 then
+    if deployedCab["angels-cab"].grid.count("angels-cab-energy-interface-mk1") == 0 then
       return cannotDeploy(
         deployedCab["angels-cab"],
         { "angels-cab-messages.deploy-noEnergyInterface", { "equipment-name.angels-cab-energy-interface", "MK1" } }

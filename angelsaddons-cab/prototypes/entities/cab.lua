@@ -522,7 +522,6 @@ data:extend({
           {
             type = "create-entity",
             entity_name = "angels-cab-deploy-trigger",
-            check_buildability = true,
             trigger_created_entity = true,
           },
         },
@@ -579,7 +578,6 @@ data:extend({
           {
             type = "create-entity",
             entity_name = "angels-cab-undeploy-trigger",
-            check_buildability = true,
             trigger_created_entity = true,
           },
         },
