@@ -450,5 +450,36 @@
     ["water-separation-2", "angels-water-separation-2"],
     ["water-viscous-mud", "angels-water-viscous-mud"],
     ["yellow-waste-water-purification", "angels-yellow-waste-water-purification"]
+  ],
+  "technology":
+  [
+    ["advanced-ore-refining-1", "angels-advanced-ore-refining-1"],
+    ["advanced-ore-refining-2", "angels-advanced-ore-refining-2"],
+    ["advanced-ore-refining-3", "angels-advanced-ore-refining-3"],
+    ["advanced-ore-refining-4", "angels-advanced-ore-refining-4"],
+    ["geode-crystallization-1", "angels-geode-crystallization-1"],
+    ["geode-processing-1", "angels-geode-processing-1"],
+    ["geode-processing-2", "angels-geode-processing-2"],
+    ["geode-processing-3", "angels-geode-processing-3"],
+    ["ore-advanced-crushing", "angels-ore-advanced-crushing"],
+    ["ore-advanced-floatation", "angels-ore-advanced-floatation"],
+    ["ore-crushing", "angels-ore-crushing"],
+    ["ore-electro-whinning-cell", "angels-ore-electro-whinning-cell"],
+    ["ore-floatation", "angels-ore-floatation"],
+    ["ore-leaching", "angels-ore-leaching"],
+    ["ore-powderizer", "angels-ore-powderizer"],
+    ["ore-refining", "angels-ore-refining"],
+    ["slag-processing-1", "angels-slag-processing-1"],
+    ["slag-processing-2", "angels-slag-processing-2"],
+    ["slag-processing-3", "angels-slag-processing-3"],
+    ["thermal-water-extraction", "angels-thermal-water-extraction"],
+    ["thermal-water-extraction-2", "angels-thermal-water-extraction-2"],
+    ["thermal-water-processing", "angels-thermal-water-processing"],
+    ["water-treatment", "angels-water-treatment"],
+    ["water-treatment-2", "angels-water-treatment-2"],
+    ["water-treatment-3", "angels-water-treatment-3"],
+    ["water-treatment-4", "angels-water-treatment-4"],
+    ["water-washing-1", "angels-water-washing-1"],
+    ["water-washing-2", "angels-water-washing-2"]
   ]
 }

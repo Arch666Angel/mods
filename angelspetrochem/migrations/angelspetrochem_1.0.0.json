@@ -616,5 +616,35 @@
     ["valve-underflow", "angels-valve-underflow"],
     ["water-gas-shift-1", "angels-water-gas-shift-1"],
     ["water-gas-shift-2", "angels-water-gas-shift-2"]
+  ],
+  "technology":
+  [
+    ["basic-chemistry", "angels-basic-chemistry"],
+    ["basic-chemistry-2", "angels-basic-chemistry-2"],
+    ["basic-chemistry-3", "angels-basic-chemistry-3"],
+    ["chlorine-processing-1", "angels-chlorine-processing-1"],
+    ["chlorine-processing-2", "angels-chlorine-processing-2"],
+    ["chlorine-processing-3", "angels-chlorine-processing-3"],
+    ["chlorine-processing-4", "angels-chlorine-processing-4"],
+    ["gas-processing", "angels-gas-processing"],
+    ["gas-synthesis", "angels-gas-synthesis"],
+    ["oil-gas-extraction", "angels-oil-gas-extraction"],
+    ["plastic-1", "angels-plastic-1"],
+    ["plastic-2", "angels-plastic-2"],
+    ["plastic-3", "angels-plastic-3"],
+    ["resin-1", "angels-resin-1"],
+    ["resin-2", "angels-resin-2"],
+    ["resin-3", "angels-resin-3"],
+    ["resins", "angels-resins"],
+    ["rocket-booster-1", "angels-rocket-booster-1"],
+    ["rocket-booster-2", "angels-rocket-booster-2"],
+    ["rubber", "angels-rubber"],
+    ["rubbers", "angels-rubbers"],
+    ["sodium-processing-1", "angels-sodium-processing-1"],
+    ["sodium-processing-2", "angels-sodium-processing-2"],
+    ["steam-cracking-1", "angels-steam-cracking-1"],
+    ["steam-cracking-2", "angels-steam-cracking-2"],
+    ["water-chemistry-1", "angels-water-chemistry-1"],
+    ["water-chemistry-2", "angels-water-chemistry-2"]
   ]
 }

@@ -502,5 +502,22 @@
     ["zinc-ore-processing-alt", "angels-zinc-ore-processing-alt"],
     ["zinc-ore-smelting", "angels-zinc-ore-smelting"],
     ["zinc-processed-processing", "angels-zinc-processed-processing"]
+  ],
+  "technology":
+  [
+    ["ore-processing-1", "angels-ore-processing-1"],
+    ["ore-processing-2", "angels-ore-processing-2"],
+    ["ore-processing-3", "angels-ore-processing-3"],
+    ["ore-processing-4", "angels-ore-processing-4"],
+    ["ore-processing-5", "angels-ore-processing-5"],
+    ["powder-metallurgy-1", "angels-powder-metallurgy-1"],
+    ["powder-metallurgy-2", "angels-powder-metallurgy-2"],
+    ["powder-metallurgy-3", "angels-powder-metallurgy-3"],
+    ["powder-metallurgy-4", "angels-powder-metallurgy-4"],
+    ["powder-metallurgy-5", "angels-powder-metallurgy-5"],
+    ["strand-casting-1", "angels-strand-casting-1"],
+    ["strand-casting-2", "angels-strand-casting-2"],
+    ["strand-casting-3", "angels-strand-casting-3"],
+    ["strand-casting-4", "angels-strand-casting-4"]
   ]
 }
