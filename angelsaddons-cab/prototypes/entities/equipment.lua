@@ -110,7 +110,7 @@ data:extend({
     max_health = 50,
     corpse = "small-remnants",
     collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
-    collision_mask = {},
+    collision_mask = { layers = {} },
     --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
     energy_source = {
       type = "electric",
@@ -132,6 +132,8 @@ data:extend({
       height = 1,
     },
     working_sound = nil,
+    subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+    order = "f",
   },
 })
 
@@ -230,7 +232,7 @@ data:extend{{
   max_health = 50,
   corpse = "small-remnants",
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
-  collision_mask = {},
+  collision_mask = { layers = {} },
   --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
   energy_source =
   {

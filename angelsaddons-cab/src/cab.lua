@@ -34,7 +34,7 @@ local tick_updateDeployedCab = function(deployedCabData)
     if energyInterface.energy < energyRequired then -- needs more energy
       --log(string.format("        Interface requires more energy! Missing %i J (%i W)", energyRequired - energyInterface.energy, (energyRequired - energyInterface.energy)*60))
       local angelsCab = deployedCabData["angels-cab"]
-      if angelsCab and angelsCab.valid and angelsCab.grid.get_contents()[energyInterfaceName] then
+      if angelsCab and angelsCab.valid and angelsCab.grid.count(energyInterfaceName) > 0 then
         --log("        There are modules to recharge this interface...")
         local energyRequired = energyRequired - energyInterface.energy -- will be a positive number (and never 0)
 
@@ -137,7 +137,7 @@ return {
     end
 
     -- check if the vehicle has at least one interface equipment
-    if not deployedCab["angels-cab"].grid.get_contents()["angels-cab-energy-interface-mk1"] then
+    if not deployedCab["angels-cab"].grid.count("angels-cab-energy-interface-mk1") > 0 then
       return cannotDeploy(
         deployedCab["angels-cab"],
         { "angels-cab-messages.deploy-noEnergyInterface", { "equipment-name.angels-cab-energy-interface", "MK1" } }
