@@ -276,7 +276,8 @@
     ["tree-swamp-seed", "angels-tree-swamp-seed"],
     ["tree-temperate-seed", "angels-tree-temperate-seed"],
     ["wood-bricks", "angels-wood-bricks"],
-    ["wood-charcoal", "angels-wood-charcoal"]
+    ["wood-charcoal", "angels-wood-charcoal"],
+    ["wood-pellets", "angels-wood-pellets"]
   ],
   "recipe":
   [
@@ -694,6 +695,7 @@
     ["tree-generator-3", "angels-tree-generator-3"],
     ["wood-bricks", "angels-wood-bricks"],
     ["wood-charcoal", "angels-wood-charcoal"],
+    ["wood-pellets", "angels-wood-pellets"],
     ["wood-sawing-1", "angels-wood-sawing-1"],
     ["wood-sawing-2", "angels-wood-sawing-2"],
     ["wood-sawing-3", "angels-wood-sawing-3"]
@@ -768,5 +770,9 @@
     ["gardens", "angels-gardens"],
     ["gardens-2", "angels-gardens-2"],
     ["gardens-3", "angels-gardens-3"]
+  ],
+  "tile":
+  [
+    ["bio-tile", "angels-bio-tile"]
   ]
 }
