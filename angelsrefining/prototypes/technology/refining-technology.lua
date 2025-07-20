@@ -59,7 +59,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-slag-processing-stone",
+        recipe = "angels-stone-crushed",
       },
     },
     unit = {
@@ -1083,7 +1083,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-ore8-solution-filtering",
+        recipe = "angels-ore8-slime",
       },
       {
         type = "unlock-recipe",
@@ -1099,7 +1099,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-ore9-solution-filtering",
+        recipe = "angels-ore9-slime",
       },
       {
         type = "unlock-recipe",

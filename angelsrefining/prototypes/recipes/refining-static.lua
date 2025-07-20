@@ -576,7 +576,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-ore8-solution-filtering",
+    name = "angels-ore8-slime",
     category = "angels-filtering-3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,
@@ -671,7 +671,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-ore9-solution-filtering",
+    name = "angels-ore9-slime",
     category = "angels-filtering-3",
     subgroup = "angels-ore-processing-c",
     energy_required = 2,

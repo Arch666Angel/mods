@@ -48,7 +48,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-purification",
+        recipe = "angels-water-purified",
       },
       {
         type = "unlock-recipe",
@@ -130,7 +130,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-saline",
+        recipe = "angels-water-saline-from-water",
       },
       {
         type = "unlock-recipe",
@@ -211,23 +211,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-washing-1",
+        recipe = "angels-water-heavy-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-washing-2",
+        recipe = "angels-water-concentrated-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-washing-3",
+        recipe = "angels-water-light-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-washing-4",
+        recipe = "angels-water-thin-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-washing-5",
+        recipe = "angels-water-saline",
       },
     },
     unit = {

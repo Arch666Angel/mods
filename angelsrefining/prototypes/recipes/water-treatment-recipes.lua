@@ -24,7 +24,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-water-purification",
+    name = "angels-water-purified",
     category = "angels-water-treatment",
     subgroup = "angels-water-treatment",
     energy_required = 1,
@@ -36,6 +36,7 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 20 },
       { type = "fluid", name = "angels-water-purified", amount = 100 },
     },
+    main_product = "angels-water-purified",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-saline",
@@ -179,7 +180,7 @@ data:extend({
   --SALINATION
   {
     type = "recipe",
-    name = "angels-water-saline",
+    name = "angels-water-saline-from-water",
     localised_name = { "fluid-name.angels-water-saline" },
     category = "angels-salination-plant",
     subgroup = "angels-water-salination",
@@ -289,8 +290,7 @@ data:extend({
   --WASHING
   {
     type = "recipe",
-    name = "angels-washing-1",
-    localised_name = { "fluid-name.angels-water-heavy-mud" },
+    name = "angels-water-heavy-mud",
     category = "angels-washing-plant",
     subgroup = "angels-water-washing",
     energy_required = 5,
@@ -310,8 +310,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-washing-2",
-    localised_name = { "fluid-name.angels-water-concentrated-mud" },
+    name = "angels-water-concentrated-mud",
     category = "angels-washing-plant",
     subgroup = "angels-water-washing",
     energy_required = 5,
@@ -335,8 +334,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-washing-3",
-    localised_name = { "fluid-name.angels-water-light-mud" },
+    name = "angels-water-light-mud",
     category = "angels-washing-plant",
     subgroup = "angels-water-washing",
     energy_required = 5,
@@ -360,8 +358,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-washing-4",
-    localised_name = { "fluid-name.angels-water-thin-mud" },
+    name = "angels-water-thin-mud",
     category = "angels-washing-plant",
     subgroup = "angels-water-washing",
     energy_required = 5,
@@ -381,8 +378,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-washing-5",
-    localised_name = { "fluid-name.angels-water-saline" },
+    name = "angels-water-saline",
     category = "angels-washing-plant",
     subgroup = "angels-water-washing",
     energy_required = 5,
@@ -403,7 +399,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-water-viscous-mud",
-    localised_name = { "fluid-name.angels-water-viscous-mud" },
     category = "angels-liquifying",
     subgroup = "angels-water-washing",
     energy_required = 5,

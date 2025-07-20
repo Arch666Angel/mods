@@ -119,11 +119,11 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   -- disable products
   OV.disable_recipe({
     "angels-water-viscous-mud",
-    "angels-washing-1",
-    "angels-washing-2",
-    "angels-washing-3",
-    "angels-washing-4",
-    "angels-washing-5",
+    "angels-water-heavy-mud",
+    "angels-concentrated-mud",
+    "angels-light-mud",
+    "angels-thin-mud",
+    "angels-water-saline",
     "angels-solid-mud-landfill",
     "angels-solid-geodes",
     "angels-solid-clay",
@@ -235,11 +235,11 @@ if angelsmods.trigger.salt_consumption == false then
 end
 
 if angelsmods.trigger.water_saline == false then
-  OV.disable_recipe({ "angels-water-saline" })
+  OV.disable_recipe({ "angels-water-saline-from-water" })
   angelsmods.functions.hide({ "angels-water-saline" })
   OV.patch_recipes({
     {
-      name = "angels-water-purification",
+      name = "angels-water-purified",
       results = { { name = "angels-water-saline", type = "fluid", amount = 0 } },
     },
   })

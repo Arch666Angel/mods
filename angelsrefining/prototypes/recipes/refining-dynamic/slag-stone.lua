@@ -182,7 +182,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-slag-processing-stone",
+    name = "angels-stone-crushed",
     category = "angels-ore-refining-t1",
     subgroup = "angels-processing-crafting",
     energy_required = 1,
@@ -196,7 +196,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-stone-crushed",
+    name = "angels-stone-from-crushed-stone",
     localised_name = { "item-name.stone" },
     category = "crafting",
     subgroup = "angels-processing-crafting",

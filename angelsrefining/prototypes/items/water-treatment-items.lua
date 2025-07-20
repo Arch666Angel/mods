@@ -80,8 +80,8 @@ data:extend({
       nil,
       { { 039, 112, 194 }, { 168, 173, 173 }, { 070, 133, 232 }, { 185, 185, 185, 0.8 } }
     ),
-    subgroup = "angels-water-treatment-fluid",
-    order = "c",
+    subgroup = "angels-water-washing-fluid",
+    order = "f",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
     base_color = angelsmods.functions.fluid_color("Ws4NaCl"), --{r = 0.9, g = 0.9, b = 1},
