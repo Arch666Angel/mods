@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-plastic-1",
+        recipe = "angels-liquid-plastic",
       },
     },
     unit = {
@@ -114,7 +114,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-resin-1",
+        recipe = "angels-liquid-resin",
       },
     },
     unit = {
@@ -219,7 +219,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-rubber-1",
+        recipe = "angels-liquid-rubber",
       },
     },
     unit = {

@@ -227,11 +227,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-methanol-catalyst",
+        recipe = "angels-gas-methanol",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-formaldehyde-catalyst",
+        recipe = "angels-gas-formaldehyde",
       },
       {
         type = "unlock-recipe",
@@ -287,15 +287,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-styrene-catalyst",
+        recipe = "angels-liquid-styrene",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-benzene-catalyst",
+        recipe = "angels-gas-benzene",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-ethylbenzene-catalyst",
+        recipe = "angels-liquid-ethylbenzene",
       },
     },
     unit = {
@@ -332,7 +332,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-polyethylene-catalyst",
+        recipe = "angels-liquid-polyethylene",
       },
       {
         type = "unlock-recipe",
@@ -442,7 +442,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-phenol-catalyst",
+        recipe = "angels-liquid-phenol",
       },
       {
         type = "unlock-recipe",
@@ -532,7 +532,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-catalyst-steam-cracking-butane",
+        recipe = "angels-gas-butadiene",
       },
       {
         type = "unlock-recipe",
@@ -544,7 +544,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-steam-cracking-ethane",
+        recipe = "angels-gas-ethylene",
       },
       {
         type = "unlock-recipe",
@@ -552,7 +552,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-propene-synthesis",
+        recipe = "angels-gas-propene",
       },
       {
         type = "unlock-recipe",

@@ -167,7 +167,7 @@ data:extend({
   -- SODIUM HYDROXIDE SYNTHESIS
   {
     type = "recipe",
-    name = "angels-solid-sodium-hydroxide-solid-sodium-sulfate",
+    name = "angels-solid-sodium-sulfate",
     category = "chemistry",
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,

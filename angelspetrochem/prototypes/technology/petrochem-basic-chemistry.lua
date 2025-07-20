@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-carbon-separation-2",
+        recipe = "angels-gas-carbon-dioxide",
       },
     },
     unit = {
@@ -132,19 +132,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-hydrogen-sulfide-enrichment",
+        recipe = "angels-gas-enriched-hydrogen-sulfide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-1",
+        recipe = "angels-liquid-water-semiheavy-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-2",
+        recipe = "angels-liquid-water-semiheavy-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-3",
+        recipe = "angels-liquid-water-semiheavy-3",
       },
       {
         type = "unlock-recipe",
@@ -184,7 +184,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-heavy-water-extraction",
+        recipe = "angels-liquid-water-heavy",
       },
       {
         type = "unlock-recipe",
@@ -230,7 +230,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-coke-purification",
+        recipe = "angels-solid-carbon",
       },
     },
     unit = {
@@ -253,7 +253,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-carbon-separation-1",
+        recipe = "angels-gas-carbon-monoxide",
       },
       {
         type = "unlock-recipe",
@@ -472,7 +472,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-air-filtering",
+        recipe = "angels-gas-compressed-air",
       },
       {
         type = "unlock-recipe",
@@ -789,7 +789,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-sodium-hydroxide-solid-sodium-sulfate",
+        recipe = "angels-solid-sodium-sulfate",
       },
       {
         type = "unlock-recipe",

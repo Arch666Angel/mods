@@ -15,7 +15,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rocket-booster-1",
+        recipe = "angels-rocket-booster",
       },
     },
     unit = {
@@ -106,7 +106,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-toluene-from-naphtha",
+        recipe = "angels-liquid-toluene",
       },
       {
         type = "unlock-recipe",

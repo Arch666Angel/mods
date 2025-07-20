@@ -31,7 +31,7 @@ else
   OV.disable_recipe({
     "angels-solid-sodium-cyanide",
     "angels-solid-sodium-carbonate",
-    "angels-solid-sodium-hydroxide-solid-sodium-sulfate",
+    "angels-solid-sodium-sulfate",
   })
   angelsmods.functions.hide("angels-solid-sodium-cyanide")
   OV.remove_prereq("angels-sodium-processing-1", "angels-chlorine-processing-1")

@@ -127,6 +127,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-hydrofluoric-acid",
+    localised_name = { "recipe-name.angels-liquid-hydrofluoric-acid" },
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -139,6 +140,7 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 50 },
       { type = "item", name = "angels-solid-calcium-sulfate", amount = 1 },
     },
+    main_product = "angels-liquid-hydrofluoric-acid",
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
@@ -281,7 +283,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-hydrogen-sulfide-enrichment",
+    name = "angels-gas-enriched-hydrogen-sulfide",
     category = "angels-steam-cracking",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2.5,
@@ -294,6 +296,7 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
       { type = "fluid", name = "angels-gas-enriched-hydrogen-sulfide", amount = 50, temperature = 100 },
     },
+    main_product = "angels-gas-enriched-hydrogen-sulfide",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },

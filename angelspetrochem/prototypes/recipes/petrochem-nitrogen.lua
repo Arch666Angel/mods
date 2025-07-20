@@ -3,8 +3,7 @@ data:extend({
   --NITROGEN
   {
     type = "recipe",
-    name = "angels-air-filtering",
-    localised_name = { "fluid-name.angels-gas-compressed-air" },
+    name = "angels-gas-compressed-air",
     category = "angels-petrochem-air-filtering",
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 6,
@@ -87,6 +86,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-nitrogen-monoxide", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-nitrogen-monoxide",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
@@ -97,7 +97,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-nitrogen-dioxide",
-    localised_name = { "fluid-name.angels-gas-nitrogen-dioxide" },
     category = "chemistry",
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
@@ -132,6 +131,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-ammonia",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
@@ -142,7 +142,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-ammonium-chloride",
-    localised_name = { "fluid-name.angels-gas-ammonium-chloride" },
     category = "chemistry",
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
@@ -176,6 +175,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-urea", amount = 80 },
       { type = "fluid", name = "angels-water-purified", amount = 20 },
     },
+    main_product = "angels-gas-urea",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/urea.png", 72 },
@@ -187,7 +187,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-nitric-acid",
-    localised_name = { "fluid-name.angels-liquid-nitric-acid" },
     category = "chemistry",
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
@@ -258,6 +257,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-melamine", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-melamine",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/melamine.png", 72 },
@@ -269,7 +269,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-monochloramine",
-    localised_name = { "fluid-name.angels-gas-monochloramine" },
     category = "angels-liquifying",
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
@@ -305,6 +304,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-hydrazine",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrazine.png", 72 },
@@ -332,6 +332,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-methylamine", amount = 200 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
+    main_product = "angels-gas-methylamine",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methylamine.png", 72 },
@@ -355,6 +356,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-dimethylamine", amount = 200 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
+    main_product = "angels-gas-dimethylamine",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylamine.png", 72 },
@@ -383,6 +385,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-dimethylhydrazine", amount = 200 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
+    main_product = "angels-gas-dimethylhydrazine",
     always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
@@ -399,7 +402,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-dinitrogen-tetroxide",
-    localised_name = { "fluid-name.angels-gas-dinitrogen-tetroxide" },
     category = "chemistry",
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
@@ -424,7 +426,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-ammonium-nitrate",
-    localised_name = { "item-name.angels-solid-ammonium-nitrate" },
     category = "chemistry",
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
@@ -489,7 +490,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-fuel-capsule",
-    localised_name = { "item-name.angels-rocket-fuel-capsule" },
     category = "chemistry",
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
@@ -508,8 +508,7 @@ data:extend({
   --ROCKET BOOSTER
   {
     type = "recipe",
-    name = "angels-rocket-booster-1",
-    localised_name = { "item-name.angels-rocket-booster" },
+    name = "angels-rocket-booster",
     category = "advanced-crafting",
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,

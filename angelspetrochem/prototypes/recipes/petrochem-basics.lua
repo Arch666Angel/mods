@@ -221,7 +221,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-carbon-separation-1",
+    name = "angels-gas-carbon-monoxide",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
@@ -238,7 +238,7 @@ data:extend({
       { { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 } },
       "CCOc"
     ),
-    order = "b[carbon-separation-1]",
+    order = "b[gas-carbon-monoxide]",
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-gas-carbon-monoxide",
       "angels-water-purified",
@@ -251,7 +251,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-carbon-separation-2",
+    name = "angels-gas-carbon-dioxide",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
@@ -267,7 +267,7 @@ data:extend({
       { { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 } },
       "COcOc"
     ),
-    order = "d[carbon-separation-2]",
+    order = "d[gas-carbon-dioxide]",
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-carbon-dioxide", { r = 0, g = 0, b = 0, a = 1 } }),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
@@ -482,7 +482,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-coke-purification",
+    name = "angels-solid-carbon",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-coal",
     energy_required = 2,
@@ -611,7 +611,7 @@ data:extend({
   --ENRICHED WATER
   {
     type = "recipe",
-    name = "angels-water-enrichment-1",
+    name = "angels-liquid-water-semiheavy-1",
     localised_name = { "recipe-name.angels-water-enrichment", "1", "0", "7.5" },
     category = "angels-advanced-chemistry",
     subgroup = "angels-water-enrichment",
@@ -646,7 +646,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-water-enrichment-2",
+    name = "angels-liquid-water-semiheavy-2",
     localised_name = { "recipe-name.angels-water-enrichment", "2", "7.5", "12.5" },
     category = "angels-advanced-chemistry",
     subgroup = "angels-water-enrichment",
@@ -681,7 +681,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-water-enrichment-3",
+    name = "angels-liquid-water-semiheavy-3",
     localised_name = { "recipe-name.angels-water-enrichment", "3", "12.5", "15" },
     category = "angels-advanced-chemistry",
     subgroup = "angels-water-enrichment",
@@ -833,7 +833,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-heavy-water-extraction",
+    name = "angels-liquid-water-heavy",
     category = "angels-petrochem-boiler",
     subgroup = "angels-water-enrichment",
     energy_required = 2,

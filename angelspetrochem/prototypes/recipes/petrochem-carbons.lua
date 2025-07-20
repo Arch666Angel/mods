@@ -682,7 +682,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-steam-cracking-ethane",
+    name = "angels-gas-ethylene",
+    localised_name = { "recipe-name.angels-gas-ethylene" },
     category = "angels-steam-cracking",
     subgroup = "angels-petrochem-cracking",
     energy_required = 4,
@@ -695,12 +696,13 @@ data:extend({
       { type = "fluid", name = "angels-gas-ethylene", amount = 80 },
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
+    main_product = "angels-gas-ethylene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
     }, "CHWs"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-ethylene", "angels-gas-ethane", "angels-gas-residual", "steam" }),
-    order = "b[steam-cracking-ethane]",
+    order = "b[gas-ethylene]",
   },
   {
     type = "recipe",
@@ -726,7 +728,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-catalyst-steam-cracking-butane",
+    name = "angels-gas-butadiene",
+    localised_name = { "recipe-name.angels-gas-butadiene" },
     category = "angels-steam-cracking",
     subgroup = "angels-petrochem-cracking",
     energy_required = 4,
@@ -741,12 +744,13 @@ data:extend({
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-butadiene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/butadiene.png", 72 },
     }, "CHWs"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-butadiene", "angels-liquid-naphtha", "angels-gas-residual", "steam" }),
-    order = "d[catalyst-steam-cracking-butane]",
+    order = "d[gas-butadiene]",
   },
   {
     type = "recipe",
@@ -774,7 +778,8 @@ data:extend({
   --CHEMISTRY
   {
     type = "recipe",
-    name = "angels-gas-benzene-catalyst",
+    name = "angels-gas-benzene",
+    localised_name = { "recipe-name.angels-gas-benzene" },
     category = "chemistry",
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
@@ -787,16 +792,18 @@ data:extend({
       { type = "fluid", name = "angels-gas-benzene", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-benzene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-benzene", "angels-gas-methane" }),
-    order = "d[gas-benzene-catalyst]",
+    order = "d[gas-benzene]",
   },
   {
     type = "recipe",
-    name = "angels-liquid-polyethylene-catalyst",
+    name = "angels-liquid-polyethylene",
+    localised_name = { "recipe-name.angels-liquid-polyethylene" },
     category = "chemistry",
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
@@ -809,6 +816,7 @@ data:extend({
       { type = "fluid", name = "angels-liquid-polyethylene", amount = 50 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-liquid-polyethylene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       {
@@ -820,11 +828,12 @@ data:extend({
       },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-polyethylene", "angels-gas-ethylene" }),
-    order = "c[liquid-polyethylene-catalyst]",
+    order = "c[liquid-polyethylene]",
   },
   {
     type = "recipe",
-    name = "angels-gas-methanol-catalyst",
+    name = "angels-gas-methanol",
+    localised_name = { "recipe-name.angels-gas-methanol" },
     category = "chemistry",
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
@@ -838,6 +847,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-methanol",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
@@ -870,7 +880,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-toluene-from-naphtha",
+    name = "angels-liquid-toluene",
+    localised_name = { "recipe-name.angels-liquid-toluene" },
     category = "chemistry",
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
@@ -884,6 +895,7 @@ data:extend({
       { type = "fluid", name = "angels-liquid-toluene", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-liquid-toluene",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-toluene",
@@ -922,7 +934,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-gas-formaldehyde-catalyst",
+    name = "angels-gas-formaldehyde",
+    localised_name = { "recipe-name.angels-gas-formaldehyde" },
     category = "chemistry",
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
@@ -935,6 +948,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-formaldehyde", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-gas-formaldehyde",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/formaldehyde.png", 72 },
@@ -944,7 +958,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-styrene-catalyst",
+    name = "angels-liquid-styrene",
+    localised_name = { "recipe-name.angels-liquid-styrene" },
     category = "chemistry",
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
@@ -957,16 +972,18 @@ data:extend({
       { type = "fluid", name = "angels-liquid-styrene", amount = 50 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-liquid-styrene",
     always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/styrene.png", 72 },
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-styrene", "angels-liquid-ethylbenzene" }),
-    order = "a[liquid-styrene-catalyst]",
+    order = "a[liquid-styrene]",
   },
   {
     type = "recipe",
-    name = "angels-liquid-phenol-catalyst",
+    name = "angels-liquid-phenol",
+    localised_name = { "recipe-name.angels-liquid-phenol" },
     category = "chemistry",
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
@@ -980,16 +997,18 @@ data:extend({
       { type = "fluid", name = "angels-liquid-phenol", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
+    main_product = "angels-liquid-phenol",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/phenol.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-phenol", "angels-gas-benzene", "angels-gas-oxygen" }),
-    order = "d[liquid-phenol-catalyst]-a",
+    order = "d[liquid-phenol]-a",
   },
   {
     type = "recipe",
-    name = "angels-gas-propene-synthesis",
+    name = "angels-gas-propene",
+    localised_name = { "recipe-name.angels-gas-propene" },
     category = "angels-steam-cracking",
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
@@ -1002,17 +1021,19 @@ data:extend({
       { type = "fluid", name = "angels-gas-propene", amount = 80 },
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
+    main_product = "angels-gas-propene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72 },
     }, "CHWs"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-propene", "angels-gas-methanol", "angels-gas-residual", "steam" }),
-    order = "e[gas-propene-synthesis]",
+    order = "e[gas-propene]",
   },
   --ADVANCED CHEMISTRY
   {
     type = "recipe",
-    name = "angels-liquid-ethylbenzene-catalyst",
+    name = "angels-liquid-ethylbenzene",
+    localised_name = { "recipe-name.angels-liquid-ethylbenzene" },
     category = "angels-advanced-chemistry",
     subgroup = "angels-petrochem-chemistry",
     energy_required = 4,
@@ -1027,6 +1048,7 @@ data:extend({
       --{type = "fluid", name = "angels-gas-hydrogen", amount = 20},
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 20, ignored_by_productivity = 20 },
     },
+    main_product = "angels-liquid-ethylbenzene",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylbenzene.png", 72 },
@@ -1091,7 +1113,7 @@ data:extend({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
     }, "COH"),
     crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-phenol", "angels-gas-benzene", "angels-gas-acetone", "angels-gas-oxygen" }),
-    order = "d[liquid-phenol-catalyst]-b",
+    order = "d[cumene-process]-b",
   },
   {
     type = "recipe",

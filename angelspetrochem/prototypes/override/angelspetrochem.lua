@@ -70,14 +70,14 @@ else -- no deuterium required, disabling it...
   angelsmods.functions.hide("angels-gas-deuterium")
 
   OV.disable_recipe({
-    "angels-hydrogen-sulfide-enrichment",
-    "angels-water-enrichment-1",
+    "angels-gas-enriched-hydrogen-sulfide",
+    "angels-liquid-water-semiheavy-1",
     "angels-water-enriched-cooling-1",
-    "angels-water-enrichment-2",
+    "angels-liquid-water-semiheavy-2",
     "angels-water-enriched-cooling-2",
-    "angels-water-enrichment-3",
+    "angels-liquid-water-semiheavy-3",
     "angels-water-enriched-cooling-3",
-    "angels-heavy-water-extraction",
+    "angels-liquid-water-heavy",
     "angels-heavy-water-cooling",
     "angels-heavy-water-separation",
     "angels-heavy-water-separation-2",
@@ -243,7 +243,7 @@ if angelsmods.trigger.resin then
 else
   OV.disable_recipe({
     "angels-solid-resin",
-    "angels-liquid-resin-1",
+    "angels-liquid-resin",
     "angels-liquid-resin-2",
     "angels-liquid-resin-3",
     "angels-gas-melamine",
@@ -266,11 +266,11 @@ end
 if angelsmods.trigger.rubber then
 else
   OV.disable_recipe({
-    "angels-liquid-rubber-1",
+    "angels-liquid-rubber",
     "angels-solid-rubber",
-    "angels-liquid-styrene-catalyst",
-    "angels-liquid-ethylbenzene-catalyst",
-    "angels-catalyst-steam-cracking-butane",
+    "angels-liquid-styrene",
+    "angels-liquid-ethylbenze",
+    "angels-gas-butadiene",
   })
   angelsmods.functions.hide({
     "angels-solid-rubber",

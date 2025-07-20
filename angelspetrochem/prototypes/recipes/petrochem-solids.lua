@@ -22,8 +22,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-plastic-1",
-    localised_name = { "fluid-name.angels-liquid-plastic" },
+    name = "angels-liquid-plastic",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-solids",
     energy_required = 2,
@@ -111,8 +110,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-resin-1",
-    localised_name = { "fluid-name.angels-liquid-resin" },
+    name = "angels-liquid-resin",
     category = "chemistry",
     subgroup = "angels-petrochem-solids",
     energy_required = 2,
@@ -201,8 +199,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-rubber-1",
-    localised_name = { "fluid-name.angels-liquid-rubber" },
+    name = "angels-liquid-rubber",
     category = "chemistry",
     subgroup = "angels-petrochem-solids-2",
     energy_required = 2,

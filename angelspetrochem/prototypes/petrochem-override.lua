@@ -30,12 +30,12 @@ require("prototypes.recipes.petrochem-entity-angels")
 OV.execute()
 
 --ENABLE PRODUCTIVITY
-angelsmods.functions.allow_productivity("angels-liquid-plastic-1")
+angelsmods.functions.allow_productivity("angels-liquid-plastic")
 angelsmods.functions.allow_productivity("angels-liquid-plastic-2")
 angelsmods.functions.allow_productivity("angels-liquid-plastic-3")
 
-angelsmods.functions.allow_productivity("angels-liquid-resin-1")
+angelsmods.functions.allow_productivity("angels-liquid-resin")
 angelsmods.functions.allow_productivity("angels-liquid-resin-2")
 angelsmods.functions.allow_productivity("angels-liquid-resin-3")
 
-angelsmods.functions.allow_productivity("angels-liquid-rubber-1")
+angelsmods.functions.allow_productivity("angels-liquid-rubber")

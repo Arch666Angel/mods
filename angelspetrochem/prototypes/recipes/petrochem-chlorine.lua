@@ -211,6 +211,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-allylchlorid", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 50 },
     },
+    main_product = "angels-gas-allylchlorid",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/allyl-chloride.png", 72 },
