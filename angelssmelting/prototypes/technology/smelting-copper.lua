@@ -12,7 +12,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-ore-smelting",
+        recipe = "angels-ingot-copper",
       },
       {
         type = "unlock-recipe",
@@ -46,11 +46,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-copper-ore-processing",
+        recipe = "angels-processed-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-copper-smelting",
+        recipe = "angels-ingot-copper-2",
       },
       {
         type = "unlock-recipe",
@@ -119,15 +119,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-copper-processed-processing",
+        recipe = "angels-pellet-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-copper-smelting",
+        recipe = "angels-anode-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-anode-copper-smelting",
+        recipe = "angels-ingot-copper-3",
       },
     },
     unit = {

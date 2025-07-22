@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-cobalt-ore-processing",
-    localised_name = { "item-name.angels-processed-cobalt" },
+    name = "angels-processed-cobalt",
     category = "angels-ore-processing-3",
     subgroup = "angels-cobalt",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cobalt-processed-processing",
-    localised_name = { "item-name.angels-pellet-cobalt" },
+    name = "angels-pellet-cobalt",
     category = "angels-pellet-pressing-3",
     subgroup = "angels-cobalt",
     energy_required = 2,
@@ -36,8 +34,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-cobalt-smelting",
-    localised_name = { "item-name.angels-solid-cobalt-hydroxide" },
+    name = "angels-solid-cobalt-hydroxide",
     category = "angels-liquifying",
     subgroup = "angels-cobalt",
     energy_required = 4,
@@ -54,7 +51,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cobalt-ore-processing-alt",
+    name = "angels-solid-cobalt-oxide",
     localised_name = { "item-name.angels-solid-cobalt-oxide" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-cobalt",
@@ -76,7 +73,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-cobalt-smelting",
+    name = "angels-solid-cobalt-oxide-2",
     localised_name = { "item-name.angels-solid-cobalt-oxide" },
     category = "angels-chemical-smelting-3",
     subgroup = "angels-cobalt",
@@ -98,7 +95,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-cobalt-hydroxide-smelting",
+    name = "angels-solid-cobalt-oxide-3",
     localised_name = { "item-name.angels-solid-cobalt-oxide" },
     category = "angels-chemical-smelting-4",
     subgroup = "angels-cobalt",
@@ -121,8 +118,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-cobalt-ore-smelting",
-    localised_name = { "item-name.angels-ingot-cobalt" },
+    name = "angels-ingot-cobalt",
     category = "angels-blast-smelting-3",
     subgroup = "angels-cobalt",
     energy_required = 4,
@@ -143,7 +139,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-cobalt-oxide-smelting",
+    name = "angels-ingot-cobalt-2",
     localised_name = { "item-name.angels-ingot-cobalt" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-cobalt",

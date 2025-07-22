@@ -4,8 +4,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-copper-ore-processing",
-    localised_name = { "item-name.angels-processed-copper" },
+    name = "angels-processed-copper",
     category = "angels-ore-processing",
     subgroup = "angels-copper",
     energy_required = 2,
@@ -21,8 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-copper-processed-processing",
-    localised_name = { "item-name.angels-pellet-copper" },
+    name = "angels-pellet-copper",
     category = "angels-pellet-pressing",
     subgroup = "angels-copper",
     energy_required = 2,
@@ -37,8 +35,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-copper-smelting",
-    localised_name = { "item-name.angels-anode-copper" },
+    name = "angels-anode-copper",
     category = "angels-blast-smelting-3",
     subgroup = "angels-copper",
     energy_required = 4,
@@ -56,8 +53,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "copper-ore-smelting",
-    localised_name = { "item-name.angels-ingot-copper" },
+    name = "angels-ingot-copper",
     category = "angels-blast-smelting",
     subgroup = "angels-copper",
     energy_required = 4,
@@ -77,7 +73,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-copper-smelting",
+    name = "angels-ingot-copper-2",
     localised_name = { "item-name.angels-ingot-copper" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-copper",
@@ -99,7 +95,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-anode-copper-smelting",
+    name = "angels-ingot-copper-3",
     localised_name = { "item-name.angels-ingot-copper" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-copper",

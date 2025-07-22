@@ -12,7 +12,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-ore-smelting",
+        recipe = "angels-ingot-iron",
       },
       {
         type = "unlock-recipe",
@@ -46,11 +46,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-iron-ore-processing",
+        recipe = "angels-processed-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-iron-smelting",
+        recipe = "angels-ingot-iron-2",
       },
       {
         type = "unlock-recipe",
@@ -125,11 +125,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-iron-processed-processing",
+        recipe = "angels-pellet-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-iron-smelting",
+        recipe = "angels-ingot-iron-3",
       },
     },
     unit = {

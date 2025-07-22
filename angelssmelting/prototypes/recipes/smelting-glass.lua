@@ -4,8 +4,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-glass-mixture-1",
-    localised_name = { "item-name.angels-solid-glass-mixture" },
+    name = "angels-solid-glass-mixture",
     category = "angels-powder-mixing",
     subgroup = "angels-glass",
     energy_required = 4,
@@ -25,7 +24,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-glass-mixture-2",
+    name = "angels-solid-glass-mixture-2",
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-2",
     subgroup = "angels-glass",
@@ -47,7 +46,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-glass-mixture-3",
+    name = "angels-solid-glass-mixture-3",
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-3",
     subgroup = "angels-glass",
@@ -70,7 +69,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-glass-mixture-4",
+    name = "angels-solid-glass-mixture-4",
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-3",
     subgroup = "angels-glass",

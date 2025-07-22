@@ -28,8 +28,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-coolant",
-    localised_name = { "fluid-name.angels-liquid-coolant" },
+    name = "angels-liquid-coolant",
     category = "chemistry",
     subgroup = "angels-coolant",
     energy_required = 4,

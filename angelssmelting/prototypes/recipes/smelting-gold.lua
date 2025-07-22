@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-gold-ore-processing",
-    localised_name = { "item-name.angels-processed-gold" },
+    name = "angels-processed-gold",
     category = "angels-ore-processing-3",
     subgroup = "angels-gold",
     energy_required = 2,
@@ -21,8 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-gold-processed-processing",
-    localised_name = { "item-name.angels-pellet-gold" },
+    name = "angels-pellet-gold",
     category = "angels-pellet-pressing-3",
     subgroup = "angels-gold",
     energy_required = 2,
@@ -38,8 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-gold-smelting",
-    localised_name = { "item-name.angels-solid-sodium-gold-cyanide" },
+    name = "angels-solid-sodium-gold-cyanide",
     category = "angels-chemical-smelting-4",
     subgroup = "angels-gold",
     energy_required = 4,
@@ -60,7 +57,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-chlorauric-acid",
-    localised_name = { "fluid-name.angels-liquid-chlorauric-acid" },
     category = "chemistry",
     subgroup = "angels-gold",
     energy_required = 4,
@@ -84,8 +80,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-gold-smelting",
-    localised_name = { "item-name.angels-cathode-gold" },
+    name = "angels-cathode-gold",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-gold",
     energy_required = 6,
@@ -106,7 +101,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-sodium-gold-cyanide-smelting",
+    name = "angels-cathode-gold-2",
     localised_name = { "item-name.angels-cathode-gold" },
     category = "angels-chemical-smelting-4",
     subgroup = "angels-gold",
@@ -128,8 +123,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-gold-ore-smelting",
-    localised_name = { "item-name.angels-ingot-gold" },
+    name = "angels-ingot-gold",
     category = "angels-blast-smelting-3",
     subgroup = "angels-gold",
     energy_required = 4,
@@ -150,7 +144,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cathode-gold-smelting",
+    name = "angels-ingot-gold-2",
     localised_name = { "item-name.angels-ingot-gold" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-gold",

@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-lead-ore-smelting",
+        recipe = "angels-ingot-lead",
       },
       {
         type = "unlock-recipe",
@@ -47,15 +47,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-lead-ore-processing",
+        recipe = "angels-processed-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-lead-smelting",
+        recipe = "angels-solid-lead-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-lead-oxide-smelting",
+        recipe = "angels-ingot-lead-2",
       },
       {
         type = "unlock-recipe",
@@ -117,11 +117,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-lead-processed-processing",
+        recipe = "angels-pellet-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-lead-smelting",
+        recipe = "angels-anode-lead",
       },
       {
         type = "unlock-recipe",
@@ -129,7 +129,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-anode-lead-smelting",
+        recipe = "angels-ingot-lead-3",
       },
     },
     unit = {

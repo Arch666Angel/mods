@@ -16,7 +16,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cobalt-ore-smelting",
+        recipe = "angels-ingot-cobalt",
       },
       {
         type = "unlock-recipe",
@@ -28,7 +28,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cobalt-ore-processing-alt",
+        recipe = "angels-solid-cobalt-oxide",
       },
     },
     unit = {
@@ -55,15 +55,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cobalt-ore-processing",
+        recipe = "angels-processed-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-cobalt-smelting",
+        recipe = "angels-solid-cobalt-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-cobalt-oxide-smelting",
+        recipe = "angels-ingot-cobalt-2",
       },
       {
         type = "unlock-recipe",
@@ -128,15 +128,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cobalt-processed-processing",
+        recipe = "angels-pellet-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-cobalt-smelting",
+        recipe = "angels-solid-cobalt-hydroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-cobalt-hydroxide-smelting",
+        recipe = "angels-solid-cobalt-oxide-3",
       },
     },
     unit = {

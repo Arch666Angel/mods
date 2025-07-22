@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-lead-ore-processing",
-    localised_name = { "item-name.angels-processed-lead" },
+    name = "angels-processed-lead",
     category = "angels-ore-processing",
     subgroup = "angels-lead",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-lead-processed-processing",
-    localised_name = { "item-name.angels-pellet-lead" },
+    name = "angels-pellet-lead",
     category = "angels-pellet-pressing",
     subgroup = "angels-lead",
     energy_required = 2,
@@ -36,7 +34,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-lead-smelting",
+    name = "angels-solid-lead-oxide",
     localised_name = { "item-name.angels-solid-lead-oxide" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-lead",
@@ -55,8 +53,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-lead-smelting",
-    localised_name = { "item-name.angels-anode-lead" },
+    name = "angels-anode-lead",
     category = "angels-blast-smelting-3",
     subgroup = "angels-lead",
     energy_required = 4,
@@ -77,7 +74,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-hexafluorosilicic-acid",
-    localised_name = { "fluid-name.angels-liquid-hexafluorosilicic-acid" },
     category = "angels-liquifying",
     subgroup = "angels-lead",
     energy_required = 2,
@@ -100,8 +96,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-lead-ore-smelting",
-    localised_name = { "item-name.angels-ingot-lead" },
+    name = "angels-ingot-lead",
     category = "angels-blast-smelting",
     subgroup = "angels-lead",
     energy_required = 4,
@@ -124,7 +119,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-lead-oxide-smelting",
+    name = "angels-ingot-lead-2",
     localised_name = { "item-name.angels-ingot-lead" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-lead",
@@ -147,7 +142,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-anode-lead-smelting",
+    name = "angels-ingot-lead-3",
     localised_name = { "item-name.angels-ingot-lead" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-lead",

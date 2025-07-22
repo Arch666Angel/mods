@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-chrome-ore-smelting",
+        recipe = "angels-ingot-chrome",
       },
       {
         type = "unlock-recipe",
@@ -50,11 +50,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-chrome-ore-processing",
+        recipe = "angels-processed-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-chrome-smelting",
+        recipe = "angels-ingot-chrome-2",
       },
       {
         type = "unlock-recipe",
@@ -121,23 +121,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-chrome-processed-processing",
+        recipe = "angels-pellet-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-chrome-smelting",
+        recipe = "angels-solid-chromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-chromate-smelting",
+        recipe = "angels-solid-dichromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-dichromate-smelting",
+        recipe = "angels-solid-chrome-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-chrome-oxide-smelting",
+        recipe = "angels-ingot-chrome-3",
       },
     },
     unit = {

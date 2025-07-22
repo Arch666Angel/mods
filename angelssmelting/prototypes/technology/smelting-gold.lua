@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-gold-ore-smelting",
+        recipe = "angels-ingot-gold",
       },
       {
         type = "unlock-recipe",
@@ -54,7 +54,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-gold-ore-processing",
+        recipe = "angels-processed-gold",
       },
       {
         type = "unlock-recipe",
@@ -62,11 +62,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-gold-smelting",
+        recipe = "angels-cathode-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cathode-gold-smelting",
+        recipe = "angels-ingot-gold-2",
       },
       {
         type = "unlock-recipe",
@@ -140,15 +140,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-gold-processed-processing",
+        recipe = "angels-pellet-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-gold-smelting",
+        recipe = "angels-solid-sodium-gold-cyanide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-sodium-gold-cyanide-smelting",
+        recipe = "angels-cathode-gold-2",
       },
     },
     unit = {

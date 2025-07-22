@@ -3,8 +3,7 @@ data:extend({
   -- STEEL SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-ingot-iron-smelting",
-    localised_name = { "item-name.angels-ingot-steel" },
+    name = "angels-ingot-steel",
     category = "angels-blast-smelting",
     subgroup = "angels-iron",
     energy_required = 4,

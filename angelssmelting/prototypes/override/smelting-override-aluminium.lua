@@ -65,17 +65,17 @@ else
   angelsmods.functions.hide("angels-ingot-aluminium")
   angelsmods.functions.hide("angels-liquid-molten-aluminium")
   OV.disable_recipe({
-    "angels-bauxite-ore-processing",
-    "angels-aluminium-processed-processing",
-    "angels-pellet-aluminium-smelting",
-    "angels-bauxite-ore-smelting",
+    "angels-processed-aluminium",
+    "angels-pellet-aluminium",
+    "angels-solid-sodium-aluminate",
+    "angels-solid-aluminium-hydroxide",
   })
   OV.disable_recipe({
-    "angels-processed-aluminium-smelting",
-    "angels-solid-aluminium-hydroxide-smelting",
-    "angels-solid-sodium-aluminate-smelting",
+    "angels-solid-aluminium-hydroxide-2",
+    "angels-solid-aluminium-oxide",
+    "angels-solid-aluminium-oxide-2",
   })
-  OV.disable_recipe({ "angels-solid-aluminium-oxide-smelting" })
+  OV.disable_recipe({ "angels-ingot-aluminium" })
   OV.disable_recipe({ "angels-molten-aluminium-smelting-1", "angels-molten-aluminium-smelting-2", "angels-molten-aluminium-smelting-3" })
 end
 

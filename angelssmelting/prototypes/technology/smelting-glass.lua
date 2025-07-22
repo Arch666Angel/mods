@@ -11,7 +11,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-glass-mixture-1",
+        recipe = "angels-solid-glass-mixture",
       },
       {
         type = "unlock-recipe",
@@ -48,7 +48,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-glass-mixture-2",
+        recipe = "angels-solid-glass-mixture-2",
       },
       {
         type = "unlock-recipe",
@@ -88,11 +88,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-glass-mixture-3",
+        recipe = "angels-solid-glass-mixture-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-glass-mixture-4",
+        recipe = "angels-solid-glass-mixture-4",
       },
       {
         type = "unlock-recipe",

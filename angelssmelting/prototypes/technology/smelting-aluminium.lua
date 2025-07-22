@@ -16,15 +16,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-bauxite-ore-smelting",
+        recipe = "angels-solid-aluminium-hydroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-aluminium-hydroxide-smelting",
+        recipe = "angels-solid-aluminium-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-aluminium-oxide-smelting",
+        recipe = "angels-ingot-aluminium",
       },
       {
         type = "unlock-recipe",
@@ -59,11 +59,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-bauxite-ore-processing",
+        recipe = "angels-processed-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-aluminium-smelting",
+        recipe = "angels-solid-aluminium-hydroxide-2",
       },
       {
         type = "unlock-recipe",
@@ -131,15 +131,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-aluminium-processed-processing",
+        recipe = "angels-pellet-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-aluminium-smelting",
+        recipe = "angels-solid-sodium-aluminate",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-sodium-aluminate-smelting",
+        recipe = "angels-solid-aluminium-oxide-2",
       },
     },
     unit = {

@@ -5,8 +5,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-chrome-ore-processing",
-    localised_name = { "item-name.angels-processed-chrome" },
+    name = "angels-processed-chrome",
     category = "angels-ore-processing-4",
     subgroup = "angels-chrome",
     energy_required = 2,
@@ -22,8 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-chrome-processed-processing",
-    localised_name = { "item-name.angels-pellet-chrome" },
+    name = "angels-pellet-chrome",
     category = "angels-pellet-pressing-4",
     subgroup = "angels-chrome",
     energy_required = 2,
@@ -38,8 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-chrome-smelting",
-    localised_name = { "item-name.angels-solid-chromate" },
+    name = "angels-solid-chromate",
     category = "angels-blast-smelting-4",
     subgroup = "angels-chrome",
     energy_required = 4,
@@ -56,8 +53,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-chromate-smelting",
-    localised_name = { "item-name.angels-solid-dichromate" },
+    name = "angels-solid-dichromate",
     category = "angels-liquifying",
     subgroup = "angels-chrome",
     energy_required = 4,
@@ -82,8 +78,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-dichromate-smelting",
-    localised_name = { "item-name.angels-solid-chrome-oxide" },
+    name = "angels-solid-chrome-oxide",
     category = "angels-chemical-smelting-4",
     subgroup = "angels-chrome",
     energy_required = 4,
@@ -103,8 +98,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-chrome-ore-smelting",
-    localised_name = { "item-name.angels-ingot-chrome" },
+    name = "angels-ingot-chrome",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-chrome",
     energy_required = 4,
@@ -123,7 +117,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-chrome-smelting",
+    name = "angels-ingot-chrome-2",
     localised_name = { "item-name.angels-ingot-chrome" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-chrome",
@@ -143,7 +137,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-chrome-oxide-smelting",
+    name = "angels-ingot-chrome-3",
     localised_name = { "item-name.angels-ingot-chrome" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-chrome",

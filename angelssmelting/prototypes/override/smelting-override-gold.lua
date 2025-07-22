@@ -48,12 +48,12 @@ else
   angelsmods.functions.hide("angels-liquid-molten-gold")
   OV.disable_recipe({ "angels-processed-gold", "angels-pellet-gold" })
   OV.disable_recipe({
-    "angels-pellet-gold-smelting",
+    "angels-solid-sodium-gold-cyanide",
     "angels-liquid-chlorauric-acid",
-    "angels-processed-gold-smelting",
-    "angels-solid-sodium-gold-cyanide-smelting",
+    "angels-cathode-gold",
+    "angels-cathode-gold-2",
   })
-  OV.disable_recipe({ "angels-gold-ore-smelting", "angels-cathode-gold-smelting" })
+  OV.disable_recipe({ "angels-ingot-gold", "angels-ingot-gold-2" })
   OV.disable_recipe({ "angels-molten-gold-smelting" })
   OV.disable_technology({ "angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3" })
   OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })

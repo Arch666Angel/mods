@@ -50,10 +50,10 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
 
   if (mods["angelsindustries"] and angelsmods.industries.components) or mods["bobplates"] then
   else
-    OV.disable_recipe({ "angels-cobalt-ore-processing-alt" })
+    OV.disable_recipe({ "angels-solid-cobalt-oxide" })
     OV.patch_recipes({
       {
-        name = "angels-processed-cobalt-smelting",
+        name = "angels-solid-cobalt-oxide-2",
         icons = angelsmods.functions.add_number_icon_layer(
           angelsmods.functions.get_object_icons("angels-solid-cobalt-oxide"),
           1,
@@ -61,7 +61,7 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
         ),
       },
       {
-        name = "angels-solid-cobalt-hydroxide-smelting",
+        name = "angels-solid-cobalt-oxide-3",
         icons = angelsmods.functions.add_number_icon_layer(
           angelsmods.functions.get_object_icons("angels-solid-cobalt-oxide"),
           2,
@@ -81,9 +81,9 @@ else
   angelsmods.functions.hide("angels-solid-cobalt-oxide")
   angelsmods.functions.hide("angels-ingot-cobalt")
   angelsmods.functions.hide("angels-liquid-molten-cobalt")
-  OV.disable_recipe({ "angels-cobalt-ore-processing", "angels-cobalt-processed-processing", "cobalt-ore-processing-alt" })
-  OV.disable_recipe({ "angels-pellet-cobalt-smelting", "angels-processed-cobalt-smelting", "angels-solid-cobalt-hydroxide-smelting" })
-  OV.disable_recipe({ "angels-cobalt-ore-smelting", "angels-solid-cobalt-oxide-smelting" })
+  OV.disable_recipe({ "angels-processed-cobalt", "angels-pellet-cobalt", "angels-solid-cobalt-oxide" })
+  OV.disable_recipe({ "angels-solid-cobalt-hydroxide", "angels-solid-cobalt-oxide-2", "angels-solid-cobalt-oxide-3" })
+  OV.disable_recipe({ "angels-ingot-cobalt", "angels-ingot-cobalt-2" })
   OV.disable_recipe({ "angels-molten-cobalt-smelting" })
   OV.disable_technology({ "angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3" })
   OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })

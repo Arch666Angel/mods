@@ -24,7 +24,7 @@ if angelsmods.trigger.smelting_products["glass"].mixture then
 else
   angelsmods.functions.hide("angels-solid-glass-mixture")
   angelsmods.functions.hide("angels-liquid-molten-glass")
-  OV.disable_recipe({ "angels-glass-mixture-1", "angels-glass-mixture-2", "angels-glass-mixture-3", "angels-glass-mixture-4" })
+  OV.disable_recipe({ "angels-solid-glass-mixture", "angels-solid-glass-mixture-2", "angels-solid-glass-mixture-3", "angels-solid-glass-mixture-4" })
   OV.disable_recipe({ "angels-molten-glass-smelting" })
   OV.disable_technology({ "angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3" })
 end

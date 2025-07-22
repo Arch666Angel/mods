@@ -624,7 +624,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-coolant",
+        recipe = "angels-liquid-coolant",
       },
       {
         type = "unlock-recipe",

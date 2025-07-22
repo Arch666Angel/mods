@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-iron-ore-processing",
-    localised_name = { "item-name.angels-processed-iron" },
+    name = "angels-processed-iron",
     category = "angels-ore-processing",
     subgroup = "angels-iron",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-iron-processed-processing",
-    localised_name = { "item-name.angels-pellet-iron" },
+    name = "angels-pellet-iron",
     category = "angels-pellet-pressing",
     subgroup = "angels-iron",
     energy_required = 2,
@@ -38,8 +36,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "iron-ore-smelting",
-    localised_name = { "item-name.angels-ingot-iron" },
+    name = "angels-ingot-iron",
     category = "angels-blast-smelting",
     subgroup = "angels-iron",
     energy_required = 4,
@@ -59,7 +56,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-iron-smelting",
+    name = "angels-ingot-iron-2",
     localised_name = { "item-name.angels-ingot-iron" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-iron",
@@ -81,7 +78,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-iron-smelting",
+    name = "angels-ingot-iron-3",
     localised_name = { "item-name.angels-ingot-iron" },
     category = "angels-blast-smelting-3",
     subgroup = "angels-iron",
@@ -118,11 +115,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
     main_product = "angels-ingot-iron",
-    --icons = angelsmods.functions.add_number_icon_layer(
-    --  angelsmods.functions.get_object_icons("angels-ingot-iron"),
-    --  4,
-    --  angelsmods.smelting.number_tint
-    --),
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-ingot-iron"),
       angelsmods.functions.get_object_icons("angels-solid-iron-hydroxide"),

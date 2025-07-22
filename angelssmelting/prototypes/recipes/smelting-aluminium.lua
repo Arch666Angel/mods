@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-bauxite-ore-processing",
-    localised_name = { "item-name.angels-processed-aluminium" },
+    name = "angels-processed-aluminium",
     category = "angels-ore-processing-2",
     subgroup = "angels-aluminium",
     energy_required = 2,
@@ -15,14 +14,12 @@ data:extend({
     results = {
       { type = "item", name = "angels-processed-aluminium", amount = 2 },
     },
-    main_product = "angels-processed-aluminium",
     order = "b[processed-aluminium]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-aluminium"),
   },
   {
     type = "recipe",
-    name = "angels-aluminium-processed-processing",
-    localised_name = { "item-name.angels-pellet-aluminium" },
+    name = "angels-pellet-aluminium",
     category = "angels-pellet-pressing-2",
     subgroup = "angels-aluminium",
     energy_required = 2,
@@ -33,13 +30,11 @@ data:extend({
     results = {
       { type = "item", name = "angels-pellet-aluminium", amount = 4 },
     },
-    main_product = "angels-pellet-aluminium",
     order = "c[pellet-aluminium]",
   },
   {
     type = "recipe",
-    name = "angels-pellet-aluminium-smelting",
-    localised_name = { "item-name.angels-solid-sodium-aluminate" },
+    name = "angels-solid-sodium-aluminate",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-aluminium",
     energy_required = 6,
@@ -52,13 +47,11 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-sodium-aluminate", amount = 18 },
     },
-    main_product = "angels-solid-sodium-aluminate",
     order = "d[solid-sodium-aluminate]",
   },
   {
     type = "recipe",
-    name = "angels-bauxite-ore-smelting",
-    localised_name = { "item-name.angels-solid-aluminium-hydroxide" },
+    name = "angels-solid-aluminium-hydroxide",
     category = "angels-powder-mixing",
     subgroup = "angels-aluminium",
     energy_required = 6,
@@ -79,7 +72,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-aluminium-smelting",
+    name = "angels-solid-aluminium-hydroxide-2",
     localised_name = { "item-name.angels-solid-aluminium-hydroxide" },
     category = "angels-powder-mixing-2",
     subgroup = "angels-aluminium",
@@ -101,7 +94,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-aluminium-hydroxide-smelting",
+    name = "angels-solid-aluminium-oxide",
     localised_name = { "item-name.angels-solid-aluminium-oxide" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-aluminium",
@@ -122,7 +115,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-sodium-aluminate-smelting",
+    name = "angels-solid-aluminium-oxide-2",
     localised_name = { "item-name.angels-solid-aluminium-oxide" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-aluminium",
@@ -148,8 +141,7 @@ data:extend({
   -- SMELTING RESULT
   {
     type = "recipe",
-    name = "angels-solid-aluminium-oxide-smelting",
-    localised_name = { "item-name.angels-ingot-aluminium" },
+    name = "angels-ingot-aluminium",
     category = "angels-blast-smelting-2",
     subgroup = "angels-aluminium",
     energy_required = 4,
@@ -166,7 +158,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-aluminium",
-    localised_name = { "item-name.angels-powder-aluminium" },
     category = "advanced-crafting",
     subgroup = "angels-aluminium",
     energy_required = 0.5,
