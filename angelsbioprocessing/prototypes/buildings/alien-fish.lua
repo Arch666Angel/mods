@@ -1,3 +1,7 @@
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["alien-fish-1"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["alien-fish-2"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["alien-fish-3"] = {}
+
 data:extend({
   {
     type = "fish",
@@ -21,7 +25,7 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xa",
+      order = "xa",
       --max_probability = 0.025,
       --peaks = {
       --  {
@@ -32,7 +36,7 @@ data:extend({
       --    water_max_range = 0.125,
       --  },
       --},
-      probability_expression = 0.01
+      probability_expression = 0.00025
     },
     protected_from_tile_building = false,
   },
@@ -58,7 +62,7 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xb",
+      order = "xb",
       --max_probability = 0.025,
       --peaks = {
       --  {
@@ -69,7 +73,7 @@ data:extend({
       --    water_max_range = 0.125,
       --  },
       --},
-      probability_expression = 0.01
+      probability_expression = 0.00025
     },
     protected_from_tile_building = false,
   },
@@ -95,7 +99,7 @@ data:extend({
       },
     },
     autoplace = {
-      --order = "xc",
+      order = "xc",
       --max_probability = 0.025,
       --peaks = {
       --  {
@@ -106,7 +110,7 @@ data:extend({
       --    water_max_range = 0.250,
       --  },
       --},
-      probability_expression = 0.01
+      probability_expression = 0.00025
     },
     protected_from_tile_building = false,
   },
