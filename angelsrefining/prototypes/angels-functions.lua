@@ -1718,7 +1718,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       table.insert(recipe.icons, {
         icon = iconLayer.icon,
         icon_size = iconLayer.icon_size or nil,
-        scale = (iconLayer.scale or recipe.icon_size / (iconLayer.icon_size or 32)) * 0.5,
+        scale = (iconLayer.scale or ( recipe.icon_size or 32 ) / (iconLayer.icon_size or 32)) * 0.5,
         shift = {
           ((iconLayer.shift or {})[1] or (iconLayer.shift or {})["x"] or 0) * 0.5 - 8,
           ((iconLayer.shift or {})[2] or (iconLayer.shift or {})["y"] or 0) * 0.5 - 8,
