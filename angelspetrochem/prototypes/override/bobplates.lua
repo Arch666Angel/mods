@@ -216,7 +216,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
     OV.disable_recipe("bob-rubber")
 
     local rubber_icon = mods["bobplates"] and "__bobplates__/graphics/icons/rubber.png"
-      or "__bobplates__/graphics/icons/rubber.png"
+      or "__bobelectronics__/graphics/icons/rubber.png"
 
     OV.patch_recipes({
       {
