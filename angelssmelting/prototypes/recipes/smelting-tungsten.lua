@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-tungsten-ore-processing",
-    localised_name = { "item-name.angels-processed-tungsten" },
+    name = "angels-processed-tungsten",
     category = "angels-ore-processing-4",
     subgroup = "angels-tungsten",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-tungsten-processed-processing",
-    localised_name = { "item-name.angels-pellet-tungsten" },
+    name = "angels-pellet-tungsten",
     category = "angels-pellet-pressing-4",
     subgroup = "angels-tungsten",
     energy_required = 2,
@@ -34,7 +32,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-tungsten-ore-smelting",
+    name = "angels-solid-tungsten-oxide",
     localised_name = { "item-name.angels-solid-tungsten-oxide" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",
@@ -57,7 +55,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-tungstic-acid-smelting",
+    name = "angels-solid-ammonium-paratungstate-2",
     localised_name = { "item-name.angels-solid-ammonium-paratungstate" },
     category = "angels-chemical-smelting-4",
     subgroup = "angels-tungsten",
@@ -81,8 +79,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-tungsten-smelting",
-    localised_name = { "fluid-name.angels-liquid-tungstic-acid" },
+    name = "angels-liquid-tungstic-acid",
     category = "angels-liquifying",
     subgroup = "angels-tungsten",
     energy_required = 4,
@@ -105,8 +102,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-tungsten-oxide-smelting",
-    localised_name = { "fluid-name.angels-gas-tungsten-hexafluoride" },
+    name = "angels-gas-tungsten-hexafluoride",
     category = "angels-liquifying",
     subgroup = "angels-tungsten",
     energy_required = 6,
@@ -129,8 +125,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-tungsten-smelting",
-    localised_name = { "item-name.angels-solid-ammonium-paratungstate" },
+    name = "angels-solid-ammonium-paratungstate",
     category = "angels-chemical-smelting-4",
     subgroup = "angels-tungsten",
     energy_required = 4,
@@ -153,7 +148,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-gas-tungsten-hexafluoride-smelting",
+    name = "angels-powder-tungsten",
     localised_name = { "item-name.angels-powder-tungsten" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",
@@ -171,7 +166,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-ammonium-paratungstate-smelting",
+    name = "angels-solid-tungsten-oxide-2",
     localised_name = { "item-name.angels-solid-tungsten-oxide" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",

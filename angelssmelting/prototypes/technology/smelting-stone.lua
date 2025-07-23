@@ -70,7 +70,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cement-mixture-1",
+        recipe = "angels-solid-cement",
       },
       {
         type = "unlock-recipe",
@@ -120,7 +120,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-cement-mixture-2",
+        recipe = "angels-solid-cement-2",
       },
       {
         type = "unlock-recipe",

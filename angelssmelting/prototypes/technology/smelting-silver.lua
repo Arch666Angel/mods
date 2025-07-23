@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silver-ore-smelting",
+        recipe = "angels-ingot-silver",
       },
       {
         type = "unlock-recipe",
@@ -52,15 +52,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silver-ore-processing",
+        recipe = "angels-processed-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-silver-smelting",
+        recipe = "angels-solid-silver-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-silver-nitrate-smelting",
+        recipe = "angels-ingot-silver-2",
       },
       {
         type = "unlock-recipe",
@@ -132,19 +132,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silver-processed-processing",
+        recipe = "angels-pellet-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-silver-smelting",
+        recipe = "angels-solid-sodium-silver-cyanide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-sodium-silver-cyanide-smelting",
+        recipe = "angels-cathode-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cathode-silver-smelting",
+        recipe = "angels-ingot-silver-3",
       },
     },
     unit = {

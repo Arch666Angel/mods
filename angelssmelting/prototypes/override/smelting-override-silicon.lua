@@ -47,9 +47,9 @@ else
   angelsmods.functions.hide("angels-gas-silane")
   angelsmods.functions.hide("angels-ingot-silicon")
   angelsmods.functions.hide("angels-liquid-molten-silicon")
-  OV.disable_recipe({ "angels-silica-ore-processing", "angels-silica-processed-processing" })
-  OV.disable_recipe({ "angels-processed-silicon-smelting", "angels-pellet-silicon-smelting" })
-  OV.disable_recipe({ "angels-silicon-ore-smelting", "angels-liquid-trichlorosilane-smelting", "angels-gas-silane-smelting" })
+  OV.disable_recipe({ "angels-processed-silica", "angels-pellet-silica" })
+  OV.disable_recipe({ "angels-liquid-trichlorosilane", "angels-gas-silane" })
+  OV.disable_recipe({ "angels-ingot-silicon", "angels-ingot-silicon-2", "angels-ingot-silicon-3" })
   OV.disable_recipe({ "angels-molten-silicon-smelting" })
   OV.disable_technology({ "angels-silicon-smelting-1", "angels-silicon-smelting-2", "angels-silicon-smelting-3" })
   OV.disable_technology({

@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silicon-ore-smelting",
+        recipe = "angels-ingot-silicon",
       },
       {
         type = "unlock-recipe",
@@ -57,15 +57,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silica-ore-processing",
+        recipe = "angels-processed-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-silicon-smelting",
+        recipe = "angels-liquid-trichlorosilane",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-trichlorosilane-smelting",
+        recipe = "angels-ingot-silicon-2",
       },
       {
         type = "unlock-recipe",
@@ -97,15 +97,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-silica-processed-processing",
+        recipe = "angels-pellet-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-silicon-smelting",
+        recipe = "angels-gas-silane",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-silane-smelting",
+        recipe = "angels-ingot-silicon-3",
       },
     },
     unit = {

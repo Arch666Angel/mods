@@ -5,8 +5,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-silver-ore-processing",
-    localised_name = { "item-name.angels-processed-silver" },
+    name = "angels-processed-silver",
     category = "angels-ore-processing-2",
     subgroup = "angels-silver",
     energy_required = 2,
@@ -22,8 +21,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-silver-processed-processing",
-    localised_name = { "item-name.angels-pellet-silver" },
+    name = "angels-pellet-silver",
     category = "angels-pellet-pressing-2",
     subgroup = "angels-silver",
     energy_required = 2,
@@ -38,7 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-silver-smelting",
+    name = "angels-solid-silver-nitrate",
     localised_name = { "item-name.angels-solid-silver-nitrate" },
     category = "angels-liquifying",
     subgroup = "angels-silver",
@@ -56,8 +54,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-silver-smelting",
-    localised_name = { "item-name.angels-solid-sodium-silver-cyanide" },
+    name = "angels-solid-sodium-silver-cyanide",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-silver",
     energy_required = 6,
@@ -77,8 +74,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-sodium-silver-cyanide-smelting",
-    localised_name = { "item-name.angels-cathode-silver" },
+    name = "angels-cathode-silver",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-silver",
     energy_required = 6,
@@ -94,8 +90,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-silver-ore-smelting",
-    localised_name = { "item-name.angels-ingot-silver" },
+    name = "angels-ingot-silver",
     category = "angels-blast-smelting-2",
     subgroup = "angels-silver",
     energy_required = 4,
@@ -111,7 +106,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-silver-nitrate-smelting",
+    name = "angels-ingot-silver-2",
     localised_name = { "item-name.angels-ingot-silver" },
     category = "angels-blast-smelting-3",
     subgroup = "angels-silver",
@@ -128,7 +123,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cathode-silver-smelting",
+    name = "angels-ingot-silver-3",
     localised_name = { "item-name.angels-ingot-silver" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-silver",

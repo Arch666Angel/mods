@@ -15,7 +15,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-zinc-ore-smelting",
+        recipe = "angels-ingot-zinc",
       },
       {
         type = "unlock-recipe",
@@ -27,7 +27,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-zinc-ore-processing-alt",
+        recipe = "angels-solid-zinc-oxide",
       },
     },
     unit = {
@@ -54,11 +54,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-zinc-ore-processing",
+        recipe = "angels-processed-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-zinc-smelting",
+        recipe = "angels-ingot-zinc-2",
       },
       {
         type = "unlock-recipe",
@@ -121,19 +121,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-zinc-processed-processing",
+        recipe = "angels-pellet-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-zinc-smelting",
+        recipe = "angels-solid-zinc-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-zinc-oxide-smelting",
+        recipe = "angels-cathode-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cathode-zinc-smelting",
+        recipe = "angels-ingot-zinc-3",
       },
     },
     unit = {

@@ -22,8 +22,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-cement-mixture-1",
-    localised_name = { "item-name.angels-solid-cement" },
+    name = "angels-solid-cement",
     category = "angels-powder-mixing",
     subgroup = "angels-stone",
     energy_required = 4,
@@ -44,7 +43,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cement-mixture-2",
+    name = "angels-solid-cement-2",
     localised_name = { "item-name.angels-solid-cement" },
     category = "angels-powder-mixing-2",
     subgroup = "angels-stone",

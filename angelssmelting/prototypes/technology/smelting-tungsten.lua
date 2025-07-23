@@ -14,15 +14,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tungsten-ore-smelting",
+        recipe = "angels-solid-tungsten-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-tungsten-oxide-smelting",
+        recipe = "angels-gas-tungsten-hexafluoride",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-tungsten-hexafluoride-smelting",
+        recipe = "angels-powder-tungsten",
       },
       {
         type = "unlock-recipe",
@@ -60,15 +60,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tungsten-ore-processing",
+        recipe = "angels-processed-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-tungsten-smelting",
+        recipe = "angels-solid-ammonium-paratungstate",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-ammonium-paratungstate-smelting",
+        recipe = "angels-solid-tungsten-oxide-2",
       },
       {
         type = "unlock-recipe",
@@ -100,15 +100,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tungsten-processed-processing",
+        recipe = "angels-pellet-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-tungsten-smelting",
+        recipe = "angels-liquid-tungstic-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-tungstic-acid-smelting",
+        recipe = "angels-solid-ammonium-paratungstate-2",
       },
     },
     unit = {

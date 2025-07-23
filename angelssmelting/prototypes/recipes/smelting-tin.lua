@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-tin-ore-processing",
-    localised_name = { "item-name.angels-processed-tin" },
+    name = "angels-processed-tin",
     category = "angels-ore-processing",
     subgroup = "angels-tin",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-tin-processed-processing",
-    localised_name = { "item-name.angels-pellet-tin" },
+    name = "angels-pellet-tin",
     category = "angels-pellet-pressing",
     subgroup = "angels-tin",
     energy_required = 2,
@@ -37,8 +35,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-tin-ore-smelting",
-    localised_name = { "item-name.angels-ingot-tin" },
+    name = "angels-ingot-tin",
     category = "angels-blast-smelting",
     subgroup = "angels-tin",
     energy_required = 4,
@@ -58,7 +55,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-tin-smelting",
+    name = "angels-ingot-tin-2",
     localised_name = { "item-name.angels-ingot-tin" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-tin",
@@ -80,7 +77,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-tin-smelting",
+    name = "angels-ingot-tin-3",
     localised_name = { "item-name.angels-ingot-tin" },
     category = "angels-blast-smelting-3",
     subgroup = "angels-tin",

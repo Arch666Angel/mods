@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-manganese-ore-processing",
-    localised_name = { "item-name.angels-processed-manganese" },
+    name = "angels-processed-manganese",
     category = "angels-ore-processing",
     subgroup = "angels-manganese",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-manganese-processed-processing",
-    localised_name = { "item-name.angels-pellet-manganese" },
+    name = "angels-pellet-manganese",
     category = "angels-pellet-pressing",
     subgroup = "angels-manganese",
     energy_required = 2,
@@ -36,8 +34,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-manganese-processed-processing-alt",
-    localised_name = { "item-name.angels-solid-manganese-oxide" },
+    name = "angels-solid-manganese-oxide",
     category = "angels-chemical-smelting-2",
     subgroup = "angels-manganese",
     energy_required = 2,
@@ -58,7 +55,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-manganese-smelting",
+    name = "angels-solid-manganese-oxide-2",
     localised_name = { "item-name.angels-solid-manganese-oxide" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-manganese",
@@ -80,8 +77,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-manganese-smelting",
-    localised_name = { "item-name.angels-cathode-manganese" },
+    name = "angels-cathode-manganese",
     category = "angels-chemical-smelting",
     subgroup = "angels-manganese",
     energy_required = 6,
@@ -102,7 +98,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-manganese-oxide-smelting",
+    name = "angels-cathode-manganese-2",
     localised_name = { "item-name.angels-cathode-manganese" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-manganese",
@@ -128,8 +124,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-manganese-ore-smelting",
-    localised_name = { "item-name.angels-ingot-manganese" },
+    name = "angels-ingot-manganese",
     category = "angels-blast-smelting",
     subgroup = "angels-manganese",
     energy_required = 4,
@@ -150,7 +145,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cathode-manganese-smelting",
+    name = "angels-ingot-manganese-2",
     localised_name = { "item-name.angels-ingot-manganese" },
     category = "angels-blast-smelting-2",
     subgroup = "angels-manganese",

@@ -14,7 +14,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-manganese-ore-smelting",
+        recipe = "angels-ingot-manganese",
       },
       {
         type = "unlock-recipe",
@@ -52,15 +52,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-manganese-ore-processing",
+        recipe = "angels-processed-manganese",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-manganese-smelting",
+        recipe = "angels-cathode-manganese",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cathode-manganese-smelting",
+        recipe = "angels-ingot-manganese-2",
       },
       {
         type = "unlock-recipe",
@@ -122,19 +122,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-manganese-processed-processing",
+        recipe = "angels-pellet-manganese",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-manganese-processed-processing-alt",
+        recipe = "angels-solid-manganese-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-manganese-smelting",
+        recipe = "angels-solid-manganese-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-manganese-oxide-smelting",
+        recipe = "angels-cathode-manganese-2",
       },
       {
         type = "unlock-recipe",

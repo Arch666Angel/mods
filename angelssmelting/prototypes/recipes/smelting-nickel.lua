@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-nickel-ore-processing",
-    localised_name = { "item-name.angels-processed-nickel" },
+    name = "angels-processed-nickel",
     category = "angels-ore-processing-2",
     subgroup = "angels-nickel",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-nickel-processed-processing",
-    localised_name = { "item-name.angels-pellet-nickel" },
+    name = "angels-pellet-nickel",
     category = "angels-pellet-pressing-2",
     subgroup = "angels-nickel",
     energy_required = 2,
@@ -36,8 +34,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-nickel-smelting",
-    localised_name = { "item-name.angels-cathode-nickel" },
+    name = "angels-cathode-nickel",
     category = "angels-chemical-smelting-2",
     subgroup = "angels-nickel",
     energy_required = 6,
@@ -53,8 +50,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-nickel-smelting",
-    localised_name = { "item-name.angels-solid-nickel-carbonyl" },
+    name = "angels-solid-nickel-carbonyl",
     category = "angels-blast-smelting-4",
     subgroup = "angels-nickel",
     energy_required = 4,
@@ -72,8 +68,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-nickel-ore-smelting",
-    localised_name = { "item-name.angels-ingot-nickel" },
+    name = "angels-ingot-nickel",
     category = "angels-blast-smelting-2",
     subgroup = "angels-nickel",
     energy_required = 4,
@@ -94,7 +89,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cathode-nickel-smelting",
+    name = "angels-ingot-nickel-2",
     localised_name = { "item-name.angels-ingot-nickel" },
     category = "angels-blast-smelting-3",
     subgroup = "angels-nickel",
@@ -115,7 +110,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-nickel-carbonyl-smelting",
+    name = "angels-ingot-nickel-3",
     localised_name = { "item-name.angels-ingot-nickel" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-nickel",

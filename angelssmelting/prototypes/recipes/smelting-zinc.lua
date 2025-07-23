@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-zinc-ore-processing",
-    localised_name = { "item-name.angels-processed-zinc" },
+    name = "angels-processed-zinc",
     category = "angels-ore-processing-2",
     subgroup = "angels-zinc",
     energy_required = 2,
@@ -21,8 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-zinc-processed-processing",
-    localised_name = { "item-name.angels-pellet-zinc" },
+    name = "angels-pellet-zinc",
     category = "angels-pellet-pressing-2",
     subgroup = "angels-zinc",
     energy_required = 2,
@@ -38,8 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-zinc-ore-processing-alt",
-    localised_name = { "item-name.angels-solid-zinc-oxide" },
+    name = "angels-solid-zinc-oxide",
     category = "angels-chemical-smelting",
     subgroup = "angels-zinc",
     energy_required = 2,
@@ -62,7 +59,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-zinc-smelting",
+    name = "angels-solid-zinc-oxide-2",
     localised_name = { "item-name.angels-solid-zinc-oxide" },
     category = "angels-chemical-smelting-3",
     subgroup = "angels-zinc",
@@ -86,8 +83,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solid-zinc-oxide-smelting",
-    localised_name = { "item-name.angels-cathode-zinc" },
+    name = "angels-cathode-zinc",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-zinc",
     energy_required = 6,
@@ -104,8 +100,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-zinc-ore-smelting",
-    localised_name = { "item-name.angels-ingot-zinc" },
+    name = "angels-ingot-zinc",
     category = "angels-chemical-smelting",
     subgroup = "angels-zinc",
     energy_required = 4,
@@ -130,7 +125,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-zinc-smelting",
+    name = "angels-ingot-zinc-2",
     localised_name = { "item-name.angels-ingot-zinc" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-zinc",
@@ -155,7 +150,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cathode-zinc-smelting",
+    name = "angels-ingot-zinc-3",
     localised_name = { "item-name.angels-ingot-zinc" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-zinc",
@@ -177,7 +172,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-zinc",
-    localised_name = { "item-name.angels-powder-zinc" },
     category = "advanced-crafting",
     subgroup = "angels-zinc",
     energy_required = 0.5,

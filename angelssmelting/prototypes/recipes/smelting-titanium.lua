@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-titanium-ore-processing",
-    localised_name = { "item-name.angels-processed-titanium" },
+    name = "angels-processed-titanium",
     category = "angels-ore-processing-3",
     subgroup = "angels-titanium",
     energy_required = 2,
@@ -20,8 +19,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-titanium-processed-processing",
-    localised_name = { "item-name.angels-pellet-titanium" },
+    name = "angels-pellet-titanium",
     category = "angels-pellet-pressing-3",
     subgroup = "angels-titanium",
     energy_required = 2,
@@ -36,8 +34,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-titanium-ore-smelting",
-    localised_name = { "fluid-name.angels-liquid-titanium-tetrachloride" },
+    name = "angels-liquid-titanium-tetrachloride",
     category = "angels-chemical-smelting-2",
     subgroup = "angels-titanium",
     energy_required = 8,
@@ -50,7 +47,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
     },
-    main_product = "angels-liquid-titanium-tetrachloride",
     always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
@@ -63,7 +59,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-titanium-smelting",
+    name = "angels-liquid-titanium-tetrachloride-2",
     localised_name = { "fluid-name.angels-liquid-titanium-tetrachloride" },
     category = "angels-chemical-smelting-3",
     subgroup = "angels-titanium",
@@ -90,8 +86,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-titanium-tetrachloride-smelting",
-    localised_name = { "item-name.angels-sponge-titanium" },
+    name = "angels-sponge-titanium",
     category = "angels-chemical-smelting-2",
     subgroup = "angels-titanium",
     energy_required = 6,
@@ -108,8 +103,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-sponge-titanium-smelting",
-    localised_name = { "item-name.angels-ingot-titanium" },
+    name = "angels-ingot-titanium",
     category = "angels-blast-smelting-3",
     subgroup = "angels-titanium",
     energy_required = 4,
@@ -129,7 +123,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-titanium-smelting",
+    name = "angels-ingot-titanium-2",
     localised_name = { "item-name.angels-ingot-titanium" },
     category = "angels-blast-smelting-4",
     subgroup = "angels-titanium",

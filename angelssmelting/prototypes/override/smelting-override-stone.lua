@@ -55,13 +55,13 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger
   -- special vanilla
   OV.patch_recipes({
     {
-      name = "angels-cement-mixture-1",
+      name = "angels-solid-cement",
       ingredients = {
         { name = "angels-stone-crushed", type = "item", amount = "angels-quartz" },
       },
     },
     {
-      name = "angels-cement-mixture-2",
+      name = "angels-solid-cement-2",
       ingredients = {
         { name = "angels-stone-crushed", type = "item", amount = "angels-quartz" },
         { name = "angels-stone-crushed", type = "item", amount = "angels-solid-aluminium-oxide" },

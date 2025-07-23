@@ -13,7 +13,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-nickel-ore-smelting",
+        recipe = "angels-ingot-nickel",
       },
       {
         type = "unlock-recipe",
@@ -48,15 +48,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-nickel-ore-processing",
+        recipe = "angels-processed-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-nickel-smelting",
+        recipe = "angels-cathode-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cathode-nickel-smelting",
+        recipe = "angels-ingot-nickel-2",
       },
       {
         type = "unlock-recipe",
@@ -119,15 +119,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-nickel-processed-processing",
+        recipe = "angels-pellet-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-nickel-smelting",
+        recipe = "angels-solid-nickel-carbonyl",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solid-nickel-carbonyl-smelting",
+        recipe = "angels-ingot-nickel-3",
       },
     },
     unit = {

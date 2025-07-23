@@ -3,8 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-silica-ore-processing",
-    localised_name = { "item-name.angels-processed-silica" },
+    name = "angels-processed-silica",
     category = "angels-ore-processing-2",
     subgroup = "angels-silicon",
     energy_required = 2,
@@ -21,8 +20,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-silica-processed-processing",
-    localised_name = { "item-name.angels-pellet-silica" },
+    name = "angels-pellet-silica",
     category = "angels-pellet-pressing-2",
     subgroup = "angels-silicon",
     energy_required = 2,
@@ -38,8 +36,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-processed-silicon-smelting",
-    localised_name = { "fluid-name.angels-liquid-trichlorosilane" },
+    name = "angels-liquid-trichlorosilane",
     category = "angels-chemical-smelting-2",
     subgroup = "angels-silicon",
     energy_required = 4,
@@ -61,8 +58,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-pellet-silicon-smelting",
-    localised_name = { "fluid-name.angels-gas-silane" },
+    name = "angels-gas-silane",
     category = "angels-chemical-smelting-3",
     subgroup = "angels-silicon",
     energy_required = 4,
@@ -86,8 +82,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "angels-silicon-ore-smelting",
-    localised_name = { "item-name.angels-ingot-silicon" },
+    name = "angels-ingot-silicon",
     category = "angels-blast-smelting-2",
     subgroup = "angels-silicon",
     energy_required = 4,
@@ -108,7 +103,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-trichlorosilane-smelting",
+    name = "angels-ingot-silicon-2",
     localised_name = { "item-name.angels-ingot-silicon" },
     category = "angels-chemical-smelting-2",
     subgroup = "angels-silicon",
@@ -130,7 +125,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-gas-silane-smelting",
+    name = "angels-ingot-silicon-3",
     localised_name = { "item-name.angels-ingot-silicon" },
     category = "angels-chemical-smelting-3",
     subgroup = "angels-silicon",

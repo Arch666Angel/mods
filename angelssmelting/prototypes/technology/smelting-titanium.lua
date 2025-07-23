@@ -15,15 +15,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-titanium-ore-smelting",
+        recipe = "angels-liquid-titanium-tetrachloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-titanium-tetrachloride-smelting",
+        recipe = "angels-sponge-titanium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-sponge-titanium-smelting",
+        recipe = "angels-ingot-titanium",
       },
       {
         type = "unlock-recipe",
@@ -58,11 +58,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-titanium-ore-processing",
+        recipe = "angels-processed-titanium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-titanium-smelting",
+        recipe = "angels-liquid-titanium-tetrachloride-2",
       },
       {
         type = "unlock-recipe",
@@ -137,11 +137,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-titanium-processed-processing",
+        recipe = "angels-pellet-titanium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-titanium-smelting",
+        recipe = "angels-ingot-titanium-2",
       },
     },
     unit = {

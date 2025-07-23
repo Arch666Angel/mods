@@ -12,7 +12,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tin-ore-smelting",
+        recipe = "angels-ingot-tin",
       },
       {
         type = "unlock-recipe",
@@ -50,11 +50,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tin-ore-processing",
+        recipe = "angels-processed-tin",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-processed-tin-smelting",
+        recipe = "angels-ingot-tin-2",
       },
       {
         type = "unlock-recipe",
@@ -123,11 +123,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tin-processed-processing",
+        recipe = "angels-pellet-tin",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-tin-smelting",
+        recipe = "angels-ingot-tin-3",
       },
     },
     unit = {
