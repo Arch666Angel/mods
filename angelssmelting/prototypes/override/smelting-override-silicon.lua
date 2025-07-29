@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-silicon")
-    OV.disable_recipe({ "angels-molten-silicon-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-silicon" })
     OV.disable_technology({
       "angels-silicon-casting-2",--[[, "angels-silicon-casting-3"]]
     })
@@ -50,7 +50,7 @@ else
   OV.disable_recipe({ "angels-processed-silica", "angels-pellet-silica" })
   OV.disable_recipe({ "angels-liquid-trichlorosilane", "angels-gas-silane" })
   OV.disable_recipe({ "angels-ingot-silicon", "angels-ingot-silicon-2", "angels-ingot-silicon-3" })
-  OV.disable_recipe({ "angels-molten-silicon-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-silicon" })
   OV.disable_technology({ "angels-silicon-smelting-1", "angels-silicon-smelting-2", "angels-silicon-smelting-3" })
   OV.disable_technology({
     "angels-silicon-casting-2",--[[, "angels-silicon-casting-3"]]
@@ -75,7 +75,7 @@ else
   angelsmods.functions.hide("angels-mono-silicon")
   OV.disable_recipe({
     "angels-mono-silicon-seed",
-    "angels-mono-silicon-1",
+    "angels-mono-silicon",
     "angels-mono-silicon-2",
     "angels-quartz-crucible",
   })

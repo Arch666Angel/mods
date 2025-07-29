@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-manganese-smelting",
+        recipe = "angels-liquid-molten-manganese",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-iron-smelting-2",
+        recipe = "angels-liquid-molten-iron-2",
       },
     },
     unit = {
@@ -90,11 +90,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-manganese-casting",
+        recipe = "angels-roll-manganese",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-manganese-converting",
+        recipe = "angels-plate-manganese-2",
       },
     },
     unit = {
@@ -165,7 +165,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-manganese-casting-fast",
+        recipe = "angels-roll-manganese-2",
       },
     },
     unit = {

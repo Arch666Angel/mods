@@ -115,8 +115,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-tin-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-tin" },
+    name = "angels-liquid-molten-tin",
     category = "angels-induction-smelting",
     subgroup = "angels-tin-casting",
     energy_required = 4,
@@ -133,8 +132,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-tin-casting",
-    localised_name = { "item-name.angels-roll-tin" },
+    name = "angels-roll-tin",
     category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
@@ -156,7 +154,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-tin-casting-fast",
+    name = "angels-roll-tin-2",
     localised_name = { "item-name.angels-roll-tin" },
     category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
@@ -181,8 +179,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-casting",
-    localised_name = { "item-name.angels-wire-coil-tin" },
+    name = "angels-wire-coil-tin",
     category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
@@ -205,7 +202,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-casting-fast",
+    name = "angels-wire-coil-tin-2",
     localised_name = { "item-name.angels-wire-coil-tin" },
     category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
@@ -254,7 +251,7 @@ data:extend({
   }, -- i[angels-plate-tin]-b reserved for tin ore smelting (see tin overrides)
   {
     type = "recipe",
-    name = "angels-roll-tin-converting",
+    name = "angels-plate-tin-2",
     localised_name = { "item-name.angels-plate-tin" },
     category = "advanced-crafting",
     subgroup = "angels-tin-casting",
@@ -277,7 +274,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "basic-tinned-copper-wire",
+    name = "angels-wire-tin",
     localised_name = { "item-name.angels-wire-tin" },
     subgroup = "angels-tin-casting",
     order = "m",
@@ -302,7 +299,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-converting",
+    name = "angels-wire-tin-2",
     localised_name = { "item-name.angels-wire-tin" },
     category = "advanced-crafting",
     subgroup = "angels-tin-casting",

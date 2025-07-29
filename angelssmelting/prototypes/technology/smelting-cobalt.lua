@@ -20,7 +20,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-cobalt-smelting",
+        recipe = "angels-liquid-molten-cobalt",
       },
       {
         type = "unlock-recipe",
@@ -95,11 +95,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-cobalt-casting",
+        recipe = "angels-roll-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-cobalt-converting",
+        recipe = "angels-plate-cobalt-2",
       },
     },
     unit = {
@@ -165,7 +165,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-cobalt-casting-fast",
+        recipe = "angels-roll-cobalt-2",
       },
     },
     unit = {

@@ -146,8 +146,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-platinum-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-platinum" },
+    name = "angels-liquid-molten-platinum",
     category = "angels-induction-smelting-4",
     subgroup = "angels-platinum-casting",
     energy_required = 4,
@@ -163,8 +162,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-platinum-casting",
-    localised_name = { "item-name.angels-roll-platinum" },
+    name = "angels-roll-platinum",
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
@@ -182,7 +180,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-platinum-casting-fast",
+    name = "angels-roll-platinum-2",
     localised_name = { "item-name.angels-roll-platinum" },
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
@@ -203,8 +201,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-platinum-casting",
-    localised_name = { "item-name.angels-wire-coil-platinum" },
+    name = "angels-wire-coil-platinum",
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
@@ -227,7 +224,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-platinum-casting-fast",
+    name = "angels-wire-coil-platinum-2",
     localised_name = { "item-name.angels-wire-coil-platinum" },
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
@@ -276,7 +273,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-platinum-converting",
+    name = "angels-plate-platinum-2",
     localised_name = { "item-name.angels-plate-platinum" },
     category = "advanced-crafting",
     subgroup = "angels-platinum-casting",
@@ -299,8 +296,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "basic-platinated-copper-wire",
-    localised_name = { "item-name.angels-wire-platinum" },
+    name = "angels-wire-platinum",
     subgroup = "angels-platinum-casting",
     order = "m",
     enabled = false,
@@ -324,7 +320,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-platinum-converting",
+    name = "angels-wire-platinum-2",
     localised_name = { "item-name.angels-wire-platinum" },
     category = "advanced-crafting",
     subgroup = "angels-platinum-casting",

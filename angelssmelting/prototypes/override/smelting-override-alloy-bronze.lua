@@ -30,8 +30,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-bronze-smelting-1",
-        localised_name = { "fluid-name.angels-liquid-molten-bronze" },
+        name = "angels-liquid-molten-bronze",
         category = "angels-induction-smelting",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -53,7 +52,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       },
       {
         type = "recipe",
-        name = "angels-bronze-smelting-2",
+        name = "angels-liquid-molten-bronze-2",
         localised_name = { "fluid-name.angels-liquid-molten-bronze" },
         category = "angels-induction-smelting-2",
         subgroup = "angels-alloys-casting",
@@ -77,7 +76,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       },
       {
         type = "recipe",
-        name = "angels-bronze-smelting-3",
+        name = "angels-liquid-molten-bronze-3",
         localised_name = { "fluid-name.angels-liquid-molten-bronze" },
         category = "angels-induction-smelting-3",
         subgroup = "angels-alloys-casting",
@@ -129,7 +128,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-bronze-smelting-1",
+            recipe = "angels-liquid-molten-bronze",
           },
           {
             type = "unlock-recipe",
@@ -158,7 +157,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-bronze-smelting-2",
+            recipe = "angels-liquid-molten-bronze-2",
           },
         },
         unit = {
@@ -184,7 +183,7 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-bronze-smelting-3",
+            recipe = "angels-liquid-molten-bronze-3",
           },
         },
         unit = {

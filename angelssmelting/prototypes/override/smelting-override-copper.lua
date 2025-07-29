@@ -159,7 +159,7 @@ if angelsmods.trigger.smelting_products["copper"].wire then
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
     OV.add_additional_category("copper-cable", "electronics")
-    OV.add_additional_category("angels-wire-coil-copper-converting", "electronics")
+    OV.add_additional_category("angels-wire-copper-2", "electronics")
   end
 else
   -- todo

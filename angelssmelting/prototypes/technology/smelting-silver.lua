@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-silver-smelting",
+        recipe = "angels-liquid-molten-silver",
       },
       {
         type = "unlock-recipe",
@@ -25,7 +25,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-silvered-copper-wire",
+        recipe = "angels-wire-silver",
       },
     },
     unit = {
@@ -92,19 +92,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting",
+        recipe = "angels-wire-coil-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-converting",
+        recipe = "angels-wire-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-silver-casting",
+        recipe = "angels-roll-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-silver-converting",
+        recipe = "angels-plate-silver-2",
       },
     },
     unit = {
@@ -172,11 +172,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting-fast",
+        recipe = "angels-wire-coil-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-silver-casting-fast",
+        recipe = "angels-roll-silver-2",
       },
     },
     unit = {

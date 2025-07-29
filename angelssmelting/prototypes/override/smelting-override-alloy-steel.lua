@@ -23,10 +23,10 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
     -- special vanilla
     OV.disable_recipe({
-      "angels-molten-steel-smelting-2",
-      "angels-molten-steel-smelting-3",
-      "angels-molten-steel-smelting-4",
-      "angels-molten-steel-smelting-5",
+      "angels-liquid-molten-steel-2",
+      "angels-liquid-molten-steel-3",
+      "angels-liquid-molten-steel-4",
+      "angels-liquid-molten-steel-5",
     })
     OV.disable_technology("angels-steel-smelting-4")
   end
@@ -77,11 +77,11 @@ else
   angelsmods.functions.hide("angels-liquid-molten-steel")
   OV.disable_recipe({ "angels-ingot-steel" })
   OV.disable_recipe({
-    "angels-molten-steel-smelting-1",
-    "angels-molten-steel-smelting-2",
-    "angels-molten-steel-smelting-3",
-    "angels-molten-steel-smelting-4",
-    "angels-molten-steel-smelting-5",
+    "angels-liquid-molten-steel",
+    "angels-liquid-molten-steel-2",
+    "angels-liquid-molten-steel-3",
+    "angels-liquid-molten-steel-4",
+    "angels-liquid-molten-steel-5",
   })
   OV.disable_technology({
     "angels-steel-smelting-1",
@@ -117,8 +117,8 @@ if angelsmods.trigger.smelting_products["steel"].plate then
 else
   angelsmods.functions.hide("angels-plate-steel")
   angelsmods.functions.hide("angels-roll-steel")
-  OV.disable_recipe({ "angels-roll-steel-casting", "angels-roll-steel-casting-fast" })
-  OV.disable_recipe({ "angels-plate-steel", "angels-roll-steel-converting" })
+  OV.disable_recipe({ "angels-roll-steel", "angels-roll-steel-2" })
+  OV.disable_recipe({ "angels-plate-steel", "angels-plate-steel-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -134,10 +134,10 @@ end
 -- ROD ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["steel"].rod then
-  OV.add_unlock("steel-processing", "angels-rod-steel-plate")
+  OV.add_unlock("steel-processing", "angels-rod-steel")
 else
   angelsmods.functions.hide("angels-rod-stack-steel")
   angelsmods.functions.hide("angels-rod-steel")
-  OV.disable_recipe({ "angels-rod-stack-steel-casting", "angels-rod-stack-steel-casting-fast" })
-  OV.disable_recipe({ "angels-rod-steel-plate", "angels-rod-stack-steel-converting" })
+  OV.disable_recipe({ "angels-rod-stack-steel", "angels-rod-stack-steel-2" })
+  OV.disable_recipe({ "angels-rod-steel", "angels-rod-steel-2" })
 end

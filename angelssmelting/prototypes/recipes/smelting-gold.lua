@@ -181,8 +181,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-gold-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-gold" },
+    name = "angels-liquid-molten-gold",
     category = "angels-induction-smelting-3",
     subgroup = "angels-gold-casting",
     energy_required = 4,
@@ -199,8 +198,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-gold-casting",
-    localised_name = { "item-name.angels-roll-gold" },
+    name = "angels-roll-gold",
     category = "angels-strand-casting-3",
     subgroup = "angels-gold-casting",
     enabled = false,
@@ -222,7 +220,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-gold-casting-fast",
+    name = "angels-roll-gold-2",
     localised_name = { "item-name.angels-roll-gold" },
     category = "angels-strand-casting-4",
     subgroup = "angels-gold-casting",
@@ -247,8 +245,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-gold-casting",
-    localised_name = { "item-name.angels-wire-coil-gold" },
+    name = "angels-wire-coil-gold",
     category = "angels-strand-casting-3",
     subgroup = "angels-gold-casting",
     enabled = false,
@@ -271,7 +268,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-gold-casting-fast",
+    name = "angels-wire-coil-gold-2",
     localised_name = { "item-name.angels-wire-coil-gold" },
     category = "angels-strand-casting-4",
     subgroup = "angels-gold-casting",
@@ -320,7 +317,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-gold-converting",
+    name = "angels-plate-gold-2",
     localised_name = { "item-name.angels-plate-gold" },
     category = "advanced-crafting",
     subgroup = "angels-gold-casting",
@@ -367,7 +364,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-gold-converting",
+    name = "angels-wire-gold-2",
     localised_name = { "item-name.angels-wire-gold" },
     category = "advanced-crafting",
     subgroup = "angels-gold-casting",

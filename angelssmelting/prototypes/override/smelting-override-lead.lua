@@ -40,7 +40,7 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-lead")
-    OV.disable_recipe({ "angels-molten-lead-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-lead" })
   end
 
   if angelsmods.trigger.smelting_products["lead"].plate then
@@ -63,7 +63,7 @@ else
   OV.disable_recipe({ "angels-processed-lead", "angels-pellet-lead" })
   OV.disable_recipe({ "angels-solid-lead-oxide", "angels-anode-lead", "angels-liquid-hexafluorosilicic-acid" })
   OV.disable_recipe({ "angels-ingot-lead", "angels-ingot-lead-2", "angels-ingot-lead-3" })
-  OV.disable_recipe({ "angels-molten-lead-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-lead" })
   OV.disable_technology({ "angels-lead-smelting-1", "angels-lead-smelting-2", "angels-lead-smelting-3" })
   OV.disable_technology({ "angels-lead-casting-2", "angels-lead-casting-3" })
 end
@@ -94,8 +94,8 @@ if angelsmods.trigger.smelting_products["lead"].plate then
 else
   angelsmods.functions.hide("angels-plate-lead")
   angelsmods.functions.hide("angels-roll-lead")
-  OV.disable_recipe({ "angels-roll-lead-casting", "angels-roll-lead-casting-fast" })
-  OV.disable_recipe({ "angels-plate-lead", "angels-roll-lead-converting" })
+  OV.disable_recipe({ "angels-roll-lead", "angels-roll-lead-2" })
+  OV.disable_recipe({ "angels-plate-lead", "angels-plate-lead-2" })
 end
 
 -------------------------------------------------------------------------------

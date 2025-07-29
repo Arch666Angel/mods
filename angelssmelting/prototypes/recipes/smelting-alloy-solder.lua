@@ -4,7 +4,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solder-mixture",
-    localised_name = { "item-name.angels-solder-mixture" },
     category = "crafting",
     subgroup = "angels-alloys",
     enabled = false,
@@ -21,8 +20,7 @@ data:extend({
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-solder-smelting-1",
-    localised_name = { "fluid-name.angels-liquid-molten-solder" },
+    name = "angels-liquid-molten-solder",
     category = "angels-induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
@@ -43,7 +41,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-2",
+    name = "angels-liquid-molten-solder-2",
     localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting",
     subgroup = "angels-solder-casting",
@@ -66,7 +64,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-3",
+    name = "angels-liquid-molten-solder-3",
     localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting-2",
     subgroup = "angels-solder-casting",
@@ -89,7 +87,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-4",
+    name = "angels-liquid-molten-solder-4",
     localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting-3",
     subgroup = "angels-solder-casting",
@@ -113,8 +111,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-solder-casting",
-    localised_name = { "item-name.angels-roll-solder" },
+    name = "angels-roll-solder",
     category = "angels-strand-casting",
     subgroup = "angels-solder-casting",
     enabled = false,
@@ -136,7 +133,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-solder-casting-fast",
+    name = "angels-roll-solder-2",
     localised_name = { "item-name.angels-roll-solder" },
     category = "angels-strand-casting-2",
     subgroup = "angels-solder-casting",
@@ -206,7 +203,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-solder-converting",
+    name = "angels-solder-2",
     localised_name = { "item-name.angels-solder" },
     category = "advanced-crafting",
     subgroup = "angels-solder-casting",

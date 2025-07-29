@@ -30,8 +30,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-gunmetal-smelting-1",
-        localised_name = { "fluid-name.angels-liquid-molten-gunmetal" },
+        name = "angels-liquid-molten-gunmetal",
         category = "angels-induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -78,7 +77,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-gunmetal-smelting-1",
+            recipe = "angels-liquid-molten-gunmetal",
           },
           {
             type = "unlock-recipe",

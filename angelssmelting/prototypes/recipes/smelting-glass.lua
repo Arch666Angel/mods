@@ -94,8 +94,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-glass-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-glass" },
+    name = "angels-liquid-molten-glass",
     category = "angels-induction-smelting-2",
     subgroup = "angels-glass-casting",
     energy_required = 4,
@@ -112,7 +111,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coil-glass-fiber",
-    localised_name = { "item-name.angels-coil-glass-fiber" },
     category = "angels-strand-casting-2",
     subgroup = "angels-glass-casting",
     enabled = false,
@@ -134,7 +132,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-coil-glass-fiber-fast",
+    name = "angels-coil-glass-fiber-2",
     localised_name = { "item-name.angels-coil-glass-fiber" },
     category = "angels-strand-casting-3",
     subgroup = "angels-glass-casting",
@@ -160,7 +158,7 @@ data:extend({
   -- CASTING RESULT
   {
     type = "recipe",
-    name = "angels-plate-glass-1",
+    name = "angels-plate-glass",
     localised_name = { "item-name.angels-plate-glass" },
     category = "angels-casting-2",
     subgroup = "angels-glass-casting",

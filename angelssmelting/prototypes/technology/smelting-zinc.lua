@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-zinc-smelting",
+        recipe = "angels-liquid-molten-zinc",
       },
       {
         type = "unlock-recipe",
@@ -89,11 +89,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-zinc-casting",
+        recipe = "angels-roll-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-zinc-converting",
+        recipe = "angels-plate-zin-2",
       },
     },
     unit = {
@@ -161,7 +161,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-zinc-casting-fast",
+        recipe = "angels-roll-zinc-2",
       },
     },
     unit = {

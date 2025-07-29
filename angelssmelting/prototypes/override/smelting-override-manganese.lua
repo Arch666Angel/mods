@@ -22,7 +22,7 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-manganese")
-    OV.disable_recipe({ "angels-molten-manganese-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-manganese" })
     OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -56,7 +56,7 @@ else
     "angels-cathode-manganese-2",
   })
   OV.disable_recipe({ "angels-ingot-manganese", "angels-ingot-manganese-2" })
-  OV.disable_recipe({ "angels-molten-manganese-smelting", "angels-solid-iron-hydroxide-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-manganese", "angels-solid-iron-hydroxide-smelting" })
   OV.disable_technology({ "angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3" })
   OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
 end
@@ -68,8 +68,8 @@ if angelsmods.trigger.smelting_products["manganese"].plate then
 else
   angelsmods.functions.hide("angels-plate-manganese")
   angelsmods.functions.hide("angels-roll-manganese")
-  OV.disable_recipe({ "angels-roll-manganese-casting", "angels-roll-manganese-casting-fast" })
-  OV.disable_recipe({ "angels-plate-manganese", "angels-roll-manganese-converting" })
+  OV.disable_recipe({ "angels-roll-manganese", "angels-roll-manganese-2" })
+  OV.disable_recipe({ "angels-plate-manganese", "angels-plate-manganese-2" })
 end
 
 -------------------------------------------------------------------------------

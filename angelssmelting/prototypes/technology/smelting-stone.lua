@@ -74,7 +74,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-concrete-mixture-1",
+        recipe = "angels-liquid-concrete",
       },
       {
         type = "unlock-recipe",
@@ -124,7 +124,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-concrete-mixture-2",
+        recipe = "angels-liquid-concrete-2",
       },
       {
         type = "unlock-recipe",

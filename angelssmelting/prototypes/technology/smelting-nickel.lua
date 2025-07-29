@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-nickel-smelting",
+        recipe = "angels-liquid-molten-nickel",
       },
       {
         type = "unlock-recipe",
@@ -87,11 +87,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-nickel-casting",
+        recipe = "angels-roll-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-nickel-converting",
+        recipe = "angels-plate-nickel-2",
       },
     },
     unit = {
@@ -155,7 +155,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-nickel-casting-fast",
+        recipe = "angels-roll-nickel-2",
       },
     },
     unit = {

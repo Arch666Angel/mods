@@ -38,11 +38,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-1",
+        recipe = "angels-liquid-molten-solder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-2",
+        recipe = "angels-liquid-molten-solder-2",
       },
       {
         type = "unlock-recipe",
@@ -72,15 +72,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-3",
+        recipe = "angels-liquid-molten-solder-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-solder-casting",
+        recipe = "angels-roll-solder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-solder-converting",
+        recipe = "angels-solder-2",
       },
     },
     unit = {
@@ -108,11 +108,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-solder-smelting-4",
+        recipe = "angels-liquid-molten-solder-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-solder-casting-fast",
+        recipe = "angels-roll-solder-2",
       },
     },
     unit = {

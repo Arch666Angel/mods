@@ -30,7 +30,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-tin")
-    OV.disable_recipe({ "angels-molten-tin-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-tin" })
     OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -45,7 +45,7 @@ else
   angelsmods.functions.hide("angels-liquid-molten-tin")
   OV.disable_recipe({ "angels-processed-tin", "angels-pellet-tin" })
   OV.disable_recipe({ "angels-ingot-tin", "angels-ingot-tin-2", "angels-ingot-tin-3" })
-  OV.disable_recipe({ "angels-molten-tin-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-tin" })
   OV.disable_technology({ "angels-tin-smelting-1", "angels-tin-smelting-2", "angels-tin-smelting-3" })
   OV.disable_technology({ "angels-tin-casting-2", "angels-tin-casting-3" })
 end
@@ -84,8 +84,8 @@ if angelsmods.trigger.smelting_products["tin"].plate then
 else
   angelsmods.functions.hide("angels-plate-tin")
   angelsmods.functions.hide("angels-roll-tin")
-  OV.disable_recipe({ "angels-roll-tin-casting", "angels-roll-tin-casting-fast" })
-  OV.disable_recipe({ "angels-plate-tin", "angels-roll-tin-converting" })
+  OV.disable_recipe({ "angels-roll-tin", "angels-roll-tin-2" })
+  OV.disable_recipe({ "angels-plate-tin", "angels-plate-tin-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -104,14 +104,14 @@ if angelsmods.trigger.smelting_products["tin"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("basic-tinned-copper-wire", "electronics")
-    OV.add_additional_category("angels-wire-coil-tin-converting", "electronics")
+    OV.add_additional_category("angels-wire-tin", "electronics")
+    OV.add_additional_category("angels-wire-tin-2", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-tin")
   angelsmods.functions.hide("angels-wire-coil-tin")
-  OV.disable_recipe({ "angels-wire-coil-tin-casting", "angels-wire-coil-tin-casting-fast" })
-  OV.disable_recipe({ "basic-tinned-copper-wire", "angels-wire-coil-tin-converting" })
+  OV.disable_recipe({ "angels-wire-coil-tin", "angels-wire-coil-tin-2" })
+  OV.disable_recipe({ "angels-wire-tin", "angels-wire-tin-2" })
 end
 
 -------------------------------------------------------------------------------

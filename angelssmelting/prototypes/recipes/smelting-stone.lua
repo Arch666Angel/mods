@@ -103,8 +103,7 @@ data:extend({
   -- order f reserved for stone brick (see override)
   {
     type = "recipe",
-    name = "angels-concrete-mixture-1",
-    localised_name = { "fluid-name.angels-liquid-concrete" },
+    name = "angels-liquid-concrete",
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",
     energy_required = 4,
@@ -126,7 +125,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-concrete-mixture-2",
+    name = "angels-liquid-concrete-2",
     localised_name = { "fluid-name.angels-liquid-concrete" },
     category = "crafting-with-fluid",
     subgroup = "angels-stone-casting",

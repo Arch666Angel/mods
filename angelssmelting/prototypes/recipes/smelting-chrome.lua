@@ -173,8 +173,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-chrome-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-chrome" },
+    name = "angels-liquid-molten-chrome",
     category = "angels-induction-smelting-4",
     subgroup = "angels-chrome-casting",
     energy_required = 4,
@@ -190,8 +189,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-chrome-casting",
-    localised_name = { "item-name.angels-roll-chrome" },
+    name = "angels-roll-chrome",
     category = "angels-strand-casting-4",
     subgroup = "angels-chrome-casting",
     enabled = false,
@@ -209,7 +207,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-chrome-casting-fast",
+    name = "angels-roll-chrome-2",
     localised_name = { "item-name.angels-roll-chrome" },
     category = "angels-strand-casting-4",
     subgroup = "angels-chrome-casting",
@@ -253,7 +251,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-chrome-converting",
+    name = "angels-plate-chrome-2",
     localised_name = { "item-name.angels-plate-chrome" },
     category = "advanced-crafting",
     subgroup = "angels-chrome-casting",

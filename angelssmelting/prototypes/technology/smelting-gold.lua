@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-gold-smelting",
+        recipe = "angels-liquid-molten-gold",
       },
       {
         type = "unlock-recipe",
@@ -99,19 +99,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-casting",
+        recipe = "angels-wire-coil-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-converting",
+        recipe = "angels-wire-gold-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-gold-casting",
+        recipe = "angels-roll-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-gold-converting",
+        recipe = "angels-plate-gold-2",
       },
     },
     unit = {
@@ -177,11 +177,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-casting-fast",
+        recipe = "angels-wire-coil-gold-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-gold-casting-fast",
+        recipe = "angels-roll-gold-2",
       },
     },
     unit = {

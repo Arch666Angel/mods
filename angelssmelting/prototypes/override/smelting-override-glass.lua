@@ -19,13 +19,13 @@ if angelsmods.trigger.smelting_products["glass"].mixture then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-glass")
-    OV.disable_recipe({ "angels-molten-glass-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-glass" })
   end
 else
   angelsmods.functions.hide("angels-solid-glass-mixture")
   angelsmods.functions.hide("angels-liquid-molten-glass")
   OV.disable_recipe({ "angels-solid-glass-mixture", "angels-solid-glass-mixture-2", "angels-solid-glass-mixture-3", "angels-solid-glass-mixture-4" })
-  OV.disable_recipe({ "angels-molten-glass-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-glass" })
   OV.disable_technology({ "angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3" })
 end
 
@@ -66,7 +66,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
   end
 else
   angelsmods.functions.hide("angels-plate-glass")
-  OV.disable_recipe({ "angels-plate-glass-1", "angels-plate-glass-2", "angels-plate-glass-3" })
+  OV.disable_recipe({ "angels-plate-glass", "angels-plate-glass-2", "angels-plate-glass-3" })
 end
 
 -------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ if angelsmods.trigger.smelting_products["glass"].fibre then
 else
   angelsmods.functions.hide("angels-coil-glass-fiber")
   OV.disable_recipe({ "angels-coil-glass-fiber" })
-  OV.disable_recipe({ "angels-coil-glass-fiber-fast" })
+  OV.disable_recipe({ "angels-coil-glass-fiber-2" })
 end
 
 -------------------------------------------------------------------------------

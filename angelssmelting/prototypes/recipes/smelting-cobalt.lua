@@ -177,8 +177,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-cobalt-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-cobalt" },
+    name = "angels-liquid-molten-cobalt",
     category = "angels-induction-smelting-3",
     subgroup = "angels-cobalt-casting",
     energy_required = 4,
@@ -194,8 +193,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-cobalt-casting",
-    localised_name = { "item-name.angels-roll-cobalt" },
+    name = "angels-roll-cobalt",
     category = "angels-strand-casting-3",
     subgroup = "angels-cobalt-casting",
     enabled = false,
@@ -217,7 +215,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-cobalt-casting-fast",
+    name = "angels-roll-cobalt-2",
     localised_name = { "item-name.angels-roll-cobalt" },
     category = "angels-strand-casting-4",
     subgroup = "angels-cobalt-casting",
@@ -265,7 +263,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-cobalt-converting",
+    name = "angels-plate-cobalt-2",
     localised_name = { "item-name.angels-plate-cobalt" },
     category = "advanced-crafting",
     subgroup = "angels-cobalt-casting",

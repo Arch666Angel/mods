@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-copper-smelting",
+        recipe = "angels-liquid-molten-copper",
       },
       {
         type = "unlock-recipe",
@@ -80,19 +80,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting",
+        recipe = "angels-wire-coil-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-converting",
+        recipe = "angels-wire-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-copper-casting",
+        recipe = "angels-roll-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-copper-converting",
+        recipe = "angels-plate-copper-2",
       },
     },
     unit = {
@@ -154,11 +154,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting-fast",
+        recipe = "angels-wire-coil-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-copper-casting-fast",
+        recipe = "angels-roll-copper-2",
       },
     },
     unit = {

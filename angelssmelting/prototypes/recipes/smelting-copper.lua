@@ -133,8 +133,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-copper-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-copper" },
+    name = "angels-liquid-molten-copper",
     category = "angels-induction-smelting",
     subgroup = "angels-copper-casting",
     energy_required = 4,
@@ -150,8 +149,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-copper-casting",
-    localised_name = { "item-name.angels-roll-copper" },
+    name = "angels-roll-copper",
     category = "angels-strand-casting",
     subgroup = "angels-copper-casting",
     enabled = false,
@@ -173,7 +171,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-copper-casting-fast",
+    name = "angels-roll-copper-2",
     localised_name = { "item-name.angels-roll-copper" },
     category = "angels-strand-casting-2",
     subgroup = "angels-copper-casting",
@@ -198,8 +196,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-copper-casting",
-    localised_name = { "item-name.angels-wire-coil-copper" },
+    name = "angels-wire-coil-copper",
     category = "angels-strand-casting",
     subgroup = "angels-copper-casting",
     enabled = false,
@@ -221,7 +218,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-copper-casting-fast",
+    name = "angels-wire-coil-copper-2",
     localised_name = { "item-name.angels-wire-coil-copper" },
     category = "angels-strand-casting-2",
     subgroup = "angels-copper-casting",
@@ -269,7 +266,7 @@ data:extend({
   }, -- j[angels-plate-copper]-b reserved for base game smelting recipe (see global overrides)
   {
     type = "recipe",
-    name = "angels-roll-copper-converting",
+    name = "angels-plate-copper-2",
     localised_name = { "item-name.angels-plate-copper" },
     category = "advanced-crafting",
     subgroup = "angels-copper-casting",
@@ -292,7 +289,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-copper-converting",
+    name = "angels-wire-copper-2",
     localised_name = { "item-name.angels-wire-copper" },
     category = "advanced-crafting",
     subgroup = "angels-copper-casting",

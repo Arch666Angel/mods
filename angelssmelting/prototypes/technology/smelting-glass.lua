@@ -15,11 +15,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-glass-smelting",
+        recipe = "angels-liquid-molten-glass",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-plate-glass-1",
+        recipe = "angels-plate-glass",
       },
     },
     unit = {
@@ -100,7 +100,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-coil-glass-fiber-fast",
+        recipe = "angels-coil-glass-fiber-2",
       },
     },
     unit = {

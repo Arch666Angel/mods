@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-casting-powder-tungsten-1",
+        recipe = "angels-casting-powder-tungsten",
       },
       {
         type = "unlock-recipe",

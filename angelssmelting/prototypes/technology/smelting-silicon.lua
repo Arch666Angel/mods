@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-silicon-smelting",
+        recipe = "angels-liquid-molten-silicon",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-mono-silicon-1",
+        recipe = "angels-mono-silicon",
       },
       {
         type = "unlock-recipe",

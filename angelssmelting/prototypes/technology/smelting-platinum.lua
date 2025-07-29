@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-platinum-smelting",
+        recipe = "angels-liquid-molten-platinum",
       },
       {
         type = "unlock-recipe",
@@ -25,7 +25,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-platinated-copper-wire",
+        recipe = "angels-wire-platinum",
       },
     },
     unit = {
@@ -92,19 +92,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-casting",
+        recipe = "angels-wire-coil-platinum",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-converting",
+        recipe = "angels-wire-platinum-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-platinum-casting",
+        recipe = "angels-roll-platinum",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-platinum-converting",
+        recipe = "angels-plate-platinum-2",
       },
     },
     unit = {
@@ -175,11 +175,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-casting-fast",
+        recipe = "angels-wire-coil-platinum-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-platinum-casting-fast",
+        recipe = "angels-roll-platinum-2",
       },
     },
     unit = {

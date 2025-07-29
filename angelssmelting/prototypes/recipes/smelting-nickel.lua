@@ -148,8 +148,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-nickel-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-nickel" },
+    name = "angels-liquid-molten-nickel",
     category = "angels-induction-smelting-2",
     subgroup = "angels-nickel-casting",
     energy_required = 4,
@@ -165,8 +164,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-nickel-casting",
-    localised_name = { "item-name.angels-roll-nickel" },
+    name = "angels-roll-nickel",
     category = "angels-strand-casting-2",
     subgroup = "angels-nickel-casting",
     enabled = false,
@@ -188,7 +186,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-nickel-casting-fast",
+    name = "angels-roll-nickel-2",
     localised_name = { "item-name.angels-roll-nickel" },
     category = "angels-strand-casting-3",
     subgroup = "angels-nickel-casting",
@@ -236,7 +234,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-nickel-converting",
+    name = "angels-plate-nickel-2",
     localised_name = { "item-name.angels-plate-nickel" },
     category = "advanced-crafting",
     subgroup = "angels-nickel-casting",

@@ -30,8 +30,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-brass-smelting-1",
-        localised_name = { "fluid-name.angels-liquid-molten-brass" },
+        name = "angels-liquid-molten-brass",
         category = "angels-induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -53,7 +52,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       },
       {
         type = "recipe",
-        name = "angels-brass-smelting-2",
+        name = "angels-liquid-molten-brass-2",
         localised_name = { "fluid-name.angels-liquid-molten-brass" },
         category = "angels-induction-smelting-3",
         subgroup = "angels-alloys-casting",
@@ -77,7 +76,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       },
       {
         type = "recipe",
-        name = "angels-brass-smelting-3",
+        name = "angels-liquid-molten-brass-3",
         localised_name = { "fluid-name.angels-liquid-molten-brass" },
         category = "angels-induction-smelting-4",
         subgroup = "angels-alloys-casting",
@@ -129,7 +128,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-brass-smelting-1",
+            recipe = "angels-liquid-molten-brass",
           },
           {
             type = "unlock-recipe",
@@ -159,7 +158,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-brass-smelting-2",
+            recipe = "angels-liquid-molten-brass-2",
           },
         },
         unit = {
@@ -186,7 +185,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-brass-smelting-3",
+            recipe = "angels-liquid-molten-brass-3",
           },
         },
         unit = {

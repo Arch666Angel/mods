@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-iron-smelting-1",
+        recipe = "angels-liquid-molten-iron",
       },
       {
         type = "unlock-recipe",
@@ -82,23 +82,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-iron-smelting-3",
+        recipe = "angels-liquid-molten-iron-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-iron-casting",
+        recipe = "angels-roll-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-iron-converting",
+        recipe = "angels-plate-iron-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-iron-casting",
+        recipe = "angels-rod-stack-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-iron-converting",
+        recipe = "angels-rod-iron-2",
       },
     },
     unit = {
@@ -158,15 +158,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-iron-smelting-4",
+        recipe = "angels-liquid-molten-iron-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-iron-casting-fast",
+        recipe = "angels-roll-iron-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-iron-casting-fast",
+        recipe = "angels-rod-stack-iron-2",
       },
     },
     unit = {
@@ -193,7 +193,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-iron-smelting-5",
+        recipe = "angels-liquid-molten-iron-5",
       },
     },
     unit = {

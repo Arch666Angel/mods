@@ -182,8 +182,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-manganese-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-manganese" },
+    name = "angels-liquid-molten-manganese",
     category = "angels-induction-smelting",
     subgroup = "angels-manganese-casting",
     energy_required = 4,
@@ -199,8 +198,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-manganese-casting",
-    localised_name = { "item-name.angels-roll-manganese" },
+    name = "angels-roll-manganese",
     category = "angels-strand-casting",
     subgroup = "angels-manganese-casting",
     enabled = false,
@@ -222,7 +220,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-manganese-casting-fast",
+    name = "angels-roll-manganese-2",
     localised_name = { "item-name.angels-roll-manganese" },
     category = "angels-strand-casting-2",
     subgroup = "angels-manganese-casting",
@@ -270,7 +268,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-manganese-converting",
+    name = "angels-plate-manganese-2",
     localised_name = { "item-name.angels-plate-manganese" },
     category = "advanced-crafting",
     subgroup = "angels-manganese-casting",

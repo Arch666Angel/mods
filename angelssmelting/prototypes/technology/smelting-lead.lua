@@ -17,7 +17,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-lead-smelting",
+        recipe = "angels-liquid-molten-lead",
       },
       {
         type = "unlock-recipe",
@@ -85,11 +85,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-lead-casting",
+        recipe = "angels-roll-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-lead-converting",
+        recipe = "angels-plate-lead-2",
       },
     },
     unit = {
@@ -156,7 +156,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-lead-casting-fast",
+        recipe = "angels-roll-lead-2",
       },
     },
     unit = {

@@ -143,7 +143,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-iron-smelting-1",
+    name = "angels-liquid-molten-iron",
     localised_name = { "fluid-name.angels-liquid-molten-iron" },
     category = "angels-induction-smelting",
     subgroup = "angels-iron-casting",
@@ -165,7 +165,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-iron-smelting-2",
+    name = "angels-liquid-molten-iron-2",
     localised_name = { "fluid-name.angels-liquid-molten-iron" },
     category = "angels-induction-smelting",
     subgroup = "angels-iron-casting",
@@ -188,7 +188,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-iron-smelting-3",
+    name = "angels-liquid-molten-iron-3",
     localised_name = { "fluid-name.angels-liquid-molten-iron" },
     category = "angels-induction-smelting-2",
     subgroup = "angels-iron-casting",
@@ -211,7 +211,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-iron-smelting-4",
+    name = "angels-liquid-molten-iron-4",
     localised_name = { "fluid-name.angels-liquid-molten-iron" },
     category = "angels-induction-smelting-3",
     subgroup = "angels-iron-casting",
@@ -235,7 +235,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-iron-smelting-5",
+    name = "angels-liquid-molten-iron-5",
     localised_name = { "fluid-name.angels-liquid-molten-iron" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-iron-casting",
@@ -259,8 +259,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-iron-casting",
-    localised_name = { "item-name.angels-roll-iron" },
+    name = "angels-roll-iron",
     category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
@@ -282,7 +281,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-iron-casting-fast",
+    name = "angels-roll-iron-2",
     localised_name = { "item-name.angels-roll-iron" },
     category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
@@ -307,8 +306,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-rod-stack-iron-casting",
-    localised_name = { "item-name.angels-rod-stack-iron" },
+    name = "angels-rod-stack-iron",
     category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
@@ -330,7 +328,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-rod-stack-iron-casting-fast",
+    name = "angels-rod-stack-iron-2",
     localised_name = { "item-name.angels-rod-stack-iron" },
     category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
@@ -378,7 +376,7 @@ data:extend({
   }, -- l[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
   {
     type = "recipe",
-    name = "angels-roll-iron-converting",
+    name = "angels-plate-iron-2",
     localised_name = { "item-name.angels-plate-iron" },
     category = "advanced-crafting",
     subgroup = "angels-iron-casting",
@@ -401,7 +399,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-rod-iron-plate",
+    name = "angels-rod-iron",
     localised_name = { "item-name.iron-stick" },
     category = "crafting",
     subgroup = "angels-iron-casting",
@@ -425,7 +423,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-rod-stack-iron-converting",
+    name = "angels-rod-iron-2",
     localised_name = { "item-name.iron-stick" },
     category = "advanced-crafting",
     subgroup = "angels-iron-casting",

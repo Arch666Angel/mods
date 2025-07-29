@@ -173,8 +173,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-aluminium-smelting-1",
-    localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
+    name = "angels-liquid-molten-aluminium",
     category = "angels-induction-smelting-2",
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
@@ -195,7 +194,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-aluminium-smelting-2",
+    name = "angels-liquid-molten-aluminium-2",
     localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
     category = "angels-induction-smelting-3",
     subgroup = "angels-aluminium-casting",
@@ -218,7 +217,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-aluminium-smelting-3",
+    name = "angels-liquid-molten-aluminium-3",
     localised_name = { "fluid-name.angels-liquid-molten-aluminium" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-aluminium-casting",
@@ -242,8 +241,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-aluminium-casting",
-    localised_name = { "item-name.angels-roll-aluminium" },
+    name = "angels-roll-aluminium",
     category = "angels-strand-casting-2",
     subgroup = "angels-aluminium-casting",
     enabled = false,
@@ -265,7 +263,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-aluminium-casting-fast",
+    name = "angels-roll-aluminium-2",
     localised_name = { "item-name.angels-roll-aluminium" },
     category = "angels-strand-casting-3",
     subgroup = "angels-aluminium-casting",
@@ -313,7 +311,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-aluminium-converting",
+    name = "angels-plate-aluminium-2",
     localised_name = { "item-name.angels-plate-aluminium" },
     category = "advanced-crafting",
     subgroup = "angels-aluminium-casting",

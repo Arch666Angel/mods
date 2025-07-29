@@ -190,8 +190,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-casting-powder-tungsten-1",
-    localised_name = { "item-name.angels-casting-powder-tungsten" },
+    name = "angels-casting-powder-tungsten",
     category = "angels-powder-mixing-3",
     subgroup = "angels-tungsten-casting",
     energy_required = 4,

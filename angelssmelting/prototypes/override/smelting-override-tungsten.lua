@@ -108,7 +108,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
 else
   angelsmods.functions.hide("angels-casting-powder-tungsten")
   angelsmods.functions.hide("angels-plate-tungsten")
-  OV.disable_recipe({ "angels-casting-powder-tungsten-1", "angels-casting-powder-tungsten-2" })
+  OV.disable_recipe({ "angels-casting-powder-tungsten", "angels-casting-powder-tungsten-2" })
   OV.disable_recipe({ "angels-plate-tungsten" })
 end
 --hide all if not used

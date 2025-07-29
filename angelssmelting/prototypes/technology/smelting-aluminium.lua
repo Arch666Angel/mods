@@ -28,7 +28,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-aluminium-smelting-1",
+        recipe = "angels-liquid-molten-aluminium",
       },
       {
         type = "unlock-recipe",
@@ -95,15 +95,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-aluminium-smelting-2",
+        recipe = "angels-liquid-molten-aluminium-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-aluminium-casting",
+        recipe = "angels-roll-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-aluminium-converting",
+        recipe = "angels-plate-aluminium-2",
       },
     },
     unit = {
@@ -169,11 +169,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-aluminium-smelting-3",
+        recipe = "angels-liquid-molten-aluminium-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-aluminium-casting-fast",
+        recipe = "angels-roll-aluminium-2",
       },
     },
     unit = {

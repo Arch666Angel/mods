@@ -18,7 +18,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-chrome-smelting",
+        recipe = "angels-liquid-molten-chrome",
       },
       {
         type = "unlock-recipe",
@@ -87,11 +87,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-chrome-casting",
+        recipe = "angels-roll-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-chrome-converting",
+        recipe = "angels-plate-chrome-2",
       },
     },
     unit = {
@@ -166,7 +166,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-chrome-casting-fast",
+        recipe = "angels-roll-chrome-2",
       },
     },
     unit = {

@@ -164,8 +164,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-titanium-smelting-1",
-    localised_name = { "fluid-name.angels-liquid-molten-titanium" },
+    name = "angels-liquid-molten-titanium",
     category = "angels-induction-smelting-3",
     subgroup = "angels-titanium-casting",
     energy_required = 4,
@@ -186,7 +185,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-titanium-smelting-2",
+    name = "angels-liquid-molten-titanium-2",
     localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-titanium-casting",
@@ -209,7 +208,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-titanium-smelting-3",
+    name = "angels-liquid-molten-titanium-3",
     localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-titanium-casting",
@@ -232,7 +231,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-titanium-smelting-4",
+    name = "angels-liquid-molten-titanium-4",
     localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-titanium-casting",
@@ -256,7 +255,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-molten-titanium-smelting-5",
+    name = "angels-liquid-molten-titanium-5",
     localised_name = { "fluid-name.angels-liquid-molten-titanium" },
     category = "angels-induction-smelting-4",
     subgroup = "angels-titanium-casting",
@@ -280,8 +279,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-titanium-casting",
-    localised_name = { "item-name.angels-roll-titanium" },
+    name = "angels-roll-titanium",
     category = "angels-strand-casting-3",
     subgroup = "angels-titanium-casting",
     enabled = false,
@@ -303,7 +301,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-titanium-casting-fast",
+    name = "angels-roll-titanium-2",
     localised_name = { "item-name.angels-roll-titanium" },
     category = "angels-strand-casting-4",
     subgroup = "angels-titanium-casting",
@@ -350,7 +348,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-titanium-converting",
+    name = "angels-plate-titanium-2",
     localised_name = { "item-name.angels-plate-titanium" },
     category = "advanced-crafting",
     subgroup = "angels-titanium-casting",

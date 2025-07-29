@@ -187,8 +187,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-zinc-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-zinc" },
+    name = "angels-liquid-molten-zinc",
     category = "angels-induction-smelting-2",
     subgroup = "angels-zinc-casting",
     energy_required = 4,
@@ -204,8 +203,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-zinc-casting",
-    localised_name = { "item-name.angels-roll-zinc" },
+    name = "angels-roll-zinc",
     category = "angels-strand-casting-2",
     subgroup = "angels-zinc-casting",
     enabled = false,
@@ -227,7 +225,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-zinc-casting-fast",
+    name = "angels-roll-zinc-2",
     localised_name = { "item-name.angels-roll-zinc" },
     category = "angels-strand-casting-3",
     subgroup = "angels-zinc-casting",
@@ -274,7 +272,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-zinc-converting",
+    name = "angels-plate-zin-2",
     localised_name = { "item-name.angels-plate-zinc" },
     category = "advanced-crafting",
     subgroup = "angels-zinc-casting",

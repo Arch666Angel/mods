@@ -182,8 +182,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-lead-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-lead" },
+    name = "angels-liquid-molten-lead",
     category = "angels-induction-smelting",
     subgroup = "angels-lead-casting",
     energy_required = 4,
@@ -199,8 +198,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-lead-casting",
-    localised_name = { "item-name.angels-roll-lead" },
+    name = "angels-roll-lead",
     category = "angels-strand-casting",
     subgroup = "angels-lead-casting",
     enabled = false,
@@ -222,7 +220,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-lead-casting-fast",
+    name = "angels-roll-lead-2",
     localised_name = { "item-name.angels-roll-lead" },
     category = "angels-strand-casting-2",
     subgroup = "angels-lead-casting",
@@ -270,7 +268,7 @@ data:extend({
   }, -- k[angels-plate-lead]-b reserved for crushed rubyte smelting (see lead overrides)
   {
     type = "recipe",
-    name = "angels-roll-lead-converting",
+    name = "angels-plate-lead-2",
     localised_name = { "item-name.angels-plate-lead" },
     category = "advanced-crafting",
     subgroup = "angels-lead-casting",

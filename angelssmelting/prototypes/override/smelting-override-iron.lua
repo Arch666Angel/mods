@@ -58,10 +58,10 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   else
     -- special vanilla
     OV.disable_recipe({
-      "angels-molten-iron-smelting-2",
-      "angels-molten-iron-smelting-3",
-      "angels-molten-iron-smelting-4",
-      "angels-molten-iron-smelting-5",
+      "angels-liquid-molten-iron-2",
+      "angels-liquid-molten-iron-3",
+      "angels-liquid-molten-iron-4",
+      "angels-liquid-molten-iron-5",
     })
     OV.disable_technology("angels-iron-casting-4")
   end
@@ -172,6 +172,6 @@ if angelsmods.trigger.smelting_products["iron"].rod then
 else
   angelsmods.functions.hide("angels-rod-iron")
   angelsmods.functions.hide("angels-rod-stack-iron")
-  OV.disable_recipe({ "angels-rod-stack-iron-casting", "angels-rod-stack-iron-casting-fast" })
-  OV.disable_recipe({ "angels-rod-iron-plate", "angels-rod-stack-iron-converting" })
+  OV.disable_recipe({ "angels-rod-stack-iron", "angels-rod-stack-iron-2" })
+  OV.disable_recipe({ "angels-rod-iron", "angels-rod-iron-2" })
 end

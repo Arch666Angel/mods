@@ -156,8 +156,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-silver-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-silver" },
+    name = "angels-liquid-molten-silver",
     category = "angels-induction-smelting-2",
     subgroup = "angels-silver-casting",
     energy_required = 4,
@@ -173,8 +172,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-silver-casting",
-    localised_name = { "item-name.angels-roll-silver" },
+    name = "angels-roll-silver",
     category = "angels-strand-casting-2",
     subgroup = "angels-silver-casting",
     enabled = false,
@@ -192,7 +190,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-silver-casting-fast",
+    name = "angels-roll-silver-2",
     localised_name = { "item-name.angels-roll-silver" },
     category = "angels-strand-casting-3",
     subgroup = "angels-silver-casting",
@@ -213,8 +211,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-silver-casting",
-    localised_name = { "item-name.angels-wire-coil-silver" },
+    name = "angels-wire-coil-silver",
     category = "angels-strand-casting-2",
     subgroup = "angels-silver-casting",
     enabled = false,
@@ -237,7 +234,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-silver-casting-fast",
+    name = "angels-wire-coil-silver-2",
     localised_name = { "item-name.angels-wire-coil-silver" },
     category = "angels-strand-casting-3",
     subgroup = "angels-silver-casting",
@@ -286,7 +283,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-silver-converting",
+    name = "angels-plate-silver-2",
     localised_name = { "item-name.angels-plate-silver" },
     category = "advanced-crafting",
     subgroup = "angels-silver-casting",
@@ -309,8 +306,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "basic-silvered-copper-wire",
-    localised_name = { "item-name.angels-wire-silver" },
+    name = "angels-wire-silver",
     subgroup = "angels-silver-casting",
     order = "m",
     enabled = false,
@@ -334,7 +330,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-silver-converting",
+    name = "angels-wire-silver-2",
     localised_name = { "item-name.angels-wire-silver" },
     category = "advanced-crafting",
     subgroup = "angels-silver-casting",

@@ -163,8 +163,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-molten-silicon-smelting",
-    localised_name = { "fluid-name.angels-liquid-molten-silicon" },
+    name = "angels-liquid-molten-silicon",
     category = "angels-induction-smelting-2",
     subgroup = "angels-silicon-casting",
     energy_required = 4,
@@ -215,8 +214,7 @@ data:extend({
   -- CASTING RESULT
   {
     type = "recipe",
-    name = "angels-mono-silicon-1",
-    localised_name = { "item-name.angels-mono-silicon" },
+    name = "angels-mono-silicon",
     category = "angels-casting-2",
     subgroup = "angels-silicon-casting",
     enabled = false,

@@ -9,9 +9,9 @@ if angelsmods.industries.components then
   --battery requirements
   OV.remove_prereq("angels-glass-smelting-3", "angels-strand-casting-3")
   OV.remove_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber")
-  OV.remove_unlock("angels-glass-smelting-3", "angels-coil-glass-fiber-fast")
+  OV.remove_unlock("angels-glass-smelting-3", "angels-coil-glass-fiber-2")
   OV.add_unlock("angels-glass-smelting-1", "angels-coil-glass-fiber")
-  OV.add_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber-fast")
+  OV.add_unlock("angels-glass-smelting-2", "angels-coil-glass-fiber-2")
   OV.add_prereq("angels-glass-smelting-1", "angels-strand-casting-1")
   OV.patch_recipes({
     {
@@ -19,7 +19,7 @@ if angelsmods.industries.components then
       category = "angels-strand-casting",
     },
     {
-      name = "angels-coil-glass-fiber-fast",
+      name = "angels-coil-glass-fiber-2",
       category = "angels-strand-casting-2",
     },
   })

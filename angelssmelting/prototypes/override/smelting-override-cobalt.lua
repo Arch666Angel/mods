@@ -39,7 +39,7 @@ if angelsmods.trigger.smelting_products["cobalt"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-cobalt")
-    OV.disable_recipe({ "angels-molten-cobalt-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-cobalt" })
     OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -84,7 +84,7 @@ else
   OV.disable_recipe({ "angels-processed-cobalt", "angels-pellet-cobalt", "angels-solid-cobalt-oxide" })
   OV.disable_recipe({ "angels-solid-cobalt-hydroxide", "angels-solid-cobalt-oxide-2", "angels-solid-cobalt-oxide-3" })
   OV.disable_recipe({ "angels-ingot-cobalt", "angels-ingot-cobalt-2" })
-  OV.disable_recipe({ "angels-molten-cobalt-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-cobalt" })
   OV.disable_technology({ "angels-cobalt-smelting-1", "angels-cobalt-smelting-2", "angels-cobalt-smelting-3" })
   OV.disable_technology({ "angels-cobalt-casting-2", "angels-cobalt-casting-3" })
 end
@@ -102,8 +102,8 @@ if angelsmods.trigger.smelting_products["cobalt"].plate then
 else
   angelsmods.functions.hide("angels-plate-cobalt")
   angelsmods.functions.hide("angels-roll-cobalt")
-  OV.disable_recipe({ "angels-roll-cobalt-casting", "angels-roll-cobalt-casting-fast" })
-  OV.disable_recipe({ "angels-plate-cobalt", "angels-roll-cobalt-converting" })
+  OV.disable_recipe({ "angels-roll-cobalt", "angels-roll-cobalt-2" })
+  OV.disable_recipe({ "angels-plate-cobalt", "angels-plate-cobalt-2" })
   angelsmods.functions.hide("bob-cobalt-plate")
 end
 

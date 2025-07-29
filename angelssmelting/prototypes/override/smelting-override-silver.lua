@@ -48,7 +48,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
   else
     -- no need for molten recipe
     angelsmods.functions.hide("angels-liquid-molten-silver")
-    OV.disable_recipe({ "angels-molten-silver-smelting" })
+    OV.disable_recipe({ "angels-liquid-molten-silver" })
     OV.disable_technology({ "angels-silver-casting-2", "angels-silver-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -67,7 +67,7 @@ else
   OV.disable_recipe({ "angels-processed-silver", "angels-pellet-silver" })
   OV.disable_recipe({ "angels-solid-silver-nitrate", "angels-solid-sodium-silver-cyanide", "angels-cathode-silver" })
   OV.disable_recipe({ "angels-ingot-silver", "angels-ingot-silver-2", "angels-ingot-silver-3" })
-  OV.disable_recipe({ "angels-molten-silver-smelting" })
+  OV.disable_recipe({ "angels-liquid-molten-silver" })
   OV.disable_technology({ "angels-silver-smelting-1", "angels-silver-smelting-2", "angels-silver-smelting-3" })
   OV.disable_technology({ "angels-silver-casting-2", "angels-silver-casting-3" })
 end
@@ -86,8 +86,8 @@ if angelsmods.trigger.smelting_products["silver"].plate then
 else
   angelsmods.functions.hide("angels-plate-silver")
   angelsmods.functions.hide("angels-roll-silver")
-  OV.disable_recipe({ "angels-roll-silver-casting", "angels-roll-silver-casting-fast" })
-  OV.disable_recipe({ "angels-plate-silver", "angels-roll-silver-converting" })
+  OV.disable_recipe({ "angels-roll-silver", "angels-roll-silver-2" })
+  OV.disable_recipe({ "angels-plate-silver", "angels-plate-silver-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -120,14 +120,14 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   OV.add_prereq("advanced-circuit", "angels-silver-smelting-1")
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("basic-silvered-copper-wire", "electronics")
-    OV.add_additional_category("angels-wire-coil-silver-converting", "electronics")
+    OV.add_additional_category("angels-wire-silver", "electronics")
+    OV.add_additional_category("angels-wire-silver-2", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-silver")
   angelsmods.functions.hide("angels-wire-coil-silver")
-  OV.disable_recipe({ "angels-wire-coil-silver-casting", "angels-wire-coil-silver-casting-fast" })
-  OV.disable_recipe({ "basic-silvered-copper-wire", "angels-wire-coil-silver-converting" })
+  OV.disable_recipe({ "angels-wire-coil-silver", "angels-wire-silver-2" })
+  OV.disable_recipe({ "angels-wire-silver", "angels-wire-silver-2" })
 end
 
 -------------------------------------------------------------------------------

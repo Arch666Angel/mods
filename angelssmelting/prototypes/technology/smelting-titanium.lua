@@ -27,7 +27,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-titanium-smelting-1",
+        recipe = "angels-liquid-molten-titanium",
       },
       {
         type = "unlock-recipe",
@@ -96,19 +96,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-titanium-smelting-2",
+        recipe = "angels-liquid-molten-titanium-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-titanium-smelting-3",
+        recipe = "angels-liquid-molten-titanium-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-titanium-casting",
+        recipe = "angels-roll-titanium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-titanium-converting",
+        recipe = "angels-plate-titanium-2",
       },
     },
     unit = {
@@ -174,15 +174,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-titanium-smelting-4",
+        recipe = "angels-liquid-molten-titanium-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-titanium-smelting-5",
+        recipe = "angels-liquid-molten-titanium-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-titanium-casting-fast",
+        recipe = "angels-roll-titanium-2",
       },
     },
     unit = {

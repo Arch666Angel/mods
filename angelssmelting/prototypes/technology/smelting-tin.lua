@@ -16,7 +16,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-molten-tin-smelting",
+        recipe = "angels-liquid-molten-tin",
       },
       {
         type = "unlock-recipe",
@@ -24,7 +24,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-tinned-copper-wire",
+        recipe = "angels-wire-tin",
       },
     },
     unit = {
@@ -85,19 +85,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-tin-casting",
+        recipe = "angels-wire-coil-tin",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-tin-converting",
+        recipe = "angels-wire-tin-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-tin-casting",
+        recipe = "angels-roll-tin",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-tin-converting",
+        recipe = "angels-plate-tin-2",
       },
     },
     unit = {
@@ -154,11 +154,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-tin-casting-fast",
+        recipe = "angels-wire-coil-tin-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-tin-casting-fast",
+        recipe = "angels-roll-tin-2",
       },
     },
     unit = {
