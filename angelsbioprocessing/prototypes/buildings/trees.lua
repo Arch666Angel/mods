@@ -47,7 +47,7 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-      probability_expression = 0.00001,
+      probability_expression = 0.000005,
       tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
@@ -115,7 +115,15 @@ data:extend({
 --         },
 --       },
       probability_expression = 0.00001,
-      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      tile_restriction = {	"wetland-jellynut",
+														"wetland-yumako",
+														"wetland-pink-tentacle",
+														"wetland-red-tentacle",
+														"wetland-green-slime",
+														"wetland-light-green-slime",
+														"wetland-dead-skin",
+														"wetland-light-dead-skin"
+			},
     },
     pictures = {
       {
@@ -187,9 +195,13 @@ data:extend({
 --           water_max_range = 0.125,
 --         },
 --       },
-      probability_expression = 0.00001,
-      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
-    },
+      probability_expression = 0.000005,
+      tile_restriction = {	"red-desert-0",
+														"red-desert-1",
+														"red-desert-2",
+														"red-desert-3",
+														"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+	    },
     pictures = {
       {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/trees/tree-3-a.png",
