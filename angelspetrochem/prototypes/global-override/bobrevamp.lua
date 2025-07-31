@@ -60,8 +60,10 @@ if mods["bobrevamp"] then
   OV.disable_recipe({
     "bob-dinitrogen-tetroxide",
     "bob-hydrazine",
+    "bob-hydrogen-peroxide",
     "bob-enriched-fuel-from-hydrazine",
   })
+  angelsmods.functions.hide("bob-hydrogen-peroxide")
 
   -----------------------------------------------------------------------------
   -- HARDMODE -----------------------------------------------------------------
