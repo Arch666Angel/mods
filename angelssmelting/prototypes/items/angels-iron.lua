@@ -4,7 +4,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-iron",
+    name = "angels-processed-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-iron.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -13,7 +13,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-iron",
+    name = "angels-pellet-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-iron.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-iron-hydroxide",
+    name = "angels-solid-iron-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-iron-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-iron",
@@ -32,7 +32,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-iron",
+    name = "angels-ingot-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-iron.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -42,7 +42,7 @@ data:extend({
   -- order f reserved for ingot-steel (see alloys)
   {
     type = "item",
-    name = "powder-iron",
+    name = "angels-powder-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-iron.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -53,7 +53,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-iron",
+    name = "angels-liquid-molten-iron",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-iron.png",
     icon_size = 64,
     subgroup = "angels-iron-casting",

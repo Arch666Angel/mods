@@ -4,7 +4,7 @@ data:extend({
     name = "angels-flare-stack",
     icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
     icon_size = 64,
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "b[angels-flare-stack]",
     place_result = "angels-flare-stack",
     stack_size = 10,

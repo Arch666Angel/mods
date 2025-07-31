@@ -54,7 +54,7 @@ if mods["bobplates"] then
           name = "sort-gem-ore",
           energy_required = 1,
           ingredients = {
-            {type = "item", name = "crystal-dust", amount = 5}
+            {type = "item", name = "angels-crystal-dust", amount = 5}
           },
           results = {
             {type = "item", name = "ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio},
@@ -92,7 +92,7 @@ end
 --SINGLE GEM CRYSTALLIZATION --------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.patch_recipes(create_single_gem_crystallization("angelsore7-crystallization-%i", {
+  OV.patch_recipes(create_single_gem_crystallization("angels-ore7-crystallization-%i", {
     { "bob-sapphire-ore", 1, "b" },
     { "bob-topaz-ore", 1, "e" },
     { "bob-ruby-ore", 1, "a" },
@@ -101,12 +101,12 @@ if mods["bobplates"] then
     { "bob-diamond-ore", 1, "f" },
   }))
 else
-  OV.disable_recipe("angelsore7-crystallization-1")
-  OV.disable_recipe("angelsore7-crystallization-2")
-  OV.disable_recipe("angelsore7-crystallization-3")
-  OV.disable_recipe("angelsore7-crystallization-4")
-  OV.disable_recipe("angelsore7-crystallization-5")
-  OV.disable_recipe("angelsore7-crystallization-6")
+  OV.disable_recipe("angels-ore7-crystallization-1")
+  OV.disable_recipe("angels-ore7-crystallization-2")
+  OV.disable_recipe("angels-ore7-crystallization-3")
+  OV.disable_recipe("angels-ore7-crystallization-4")
+  OV.disable_recipe("angels-ore7-crystallization-5")
+  OV.disable_recipe("angels-ore7-crystallization-6")
 
   if mods["bobores"] then
     angelsmods.functions.hide({

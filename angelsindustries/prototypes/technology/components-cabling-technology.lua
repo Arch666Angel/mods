@@ -49,7 +49,7 @@ if angelsmods.industries.components then
       prerequisites = {
         "angels-components-cabling-2",
         "angels-silver-smelting-1",
-        "rubbers",
+        "angels-rubbers",
       },
       effects = {
         {

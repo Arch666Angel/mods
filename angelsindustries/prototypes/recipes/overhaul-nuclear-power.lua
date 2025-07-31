@@ -14,18 +14,17 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plutonium-synthesis",
-    localised_name = { "recipe-name.angels-plutonium-synthesis" },
     enabled = false,
     category = "centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 120, --180
     ingredients = {
-      { type = "item", name = "neptunium-240", amount = 8 },
+      { type = "item", name = "angels-neptunium-240", amount = 8 },
     },
     results = {
-      { type = "item", name = "plutonium-240", amount = 5 },
+      { type = "item", name = "angels-plutonium-240", amount = 5 },
     },
-    main_product = "plutonium-240",
+    main_product = "angels-plutonium-240",
     always_show_products = true,
     show_amount_in_title = false,
     icons = {
@@ -68,15 +67,15 @@ data:extend({
     subgroup = "angels-power-nuclear-processing",
     energy_required = 210, --540
     ingredients = {
-      { type = "item", name = "americium-241", amount = 5 },
+      { type = "item", name = "angels-americium-241", amount = 5 },
       { type = "item", name = "uranium-238", amount = 60, ignored_by_stats = 15 },
-      { type = "item", name = "plutonium-240", amount = 1 },
+      { type = "item", name = "angels-plutonium-240", amount = 1 },
     },
     results = {
       --{type = "item", name = "uranium-235", amount = 1,probability=0.3},
-      { type = "item", name = "plutonium-240", amount = 6, ignored_by_productivity = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-plutonium-240", amount = 6, ignored_by_productivity = 1, ignored_by_stats = 1 },
       { type = "item", name = "uranium-238", amount = 15, ignored_by_productivity = 15, ignored_by_stats = 15 },
-      { type = "item", name = "solid-lead-oxide", amount = 5, ignored_by_productivity = 5 }, -- equals 5 lead plates
+      { type = "item", name = "angels-solid-lead-oxide", amount = 5, ignored_by_productivity = 5 }, -- equals 5 lead plates
     },
     icons = {
       { -- need to have something as bottom layer
@@ -118,11 +117,11 @@ data:extend({
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
     ingredients = {
-      { type = "item", name = "thorium-ore", amount = 5 },
+      { type = "item", name = "angels-thorium-ore", amount = 5 },
     },
     results = {
-      { type = "item", name = "thorium-232", amount = 4 },
-      { type = "item", name = "plutonium-240", amount = 1, probability = 0.15 }, --must be low enough to not be self-sustainable (<=0.15)
+      { type = "item", name = "angels-thorium-232", amount = 4 },
+      { type = "item", name = "angels-plutonium-240", amount = 1, probability = 0.15 }, --must be low enough to not be self-sustainable (<=0.15)
     },
     icons = {
       { -- need to have something as bottom layer
@@ -169,13 +168,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-uranium-fuel-cell",
-    localised_name = { "recipe-name.angels-uranium-fuel-cell" },
     enabled = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 700, --7000
     ingredients = {
-      { type = "item", name = "uranium-234", amount = 1 },
+      { type = "item", name = "angels-uranium-234", amount = 1 },
       { type = "item", name = "uranium-238", amount = 199 },
       { type = "item", name = "iron-plate", amount = 100 },
     },
@@ -203,13 +201,13 @@ data:extend({
     energy_required = 80, --120
     ingredients = {
       { type = "item", name = "depleted-uranium-fuel-cell", amount = 10 },
-      { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
       { type = "item", name = "uranium-238", amount = 5 },
-      { type = "item", name = "slag", amount = 10 },
-      { type = "item", name = "neptunium-240", amount = 1, probability = 0.4 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60 },
+      { type = "item", name = "angels-slag", amount = 10 },
+      { type = "item", name = "angels-neptunium-240", amount = 1, probability = 0.4 },
+      { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -246,20 +244,18 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mixed-oxide-cell",
-    localised_name = { "item-name.AMOX-cell" },
     enabled = false,
     category = "centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --1200
     ingredients = {
       { type = "item", name = "uranium-238", amount = 38 },
-      { type = "item", name = "plutonium-240", amount = 2 },
+      { type = "item", name = "angels-plutonium-240", amount = 2 },
       { type = "item", name = "angels-plate-lead", amount = 20 },
     },
     results = {
-      { type = "item", name = "AMOX-cell", amount = 20 },
+      { type = "item", name = "angels-mixed-oxide-cell", amount = 20 },
     },
-    main_product = "AMOX-cell",
     always_show_products = true,
     show_amount_in_title = false,
     icon_size = 32,
@@ -279,14 +275,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 110, --330
     ingredients = {
-      { type = "item", name = "used-up-AMOX-cell", amount = 5 },
+      { type = "item", name = "angels-depleted-mixed-oxide-cell", amount = 5 },
     },
     results = {
-      { type = "item", name = "americium-241", amount = 1 },
-      { type = "item", name = "americium-241", amount = 1, probability = 0.95 },
-      { type = "item", name = "curium-245", amount = 1, probability = 0.05 },
+      { type = "item", name = "angels-americium-241", amount = 1 },
+      { type = "item", name = "angels-americium-241", amount = 1, probability = 0.95 },
+      { type = "item", name = "angels-curium-245", amount = 1, probability = 0.05 },
       { type = "item", name = "uranium-238", amount = 1 },
-      { type = "item", name = "slag", amount = 5, ignored_by_productivity = 5 },
+      { type = "item", name = "angels-slag", amount = 5, ignored_by_productivity = 5 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -329,15 +325,15 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 260,
     ingredients = {
-      { type = "item", name = "used-up-AMOX-cell", amount = 10 },
-      { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60 },
+      { type = "item", name = "angels-depleted-mixed-oxide-cell", amount = 10 },
+      { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "plutonium-240", amount = 2 },
-      { type = "item", name = "slag", amount = 10, ignored_by_productivity = 10 },
-      { type = "item", name = "curium-245", amount = 3, probability = 0.45 },
+      { type = "item", name = "angels-plutonium-240", amount = 2 },
+      { type = "item", name = "angels-slag", amount = 10, ignored_by_productivity = 10 },
+      { type = "item", name = "angels-curium-245", amount = 3, probability = 0.45 },
       { type = "item", name = "uranium-235", amount = 1, probability = 0.2 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
+      { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
     },
     icons = {
       { -- need to have something as bottom layer
@@ -386,9 +382,9 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 500, --1000
     ingredients = {
-      { type = "item", name = "thorium-232", amount = 17 },
-      { type = "item", name = "curium-245", amount = 1 },
-      { type = "item", name = "plutonium-240", amount = 8 },
+      { type = "item", name = "angels-thorium-232", amount = 17 },
+      { type = "item", name = "angels-curium-245", amount = 1 },
+      { type = "item", name = "angels-plutonium-240", amount = 8 },
       { type = "item", name = "angels-plate-zinc", amount = 15 },
     },
     results = {
@@ -415,9 +411,9 @@ data:extend({
     energy_required = 900,
     ingredients =
     {
-      {type = "item", name = "thorium-232", amount = 15},
-      {type = "item", name = "americium-241", amount = 2},
-      {type = "item", name = "plutonium-240", amount = 4},
+      {type = "item", name = "angels-thorium-232", amount = 15},
+      {type = "item", name = "angels-americium-241", amount = 2},
+      {type = "item", name = "angels-plutonium-240", amount = 4},
       {type = "item", name = "angels-plate-zinc", amount = 10},
     },
     results = 
@@ -445,14 +441,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 400, --450
     ingredients = {
-      { type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 5 },
+      { type = "item", name = "angels-depleted-thorium-fuel-cell", amount = 5 },
     },
     results = {
-      { type = "item", name = "slag", amount = 5, ignored_by_productivity = 5 },
-      { type = "item", name = "neptunium-240", amount = 1 },
-      { type = "item", name = "thorium-232", amount = 2 },
-      { type = "item", name = "uranium-234", amount = 1, probability = 0.05 },
-      { type = "item", name = "curium-245", amount = 1, probability = 0.25 }, --p=0.1 (0.5 is self sustaining)
+      { type = "item", name = "angels-slag", amount = 5, ignored_by_productivity = 5 },
+      { type = "item", name = "angels-neptunium-240", amount = 1 },
+      { type = "item", name = "angels-thorium-232", amount = 2 },
+      { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.05 },
+      { type = "item", name = "angels-curium-245", amount = 1, probability = 0.25 }, --p=0.1 (0.5 is self sustaining)
     },
     icons = {
       { -- need to have something as bottom layer
@@ -501,14 +497,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, -- 1000
     ingredients = {
-      { type = "item", name = "used-up-angels-thorium-fuel-cell", amount = 10 },
-      { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60 },
+      { type = "item", name = "angels-depleted-thorium-fuel-cell", amount = 10 },
+      { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "slag", amount = 10, ignored_by_productivity = 10 },
-      { type = "item", name = "neptunium-240", amount = 2 },
-      { type = "item", name = "uranium-234", amount = 2, probability = 0.05 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
+      { type = "item", name = "angels-slag", amount = 10, ignored_by_productivity = 10 },
+      { type = "item", name = "angels-neptunium-240", amount = 2 },
+      { type = "item", name = "angels-uranium-234", amount = 2, probability = 0.05 },
+      { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
       {
         type = "item",
         name = "angels-muon-fusion-catalyst",
@@ -558,14 +554,14 @@ data:extend({
   {
     type = "recipe",
     name = "angels-deuterium-fuel-cell",
-    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
+    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-deuterium"),
     localised_name = { "item-name.angels-deuterium-fuel-cell" },
     enabled = false,
     category = "centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 150, --1500
     ingredients = {
-      { type = "fluid", name = "gas-deuterium", amount = 600 },
+      { type = "fluid", name = "angels-gas-deuterium", amount = 600 },
       { type = "item", name = "angels-plate-zinc", amount = 1 },
       { type = "item", name = "angels-muon-fusion-catalyst", amount = 1 },
     },
@@ -577,7 +573,7 @@ data:extend({
     show_amount_in_title = false,
     icon_size = 32,
     order = "d[deuterium]-a",
-    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
+    --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-deuterium"),
     crafting_machine_tint = {
       primary = tint_colors.blue,
     },
@@ -591,10 +587,10 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {
-      { type = "item", name = "used-up-angels-deuterium-fuel-cell", amount = 5 },
+      { type = "item", name = "angels-depleted-deuterium-fuel-cell", amount = 5 },
     },
     results = {
-      { type = "item", name = "slag", amount = 5 },
+      { type = "item", name = "angels-slag", amount = 5 },
       { type = "item", name = "angels-muon-fusion-catalyst", amount = 4, ignored_by_productivity = 4 }, -- make it lose 1%; 99% of 5 = 4.95 return
       {
         type = "item",
@@ -646,12 +642,12 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {
-      { type = "item", name = "used-up-angels-deuterium-fuel-cell", amount = 10 },
-      { type = "fluid", name = "liquid-hydrofluoric-acid", amount = 60 },
+      { type = "item", name = "angels-depleted-deuterium-fuel-cell", amount = 10 },
+      { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "slag", amount = 5 },
-      { type = "fluid", name = "water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
+      { type = "item", name = "angels-slag", amount = 5 },
+      { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
       { type = "item", name = "angels-muon-fusion-catalyst", amount = 10, ignored_by_productivity = 10 },
     },
     icons = {
@@ -707,7 +703,7 @@ data:extend({
     enabled = false,
     category = "centrifuging-2",
     ingredients = {
-      { type = "item", name = "plutonium-240", amount = 1 },
+      { type = "item", name = "angels-plutonium-240", amount = 1 },
       { type = "item", name = "rocket-fuel", amount = 1 },
     },
     --icon = "__base__/graphics/icons/nuclear-fuel.png",
@@ -726,9 +722,9 @@ data:extend({
     enabled = false,
     category = "centrifuging-3",
     ingredients = {
-      { type = "item", name = "plutonium-240", amount = 2 },
+      { type = "item", name = "angels-plutonium-240", amount = 2 },
       { type = "item", name = "rocket-fuel", amount = 3 },
-      { type = "item", name = "thorium-232", amount = 1 },
+      { type = "item", name = "angels-thorium-232", amount = 1 },
     },
     --icon = "__base__/graphics/icons/nuclear-fuel.png",
     --icon_size = 64,
@@ -740,7 +736,7 @@ data:extend({
     type = "recipe",
     name = "angels-atomic-bomb",
     localised_name = { "item-name.atomic-bomb" },
-    category = "advanced-chemistry",
+    category = "angels-advanced-chemistry",
     enabled = false,
     energy_required = 50,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -751,8 +747,8 @@ data:extend({
     ingredients = {
       { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "explosives", amount = 10 },
-      { type = "item", name = "rocket-booster", amount = 1 },
-      { type = "item", name = "plutonium-240", amount = 30 },
+      { type = "item", name = "angels-rocket-booster", amount = 1 },
+      { type = "item", name = "angels-plutonium-240", amount = 30 },
     },
     results = {
       { type = "item", name = "atomic-bomb", amount = 1 },
@@ -763,7 +759,7 @@ data:extend({
     type = "recipe",
     name = "angels-atomic-bomb-2",
     localised_name = { "item-name.atomic-bomb" },
-    category = "advanced-chemistry",
+    category = "angels-advanced-chemistry",
     enabled = false,
     energy_required = 50,
     icons = angelsmods.functions.add_number_icon_layer(
@@ -774,14 +770,14 @@ data:extend({
     ingredients = {
       { type = "item", name = "processing-unit", amount = 20 },
       { type = "item", name = "explosives", amount = 20 },
-      { type = "item", name = "rocket-booster", amount = 1 },
-      { type = "fluid", name = "gas-deuterium", amount = 3600 },
+      { type = "item", name = "angels-rocket-booster", amount = 1 },
+      { type = "fluid", name = "angels-gas-deuterium", amount = 3600 },
       { type = "item", name = "angels-muon-fusion-catalyst", amount = 1 },
     },
     results = {
       { type = "item", name = "atomic-bomb", amount = 2 },
     },
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-deuterium"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-deuterium"),
     order = "d[rocket-launcher]-d[atomic-bomb]-b",
   },
 })
@@ -789,24 +785,24 @@ data:extend({
 --[[data:extend({
   {
     type = "recipe",
-    name = "thorium-fuel-burning",
+    name = "angels-thorium-fuel-burning",
     energy_required = 50000,
     --enabled = false,
     --hidden = true,
     category = "chemistry",
     ingredients =
     {
-      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "angels-thorium-fuel-cell" or "thorium-fuel-cell", amount=1},
+      {type="item", name = angelsmods.industries.overhaul and "angels-thorium-fuel-cell" or "bob-thorium-fuel-cell", amount=1},
     },
     order = "c-b-b",
     results =
     {
-      {type="item", name = (mods["angelsindustries"] and angelsmods.industries.overhaul) and "used-up-angels-thorium-fuel-cell" or "used-up-thorium-fuel-cell", amount=1}
+      {type="item", name = angelsmods.industries.overhaul and "angels-depleted-thorium-fuel-cell" or "bob-depleted-thorium-fuel-cell", amount=1}
     },
   },
   {
     type = "recipe",
-    name = "uranium-fuel-burning",
+    name = "angels-uranium-fuel-burning",
     energy_required = 2000,
     --enabled = false,
     --hidden = true,
@@ -823,28 +819,28 @@ data:extend({
   },
 }
 )
-if mods["angelsindustries"] and angelsmods.industries.overhaul then
+if angelsmods.industries.overhaul then
   data:extend({
   {
     type = "recipe",
-    name = "amox-fuel-burning",
+    name = "angels-mixed-oxide-fuel-burning",
     energy_required = 8000,
     --enabled = false,
     --hidden = true,
     category = "chemistry",
     ingredients =
     {
-      {type="item", name="AMOX-cell", amount=1},
+      {type="item", name="angels-mixed-oxide-cell", amount=1},
     },
     order = "c-b-b",
     results =
     {
-      {type="item", name="used-up-AMOX-cell", amount=1}
+      {type="item", name="angels-depleted-mixed-oxide-cell", amount=1}
     },
   },
   {
     type = "recipe",
-    name = "uranium-234-fuel-burning",
+    name = "angels-uranium-234-fuel-burning",
     energy_required = 1500,
     --enabled = false,
     --hidden = true,

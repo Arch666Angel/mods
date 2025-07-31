@@ -3,14 +3,14 @@ local def_shift = { 0.75, -2 }
 data:extend({
   {
     type = "tree",
-    name = "puffer-nest",
+    name = "angels-puffer-nest",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "bio-puffer-egg-1",
+      result = "angels-bio-puffer-egg-1",
       count = 2,
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,

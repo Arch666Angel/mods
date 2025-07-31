@@ -6,7 +6,7 @@ local pt_enabled = (mods["angelssmelting"] and angelsmods.trigger.smelting_produ
 -------------------------------------------------------------------------------
 if mods["bobmodules"] then
   if mods["angelspetrochem"] then
-    OV.add_prereq("modules", "chlorine-processing-1")
+    OV.add_prereq("modules", "angels-chlorine-processing-1")
   end
 
   if mods["angelssmelting"] and angelsmods.trigger.smelting_products["silver"].wire then

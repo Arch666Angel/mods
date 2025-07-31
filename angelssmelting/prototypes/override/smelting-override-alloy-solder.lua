@@ -33,7 +33,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("angels-roll-solder-converting", "electronics" )
+    OV.add_additional_category("angels-solder-2", "electronics" )
   end
 
   if angelsmods.trigger.smelting_products["solder"].mixture then
@@ -42,40 +42,40 @@ if angelsmods.trigger.smelting_products["solder"].wire then
     end
   else
     angelsmods.functions.hide("angels-solder-mixture")
-    OV.disable_recipe({ "angels-solder-mixture", "angels-solder-smelting-1", "angels-solder-mixture-smelting" })
+    OV.disable_recipe({ "angels-solder-mixture", "angels-liquid-molten-solder", "angels-solder-mixture-smelting" })
     OV.disable_technology({ "angels-solder-smelting-basic" })
     OV.remove_prereq("angels-solder-smelting-1", "angels-solder-smelting-basic")
-    OV.remove_unlock("angels-solder-smelting-1", "angels-solder-smelting-1")
-    data.raw.recipe["angels-solder-smelting-2"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+    OV.remove_unlock("angels-solder-smelting-1", "angels-liquid-molten-solder")
+    data.raw.recipe["angels-liquid-molten-solder-2"].icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       1,
       angelsmods.smelting.number_tint
     )
-    data.raw.recipe["angels-solder-smelting-3"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+    data.raw.recipe["angels-liquid-molten-solder-3"].icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       2,
       angelsmods.smelting.number_tint
     )
-    data.raw.recipe["angels-solder-smelting-4"].icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+    data.raw.recipe["angels-liquid-molten-solder-4"].icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       3,
       angelsmods.smelting.number_tint
     )
   end
 else
   angelsmods.functions.hide("angels-solder-mixture")
-  angelsmods.functions.hide("liquid-molten-solder")
+  angelsmods.functions.hide("angels-liquid-molten-solder")
   angelsmods.functions.hide("angels-roll-solder")
   angelsmods.functions.hide("angels-solder")
   OV.disable_recipe({ "angels-solder-mixture" })
   OV.disable_recipe({
-    "angels-solder-smelting-1",
-    "angels-solder-smelting-2",
-    "angels-solder-smelting-3",
-    "angels-solder-smelting-4",
+    "angels-liquid-molten-solder",
+    "angels-liquid-molten-solder-2",
+    "angels-liquid-molten-solder-3",
+    "angels-liquid-molten-solder-4",
   })
-  OV.disable_recipe({ "roll-solder-casting", "roll-solder-casting-fast" })
-  OV.disable_recipe({ "angels-solder-mixture-smelting", "angels-solder", "angels-roll-solder-converting" })
+  OV.disable_recipe({ "angels-roll-solder", "angels-roll-solder-2" })
+  OV.disable_recipe({ "angels-solder-mixture-smelting", "angels-solder", "angels-solder-2" })
   OV.disable_technology({
     "angels-solder-smelting-basic",
     "angels-solder-smelting-1",
@@ -85,7 +85,7 @@ else
 end
 
 if mods["bobelectronics"] or mods["bobplates"] then
-  -- Disable Bob's Resin from recipe. No longer needed for solder
+  -- Disable Bob's Resin from wood recipe. No longer needed for solder
   OV.disable_recipe({ "bob-resin-wood" })
   OV.disable_technology({ "bob-wood-processing" })
   OV.remove_prereq({

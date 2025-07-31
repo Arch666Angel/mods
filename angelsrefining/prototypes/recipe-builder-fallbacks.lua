@@ -110,32 +110,32 @@ angelsmods.functions.RB.set_fallback("item", "t0-brick", { { "block-construction
 angelsmods.functions.RB.set_fallback(
   "item",
   "t1-brick",
-  { { "block-construction-1" }, { "clay-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-1" }, { "angels-clay-brick", 5 }, { "stone-brick", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t2-brick",
-  { { "block-construction-2" }, { "clay-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-2" }, { "angels-clay-brick", 5 }, { "stone-brick", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t3-brick",
-  { { "block-construction-3" }, { "concrete-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-3" }, { "angels-concrete-brick", 5 }, { "stone-brick", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t4-brick",
-  { { "block-construction-4" }, { "reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-4" }, { "angels-reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t5-brick",
-  { { "block-construction-5" }, { "reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-5" }, { "angels-reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "t6-brick",
-  { { "block-construction-5" }, { "reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
+  { { "block-construction-5" }, { "angels-reinforced-concrete-brick", 5 }, { "stone-brick", 5 } }
 )
 
 --GEARS
@@ -202,91 +202,91 @@ angelsmods.functions.RB.set_fallback("item", "t5-bio", { { "block-bprocessing-5"
 --BUILDINGS
 --REFINING
 angelsmods.functions.RB.set_fallback("item", "crusher-0", { { "block-construction-1" }, { "stone", 5 } })
-angelsmods.functions.RB.set_fallback("item", "crusher-1", { { "block-production-1" }, { "burner-ore-crusher" } })
-angelsmods.functions.RB.set_fallback("item", "crusher-2", { { "block-production-2" }, { "ore-crusher" } })
-angelsmods.functions.RB.set_fallback("item", "crusher-3", { { "block-mprocessing-3" }, { "ore-crusher-2" } })
+angelsmods.functions.RB.set_fallback("item", "crusher-1", { { "block-production-1" }, { "angels-burner-ore-crusher" } })
+angelsmods.functions.RB.set_fallback("item", "crusher-2", { { "block-production-2" }, { "angels-ore-crusher" } })
+angelsmods.functions.RB.set_fallback("item", "crusher-3", { { "block-mprocessing-3" }, { "angels-ore-crusher-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "cell-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "cell-2", { { "block-mprocessing-3", 3 }, { "ore-floatation-cell" } })
-angelsmods.functions.RB.set_fallback("item", "cell-3", { { "block-mprocessing-4", 3 }, { "ore-floatation-cell-2" } })
+angelsmods.functions.RB.set_fallback("item", "cell-2", { { "block-mprocessing-3", 3 }, { "angels-ore-floatation-cell" } })
+angelsmods.functions.RB.set_fallback("item", "cell-3", { { "block-mprocessing-4", 3 }, { "angels-ore-floatation-cell-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "leach-1", { { "block-mprocessing-3", 3 } })
-angelsmods.functions.RB.set_fallback("item", "leach-2", { { "block-mprocessing-4", 3 }, { "ore-leaching-plant" } })
-angelsmods.functions.RB.set_fallback("item", "leach-3", { { "block-mprocessing-5", 3 }, { "ore-leaching-plant-2" } })
+angelsmods.functions.RB.set_fallback("item", "leach-2", { { "block-mprocessing-4", 3 }, { "angels-ore-leaching-plant" } })
+angelsmods.functions.RB.set_fallback("item", "leach-3", { { "block-mprocessing-5", 3 }, { "angels-ore-leaching-plant-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "oreref-1", { { "block-mprocessing-4", 5 } })
-angelsmods.functions.RB.set_fallback("item", "oreref-2", { { "block-mprocessing-5", 5 }, { "ore-refinery" } })
+angelsmods.functions.RB.set_fallback("item", "oreref-2", { { "block-mprocessing-5", 5 }, { "angels-ore-refinery" } })
 
 angelsmods.functions.RB.set_fallback("item", "sorter-1", { { "block-production-1", 5 } })
-angelsmods.functions.RB.set_fallback("item", "sorter-2", { { "block-production-2", 5 }, { "ore-sorting-facility" } })
-angelsmods.functions.RB.set_fallback("item", "sorter-3", { { "block-mprocessing-3", 5 }, { "ore-sorting-facility-2" } })
-angelsmods.functions.RB.set_fallback("item", "sorter-4", { { "block-mprocessing-4", 5 }, { "ore-sorting-facility-3" } })
-angelsmods.functions.RB.set_fallback("item", "sorter-5", { { "block-mprocessing-5", 5 }, { "ore-sorting-facility-4" } })
+angelsmods.functions.RB.set_fallback("item", "sorter-2", { { "block-production-2", 5 }, { "angels-ore-sorting-facility" } })
+angelsmods.functions.RB.set_fallback("item", "sorter-3", { { "block-mprocessing-3", 5 }, { "angels-ore-sorting-facility-2" } })
+angelsmods.functions.RB.set_fallback("item", "sorter-4", { { "block-mprocessing-4", 5 }, { "angels-ore-sorting-facility-3" } })
+angelsmods.functions.RB.set_fallback("item", "sorter-5", { { "block-mprocessing-5", 5 }, { "angels-ore-sorting-facility-4" } })
 
 angelsmods.functions.RB.set_fallback("item", "filter-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "filter-2", { { "block-production-3", 3 }, { "filtration-unit" } })
-angelsmods.functions.RB.set_fallback("item", "filter-3", { { "block-production-4", 3 }, { "filtration-unit-2" } })
+angelsmods.functions.RB.set_fallback("item", "filter-2", { { "block-production-3", 3 }, { "angels-filtration-unit" } })
+angelsmods.functions.RB.set_fallback("item", "filter-3", { { "block-production-4", 3 }, { "angels-filtration-unit-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "cryst-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "cryst-2", { { "block-mprocessing-3", 3 }, { "crystallizer" } })
-angelsmods.functions.RB.set_fallback("item", "cryst-3", { { "block-mprocessing-4", 3 }, { "crystallizer-2" } })
+angelsmods.functions.RB.set_fallback("item", "cryst-2", { { "block-mprocessing-3", 3 }, { "angels-crystallizer" } })
+angelsmods.functions.RB.set_fallback("item", "cryst-3", { { "block-mprocessing-4", 3 }, { "angels-crystallizer-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "liqui-1", { { "block-production-1", 1 } })
-angelsmods.functions.RB.set_fallback("item", "liqui-2", { { "block-production-2", 1 }, { "liquifier" } })
-angelsmods.functions.RB.set_fallback("item", "liqui-3", { { "block-cprocessing-3", 1 }, { "liquifier-2" } })
-angelsmods.functions.RB.set_fallback("item", "liqui-4", { { "block-cprocessing-4", 1 }, { "liquifier-3" } })
+angelsmods.functions.RB.set_fallback("item", "liqui-2", { { "block-production-2", 1 }, { "angels-liquifier" } })
+angelsmods.functions.RB.set_fallback("item", "liqui-3", { { "block-cprocessing-3", 1 }, { "angels-liquifier-2" } })
+angelsmods.functions.RB.set_fallback("item", "liqui-4", { { "block-cprocessing-4", 1 }, { "angels-liquifier-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "thermal-1", { { "block-production-2", 5 } })
 angelsmods.functions.RB.set_fallback("item", "thermal-2", { { "block-extraction-4", 5 } })
 
 angelsmods.functions.RB.set_fallback("item", "salination-1", { { "block-production-3", 5 } })
-angelsmods.functions.RB.set_fallback("item", "salination-2", { { "block-production-4", 5 }, { "salination-plant" } })
+angelsmods.functions.RB.set_fallback("item", "salination-2", { { "block-production-4", 5 }, { "angels-salination-plant" } })
 
-angelsmods.functions.RB.set_fallback("item", "treatment-1", { { "block-production-2", 5 }, { "hydro-plant" } })
-angelsmods.functions.RB.set_fallback("item", "treatment-2", { { "block-production-3", 5 }, { "hydro-plant-2" } })
+angelsmods.functions.RB.set_fallback("item", "treatment-1", { { "block-production-2", 5 }, { "angels-hydro-plant" } })
+angelsmods.functions.RB.set_fallback("item", "treatment-2", { { "block-production-3", 5 }, { "angels-hydro-plant-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "wash-1", { { "block-production-1", 3 } })
-angelsmods.functions.RB.set_fallback("item", "wash-2", { { "block-production-2", 3 }, { "washing-plant" } })
+angelsmods.functions.RB.set_fallback("item", "wash-2", { { "block-production-2", 3 }, { "angels-washing-plant" } })
 
 angelsmods.functions.RB.set_fallback("item", "orepowder-1", { { "block-production-2", 1 } })
-angelsmods.functions.RB.set_fallback("item", "orepowder-2", { { "block-mprocessing-3", 1 }, { "ore-powderizer" } })
-angelsmods.functions.RB.set_fallback("item", "orepowder-3", { { "block-mprocessing-4", 1 }, { "ore-powderizer-2" } })
+angelsmods.functions.RB.set_fallback("item", "orepowder-2", { { "block-mprocessing-3", 1 }, { "angels-ore-powderizer" } })
+angelsmods.functions.RB.set_fallback("item", "orepowder-3", { { "block-mprocessing-4", 1 }, { "angels-ore-powderizer-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "oreelectro-1", { { "block-mprocessing-4", 3 } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "oreelectro-2",
-  { { "block-mprocessing-5", 3 }, { "electro-whinning-cell" } }
+  { { "block-mprocessing-5", 3 }, { "angels-electro-whinning-cell" } }
 )
 
 angelsmods.functions.RB.set_fallback("item", "waterpump-2", { { "block-production-2", 3 }, { "offshore-pump", 1 } })
 
 --PETROCHEM
 angelsmods.functions.RB.set_fallback("item", "ogseparat-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "ogseparat-2", { { "block-cprocessing-3", 3 }, { "separator" } })
-angelsmods.functions.RB.set_fallback("item", "ogseparat-3", { { "block-cprocessing-4", 3 }, { "separator-2" } })
-angelsmods.functions.RB.set_fallback("item", "ogseparat-4", { { "block-cprocessing-5", 3 }, { "separator-3" } })
+angelsmods.functions.RB.set_fallback("item", "ogseparat-2", { { "block-cprocessing-3", 3 }, { "angels-separator" } })
+angelsmods.functions.RB.set_fallback("item", "ogseparat-3", { { "block-cprocessing-4", 3 }, { "angels-separator-2" } })
+angelsmods.functions.RB.set_fallback("item", "ogseparat-4", { { "block-cprocessing-5", 3 }, { "angels-separator-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "gasrefsm-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "gasrefsm-2", { { "block-cprocessing-3", 3 }, { "gas-refinery-small" } })
-angelsmods.functions.RB.set_fallback("item", "gasrefsm-3", { { "block-cprocessing-4", 3 }, { "gas-refinery-small-2" } })
-angelsmods.functions.RB.set_fallback("item", "gasrefsm-4", { { "block-cprocessing-5", 3 }, { "gas-refinery-small-3" } })
+angelsmods.functions.RB.set_fallback("item", "gasrefsm-2", { { "block-cprocessing-3", 3 }, { "angels-gas-refinery-small" } })
+angelsmods.functions.RB.set_fallback("item", "gasrefsm-3", { { "block-cprocessing-4", 3 }, { "angels-gas-refinery-small-2" } })
+angelsmods.functions.RB.set_fallback("item", "gasrefsm-4", { { "block-cprocessing-5", 3 }, { "angels-gas-refinery-small-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "gasref-1", { { "block-cprocessing-3", 5 } })
-angelsmods.functions.RB.set_fallback("item", "gasref-2", { { "block-cprocessing-4", 5 }, { "gas-refinery" } })
-angelsmods.functions.RB.set_fallback("item", "gasref-3", { { "block-cprocessing-5", 5 }, { "gas-refinery-2" } })
-angelsmods.functions.RB.set_fallback("item", "gasref-4", { { "block-cprocessing-5", 10 }, { "gas-refinery-3" } })
+angelsmods.functions.RB.set_fallback("item", "gasref-2", { { "block-cprocessing-4", 5 }, { "angels-gas-refinery" } })
+angelsmods.functions.RB.set_fallback("item", "gasref-3", { { "block-cprocessing-5", 5 }, { "angels-gas-refinery-2" } })
+angelsmods.functions.RB.set_fallback("item", "gasref-4", { { "block-cprocessing-5", 10 }, { "angels-gas-refinery-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "cracker-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "cracker-2", { { "block-cprocessing-3", 3 }, { "steam-cracker" } })
-angelsmods.functions.RB.set_fallback("item", "cracker-3", { { "block-cprocessing-4", 3 }, { "steam-cracker-2" } })
-angelsmods.functions.RB.set_fallback("item", "cracker-4", { { "block-cprocessing-5", 3 }, { "steam-cracker-3" } })
+angelsmods.functions.RB.set_fallback("item", "cracker-2", { { "block-cprocessing-3", 3 }, { "angels-steam-cracker" } })
+angelsmods.functions.RB.set_fallback("item", "cracker-3", { { "block-cprocessing-4", 3 }, { "angels-steam-cracker-2" } })
+angelsmods.functions.RB.set_fallback("item", "cracker-4", { { "block-cprocessing-5", 3 }, { "angels-steam-cracker-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "advchem-1", { { "block-production-2", 3 } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "advchem-2",
-  { { "block-cprocessing-4", 3 }, { "advanced-chemical-plant" } }
+  { { "block-cprocessing-4", 3 }, { "angels-advanced-chemical-plant" } }
 )
 
 angelsmods.functions.RB.set_fallback("item", "electrol-1", { { "block-production-1", 3 } })
@@ -307,9 +307,9 @@ angelsmods.functions.RB.set_fallback("item", "airfilter-2", { { "block-productio
 angelsmods.functions.RB.set_fallback("item", "airfilter-3", { { "block-production-3", 3 }, { "angels-air-filter-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "oilref-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "oilref-2", { { "block-cprocessing-3", 3 }, { "oil-refinery" } })
-angelsmods.functions.RB.set_fallback("item", "oilref-3", { { "block-cprocessing-4", 3 }, { "oil-refinery-2" } })
-angelsmods.functions.RB.set_fallback("item", "oilref-4", { { "block-cprocessing-5", 3 }, { "oil-refinery-3" } })
+angelsmods.functions.RB.set_fallback("item", "oilref-2", { { "block-cprocessing-3", 3 }, { "angels-oil-refinery" } })
+angelsmods.functions.RB.set_fallback("item", "oilref-3", { { "block-cprocessing-4", 3 }, { "angels-oil-refinery-2" } })
+angelsmods.functions.RB.set_fallback("item", "oilref-4", { { "block-cprocessing-5", 3 }, { "angels-oil-refinery-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "chem-1", { { "block-production-1", 1 } })
 angelsmods.functions.RB.set_fallback("item", "chem-2", { { "block-production-2", 1 }, { "angels-chemical-plant" } })
@@ -321,32 +321,32 @@ angelsmods.functions.RB.set_fallback("item", "elec-boil-2", { { "block-energy-4"
 
 --SMELTING
 angelsmods.functions.RB.set_fallback("item", "orepro-1", { { "block-production-2", 1 } })
-angelsmods.functions.RB.set_fallback("item", "orepro-2", { { "block-mprocessing-3", 1 }, { "ore-processing-machine" } })
+angelsmods.functions.RB.set_fallback("item", "orepro-2", { { "block-mprocessing-3", 1 }, { "angels-ore-processing-machine" } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "orepro-3",
-  { { "block-mprocessing-4", 1 }, { "ore-processing-machine-2" } }
+  { { "block-mprocessing-4", 1 }, { "angels-ore-processing-machine-2" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "orepro-4",
-  { { "block-mprocessing-5", 1 }, { "ore-processing-machine-3" } }
+  { { "block-mprocessing-5", 1 }, { "angels-ore-processing-machine-3" } }
 )
 
 angelsmods.functions.RB.set_fallback("item", "pelletpre-1", { { "block-mprocessing-3", 1 } })
-angelsmods.functions.RB.set_fallback("item", "pelletpre-2", { { "block-mprocessing-4", 1 }, { "pellet-press" } })
-angelsmods.functions.RB.set_fallback("item", "pelletpre-3", { { "block-mprocessing-5", 1 }, { "pellet-press-2" } })
-angelsmods.functions.RB.set_fallback("item", "pelletpre-4", { { "block-mprocessing-5", 5 }, { "pellet-press-3" } })
+angelsmods.functions.RB.set_fallback("item", "pelletpre-2", { { "block-mprocessing-4", 1 }, { "angels-pellet-press" } })
+angelsmods.functions.RB.set_fallback("item", "pelletpre-3", { { "block-mprocessing-5", 1 }, { "angels-pellet-press-2" } })
+angelsmods.functions.RB.set_fallback("item", "pelletpre-4", { { "block-mprocessing-5", 5 }, { "angels-pellet-press-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "powdermix-1", { { "block-production-2", 1 } })
-angelsmods.functions.RB.set_fallback("item", "powdermix-2", { { "block-mprocessing-3", 1 }, { "powder-mixer" } })
-angelsmods.functions.RB.set_fallback("item", "powdermix-3", { { "block-mprocessing-4", 1 }, { "powder-mixer-2" } })
-angelsmods.functions.RB.set_fallback("item", "powdermix-4", { { "block-mprocessing-5", 1 }, { "powder-mixer-3" } })
+angelsmods.functions.RB.set_fallback("item", "powdermix-2", { { "block-mprocessing-3", 1 }, { "angels-powder-mixer" } })
+angelsmods.functions.RB.set_fallback("item", "powdermix-3", { { "block-mprocessing-4", 1 }, { "angels-powder-mixer-2" } })
+angelsmods.functions.RB.set_fallback("item", "powdermix-4", { { "block-mprocessing-5", 1 }, { "angels-powder-mixer-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "blastfur-1", { { "block-production-1", 3 } })
-angelsmods.functions.RB.set_fallback("item", "blastfur-2", { { "block-production-2", 3 }, { "blast-furnace" } })
-angelsmods.functions.RB.set_fallback("item", "blastfur-3", { { "block-mprocessing-3", 3 }, { "blast-furnace-2" } })
-angelsmods.functions.RB.set_fallback("item", "blastfur-4", { { "block-mprocessing-4", 3 }, { "blast-furnace-3" } })
+angelsmods.functions.RB.set_fallback("item", "blastfur-2", { { "block-production-2", 3 }, { "angels-blast-furnace" } })
+angelsmods.functions.RB.set_fallback("item", "blastfur-3", { { "block-mprocessing-3", 3 }, { "angels-blast-furnace-2" } })
+angelsmods.functions.RB.set_fallback("item", "blastfur-4", { { "block-mprocessing-4", 3 }, { "angels-blast-furnace-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "chemfur-1", { { "block-production-2", 3 } })
 angelsmods.functions.RB.set_fallback("item", "chemfur-2", {
@@ -371,57 +371,57 @@ angelsmods.functions.RB.set_fallback(
 )
 
 angelsmods.functions.RB.set_fallback("item", "indufur-1", { { "block-production-1", 3 } })
-angelsmods.functions.RB.set_fallback("item", "indufur-2", { { "block-production-2", 3 }, { "induction-furnace" } })
-angelsmods.functions.RB.set_fallback("item", "indufur-3", { { "block-mprocessing-3", 3 }, { "induction-furnace-2" } })
-angelsmods.functions.RB.set_fallback("item", "indufur-4", { { "block-mprocessing-4", 3 }, { "induction-furnace-3" } })
+angelsmods.functions.RB.set_fallback("item", "indufur-2", { { "block-production-2", 3 }, { "angels-induction-furnace" } })
+angelsmods.functions.RB.set_fallback("item", "indufur-3", { { "block-mprocessing-3", 3 }, { "angels-induction-furnace-2" } })
+angelsmods.functions.RB.set_fallback("item", "indufur-4", { { "block-mprocessing-4", 3 }, { "angels-induction-furnace-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "castingm-1", { { "block-production-1", 1 } })
-angelsmods.functions.RB.set_fallback("item", "castingm-2", { { "block-production-2", 1 }, { "casting-machine" } })
-angelsmods.functions.RB.set_fallback("item", "castingm-3", { { "block-mprocessing-3", 1 }, { "casting-machine-2" } })
-angelsmods.functions.RB.set_fallback("item", "castingm-4", { { "block-mprocessing-4", 1 }, { "casting-machine-3" } })
+angelsmods.functions.RB.set_fallback("item", "castingm-2", { { "block-production-2", 1 }, { "angels-casting-machine" } })
+angelsmods.functions.RB.set_fallback("item", "castingm-3", { { "block-mprocessing-3", 1 }, { "angels-casting-machine-2" } })
+angelsmods.functions.RB.set_fallback("item", "castingm-4", { { "block-mprocessing-4", 1 }, { "angels-casting-machine-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "sinteringo-1", { { "block-production-1", 3 } })
-angelsmods.functions.RB.set_fallback("item", "sinteringo-2", { { "block-production-2", 3 }, { "sintering-oven" } })
-angelsmods.functions.RB.set_fallback("item", "sinteringo-3", { { "block-mprocessing-3", 3 }, { "sintering-oven-2" } })
+angelsmods.functions.RB.set_fallback("item", "sinteringo-2", { { "block-production-2", 3 }, { "angels-sintering-oven" } })
+angelsmods.functions.RB.set_fallback("item", "sinteringo-3", { { "block-mprocessing-3", 3 }, { "angels-sintering-oven-2" } })
 angelsmods.functions.RB.set_fallback("item", "sinteringo-4", {
   { "block-mprocessing-4", 3 },
   {
-    "sintering-oven-3",
+    "angels-sintering-oven-3",
     1,
     function(t, n)
       return mods["angelssmelting"] and angelsmods.trigger.early_sintering_oven or false
     end,
   },
 })
-angelsmods.functions.RB.set_fallback("item", "sinteringo-5", { { "block-mprocessing-5", 3 }, { "sintering-oven-4" } })
+angelsmods.functions.RB.set_fallback("item", "sinteringo-5", { { "block-mprocessing-5", 3 }, { "angels-sintering-oven-4" } })
 
 angelsmods.functions.RB.set_fallback("item", "strandcast-1", { { "block-production-2", 3 } })
 angelsmods.functions.RB.set_fallback(
   "item",
   "strandcast-2",
-  { { "block-mprocessing-3", 3 }, { "strand-casting-machine" } }
+  { { "block-mprocessing-3", 3 }, { "angels-strand-casting-machine" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "strandcast-3",
-  { { "block-mprocessing-4", 3 }, { "strand-casting-machine-2" } }
+  { { "block-mprocessing-4", 3 }, { "angels-strand-casting-machine-2" } }
 )
 angelsmods.functions.RB.set_fallback(
   "item",
   "strandcast-4",
-  { { "block-mprocessing-5", 3 }, { "strand-casting-machine-3" } }
+  { { "block-mprocessing-5", 3 }, { "angels-strand-casting-machine-3" } }
 )
 
 angelsmods.functions.RB.set_fallback("item", "coolingt-1", { { "block-production-2", 1 } })
 
 --BIO PROCESSING
 angelsmods.functions.RB.set_fallback("item", "algaefarm-1", { { "block-electronics-0", 5 } })
-angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-production-1", 5 }, { "algae-farm" } }) --block-bprocessing-1 does not exist
-angelsmods.functions.RB.set_fallback("item", "algaefarm-3", { { "block-production-2", 5 }, { "algae-farm-2" } }) --block-bprocessing-2 does not exist
-angelsmods.functions.RB.set_fallback("item", "algaefarm-4", { { "block-bprocessing-3", 5 }, { "algae-farm-3" } })
+angelsmods.functions.RB.set_fallback("item", "algaefarm-2", { { "block-production-1", 5 }, { "angels-algae-farm" } }) --block-bprocessing-1 does not exist
+angelsmods.functions.RB.set_fallback("item", "algaefarm-3", { { "block-production-2", 5 }, { "angels-algae-farm-2" } }) --block-bprocessing-2 does not exist
+angelsmods.functions.RB.set_fallback("item", "algaefarm-4", { { "block-bprocessing-3", 5 }, { "angels-algae-farm-3" } })
 
-angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production-1", 3 }, { "solid-soil", 15 } })
-angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-bprocessing-3", 3 }, { "crop-farm" } })
+angelsmods.functions.RB.set_fallback("item", "cropfarm-1", { { "block-production-1", 3 }, { "angels-solid-soil", 15 } })
+angelsmods.functions.RB.set_fallback("item", "cropfarm-2", { { "block-bprocessing-3", 3 }, { "angels-crop-farm" } })
 
 if angelsmods.industries and angelsmods.industries.components then
   angelsmods.functions.RB.set_fallback("item", "compo-1", {})

@@ -2,16 +2,16 @@ data:extend({
   --SOLIDS
   {
     type = "technology",
-    name = "plastic-1",
+    name = "angels-plastic-1",
     icon = "__angelspetrochemgraphics__/graphics/technology/plastic-1-tech.png",
     icon_size = 128,
     prerequisites = {
-      "steam-cracking-1",
+      "angels-steam-cracking-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-1",
+        recipe = "angels-liquid-plastic",
       },
     },
     unit = {
@@ -26,17 +26,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "plastic-2",
+    name = "angels-plastic-2",
     icon = "__angelspetrochemgraphics__/graphics/technology/plastic-2-tech.png",
     icon_size = 128,
     prerequisites = {
-      "plastic-1",
+      "angels-plastic-1",
       "angels-advanced-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-2",
+        recipe = "angels-liquid-plastic-2",
       },
     },
     unit = {
@@ -52,17 +52,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "plastic-3",
+    name = "angels-plastic-3",
     icon = "__angelspetrochemgraphics__/graphics/technology/plastic-3-tech.png",
     icon_size = 128,
     prerequisites = {
-      "plastic-2",
+      "angels-plastic-2",
       "angels-advanced-chemistry-5",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-3",
+        recipe = "angels-liquid-plastic-3",
       },
     },
     unit = {
@@ -80,16 +80,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resins",
+    name = "angels-resins",
     icon = "__angelspetrochemgraphics__/graphics/technology/resins-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-1",
+      "angels-resin-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-resin",
+        recipe = "angels-solid-resin",
       },
     },
     unit = {
@@ -104,7 +104,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-1",
+    name = "angels-resin-1",
     icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
@@ -114,7 +114,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-1",
+        recipe = "angels-liquid-resin",
       },
     },
     unit = {
@@ -129,17 +129,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-2",
+    name = "angels-resin-2",
     icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-1",
+      "angels-resin-1",
       "angels-nitrogen-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-2",
+        recipe = "angels-liquid-resin-2",
       },
     },
     unit = {
@@ -155,18 +155,18 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-3",
+    name = "angels-resin-3",
     icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-2",
+      "angels-resin-2",
       "angels-advanced-chemistry-5",
-      "chlorine-processing-3",
+      "angels-chlorine-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-3",
+        recipe = "angels-liquid-resin-3",
       },
     },
     unit = {
@@ -184,16 +184,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rubbers",
+    name = "angels-rubbers",
     icon = "__angelspetrochemgraphics__/graphics/technology/rubbers-tech.png",
     icon_size = 128,
     prerequisites = {
-      "rubber",
+      "angels-rubber",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-rubber",
+        recipe = "angels-solid-rubber",
       },
     },
     unit = {
@@ -209,17 +209,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rubber",
+    name = "angels-rubber",
     icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      --"steam-cracking-1",
+      --"angels-steam-cracking-1",
       "angels-advanced-chemistry-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-rubber-1",
+        recipe = "angels-liquid-rubber",
       },
     },
     unit = {

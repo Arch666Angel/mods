@@ -7,17 +7,17 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-platinum-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-electro-whinning-cell",
+      "angels-ore-electro-whinning-cell",
       "angels-metallurgy-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-ore-smelting",
+        recipe = "angels-platinum-ore-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-platinum-smelting",
+        recipe = "angels-liquid-molten-platinum",
       },
       {
         type = "unlock-recipe",
@@ -25,7 +25,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-platinated-copper-wire",
+        recipe = "angels-wire-platinum",
       },
     },
     unit = {
@@ -47,22 +47,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-platinum-smelting-1",
       "angels-sulfur-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-ore-processing",
+        recipe = "angels-platinum-ore-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-platinum-smelting",
+        recipe = "angels-processed-platinum-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-platinum",
+        recipe = "angels-powder-platinum",
       },
     },
     unit = {
@@ -85,26 +85,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-platinum-smelting-1",
       "angels-copper-casting-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-casting",
+        recipe = "angels-wire-coil-platinum",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-converting",
+        recipe = "angels-wire-platinum-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-platinum-casting",
+        recipe = "angels-roll-platinum",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-platinum-converting",
+        recipe = "angels-plate-platinum-2",
       },
     },
     unit = {
@@ -127,26 +127,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-5",
+      "angels-ore-processing-5",
       "angels-platinum-smelting-2",
       "angels-nitrogen-processing-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "platinum-processed-processing",
+        recipe = "angels-platinum-processed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-platinum-smelting",
+        recipe = "angels-pellet-platinum-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hexachloroplatinic-acid-smelting",
+        recipe = "angels-liquid-hexachloroplatinic-acid-smelting",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-ammonium-chloroplatinate-smelting",
+        recipe = "angels-solid-ammonium-chloroplatinate-smelting",
       },
     },
     unit = {
@@ -169,17 +169,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      --"strand-casting-4",
+      --"angels-strand-casting-4",
       "angels-platinum-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-platinum-casting-fast",
+        recipe = "angels-wire-coil-platinum-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-platinum-casting-fast",
+        recipe = "angels-roll-platinum-2",
       },
     },
     unit = {

@@ -7,18 +7,18 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-gold-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-leaching",
+      "angels-ore-leaching",
       "angels-metallurgy-3",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-ore-smelting",
+        recipe = "angels-ingot-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-gold-smelting",
+        recipe = "angels-liquid-molten-gold",
       },
       {
         type = "unlock-recipe",
@@ -47,30 +47,30 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-gold-smelting-1",
       "angels-nitrogen-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-ore-processing",
+        recipe = "angels-processed-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-chlorauric-acid",
+        recipe = "angels-liquid-chlorauric-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-gold-smelting",
+        recipe = "angels-cathode-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-gold-smelting",
+        recipe = "angels-ingot-gold-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-gold",
+        recipe = "angels-powder-gold",
       },
     },
     unit = {
@@ -92,26 +92,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-gold-smelting-1",
       "angels-copper-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-casting",
+        recipe = "angels-wire-coil-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-converting",
+        recipe = "angels-wire-gold-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-gold-casting",
+        recipe = "angels-roll-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-gold-converting",
+        recipe = "angels-plate-gold-2",
       },
     },
     unit = {
@@ -133,22 +133,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-gold-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gold-processed-processing",
+        recipe = "angels-pellet-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-gold-smelting",
+        recipe = "angels-solid-sodium-gold-cyanide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-gold-cyanide-smelting",
+        recipe = "angels-cathode-gold-2",
       },
     },
     unit = {
@@ -171,17 +171,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-gold-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-gold-casting-fast",
+        recipe = "angels-wire-coil-gold-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-gold-casting-fast",
+        recipe = "angels-roll-gold-2",
       },
     },
     unit = {

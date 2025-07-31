@@ -31,7 +31,7 @@ data:extend({
       results = {
         {
           type = "fluid",
-          name = "thermal-water",
+          name = "angels-thermal-water",
           amount_min = 20,
           amount_max = 20,
           probability = 1,

@@ -2,7 +2,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "nickel-ore",
+    name = "angels-nickel-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-nickel",
+    name = "angels-processed-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-nickel",
+    name = "angels-pellet-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel",
@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cathode-nickel",
+    name = "angels-cathode-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/cathode-nickel.png",
     icon_size = 32,
     subgroup = "angels-nickel",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-nickel-carbonyl",
+    name = "angels-solid-nickel-carbonyl",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-nickel-carbonyl.png",
     icon_size = 32,
     subgroup = "angels-nickel",
@@ -49,7 +49,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-nickel",
+    name = "angels-ingot-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel",
@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-nickel",
+    name = "angels-powder-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-nickel",
+    name = "angels-liquid-molten-nickel",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-nickel.png",
     icon_size = 64,
     subgroup = "angels-nickel-casting",

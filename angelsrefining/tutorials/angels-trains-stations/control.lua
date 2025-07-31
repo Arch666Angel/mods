@@ -274,9 +274,9 @@ story_table = {
         for k, furnace in pairs(surface().find_entities_filtered({ name = "steel-furnace" })) do
           furnace.force = "neutral"
         end
-        for k, crusher in pairs(surface().find_entities_filtered({ name = "ore-crusher" })) do
+        for k, crusher in pairs(surface().find_entities_filtered({ name = "angels-ore-crusher" })) do
           crusher.force = "neutral"
-          crusher.set_recipe("angelsore1-crushed")
+          crusher.set_recipe("angels-ore1-crushed")
         end
       end,
       condition = function()

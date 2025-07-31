@@ -2,10 +2,10 @@ data:extend({
   --TIER 4 MIX
   {
     type = "recipe",
-    name = "angelsore-pure-mix1-processing", --tungsten
+    name = "angels-ore-pure-mix1-processing", --tungsten
     localised_name = { "item-name.angels-void" },
-    category = "ore-sorting-5",
-    subgroup = "ore-sorting-advanced",
+    category = "angels-ore-sorting-5",
+    subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
@@ -13,7 +13,7 @@ data:extend({
       { type = "item", name = "angels-ore2-pure", amount = 2 },
       { type = "item", name = "angels-ore3-pure", amount = 2 },
       { type = "item", name = "angels-ore1-pure", amount = 2 },
-      { type = "item", name = "catalysator-orange", amount = 1 },
+      { type = "item", name = "angels-catalysator-orange", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -23,10 +23,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-pure-mix2-processing", --platinum
+    name = "angels-ore-pure-mix2-processing", --platinum
     localised_name = { "item-name.angels-void" },
-    category = "ore-sorting-5",
-    subgroup = "ore-sorting-advanced",
+    category = "angels-ore-sorting-5",
+    subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
@@ -34,7 +34,7 @@ data:extend({
       { type = "item", name = "angels-ore3-pure", amount = 2 },
       { type = "item", name = "angels-ore5-pure", amount = 2 },
       { type = "item", name = "angels-ore6-pure", amount = 2 },
-      { type = "item", name = "catalysator-orange", amount = 1 },
+      { type = "item", name = "angels-catalysator-orange", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -44,10 +44,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore-pure-mix3-processing",
+    name = "angels-ore-pure-mix3-processing",
     localised_name = { "item-name.angels-void" },
-    category = "ore-sorting-5",
-    subgroup = "ore-sorting-advanced",
+    category = "angels-ore-sorting-5",
+    subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
@@ -55,7 +55,7 @@ data:extend({
       { type = "item", name = "angels-ore2-pure", amount = 2 },
       { type = "item", name = "angels-ore4-pure", amount = 2 },
       { type = "item", name = "angels-ore5-pure", amount = 2 },
-      { type = "item", name = "catalysator-orange", amount = 1 },
+      { type = "item", name = "angels-catalysator-orange", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-void", amount = 1 },

@@ -5,7 +5,7 @@ if angelsmods.industries.components then
     -----------------------------------------------------------------------------
     {
       type = "item",
-      name = "motor-casing-1",
+      name = "angels-motor-casing-1",
       icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-1.png",
       icon_size = 32,
       subgroup = "angels-motor-casing",
@@ -14,7 +14,7 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "motor-casing-2",
+      name = "angels-motor-casing-2",
       icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-2.png",
       icon_size = 32,
       subgroup = "angels-motor-casing",
@@ -23,7 +23,7 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "motor-casing-3",
+      name = "angels-motor-casing-3",
       icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-3.png",
       icon_size = 32,
       subgroup = "angels-motor-casing",
@@ -32,7 +32,7 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "motor-casing-4",
+      name = "angels-motor-casing-4",
       icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-4.png",
       icon_size = 32,
       subgroup = "angels-motor-casing",
@@ -41,7 +41,7 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "motor-casing-5-green",
+      name = "angels-motor-casing-5-green",
       --icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-5.png",
       icons = {
         {
@@ -57,7 +57,7 @@ if angelsmods.industries.components then
     },
     {
       type = "item",
-      name = "motor-casing-5",
+      name = "angels-motor-casing-5",
       icon = "__angelsindustriesgraphics__/graphics/icons/motor-casing-5.png",
       icon_size = 32,
       subgroup = "angels-motor-casing",

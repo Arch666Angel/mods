@@ -1542,11 +1542,11 @@ function angelsmods.functions.modify_barreling_recipes()
       if data.raw.item[fn .. "-barrel"] then
         if recipes[fn .. "-barrel"] then
           recipes[fn .. "-barrel"].hidden = true
-          recipes[fn .. "-barrel"].category = "barreling-pump"
+          recipes[fn .. "-barrel"].category = "angels-barreling-pump"
         end
         if recipes["empty-" .. fn .. "-barrel"] then
           recipes["empty-" .. fn .. "-barrel"].hidden = true
-          recipes["empty-" .. fn .. "-barrel"].category = "barreling-pump"
+          recipes["empty-" .. fn .. "-barrel"].category = "angels-barreling-pump"
         end
       end
     end
@@ -1635,7 +1635,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 5
-      void_output_item = "water-void"
+      void_output_item = "angels-water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
@@ -1645,7 +1645,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "chemical-void"
+      void_output_item = "angels-chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
@@ -1659,7 +1659,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "item"
       void_input_subgroup = data.raw.item[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "solid-compost"
+      void_output_item = "angels-solid-compost"
       void_output_amount = void_amount < 1 and 1 / void_amount or 1
       void_output_probability = 1
     else
@@ -1840,27 +1840,27 @@ function angelsmods.functions.get_trigger_names()
     ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
     ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
     -- TIER 1.5 ORES
-    ["tin-ore"] = "tin",
-    ["lead-ore"] = "lead",
-    ["quartz"] = "silicon",
-    ["nickel-ore"] = "nickel",
-    ["manganese-ore"] = "manganese",
+    ["angels-tin-ore"] = "tin",
+    ["angels-lead-ore"] = "lead",
+    ["angels-quartz"] = "silicon",
+    ["angels-nickel-ore"] = "nickel",
+    ["angels-manganese-ore"] = "manganese",
     -- TIER 2 ORES
-    ["zinc-ore"] = "zinc",
-    ["bauxite-ore"] = "aluminium",
-    ["cobalt-ore"] = "cobalt",
-    ["silver-ore"] = "silver",
-    ["fluorite-ore"] = "fluorite", -- byproduct
+    ["angels-zinc-ore"] = "zinc",
+    ["angels-bauxite-ore"] = "aluminium",
+    ["angels-cobalt-ore"] = "cobalt",
+    ["angels-silver-ore"] = "silver",
+    ["angels-fluorite-ore"] = "fluorite", -- byproduct
     -- TIER 2.5 ORES
-    ["gold-ore"] = "gold",
+    ["angels-gold-ore"] = "gold",
     -- TIER 3 ORES
-    ["rutile-ore"] = "titanium",
+    ["angels-rutile-ore"] = "titanium",
     ["uranium-ore"] = "uranium",
     -- TIER 4 ORES
-    ["tungsten-ore"] = "tungsten",
-    ["thorium-ore"] = "thorium",
-    ["chrome-ore"] = "chrome",
-    ["platinum-ore"] = "platinum",
+    ["angels-tungsten-ore"] = "tungsten",
+    ["angels-thorium-ore"] = "thorium",
+    ["angels-chrome-ore"] = "chrome",
+    ["angels-platinum-ore"] = "platinum",
   }
 end
 
@@ -1882,24 +1882,24 @@ function angelsmods.functions.get_ore_name(ore_name)
     ["angels-iron-nugget"] = "angels-iron-nugget",
     ["angels-iron-pebbles"] = "angels-iron-pebbles",
     ["angels-iron-slag"] = "angels-iron-slag",
-    ["bauxite-ore"] = mods["bobores"] and "bob-bauxite-ore" or "bauxite-ore",
-    ["chrome-ore"] = "chrome-ore",
-    ["cobalt-ore"] = mods["bobores"] and "bob-cobalt-ore" or "cobalt-ore",
+    ["angels-bauxite-ore"] = mods["bobores"] and "bob-bauxite-ore" or "angels-bauxite-ore",
+    ["angels-chrome-ore"] = "angels-chrome-ore",
+    ["angels-cobalt-ore"] = mods["bobores"] and "bob-cobalt-ore" or "angels-cobalt-ore",
     ["copper-ore"] = "copper-ore",
-    ["fluorite-ore"] = "fluorite-ore",
-    ["gold-ore"] = mods["bobores"] and "bob-gold-ore" or "gold-ore",
+    ["angels-fluorite-ore"] = "angels-fluorite-ore",
+    ["angels-gold-ore"] = mods["bobores"] and "bob-gold-ore" or "angels-gold-ore",
     ["iron-ore"] = "iron-ore",
-    ["lead-ore"] = mods["bobores"] and "bob-lead-ore" or "lead-ore",
-    ["nickel-ore"] = mods["bobores"] and "bob-nickel-ore" or "nickel-ore",
-    ["platinum-ore"] = "platinum-ore",
-    ["quartz"] = mods["bobores"] and "bob-quartz" or "quartz",
-    ["rutile-ore"] = mods["bobores"] and "bob-rutile-ore" or "rutile-ore",
-    ["silver-ore"] = mods["bobores"] and "bob-silver-ore" or "silver-ore",
-    ["thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "thorium-ore",
-    ["tin-ore"] = mods["bobores"] and "bob-tin-ore" or "tin-ore",
-    ["tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "tungsten-ore",
+    ["angels-lead-ore"] = mods["bobores"] and "bob-lead-ore" or "angels-lead-ore",
+    ["angels-nickel-ore"] = mods["bobores"] and "bob-nickel-ore" or "angels-nickel-ore",
+    ["angels-platinum-ore"] = "angels-platinum-ore",
+    ["angels-quartz"] = mods["bobores"] and "bob-quartz" or "angels-quartz",
+    ["angels-rutile-ore"] = mods["bobores"] and "bob-rutile-ore" or "angels-rutile-ore",
+    ["angels-silver-ore"] = mods["bobores"] and "bob-silver-ore" or "angels-silver-ore",
+    ["angels-thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "angels-thorium-ore",
+    ["angels-tin-ore"] = mods["bobores"] and "bob-tin-ore" or "angels-tin-ore",
+    ["angels-tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "angels-tungsten-ore",
     ["uranium-ore"] = "uranium-ore",
-    ["zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "zinc-ore",
+    ["angels-zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "angels-zinc-ore",
   }
   return ore_lookup_table[ore_name] or ore_name
 end

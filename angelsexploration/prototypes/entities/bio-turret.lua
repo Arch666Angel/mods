@@ -287,7 +287,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "bio-turret-remnants",
+    name = "angels-bio-turret-remnants",
     icon = "__angelsexplorationgraphics__/graphics/icons/bio-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "not-on-map" },
@@ -337,7 +337,7 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-bio-turret" },
     max_health = 1400,
-    corpse = "bio-turret-remnants",
+    corpse = "angels-bio-turret-remnants",
     collision_box = { { -0.7, -1.2 }, { 0.7, 1.2 } },
     selection_box = { { -1, -1.5 }, { 1, 1.5 } },
     rotation_speed = 0.03, -- 0.015
@@ -645,7 +645,7 @@ data:extend({
           type = "direct",
           action_delivery = {
             type = "stream",
-            stream = "bio-stream",
+            stream = "angels-bio-stream",
             source_offset = { 0.15, -0.5 },
           },
         },

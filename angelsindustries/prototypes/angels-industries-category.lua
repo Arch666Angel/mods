@@ -1,9 +1,4 @@
 data:extend({
-  --RECIPE CATEGORY
-  {
-    type = "recipe-category",
-    name = "bob-logistics",
-  },
   -- centrifuging category part of base game
   {
     type = "recipe-category",

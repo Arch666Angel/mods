@@ -13,7 +13,7 @@ if angelsmods.industries.components then
       category = "crafting", --to allow hand crafting
       enabled = false,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 1 },
+        { type = "item", name = "angels-solid-paper", amount = 1 },
         { type = "item", name = "copper-cable", amount = 1 },
       },
       results = { { type = "item", name = "circuit-resistor", amount = 1 } },
@@ -31,8 +31,8 @@ if angelsmods.industries.components then
     --  ingredients =
     --  {
     --    {type = "item", name = "plastic", amount = 1},
-    --    {type = "item", name = "paste-cellulose", amount = 1},
-    --    {type = "item", name = "solid-carbon", amount = 1},
+    --    {type = "item", name = "angels-paste-cellulose", amount = 1},
+    --    {type = "item", name = "angels-solid-carbon", amount = 1},
     --    {type = "item", name = "copper-cable", amount = 1},
     --  },
     --  results = {{ type = "item", name = "circuit-resistor", amount = 1 }},
@@ -66,7 +66,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-silicon-wafer", amount = 1 },
         { type = "item", name = "angels-wire-silver", amount = 1 },
-        { type = "fluid", name = "liquid-sulfuric-acid", amount = 1 },
+        { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 1 },
       },
       results = { { type = "item", name = "circuit-microchip", amount = 1 } },
       icon_size = 32,
@@ -99,7 +99,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "angels-silicon-wafer", amount = 1 },
         { type = "item", name = "angels-wire-platinum", amount = 1 },
-        { type = "fluid", name = "liquid-sulfuric-acid", amount = 1 },
+        { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 1 },
       },
       results = { { type = "item", name = "circuit-cpu", amount = 1 } },
       icon_size = 32,
@@ -278,7 +278,7 @@ if angelsmods.industries.components then
       subgroup = "angels-board",
       enabled = false,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 2 },
+        { type = "item", name = "angels-solid-paper", amount = 2 },
       },
       allow_as_intermediate = false, -- prefer the wood recipe for handcrafing
       results = {
@@ -296,7 +296,7 @@ if angelsmods.industries.components then
       category = "crafting",
       enabled = false,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 1 },
+        { type = "item", name = "angels-solid-paper", amount = 1 },
       },
       results = { { type = "item", name = "circuit-red-board", amount = 1 } },
       allow_decomposition = true,
@@ -310,8 +310,8 @@ if angelsmods.industries.components then
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 1 },
-        { type = "fluid", name = "liquid-resin", amount = 2 },
+        { type = "item", name = "angels-solid-paper", amount = 1 },
+        { type = "fluid", name = "angels-liquid-resin", amount = 2 },
       },
       results = { { type = "item", name = "circuit-green-board", amount = 1 } },
       icon_size = 32,
@@ -324,8 +324,8 @@ if angelsmods.industries.components then
       category = "advanced-crafting",
       enabled = false,
       ingredients = {
-        { type = "item", name = "cellulose-fiber", amount = 1 },
-        { type = "fluid", name = "liquid-plastic", amount = 2 },
+        { type = "item", name = "angels-cellulose-fiber", amount = 1 },
+        { type = "fluid", name = "angels-liquid-plastic", amount = 2 },
       },
       results = { { type = "item", name = "circuit-orange-board", amount = 1 } },
       icon_size = 32,
@@ -339,7 +339,7 @@ if angelsmods.industries.components then
       enabled = false,
       ingredients = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 2 },
-        { type = "fluid", name = "liquid-resin", amount = 2 },
+        { type = "fluid", name = "angels-liquid-resin", amount = 2 },
       },
       results = { { type = "item", name = "circuit-blue-board", amount = 1 } },
       icon_size = 32,
@@ -353,10 +353,10 @@ if angelsmods.industries.components then
       enabled = false,
       ingredients = {
         { type = "item", name = "angels-coil-glass-fiber", amount = 2 },
-        { type = "fluid", name = "liquid-resin", amount = 2 },
-        { type = "fluid", name = "liquid-plastic", amount = 2 },
+        { type = "fluid", name = "angels-liquid-resin", amount = 2 },
+        { type = "fluid", name = "angels-liquid-plastic", amount = 2 },
       },
-      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-resin"),
+      crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-resin"),
       results = { { type = "item", name = "circuit-yellow-board", amount = 1 } },
       icon_size = 32,
     },
@@ -425,7 +425,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "circuit-orange-board", amount = 1 },
         { type = "item", name = "angels-wire-silver", amount = 3 },
-        { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
+        { type = "fluid", name = "angels-liquid-cupric-chloride-solution", amount = 2 },
       },
       results = {
         { type = "item", name = "circuit-orange", amount = 1 },
@@ -442,7 +442,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "circuit-blue-board", amount = 1 },
         { type = "item", name = "angels-wire-gold", amount = 3 },
-        { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
+        { type = "fluid", name = "angels-liquid-cupric-chloride-solution", amount = 2 },
       },
       results = {
         { type = "item", name = "circuit-blue", amount = 1 },
@@ -459,7 +459,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "circuit-yellow-board", amount = 1 },
         { type = "item", name = "angels-wire-platinum", amount = 3 },
-        { type = "fluid", name = "liquid-cupric-chloride-solution", amount = 2 },
+        { type = "fluid", name = "angels-liquid-cupric-chloride-solution", amount = 2 },
       },
       results = {
         { type = "item", name = "circuit-yellow", amount = 1 },

@@ -3,21 +3,21 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 data:extend({
   {
     type = "item",
-    name = "thermal-bore",
+    name = "angels-thermal-bore",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "a[thermal-extractor]-a[bore]",
-    place_result = "thermal-bore",
+    place_result = "angels-thermal-bore",
     stack_size = 10,
   },
   {
     type = "mining-drill",
-    name = "thermal-bore",
+    name = "angels-thermal-bore",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
@@ -25,7 +25,7 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.5, result = "thermal-bore" },
+    minable = { mining_time = 0.5, result = "angels-thermal-bore" },
     resource_categories = { "angels-fissure" },
     max_health = 100,
     corpse = "pumpjack-remnants",
@@ -123,27 +123,27 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 10
     },
-    fast_replaceable_group = "thermal-extractor",
+    fast_replaceable_group = "angels-thermal-extractor",
     circuit_connector = circuit_connector_definitions["pumpjack"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
     type = "item",
-    name = "thermal-extractor",
+    name = "angels-thermal-extractor",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "a[thermal-extractor]-b[extractor]",
-    place_result = "thermal-extractor",
+    place_result = "angels-thermal-extractor",
     stack_size = 10,
   },
   {
     type = "mining-drill",
-    name = "thermal-extractor",
+    name = "angels-thermal-extractor",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
@@ -152,7 +152,7 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "thermal-extractor" },
+    minable = { mining_time = 1, result = "angels-thermal-extractor" },
     resource_categories = { "angels-fissure" },
     max_health = 100,
     corpse = "big-remnants",
@@ -215,6 +215,6 @@ data:extend({
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
     },
-    fast_replaceable_group = "thermal-extractor",
+    fast_replaceable_group = "angels-thermal-extractor",
   },
 })

@@ -85,10 +85,10 @@ end
 -- FERROUS --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["ferrous"] then
-  angelsmods.functions.move_item("angels-ore8-sludge", "ore-processing-fluid", "a[ferrous]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore8-solution", "ore-processing-fluid", "a[ferrous]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore8-anode-sludge", "ore-processing-fluid", "a[ferrous]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore8-slime", "ore-processing-fluid", "a[ferrous]-d", "fluid")
+  angelsmods.functions.move_item("angels-ore8-sludge", "angels-ore-processing-fluid", "a[ferrous]-a", "fluid")
+  angelsmods.functions.move_item("angels-ore8-solution", "angels-ore-processing-fluid", "a[ferrous]-b", "fluid")
+  angelsmods.functions.move_item("angels-ore8-anode-sludge", "angels-ore-processing-fluid", "a[ferrous]-c", "fluid")
+  angelsmods.functions.move_item("angels-ore8-slime", "angels-ore-processing-fluid", "a[ferrous]-d", "fluid")
 else
   angelsmods.functions.hide("angels-ore8-crushed")
   angelsmods.functions.hide("angels-ore8-powder")
@@ -100,37 +100,37 @@ else
   angelsmods.functions.hide("angels-ore8-slime")
 
   OV.disable_recipe({
-    "angelsore8-powder",
-    "angelsore8-powder-processing",
-    "angelsore8-sludge",
-    "angelsore8-dust",
-    "angelsore8-dust-processing",
-    "angelsore8-solution",
-    "angelsore8-anode-sludge",
-    "angelsore8-anode-sludge-filtering",
-    "angelsore8-crystal",
-    "angelsore8-crystal-processing",
+    "angels-ore8-powder",
+    "angels-ore8-powder-processing",
+    "angels-ore8-sludge",
+    "angels-ore8-dust",
+    "angels-ore8-dust-processing",
+    "angels-ore8-solution",
+    "angels-ore8-slime",
+    "angels-ore8-anode-sludge",
+    "angels-ore8-crystal",
+    "angels-ore8-crystal-processing",
   })
 
   OV.patch_recipes({
     {
-      name = "angelsore-chunk-mix6-processing",
+      name = "angels-ore-chunk-mix6-processing",
       ingredients = {
         { name = "angels-ore3-chunk", amount = "angels-ore8-powder" },
       },
     },
   })
-  OV.remove_prereq("advanced-ore-refining-2", "ore-powderizer")
+  OV.remove_prereq("angels-advanced-ore-refining-2", "angels-ore-powderizer")
 end
 
 -------------------------------------------------------------------------------
 -- CUPRIC ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["cupric"] then
-  angelsmods.functions.move_item("angels-ore9-sludge", "ore-processing-fluid", "b[cupric]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore9-solution", "ore-processing-fluid", "b[cupric]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore9-anode-sludge", "ore-processing-fluid", "b[cupric]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore9-slime", "ore-processing-fluid", "b[cupric]-d", "fluid")
+  angelsmods.functions.move_item("angels-ore9-sludge", "angels-ore-processing-fluid", "b[cupric]-a", "fluid")
+  angelsmods.functions.move_item("angels-ore9-solution", "angels-ore-processing-fluid", "b[cupric]-b", "fluid")
+  angelsmods.functions.move_item("angels-ore9-anode-sludge", "angels-ore-processing-fluid", "b[cupric]-c", "fluid")
+  angelsmods.functions.move_item("angels-ore9-slime", "angels-ore-processing-fluid", "b[cupric]-d", "fluid")
 else
   angelsmods.functions.hide("angels-ore9-crushed")
   angelsmods.functions.hide("angels-ore9-powder")
@@ -142,16 +142,16 @@ else
   angelsmods.functions.hide("angels-ore9-slime")
 
   OV.disable_recipe({
-    "angelsore9-powder",
-    "angelsore9-powder-processing",
-    "angelsore9-sludge",
-    "angelsore9-dust",
-    "angelsore9-dust-processing",
-    "angelsore9-solution",
-    "angelsore9-anode-sludge",
-    "angelsore9-anode-sludge-filtering",
-    "angelsore9-crystal",
-    "angelsore9-crystal-processing",
+    "angels-ore9-powder",
+    "angels-ore9-powder-processing",
+    "angels-ore9-sludge",
+    "angels-ore9-dust",
+    "angels-ore9-dust-processing",
+    "angels-ore9-solution",
+    "angels-ore9-slime",
+    "angels-ore9-anode-sludge",
+    "angels-ore9-crystal",
+    "angels-ore9-crystal-processing",
   })
 end
 
@@ -160,31 +160,31 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.functions.is_special_vanilla() then
   OV.disable_recipe({
-    "crystal-slurry-filtering-1",
-    "crystal-slurry-filtering-2",
-    "catalysator-brown",
-    "catalysator-green",
-    "catalysator-orange",
+    "angels-crystal-slurry-filtering-1",
+    "angels-crystal-slurry-filtering-2",
+    "angels-catalysator-brown",
+    "angels-catalysator-green",
+    "angels-catalysator-orange",
   })
-  angelsmods.functions.hide("crystal-seedling")
-  angelsmods.functions.hide("catalysator-brown")
-  angelsmods.functions.hide("catalysator-green")
-  angelsmods.functions.hide("catalysator-orange")
+  angelsmods.functions.hide("angels-crystal-seedling")
+  angelsmods.functions.hide("angels-catalysator-brown")
+  angelsmods.functions.hide("angels-catalysator-green")
+  angelsmods.functions.hide("angels-catalysator-orange")
 end
 
 -- Currently crystal-matrix has no use
-OV.disable_recipe({ "crystal-matrix" })
-angelsmods.functions.hide("crystal-matrix")
+OV.disable_recipe({ "angels-crystal-matrix" })
+angelsmods.functions.hide("angels-crystal-matrix")
 
 -------------------------------------------------------------------------------
 -- SLAG -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.slag == false then
   OV.disable_recipe({
-    "slag-processing-stone",
-    "slag-processing-dissolution",
+    "angels-stone-crushed",
+    "angels-slag-processing-dissolution",
   })
-  angelsmods.functions.hide("slag")
+  angelsmods.functions.hide("angels-slag")
 end
 
 -------------------------------------------------------------------------------

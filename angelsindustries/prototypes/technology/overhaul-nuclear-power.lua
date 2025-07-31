@@ -48,7 +48,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-plutonium-power",
-      "ore-electro-whinning-cell",
+      "angels-ore-electro-whinning-cell",
       "utility-science-pack",
       "angels-zinc-smelting-1",
     },
@@ -115,7 +115,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "angels-thorium-power",
-      "water-chemistry-2",
+      "angels-water-chemistry-2",
     },
     effects = {
       {

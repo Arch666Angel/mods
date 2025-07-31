@@ -27,7 +27,7 @@ if angelsmods.industries.overhaul then
 
   -- fluid stuffs
   if mods["bobplates"] then
-    data.raw["item-subgroup"]["bob-fluid-pump"].group = "water-treatment"
+    data.raw["item-subgroup"]["bob-fluid-pump"].group = "angels-water-treatment"
     data.raw["item-subgroup"]["bob-fluid-pump"].order = "c[water]-z[bob-fluid-pump]"
   end
 
@@ -90,8 +90,8 @@ if angelsmods.industries.overhaul then
   move_item("battery", "angels-basic-intermediate", "c[battery]-a")
 
   if mods["bobplates"] then
-    move_item("lithium-ion-battery", "angels-basic-intermediate", "c[battery]-b")
-    move_item("silver-zinc-battery", "angels-basic-intermediate", "c[battery]-c")
+    move_item("bob-lithium-ion-battery", "angels-basic-intermediate", "c[battery]-b")
+    move_item("bob-silver-zinc-battery", "angels-basic-intermediate", "c[battery]-c")
   end
 end
 
@@ -106,10 +106,10 @@ if angelsmods.industries.overhaul then
   move_item("low-density-structure", "angels-basic-intermediate", "z[rocket]-b[lds]")
 
   if mods["bobrevamp"] then
-    move_item("heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
+    move_item("bob-heat-shield-tile", "angels-basic-intermediate", "z[rocket]-c[heat-shield]")
 
     if mods["bobplates"] and settings.startup["bobmods-revamp-rtg"].value then
-      move_item("rtg", "angels-basic-intermediate", "z[rocket]-d[rtg]")
+      move_item("bob-rtg", "angels-basic-intermediate", "z[rocket]-d[rtg]")
     end
   end
 

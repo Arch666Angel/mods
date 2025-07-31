@@ -5,12 +5,12 @@ if mods["bobgreenhouse"] then
     {
       name = "bob-fertiliser",
       ingredients = {
-        { name = "gas-urea", type = "fluid", amount = 20 },
-        { name = "gas-methane", type = "fluid", amount = 0 },
-        { name = "gas-nitrogen", type = "fluid", amount = 0 },
+        { name = "angels-gas-urea", type = "fluid", amount = 20 },
+        { name = "angels-gas-methane", type = "fluid", amount = 0 },
+        { name = "angels-gas-nitrogen", type = "fluid", amount = 0 },
       },
-      category = "advanced-chemistry",
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-urea", "gas-methane", "gas-nitrogen" }),
+      category = "angels-advanced-chemistry",
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-gas-urea", "angels-gas-methane", "angels-gas-nitrogen" }),
     },
   })
 

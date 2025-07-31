@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "tungsten-ore",
+    name = "angels-tungsten-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-tungsten.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-tungsten",
+    name = "angels-processed-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-tungsten",
+    name = "angels-pellet-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-tungstic-acid",
+    name = "angels-liquid-tungstic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "H[font=default-tiny-bold]2[/font]WO[font=default-tiny-bold]4[/font]",
@@ -51,7 +51,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-tungsten-oxide",
+    name = "angels-solid-tungsten-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
@@ -60,7 +60,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-tungsten-hexafluoride",
+    name = "angels-gas-tungsten-hexafluoride",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "WF[font=default-tiny-bold]6[/font]" }
       or nil,
@@ -78,7 +78,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-ammonium-paratungstate",
+    name = "angels-solid-ammonium-paratungstate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-ammonium-paratungstate.png",
     icon_size = 32,
     subgroup = "angels-tungsten",
@@ -88,7 +88,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "powder-tungsten",
+    name = "angels-powder-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png",
     icon_size = 64,
     subgroup = "angels-tungsten",
@@ -98,7 +98,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "item",
-    name = "casting-powder-tungsten",
+    name = "angels-casting-powder-tungsten",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten-mixture.png",
     icon_size = 64,
     subgroup = "angels-tungsten-casting",

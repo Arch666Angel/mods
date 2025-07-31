@@ -149,7 +149,7 @@ angelsmods.functions.add_resource("make", {
   category = "angels-fissure",
   -- normal = 10000,
   -- maximum = 50000,
-  output_name = "thermal-water",
+  output_name = "angels-thermal-water",
   output_min = 20,
   output_max = 20,
   icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",

@@ -2,7 +2,7 @@ data:extend({
   --BASIC CHEMISTRY
   {
     type = "technology",
-    name = "basic-chemistry",
+    name = "angels-basic-chemistry",
     icons = angelsmods.functions.create_gas_tech_icon({ { 105, 113, 090 }, { 088, 113, 075 }, { 070, 090, 060 } }),
     prerequisites = {
       "automation",
@@ -10,7 +10,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquifier",
+        recipe = "angels-liquifier",
       },
       {
         type = "unlock-recipe",
@@ -22,11 +22,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "dirt-water-separation",
+        recipe = "angels-dirt-water-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "carbon-separation-2",
+        recipe = "angels-gas-carbon-dioxide",
       },
     },
     unit = {
@@ -40,16 +40,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "basic-chemistry-2",
+    name = "angels-basic-chemistry-2",
     icons = angelsmods.functions.create_gas_tech_icon({ { 105, 113, 090 }, { 088, 113, 075 }, { 070, 090, 060 } }),
     prerequisites = {
-      "basic-chemistry",
-      "water-treatment",
+      "angels-basic-chemistry",
+      "angels-water-treatment",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-separation",
+        recipe = "angels-water-separation",
       },
       {
         type = "unlock-recipe",
@@ -57,11 +57,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "water-gas-shift-1",
+        recipe = "angels-water-gas-shift-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-gas-shift-2",
+        recipe = "angels-water-gas-shift-2",
       },
     },
     unit = {
@@ -75,13 +75,13 @@ data:extend({
   },
   {
     type = "technology",
-    name = "basic-chemistry-3",
+    name = "angels-basic-chemistry-3",
     icons = angelsmods.functions.create_gas_tech_icon({ { 105, 113, 090 }, { 088, 113, 075 }, { 070, 090, 060 } }),
     prerequisites = {
-      "basic-chemistry-2",
+      "angels-basic-chemistry-2",
       "angels-coal-processing",
       "fluid-handling",
-      "ore-crushing",
+      "angels-ore-crushing",
     },
     effects = {
       {
@@ -94,19 +94,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "dirt-water-separation-2",
+        recipe = "angels-dirt-water-separation-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-separation-2",
+        recipe = "angels-water-separation-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "catalyst-metal-carrier",
+        recipe = "angels-catalyst-metal-carrier",
       },
       {
         type = "unlock-recipe",
-        recipe = "catalyst-metal-red",
+        recipe = "angels-catalyst-metal-red",
       },
     },
     unit = {
@@ -121,30 +121,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-chemistry-1",
+    name = "angels-water-chemistry-1",
     icons = angelsmods.functions.create_gas_tech_icon("OHH"),
     prerequisites = {
       "angels-sulfur-processing-2",
-      "water-treatment-4",
+      "angels-water-treatment-4",
       "angels-advanced-chemistry-4",
-      mods["angelssmelting"] and "angels-cooling" or "basic-chemistry-2",
+      mods["angelssmelting"] and "angels-cooling" or "angels-basic-chemistry-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-hydrogen-sulfide-enrichment",
+        recipe = "angels-gas-enriched-hydrogen-sulfide",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-1",
+        recipe = "angels-liquid-water-semiheavy-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-2",
+        recipe = "angels-liquid-water-semiheavy-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-water-enrichment-3",
+        recipe = "angels-liquid-water-semiheavy-3",
       },
       {
         type = "unlock-recipe",
@@ -173,18 +173,18 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-chemistry-2",
+    name = "angels-water-chemistry-2",
     icons = angelsmods.functions.create_gas_tech_icon("OHH"),
     prerequisites = {
-      "water-chemistry-1",
+      "angels-water-chemistry-1",
       "angels-electric-boiler-2",
-      "basic-chemistry-3",
+      "angels-basic-chemistry-3",
       "utility-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-heavy-water-extraction",
+        recipe = "angels-liquid-water-heavy",
       },
       {
         type = "unlock-recipe",
@@ -217,20 +217,20 @@ data:extend({
     name = "angels-coal-processing",
     icons = angelsmods.functions.create_gas_tech_icon({ { 067, 067, 067 }, { 056, 056, 056 }, { 045, 045, 045 } }),
     prerequisites = {
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coal-crushed",
+        recipe = "angels-coal-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-coke",
+        recipe = "angels-solid-coke",
       },
       {
         type = "unlock-recipe",
-        recipe = "coke-purification",
+        recipe = "angels-solid-carbon",
       },
     },
     unit = {
@@ -248,16 +248,16 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon({ { 067, 067, 067 }, { 056, 056, 056 }, { 045, 045, 045 } }),
     prerequisites = {
       "angels-coal-processing",
-      "basic-chemistry-3",
+      "angels-basic-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "carbon-separation-1",
+        recipe = "angels-gas-carbon-monoxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-coke-sulfur",
+        recipe = "angels-solid-coke-sulfur",
       },
     },
     unit = {
@@ -276,13 +276,13 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon({ { 067, 067, 067 }, { 056, 056, 056 }, { 045, 045, 045 } }),
     prerequisites = {
       "angels-coal-processing-2",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
       "angels-nitrogen-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coke-purification-2",
+        recipe = "angels-coke-purification-2",
       },
     },
     unit = {
@@ -306,19 +306,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-coke",
+        recipe = "angels-pellet-coke",
       },
       {
         type = "unlock-recipe",
-        recipe = "coal-cracking-1",
+        recipe = "angels-coal-cracking-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "coal-cracking-2",
+        recipe = "angels-coal-cracking-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "coal-cracking-3",
+        recipe = "angels-coal-cracking-3",
       },
     },
     unit = {
@@ -337,28 +337,28 @@ data:extend({
     name = "angels-sulfur-processing-1",
     icons = angelsmods.functions.create_gas_tech_icon("SSS"),
     prerequisites = {
-      "water-treatment-2",
+      "angels-water-treatment-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-sulfur-dioxide",
+        recipe = "angels-gas-sulfur-dioxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-sulfuric-acid",
+        recipe = "angels-liquid-sulfuric-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-sulfur-dioxide-calcium-sulfate",
+        recipe = "angels-gas-sulfur-dioxide-calcium-sulfate",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hydrofluoric-acid",
+        recipe = "angels-liquid-hydrofluoric-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-hydrogen-fluoride",
+        recipe = "angels-gas-hydrogen-fluoride",
       },
     },
     unit = {
@@ -378,20 +378,20 @@ data:extend({
     prerequisites = {
       "angels-sulfur-processing-1",
       "angels-advanced-chemistry-1",
-      "gas-processing",
+      "angels-gas-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-acid-catalyst",
+        recipe = "angels-gas-acid-catalyst",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sulfur",
+        recipe = "angels-solid-sulfur",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hydrogen-fluoride",
+        recipe = "angels-hydrogen-fluoride-dissolving",
       },
     },
     unit = {
@@ -411,21 +411,21 @@ data:extend({
     prerequisites = {
       "angels-sulfur-processing-2",
       "angels-nitrogen-processing-1",
-      "slag-processing-1",
+      "angels-slag-processing-1",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "filter-lime",
+        recipe = "angels-filter-lime",
       },
       {
         type = "unlock-recipe",
-        recipe = "filter-lime-used",
+        recipe = "angels-sulfur-air-scrubbing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-sulfur-scrubber",
+        recipe = "angels-filter-lime-used-recycling",
       },
     },
     unit = {
@@ -463,7 +463,7 @@ data:extend({
     name = "angels-nitrogen-processing-1",
     icons = angelsmods.functions.create_gas_tech_icon("NNN"),
     prerequisites = {
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
@@ -472,11 +472,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-air-filtering",
+        recipe = "angels-gas-compressed-air",
       },
       {
         type = "unlock-recipe",
-        recipe = "air-separation",
+        recipe = "angels-air-separation",
       },
     },
     unit = {
@@ -496,7 +496,7 @@ data:extend({
       "angels-nitrogen-processing-1",
       "angels-sulfur-processing-1",
       "angels-advanced-chemistry-1",
-      "water-treatment-2",
+      "angels-water-treatment-2",
     },
     effects = {
       {
@@ -505,31 +505,31 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonia",
+        recipe = "angels-gas-ammonia",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-nitrate-processing",
+        recipe = "angels-solid-sodium-nitrate-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-nitrogen-monoxide",
+        recipe = "angels-gas-nitrogen-monoxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-nitrogen-dioxide",
+        recipe = "angels-gas-nitrogen-dioxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-urea",
+        recipe = "angels-gas-urea",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-nitric-acid",
+        recipe = "angels-liquid-nitric-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "sodium-nitrate-acid-processing",
+        recipe = "angels-sodium-nitrate-acid-processing",
       },
     },
     unit = {
@@ -549,8 +549,8 @@ data:extend({
     prerequisites = {
       "angels-nitrogen-processing-2",
       "angels-advanced-chemistry-3",
-      "chlorine-processing-2",
-      "sodium-processing-1",
+      "angels-chlorine-processing-2",
+      "angels-sodium-processing-1",
       "flammables",
     },
     effects = {
@@ -560,23 +560,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-melamine",
+        recipe = "angels-gas-melamine",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-hypochlorite",
+        recipe = "angels-solid-sodium-hypochlorite",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-monochloramine",
+        recipe = "angels-gas-monochloramine",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-hydrazine",
+        recipe = "angels-gas-hydrazine",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-fuel-hydrazine",
+        recipe = "angels-solid-fuel-hydrazine",
       },
     },
     unit = {
@@ -601,27 +601,27 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-refinery-4",
+        recipe = "angels-gas-refinery-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-dinitrogen-tetroxide",
+        recipe = "angels-gas-dinitrogen-tetroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-methylamine",
+        recipe = "angels-gas-methylamine",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-dimethylamine",
+        recipe = "angels-gas-dimethylamine",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-dimethylhydrazine",
+        recipe = "angels-gas-dimethylhydrazine",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonium-chloride",
+        recipe = "angels-gas-ammonium-chloride",
       },
     },
     unit = {
@@ -639,23 +639,23 @@ data:extend({
   },
   {
     type = "technology",
-    name = "chlorine-processing-1",
+    name = "angels-chlorine-processing-1",
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
-      "basic-chemistry-3",
+      "angels-basic-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "water-saline-separation",
+        recipe = "angels-water-saline-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-hydrogen-chloride",
+        recipe = "angels-gas-hydrogen-chloride",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hydrochloric-acid",
+        recipe = "angels-liquid-hydrochloric-acid",
       },
     },
     unit = {
@@ -670,28 +670,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "chlorine-processing-2",
+    name = "angels-chlorine-processing-2",
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
-      "chlorine-processing-1",
-      "steam-cracking-1",
+      "angels-chlorine-processing-1",
+      "angels-steam-cracking-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "gas-chlor-methane",
+        recipe = "angels-gas-chlor-methane",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-allylchlorid",
+        recipe = "angels-gas-allylchlorid",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-epichlorhydrin",
+        recipe = "angels-gas-epichlorhydrin",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-calcium-chloride",
+        recipe = "angels-solid-calcium-chloride",
       },
     },
     unit = {
@@ -707,24 +707,24 @@ data:extend({
   },
   {
     type = "technology",
-    name = "chlorine-processing-3",
+    name = "angels-chlorine-processing-3",
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
-      "chlorine-processing-2",
-      "water-treatment-3",
+      "angels-chlorine-processing-2",
+      "angels-water-treatment-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-salt-separation",
+        recipe = "angels-solid-salt-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-hydrogen-chloride-separation",
+        recipe = "angels-gas-hydrogen-chloride-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hydrochloric-acid-solid-sodium-sulfate",
+        recipe = "angels-liquid-hydrochloric-acid-solid-sodium-sulfate",
       },
     },
     unit = {
@@ -740,25 +740,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "chlorine-processing-4",
+    name = "angels-chlorine-processing-4",
     icons = angelsmods.functions.create_gas_tech_icon("ClClCl"),
     prerequisites = {
-      "chlorine-processing-3",
-      "sodium-processing-1",
+      "angels-chlorine-processing-3",
+      "angels-sodium-processing-1",
       "angels-advanced-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-chlorate",
+        recipe = "angels-solid-sodium-chlorate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-perchlorate",
+        recipe = "angels-solid-sodium-perchlorate",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-perchloric-acid",
+        recipe = "angels-liquid-perchloric-acid",
       },
     },
     unit = {
@@ -774,30 +774,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "sodium-processing-1",
+    name = "angels-sodium-processing-1",
     icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-sulfur-processing-1",
       "chemical-science-pack",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-hydroxide-solid-sodium-sulfate",
+        recipe = "angels-solid-sodium-sulfate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-sulfate-separation",
+        recipe = "angels-solid-sodium-sulfate-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-hydroxide",
+        recipe = "angels-solid-sodium-hydroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-aqueous-sodium-hydroxide",
+        recipe = "angels-liquid-aqueous-sodium-hydroxide",
       },
     },
     unit = {
@@ -813,36 +813,36 @@ data:extend({
   },
   {
     type = "technology",
-    name = "sodium-processing-2",
+    name = "angels-sodium-processing-2",
     icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     icon_size = 128,
     prerequisites = {
-      "chlorine-processing-3",
+      "angels-chlorine-processing-3",
       "angels-coal-processing-3",
       "angels-nitrogen-processing-2",
       "production-science-pack",
-      "sodium-processing-1",
+      "angels-sodium-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-aqueous-sodium-hydroxide-reverse",
+        recipe = "angels-liquid-aqueous-sodium-hydroxide-reverse",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium",
+        recipe = "angels-solid-sodium",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-carbonate",
+        recipe = "angels-solid-sodium-carbonate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-carbonate-electrolysis",
+        recipe = "angels-solid-sodium-carbonate-electrolysis",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-cyanide",
+        recipe = "angels-solid-sodium-cyanide",
       },
     },
     unit = {

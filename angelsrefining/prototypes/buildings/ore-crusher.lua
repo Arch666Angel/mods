@@ -2,21 +2,21 @@ data:extend({
   --Burner-Ore-Crusher
   {
     type = "item",
-    name = "burner-ore-crusher",
+    name = "angels-burner-ore-crusher",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
         icon_size = 64,
       },
     }, 0, angelsmods.refining.number_tint),
-    subgroup = "ore-crusher",
+    subgroup = "angels-ore-crusher",
     order = "a[burner-ore-crusher]",
-    place_result = "burner-ore-crusher",
+    place_result = "angels-burner-ore-crusher",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "burner-ore-crusher",
+    name = "angels-burner-ore-crusher",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
@@ -24,15 +24,15 @@ data:extend({
       },
     }, 0, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.5, result = "burner-ore-crusher" },
-    fast_replaceable_group = "ore-crusher",
-    next_upgrade = "ore-crusher",
+    minable = { mining_time = 0.5, result = "angels-burner-ore-crusher" },
+    fast_replaceable_group = "angels-ore-crusher",
+    next_upgrade = "angels-ore-crusher",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    crafting_categories = { "ore-refining-t1" },
+    crafting_categories = { "angels-ore-refining-t1" },
     crafting_speed = 1,
     ingredient_count = 1,
     energy_source = {
@@ -90,21 +90,21 @@ data:extend({
   --Ore-Crusher
   {
     type = "item",
-    name = "ore-crusher",
+    name = "angels-ore-crusher",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-crusher",
+    subgroup = "angels-ore-crusher",
     order = "b[ore-crusher]",
-    place_result = "ore-crusher",
+    place_result = "angels-ore-crusher",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-crusher",
+    name = "angels-ore-crusher",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
@@ -112,9 +112,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-crusher" },
-    fast_replaceable_group = "ore-crusher",
-    next_upgrade = "ore-crusher-2",
+    minable = { mining_time = 1, result = "angels-ore-crusher" },
+    fast_replaceable_group = "angels-ore-crusher",
+    next_upgrade = "angels-ore-crusher-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -122,7 +122,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1" },
+    crafting_categories = { "angels-ore-refining-t1" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -167,21 +167,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-crusher-2",
+    name = "angels-ore-crusher-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-crusher",
+    subgroup = "angels-ore-crusher",
     order = "c[ore-crusher-2]",
-    place_result = "ore-crusher-2",
+    place_result = "angels-ore-crusher-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-crusher-2",
+    name = "angels-ore-crusher-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
@@ -189,9 +189,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-crusher-2" },
-    fast_replaceable_group = "ore-crusher",
-    next_upgrade = "ore-crusher-3",
+    minable = { mining_time = 1, result = "angels-ore-crusher-2" },
+    fast_replaceable_group = "angels-ore-crusher",
+    next_upgrade = "angels-ore-crusher-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -199,7 +199,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1" },
+    crafting_categories = { "angels-ore-refining-t1" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -244,21 +244,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-crusher-3",
+    name = "angels-ore-crusher-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
         icon_size = 64,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "ore-crusher",
+    subgroup = "angels-ore-crusher",
     order = "d[ore-crusher-3]",
-    place_result = "ore-crusher-3",
+    place_result = "angels-ore-crusher-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-crusher-3",
+    name = "angels-ore-crusher-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
@@ -266,8 +266,8 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-crusher-3" },
-    fast_replaceable_group = "ore-crusher",
+    minable = { mining_time = 1, result = "angels-ore-crusher-3" },
+    fast_replaceable_group = "angels-ore-crusher",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -275,7 +275,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t1" },
+    crafting_categories = { "angels-ore-refining-t1" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

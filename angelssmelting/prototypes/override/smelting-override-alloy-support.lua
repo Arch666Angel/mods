@@ -6,9 +6,9 @@ local OV = angelsmods.functions.OV
 if mods["bobplates"] then
   for k, v in pairs(data.raw.recipe) do
     if v.category == "bob-mixing-furnace" then --alien-blue-alloy, alien-orange-alloy
-      data.raw.recipe[v.name].category = "blast-smelting"
+      data.raw.recipe[v.name].category = "angels-blast-smelting"
     elseif v.category == "bob-chemical-furnace" then -- silicon-nitride, silicon-carbide, lithium-cobalt-oxide
-      data.raw.recipe[v.name].category = "chemical-smelting"
+      data.raw.recipe[v.name].category = "angels-chemical-smelting"
     end
   end
 
@@ -86,8 +86,8 @@ if mods["bobplates"] then
   end
 
   -- Remove Chemical Processing techs
-  OV.global_replace_technology("bob-chemical-processing-1", "basic-chemistry")
-  OV.global_replace_technology("bob-chemical-processing-2", "basic-chemistry-3")
+  OV.global_replace_technology("bob-chemical-processing-1", "angels-basic-chemistry")
+  OV.global_replace_technology("bob-chemical-processing-2", "angels-basic-chemistry-3")
   OV.disable_technology({ "bob-chemical-processing-1", "bob-chemical-processing-2" })
 
   -- Clean up prerequisites

@@ -2,7 +2,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "manganese-ore",
+    name = "angels-manganese-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-manganese",
+    name = "angels-processed-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-manganese",
+    name = "angels-pellet-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese",
@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-manganese-oxide",
+    name = "angels-solid-manganese-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-manganese-oxide.png",
     icon_size = 32,
     subgroup = "angels-manganese",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cathode-manganese",
+    name = "angels-cathode-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/cathode-manganese.png",
     icon_size = 32,
     subgroup = "angels-manganese",
@@ -49,7 +49,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-manganese",
+    name = "angels-ingot-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese",
@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-manganese",
+    name = "angels-powder-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-manganese",
+    name = "angels-liquid-molten-manganese",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-manganese.png",
     icon_size = 64,
     subgroup = "angels-manganese-casting",

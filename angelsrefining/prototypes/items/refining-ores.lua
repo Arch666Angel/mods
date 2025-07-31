@@ -238,9 +238,9 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "thermal-water",
+    name = "angels-thermal-water",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 243, 135, 000 }, nil, { 247, 140, 003 } }),
-    subgroup = "ore-sorting-fluid",
+    subgroup = "angels-ore-sorting-fluid",
     order = "a[slag]-a[thermal]",
     default_temperature = 0,
     heat_capacity = "0.2kJ",

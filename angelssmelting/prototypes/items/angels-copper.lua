@@ -4,7 +4,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-copper",
+    name = "angels-processed-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-copper.png",
     icon_size = 64,
     subgroup = "angels-copper",
@@ -13,7 +13,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-copper",
+    name = "angels-pellet-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-copper.png",
     icon_size = 64,
     subgroup = "angels-copper",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "anode-copper",
+    name = "angels-anode-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/anode-copper.png",
     icon_size = 32,
     subgroup = "angels-copper",
@@ -32,7 +32,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-copper",
+    name = "angels-ingot-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-copper.png",
     icon_size = 64,
     subgroup = "angels-copper",
@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-copper",
+    name = "angels-powder-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-copper.png",
     icon_size = 64,
     subgroup = "angels-copper",
@@ -51,7 +51,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-copper",
+    name = "angels-liquid-molten-copper",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-copper.png",
     icon_size = 64,
     subgroup = "angels-copper-casting",

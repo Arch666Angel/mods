@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "quartz",
+    name = "angels-quartz",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-silica.png",
     icon_size = 32,
     subgroup = "angels-silicon",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-silica",
+    name = "angels-processed-silica",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-silica",
+    name = "angels-pellet-silica",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-trichlorosilane",
+    name = "angels-liquid-trichlorosilane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HCl[font=default-tiny-bold]3[/font]Si" }
       or nil,
@@ -50,7 +50,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-silane",
+    name = "angels-gas-silane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "H[font=default-tiny-bold]4[/font]Si" }
       or nil,
@@ -69,7 +69,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-silicon",
+    name = "angels-ingot-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-silicon.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -78,7 +78,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-silicon",
+    name = "angels-powder-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png",
     icon_size = 64,
     subgroup = "angels-silicon",
@@ -88,7 +88,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-silicon",
+    name = "angels-liquid-molten-silicon",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-silicon.png",
     icon_size = 64,
     subgroup = "angels-silicon-casting",

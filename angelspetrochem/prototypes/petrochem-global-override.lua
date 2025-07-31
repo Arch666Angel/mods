@@ -19,7 +19,7 @@ require("prototypes.global-override.boblogistics")
 
 --URANIUM POWER OVERRIDE
 if data.raw["item"]["fluorite"] then
-  OV.global_replace_item("fluorite", "fluorite-ore")
+  OV.global_replace_item("fluorite", "angels-fluorite-ore")
 end
 
 OV.execute()
@@ -27,9 +27,9 @@ OV.execute()
 --RECIPE TINTS
 local recipe_categories = -- a list of all crafting categories for which (petrochem) machines supporting recipe tints
   {
-    ["liquifying"] = true,
+    ["angels-liquifying"] = true,
     ["chemistry"] = true,
-    ["advanced-chemistry"] = true,
+    ["angels-advanced-chemistry"] = true,
   }
 for _, recipe in pairs(data.raw.recipe) do
   if
