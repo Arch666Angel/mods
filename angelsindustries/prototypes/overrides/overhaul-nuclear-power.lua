@@ -19,7 +19,7 @@ if angelsmods.industries.overhaul then
     {
       name = "uranium-processing",
       results = {
-        { type = "item", name = "uranium-234", amount = 1, probability = 0.000055 },
+        { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.000055 },
       },
       crafting_machine_tint = {
         primary = tint_colors.green,
@@ -146,11 +146,11 @@ if angelsmods.industries.overhaul then
   end
   if mods["bobplates"] then
     --basically remove all of bobs things (Sorry bob)
-    OV.global_replace_item("plutonium-240", "bob-plutonium-239") --use bobs plutonium
+    OV.global_replace_item("angels-plutonium-240", "bob-plutonium-239") --use bobs plutonium
     if data.raw.item["bob-plutonium-239"] then
-      data.raw.item["bob-plutonium-239"].icon = data.raw.item["plutonium-240"].icon
-      data.raw.item["bob-plutonium-239"].icon_size = data.raw.item["plutonium-240"].icon_size
-      data.raw.item["bob-plutonium-239"].icons = data.raw.item["plutonium-240"].icons
+      data.raw.item["bob-plutonium-239"].icon = data.raw.item["angels-plutonium-240"].icon
+      data.raw.item["bob-plutonium-239"].icon_size = data.raw.item["angels-plutonium-240"].icon_size
+      data.raw.item["bob-plutonium-239"].icons = data.raw.item["angels-plutonium-240"].icons
     end
 
     angelsmods.functions.move_item(
@@ -159,7 +159,7 @@ if angelsmods.industries.overhaul then
       "a[radioactive-element]-e[plutonium-239]"
     )
     OV.disable_recipe("bob-empty-nuclear-fuel-cell")
-    angelsmods.functions.hide({ "plutonium-240", "bob-empty-nuclear-fuel-cell" })
+    angelsmods.functions.hide({ "angels-plutonium-240", "bob-empty-nuclear-fuel-cell" })
 
     -- plutonium enrichment process
     if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
@@ -186,10 +186,10 @@ if angelsmods.industries.overhaul then
           end
         end
       end
-      if data.raw.recipe["plutonium-nucleosynthesis"] then
+      if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
         OV.patch_recipes({
           {
-            name = "plutonium-nucleosynthesis",
+            name = "bob-plutonium-nucleosynthesis",
             subgroup = "angels-power-nuclear-processing",
             order = "b[AMOX]-d[synthesis]",
           },
@@ -208,6 +208,21 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.add_flag("bob-plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
     -- thorium processing
+    -- use bobs thorium
+    if data.raw.item["bob-thorium-ore"] then
+      data.raw.item["bob-thorium-ore"].icon = data.raw.item["angels-thorium-ore"].icon
+      data.raw.item["bob-thorium-ore"].icon_size = data.raw.item["angels-thorium-ore"].icon_size
+      data.raw.item["bob-thorium-ore"].icons = data.raw.item["angels-thorium-ore"].icons
+    end
+    
+    if data.raw.item["bob-plutonium-239"] then
+      OV.global_replace_item("angels-thorium-232", "bob-thorium-232")
+      data.raw.item["bob-thorium-232"].icon = data.raw.item["angels-thorium-232"].icon
+      data.raw.item["bob-thorium-232"].icon_size = data.raw.item["angels-thorium-232"].icon_size
+      data.raw.item["bob-thorium-232"].icons = data.raw.item["angels-thorium-232"].icons
+    end
+    angelsmods.functions.hide("angels-thorium-232")
+    
     OV.disable_recipe("bob-thorium-processing")
     OV.global_replace_technology("bob-thorium-processing", "angels-thorium-power")
     OV.disable_technology("bob-thorium-processing")
@@ -218,7 +233,7 @@ if angelsmods.industries.overhaul then
 
     OV.disable_recipe("bob-thorium-fuel-reprocessing")
     OV.disable_technology("bob-thorium-fuel-reprocessing")
-    angelsmods.functions.hide("bob-used-up-thorium-fuel-cell")
+    angelsmods.functions.hide("bob-depleted-thorium-fuel-cell")
 
     OV.disable_recipe("bob-thorium-plutonium-fuel-cell")
     OV.disable_technology("bob-thorium-plutonium-fuel-cell")
@@ -232,14 +247,14 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.hide("bob-deuterium-fuel-cell-2")
     angelsmods.functions.add_flag("bob-deuterium-fuel-cell-2", "hide-from-fuel-tooltip")
 
-    OV.global_replace_item("bob-fission-catalyst", "angels-muon-fusion-catalyst")
-    angelsmods.functions.hide("bob-fission-catalyst")
+    OV.global_replace_item("bob-fusion-catalyst", "angels-muon-fusion-catalyst")
+    angelsmods.functions.hide("bob-fusion-catalyst")
 
     OV.disable_recipe("bob-deuterium-fuel-reprocessing")
     OV.global_replace_technology("bob-deuterium-fuel-reprocessing", "angels-fusion-power-1")
     OV.global_replace_technology("bob-deuterium-fuel-cell-2", "angels-fusion-power-2")
     OV.disable_technology("bob-deuterium-fuel-reprocessing", "bob-deuterium-fuel-cell-2")
-    angelsmods.functions.hide("bob-used-up-deuterium-fuel-cell")
+    angelsmods.functions.hide("bob-depleted-deuterium-fuel-cell")
 
     -- plutonium processing
     if bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value then
@@ -286,16 +301,16 @@ if angelsmods.industries.overhaul then
 else
   -- disable all nuclear stuff
   -- uranium fuel cell
-  angelsmods.functions.hide("uranium-234")
+  angelsmods.functions.hide("angels-uranium-234")
   angelsmods.functions.hide("angels-uranium-fuel-cell")
   OV.disable_recipe({ "angels-uranium-fuel-cell", "angels-advanced-uranium-reprocessing" })
   -- plutonium fuel cell
-  angelsmods.functions.hide("neptunium-240")
-  angelsmods.functions.hide("plutonium-240")
-  angelsmods.functions.hide("americium-241")
-  angelsmods.functions.hide("curium-245")
-  angelsmods.functions.hide("AMOX-cell")
-  angelsmods.functions.hide("used-up-AMOX-cell")
+  angelsmods.functions.hide("angels-neptunium-240")
+  angelsmods.functions.hide("angels-plutonium-240")
+  angelsmods.functions.hide("angels-americium-241")
+  angelsmods.functions.hide("angels-curium-245")
+  angelsmods.functions.hide("angels-mixed-oxide-cell")
+  angelsmods.functions.hide("angels-depleted-mixed-oxide-cell")
   OV.disable_recipe({ "angels-plutonium-synthesis", "angels-americium-regeneration" })
   OV.disable_recipe({
     "angels-mixed-oxide-cell",
@@ -304,9 +319,9 @@ else
   })
   OV.disable_technology({ "angels-plutonium-power" })
   -- thorium fuel cell
-  angelsmods.functions.hide("thorium-232")
+  angelsmods.functions.hide("angels-thorium-232")
   angelsmods.functions.hide("angels-thorium-fuel-cell")
-  angelsmods.functions.hide("used-up-angels-thorium-fuel-cell")
+  angelsmods.functions.hide("angels-depleted-thorium-fuel-cell")
   OV.disable_recipe({ "angels-thorium-processing" })
   OV.disable_recipe({
     "angels-thorium-fuel-cell",
@@ -317,7 +332,7 @@ else
   -- deuterium fuel cell
   angelsmods.functions.hide("angels-muon-fusion-catalyst")
   angelsmods.functions.hide("angels-deuterium-fuel-cell")
-  angelsmods.functions.hide("used-up-angels-deuterium-fuel-cell")
+  angelsmods.functions.hide("angels-depleted-deuterium-fuel-cell")
   OV.disable_recipe({
     "angels-deuterium-fuel-cell",
     "angels-deuterium-fuel-cell-reprocessing",

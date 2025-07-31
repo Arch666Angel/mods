@@ -5,7 +5,7 @@ data:extend({
   --U-234
   {
     type = "item",
-    name = "uranium-234", -- green (the rarest of the shiny rocks)
+    name = "angels-uranium-234", -- green (the rarest of the shiny rocks)
     icon = "__angelsindustriesgraphics__/graphics/icons/uranium-234.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -17,7 +17,7 @@ data:extend({
   --Np-240
   {
     type = "item",
-    name = "neptunium-240", -- cyan/blue
+    name = "angels-neptunium-240", -- cyan/blue
     icon = "__angelsindustriesgraphics__/graphics/icons/neptunium-240.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -27,7 +27,7 @@ data:extend({
   --Pu-240
   {
     type = "item",
-    name = "plutonium-240", -- orange
+    name = "angels-plutonium-240", -- orange
     icon = "__angelsindustriesgraphics__/graphics/icons/plutonium-239.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -37,7 +37,7 @@ data:extend({
   --Am-241
   {
     type = "item",
-    name = "americium-241", -- translucent white (bleeched color)
+    name = "angels-americium-241", -- translucent white (bleeched color)
     icon = "__angelsindustriesgraphics__/graphics/icons/americium-241.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -47,7 +47,7 @@ data:extend({
   --Cm-245
   {
     type = "item",
-    name = "curium-245", -- yellowed silver
+    name = "angels-curium-245", -- yellowed silver
     icon = "__angelsindustriesgraphics__/graphics/icons/curium-245.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -57,7 +57,7 @@ data:extend({
   --Th-232
   {
     type = "item",
-    name = "thorium-232", -- red (almost maroon)
+    name = "angels-thorium-232", -- red (almost maroon)
     icon = "__angelsindustriesgraphics__/graphics/icons/thorium-232.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
@@ -131,24 +131,24 @@ data:extend({
     stack_size = 50,
   },
   --order "a[uranium]-b" reserved for uranium-fuel-cell
-  --order "a[uranium]-c" reserved for used-up-uranium-fuel-cell
+  --order "a[uranium]-c" reserved for depleted-uranium-fuel-cell
   --AMOX-cell
   {
     type = "item",
-    name = "AMOX-cell",
+    name = "angels-mixed-oxide-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/plutonium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-AMOX-cell",
+    burnt_result = "angels-depleted-mixed-oxide-cell",
     fuel_value = "8GJ",
     fuel_glow_color = util.color("ff9500"), -- Orange, slightly yellow
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-AMOX-cell",
+    name = "angels-depleted-mixed-oxide-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-plutonium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -164,14 +164,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-angels-thorium-fuel-cell",
+    burnt_result = "angels-depleted-thorium-fuel-cell",
     fuel_value = "15GJ", --down from 50
     fuel_glow_color = util.color("ff190d"), -- Red, slightly towards orange
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-angels-thorium-fuel-cell",
+    name = "angels-depleted-thorium-fuel-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-thorium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -187,14 +187,14 @@ data:extend({
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-a",
     fuel_category = "nuclear",
-    burnt_result = "used-up-angels-deuterium-fuel-cell",
+    burnt_result = "angels-depleted-deuterium-fuel-cell",
     fuel_value = "80GJ",
     fuel_glow_color = util.color("00d5ff"), -- cyan per Lovely_Santa
     stack_size = 50,
   },
   {
     type = "item",
-    name = "used-up-angels-deuterium-fuel-cell",
+    name = "angels-depleted-deuterium-fuel-cell",
     icon = "__angelsindustriesgraphics__/graphics/icons/used-up-deuterium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
@@ -221,7 +221,7 @@ Starting with the vanilla system, leave as is, add an advanced reprocessing cycl
 Np-240
 Pu-240
 AMOX-cell
-used-up-AMOX-cell
+depleted-AMOX-cell
 Am-241
 muon-fusion-catalyst
 == LIST OF RECIPES
@@ -238,7 +238,7 @@ angels-mixed-oxide-cell
 "advanced-crafting" (no-hand crafting)
 
 angels-mixed-oxide-reprocessing
-10 used-up-AMOX-cells -> 2 U-238 + 1 slag + 1 Am-241 + 1 Fusion Catalyst
+10 depleted-AMOX-cells -> 2 U-238 + 1 slag + 1 Am-241 + 1 Fusion Catalyst
 "centrifuging" (centrifuge)
 
 angels-americium-regeneration
