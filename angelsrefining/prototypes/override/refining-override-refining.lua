@@ -172,10 +172,6 @@ if angelsmods.functions.is_special_vanilla() then
   angelsmods.functions.hide("angels-catalysator-orange")
 end
 
--- Currently crystal-matrix has no use
-OV.disable_recipe({ "angels-crystal-matrix" })
-angelsmods.functions.hide("angels-crystal-matrix")
-
 -------------------------------------------------------------------------------
 -- SLAG -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
