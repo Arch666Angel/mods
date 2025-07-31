@@ -27,7 +27,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-polluted-fish-atmosphere",
+    name = "angels-liquid-polluted-fish-atmosphere-raw-meat",
+    localised_name = { "fluid-name.angels-liquid-polluted-fish-atmosphere" },
     category = "angels-liquifying",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
@@ -177,7 +178,8 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "angels-fish-breeding-0",
+    name = "angels-alien-fish-0-raw",
+    localised_name = { "recipe-name.angels-alien-fish-0-raw" },
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
@@ -198,6 +200,7 @@ data:extend({
       },
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    main_product = "raw-fish",
     allow_productivity = true,
     icons = {
       {
@@ -213,7 +216,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-fish-breeding-1",
+    name = "angels-alien-fish-1-raw",
+    localised_name = { "recipe-name.angels-alien-fish-1-raw" },
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
@@ -235,6 +239,7 @@ data:extend({
       },
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    main_product = "angels-alien-fish-1-raw",
     allow_productivity = true,
     icons = {
       {
@@ -250,7 +255,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-fish-breeding-2",
+    name = "angels-alien-fish-2-raw",
+    localised_name = { "recipe-name.angels-alien-fish-2-raw" },
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
@@ -272,6 +278,7 @@ data:extend({
       },
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    main_product = "angels-alien-fish-2-raw",
     allow_productivity = true,
     icons = {
       {
@@ -287,7 +294,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-fish-breeding-3",
+    name = "angels-alien-fish-3-raw",
+    localised_name = { "recipe-name.angels-alien-fish-3-raw" },
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
@@ -309,6 +317,7 @@ data:extend({
       },
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
     },
+    main_product = "angels-alien-fish-3-raw",
     allow_productivity = true,
     icons = {
       {

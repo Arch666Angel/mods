@@ -58,19 +58,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-fish-breeding-0",
+        recipe = "angels-alien-fish-0-raw",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-fish-breeding-1",
+        recipe = "angels-alien-fish-1-raw",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-fish-breeding-2",
+        recipe = "angels-alien-fish-2-raw",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-fish-breeding-3",
+        recipe = "angels-alien-fish-3-raw",
       },
     },
     unit = {
@@ -100,23 +100,23 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-egg-1",
+        recipe = "angels-bio-puffer-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-egg-2",
+        recipe = "angels-bio-puffer-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-egg-3",
+        recipe = "angels-bio-puffer-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-egg-4",
+        recipe = "angels-bio-puffer-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-egg-5",
+        recipe = "angels-bio-puffer-5",
       },
     },
     unit = {
@@ -199,23 +199,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-breeding-1",
+        recipe = "angels-bio-puffer-egg-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-breeding-2",
+        recipe = "angels-bio-puffer-egg-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-breeding-3",
+        recipe = "angels-bio-puffer-egg-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-breeding-4",
+        recipe = "angels-bio-puffer-egg-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-puffer-breeding-5",
+        recipe = "angels-bio-puffer-egg-5",
       },
     },
     unit = {
@@ -336,7 +336,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-biter-small-eggsperiment",
+        recipe = "angels-biter-small-egg",
       },
       {
         type = "unlock-recipe",
@@ -388,7 +388,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-biter-medium-eggsperiment",
+        recipe = "angels-biter-medium-egg",
       },
       {
         type = "unlock-recipe",
@@ -436,7 +436,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-biter-big-eggsperiment",
+        recipe = "angels-biter-big-egg",
       },
       {
         type = "unlock-recipe",
@@ -591,7 +591,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-polluted-fish-atmosphere",
+        recipe = "angels-liquid-polluted-fish-atmosphere-raw-meat",
       },
     },
     unit = {

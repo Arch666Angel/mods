@@ -22,7 +22,8 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "angels-biter-small-eggsperiment",
+    name = "angels-biter-small-egg",
+    localised_name = { "recipe-name.angels-biter-small-egg" },
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
@@ -41,7 +42,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-biter-medium-eggsperiment",
+    name = "angels-biter-medium-egg",
+    localised_name = { "recipe-name.angels-biter-medium-egg" },
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
@@ -61,7 +63,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-biter-big-eggsperiment",
+    name = "angels-biter-big-egg",
+    localised_name = { "recipe-name.angels-biter-big-egg" },
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
