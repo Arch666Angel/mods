@@ -74,7 +74,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-aerobic-fermentation",
+    name = "angels-liquid-acetic-acid",
+    localised_name = { "recipe-name.angels-liquid-acetic-acid" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
@@ -102,7 +103,8 @@ data:extend({
   -- PROCESSING
   {
     type = "recipe",
-    name = "angels-anaerobic-fermentation",
+    name = "angels-gas-ethanol",
+    localised_name = { "recipe-name.angels-gas-ethanol" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
@@ -129,7 +131,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "ethanol-to-ethylene-synthesis",
+    name = "angels-ethanol-to-ethylene-synthesis",
     localised_name = { "fluid-name.angels-gas-ethylene" },
     category = "chemistry",
     subgroup = "angels-bio-processor-fermentation",
@@ -219,8 +221,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-acetate-mixture",
-    localised_name = { "fluid-name.angels-liquid-cellulose-acetate-mixture" },
+    name = "angels-liquid-cellulose-acetate-mixture",
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
@@ -304,8 +305,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-liquid-propionic-acid-catalyst",
-    localised_name = { "fluid-name.angels-liquid-propionic-acid" },
+    name = "angels-liquid-propionic-acid",
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,

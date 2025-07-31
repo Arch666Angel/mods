@@ -215,15 +215,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-garden-cultivating-b",
+        recipe = "angels-temperate-garden",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-garden-cultivating-b",
+        recipe = "angels-desert-garden",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-garden-cultivating-b",
+        recipe = "angels-swamp-garden",
       },
     },
     unit = {
@@ -897,15 +897,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-anaerobic-fermentation",
+        recipe = "angels-gas-ethanol",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-aerobic-fermentation",
+        recipe = "angels-liquid-acetic-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "ethanol-to-ethylene-synthesis",
+        recipe = "angels-ethanol-to-ethylene-synthesis",
       },
     },
     unit = {
@@ -940,7 +940,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-acetate-mixture",
+        recipe = "angels-liquid-cellulose-acetate-mixture",
       },
       {
         type = "unlock-recipe",
@@ -974,7 +974,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-propionic-acid-catalyst",
+        recipe = "angels-liquid-propionic-acid",
       },
       {
         type = "unlock-recipe",
