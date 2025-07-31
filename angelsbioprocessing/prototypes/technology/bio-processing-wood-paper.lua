@@ -120,11 +120,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-generator-1",
+        recipe = "angels-tree-seed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-arboretum-1",
+        recipe = "angels-solid-tree",
       },
       {
         type = "unlock-recipe",
@@ -162,7 +162,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-generator-2",
+        recipe = "angels-tree-seed-2",
       },
       {
         type = "unlock-recipe",
@@ -170,7 +170,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-arboretum-2",
+        recipe = "angels-solid-tree-2",
       },
       {
         type = "unlock-recipe",
@@ -208,11 +208,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-generator-3",
+        recipe = "angels-tree-seed-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-tree-arboretum-3",
+        recipe = "angels-solid-tree-3",
       },
       {
         type = "unlock-recipe",
@@ -252,15 +252,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-tree-generator-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-temperate-tree-arboretum-1",
+        recipe = "angels-tree-temperate-seed",
       },
       {
         type = "unlock-recipe",
         recipe = "angels-bio-resin",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-resin-bio",
       },
       {
         type = "unlock-recipe",
@@ -294,11 +294,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-tree-generator-2",
+        recipe = "angels-tree-temperate-seed-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-tree-arboretum-0",
+        recipe = "angels-temperate-tree",
       },
       {
         type = "unlock-recipe",
@@ -332,11 +332,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-tree-generator-3",
+        recipe = "angels-tree-temperate-seed-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-temperate-tree-arboretum-2",
+        recipe = "angels-bio-resin-2",
       },
     },
     unit = {
@@ -368,15 +368,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-tree-generator-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-swamp-tree-arboretum-1",
+        recipe = "angels-tree-swamp-seed",
       },
       {
         type = "unlock-recipe",
         recipe = "angels-bio-plastic",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-plastic-bio",
       },
     },
     unit = {
@@ -406,11 +406,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-tree-generator-2",
+        recipe = "angels-tree-swamp-seed-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-tree-arboretum-0",
+        recipe = "angels-swamp-tree",
       },
       {
         type = "unlock-recipe",
@@ -444,11 +444,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-tree-generator-3",
+        recipe = "angels-tree-swamp-seed-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-swamp-tree-arboretum-2",
+        recipe = "angels-bio-plastic-2",
       },
     },
     unit = {
@@ -480,15 +480,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-tree-generator-1",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-desert-tree-arboretum-1",
+        recipe = "angels-tree-desert-seed",
       },
       {
         type = "unlock-recipe",
         recipe = "angels-bio-rubber",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-rubber-bio",
       },
     },
     unit = {
@@ -518,11 +518,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-tree-generator-2",
+        recipe = "angels-tree-desert-seed-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-tree-arboretum-0",
+        recipe = "angels-desert-tree",
       },
       {
         type = "unlock-recipe",
@@ -556,11 +556,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-tree-generator-3",
+        recipe = "angels-tree-desert-seed-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-desert-tree-arboretum-2",
+        recipe = "angels-bio-rubber-2",
       },
     },
     unit = {
@@ -596,7 +596,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-paper-bleaching-1",
+        recipe = "angels-solid-paper",
       },
     },
     unit = {
@@ -623,7 +623,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-paper-bleaching-2",
+        recipe = "angels-solid-paper-2",
       },
       {
         type = "unlock-recipe",
@@ -662,7 +662,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-paper-bleaching-3",
+        recipe = "angels-solid-paper-3",
       },
       {
         type = "unlock-recipe",
@@ -674,7 +674,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-kraft-recovery",
+        recipe = "angels-liquid-green-liquor",
       },
       {
         type = "unlock-recipe",

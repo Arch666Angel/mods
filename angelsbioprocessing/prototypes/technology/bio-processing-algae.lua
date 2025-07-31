@@ -19,7 +19,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-cellulose-fiber-algae",
+        recipe = "angels-cellulose-fiber",
       },
     },
     unit = {

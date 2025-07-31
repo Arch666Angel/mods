@@ -275,7 +275,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-bio-plastic-1",
+    name = "angels-liquid-plastic-bio-1",
     localised_name = { "fluid-name.angels-liquid-plastic" },
     category = "chemistry",
     subgroup = "angels-bio-plastic",
@@ -335,7 +335,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-bio-plastic-2",
+    name = "angels-liquid-plastic-bio-2",
     localised_name = { "fluid-name.angels-liquid-plastic" },
     category = "chemistry",
     subgroup = "angels-bio-plastic",

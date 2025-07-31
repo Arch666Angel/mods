@@ -7,14 +7,14 @@ if angelsmods.trigger.bio_rubber then
   OV.remove_science_pack("angels-rubbers", "chemical-science-pack")
 else
   OV.disable_recipe({
-    "angels-desert-tree-generator-1",
-    "angels-desert-tree-generator-2",
-    "angels-desert-tree-generator-3",
-    "angels-desert-tree-arboretum-0",
-    "angels-desert-tree-arboretum-1",
-    "angels-desert-tree-arboretum-2",
-    "angels-bio-rubber-tree",
+    "angels-tree-desert-seed",
+    "angels-tree-desert-seed-2",
+    "angels-tree-desert-seed-3",
+    "angels-desert-tree",
     "angels-bio-rubber",
+    "angels-bio-rubber-2",
+    "angels-bio-rubber-tree",
+    "angels-liquid-rubber-bio",
   })
   angelsmods.functions.hide("angels-tree-desert-seed")
   angelsmods.functions.hide("angels-bio-rubber")
@@ -31,15 +31,15 @@ if angelsmods.trigger.bio_resin then
   OV.add_prereq("angels-resin-1", "angels-resins")
 else
   OV.disable_recipe({
-    "angels-temperate-tree-generator-1",
-    "angels-temperate-tree-generator-2",
-    "angels-temperate-tree-generator-3",
-    "angels-temperate-tree-arboretum-0",
-    "angels-temperate-tree-arboretum-1",
-    "angels-temperate-tree-arboretum-2",
+    "angels-tree-temperate-seed",
+    "angels-tree-temperate-seed-2",
+    "angels-tree-temperate-seed-3",
+    "angels-temperate-tree",
+    "angels-bio-resin",
+    "angels-bio-resin-2",
     "angels-bio-resin-tree",
     "angels-bio-resin-resin-liquification",
-    "angels-bio-resin",
+    "angels-liquid-resin-bio",
     "angels-bio-resin-wood-reprocessing",
   })
   angelsmods.functions.hide("angels-tree-temperate-seed")
@@ -59,14 +59,14 @@ if angelsmods.trigger.bio_plastic then
   OV.add_prereq("angels-plastic-1", "plastics")
 else
   OV.hide_recipe({
-    "angels-swamp-tree-generator-1",
-    "angels-swamp-tree-generator-2",
-    "angels-swamp-tree-generator-3",
-    "angels-swamp-tree-arboretum-0",
-    "angels-swamp-tree-arboretum-1",
-    "angels-swamp-tree-arboretum-2",
-    "angels-bio-plastic-tree",
+    "angels-tree-swamp-seed",
+    "angels-tree-swamp-seed-2",
+    "angels-tree-swamp-seed-3",
+    "angels-swamp-tree",
     "angels-bio-plastic",
+    "angels-bio-plastic-2",
+    "angels-bio-plastic-tree",
+    "angels-liquid-plastic-bio",
   })
   angelsmods.functions.hide("angels-tree-swamp-seed")
   angelsmods.functions.hide("angels-bio-plastic")
@@ -86,15 +86,15 @@ if angelsmods.trigger.paper then
 else
   OV.hide_recipe({
     "angels-solid-wood-pulp",
-    "angels-paper-bleaching-1",
-    "angels-paper-bleaching-2",
+    "angels-solid-paper",
+    "angels-solid-paper-2",
     "angels-sulfite-pulping",
     "angels-brown-liquor-recovery",
     "angels-liquid-pulping-liquor",
-    "angels-paper-bleaching-3",
+    "angels-solid-paper-3",
     "angels-liquid-white-liquor",
     "angels-kraft-cooking-washing",
-    "angels-kraft-recovery",
+    "angels-liquid-green-liquor",
     "angels-kraft-causting",
     "angels-solid-alginic-acid",
     "angels-solid-sodium-hypochlorite-decomposition",

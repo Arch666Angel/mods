@@ -134,7 +134,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-cellulose-fiber-algae",
+    name = "angels-cellulose-fiber",
     category = "crafting",
     subgroup = "angels-bio-processing-green",
     enabled = false,

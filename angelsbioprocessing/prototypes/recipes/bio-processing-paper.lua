@@ -257,7 +257,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-kraft-recovery",
+    name = "angels-liquid-green-liquor",
+    localised_name = { "recipe-name.angels-kraft-recovery" },
     category = "angels-liquifying",
     subgroup = "angels-bio-liquor",
     enabled = false,
@@ -333,7 +334,8 @@ data:extend({
   --PAPER BLEACHING
   {
     type = "recipe",
-    name = "angels-paper-bleaching-1",
+    name = "angels-solid-paper",
+    localised_name = { "recipe-name.angels-solid-paper" },
     category = "crafting",
     subgroup = "angels-bio-paper",
     enabled = false,
@@ -352,7 +354,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-paper-bleaching-2",
+    name = "angels-solid-paper-2",
     category = "angels-liquifying",
     subgroup = "angels-bio-paper",
     enabled = false,
@@ -398,7 +400,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-paper-bleaching-3",
+    name = "angels-solid-paper-3",
     category = "chemistry",
     subgroup = "angels-bio-paper",
     enabled = false,

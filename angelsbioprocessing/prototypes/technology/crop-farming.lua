@@ -948,7 +948,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-bio-plastic-1",
+        recipe = "angels-liquid-plastic-bio-1",
       },
     },
     unit = {
@@ -978,7 +978,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-bio-plastic-2",
+        recipe = "angels-liquid-plastic-bio-2",
       },
     },
     unit = {

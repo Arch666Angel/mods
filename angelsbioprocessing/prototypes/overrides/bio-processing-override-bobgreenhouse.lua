@@ -100,7 +100,7 @@ if mods["bobgreenhouse"] then
   -- also update the other tree icons
   OV.patch_recipes({
     {
-      name = "angels-tree-arboretum-1",
+      name = "angels-solid-tree",
       order = "b[arboretum]-b[tree-generation]-c",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -117,7 +117,7 @@ if mods["bobgreenhouse"] then
       }, 1, angelsmods.bioprocessing.number_tint),
     },
     {
-      name = "angels-tree-arboretum-2",
+      name = "angels-solid-tree-2",
       order = "b[arboretum]-b[tree-generation]-d",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -134,7 +134,7 @@ if mods["bobgreenhouse"] then
       }, 2, angelsmods.bioprocessing.number_tint),
     },
     {
-      name = "angels-tree-arboretum-3",
+      name = "angels-solid-tree-3",
       order = "b[arboretum]-b[tree-generation]-e",
       icons = angelsmods.functions.add_number_icon_layer({
         {
@@ -202,15 +202,15 @@ if mods["bobgreenhouse"] then
 
   -- alter angels wood production to require seedlings
   OV.patch_recipes({
-    { name = "angels-temperate-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "angels-temperate-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "angels-temperate-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
-    { name = "angels-swamp-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "angels-swamp-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "angels-swamp-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
-    { name = "angels-desert-tree-generator-1", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
-    { name = "angels-desert-tree-generator-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
-    { name = "angels-desert-tree-generator-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-tree-temperate-seed", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-tree-temperate-seed-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-tree-temperate-seed-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-tree-swamp-seed", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-tree-swamp-seed-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-tree-swamp-seed-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
+    { name = "angels-tree-desert-seed", ingredients = { { type = "item", name = "bob-seedling", amount = 4 } } },
+    { name = "angels-tree-desert-seed-2", ingredients = { { type = "item", name = "bob-seedling", amount = 6 } } },
+    { name = "angels-tree-desert-seed-3", ingredients = { { type = "item", name = "bob-seedling", amount = 8 } } },
   })
 
   -- update tech
