@@ -2,7 +2,7 @@ game.simulation.camera_position = { -2.5, 1 }
 game.simulation.camera_zoom = 2
 game.simulation.camera_alt_info = true
 
-game.forces.neutral.recipes["angelsore1-crushed"].enabled = true
+game.forces.neutral.recipes["angels-ore1-crushed"].enabled = true
 -- ore crusher
 game.surfaces[1].create_entity({
   name = "angels-ore-crusher",

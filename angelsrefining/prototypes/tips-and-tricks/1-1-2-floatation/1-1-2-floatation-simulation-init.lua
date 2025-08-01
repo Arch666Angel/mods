@@ -3,7 +3,6 @@ game.simulation.camera_zoom = 1.7
 game.simulation.camera_alt_info = true
 
 game.forces.neutral.recipes["angels-ore1-chunk"].enabled = true
---game.player.enable_all_
 -- floatation cell
 game.surfaces[1].create_entity({
   name = "angels-ore-floatation-cell",
