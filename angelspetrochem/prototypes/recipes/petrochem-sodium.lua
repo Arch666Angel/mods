@@ -45,7 +45,10 @@ data:extend({
       --{type = "fluid", name = "angels-gas-oxygen", amount = 50}
     },
     main_product = "angels-solid-sodium",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        { "angels-solid-sodium-hydroxide" },
+        "angels-solid-sodium"
+    ),
     crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color("Na"), AF.fluid_color("NaOH"), "angels-water-purified" }), --tempted to swap the NaOH with the "liquid" variant
     order = "a[sodium]-b[hydroxide]",
   },
@@ -66,7 +69,10 @@ data:extend({
       { type = "item", name = "sulfur", amount = 2 },
     },
     main_product = "angels-solid-sodium",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        { "angels-solid-sodium-sulfate" },
+        "angels-solid-sodium"
+    ),
     order = "a[sodium]-c[sulfate]",
   },
   -- SODIUM SYNTHESIS
@@ -139,7 +145,10 @@ data:extend({
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
     },
     main_product = "angels-solid-sodium-hydroxide",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        { "angels-solid-sodium" },
+        "angels-solid-sodium-hydroxide"
+    ),
     crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color("NaOH"), "angels-water-purified", AF.fluid_color("Na") }),
     order = "c[sodium-hydroxide]-a[generation]",
   },
@@ -160,7 +169,10 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     main_product = "angels-solid-sodium-hydroxide",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        { "angels-liquid-aqueous-sodium-hydroxide" },
+        "angels-solid-sodium-hydroxide"
+    ),
     crafting_machine_tint = AF.get_recipe_tints({ AF.fluid_color("NaOH"), "angels-liquid-aqueous-sodium-hydroxide" }),
     order = "c[sodium-hydroxide]-b[hydroxide]",
   },
