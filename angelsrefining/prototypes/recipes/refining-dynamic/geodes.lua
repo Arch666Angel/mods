@@ -14,8 +14,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 1 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-blue.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-blue.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "a[geode-blue-processing]",
   },
   {
@@ -32,8 +40,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 1 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-red.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-red.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "f[geode-red-processing]",
   },
   {
@@ -50,8 +66,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-yellow.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-yellow.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "c[geode-yellow-processing]",
   },
   {
@@ -68,8 +92,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 3 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-purple.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-purple.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "b[geode-purple-processing]",
   },
   {
@@ -86,8 +118,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 3 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-cyan.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-cyan.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "e[geode-cyan-processing]",
   },
   {
@@ -104,8 +144,16 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 3 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/geode-lightgreen.png",
-    icon_size = 32,
+    icons = {
+      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
+        icon_size = 32
+      },
+      { icon = "__angelsrefininggraphics__/graphics/icons/geode-lightgreen.png",
+        icon_size = 32,
+        scale = 0.5,
+        shift = { -10, -10 }
+      },
+    },
     order = "d[geode-lightgreen-processing]",
   },
 })
