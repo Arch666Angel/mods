@@ -83,25 +83,6 @@ data:extend({
     order = "k",
     stack_size = 200,
   },
-  -- CASTING RESULT
-  {
-    type = "item",
-    name = "angels-plate-iron",
-    icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
-    icon_size = 32,
-    subgroup = "angels-iron-casting",
-    order = "l",
-    stack_size = 200,
-  },
-  --[[{
-    type = "item",
-    name = "angels-rod-iron",
-    icon = "__angelssmeltinggraphics__/graphics/icons/rod-iron.png",
-    icon_size = 32,
-    subgroup = "angels-iron-casting",
-    order = "m",
-    stack_size = 200
-  },]]
   -- order n reserved for motor casting (see industries)
 })
 ------------------------------------------------------------------
@@ -109,7 +90,6 @@ data:extend({
 ------------------------------------------------------------------
 local stick = data.raw.item["iron-stick"]
 stick.icon = "__angelssmeltinggraphics__/graphics/icons/rod-iron.png"
-stick.localised_name = { "item-name.angels-rod-iron" }
 stick.icon_size = 32
 stick.subgroup = "angels-iron-casting"
 stick.order = "m"

@@ -355,7 +355,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-iron",
-    localised_name = { "item-name.angels-plate-iron" },
+    localised_name = { "item-name.iron-plate" },
     category = "angels-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
@@ -364,10 +364,15 @@ data:extend({
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 40 },
     },
     results = {
-      { type = "item", name = "angels-plate-iron", amount = 4 },
+      { type = "item", name = "iron-plate", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
+      {
+        {
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+          icon_size = 32,
+        }
+      },
       angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       { -10, -10 },
       0.4375
@@ -377,7 +382,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-iron-2",
-    localised_name = { "item-name.angels-plate-iron" },
+    localised_name = { "item-name.iron-plate" },
     category = "advanced-crafting",
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
@@ -387,10 +392,15 @@ data:extend({
       { type = "item", name = "angels-roll-iron", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-plate-iron", amount = 4 },
+      { type = "item", name = "iron-plate", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
+      {
+        {
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+          icon_size = 32,
+        }
+      },
       angelsmods.functions.get_object_icons("angels-roll-iron"),
       { -10, -10 },
       0.4375
@@ -407,7 +417,7 @@ data:extend({
     enabled = true,
     allow_decomposition = true,
     ingredients = {
-      { type = "item", name = "angels-plate-iron", amount = 2 },
+      { type = "item", name = "iron-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "iron-stick", amount = 1 },
@@ -415,7 +425,10 @@ data:extend({
     allow_decomposition = false,
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("iron-stick"),
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+        icon_size = 32,
+      },
       { -10, -10 },
       0.4375
     ),

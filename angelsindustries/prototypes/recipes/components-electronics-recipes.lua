@@ -374,7 +374,7 @@ if angelsmods.industries.components then
       enabled = true,
       ingredients = {
         { type = "item", name = "circuit-grey-board", amount = 1 },
-        { type = "item", name = "angels-wire-copper", amount = 3 },
+        { type = "item", name = "copper-cable", amount = 3 },
       },
       results = {
         { type = "item", name = "circuit-grey", amount = 1 },
@@ -391,7 +391,7 @@ if angelsmods.industries.components then
       enabled = false,
       ingredients = {
         { type = "item", name = "circuit-red-board", amount = 1 },
-        { type = "item", name = "angels-wire-copper", amount = 3 },
+        { type = "item", name = "copper-cable", amount = 3 },
       },
       results = {
         { type = "item", name = "circuit-red", amount = 1 },

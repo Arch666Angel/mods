@@ -81,23 +81,4 @@ data:extend({
     order = "i",
     stack_size = 200,
   },
-  -- CASTING RESULT
-  {
-    type = "item",
-    name = "angels-plate-copper",
-    icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-    icon_size = 32,
-    subgroup = "angels-copper-casting",
-    order = "j",
-    stack_size = 200,
-  },
-  {
-    type = "item",
-    name = "angels-wire-copper",
-    icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
-    icon_size = 32,
-    subgroup = "angels-copper-casting",
-    order = "k",
-    stack_size = 200,
-  },
 })

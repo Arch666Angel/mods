@@ -12,7 +12,7 @@ if angelsmods.industries.components then
       energy_required = 0.5,
       enabled = false,
       ingredients = {
-        { type = "item", name = "angels-plate-iron", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 5 },
       },
       results = {
         { type = "item", name = "angels-motor-casing-1", amount = 1 },

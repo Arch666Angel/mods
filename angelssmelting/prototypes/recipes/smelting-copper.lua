@@ -245,7 +245,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-copper",
-    localised_name = { "item-name.angels-plate-copper" },
+    localised_name = { "item-name.copper-plate" },
     category = "angels-casting",
     subgroup = "angels-copper-casting",
     enabled = false,
@@ -254,10 +254,15 @@ data:extend({
       { type = "fluid", name = "angels-liquid-molten-copper", amount = 40 },
     },
     results = {
-      { type = "item", name = "angels-plate-copper", amount = 4 },
+      { type = "item", name = "copper-plate", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-copper"),
+      {
+        {
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
+          icon_size = 32,
+        }
+      },
       angelsmods.functions.get_object_icons("angels-liquid-molten-copper"),
       { -10, -10 },
       0.4375
@@ -267,7 +272,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-copper-2",
-    localised_name = { "item-name.angels-plate-copper" },
+    localised_name = { "item-name.copper-plate" },
     category = "advanced-crafting",
     subgroup = "angels-copper-casting",
     energy_required = 0.5,
@@ -277,10 +282,15 @@ data:extend({
       { type = "item", name = "angels-roll-copper", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-plate-copper", amount = 4 },
+      { type = "item", name = "copper-plate", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-copper"),
+      {
+        {
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
+          icon_size = 32,
+        }
+      },
       angelsmods.functions.get_object_icons("angels-roll-copper"),
       { -10, -10 },
       0.4375
@@ -290,7 +300,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-wire-copper-2",
-    localised_name = { "item-name.angels-wire-copper" },
+    localised_name = { "item-name.copper-cable" },
     category = "advanced-crafting",
     subgroup = "angels-copper-casting",
     energy_required = 1,
@@ -300,10 +310,15 @@ data:extend({
       { type = "item", name = "angels-wire-coil-copper", amount = 4 },
     },
     results = {
-      { type = "item", name = "angels-wire-copper", amount = 16 },
+      { type = "item", name = "copper-cable", amount = 16 },
     },
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-wire-copper"),
+      {
+        {
+          icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
+          icon_size = 32,
+        }
+      },
       angelsmods.functions.get_object_icons("angels-wire-coil-copper"),
       { -10, -10 },
       0.4375
