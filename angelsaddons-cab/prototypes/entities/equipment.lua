@@ -63,7 +63,6 @@ data:extend({
     subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
     order = mods["angelsindustries"] and "b[crawlers]-e" or "e[angels-cab-energy-interface]-a",
     stack_size = 50,
-    default_request_amount = 10,
   },
 })
 data:extend({
@@ -111,7 +110,7 @@ data:extend({
     max_health = 50,
     corpse = "small-remnants",
     collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
-    collision_mask = {},
+    collision_mask = { layers = {} },
     --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
     energy_source = {
       type = "electric",
@@ -133,6 +132,8 @@ data:extend({
       height = 1,
     },
     working_sound = nil,
+    subgroup = mods["angelsindustries"] and "angels-vehicle-car" or "angels-cab",
+    order = "f",
   },
 })
 
@@ -160,7 +161,6 @@ data:extend({
   subgroup = "angels-cab",
   order = "e[angels-cab-energy-interface]-b",
   stack_size = 50,
-  default_request_amount = 10
 }}
 data:extend{{
   type = "night-vision-equipment",
@@ -232,7 +232,7 @@ data:extend{{
   max_health = 50,
   corpse = "small-remnants",
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
-  collision_mask = {},
+  collision_mask = { layers = {} },
   --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
   energy_source =
   {

@@ -2,7 +2,7 @@ data:extend({
   --ORE
   {
     type = "item",
-    name = "bauxite-ore",
+    name = "angels-bauxite-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-aluminium",
+    name = "angels-processed-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-aluminium",
+    name = "angels-pellet-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium",
@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-sodium-aluminate",
+    name = "angels-solid-sodium-aluminate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-aluminate.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-aluminium-hydroxide",
+    name = "angels-solid-aluminium-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -48,7 +48,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-aluminium-oxide",
+    name = "angels-solid-aluminium-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-aluminium-oxide.png",
     icon_size = 32,
     subgroup = "angels-aluminium",
@@ -58,7 +58,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-aluminium",
+    name = "angels-ingot-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium",
@@ -67,7 +67,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-aluminium",
+    name = "angels-powder-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium",
@@ -77,7 +77,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-aluminium",
+    name = "angels-liquid-molten-aluminium",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-aluminium.png",
     icon_size = 64,
     subgroup = "angels-aluminium-casting",

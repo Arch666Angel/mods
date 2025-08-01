@@ -11,8 +11,15 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["gold"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["angels-gold-ore"]
+    local bob_ore = data.raw.item["bob-gold-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
-  angelsmods.functions.hide("gold-ore")
+  angelsmods.functions.hide("angels-gold-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -22,8 +29,8 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
   if angelsmods.trigger.smelting_products["gold"].plate or angelsmods.trigger.smelting_products["gold"].wire then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-gold")
-    OV.disable_recipe({ "molten-gold-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-gold")
+    OV.disable_recipe({ "angels-liquid-molten-gold" })
     OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -32,22 +39,22 @@ if angelsmods.trigger.smelting_products["gold"].ingot then
     end
   end
 else
-  angelsmods.functions.hide("processed-gold")
-  angelsmods.functions.hide("pellet-gold")
-  angelsmods.functions.hide("solid-sodium-gold-cyanide")
-  angelsmods.functions.hide("liquid-chlorauric-acid")
-  angelsmods.functions.hide("cathode-gold")
-  angelsmods.functions.hide("ingot-gold")
-  angelsmods.functions.hide("liquid-molten-gold")
-  OV.disable_recipe({ "gold-ore-processing", "gold-processed-processing" })
+  angelsmods.functions.hide("angels-processed-gold")
+  angelsmods.functions.hide("angels-pellet-gold")
+  angelsmods.functions.hide("angels-solid-sodium-gold-cyanide")
+  angelsmods.functions.hide("angels-liquid-chlorauric-acid")
+  angelsmods.functions.hide("angels-cathode-gold")
+  angelsmods.functions.hide("angels-ingot-gold")
+  angelsmods.functions.hide("angels-liquid-molten-gold")
+  OV.disable_recipe({ "angels-processed-gold", "angels-pellet-gold" })
   OV.disable_recipe({
-    "pellet-gold-smelting",
-    "liquid-chlorauric-acid",
-    "processed-gold-smelting",
-    "solid-sodium-gold-cyanide-smelting",
+    "angels-solid-sodium-gold-cyanide",
+    "angels-liquid-chlorauric-acid",
+    "angels-cathode-gold",
+    "angels-cathode-gold-2",
   })
-  OV.disable_recipe({ "gold-ore-smelting", "cathode-gold-smelting" })
-  OV.disable_recipe({ "molten-gold-smelting" })
+  OV.disable_recipe({ "angels-ingot-gold", "angels-ingot-gold-2" })
+  OV.disable_recipe({ "angels-liquid-molten-gold" })
   OV.disable_technology({ "angels-gold-smelting-1", "angels-gold-smelting-2", "angels-gold-smelting-3" })
   OV.disable_technology({ "angels-gold-casting-2", "angels-gold-casting-3" })
 end
@@ -61,17 +68,14 @@ if angelsmods.trigger.smelting_products["gold"].plate then
     OV.hide_recipe("bob-gold-plate")
     OV.global_replace_item("angels-plate-gold", "bob-gold-plate")
     angelsmods.functions.hide("angels-plate-gold")
-    angelsmods.functions.move_item("bob-gold-plate", "angels-gold-casting", "l")
-    data.raw["item"]["bob-gold-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png"
-    data.raw["item"]["bob-gold-plate"].icon_size = 32
-
-    OV.global_replace_technology("gold-processing", "angels-gold-smelting-1")
+    OV.copy_item_properties("angels-plate-gold", "bob-gold-plate")
+    OV.global_replace_technology("bob-gold-processing", "angels-gold-smelting-1")
   end
 else
   angelsmods.functions.hide("angels-plate-gold")
   angelsmods.functions.hide("angels-roll-gold")
-  OV.disable_recipe({ "roll-gold-casting", "roll-gold-casting-fast" })
-  OV.disable_recipe({ "angels-plate-gold", "angels-roll-gold-converting" })
+  OV.disable_recipe({ "angels-roll-gold", "angels-roll-gold-2" })
+  OV.disable_recipe({ "angels-plate-gold", "angels-plate-gold-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -81,10 +85,9 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   if data.raw.item["bob-gilded-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-gold", "bob-gilded-copper-cable")
     angelsmods.functions.hide("angels-wire-gold")
+    OV.copy_item_properties("angels-wire-gold", "bob-gilded-copper-cable")
     angelsmods.functions.move_item("bob-gilded-copper-cable", "angels-gold-casting", "m")
     OV.disable_recipe({ "bob-gilded-copper-cable" })
-    data.raw["item"]["bob-gilded-copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
-    data.raw["item"]["bob-gilded-copper-cable"].icon_size = 32
     OV.global_replace_icon(
       "__bobelectronics__/graphics/icons/gilded-copper-cable.png",
       "__angelssmeltinggraphics__/graphics/icons/wire-gold.png"
@@ -92,7 +95,7 @@ if angelsmods.trigger.smelting_products["gold"].wire then
 
     OV.patch_recipes({
       {
-        name = "intergrated-electronics",
+        name = "bob-integrated-electronics",
         ingredients = {
           {
             type = "item",
@@ -115,22 +118,14 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({
-      {
-        name = "angels-wire-gold",
-        category = "bob-electronics",
-      },
-      {
-        name = "angels-wire-coil-gold-converting",
-        category = "bob-electronics-machine",
-      },
-    })
+    OV.add_additional_category("angels-wire-gold", "electronics")
+    OV.add_additional_category("angels-wire-gold-2", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-gold")
   angelsmods.functions.hide("angels-wire-coil-gold")
-  OV.disable_recipe({ "angels-wire-coil-gold-casting", "angels-wire-coil-gold-casting-fast" })
-  OV.disable_recipe({ "angels-wire-gold", "angels-wire-coil-gold-converting" })
+  OV.disable_recipe({ "angels-wire-coil-gold", "angels-wire-coil-gold-2" })
+  OV.disable_recipe({ "angels-wire-gold", "angels-wire-gold-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -138,6 +133,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["gold"].powder then
 else
-  angelsmods.functions.hide("powder-gold")
-  OV.disable_recipe({ "powder-gold" })
+  angelsmods.functions.hide("angels-powder-gold")
+  OV.disable_recipe({ "angels-powder-gold" })
 end

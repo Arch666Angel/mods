@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "gold-ore",
+    name = "angels-gold-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-gold",
+    name = "angels-processed-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-gold.png",
     icon_size = 64,
     subgroup = "angels-gold",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-gold",
+    name = "angels-pellet-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-gold.png",
     icon_size = 64,
     subgroup = "angels-gold",
@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-sodium-gold-cyanide",
+    name = "angels-solid-sodium-gold-cyanide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-gold-cyanide.png",
     icon_size = 32,
     subgroup = "angels-gold",
@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-chlorauric-acid",
+    name = "angels-liquid-chlorauric-acid",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HAuCl[font=default-tiny-bold]4[/font]" }
       or nil,
@@ -59,7 +59,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cathode-gold",
+    name = "angels-cathode-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/cathode-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
@@ -69,7 +69,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-gold",
+    name = "angels-ingot-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-gold.png",
     icon_size = 64,
     subgroup = "angels-gold",
@@ -78,7 +78,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-gold",
+    name = "angels-powder-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-gold.png",
     icon_size = 64,
     subgroup = "angels-gold",
@@ -88,7 +88,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-gold",
+    name = "angels-liquid-molten-gold",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-gold.png",
     icon_size = 64,
     subgroup = "angels-gold-casting",

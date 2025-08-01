@@ -11,7 +11,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["manganese"] then
 else
-  angelsmods.functions.hide("manganese-ore")
+  angelsmods.functions.hide("angels-manganese-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -21,8 +21,8 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
   if angelsmods.trigger.smelting_products["manganese"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-manganese")
-    OV.disable_recipe({ "molten-manganese-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-manganese")
+    OV.disable_recipe({ "angels-liquid-molten-manganese" })
     OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
     -- swap tech tier 1 to ingots
     for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
@@ -33,30 +33,30 @@ if angelsmods.trigger.smelting_products["manganese"].ingot then
 
   if mods["angelsindustries"] and angelsmods.industries.components then
   else
-    OV.disable_recipe({ "manganese-processed-processing-alt" })
+    OV.disable_recipe({ "angels-solid-manganese-oxide" })
     -- remove number icon as there is only one tier...
-    local maganese_oxide = data.raw["recipe"]["pellet-manganese-smelting"]
+    local maganese_oxide = data.raw["recipe"]["angels-solid-manganese-oxide-2"]
     if maganese_oxide then
       maganese_oxide.icons = nil
     end
   end
 else
-  angelsmods.functions.hide("processed-manganese")
-  angelsmods.functions.hide("pellet-manganese")
-  angelsmods.functions.hide("solid-manganese-oxide")
-  angelsmods.functions.hide("cathode-manganese")
-  angelsmods.functions.hide("ingot-manganese")
-  angelsmods.functions.hide("liquid-molten-manganese")
-  angelsmods.functions.hide("solid-iron-hydroxide")
-  OV.disable_recipe({ "manganese-ore-processing", "manganese-processed-processing" })
+  angelsmods.functions.hide("angels-processed-manganese")
+  angelsmods.functions.hide("angels-pellet-manganese")
+  angelsmods.functions.hide("angels-solid-manganese-oxide")
+  angelsmods.functions.hide("angels-cathode-manganese")
+  angelsmods.functions.hide("angels-ingot-manganese")
+  angelsmods.functions.hide("angels-liquid-molten-manganese")
+  angelsmods.functions.hide("angels-solid-iron-hydroxide")
+  OV.disable_recipe({ "angels-processed-manganese", "angels-pellet-manganese" })
   OV.disable_recipe({
-    "pellet-manganese-smelting",
-    "processed-manganese-smelting",
-    "manganese-processed-processing-alt",
-    "solid-manganese-oxide-smelting",
+    "angels-solid-manganese-oxide-2",
+    "angels-cathode-manganese",
+    "angels-solid-manganese-oxide",
+    "angels-cathode-manganese-2",
   })
-  OV.disable_recipe({ "manganese-ore-smelting", "cathode-manganese-smelting" })
-  OV.disable_recipe({ "molten-manganese-smelting", "solid-iron-hydroxide-smelting" })
+  OV.disable_recipe({ "angels-ingot-manganese", "angels-ingot-manganese-2" })
+  OV.disable_recipe({ "angels-liquid-molten-manganese", "angels-solid-iron-hydroxide-smelting" })
   OV.disable_technology({ "angels-manganese-smelting-1", "angels-manganese-smelting-2", "angels-manganese-smelting-3" })
   OV.disable_technology({ "angels-manganese-casting-2", "angels-manganese-casting-3" })
 end
@@ -68,8 +68,8 @@ if angelsmods.trigger.smelting_products["manganese"].plate then
 else
   angelsmods.functions.hide("angels-plate-manganese")
   angelsmods.functions.hide("angels-roll-manganese")
-  OV.disable_recipe({ "roll-manganese-casting", "roll-manganese-casting-fast" })
-  OV.disable_recipe({ "angels-plate-manganese", "angels-roll-manganese-converting" })
+  OV.disable_recipe({ "angels-roll-manganese", "angels-roll-manganese-2" })
+  OV.disable_recipe({ "angels-plate-manganese", "angels-plate-manganese-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -77,6 +77,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["manganese"].powder then
 else
-  angelsmods.functions.hide("powder-manganese")
-  OV.disable_recipe({ "powder-manganese" })
+  angelsmods.functions.hide("angels-powder-manganese")
+  OV.disable_recipe({ "angels-powder-manganese" })
 end

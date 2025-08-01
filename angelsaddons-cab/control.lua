@@ -121,19 +121,19 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
   end
 
   if event.equipment.name == "angels-cab-energy-interface-mk1" then
-    if event.grid.get_contents()[event.equipment.name] > 1 then
+    if event.grid.count(event.equipment.name) > 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
         event.equipment.prototype.localised_name,
       })
     end
   elseif event.equipment.name == "angels-cab-energy-interface-mk2" then
-    if event.grid.get_contents()[event.equipment.name] > 1 then
+    if event.grid.count(event.equipment.name) > 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
         event.equipment.prototype.localised_name,
       })
-    elseif event.grid.get_contents()["angels-cab-energy-interface-mk1"] < 1 then
+    elseif event.grid.count("angels-cab-energy-interface-mk1") < 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noPreviousEnergyInterfacePresent",
         event.equipment.prototype.localised_name,

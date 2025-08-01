@@ -6,14 +6,14 @@ else -- overhaul mode
   table.insert(description, { "tips-and-tricks-description.angels-water-processing-overhaul" })
   if mods["angelspetrochem"] then
     local items = { "" }
-    table.insert(items, tnt.get_item_from_name("water-yellow-waste", "fluid", "\n[font=default-bold]"))
+    table.insert(items, tnt.get_item_from_name("angels-water-yellow-waste", "fluid", "\n[font=default-bold]"))
     table.insert(items, tnt.get_item_from_name("sulfur", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("water-red-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("solid-sodium-nitrate", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("water-green-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("solid-salt", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("water-greenyellow-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("fluorite-ore", "item", "- gives: "))
+    table.insert(items, tnt.get_item_from_name("angels-water-red-waste", "fluid", "\n[font=default-bold]"))
+    table.insert(items, tnt.get_item_from_name("angels-solid-sodium-nitrate", "item", "- gives: "))
+    table.insert(items, tnt.get_item_from_name("angels-water-green-waste", "fluid", "\n[font=default-bold]"))
+    table.insert(items, tnt.get_item_from_name("angels-solid-salt", "item", "- gives: "))
+    table.insert(items, tnt.get_item_from_name("angels-water-greenyellow-waste", "fluid", "\n[font=default-bold]"))
+    table.insert(items, tnt.get_item_from_name("angels-fluorite-ore", "item", "- gives: "))
     table.insert(description, items)
   end
 end

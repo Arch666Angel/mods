@@ -34,7 +34,7 @@ if angelsmods.industries.tech then
 
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -4.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 1,
 
     light = { intensity = 0.75, size = 8 },
 

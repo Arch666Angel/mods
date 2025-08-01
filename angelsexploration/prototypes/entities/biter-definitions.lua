@@ -5,7 +5,7 @@ local function create_loot_definition(color, avg_amount, variation)
     return nil
   end
 
-  local item = "small-alien-artifact"
+  local item = "angels-small-alien-artifact"
   if color ~= "base" then
     item = item .. "-" .. color
   end

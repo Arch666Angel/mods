@@ -1,9 +1,4 @@
 data:extend({
-  --RECIPE CATEGORY
-  {
-    type = "recipe-category",
-    name = "bob-logistics",
-  },
   -- centrifuging category part of base game
   {
     type = "recipe-category",
@@ -58,12 +53,13 @@ data:extend({
       {
         icon = "__base__/graphics/item-group/intermediate-products.png",
         icon_size = 128,
+        scale = 0.5,
       },
       {
         icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = { 40, -40 },
+        scale = 64 / 32 * 0.35,
+        shift = { 20, -20 },
       },
     },
   },

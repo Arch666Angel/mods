@@ -12,7 +12,7 @@ if angelsmods.industries.components then
       prerequisites = {
         --"angels-lead-smelting-1",
         "angels-sulfur-processing-1",
-        "bio-paper-1",
+        "angels-bio-paper-1",
       },
       effects = {
         {
@@ -60,7 +60,7 @@ if angelsmods.industries.components then
         "angels-zinc-smelting-1",
         "angels-nickel-smelting-1",
         "angels-components-batteries-1",
-        --"ore-floatation"
+        --"angels-ore-floatation"
       },
       effects = {
         {
@@ -107,10 +107,10 @@ if angelsmods.industries.components then
         "angels-aluminium-smelting-1",
         "angels-cobalt-smelting-1",
         "angels-silver-smelting-1",
-        "thermal-water-extraction",
-        "bio-processing-green",
+        "angels-thermal-water-extraction",
+        "angels-bio-processing-green",
         "angels-components-batteries-2",
-        "steam-cracking-1",
+        "angels-steam-cracking-1",
       },
       effects = {
         {
@@ -156,8 +156,8 @@ if angelsmods.industries.components then
       icon_size = 256,
       prerequisites = {
         "angels-gold-smelting-1",
-        --"plastic-1",
-        "rubber",
+        --"angels-plastic-1",
+        "angels-rubber",
         "angels-manganese-smelting-2",
         "angels-components-batteries-3",
       },
@@ -255,11 +255,11 @@ if angelsmods.industries.components then
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 256,
         prerequisites = {
-          "sodium-processing-2",
+          "angels-sodium-processing-2",
           "angels-tungsten-smelting-1",
           "angels-silver-smelting-2",
           "angels-components-batteries-5",
-          "powder-metallurgy-5",
+          "angels-powder-metallurgy-5",
         },
         effects = {
           {

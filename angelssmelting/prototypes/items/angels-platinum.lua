@@ -4,7 +4,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "platinum-ore",
+    name = "angels-platinum-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-platinum.png",
     icon_size = 32,
     subgroup = "angels-platinum",
@@ -14,7 +14,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-platinum",
+    name = "angels-processed-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum",
@@ -23,7 +23,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-platinum",
+    name = "angels-pellet-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum",
@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-hexachloroplatinic-acid",
+    name = "angels-liquid-hexachloroplatinic-acid",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "H[font=default-tiny-bold]6[/font]Cl[font=default-tiny-bold]6[/font]O[font=default-tiny-bold]2[/font]Pt",
@@ -51,7 +51,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-ammonium-chloroplatinate",
+    name = "angels-solid-ammonium-chloroplatinate",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-ammonium-chloroplatinate.png",
     icon_size = 32,
     subgroup = "angels-platinum",
@@ -61,7 +61,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-platinum",
+    name = "angels-ingot-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum",
@@ -70,7 +70,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-platinum",
+    name = "angels-powder-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum",
@@ -80,7 +80,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-platinum",
+    name = "angels-liquid-molten-platinum",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-platinum.png",
     icon_size = 64,
     subgroup = "angels-platinum-casting",

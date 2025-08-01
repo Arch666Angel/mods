@@ -19,12 +19,12 @@ if angelsmods.industries.tech then
     AI.pack_replace("electric-mixing-furnace", "blue", "orange")
 
     if not mods["bobtech"] then --alien resources
-      AI.pack_replace("alien-blue-research", "yellow", "blue")
-      AI.pack_replace("alien-orange-research", "yellow", "blue")
-      AI.pack_replace("alien-purple-research", "yellow", "blue")
-      AI.pack_replace("alien-yellow-research", "yellow", "blue")
-      AI.pack_replace("alien-green-research", "yellow", "blue")
-      AI.pack_replace("alien-red-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-blue-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-orange-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-purple-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-yellow-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-green-research", "yellow", "blue")
+      AI.pack_replace("bob-alien-red-research", "yellow", "blue")
     end
 
     OV.remove_prereq("nitinol-processing", "production-science-pack")

@@ -8,7 +8,7 @@ for _, surface in pairs(game.surfaces) do
     if not tile.hidden_tile then
       table.insert(replace, { name = "grass-1", position = tile.position })
     end
-    table.insert(replace, { name = "tile-concrete-brick", position = tile.position })
+    table.insert(replace, { name = "angels-tile-concrete-brick", position = tile.position })
   end
   surface.set_tiles(replace)
 end

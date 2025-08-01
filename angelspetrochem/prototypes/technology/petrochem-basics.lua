@@ -5,7 +5,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/fluid-splitter-tech.png",
     icon_size = 128,
     prerequisites = {
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
@@ -16,14 +16,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-storage-tank-3",
       },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "fluid-splitter-2-way"
-      -- },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "fluid-splitter-3-way"
-      -- },
     },
     unit = {
       count = 50,

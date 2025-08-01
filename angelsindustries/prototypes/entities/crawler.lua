@@ -300,8 +300,8 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
     impact_category = "metal",
+    impact_speed_to_volume_ratio = 4.0,
     working_sound = {
       sound = {
         filename = "__angelsindustriesgraphics__/sound/crawler-run.ogg",

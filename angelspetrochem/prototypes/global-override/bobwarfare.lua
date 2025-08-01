@@ -8,7 +8,7 @@ if mods["bobwarfare"] then
     {
       name = "rocket-body",
       ingredients = {
-        { type = "item", name = "rocket-booster", amount = "solid-fuel" },
+        { type = "item", name = "angels-rocket-booster", amount = "solid-fuel" },
       },
     },
   })
@@ -18,9 +18,9 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   local hide_sulfuric_nitric_acid_mixture = false
   if data.raw.fluid["bob-sulfuric-nitric-acid"] then --active if plates is active, nitric is added with warfare
-    angelsmods.functions.move_item("bob-sulfuric-nitric-acid", "petrochem-nitrogen-fluids", "oa", "fluid")
+    angelsmods.functions.move_item("bob-sulfuric-nitric-acid", "angels-petrochem-nitrogen-fluids", "oa", "fluid")
 
-    OV.patch_recipes({ { name = "bob-sulfuric-nitric-acid", subgroup = "petrochem-rocket", order = "ia" } })
+    OV.patch_recipes({ { name = "bob-sulfuric-nitric-acid", subgroup = "angels-petrochem-rocket", order = "ia" } })
     data.raw["recipe"]["bob-sulfuric-nitric-acid"].always_show_products = true
 
     hide_sulfuric_nitric_acid_mixture = true -- with petrochem we can actualy use 3 inputs instead of making a submixture first
@@ -33,25 +33,25 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- NITROGLYCERIN ------------------------------------------------------------
   -----------------------------------------------------------------------------
-  angelsmods.functions.move_item("bob-nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
+  angelsmods.functions.move_item("bob-nitroglycerin", "angels-petrochem-nitrogen-fluids", "ob", "fluid")
 
   OV.patch_recipes({
     {
       name = "bob-nitroglycerin",
-      subgroup = "petrochem-rocket",
+      subgroup = "angels-petrochem-rocket",
       order = "ib",
       ingredients = hide_sulfuric_nitric_acid_mixture
           and {
             { type = "fluid", name = "bob-sulfuric-nitric-acid", amount = 0 }, -- was 30
-            { type = "fluid", name = "liquid-sulfuric-acid", amount = 15 },
-            { type = "fluid", name = "liquid-nitric-acid", amount = 15 },
+            { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 15 },
+            { type = "fluid", name = "angels-liquid-nitric-acid", amount = 15 },
           }
         or nil,
-      category = hide_sulfuric_nitric_acid_mixture and "advanced-chemistry" or nil,
+      category = hide_sulfuric_nitric_acid_mixture and "angels-advanced-chemistry" or nil,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
-        "liquid-glycerol",
-        "liquid-sulfuric-acid",
-        "liquid-nitric-acid",
+        "angels-liquid-glycerol",
+        "angels-liquid-sulfuric-acid",
+        "angels-liquid-nitric-acid",
       }),
     },
   })
@@ -63,7 +63,7 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.converter_fluid("bob-glycerol", "liquid-glycerol")
+  OV.converter_fluid("bob-glycerol", "angels-liquid-glycerol")
   OV.disable_recipe({ "bob-glycerol" })
   angelsmods.functions.disable_barreling_recipes("bob-glycerol")
 
@@ -74,13 +74,13 @@ if mods["bobwarfare"] then
     {
       name = "bob-gun-cotton",
       ingredients = {
-        { name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid" },
+        { name = "angels-liquid-nitric-acid", type = "fluid", amount = "angels-liquid-sulfuric-acid" },
       },
     },
     {
       name = "bob-gun-cotton-synthetic",
       ingredients = {
-        { name = "liquid-nitric-acid", type = "fluid", amount = "liquid-sulfuric-acid" },
+        { name = "angels-liquid-nitric-acid", type = "fluid", amount = "angels-liquid-sulfuric-acid" },
       },
     },
   })
@@ -92,9 +92,9 @@ if mods["bobwarfare"] then
     {
       name = "bob-petroleum-jelly",
       ingredients = {
-        { name = "gas-residual", type = "fluid", amount = "liquid-naphtha" },
+        { name = "angels-gas-residual", type = "fluid", amount = "angels-liquid-naphtha" },
       },
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-residual" }),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-gas-residual" }),
     },
   })
 end

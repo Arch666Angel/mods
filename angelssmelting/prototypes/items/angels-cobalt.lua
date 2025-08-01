@@ -2,7 +2,7 @@ data:extend({
   --ORE
   {
     type = "item",
-    name = "cobalt-ore",
+    name = "angels-cobalt-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-cobalt.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-cobalt",
+    name = "angels-processed-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-cobalt",
+    name = "angels-pellet-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt",
@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-cobalt-hydroxide",
+    name = "angels-solid-cobalt-hydroxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-hydroxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-cobalt-oxide",
+    name = "angels-solid-cobalt-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cobalt-oxide.png",
     icon_size = 32,
     subgroup = "angels-cobalt",
@@ -49,7 +49,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-cobalt",
+    name = "angels-ingot-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt",
@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-cobalt",
+    name = "angels-powder-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-cobalt",
+    name = "angels-liquid-molten-cobalt",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt.png",
     icon_size = 64,
     subgroup = "angels-cobalt-casting",

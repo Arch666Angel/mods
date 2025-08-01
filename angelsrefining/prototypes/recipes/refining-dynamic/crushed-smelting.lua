@@ -2,7 +2,7 @@ data:extend({
   --Tier 0
   {
     type = "recipe",
-    name = "angelsore1-crushed-smelting",
+    name = "angels-ore1-crushed-smelting",
     localised_name = { "item-name.iron-plate" },
     category = "smelting",
     subgroup = "raw-material",
@@ -21,7 +21,7 @@ data:extend({
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1-crushed.png",
         icon_size = 32,
         scale = 0.4,
         shift = { -10, -10 },
@@ -31,7 +31,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore3-crushed-smelting",
+    name = "angels-ore3-crushed-smelting",
     localised_name = { "item-name.copper-plate" },
     category = "smelting",
     subgroup = "raw-material",
@@ -50,7 +50,7 @@ data:extend({
         scale = 32 / 64,
       },
       {
-        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3-crushed.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-crushed.png",
         icon_size = 32,
         scale = 0.4,
         shift = { -10, -10 },
@@ -61,7 +61,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore5-crushed-smelting",
+    name = "angels-ore5-crushed-smelting",
     localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
@@ -73,11 +73,11 @@ data:extend({
     enabled = true,
     allow_decomposition = false,
     icon_size = 32,
-    order = "a-a [angelsore5-crushed-smelting]",
+    order = "a-a [angels-ore5-crushed-smelting]",
   },
   {
     type = "recipe",
-    name = "angelsore6-crushed-smelting",
+    name = "angels-ore6-crushed-smelting",
     localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
@@ -89,6 +89,6 @@ data:extend({
     enabled = true,
     allow_decomposition = false,
     icon_size = 32,
-    order = "a-a [angelsore6-crushed-smelting]",
+    order = "a-a [angels-ore6-crushed-smelting]",
   },
 })

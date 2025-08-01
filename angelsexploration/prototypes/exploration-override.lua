@@ -132,7 +132,7 @@ if angelsmods.industries then
         },
       },
       {
-        name = "bio-gun",
+        name = "angels-bio-gun",
         ingredients = {
           { "!!" },
           { type = "item", name = "submachine-gun", amount = 1 },
@@ -154,7 +154,7 @@ if angelsmods.industries then
         name = "angels-bio-turret",
         ingredients = {
           { "!!" },
-          { type = "item", name = "bio-gun", amount = 1 },
+          { type = "item", name = "angels-bio-gun", amount = 1 },
           { type = "item", name = "engine-unit", amount = 5 },
           { type = "item", name = "steel-plate", amount = 20 },
           { type = "item", name = "pipe", amount = 10 },

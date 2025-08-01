@@ -9,7 +9,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "a[angels-burner-generator-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "generator-equipment",
@@ -42,21 +41,20 @@ data:extend({
   {
     type = "item",
     name = "angels-fusion-reactor-vequip",
-    icon = "__base__/graphics/icons/fission-reactor-equipment.png",
-    icon_size = 64,
+    icon = "__angelsindustriesgraphics__/graphics/equipment/fusion-reactor-vequip.png",
+    icon_size = 256,
     place_as_equipment_result = "angels-fusion-reactor-vequip",
     subgroup = "angels-vehicle-equipment",
     order = "b[angels-fusion-reactor-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "generator-equipment",
     name = "angels-fusion-reactor-vequip",
     sprite = {
-      filename = "__base__/graphics/equipment/fission-reactor-equipment.png",
-      width = 128,
-      height = 128,
+      filename = "__angelsindustriesgraphics__/graphics/equipment/fusion-reactor-vequip.png",
+      width = 256,
+      height = 256,
       priority = "medium",
     },
     shape = {
@@ -76,19 +74,18 @@ data:extend({
   {
     type = "item",
     name = "angels-repair-roboport-vequip",
-    icon = "__base__/graphics/icons/rocket-part.png",
+    icon = "__angelsindustriesgraphics__/graphics/equipment/repair-roboport-vequip.png",
     place_as_equipment_result = "angels-repair-roboport-vequip",
     icon_size = 64,
     subgroup = "angels-vehicle-equipment",
     order = "d[angels-repair-roboport-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "roboport-equipment",
     name = "angels-repair-roboport-vequip",
     sprite = {
-      filename = "__base__/graphics/icons/rocket-part.png",
+      filename = "__angelsindustriesgraphics__/graphics/equipment/repair-roboport-vequip.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -135,7 +132,6 @@ data:extend({
     subgroup = "angels-vehicle-equipment",
     order = "c[angels-construction-roboport-vequip]",
     stack_size = 50,
-    default_request_amount = 10,
   },
   {
     type = "roboport-equipment",
@@ -196,8 +192,8 @@ data:extend({
     name = "angels-heavy-energy-shield-vequip",
     sprite = {
       filename = "__base__/graphics/equipment/energy-shield-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
     },
     shape = {
@@ -261,7 +257,6 @@ data:extend({
         },
       },
       ammo_type = {
-        category = "rocket",
         action = {
           type = "direct",
           action_delivery = {

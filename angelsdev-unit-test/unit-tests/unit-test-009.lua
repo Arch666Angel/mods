@@ -177,6 +177,23 @@ local unit_test_009 = function()
   table.insert(entity_filters, { filter = "autoplace", invert = true, mode = "and" })
 
   local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
+  
+  -- Ignore entities placed by a space starter pack
+  for _, item in pairs(prototypes.get_item_filtered({{ filter = "type", type = "space-platform-starter-pack" }})) do
+    if item.trigger then
+      for _, trigger in pairs(item.trigger) do
+        if trigger.action_delivery then
+          for  _, delivery in pairs(trigger.action_delivery) do
+            for _, effect in pairs(delivery.source_effects) do
+              if effect.type == "create-entity" then
+                entities_to_ignore_item[effect.entity_name] = true
+              end
+            end
+          end
+        end
+      end
+    end
+  end
 
   for entity_name, entity in pairs(entity_prototypes) do
     if not entities_to_ignore_item[entity_name] then

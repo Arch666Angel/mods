@@ -12,11 +12,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-ore-smelting",
+        recipe = "angels-ingot-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-copper-smelting",
+        recipe = "angels-liquid-molten-copper",
       },
       {
         type = "unlock-recipe",
@@ -39,22 +39,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-copper-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-ore-processing",
+        recipe = "angels-processed-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-copper-smelting",
+        recipe = "angels-ingot-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-copper",
+        recipe = "angels-powder-copper",
       },
     },
     unit = {
@@ -74,25 +74,25 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-copper-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting",
+        recipe = "angels-wire-coil-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-converting",
+        recipe = "angels-wire-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-copper-casting",
+        recipe = "angels-roll-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-copper-converting",
+        recipe = "angels-plate-copper-2",
       },
     },
     unit = {
@@ -112,22 +112,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-copper-smelting-2",
       "angels-sulfur-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-processed-processing",
+        recipe = "angels-pellet-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-copper-smelting",
+        recipe = "angels-anode-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-copper-smelting",
+        recipe = "angels-ingot-copper-3",
       },
     },
     unit = {
@@ -148,17 +148,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-copper-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting-fast",
+        recipe = "angels-wire-coil-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-copper-casting-fast",
+        recipe = "angels-roll-copper-2",
       },
     },
     unit = {

@@ -12,10 +12,10 @@ end
 if settings.startup["angels-enable-industries"].value or script.active_mods["bobplates"] then -- overhaul enabled
   for _, force in pairs(game.forces) do
     for newTech, oldTechs in pairs({
-      ["water-chemistry-1"] = {
+      ["angels-water-chemistry-1"] = {
         "heavy-water-processing",
       },
-      ["water-chemistry-2"] = {
+      ["angels-water-chemistry-2"] = {
         "deuterium-processing",
       },
       ["angels-plutonium-power"] = {
@@ -43,9 +43,9 @@ if settings.startup["angels-enable-industries"].value or script.active_mods["bob
     for techname, enabled in pairs({
       -- deuterium
       ["heavy-water-processing"] = false,
-      ["water-chemistry-1"] = true,
+      ["angels-water-chemistry-1"] = true,
       ["deuterium-processing"] = false,
-      ["water-chemistry-2"] = true,
+      ["angels-water-chemistry-2"] = true,
 
       -- bob recipes to disable
       ["thorium-processing"] = false,
@@ -121,12 +121,12 @@ if settings.startup["angels-enable-industries"].value or script.active_mods["bob
     for chunk in surface.get_chunks() do
       --local entities = surface.find_entities(chunk.area)
       angelsmods.migration.replace_item(surface.find_entities(chunk.area), {
-        ["plutonium-fuel-cell"] = "AMOX-cell",
+        ["plutonium-fuel-cell"] = "angels-mixed-oxide-cell",
         ["thorium-fuel-cell"] = "angels-thorium-fuel-cell",
         ["thorium-plutonium-fuel-cell"] = "angels-thorium-fuel-cell",
         ["deuterium-fuel-cell"] = "angels-deuterium-fuel-cell",
-        ["used-up-thorium-fuel-cell"] = "used-up-angels-thorium-fuel-cell",
-        ["used-up-deuterium-fuel-cell"] = "used-up-angels-deuterium-fuel-cell",
+        ["used-up-thorium-fuel-cell"] = "angels-depleted-thorium-fuel-cell",
+        ["used-up-deuterium-fuel-cell"] = "angels-depleted-deuterium-fuel-cell",
         ["fusion-catalyst"] = "angels-muon-fusion-catalyst",
       })
     end

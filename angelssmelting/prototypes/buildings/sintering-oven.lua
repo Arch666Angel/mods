@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "sintering-oven",
+    name = "angels-sintering-oven",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -11,12 +11,12 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-sintering-oven",
     order = "a[sintering-oven]",
-    place_result = "sintering-oven",
+    place_result = "angels-sintering-oven",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "sintering-oven",
+    name = "angels-sintering-oven",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -25,9 +25,9 @@ data:extend({
       },
     }, 1, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "sintering-oven" },
-    fast_replaceable_group = "sintering-oven",
-    next_upgrade = "sintering-oven-2",
+    minable = { mining_time = 1, result = "angels-sintering-oven" },
+    fast_replaceable_group = "angels-sintering-oven",
+    next_upgrade = "angels-sintering-oven-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +35,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "sintering" },
+    crafting_categories = { "angels-sintering" },
     crafting_speed = 0.5,
     energy_source = {
       type = "electric",
@@ -104,7 +104,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sintering-oven-2",
+    name = "angels-sintering-oven-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -114,12 +114,12 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     subgroup = "angels-sintering-oven",
     order = "b[sintering-oven-2]",
-    place_result = "sintering-oven-2",
+    place_result = "angels-sintering-oven-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "sintering-oven-2",
+    name = "angels-sintering-oven-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -128,9 +128,9 @@ data:extend({
       },
     }, 2, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "sintering-oven-2" },
-    fast_replaceable_group = "sintering-oven",
-    next_upgrade = "sintering-oven-3",
+    minable = { mining_time = 1, result = "angels-sintering-oven-2" },
+    fast_replaceable_group = "angels-sintering-oven",
+    next_upgrade = "angels-sintering-oven-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -138,7 +138,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "sintering", "sintering-2" },
+    crafting_categories = { "angels-sintering", "angels-sintering-2" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -207,7 +207,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sintering-oven-3",
+    name = "angels-sintering-oven-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -217,12 +217,12 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     subgroup = "angels-sintering-oven",
     order = "c[sintering-oven-3]",
-    place_result = "sintering-oven-3",
+    place_result = "angels-sintering-oven-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "sintering-oven-3",
+    name = "angels-sintering-oven-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -231,9 +231,9 @@ data:extend({
       },
     }, 3, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "sintering-oven-3" },
-    fast_replaceable_group = "sintering-oven",
-    next_upgrade = "sintering-oven-4",
+    minable = { mining_time = 1, result = "angels-sintering-oven-3" },
+    fast_replaceable_group = "angels-sintering-oven",
+    next_upgrade = "angels-sintering-oven-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -241,7 +241,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "sintering", "sintering-2", "sintering-3" },
+    crafting_categories = { "angels-sintering", "angels-sintering-2", "angels-sintering-3" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -310,7 +310,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sintering-oven-4",
+    name = "angels-sintering-oven-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -320,12 +320,12 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     subgroup = "angels-sintering-oven",
     order = "d[sintering-oven-4]",
-    place_result = "sintering-oven-4",
+    place_result = "angels-sintering-oven-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "sintering-oven-4",
+    name = "angels-sintering-oven-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -334,9 +334,9 @@ data:extend({
       },
     }, 4, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "sintering-oven-4" },
-    fast_replaceable_group = "sintering-oven",
-    next_upgrade = "sintering-oven-5",
+    minable = { mining_time = 1, result = "angels-sintering-oven-4" },
+    fast_replaceable_group = "angels-sintering-oven",
+    next_upgrade = "angels-sintering-oven-5",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -344,7 +344,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "sintering", "sintering-2", "sintering-3", "sintering-4" },
+    crafting_categories = { "angels-sintering", "angels-sintering-2", "angels-sintering-3", "angels-sintering-4" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -413,7 +413,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "sintering-oven-5",
+    name = "angels-sintering-oven-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -423,12 +423,12 @@ data:extend({
     }, 5, angelsmods.smelting.number_tint),
     subgroup = "angels-sintering-oven",
     order = "d[sintering-oven-5]",
-    place_result = "sintering-oven-5",
+    place_result = "angels-sintering-oven-5",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "sintering-oven-5",
+    name = "angels-sintering-oven-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/sintering-oven.png",
@@ -437,8 +437,8 @@ data:extend({
       },
     }, 5, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "sintering-oven-5" },
-    fast_replaceable_group = "sintering-oven",
+    minable = { mining_time = 1, result = "angels-sintering-oven-5" },
+    fast_replaceable_group = "angels-sintering-oven",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -446,7 +446,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "sintering", "sintering-2", "sintering-3", "sintering-4", "sintering-5" },
+    crafting_categories = { "angels-sintering", "angels-sintering-2", "angels-sintering-3", "angels-sintering-4", "angels-sintering-5" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

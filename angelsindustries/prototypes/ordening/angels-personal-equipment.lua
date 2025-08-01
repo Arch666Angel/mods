@@ -206,9 +206,7 @@ if mods["bobequipment"] then
 end
 
 -- other defensive stuffs
-reorder("capsule", "discharge-defense-remote", "angels-personal-equipment-combat-a", "e")
 reorder("item", "discharge-defense-equipment", "angels-personal-equipment-combat-a", "f")
 if mods["bobequipment"] then
-  reorder("capsule", "discharge-defense-remote", "angels-personal-equipment-combat-c", "d")
   reorder("item", "discharge-defense-equipment", "angels-personal-equipment-combat-c", "e")
 end

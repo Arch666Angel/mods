@@ -36,24 +36,24 @@ end
 
 -- oil
 data.raw["resource"]["crude-oil"]["minable"].results = {
-  { type = "fluid", name = "liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1 },
+  { type = "fluid", name = "angels-liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1 },
 }
-move_item("crude-oil", "petrochem-raw-fluids", "bb", "fluid")
+move_item("crude-oil", "angels-petrochem-raw-fluids", "bb", "fluid")
 angelsmods.functions.hide("petroleum-gas")
 angelsmods.functions.hide("light-oil")
 angelsmods.functions.hide("heavy-oil")
-move_item("lubricant", "petrochem-carbon-fluids", "dcd", "fluid")
+move_item("lubricant", "angels-petrochem-carbon-fluids", "dcd", "fluid")
 OV.remove_prereq("lubricant", "oil-processing")
 OV.remove_prereq("lubricant", "chemical-plant")
-OV.add_prereq("lubricant", "steam-cracking-1")
+OV.add_prereq("lubricant", "angels-steam-cracking-1")
 
 -------------------------------------------------------------------------------
 -- PLASTICS -------------------------------------------------------------------
 -------------------------------------------------------------------------------
-move_item("plastic-bar", "petrochem-solids", "a[petrochem-solids]-a[plastic]")
+move_item("plastic-bar", "angels-petrochem-solids", "a[petrochem-solids]-a[plastic]")
 OV.remove_prereq("plastics", "oil-processing")
-OV.add_prereq("plastics", "plastic-1")
-OV.add_unlock("plastics", "solid-plastic")
+OV.add_prereq("plastics", "angels-plastic-1")
+OV.add_unlock("plastics", "angels-solid-plastic")
 
 -- sulfur
 data.raw["item"]["sulfur"].icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png"
@@ -62,7 +62,7 @@ OV.global_replace_icon(
   { "__base__/graphics/icons/fluid/sulfuric-acid.png" },
   { "__angelspetrochemgraphics__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64 }
 )
-move_item("sulfur", "petrochem-sulfur", "a[sulfer]-a[sulfer]")
+move_item("sulfur", "angels-petrochem-sulfur", "a[sulfer]-a[sulfer]")
 angelsmods.functions.hide("sulfuric-acid")
 if angelsmods.trigger.early_sulfuric_acid == true then
   OV.remove_prereq("battery", "sulfur-processing")
@@ -70,24 +70,24 @@ if angelsmods.trigger.early_sulfuric_acid == true then
 end
 OV.remove_prereq("sulfur-processing", "oil-processing")
 
-move_item("explosives", "petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
+move_item("explosives", "angels-petrochem-solids", "b[petrochem-solids-2]-a[explosives]")
 if angelsmods.trigger.early_sulfuric_acid == true then
   OV.remove_prereq("explosives", "sulfur-processing")
   OV.add_prereq("explosives", "angels-sulfur-processing-2")
 end
 
 -- solid fuel
-move_item("steam", "petrochem-basic-fluids", "a", "fluid")
-move_item("solid-fuel", "petrochem-fuel", "a[solid-fuel]-a")
+move_item("steam", "angels-petrochem-basic-fluids", "a", "fluid")
+move_item("solid-fuel", "angels-petrochem-fuel", "a[solid-fuel]-a")
 
-OV.add_unlock("flammables", "solid-fuel-naphtha")
-OV.add_unlock("flammables", "solid-fuel-fuel-oil")
-OV.add_unlock("flammables", "solid-fuel-methane")
-OV.add_prereq("flammables", "gas-processing")
+OV.add_unlock("flammables", "angels-solid-fuel-naphtha")
+OV.add_unlock("flammables", "angels-solid-fuel-fuel-oil")
+OV.add_unlock("flammables", "angels-solid-fuel-methane")
+OV.add_prereq("flammables", "angels-gas-processing")
 
 if angelsmods.smelting then
   -- angelssmelting takes all the ores onto the smelting tab, so coal has to move as well
-  move_item("coal", "petrochem-coal", "a[carbon]-a")
+  move_item("coal", "angels-petrochem-coal", "a[carbon]-a")
 end
 
 -- flammables
@@ -97,10 +97,10 @@ OV.patch_recipes({
     ingredients = {
       { "!!" },
       { name = "steel-plate", type = "item", amount = 5 },
-      { name = "liquid-fuel-oil", type = "fluid", amount = 50 },
-      { name = "liquid-naphtha", type = "fluid", amount = 50 },
+      { name = "angels-liquid-fuel-oil", type = "fluid", amount = 50 },
+      { name = "angels-liquid-naphtha", type = "fluid", amount = 50 },
     },
-    crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "liquid-fuel-oil", "liquid-naphtha" }),
+    crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-liquid-fuel-oil", "angels-liquid-naphtha" }),
   },
 })
 
@@ -120,8 +120,8 @@ end
 --do we want to add all "thermal fluids" to this list... in particular, in exploration?
 local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.fluids
 remove_item(turret_params, { "heavy-oil", "light-oil" })
-table.insert(turret_params, { type = "liquid-naphtha", damage_modifier = 1.05 })
-table.insert(turret_params, { type = "liquid-fuel-oil", damage_modifier = 1.1 })
+table.insert(turret_params, { type = "angels-liquid-naphtha", damage_modifier = 1.05 })
+table.insert(turret_params, { type = "angels-liquid-fuel-oil", damage_modifier = 1.1 })
 
 -- rocket fuel
 OV.patch_recipes({
@@ -129,11 +129,11 @@ OV.patch_recipes({
     name = "rocket-fuel",
     ingredients = {
       { "!!" },
-      { type = "item", name = "rocket-fuel-capsule", amount = 10 },
-      { type = "item", name = "rocket-oxidizer-capsule", amount = 10 },
+      { type = "item", name = "angels-rocket-fuel-capsule", amount = 10 },
+      { type = "item", name = "angels-rocket-oxidizer-capsule", amount = 10 },
     },
     category = "chemistry",
-    subgroup = "petrochem-fuel",
+    subgroup = "angels-petrochem-fuel",
     order = "hc",
     crafting_machine_tint = { --default, has no fluids
       primary = { r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255 },
@@ -147,10 +147,10 @@ OV.remove_prereq("kovarex-enrichment-process", "rocket-fuel")
 
 data.raw["item"]["rocket-fuel"].icon = "__angelspetrochemgraphics__/graphics/icons/rocket-fuel.png"
 data.raw["item"]["rocket-fuel"].icon_size = 32
-move_item("rocket-fuel", "petrochem-fuel", "b[rocket-fuel]-c")
+move_item("rocket-fuel", "angels-petrochem-fuel", "b[rocket-fuel]-c")
 
-move_item("nuclear-fuel", "petrochem-fuel", "d[nuclear-fuel]")
-move_item("nuclear-fuel", "petrochem-fuel", "j", "recipe")
+move_item("nuclear-fuel", "angels-petrochem-fuel", "d[nuclear-fuel]")
+move_item("nuclear-fuel", "angels-petrochem-fuel", "j", "recipe")
 
 -- rockets
 OV.patch_recipes({
@@ -158,15 +158,15 @@ OV.patch_recipes({
     name = "rocket",
     ingredients = {
       { type = "item", name = "iron-plate", amount = 0 },
-      { type = "item", name = "rocket-booster", amount = 1 },
+      { type = "item", name = "angels-rocket-booster", amount = 1 },
     },
   },
   {
     name = "atomic-bomb",
     ingredients = {
-      { type = "item", name = "rocket-booster", amount = 1 },
+      { type = "item", name = "angels-rocket-booster", amount = 1 },
     },
-    category = "advanced-chemistry",
+    category = "angels-advanced-chemistry",
     crafting_machine_tint = { --default, has no fluids
       primary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
       secondary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
@@ -174,22 +174,22 @@ OV.patch_recipes({
     },
   },
 })
-OV.add_prereq("rocketry", "rocket-booster-1")
+OV.add_prereq("rocketry", "angels-rocket-booster-1")
 
 angelsmods.functions.move_item(
   "cliff-explosives",
-  "petrochem-solids",
+  "angels-petrochem-solids",
   "b[petrochem-solids-2]-b[cliff-explosives]",
   "capsule"
 )
-angelsmods.functions.move_item("cliff-explosives", "petrochem-solids-2", "a[explosives]-d", "recipe")
+angelsmods.functions.move_item("cliff-explosives", "angels-petrochem-solids-2", "a[explosives]-d", "recipe")
 --hide disabled vanilla recipes
 OV.hide_recipe({
   "basic-oil-processing",
   "advanced-oil-processing",
-  "solid-fuel-from-light-oil",
-  "solid-fuel-from-petroleum-gas",
-  "solid-fuel-from-heavy-oil",
+  "angels-solid-fuel-from-light-oil",
+  "angels-solid-fuel-from-petroleum-gas",
+  "angels-solid-fuel-from-heavy-oil",
   "light-oil-cracking",
   "heavy-oil-cracking",
   "sulfuric-acid",

@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "algae-farm",
+    name = "angels-algae-farm",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
       },
     }, 1, angelsmods.bioprocessing.number_tint),
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "a[algae]-a",
-    place_result = "algae-farm",
+    place_result = "angels-algae-farm",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "algae-farm",
+    name = "angels-algae-farm",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
@@ -23,17 +23,17 @@ data:extend({
       },
     }, 1, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "algae-farm" },
+    minable = { mining_time = 1, result = "angels-algae-farm" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    fast_replaceable_group = "algae-farm",
-    next_upgrade = "algae-farm-2",
+    fast_replaceable_group = "angels-algae-farm",
+    next_upgrade = "angels-algae-farm-2",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "bio-processing" },
+    crafting_categories = { "angels-bio-processing" },
     crafting_speed = 0.5,
     energy_source = {
       type = "electric",
@@ -91,21 +91,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "algae-farm-2",
+    name = "angels-algae-farm-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
       },
     }, 2, angelsmods.bioprocessing.number_tint),
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "a[algae]-b",
-    place_result = "algae-farm-2",
+    place_result = "angels-algae-farm-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "algae-farm-2",
+    name = "angels-algae-farm-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
@@ -113,17 +113,17 @@ data:extend({
       },
     }, 2, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "algae-farm-2" },
+    minable = { mining_time = 1, result = "angels-algae-farm-2" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    fast_replaceable_group = "algae-farm",
-    next_upgrade = "algae-farm-3",
+    fast_replaceable_group = "angels-algae-farm",
+    next_upgrade = "angels-algae-farm-3",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "bio-processing", "bio-processing-2" },
+    crafting_categories = { "angels-bio-processing", "angels-bio-processing-2" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -181,21 +181,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "algae-farm-3",
+    name = "angels-algae-farm-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
       },
     }, 3, angelsmods.bioprocessing.number_tint),
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "a[algae]-c",
-    place_result = "algae-farm-3",
+    place_result = "angels-algae-farm-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "algae-farm-3",
+    name = "angels-algae-farm-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
@@ -203,17 +203,17 @@ data:extend({
       },
     }, 3, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "algae-farm-3" },
+    minable = { mining_time = 1, result = "angels-algae-farm-3" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    fast_replaceable_group = "algae-farm",
-    next_upgrade = "algae-farm-4",
+    fast_replaceable_group = "angels-algae-farm",
+    next_upgrade = "angels-algae-farm-4",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "bio-processing", "bio-processing-2", "bio-processing-3" },
+    crafting_categories = { "angels-bio-processing", "angels-bio-processing-2", "angels-bio-processing-3" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -271,21 +271,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "algae-farm-4",
+    name = "angels-algae-farm-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
         icon_size = 32,
       },
     }, 4, angelsmods.bioprocessing.number_tint),
-    subgroup = "bio-processing-buildings-nauvis-a",
+    subgroup = "angels-bio-processing-buildings-nauvis-a",
     order = "a[algae]-d",
-    place_result = "algae-farm-4",
+    place_result = "angels-algae-farm-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "algae-farm-4",
+    name = "angels-algae-farm-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/algae-farm.png",
@@ -293,16 +293,16 @@ data:extend({
       },
     }, 4, angelsmods.bioprocessing.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "algae-farm-4" },
+    minable = { mining_time = 1, result = "angels-algae-farm-4" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    fast_replaceable_group = "algae-farm",
+    fast_replaceable_group = "angels-algae-farm",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "bio-processing", "bio-processing-2", "bio-processing-3", "bio-processing-4" },
+    crafting_categories = { "angels-bio-processing", "angels-bio-processing-2", "angels-bio-processing-3", "angels-bio-processing-4" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -360,7 +360,7 @@ data:extend({
   },
 })
 
-angelsmods.functions.allow_bio_productivity("algae-farm")
-angelsmods.functions.allow_bio_productivity("algae-farm-2")
-angelsmods.functions.allow_bio_productivity("algae-farm-3")
-angelsmods.functions.allow_bio_productivity("algae-farm-4")
+angelsmods.functions.allow_bio_productivity("angels-algae-farm")
+angelsmods.functions.allow_bio_productivity("angels-algae-farm-2")
+angelsmods.functions.allow_bio_productivity("angels-algae-farm-3")
+angelsmods.functions.allow_bio_productivity("angels-algae-farm-4")

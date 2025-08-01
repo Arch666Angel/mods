@@ -3028,7 +3028,7 @@ entities = {
       {},
     },
     minable = true,
-    name = "ore-crusher",
+    name = "angels-ore-crusher",
     operable = true,
     position = {
       x = -3.5,
@@ -3047,7 +3047,7 @@ entities = {
       {},
     },
     minable = true,
-    name = "ore-crusher",
+    name = "angels-ore-crusher",
     operable = true,
     position = {
       x = -3.5,
@@ -3066,7 +3066,7 @@ entities = {
       {},
     },
     minable = true,
-    name = "ore-crusher",
+    name = "angels-ore-crusher",
     operable = true,
     position = {
       x = -3.5,

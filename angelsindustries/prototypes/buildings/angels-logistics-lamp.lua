@@ -37,10 +37,6 @@ data:extend({
       priority = "high",
       width = 96,
       height = 96,
-      frame_count = 1,
-      axially_symmetrical = false,
-      direction_count = 1,
-      --shift = util.by_pixel(0,3),
       scale = 0.5,
     },
     picture_on = {
@@ -48,10 +44,6 @@ data:extend({
       priority = "high",
       width = 96,
       height = 96,
-      frame_count = 1,
-      axially_symmetrical = false,
-      direction_count = 1,
-      --shift = util.by_pixel(0,3),
       scale = 0.5,
     },
     signal_to_color_mapping = {
@@ -62,8 +54,7 @@ data:extend({
       { type = "virtual", name = "signal-pink", color = { r = 1, g = 0, b = 1 } },
       { type = "virtual", name = "signal-cyan", color = { r = 0, g = 1, b = 1 } },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["lamp"].points,
-    circuit_connector_sprites = circuit_connector_definitions["lamp"].sprites,
+    circuit_connector = circuit_connector_definitions["lamp"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

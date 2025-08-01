@@ -2,50 +2,50 @@ data:extend({
   -- PRE
   {
     type = "technology",
-    name = "bio-processing-paste",
+    name = "angels-bio-processing-paste",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
-      "chlorine-processing-2",
+      "angels-bio-processing-brown",
+      "angels-chlorine-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "paste-cellulose",
+        recipe = "angels-paste-cellulose",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-cobalt",
+        recipe = "angels-paste-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-copper",
+        recipe = "angels-paste-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-gold",
+        recipe = "angels-paste-gold",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-iron",
+        recipe = "angels-paste-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-silver",
+        recipe = "angels-paste-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-titanium",
+        recipe = "angels-paste-titanium",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-tungsten",
+        recipe = "angels-paste-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "paste-zinc",
+        recipe = "angels-paste-zinc",
       },
     },
     unit = {
@@ -59,23 +59,23 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-processing-alien-1",
+    name = "angels-bio-processing-alien-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-fish-1",
-      "bio-processing-red",
-      "chlorine-processing-1",
+      "angels-bio-refugium-fish-1",
+      "angels-bio-processing-red",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "alien-spores",
+        recipe = "angels-alien-spores",
       },
       {
         type = "unlock-recipe",
-        recipe = "alien-bacteria",
+        recipe = "angels-alien-bacteria",
       },
     },
     unit = {
@@ -89,27 +89,27 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-processing-alien-2",
+    name = "angels-bio-processing-alien-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-alien-1",
-      "bio-processing-paste",
+      "angels-bio-processing-alien-1",
+      "angels-bio-processing-paste",
       "plastics",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "petri-dish",
+        recipe = "angels-petri-dish",
       },
       {
         type = "unlock-recipe",
-        recipe = "substrate-dish",
+        recipe = "angels-substrate-dish",
       },
       {
         type = "unlock-recipe",
-        recipe = "seeded-dish",
+        recipe = "angels-seeded-dish",
       },
     },
     unit = {
@@ -118,19 +118,19 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         --{ "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-alien-3",
+    name = "angels-bio-processing-alien-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-alien-2",
+      "angels-bio-processing-alien-2",
     },
     effects = {},
     unit = {
@@ -139,7 +139,7 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         --{ "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
@@ -147,38 +147,38 @@ data:extend({
   -- CRYSTAL
   {
     type = "technology",
-    name = "bio-processing-crystal-splinter-1",
+    name = "angels-bio-processing-crystal-splinter-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-refugium-fish-1",
-      "geode-processing-1",
+      "angels-bio-refugium-fish-1",
+      "angels-geode-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-crystalization-1",
+        recipe = "angels-crystal-splinter-crystalization-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-cutting",
+        recipe = "angels-crystal-splinter-cutting",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-blue",
+        recipe = "angels-crystal-splinter-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-red",
+        recipe = "angels-crystal-splinter-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-green",
+        recipe = "angels-crystal-splinter-green",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-grindstone",
+        recipe = "angels-crystal-grindstone",
       },
     },
     unit = {
@@ -186,33 +186,33 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-crystal-splinter-2",
+    name = "angels-bio-processing-crystal-splinter-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-crystal-splinter-1",
-      "bio-processing-alien-2",
+      "angels-bio-processing-crystal-splinter-1",
+      "angels-bio-processing-alien-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-seed",
+        recipe = "angels-crystal-seed",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-crystalization-2",
+        recipe = "angels-crystal-splinter-crystalization-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-splinter-harmonic",
+        recipe = "angels-crystal-splinter-harmonic",
       },
     },
     unit = {
@@ -220,42 +220,42 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-crystal-splinter-3",
+    name = "angels-bio-processing-crystal-splinter-3",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-crystal-splinter-2",
-      "bio-processing-alien-2",
-      "ore-powderizer",
+      "angels-bio-processing-crystal-splinter-2",
+      "angels-bio-processing-alien-2",
+      "angels-ore-powderizer",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-splinter-blue",
+        recipe = "angels-crystal-powder-splinter-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-splinter-red",
+        recipe = "angels-crystal-powder-splinter-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-splinter-green",
+        recipe = "angels-crystal-powder-splinter-green",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-from-dust",
+        recipe = "angels-crystal-powder-from-dust",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-slurry",
+        recipe = "angels-crystal-powder-slurry",
       },
     },
     unit = {
@@ -264,52 +264,52 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         --{ "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-crystal-shard-1",
+    name = "angels-bio-processing-crystal-shard-1",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-alien-2",
-      "bio-refugium-puffer-2",
-      "bio-processing-crystal-splinter-1",
-      "ore-powderizer",
-      "slag-processing-2",
+      "angels-bio-processing-alien-2",
+      "angels-bio-refugium-puffer-2",
+      "angels-bio-processing-crystal-splinter-1",
+      "angels-ore-powderizer",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-puffer-egg-shell-powder",
+        recipe = "angels-bio-puffer-egg-shell-powder",
       },
       {
         type = "unlock-recipe",
-        recipe = "egg-shell-seed",
+        recipe = "angels-egg-shell-seed",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-crystalization-1",
+        recipe = "angels-crystal-shard-crystalization-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-cutting",
+        recipe = "angels-crystal-shard-cutting",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-blue",
+        recipe = "angels-crystal-shard-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-red",
+        recipe = "angels-crystal-shard-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-green",
+        recipe = "angels-crystal-shard-green",
       },
     },
     unit = {
@@ -318,47 +318,47 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-crystal-shard-2",
+    name = "angels-bio-processing-crystal-shard-2",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-alien-2",
-      "bio-processing-crystal-shard-1",
-      "bio-processing-crystal-splinter-2",
-      "geode-processing-2",
+      "angels-bio-processing-alien-2",
+      "angels-bio-processing-crystal-shard-1",
+      "angels-bio-processing-crystal-splinter-2",
+      "angels-geode-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-enhancer",
+        recipe = "angels-crystal-enhancer",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-crystalization-2",
+        recipe = "angels-crystal-shard-crystalization-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-shard-harmonic",
+        recipe = "angels-crystal-shard-harmonic",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-shard-blue",
+        recipe = "angels-crystal-powder-shard-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-shard-red",
+        recipe = "angels-crystal-powder-shard-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-shard-green",
+        recipe = "angels-crystal-powder-shard-green",
       },
     },
     unit = {
@@ -367,53 +367,53 @@ data:extend({
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },
   },
   {
     type = "technology",
-    name = "bio-processing-crystal-full",
+    name = "angels-bio-processing-crystal-full",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/crystal.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-crystal-shard-1",
-      "bio-refugium-biter-3",
+      "angels-bio-processing-crystal-shard-1",
+      "angels-bio-refugium-biter-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-full-cutting",
+        recipe = "angels-crystal-full-cutting",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-full-blue",
+        recipe = "angels-crystal-full-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-full-red",
+        recipe = "angels-crystal-full-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-full-green",
+        recipe = "angels-crystal-full-green",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-full-harmonic",
+        recipe = "angels-crystal-full-harmonic",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-full-blue",
+        recipe = "angels-crystal-powder-full-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-full-red",
+        recipe = "angels-crystal-powder-full-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-powder-full-green",
+        recipe = "angels-crystal-powder-full-green",
       },
     },
     unit = {
@@ -423,7 +423,7 @@ data:extend({
         { "logistic-science-pack", 1 },
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
-        { "token-bio", 1 },
+        { "angels-token-bio", 1 },
       },
       time = 30,
     },

@@ -120,7 +120,7 @@ data:extend({
       direction_count = 16,
     },
     working_sound = sounds.flying_robot(0.5),
-    cargo_centered = { 0.0, 0 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
   },
   {
     type = "item",
@@ -241,6 +241,6 @@ data:extend({
       direction_count = 16,
     },
     working_sound = sounds.flying_robot(0.5),
-    cargo_centered = { 0.0, 0 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
   },
 })

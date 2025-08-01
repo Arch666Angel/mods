@@ -63,36 +63,36 @@ if mods["bobplates"] then
   data:extend({
     {
       type = "technology",
-      name = "geode-crystallization-1",
+      name = "angels-geode-crystallization-1",
       icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-cyan.png",
       icon_size = 256,
       prerequisites = {
-        "geode-processing-2",
+        "angels-geode-processing-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-1",
+          recipe = "angels-ore7-crystallization-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-2",
+          recipe = "angels-ore7-crystallization-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-3",
+          recipe = "angels-ore7-crystallization-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-4",
+          recipe = "angels-ore7-crystallization-4",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-5",
+          recipe = "angels-ore7-crystallization-5",
         },
         {
           type = "unlock-recipe",
-          recipe = "angelsore7-crystallization-6",
+          recipe = "angels-ore7-crystallization-6",
         },
       },
       unit = {
@@ -106,7 +106,7 @@ if mods["bobplates"] then
       order = "a-a-a1",
     },
   })
-  OV.add_prereq("bob-gem-processing-1", "geode-crystallization-1")
+  OV.add_prereq("bob-gem-processing-1", "angels-geode-crystallization-1")
   OV.set_science_pack("bob-gem-processing-1", "logistic-science-pack", 1)
   OV.set_research_difficulty("bob-gem-processing-1", 30, 50)
   for _, recipeName in pairs({
@@ -132,9 +132,8 @@ if mods["bobplates"] then
   if mods["angelsindustries"] then
     -- angels industries takes care of this with angels nuclear overhaul
   else
-    OV.add_prereq("bob-thorium-processing", "ore-electro-whinning-cell")
+    OV.add_prereq("bob-thorium-processing", "angels-ore-electro-whinning-cell")
     OV.set_science_pack("bob-thorium-processing", "production-science-pack", 1)
-    move_item("bob-thorium-processing", "raw-material", "l[thorium-processing]", "recipe")
   end
 end
 
@@ -142,21 +141,20 @@ end
 -- TECH TREE CLEANUP ----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.add_prereq("bob-zinc-processing", "ore-floatation")
+  OV.add_prereq("bob-zinc-processing", "angels-ore-floatation")
 
   OV.set_science_pack("bob-cobalt-processing", "chemical-science-pack", 1)
-  OV.add_prereq("bob-cobalt-processing", "ore-leaching")
-  OV.add_prereq("ore-powderizer", "chemical-science-pack")
-  OV.add_prereq("bob-silicon-processing", "ore-crushing")
-  OV.add_prereq("bob-aluminium-processing", "ore-floatation")
+  OV.add_prereq("bob-cobalt-processing", "angels-ore-leaching")
+  OV.add_prereq("angels-ore-powderizer", "chemical-science-pack")
+  OV.add_prereq("bob-silicon-processing", "angels-ore-crushing")
+  OV.add_prereq("bob-aluminium-processing", "angels-ore-floatation")
   OV.set_science_pack("bob-gold-processing", "chemical-science-pack", 1)
-  OV.add_prereq("bob-gold-processing", "ore-leaching")
-  OV.add_prereq("bob-titanium-processing", "ore-leaching")
-  OV.add_prereq("bob-tungsten-processing", "ore-refining")
+  OV.add_prereq("bob-gold-processing", "angels-ore-leaching")
+  OV.add_prereq("bob-titanium-processing", "angels-ore-leaching")
+  OV.add_prereq("bob-tungsten-processing", "angels-ore-refining")
   OV.set_science_pack("bob-tungsten-processing", "production-science-pack", 1)
-  OV.add_prereq("bob-chemical-processing-2", "ore-crushing")
+  OV.add_prereq("bob-chemical-processing-2", "angels-ore-crushing")
   if mods["bobwarfare"] then
-    OV.set_science_pack("bob-rocket", "production-science-pack", 1)
     if
       not settings.startup["bobmods-enemies-enableartifacts"]
       or settings.startup["bobmods-enemies-enableartifacts"].value == false
@@ -189,9 +187,50 @@ end
 -- SMELTING -------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.add_unlock("ore-crushing", "bob-tin-plate")
-  OV.add_unlock("ore-crushing", "bob-lead-plate")
-  OV.add_unlock("ore-crushing", "bob-glass")
+  OV.patch_recipes({
+    {
+      name = "angels-ore1-crushed-smelting",
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angels-ore3-crushed-smelting",
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angels-ore5-crushed-smelting",
+      localised_name = { "item-name.bob-lead-plate" },
+      results = {
+        { "!!" },
+        { type = "item", name = "bob-lead-plate", amount = 1 },
+      },
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("bob-lead-plate"),
+        angelsmods.functions.get_object_icons("angels-ore5-crushed"),
+        { -10, -10 },
+        0.4375
+      ),
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "angels-ore6-crushed-smelting",
+      localised_name = { "item-name.bob-tin-plate" },
+      results = {
+        { "!!" },
+        { type = "item", name = "bob-tin-plate", amount = 1 },
+      },
+      icons = angelsmods.functions.add_icon_layer(
+        angelsmods.functions.get_object_icons("bob-tin-plate"),
+        angelsmods.functions.get_object_icons("angels-ore6-crushed"),
+        { -10, -10 },
+        0.4375
+      ),
+      subgroup = "bob-material-smelting",
+    },
+  })
+
+  OV.add_unlock("angels-ore-crushing", "bob-tin-plate")
+  OV.add_unlock("angels-ore-crushing", "bob-lead-plate")
+  OV.add_unlock("angels-ore-crushing", "bob-glass")
   OV.add_unlock("bob-lead-processing", "bob-silver-plate")
   if data.raw.recipe["bob-solder-alloy"] then
     OV.remove_unlock("bob-electronics", "bob-solder-alloy")
@@ -221,5 +260,5 @@ if mods["bobplates"] then
       enabled = false,
     },
   })
-  OV.add_prereq("bob-nickel-processing", "ore-crushing")
+  OV.add_prereq("bob-nickel-processing", "angels-ore-crushing")
 end
