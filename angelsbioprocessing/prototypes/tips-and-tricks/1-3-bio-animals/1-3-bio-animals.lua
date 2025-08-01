@@ -4,7 +4,7 @@ data:extend({
     name = "angels-bio-animals-1",
 
     is_title = false,
-    tag = "[item=angels-puffer-nest]",
+    tag = "[entity=angels-puffer-nest]",
     localised_name = { "tips-and-tricks-name.angels-bio-animals-1" },
     localised_description = require("prototypes.tips-and-tricks.1-3-bio-animals.1-3-bio-animals-description"),
 
