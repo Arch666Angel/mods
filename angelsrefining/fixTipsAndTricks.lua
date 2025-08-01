@@ -12,8 +12,6 @@ local function fix_clear_cursor()
     local tip = data.raw["tips-and-tricks-item"]["clear-cursor"]
     local initFunc = tip.simulation.init or ""
     tip.simulation.init = replaceAt(initFunc, 644, "1")
-    
-    log(tip.simulation.init)
 end
 
 local function fix_bulk_crafting()
@@ -22,16 +20,12 @@ local function fix_bulk_crafting()
     initFunc = string.gsub(initFunc, [[player%.insert{name = "iron%-plate", count = 100}]], "", 1)
     initFunc = string.gsub(initFunc, [[player%.insert{name = "iron%-plate", count = 100}]], [[player.insert{name = "iron-plate", count = 50}]], 1)
     tip.simulation.init = string.gsub(initFunc, "iron%-chest", "transport-belt")
-    
-    log(tip.simulation.init)
 end 
 
 local function fix_circuit_network()
     local tip = data.raw["tips-and-tricks-item"]["circuit-network"]
     local initFunc = tip.simulation.init or ""
     tip.simulation.init = string.gsub(initFunc, "intermediate%-products", "angels-casting")
-    
-    log(tip.simulation.init)
 end
 
 local function fix_belt_lanes()
@@ -51,8 +45,6 @@ local function fix_splitters()
     local tip = data.raw["tips-and-tricks-item"]["splitters"]
     local initFunc = tip.simulation.init or ""
     tip.simulation.init = string.gsub(initFunc, "intermediate%-products", "angels-components")
-    
-    log(tip.simulation.init)
 end
 
 local function fix_inserters()
