@@ -18,16 +18,16 @@ require("prototypes.overrides.bio-processing-override-base-game")
 --REFINING
 if angelsmods.refining then
   --MOVE UNLOCKS
-  OV.add_unlock("bio-processing-green", "water-mineralized")
-  OV.remove_unlock("water-treatment", "water-mineralized")
+  OV.add_unlock("angels-bio-processing-green", "angels-water-mineralized")
+  OV.remove_unlock("angels-water-treatment", "angels-water-mineralized")
 end
 
 --SMELTING
 if not angelsmods.smelting then
-  OV.disable_recipe("algae-brown-burning-wash")
+  OV.disable_recipe("angels-algae-brown-burning-wash")
 
-  OV.remove_prereq("angels-stone-smelting-2", "resins")
-  OV.add_prereq("angels-stone-smelting-2", "bio-arboretum-1")
+  OV.remove_prereq("angels-stone-smelting-2", "angels-resins")
+  OV.add_prereq("angels-stone-smelting-2", "angels-bio-arboretum-1")
 end
 
 --UPDATE LABS INPUT
@@ -36,13 +36,13 @@ for labs_n, labs in pairs(data.raw["lab"]) do
     --first check it does not exist
     local found = false
     for i, chk in ipairs(labs.inputs) do
-      if chk == "token-bio" then
+      if chk == "angels-token-bio" then
         found = true
       end
     end
     --add it to all the labs
-    if not found and not labs.inputs["token-bio"] then
-      table.insert(labs.inputs, "token-bio")
+    if not found and not labs.inputs["angels-token-bio"] then
+      table.insert(labs.inputs, "angels-token-bio")
     end
   end
 end
@@ -51,25 +51,25 @@ end
 if angelsmods.trigger.smelting_products["glass"].plate then
   OV.patch_recipes({
     {
-      name = "petri-dish",
+      name = "angels-petri-dish",
       ingredients = {
         { "!!" },
         { type = "item", name = data.raw.item["bob-glass"] and "bob-glass" or "angels-plate-glass", amount = 1 },
       },
     },
   })
-  OV.remove_prereq("bio-processing-alien-2", "plastics")
+  OV.remove_prereq("angels-bio-processing-alien-2", "plastics")
 end
 
 if angelsmods.functions.is_special_vanilla() then
 else
   OV.patch_recipes({
     {
-      name = "crystal-enhancer",
+      name = "angels-crystal-enhancer",
       category = "advanced-crafting",
       ingredients = {
-        { name = "catalysator-green", amount = 1 },
-        { name = "crystal-slurry", amount = 0, type = "fluid" },
+        { name = "angels-catalysator-green", amount = 1 },
+        { name = "angels-crystal-slurry", amount = 0, type = "fluid" },
       },
     },
   })
@@ -77,17 +77,17 @@ end
 
 --ADD TILE RESTRICTION FOR ALIEN BIOMES
 if data.raw.tile["frozen-snow-0"] then
-  data.raw.tree["temperate-garden"].autoplace.tile_restriction =
+  data.raw.tree["angels-temperate-garden"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-  data.raw.tree["desert-garden"].autoplace.tile_restriction =
+  data.raw.tree["angels-desert-garden"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-  data.raw.tree["swamp-garden"].autoplace.tile_restriction =
+  data.raw.tree["angels-swamp-garden"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-  data.raw.tree["temperate-tree"].autoplace.tile_restriction =
+  data.raw.tree["angels-temperate-tree"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-  data.raw.tree["swamp-tree"].autoplace.tile_restriction =
+  data.raw.tree["angels-swamp-tree"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-  data.raw.tree["desert-tree"].autoplace.tile_restriction =
+  data.raw.tree["angels-desert-tree"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
 end
 

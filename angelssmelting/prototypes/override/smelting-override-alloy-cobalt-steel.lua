@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-cobalt-steel",
+        name = "angels-liquid-molten-cobalt-steel",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-cobalt-steel.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -30,33 +30,32 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-cobalt-steel-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-cobalt-steel" },
-        category = "induction-smelting-3",
+        name = "angels-liquid-molten-cobalt-steel",
+        category = "angels-induction-smelting-3",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "item", name = "ingot-steel", amount = 24 },
-          { type = "item", name = "ingot-cobalt", amount = 12 },
+          { type = "item", name = "angels-ingot-steel", amount = 24 },
+          { type = "item", name = "angels-ingot-cobalt", amount = 12 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-cobalt-steel", amount = 360 },
         },
         order = "e[cobalt-steel]-a[liquid-molten-cobalt-steel]",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-cobalt-steel"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-cobalt-steel"),
       },
       --CASTING
       {
         type = "recipe",
         name = "angels-plate-cobalt-steel",
         localised_name = { "item-name.bob-cobalt-steel-alloy" },
-        category = "casting-3",
+        category = "angels-casting-3",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-cobalt-steel", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-cobalt-steel", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-cobalt-steel-alloy", amount = 4 },
@@ -76,7 +75,7 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-cobalt-steel-smelting-1",
+            recipe = "angels-liquid-molten-cobalt-steel",
           },
           {
             type = "unlock-recipe",

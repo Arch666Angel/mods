@@ -23,7 +23,7 @@ end
 --OVERRIDE FOR ANGELS
 --REFINING
 if angelsmods.addons.storage.oresilos and angelsmods.refining then
-  angelsmods.functions.OV.add_prereq("ore-silos", "ore-crushing")
+  angelsmods.functions.OV.add_prereq("ore-silos", "angels-ore-crushing")
   for refinery_product_name, ore_name in pairs({
     ["saphirite"] = "ore1",
     ["jivolite"] = "ore2",
@@ -50,7 +50,7 @@ if angelsmods.addons.storage.oresilos and angelsmods.refining then
     {
       name = "silo-coal",
       ingredients = {
-        { type = "item", name = angelsmods.petrochem and "coal-crushed" or "coal", amount = 10 },
+        { type = "item", name = angelsmods.petrochem and "angels-coal-crushed" or "coal", amount = 10 },
       },
     },
   })

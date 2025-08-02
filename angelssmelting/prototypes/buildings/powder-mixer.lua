@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "powder-mixer",
+    name = "angels-powder-mixer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -11,12 +11,12 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-powder-mixer",
     order = "a[powder-mixer]",
-    place_result = "powder-mixer",
+    place_result = "angels-powder-mixer",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "powder-mixer",
+    name = "angels-powder-mixer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -25,9 +25,9 @@ data:extend({
       },
     }, 1, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "powder-mixer" },
-    fast_replaceable_group = "powder-mixer",
-    next_upgrade = "powder-mixer-2",
+    minable = { mining_time = 1, result = "angels-powder-mixer" },
+    fast_replaceable_group = "angels-powder-mixer",
+    next_upgrade = "angels-powder-mixer-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -36,7 +36,7 @@ data:extend({
     drawing_box_vertical_extension = 0.55,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "powder-mixing" },
+    crafting_categories = { "angels-powder-mixing" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -80,7 +80,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-mixer-2",
+    name = "angels-powder-mixer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -90,12 +90,12 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     subgroup = "angels-powder-mixer",
     order = "b[powder-mixer-2]",
-    place_result = "powder-mixer-2",
+    place_result = "angels-powder-mixer-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "powder-mixer-2",
+    name = "angels-powder-mixer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -104,9 +104,9 @@ data:extend({
       },
     }, 2, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "powder-mixer-2" },
-    fast_replaceable_group = "powder-mixer",
-    next_upgrade = "powder-mixer-3",
+    minable = { mining_time = 1, result = "angels-powder-mixer-2" },
+    fast_replaceable_group = "angels-powder-mixer",
+    next_upgrade = "angels-powder-mixer-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -115,7 +115,7 @@ data:extend({
     drawing_box_vertical_extension = 0.55,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "powder-mixing", "powder-mixing-2" },
+    crafting_categories = { "angels-powder-mixing", "angels-powder-mixing-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -159,7 +159,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-mixer-3",
+    name = "angels-powder-mixer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -169,12 +169,12 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     subgroup = "angels-powder-mixer",
     order = "c[powder-mixer-3]",
-    place_result = "powder-mixer-3",
+    place_result = "angels-powder-mixer-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "powder-mixer-3",
+    name = "angels-powder-mixer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -183,9 +183,9 @@ data:extend({
       },
     }, 3, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "powder-mixer-3" },
-    fast_replaceable_group = "powder-mixer",
-    next_upgrade = "powder-mixer-4",
+    minable = { mining_time = 1, result = "angels-powder-mixer-3" },
+    fast_replaceable_group = "angels-powder-mixer",
+    next_upgrade = "angels-powder-mixer-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -194,7 +194,7 @@ data:extend({
     drawing_box_vertical_extension = 0.55,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "powder-mixing", "powder-mixing-2", "powder-mixing-3" },
+    crafting_categories = { "angels-powder-mixing", "angels-powder-mixing-2", "angels-powder-mixing-3" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -238,7 +238,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-mixer-4",
+    name = "angels-powder-mixer-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -248,12 +248,12 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     subgroup = "angels-powder-mixer",
     order = "d[powder-mixer-4]",
-    place_result = "powder-mixer-4",
+    place_result = "angels-powder-mixer-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "powder-mixer-4",
+    name = "angels-powder-mixer-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
@@ -262,8 +262,8 @@ data:extend({
       },
     }, 4, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "powder-mixer-4" },
-    fast_replaceable_group = "powder-mixer",
+    minable = { mining_time = 1, result = "angels-powder-mixer-4" },
+    fast_replaceable_group = "angels-powder-mixer",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -272,7 +272,7 @@ data:extend({
     drawing_box_vertical_extension = 0.55,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "powder-mixing", "powder-mixing-2", "powder-mixing-3", "powder-mixing-4" },
+    crafting_categories = { "angels-powder-mixing", "angels-powder-mixing-2", "angels-powder-mixing-3", "angels-powder-mixing-4" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

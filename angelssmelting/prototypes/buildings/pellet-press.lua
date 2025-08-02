@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "pellet-press",
+    name = "angels-pellet-press",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -11,12 +11,12 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-pellet-press",
     order = "a[pellet-press]",
-    place_result = "pellet-press",
+    place_result = "angels-pellet-press",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "pellet-press",
+    name = "angels-pellet-press",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -25,9 +25,9 @@ data:extend({
       },
     }, 1, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "pellet-press" },
-    fast_replaceable_group = "pellet-press",
-    next_upgrade = "pellet-press-2",
+    minable = { mining_time = 1, result = "angels-pellet-press" },
+    fast_replaceable_group = "angels-pellet-press",
+    next_upgrade = "angels-pellet-press-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +35,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "pellet-pressing" },
+    crafting_categories = { "angels-pellet-pressing" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -81,7 +81,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-press-2",
+    name = "angels-pellet-press-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -91,12 +91,12 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     subgroup = "angels-pellet-press",
     order = "b[pellet-press-2]",
-    place_result = "pellet-press-2",
+    place_result = "angels-pellet-press-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "pellet-press-2",
+    name = "angels-pellet-press-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -105,9 +105,9 @@ data:extend({
       },
     }, 2, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "pellet-press-2" },
-    fast_replaceable_group = "pellet-press",
-    next_upgrade = "pellet-press-3",
+    minable = { mining_time = 1, result = "angels-pellet-press-2" },
+    fast_replaceable_group = "angels-pellet-press",
+    next_upgrade = "angels-pellet-press-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -115,7 +115,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "pellet-pressing", "pellet-pressing-2" },
+    crafting_categories = { "angels-pellet-pressing", "angels-pellet-pressing-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -161,7 +161,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-press-3",
+    name = "angels-pellet-press-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -171,12 +171,12 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     subgroup = "angels-pellet-press",
     order = "c[pellet-press-3]",
-    place_result = "pellet-press-3",
+    place_result = "angels-pellet-press-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "pellet-press-3",
+    name = "angels-pellet-press-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -185,9 +185,9 @@ data:extend({
       },
     }, 3, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "pellet-press-3" },
-    fast_replaceable_group = "pellet-press",
-    next_upgrade = "pellet-press-4",
+    minable = { mining_time = 1, result = "angels-pellet-press-3" },
+    fast_replaceable_group = "angels-pellet-press",
+    next_upgrade = "angels-pellet-press-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -195,7 +195,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "pellet-pressing", "pellet-pressing-2", "pellet-pressing-3" },
+    crafting_categories = { "angels-pellet-pressing", "angels-pellet-pressing-2", "angels-pellet-pressing-3" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -241,7 +241,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-press-4",
+    name = "angels-pellet-press-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -251,12 +251,12 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     subgroup = "angels-pellet-press",
     order = "d[pellet-press-4]",
-    place_result = "pellet-press-4",
+    place_result = "angels-pellet-press-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "pellet-press-4",
+    name = "angels-pellet-press-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/pellet-press.png",
@@ -265,8 +265,8 @@ data:extend({
       },
     }, 4, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "pellet-press-4" },
-    fast_replaceable_group = "pellet-press",
+    minable = { mining_time = 1, result = "angels-pellet-press-4" },
+    fast_replaceable_group = "angels-pellet-press",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -274,7 +274,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "pellet-pressing", "pellet-pressing-2", "pellet-pressing-3", "pellet-pressing-4" },
+    crafting_categories = { "angels-pellet-pressing", "angels-pellet-pressing-2", "angels-pellet-pressing-3", "angels-pellet-pressing-4" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

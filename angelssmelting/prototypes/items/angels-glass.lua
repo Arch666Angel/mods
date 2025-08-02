@@ -4,7 +4,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "solid-glass-mixture",
+    name = "angels-solid-glass-mixture",
     icon = "__angelssmeltinggraphics__/graphics/icons/glass-mixture.png",
     icon_size = 32,
     subgroup = "angels-glass",
@@ -14,7 +14,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-glass",
+    name = "angels-liquid-molten-glass",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-glass.png",
     icon_size = 64,
     subgroup = "angels-glass-casting",

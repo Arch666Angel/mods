@@ -7,18 +7,18 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-chrome-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-electro-whinning-cell",
+      "angels-ore-electro-whinning-cell",
       "angels-metallurgy-4",
       "angels-coal-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "chrome-ore-smelting",
+        recipe = "angels-ingot-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-chrome-smelting",
+        recipe = "angels-liquid-molten-chrome",
       },
       {
         type = "unlock-recipe",
@@ -44,21 +44,21 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-chrome-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "chrome-ore-processing",
+        recipe = "angels-processed-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-chrome-smelting",
+        recipe = "angels-ingot-chrome-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-chrome",
+        recipe = "angels-powder-chrome",
       },
     },
     unit = {
@@ -81,17 +81,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "strand-casting-4",
+      "angels-strand-casting-4",
       "angels-chrome-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-chrome-casting",
+        recipe = "angels-roll-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-chrome-converting",
+        recipe = "angels-plate-chrome-2",
       },
     },
     unit = {
@@ -114,30 +114,30 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-5",
+      "angels-ore-processing-5",
       "angels-chrome-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "chrome-processed-processing",
+        recipe = "angels-pellet-chrome",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-chrome-smelting",
+        recipe = "angels-solid-chromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-chromate-smelting",
+        recipe = "angels-solid-dichromate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-dichromate-smelting",
+        recipe = "angels-solid-chrome-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-chrome-oxide-smelting",
+        recipe = "angels-ingot-chrome-3",
       },
     },
     unit = {
@@ -160,13 +160,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      --"strand-casting-4",
+      --"angels-strand-casting-4",
       "angels-chrome-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-chrome-casting-fast",
+        recipe = "angels-roll-chrome-2",
       },
     },
     unit = {

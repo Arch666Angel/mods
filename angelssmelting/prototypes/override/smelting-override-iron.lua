@@ -58,10 +58,10 @@ if angelsmods.trigger.smelting_products["iron"].ingot then
   else
     -- special vanilla
     OV.disable_recipe({
-      "molten-iron-smelting-2",
-      "molten-iron-smelting-3",
-      "molten-iron-smelting-4",
-      "molten-iron-smelting-5",
+      "angels-liquid-molten-iron-2",
+      "angels-liquid-molten-iron-3",
+      "angels-liquid-molten-iron-4",
+      "angels-liquid-molten-iron-5",
     })
     OV.disable_technology("angels-iron-casting-4")
   end
@@ -112,10 +112,8 @@ if angelsmods.trigger.smelting_products["iron"].plate then
     },
   })
   if not angelsmods.functions.is_special_vanilla() then
-    OV.remove_unlock("ore-crushing", "iron-plate")
+    OV.remove_unlock("angels-ore-crushing", "iron-plate")
   end
-  OV.global_replace_item("angels-plate-iron", "iron-plate")
-  angelsmods.functions.hide("angels-plate-iron")
   angelsmods.functions.move_item("iron-plate", "angels-iron-casting", "l")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -133,7 +131,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
   if angelsmods.refining then
     OV.patch_recipes({
       {
-        name = "angelsore1-crushed-smelting",
+        name = "angels-ore1-crushed-smelting",
         subgroup = "angels-iron-casting",
         order = "l[angels-plate-iron]-a",
       },
@@ -158,20 +156,17 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].powder then
 else
-  angelsmods.functions.hide("powder-iron")
-  OV.disable_recipe({ "powder-iron" })
+  angelsmods.functions.hide("angels-powder-iron")
+  OV.disable_recipe({ "angels-powder-iron" })
 end
 
 -------------------------------------------------------------------------------
 -- ROD ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].rod then
-  OV.global_replace_item("angels-rod-iron", "iron-stick")
-  --angelsmods.functions.hide("iron-stick")
   OV.disable_recipe({ "iron-stick" }) --disable vanilla's recipe?
 else
-  angelsmods.functions.hide("angels-rod-iron")
   angelsmods.functions.hide("angels-rod-stack-iron")
-  OV.disable_recipe({ "rod-stack-iron-casting", "rod-stack-iron-casting-fast" })
-  OV.disable_recipe({ "angels-rod-iron-plate", "angels-rod-stack-iron-converting" })
+  OV.disable_recipe({ "angels-rod-stack-iron", "angels-rod-stack-iron-2" })
+  OV.disable_recipe({ "angels-rod-iron", "angels-rod-iron-2" })
 end

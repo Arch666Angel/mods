@@ -67,21 +67,21 @@ end
 data:extend({
   {
     type = "item",
-    name = "hydro-plant",
+    name = "angels-hydro-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "a[hydro-plant]",
-    place_result = "hydro-plant",
+    place_result = "angels-hydro-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "hydro-plant",
+    name = "angels-hydro-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
@@ -89,9 +89,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "hydro-plant" },
-    fast_replaceable_group = "hydro-plant",
-    next_upgrade = "hydro-plant-2",
+    minable = { mining_time = 1, result = "angels-hydro-plant" },
+    fast_replaceable_group = "angels-hydro-plant",
+    next_upgrade = "angels-hydro-plant-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -99,7 +99,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "water-treatment" },
+    crafting_categories = { "angels-water-treatment" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -378,21 +378,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "hydro-plant-2",
+    name = "angels-hydro-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "b[hydro-plant2-]",
-    place_result = "hydro-plant-2",
+    place_result = "angels-hydro-plant-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "hydro-plant-2",
+    name = "angels-hydro-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
@@ -400,9 +400,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "hydro-plant-2" },
-    fast_replaceable_group = "hydro-plant",
-    next_upgrade = "hydro-plant-3",
+    minable = { mining_time = 1, result = "angels-hydro-plant-2" },
+    fast_replaceable_group = "angels-hydro-plant",
+    next_upgrade = "angels-hydro-plant-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -410,7 +410,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "water-treatment" },
+    crafting_categories = { "angels-water-treatment" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -689,21 +689,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "hydro-plant-3",
+    name = "angels-hydro-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
         icon_size = 64,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "b[hydro-plant2-]",
-    place_result = "hydro-plant-3",
+    place_result = "angels-hydro-plant-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "hydro-plant-3",
+    name = "angels-hydro-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
@@ -711,8 +711,8 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "hydro-plant-3" },
-    fast_replaceable_group = "hydro-plant",
+    minable = { mining_time = 1, result = "angels-hydro-plant-3" },
+    fast_replaceable_group = "angels-hydro-plant",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -720,7 +720,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "water-treatment" },
+    crafting_categories = { "angels-water-treatment" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",

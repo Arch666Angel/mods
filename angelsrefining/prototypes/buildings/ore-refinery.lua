@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "ore-refinery",
+    name = "angels-ore-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-refining",
+    subgroup = "angels-ore-refining",
     order = "a[ore-refinery]",
-    place_result = "ore-refinery",
+    place_result = "angels-ore-refinery",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-refinery",
+    name = "angels-ore-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "ore-refinery" },
-    fast_replaceable_group = "ore-refinery",
-    next_upgrade = "ore-refinery-2",
+    minable = { mining_time = 1, result = "angels-ore-refinery" },
+    fast_replaceable_group = "angels-ore-refinery",
+    next_upgrade = "angels-ore-refinery-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -34,7 +34,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t4" },
+    crafting_categories = { "angels-ore-refining-t4" },
     crafting_speed = 0.75,
     energy_source = {
       type = "electric",
@@ -145,21 +145,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-refinery-2",
+    name = "angels-ore-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-refining",
+    subgroup = "angels-ore-refining",
     order = "b[ore-refinery-2]",
-    place_result = "ore-refinery-2",
+    place_result = "angels-ore-refinery-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-refinery-2",
+    name = "angels-ore-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-refinery.png",
@@ -168,8 +168,8 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "ore-refinery-2" },
-    fast_replaceable_group = "ore-refinery",
+    minable = { mining_time = 1, result = "angels-ore-refinery-2" },
+    fast_replaceable_group = "angels-ore-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -177,7 +177,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t4" },
+    crafting_categories = { "angels-ore-refining-t4" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",

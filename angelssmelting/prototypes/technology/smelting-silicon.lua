@@ -14,11 +14,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silicon-ore-smelting",
+        recipe = "angels-ingot-silicon",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silicon-smelting",
+        recipe = "angels-liquid-molten-silicon",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +26,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-mono-silicon-1",
+        recipe = "angels-mono-silicon",
       },
       {
         type = "unlock-recipe",
@@ -50,26 +50,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-silicon-smelting-1",
-      "chlorine-processing-1",
+      "angels-chlorine-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silica-ore-processing",
+        recipe = "angels-processed-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-silicon-smelting",
+        recipe = "angels-liquid-trichlorosilane",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-trichlorosilane-smelting",
+        recipe = "angels-ingot-silicon-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-silicon",
+        recipe = "angels-powder-silicon",
       },
     },
     unit = {
@@ -90,22 +90,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-silicon-smelting-2",
       "angels-aluminium-smelting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silica-processed-processing",
+        recipe = "angels-pellet-silica",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-silicon-smelting",
+        recipe = "angels-gas-silane",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-silane-smelting",
+        recipe = "angels-ingot-silicon-3",
       },
     },
     unit = {

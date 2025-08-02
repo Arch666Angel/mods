@@ -441,17 +441,17 @@ local function add_ignores()
 
   if script.active_mods["angelsrefining"] then
     ignore_building_recipes = true
-    ignored_unlocks["ore-powderizer"] = {
+    ignored_unlocks["angels-ore-powderizer"] = {
       items = {
-        ["milling-drum-used"] = true,
+        ["angels-milling-drum-used"] = true,
       },
     }
-    ignored_unlocks["water-treatment-2"] = {
+    ignored_unlocks["angels-water-treatment-2"] = {
       items = {},
       fluids = {
-        ["water-greenyellow-waste"] = true,
-        ["water-green-waste"] = true,
-        ["water-red-waste"] = true,
+        ["angels-water-greenyellow-waste"] = true,
+        ["angels-water-green-waste"] = true,
+        ["angels-water-red-waste"] = true,
       },
     }
   end
@@ -459,7 +459,7 @@ local function add_ignores()
   if script.active_mods["angelssmelting"] then
     ignored_unlocks["angels-coolant-1"] = {
       fluids = {
-        ["liquid-coolant-used"] = true,
+        ["angels-liquid-coolant-used"] = true,
       },
     }
   end
@@ -467,94 +467,94 @@ local function add_ignores()
   if script.active_mods["angelsbioprocessing"] then
     ignored_unlocks["plastics"] = {
       fluids = {
-        ["liquid-plastic"] = true,
+        ["angels-liquid-plastic"] = true,
       },
     }
-    ignored_unlocks["rubbers"] = {
+    ignored_unlocks["angels-rubbers"] = {
       fluids = {
-        ["liquid-rubber"] = true,
+        ["angels-liquid-rubber"] = true,
       },
     }
-    ignored_unlocks["resins"] = {
+    ignored_unlocks["angels-resins"] = {
       fluids = {
-        ["liquid-resin"] = true,
+        ["angels-liquid-resin"] = true,
       },
     }
-    ignored_unlocks["bio-processing-paste"] = {
+    ignored_unlocks["angels-bio-processing-paste"] = {
       items = {
-        ["powder-cobalt"] = true,
-        ["powder-copper"] = true,
-        ["powder-gold"] = true,
-        ["powder-iron"] = true,
-        ["powder-titanium"] = true,
-        ["powder-tungsten"] = true,
+        ["angels-powder-cobalt"] = true,
+        ["angels-powder-copper"] = true,
+        ["angels-powder-gold"] = true,
+        ["angels-powder-iron"] = true,
+        ["angels-powder-titanium"] = true,
+        ["angels-powder-tungsten"] = true,
         ["bob-powdered-tungsten"] = true,
-        ["powder-zinc"] = true,
+        ["angels-powder-zinc"] = true,
       },
     }
     -- TODO: Tidy up puffer / crop prerequisites
-    ignored_unlocks["bio-refugium-hatchery"] = {
+    ignored_unlocks["angels-bio-refugium-hatchery"] = {
       items = {
-        ["bio-puffer-egg-2"] = true,
-        ["bio-puffer-egg-3"] = true,
-        ["bio-puffer-egg-4"] = true,
-        ["bio-puffer-egg-5"] = true,
+        ["angels-bio-puffer-egg-2"] = true,
+        ["angels-bio-puffer-egg-3"] = true,
+        ["angels-bio-puffer-egg-4"] = true,
+        ["angels-bio-puffer-egg-5"] = true,
       },
     }
-    ignored_unlocks["bio-fermentation"] = {
+    ignored_unlocks["angels-bio-fermentation"] = {
       items = {
-        ["solid-corn"] = true,
-        ["solid-fruit"] = true,
+        ["angels-solid-corn"] = true,
+        ["angels-solid-fruit"] = true,
       },
     }
-    ignored_unlocks["bio-nutrient-paste"] = {
+    ignored_unlocks["angels-bio-nutrient-paste"] = {
       items = {
-        ["solid-beans"] = true,
-        ["solid-corn"] = true,
-        ["solid-leafs"] = true,
-        ["solid-nuts"] = true,
-        ["solid-pips"] = true,
-        ["solid-fruit"] = true,
+        ["angels-solid-beans"] = true,
+        ["angels-solid-corn"] = true,
+        ["angels-solid-leafs"] = true,
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-fruit"] = true,
       },
     }
-    ignored_unlocks["bio-pressing-1"] = {
+    ignored_unlocks["angels-bio-pressing-1"] = {
       items = {
-        ["solid-nuts"] = true,
-        ["solid-pips"] = true,
-        ["solid-beans"] = true,
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-beans"] = true,
       },
     }
     -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
     ignored_unlocks["angels-bio-yield-module"] = {
       items = {
-        ["crystal-splinter-green"] = true,
+        ["angels-crystal-splinter-green"] = true,
       },
     }
     ignored_unlocks["angels-bio-yield-module-2"] = {
       items = {
-        ["crystal-shard-green"] = true,
+        ["angels-crystal-shard-green"] = true,
       },
     }
     ignored_unlocks["angels-bio-yield-module-3"] = {
       items = {
-        ["crystal-full-green"] = true,
+        ["angels-crystal-full-green"] = true,
       },
     }
 
-    ignored_unlocks["bio-desert-farm"] = {
+    ignored_unlocks["angels-bio-desert-farm"] = {
       items = {
-        ["clay-brick"] = true,
+        ["angels-clay-brick"] = true,
       },
     }
-    ignored_unlocks["bio-swamp-farm"] = {
+    ignored_unlocks["angels-bio-swamp-farm"] = {
       items = {
         ["bob-bronze-pipe"] = true,
       },
     }
-    ignored_unlocks["bio-temperate-farm"] = {
+    ignored_unlocks["angels-bio-temperate-farm"] = {
       items = {
         ["bob-bronze-pipe"] = true,
-        ["clay-brick"] = true,
+        ["angels-clay-brick"] = true,
       },
     }
   end
@@ -562,9 +562,9 @@ local function add_ignores()
   if script.active_mods["angelsindustries"] then
     ignored_unlocks["angels-nuclear-fuel"] = {
       items = {
-        ["plutonium-239"] = true,
-        ["plutonium-240"] = true,
-        ["thorium-232"] = true,
+        ["bob-plutonium-239"] = true,
+        ["angels-plutonium-240"] = true,
+        ["bob-thorium-232"] = true,
       },
       categories = {
         ["centrifuging-2"] = true,
@@ -573,12 +573,12 @@ local function add_ignores()
     }
     ignored_unlocks["atomic-bomb"] = {
       items = {
-        ["plutonium-239"] = true,
-        ["plutonium-240"] = true,
+        ["bob-plutonium-239"] = true,
+        ["angels-plutonium-240"] = true,
         ["angels-muon-fusion-catalyst"] = true,
       },
       fluids = {
-        ["gas-deuterium"] = true,
+        ["angels-gas-deuterium"] = true,
       },
     }
   end

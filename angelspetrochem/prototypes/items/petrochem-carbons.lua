@@ -5,7 +5,7 @@ data:extend({
   --GAS
   {
     type = "fluid",
-    name = "gas-methane",
+    name = "angels-gas-methane",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]4[/font]" }
       or nil,
@@ -14,7 +14,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ba",
     default_temperature = 0,
     gas_temperature = 0,
@@ -25,7 +25,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-ethane",
+    name = "angels-gas-ethane",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]6[/font]",
@@ -35,7 +35,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "bb",
     default_temperature = 0,
     gas_temperature = 0,
@@ -46,7 +46,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-butane",
+    name = "angels-gas-butane",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]10[/font]",
@@ -56,7 +56,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "bc",
     default_temperature = 0,
     gas_temperature = 0,
@@ -67,7 +67,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-propene",
+    name = "angels-gas-propene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]",
@@ -77,7 +77,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "bd",
     default_temperature = 0,
     gas_temperature = 0,
@@ -89,9 +89,9 @@ data:extend({
   --OIL
   {
     type = "fluid",
-    name = "liquid-naphtha",
+    name = "angels-liquid-naphtha",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 196, 075, 085 }, { 148, 066, 075 } }),
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "dba",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -101,9 +101,9 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-mineral-oil",
+    name = "angels-liquid-mineral-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 063, 189, 063 }, { 053, 159, 053 } }),
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "dca",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -113,9 +113,9 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-fuel-oil",
+    name = "angels-liquid-fuel-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { { 247, 216, 081 }, { 237, 212, 104 } }),
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "daa",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -126,7 +126,7 @@ data:extend({
   --CRACKING
   {
     type = "fluid",
-    name = "gas-methanol",
+    name = "angels-gas-methanol",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]3[/font]OH" }
       or nil,
@@ -135,7 +135,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ca",
     default_temperature = 0,
     gas_temperature = 0,
@@ -146,7 +146,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-ethylene",
+    name = "angels-gas-ethylene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]",
@@ -156,7 +156,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "cb",
     default_temperature = 0,
     gas_temperature = 0,
@@ -167,7 +167,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-benzene",
+    name = "angels-gas-benzene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]6[/font]",
@@ -177,7 +177,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "cc",
     default_temperature = 0,
     gas_temperature = 0,
@@ -188,13 +188,13 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-synthesis",
+    name = "angels-gas-synthesis",
     icons = angelsmods.functions.create_gas_fluid_icon(
       nil,
       { { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "dd",
     default_temperature = 0,
     gas_temperature = 0,
@@ -206,7 +206,7 @@ data:extend({
   --CHEMICAL PROCESSING
   {
     type = "fluid",
-    name = "liquid-toluene",
+    name = "angels-liquid-toluene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]7[/font]H[font=default-tiny-bold]8[/font]",
@@ -216,7 +216,7 @@ data:extend({
       { { 077, 072, 072 }, { 077, 072, 072 }, { 052, 035, 034 }, { 052, 035, 034 } }
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ea",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -226,7 +226,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-butadiene",
+    name = "angels-gas-butadiene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]4[/font]H[font=default-tiny-bold]6[/font]",
@@ -236,7 +236,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "eb",
     default_temperature = 0,
     gas_temperature = 0,
@@ -247,7 +247,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-phenol",
+    name = "angels-liquid-phenol",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]6[/font]H[font=default-tiny-bold]6[/font]O",
@@ -257,7 +257,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ec",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -267,7 +267,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-ethylbenzene",
+    name = "angels-liquid-ethylbenzene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]8[/font]H[font=default-tiny-bold]10[/font]",
@@ -277,7 +277,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ed",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -287,7 +287,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-styrene",
+    name = "angels-liquid-styrene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]8[/font]H[font=default-tiny-bold]8[/font]",
@@ -297,7 +297,7 @@ data:extend({
       "CHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ee",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -307,7 +307,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-formaldehyde",
+    name = "angels-gas-formaldehyde",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]2[/font]O" }
       or nil,
@@ -316,7 +316,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ef",
     default_temperature = 0,
     gas_temperature = 0,
@@ -327,7 +327,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-polyethylene",
+    name = "angels-liquid-polyethylene",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "(C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font])[font=default-tiny-bold]n[/font]",
@@ -336,7 +336,7 @@ data:extend({
       { icon = "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene_rotated.png", icon_size = 72, shift = { -10, 0 }, scale = 32 / 72, floating = true },
       "CHH"
     ),
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ef",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -346,7 +346,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-glycerol",
+    name = "angels-liquid-glycerol",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]8[/font]O[font=default-tiny-bold]3[/font]",
@@ -356,7 +356,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "eh",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -366,7 +366,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-bisphenol-a", --really should be a solid
+    name = "angels-liquid-bisphenol-a", --really should be a solid
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]15[/font]H[font=default-tiny-bold]16[/font]O[font=default-tiny-bold]2[/font]",
@@ -376,7 +376,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ei",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -386,7 +386,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-acetone",
+    name = "angels-gas-acetone",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]O",
@@ -396,7 +396,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ej",
     default_temperature = 0,
     gas_temperature = 0,
@@ -407,7 +407,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-ethylene-oxide", --C2H4O
+    name = "angels-gas-ethylene-oxide", --C2H4O
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]O",
@@ -417,7 +417,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "ek",
     default_temperature = 0,
     gas_temperature = 0,
@@ -428,7 +428,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-ethylene-carbonate", --(CH2O)2CO
+    name = "angels-liquid-ethylene-carbonate", --(CH2O)2CO
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "(CH[font=default-tiny-bold]2[/font]O)[font=default-tiny-bold]2[/font]CO",
@@ -438,7 +438,7 @@ data:extend({
       "COH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-carbon-fluids",
+    subgroup = "angels-petrochem-carbon-fluids",
     order = "el",
     default_temperature = 0,
     heat_capacity = "0.1kJ",

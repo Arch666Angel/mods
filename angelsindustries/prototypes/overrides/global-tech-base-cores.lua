@@ -23,12 +23,12 @@ if angelsmods.industries.tech then
   AI.core_replace("flammables", "war", "enhance")
   -- REFINING
   -- PETROCHEM
-  AI.core_replace("basic-chemistry", "processing", "basic")
+  AI.core_replace("angels-basic-chemistry", "processing", "basic")
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
-  AI.core_replace("bio-processing-brown", "processing", "basic")
-  AI.core_replace("bio-paper-1", "processing", "basic")
+  AI.core_replace("angels-bio-processing-brown", "processing", "basic")
+  AI.core_replace("angels-bio-paper-1", "processing", "basic")
   -- INDUSTRIES
   OV.set_science_pack("tech-red-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-green-circuit", "datacore-basic", 2)
@@ -58,19 +58,19 @@ if angelsmods.industries.tech then
   AI.core_replace("space-science-pack", "processing", "exploration")
   AI.core_replace("artillery-shell-range-1", "war", "exploration")
   -- BIO PROCESSING
-  AI.core_replace("bio-refugium-hatchery", "processing", "exploration")
-  AI.core_replace("bio-refugium-fish-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-fish-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-3", "processing", "exploration")
-  AI.core_replace("bio-refugium-puffer-4", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-1", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-2", "processing", "exploration")
-  AI.core_replace("bio-refugium-biter-3", "processing", "exploration")
-  OV.set_science_pack("bio-temperate-farm", "datacore-processing-1", 2)
-  OV.set_science_pack("bio-desert-farm", "datacore-processing-1", 2)
-  OV.set_science_pack("bio-swamp-farm", "datacore-processing-1", 2)
+  AI.core_replace("angels-bio-refugium-hatchery", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-fish-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-fish-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-3", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-puffer-4", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-1", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-2", "processing", "exploration")
+  AI.core_replace("angels-bio-refugium-biter-3", "processing", "exploration")
+  OV.set_science_pack("angels-bio-temperate-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-bio-desert-farm", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-bio-swamp-farm", "datacore-processing-1", 2)
   -- INDUSTRIES
   AI.core_replace("angels-rocket", "war", "exploration")
   -- EXPLORATION
@@ -186,19 +186,19 @@ if angelsmods.industries.tech then
   OV.set_science_pack("lubricant", "datacore-processing-1", 2)
   OV.set_science_pack("low-density-structure", "datacore-processing-1", 2)
   -- REFINING
-  OV.set_science_pack("geode-crystallization-1", "datacore-processing-1", 2)
-  OV.set_science_pack("thermal-water-extraction", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-geode-crystallization-1", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
-  OV.set_science_pack("oil-gas-extraction", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-oil-gas-extraction", "datacore-processing-1", 2)
   OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
-  OV.set_science_pack("gas-synthesis", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-1", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-2", "datacore-processing-1", 2)
-  OV.set_science_pack("resin-3", "datacore-processing-1", 2)
-  OV.set_science_pack("rubber", "datacore-processing-1", 2)
-  AI.core_replace("rocket-booster-1", "war", "processing")
-  AI.core_replace("rocket-booster-2", "war", "processing")
+  OV.set_science_pack("angels-gas-synthesis", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-1", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-2", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-resin-3", "datacore-processing-1", 2)
+  OV.set_science_pack("angels-rubber", "datacore-processing-1", 2)
+  AI.core_replace("angels-rocket-booster-1", "war", "processing")
+  AI.core_replace("angels-rocket-booster-2", "war", "processing")
   -- BIOPROCESSING
   AI.core_replace("angels-composting", "basic", "processing")
   OV.execute() ------------------------------------------------------------------

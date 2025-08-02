@@ -7,7 +7,7 @@ local ground_water_pump = {}
 -- Initiation of the class
 -------------------------------------------------------------------------------
 
-ground_water_pump.prototype_name = "ground-water-pump"
+ground_water_pump.prototype_name = "angels-ground-water-pump"
 
 -------------------------------------------------------------------------------
 -- Behavioural functions

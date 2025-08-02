@@ -4,7 +4,7 @@ data:extend({
   --NITROGEN
   {
     type = "fluid",
-    name = "gas-nitrogen",
+    name = "angels-gas-nitrogen",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "N[font=default-tiny-bold]2[/font]" }
       or nil,
@@ -13,7 +13,7 @@ data:extend({
       "NNN"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "a",
     default_temperature = 0,
     gas_temperature = 0,
@@ -24,7 +24,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-ammonia",
+    name = "angels-gas-ammonia",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "NH[font=default-tiny-bold]3[/font]" }
       or nil,
@@ -33,7 +33,7 @@ data:extend({
       "NHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "b",
     default_temperature = 0,
     gas_temperature = 0,
@@ -44,14 +44,14 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-nitrogen-monoxide",
+    name = "angels-gas-nitrogen-monoxide",
     localised_description = show_formula and { "tooltip-description.chemical-formula", "NO" } or nil,
     icons = angelsmods.functions.create_gas_fluid_icon(
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
       "NNO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "c",
     default_temperature = 0,
     gas_temperature = 0,
@@ -62,7 +62,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-nitrogen-dioxide",
+    name = "angels-gas-nitrogen-dioxide",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "NO[font=default-tiny-bold]2[/font]" }
       or nil,
@@ -71,7 +71,7 @@ data:extend({
       "NOO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "d",
     default_temperature = 0,
     gas_temperature = 0,
@@ -82,7 +82,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-dinitrogen-tetroxide",
+    name = "angels-gas-dinitrogen-tetroxide",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "N[font=default-tiny-bold]2[/font]O[font=default-tiny-bold]4[/font]",
@@ -92,7 +92,7 @@ data:extend({
       "NNO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "e",
     default_temperature = 0,
     gas_temperature = 0,
@@ -103,7 +103,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-ammonium-chloride",
+    name = "angels-gas-ammonium-chloride",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "ClH[font=default-tiny-bold]4[/font]N" }
       or nil,
@@ -112,7 +112,7 @@ data:extend({
       "NHCl"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "f",
     default_temperature = 0,
     gas_temperature = 0,
@@ -123,7 +123,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-urea",
+    name = "angels-gas-urea",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "CH[font=default-tiny-bold]4[/font]N[font=default-tiny-bold]2[/font]O",
@@ -133,7 +133,7 @@ data:extend({
       "CNO"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "g",
     default_temperature = 0,
     gas_temperature = 0,
@@ -144,7 +144,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-melamine",
+    name = "angels-gas-melamine",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]6[/font]N[font=default-tiny-bold]6[/font]",
@@ -154,7 +154,7 @@ data:extend({
       "CHN"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "h",
     default_temperature = 0,
     gas_temperature = 0,
@@ -165,7 +165,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-nitric-acid",
+    name = "angels-liquid-nitric-acid",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "HNO[font=default-tiny-bold]3[/font]" }
       or nil,
@@ -174,7 +174,7 @@ data:extend({
       "NOH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "i",
     default_temperature = 0,
     gas_temperature = 0,
@@ -185,7 +185,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-monochloramine",
+    name = "angels-gas-monochloramine",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "NH[font=default-tiny-bold]2[/font]Cl" }
       or nil,
@@ -194,7 +194,7 @@ data:extend({
       "NHCl"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "j",
     default_temperature = 0,
     gas_temperature = 0,
@@ -205,7 +205,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-hydrazine",
+    name = "angels-gas-hydrazine",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "N[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]4[/font]",
@@ -215,7 +215,7 @@ data:extend({
       "NHH"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "k",
     default_temperature = 0,
     gas_temperature = 0,
@@ -226,7 +226,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-methylamine",
+    name = "angels-gas-methylamine",
     localised_description = show_formula
         and { "tooltip-description.chemical-formula", "CH[font=default-tiny-bold]5[/font]N" }
       or nil,
@@ -235,7 +235,7 @@ data:extend({
       "CHN"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "l",
     default_temperature = 0,
     gas_temperature = 0,
@@ -246,7 +246,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-dimethylamine",
+    name = "angels-gas-dimethylamine",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "(CH[font=default-tiny-bold]3[/font])[font=default-tiny-bold]2[/font]NH",
@@ -256,7 +256,7 @@ data:extend({
       "CHN"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "m",
     default_temperature = 0,
     gas_temperature = 0,
@@ -267,7 +267,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-dimethylhydrazine",
+    name = "angels-gas-dimethylhydrazine",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]2[/font]H[font=default-tiny-bold]8[/font]N[font=default-tiny-bold]2[/font]",
@@ -277,7 +277,7 @@ data:extend({
       "CHN"
     ),
     --icon_size = 32,
-    subgroup = "petrochem-nitrogen-fluids",
+    subgroup = "angels-petrochem-nitrogen-fluids",
     order = "n",
     default_temperature = 0,
     gas_temperature = 0,

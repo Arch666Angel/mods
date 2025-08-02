@@ -3,10 +3,9 @@
 -- Duplicate tutorial-grid tile for refined brick
 local function copyGrid(name, tile_data)
   local grid = table.deepcopy(data.raw.tile["tutorial-grid"])
-  grid.name = "tile-" .. name
-  grid.localised_name = { "tile-name." .. name }
+  grid.name = "angels-tile-" .. name
   grid.needs_correction = false
-  grid.minable = { mining_time = 0.1, result = name }
+  grid.minable = { mining_time = 0.1, result = "angels-"..name }
 
   local concrete = data.raw.tile["concrete"]
   grid.build_sound = table.deepcopy(concrete.build_sound)

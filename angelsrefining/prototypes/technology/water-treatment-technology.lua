@@ -12,7 +12,7 @@ data:extend({
   --  effects = {
   --    {
   --      type = "unlock-recipe",
-  --      recipe = "ground-water-pump"
+  --      recipe = "angels-ground-water-pump"
   --    }
   --  },
   --  unit = {
@@ -27,7 +27,7 @@ data:extend({
   --},
   {
     type = "technology",
-    name = "water-treatment",
+    name = "angels-water-treatment",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     prerequisites = {
@@ -36,23 +36,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ground-water-pump",
+        recipe = "angels-ground-water-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant",
+        recipe = "angels-hydro-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquifier",
+        recipe = "angels-liquifier",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-purification",
+        recipe = "angels-water-purified",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-mineralized",
+        recipe = "angels-water-mineralized",
       },
     },
     unit = {
@@ -66,33 +66,33 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-2",
+    name = "angels-water-treatment-2",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     prerequisites = {
-      "slag-processing-1",
-      "water-treatment",
+      "angels-slag-processing-1",
+      "angels-water-treatment",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant-2",
+        recipe = "angels-hydro-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "yellow-waste-water-purification",
+        recipe = "angels-yellow-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "greenyellow-waste-water-purification",
+        recipe = "angels-greenyellow-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "green-waste-water-purification",
+        recipe = "angels-green-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "red-waste-water-purification",
+        recipe = "angels-red-waste-water-purification",
       },
     },
     unit = {
@@ -107,42 +107,42 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-3",
+    name = "angels-water-treatment-3",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     prerequisites = {
-      "water-treatment-2",
+      "angels-water-treatment-2",
       "advanced-circuit",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sea-pump",
+        recipe = "angels-sea-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant-3",
+        recipe = "angels-hydro-plant-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "salination-plant",
+        recipe = "angels-salination-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-saline",
+        recipe = "angels-water-saline-from-water",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt-dissolving",
+        recipe = "angels-solid-salt-dissolving",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lithium",
+        recipe = "angels-solid-lithium",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt",
+        recipe = "angels-solid-salt",
       },
     },
     unit = {
@@ -158,22 +158,22 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-4",
+    name = "angels-water-treatment-4",
     icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
     prerequisites = {
-      "water-treatment-3",
-      "thermal-water-processing",
+      "angels-water-treatment-3",
+      "angels-thermal-water-processing",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "salination-plant-2",
+        recipe = "angels-salination-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt-from-saline",
+        recipe = "angels-solid-salt-from-saline",
       },
     },
     unit = {
@@ -190,7 +190,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-washing-1",
+    name = "angels-water-washing-1",
     icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
@@ -199,35 +199,35 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "seafloor-pump",
+        recipe = "angels-seafloor-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-plant",
+        recipe = "angels-washing-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "clarifier",
+        recipe = "angels-clarifier",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-1",
+        recipe = "angels-water-heavy-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-2",
+        recipe = "angels-water-concentrated-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-3",
+        recipe = "angels-water-light-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-4",
+        recipe = "angels-water-thin-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-5",
+        recipe = "angels-water-saline",
       },
     },
     unit = {
@@ -242,30 +242,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-washing-2",
+    name = "angels-water-washing-2",
     icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "water-washing-1",
-      "water-treatment",
+      "angels-water-washing-1",
+      "angels-water-treatment",
       "landfill",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "washing-plant-2",
+        recipe = "angels-washing-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-viscous-mud",
+        recipe = "angels-water-viscous-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-geodes",
+        recipe = "angels-solid-geodes",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-mud-landfill",
+        recipe = "angels-solid-mud-landfill",
       },
     },
     unit = {

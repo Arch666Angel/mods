@@ -11,14 +11,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["titanium"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["rutile-ore"]
+    local angel_ore = data.raw.item["angels-rutile-ore"]
     local bob_ore = data.raw.item["bob-rutile-ore"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("rutile-ore")
+  angelsmods.functions.hide("angels-rutile-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -33,13 +33,13 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
   if angelsmods.trigger.smelting_products["titanium"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-titanium")
+    angelsmods.functions.hide("angels-liquid-molten-titanium")
     OV.disable_recipe({
-      "molten-titanium-smelting-1",
-      "molten-titanium-smelting-2",
-      "molten-titanium-smelting-3",
-      "molten-titanium-smelting-4",
-      "molten-titanium-smelting-5",
+      "angels-liquid-molten-titanium",
+      "angels-liquid-molten-titanium-2",
+      "angels-liquid-molten-titanium-3",
+      "angels-liquid-molten-titanium-4",
+      "angels-liquid-molten-titanium-5",
     })
     OV.disable_technology({ "angels-titanium-casting-2", "angels-titanium-casting-3" })
     -- swap tech tier 1 to ingots
@@ -49,21 +49,21 @@ if angelsmods.trigger.smelting_products["titanium"].ingot then
     end
   end
 else
-  angelsmods.functions.hide("processed-titanium")
-  angelsmods.functions.hide("pellet-titanium")
-  angelsmods.functions.hide("liquid-titanium-tetrachloride")
-  angelsmods.functions.hide("sponge-titanium")
-  angelsmods.functions.hide("ingot-titanium")
-  angelsmods.functions.hide("liquid-molten-titanium")
-  OV.disable_recipe({ "titanium-ore-processing", "titanium-processed-processing" })
-  OV.disable_recipe({ "titanium-ore-smelting", "processed-titanium-smelting", "liquid-titanium-tetrachloride-smelting" })
-  OV.disable_recipe({ "sponge-titanium-smelting", "pellet-titanium-smelting" })
+  angelsmods.functions.hide("angels-processed-titanium")
+  angelsmods.functions.hide("angels-pellet-titanium")
+  angelsmods.functions.hide("angels-liquid-titanium-tetrachloride")
+  angelsmods.functions.hide("angels-sponge-titanium")
+  angelsmods.functions.hide("angels-ingot-titanium")
+  angelsmods.functions.hide("angels-liquid-molten-titanium")
+  OV.disable_recipe({ "angels-processed-titanium", "angels-pellet-titanium" })
+  OV.disable_recipe({ "angels-liquid-titanium-tetrachloride", "angels-liquid-titanium-tetrachloride-2", "angels-sponge-titanium" })
+  OV.disable_recipe({ "angels-ingot-titanium", "angels-ingot-titanium-2" })
   OV.disable_recipe({
-    "molten-titanium-smelting-1",
-    "molten-titanium-smelting-2",
-    "molten-titanium-smelting-3",
-    "molten-titanium-smelting-4",
-    "molten-titanium-smelting-5",
+    "angels-liquid-molten-titanium",
+    "angels-liquid-molten-titanium-2",
+    "angels-liquid-molten-titanium-3",
+    "angels-liquid-molten-titanium-4",
+    "angels-liquid-molten-titanium-5",
   })
   OV.disable_technology({ "angels-titanium-smelting-1", "angels-titanium-smelting-2", "angels-titanium-smelting-3" })
   OV.disable_technology({ "angels-titanium-casting-2", "angels-titanium-casting-3" })
@@ -83,8 +83,8 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
 else
   angelsmods.functions.hide("angels-plate-titanium")
   angelsmods.functions.hide("angels-roll-titanium")
-  OV.disable_recipe({ "roll-titanium-casting", "roll-titanium-casting-fast" })
-  OV.disable_recipe({ "angels-plate-titanium", "angels-roll-titanium-converting" })
+  OV.disable_recipe({ "angels-roll-titanium", "angels-roll-titanium-2" })
+  OV.disable_recipe({ "angels-plate-titanium", "angels-plate-titanium-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -92,6 +92,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["titanium"].powder then
 else
-  angelsmods.functions.hide("powder-titanium")
-  OV.disable_recipe({ "powder-titanium" })
+  angelsmods.functions.hide("angels-powder-titanium")
+  OV.disable_recipe({ "angels-powder-titanium" })
 end

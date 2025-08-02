@@ -2,8 +2,8 @@ local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
 if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
-  OV.add_prereq("bio-wood-processing", "automation-science-pack")
-  OV.add_prereq("bio-processing-brown", "bob-electricity")
+  OV.add_prereq("angels-bio-wood-processing", "automation-science-pack")
+  OV.add_prereq("angels-bio-processing-brown", "bob-electricity")
 end
 
 if mods["bobplates"] then
@@ -29,26 +29,26 @@ if mods["bobplates"] then
     end
 
     -- gems subgroups
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order = "7"
-      .. data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order = "7"
-      .. data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order = "7"
-      .. data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].group = "bob-gems"
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].order = "7"
+      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].order
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].group = "bob-gems"
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].order = "7"
+      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].order
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].group = "bob-gems"
+    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].order = "7"
+      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].order
 
-    move_item("crystal-grindstone", "bio-biter-processing-crystal-splinter", "d")
-    move_item("crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
+    move_item("angels-crystal-grindstone", "angels-bio-biter-processing-crystal-splinter", "d")
+    move_item("angels-crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
   end
 
   -- GEMS
-  OV.add_prereq("bio-processing-alien-3", "bob-gem-processing-2")
+  OV.add_prereq("angels-bio-processing-alien-3", "bob-gem-processing-2")
 
   -- CRYSTALS
-  OV.modify_input("crystal-grindstone", { type = "item", name = "bob-grinding-wheel", amount = "iron-plate" })
-  OV.add_prereq("bio-processing-crystal-splinter-1", "bob-grinding")
+  OV.modify_input("angels-crystal-grindstone", { type = "item", name = "bob-grinding-wheel", amount = "iron-plate" })
+  OV.add_prereq("angels-bio-processing-crystal-splinter-1", "bob-grinding")
 end
 
 -- everything below this should be rewritten and organized as it's becomming a mess
@@ -59,10 +59,10 @@ if bobmods then
 end
 
 if mods["bobassembly"] and data.raw.technology["basic-automation"] then
-  OV.remove_prereq("bio-processing-brown", "automation")
-  OV.add_prereq("bio-processing-brown", "basic-automation")
-  OV.remove_prereq("basic-chemistry", "automation")
-  OV.add_prereq("basic-chemistry", "basic-automation")
+  OV.remove_prereq("angels-bio-processing-brown", "automation")
+  OV.add_prereq("angels-bio-processing-brown", "basic-automation")
+  OV.remove_prereq("angels-basic-chemistry", "automation")
+  OV.add_prereq("angels-basic-chemistry", "basic-automation")
 end
 
 if mods["bobelectronics"] then
@@ -80,14 +80,14 @@ if mods["bobelectronics"] then
       energy_required = 2,
       ingredients = {
         { "!!" },
-        { type = "fluid", name = "liquid-resin", amount = 10 },
-        { type = "item", name = "solid-paper", amount = 5 },
+        { type = "fluid", name = "angels-liquid-resin", amount = 10 },
+        { type = "item", name = "angels-solid-paper", amount = 5 },
       },
     },
   })
   OV.remove_additional_category("bob-phenolic-board", "electronics")
   OV.add_additional_category("bob-phenolic-board", "electronics-with-fluid")
-  OV.add_prereq("advanced-circuit", "bio-paper-1")
-  OV.add_prereq("advanced-circuit", "resins")
+  OV.add_prereq("advanced-circuit", "angels-bio-paper-1")
+  OV.add_prereq("advanced-circuit", "angels-resins")
   angelsmods.functions.remove_productivity("bob-phenolic-board")
 end

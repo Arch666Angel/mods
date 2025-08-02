@@ -1,7 +1,7 @@
 for _, force in pairs(game.forces) do
   for newTech, existingTech in pairs({
-    ["bio-pressing-2"] = "bio-pressing-1",
-    ["bio-pressing-fish-2"] = "bio-pressing-fish-1",
+    ["angels-bio-pressing-2"] = "angels-bio-pressing-1",
+    ["angels-bio-pressing-fish-2"] = "angels-bio-pressing-fish-1",
   }) do
     if
       force.technologies[newTech]
