@@ -1,3 +1,16 @@
+-- modify base game tips-and-tricks to prevent crashes
+
+if data.raw["tutorial"]["trains-stations"]["scenario"] == "trains-stations" then
+  data:extend({
+    {
+      type = "tutorial",
+      name = "angels-trains-stations",
+      scenario = "angels-trains-stations",
+    },
+  })
+  data.raw["tips-and-tricks-item"]["train-stops"]["tutorial"] = "angels-trains-stations"
+end
+
 local function replaceAt( str, at, with ) 
     return string.sub(str, 1, at-1 )..with..(string.sub(str, at+1, string.len(str))) 
   end
@@ -11,7 +24,7 @@ end
 local function fix_clear_cursor()
     local tip = data.raw["tips-and-tricks-item"]["clear-cursor"]
     local initFunc = tip.simulation.init or ""
-    tip.simulation.init = replaceAt(initFunc, 644, "1")
+    --tip.simulation.init = replaceAt(initFunc, 644, "1")
 end
 
 local function fix_bulk_crafting()

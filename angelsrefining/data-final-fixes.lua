@@ -9,5 +9,3 @@ angelsmods.functions.modify_barreling_recipes()
 angelsmods.functions.create_barreling_fluid_subgroup()
 
 require("prototypes.tips-and-tricks.tips-and-tricks")
-
-require("fixTipsAndTricks")
