@@ -42,7 +42,7 @@ angelsmods.industries.block_replace = {
   ["advanced-circuit"] = { new = "block-electronics-2", amt_multi = 1 },
   ["processing-unit"] = { new = "block-electronics-4", amt_multi = 1 }, --always 4 with bobs or vanilla
   ["bob-basic-circuit-board"] = { new = "block-electronics-0", amt_multi = 1 },
-  ["bob-basic-electronic-board"] = { new = "block-electronics-1", amt_multi = 1 },
+  ["basic-electronic-board"] = { new = "block-electronics-1", amt_multi = 1 },
   ["bob-advanced-processing-unit"] = { new = "block-electronics-5", amt_multi = 1 },
   --pipes (fluid box replacements)
   ["bob-copper-pipe"] = { new = "block-fluidbox-1", amt_multi = 0.5 },
@@ -72,9 +72,9 @@ angelsmods.industries.general_replace = {
   ["electronic-circuit"] = { new = "circuit-red-loaded", amt_multi = 1 },
   ["advanced-circuit"] = { new = "circuit-green-loaded", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["processing-unit"] = { new = "circuit-blue-loaded", amt_multi = 1, unlock_by = "processing-unit" },
-  ["bob-advanced-processing-unit"] = { new = "circuit-yellow-loaded", amt_multi = 1, unlock_by = "advanced-electronics-3" },
+  ["bob-advanced-processing-unit"] = { new = "circuit-yellow-loaded", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
   --electronic components/boards
-  ["bob-wooden-board"] = { new = "circuit-grey-board", amt_multi = 1, alt_rec = "bio-paper-1" },
+  ["bob-wooden-board"] = { new = "circuit-grey-board", amt_multi = 1, alt_rec = "angels-bio-paper-1" },
   ["bob-phenolic-board"] = { new = "circuit-orange-board", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["bob-fibreglass-board"] = {
     new = "circuit-blue-board",
@@ -84,13 +84,13 @@ angelsmods.industries.general_replace = {
   },
   ["bob-circuit-board"] = { new = "circuit-orange", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["bob-superior-circuit-board"] = { new = "circuit-blue", amt_multi = 1, unlock_by = "processing-unit" },
-  ["bob-multi-layer-circuit-board"] = { new = "circuit-yellow", amt_multi = 1, unlock_by = "advanced-electronics-3" },
+  ["bob-multi-layer-circuit-board"] = { new = "circuit-yellow", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
   ["bob-basic-electronic-components"] = { new = "circuit-resistor", amt_multi = 1, unlock_by = "electronics" },
   ["bob-electronic-components"] = { new = "circuit-transistor", amt_multi = 1, unlock_by = "advanced-circuit" },
-  ["bob-intergrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
-  ["bob-processing-electronics"] = { new = "circuit-cpu", amt_multi = 1, unlock_by = "advanced-electronics-3" },
+  ["bob-intgrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
+  ["bob-processing-electronics"] = { new = "circuit-cpu", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
   --gears
-  ["bob-iron-gear-wheel"] = { new = "mechanical-parts", amt_multi = 1 },
+  ["iron-gear-wheel"] = { new = "mechanical-parts", amt_multi = 1 },
   ["bob-steel-gear-wheel"] = { new = "angels-gear", amt_multi = 1, unlock_by = "steel-processing" },
   ["bob-brass-gear-wheel"] = { new = "angels-axle", amt_multi = 1, unlocked_by = "bob-zinc-processing" },
   ["bob-cobalt-steel-gear-wheel"] = { new = "angels-roller-chain", amt_multi = 1, unlocked_by = "cobalt-processing" },

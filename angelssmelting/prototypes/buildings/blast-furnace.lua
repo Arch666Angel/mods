@@ -19,7 +19,7 @@ end
 data:extend({
   {
     type = "item",
-    name = "blast-furnace",
+    name = "angels-blast-furnace",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -29,12 +29,12 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-blast-furnace",
     order = "a[blast-furnace]",
-    place_result = "blast-furnace",
+    place_result = "angels-blast-furnace",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "blast-furnace",
+    name = "angels-blast-furnace",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -44,9 +44,9 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "blast-furnace" },
-    fast_replaceable_group = "blast-furnace",
-    next_upgrade = "blast-furnace-2",
+    minable = { mining_time = 1, result = "angels-blast-furnace" },
+    fast_replaceable_group = "angels-blast-furnace",
+    next_upgrade = "angels-blast-furnace-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -55,7 +55,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "blast-smelting" },
+    crafting_categories = { "angels-blast-smelting" },
     crafting_speed = 1,
     energy_source = {
       type = "burner",
@@ -173,7 +173,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "blast-furnace-2",
+    name = "angels-blast-furnace-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -183,12 +183,12 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     subgroup = "angels-blast-furnace",
     order = "b[blast-furnace-2]",
-    place_result = "blast-furnace-2",
+    place_result = "angels-blast-furnace-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "blast-furnace-2",
+    name = "angels-blast-furnace-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -198,9 +198,9 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "blast-furnace-2" },
-    fast_replaceable_group = "blast-furnace",
-    next_upgrade = "blast-furnace-3",
+    minable = { mining_time = 1, result = "angels-blast-furnace-2" },
+    fast_replaceable_group = "angels-blast-furnace",
+    next_upgrade = "angels-blast-furnace-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -209,7 +209,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "blast-smelting", "blast-smelting-2" },
+    crafting_categories = { "angels-blast-smelting", "angels-blast-smelting-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "burner",
@@ -327,7 +327,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "blast-furnace-3",
+    name = "angels-blast-furnace-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -337,12 +337,12 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     subgroup = "angels-blast-furnace",
     order = "c[blast-furnace-3]",
-    place_result = "blast-furnace-3",
+    place_result = "angels-blast-furnace-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "blast-furnace-3",
+    name = "angels-blast-furnace-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -352,9 +352,9 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "blast-furnace-3" },
-    fast_replaceable_group = "blast-furnace",
-    next_upgrade = "blast-furnace-4",
+    minable = { mining_time = 1, result = "angels-blast-furnace-3" },
+    fast_replaceable_group = "angels-blast-furnace",
+    next_upgrade = "angels-blast-furnace-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -363,7 +363,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "blast-smelting", "blast-smelting-2", "blast-smelting-3" },
+    crafting_categories = { "angels-blast-smelting", "angels-blast-smelting-2", "angels-blast-smelting-3" },
     crafting_speed = 2,
     energy_source = {
       type = "burner",
@@ -481,7 +481,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "blast-furnace-4",
+    name = "angels-blast-furnace-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -491,12 +491,12 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     subgroup = "angels-blast-furnace",
     order = "d[blast-furnace-4]",
-    place_result = "blast-furnace-4",
+    place_result = "angels-blast-furnace-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "blast-furnace-4",
+    name = "angels-blast-furnace-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/blast-furnace.png",
@@ -506,8 +506,8 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "blast-furnace-4" },
-    fast_replaceable_group = "blast-furnace",
+    minable = { mining_time = 1, result = "angels-blast-furnace-4" },
+    fast_replaceable_group = "angels-blast-furnace",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -516,7 +516,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "blast-smelting", "blast-smelting-2", "blast-smelting-3", "blast-smelting-4" },
+    crafting_categories = { "angels-blast-smelting", "angels-blast-smelting-2", "angels-blast-smelting-3", "angels-blast-smelting-4" },
     crafting_speed = 3,
     energy_source = {
       type = "burner",

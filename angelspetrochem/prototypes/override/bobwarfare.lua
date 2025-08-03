@@ -29,13 +29,13 @@ if mods["bobwarfare"] then
   data.raw["recipe"]["bob-nitroglycerin"].icons =
     angelsmods.functions.create_liquid_recipe_icon({ { "__bobwarfare__/graphics/icons/nitroglycerin.png", 64 } }, "CNO")
   -- move_item needs to be called before barrel_overrides
-  angelsmods.functions.move_item("bob-nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
+  angelsmods.functions.move_item("bob-nitroglycerin", "angels-petrochem-nitrogen-fluids", "ob", "fluid")
   OV.barrel_overrides("bob-nitroglycerin", "vanilla")
 
   -----------------------------------------------------------------------------
   -- RUBBER -------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if (settings.startup["bobmods-warfare-spidertron-overhaul"].value == true) and angelsmods.trigger.rubber then
-    OV.add_prereq("walking-vehicle", "rubbers")
+    OV.add_prereq("walking-vehicle", "angels-rubbers")
   end
 end

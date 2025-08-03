@@ -14,7 +14,7 @@ end
 
 function sea_pump:init_storage_data()
   local SP_data = {
-    ["version"] = 2, -- version of the storage data
+    ["version"] = 3, -- version of the storage data
 
     ["prototype_data"] = self:init_prototype_data(), -- data storing info about the prototypes
     ["entity_modules_data_tag"] = "sea-pump-modules_request", -- the tag name where the data is stored in the entity
@@ -24,9 +24,9 @@ end
 
 function sea_pump:init_prototype_data()
   return {
-    ["sea_pump_name"] = "sea-pump", -- the actual pump
-    ["sea_pump_placeable"] = "sea-pump-placeable", -- the name of the entity being placed
-    ["sea_pump_resource"] = "sea-pump-resource", -- the resource the actual pump is placed on
+    ["sea_pump_name"] = "angels-sea-pump", -- the actual pump
+    ["sea_pump_placeable"] = "angels-sea-pump-placeable", -- the name of the entity being placed
+    ["sea_pump_resource"] = "angels-sea-pump-resource", -- the resource the actual pump is placed on
   }
 end
 

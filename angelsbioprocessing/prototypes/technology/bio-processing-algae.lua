@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "bio-processing-brown",
+    name = "angels-bio-processing-brown",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
@@ -11,15 +11,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "algae-farm",
+        recipe = "angels-algae-farm",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-green-simple",
+        recipe = "angels-algae-green-simple",
       },
       {
         type = "unlock-recipe",
-        recipe = "cellulose-fiber-algae",
+        recipe = "angels-cellulose-fiber",
       },
     },
     unit = {
@@ -33,38 +33,38 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-processing-green",
+    name = "angels-bio-processing-green",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
-      "water-treatment",
+      "angels-bio-processing-brown",
+      "angels-water-treatment",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "algae-farm-2",
+        recipe = "angels-algae-farm-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-brown",
+        recipe = "angels-algae-brown",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-green",
+        recipe = "angels-algae-green",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-methanol-from-wood",
+        recipe = "angels-gas-methanol-from-wood",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-brown-burning",
+        recipe = "angels-algae-brown-burning",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-brown-burning-wash",
+        recipe = "angels-algae-brown-burning-wash",
       },
     },
     unit = {
@@ -77,32 +77,32 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-processing-red",
+    name = "angels-bio-processing-red",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      --"bio-processing-brown",
-      "bio-processing-green",
+      --"angels-bio-processing-brown",
+      "angels-bio-processing-green",
       "angels-nitrogen-processing-2",
-      "thermal-water-extraction",
+      "angels-thermal-water-extraction",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "algae-farm-3",
+        recipe = "angels-algae-farm-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-red",
+        recipe = "angels-algae-red",
       },
       {
         type = "unlock-recipe",
-        recipe = "red-fiber-algae",
+        recipe = "angels-red-cellulose-fiber",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-calcium-carbonate",
+        recipe = "angels-solid-calcium-carbonate",
       },
     },
     unit = {
@@ -116,30 +116,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "bio-processing-blue",
+    name = "angels-bio-processing-blue",
     icon = "__angelsbioprocessinggraphics__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-red",
+      "angels-bio-processing-red",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "algae-farm-4",
+        recipe = "angels-algae-farm-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-blue",
+        recipe = "angels-algae-blue",
       },
       {
         type = "unlock-recipe",
-        recipe = "blue-fiber-algae",
+        recipe = "angels-blue-cellulose-fiber",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-ammonia-from-blue-fiber",
+        recipe = "angels-gas-ammonia-from-blue-fiber",
       },
     },
     unit = {

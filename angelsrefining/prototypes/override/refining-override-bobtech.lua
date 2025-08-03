@@ -6,9 +6,9 @@ if mods["bobtech"] then
   -- STEAM BURNER PHASE ---------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
-    OV.add_prereq("ore-crushing", "automation-science-pack")
-    OV.add_prereq("ore-crushing", "bob-electricity")
-    OV.add_prereq("water-treatment", "bob-electricity")
+    OV.add_prereq("angels-ore-crushing", "automation-science-pack")
+    OV.add_prereq("angels-ore-crushing", "bob-electricity")
+    OV.add_prereq("angels-water-treatment", "bob-electricity")
 
     -- Glass becomes available much later in Angel's.
     -- Replace with tin plates in labs, and remove completely from Automation science.

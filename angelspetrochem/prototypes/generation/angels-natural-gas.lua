@@ -13,7 +13,7 @@ angelsmods.functions.add_resource("make", {
   category = "basic-fluid",
   -- normal = 10000,
   -- maximum = 50000,
-  output_name = "gas-natural-1",
+  output_name = "angels-gas-natural-1",
   output_min = 20,
   output_max = 20,
   icon = "__angelspetrochemgraphics__/graphics/icons/gas.png",
@@ -70,7 +70,7 @@ angelsmods.functions.add_resource("make", {
 -- {
 -- {
 -- type = "fluid",
--- name = "gas-natural-1",
+-- name = "angels-gas-natural-1",
 -- amount_min = 20,
 -- amount_max = 20,
 -- probability = 1

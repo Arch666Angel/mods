@@ -8,16 +8,16 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-ore-smelting",
+        recipe = "angels-ingot-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-lead-smelting",
+        recipe = "angels-liquid-molten-lead",
       },
       {
         type = "unlock-recipe",
@@ -40,26 +40,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-lead-smelting-1",
       "angels-coal-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-ore-processing",
+        recipe = "angels-processed-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-lead-smelting",
+        recipe = "angels-solid-lead-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lead-oxide-smelting",
+        recipe = "angels-ingot-lead-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-lead",
+        recipe = "angels-powder-lead",
       },
     },
     unit = {
@@ -79,17 +79,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-lead-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-lead-casting",
+        recipe = "angels-roll-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-lead-converting",
+        recipe = "angels-plate-lead-2",
       },
     },
     unit = {
@@ -109,7 +109,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-lead-smelting-2",
       "angels-sulfur-processing-2",
       "angels-stone-smelting-1",
@@ -117,19 +117,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "lead-processed-processing",
+        recipe = "angels-pellet-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-lead-smelting",
+        recipe = "angels-anode-lead",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-hexafluorosilicic-acid",
+        recipe = "angels-liquid-hexafluorosilicic-acid",
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-lead-smelting",
+        recipe = "angels-ingot-lead-3",
       },
     },
     unit = {
@@ -150,13 +150,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-lead-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-lead-casting-fast",
+        recipe = "angels-roll-lead-2",
       },
     },
     unit = {

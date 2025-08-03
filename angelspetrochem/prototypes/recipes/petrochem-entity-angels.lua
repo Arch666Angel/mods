@@ -2,7 +2,7 @@ angelsmods.functions.RB.build({
   --SEPARATOR
   {
     type = "recipe",
-    name = "separator",
+    name = "angels-separator",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -12,11 +12,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 5 },
       { type = "item", name = "t1-pipe", amount = 10 },
     },
-    results = { { type = "item", name = "separator", amount = 1 } },
+    results = { { type = "item", name = "angels-separator", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "separator-2",
+    name = "angels-separator-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -26,11 +26,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 5 },
       { type = "item", name = "t3-pipe", amount = 10 },
     },
-    results = { { type = "item", name = "separator-2", amount = 1 } },
+    results = { { type = "item", name = "angels-separator-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "separator-3",
+    name = "angels-separator-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -40,11 +40,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 5 },
       { type = "item", name = "t4-pipe", amount = 10 },
     },
-    results = { { type = "item", name = "separator-3", amount = 1 } },
+    results = { { type = "item", name = "angels-separator-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "separator-4",
+    name = "angels-separator-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -54,12 +54,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 5 },
       { type = "item", name = "t5-pipe", amount = 10 },
     },
-    results = { { type = "item", name = "separator-4", amount = 1 } },
+    results = { { type = "item", name = "angels-separator-4", amount = 1 } },
   },
   --GAS REFINERY SMALL
   {
     type = "recipe",
-    name = "gas-refinery-small",
+    name = "angels-gas-refinery-small",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -69,11 +69,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 4 },
       { type = "item", name = "t1-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "gas-refinery-small", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-small", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-small-2",
+    name = "angels-gas-refinery-small-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -83,11 +83,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 4 },
       { type = "item", name = "t3-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "gas-refinery-small-2", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-small-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-small-3",
+    name = "angels-gas-refinery-small-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -97,11 +97,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 4 },
       { type = "item", name = "t4-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "gas-refinery-small-3", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-small-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-small-4",
+    name = "angels-gas-refinery-small-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -111,12 +111,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 4 },
       { type = "item", name = "t5-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "gas-refinery-small-4", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-small-4", amount = 1 } },
   },
   --GAS REFINERY
   {
     type = "recipe",
-    name = "gas-refinery",
+    name = "angels-gas-refinery",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -126,11 +126,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 10 },
       { type = "item", name = "t3-pipe", amount = 19 },
     },
-    results = { { type = "item", name = "gas-refinery", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-2",
+    name = "angels-gas-refinery-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -140,11 +140,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 10 },
       { type = "item", name = "t4-pipe", amount = 19 },
     },
-    results = { { type = "item", name = "gas-refinery-2", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-3",
+    name = "angels-gas-refinery-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -154,11 +154,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 10 },
       { type = "item", name = "t5-pipe", amount = 19 },
     },
-    results = { { type = "item", name = "gas-refinery-3", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "gas-refinery-4",
+    name = "angels-gas-refinery-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -168,12 +168,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t6-brick", amount = 10 },
       { type = "item", name = "t6-pipe", amount = 10 },
     },
-    results = { { type = "item", name = "gas-refinery-4", amount = 1 } },
+    results = { { type = "item", name = "angels-gas-refinery-4", amount = 1 } },
   },
   --STEAM CRACKER
   {
     type = "recipe",
-    name = "steam-cracker",
+    name = "angels-steam-cracker",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -183,11 +183,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 4 },
       { type = "item", name = "t2-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "steam-cracker", amount = 1 } },
+    results = { { type = "item", name = "angels-steam-cracker", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "steam-cracker-2",
+    name = "angels-steam-cracker-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -197,11 +197,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 4 },
       { type = "item", name = "t3-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "steam-cracker-2", amount = 1 } },
+    results = { { type = "item", name = "angels-steam-cracker-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "steam-cracker-3",
+    name = "angels-steam-cracker-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -211,11 +211,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 4 },
       { type = "item", name = "t4-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "steam-cracker-3", amount = 1 } },
+    results = { { type = "item", name = "angels-steam-cracker-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "steam-cracker-4",
+    name = "angels-steam-cracker-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -225,12 +225,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-brick", amount = 4 },
       { type = "item", name = "t5-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "steam-cracker-4", amount = 1 } },
+    results = { { type = "item", name = "angels-steam-cracker-4", amount = 1 } },
   },
   --ADVANCED CHEMICAL PLANT
   {
     type = "recipe",
-    name = "advanced-chemical-plant",
+    name = "angels-advanced-chemical-plant",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -240,11 +240,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 4 },
       { type = "item", name = "t2-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "advanced-chemical-plant", amount = 1 } },
+    results = { { type = "item", name = "angels-advanced-chemical-plant", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "advanced-chemical-plant-2",
+    name = "angels-advanced-chemical-plant-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -254,7 +254,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 4 },
       { type = "item", name = "t4-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "advanced-chemical-plant-2", amount = 1 } },
+    results = { { type = "item", name = "angels-advanced-chemical-plant-2", amount = 1 } },
   },
   --FLARE STACK
   {
@@ -436,7 +436,7 @@ angelsmods.functions.RB.build({
   },
   {
     type = "recipe",
-    name = "oil-refinery-2",
+    name = "angels-oil-refinery-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -446,11 +446,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-circuit", amount = 4 },
       { type = "item", name = "t3-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "oil-refinery-2", amount = 1 } },
+    results = { { type = "item", name = "angels-oil-refinery-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "oil-refinery-3",
+    name = "angels-oil-refinery-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -460,11 +460,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-circuit", amount = 4 },
       { type = "item", name = "t4-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "oil-refinery-3", amount = 1 } },
+    results = { { type = "item", name = "angels-oil-refinery-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "oil-refinery-4",
+    name = "angels-oil-refinery-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -474,7 +474,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-circuit", amount = 4 },
       { type = "item", name = "t5-pipe", amount = 12 },
     },
-    results = { { type = "item", name = "oil-refinery-4", amount = 1 } },
+    results = { { type = "item", name = "angels-oil-refinery-4", amount = 1 } },
   },
   --CHEMICAL PLANT
   {

@@ -1,7 +1,7 @@
 -- re-enable washing technology
 for _, tech_name in pairs({
-  "water-washing-1",
-  "water-washing-2",
+  "angels-water-washing-1",
+  "angels-water-washing-2",
 }) do
   local tech_prototype = prototypes.technology[tech_name]
   if tech_prototype and tech_prototype.enabled then

@@ -7,20 +7,20 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-leaching",
+      "angels-ore-leaching",
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-coal-processing",
       "angels-stone-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-smelting",
+        recipe = "angels-ingot-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-cobalt-smelting",
+        recipe = "angels-liquid-molten-cobalt",
       },
       {
         type = "unlock-recipe",
@@ -28,7 +28,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-processing-alt",
+        recipe = "angels-solid-cobalt-oxide",
       },
     },
     unit = {
@@ -49,25 +49,25 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-cobalt-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-ore-processing",
+        recipe = "angels-processed-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-cobalt-smelting",
+        recipe = "angels-solid-cobalt-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-cobalt-oxide-smelting",
+        recipe = "angels-ingot-cobalt-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-cobalt",
+        recipe = "angels-powder-cobalt",
       },
     },
     unit = {
@@ -89,17 +89,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-cobalt-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-cobalt-casting",
+        recipe = "angels-roll-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-cobalt-converting",
+        recipe = "angels-plate-cobalt-2",
       },
     },
     unit = {
@@ -120,23 +120,23 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-5",
-      "ore-processing-4",
+      "angels-ore-processing-4",
       "angels-cobalt-smelting-2",
       "angels-sulfur-processing-1",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cobalt-processed-processing",
+        recipe = "angels-pellet-cobalt",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-cobalt-smelting",
+        recipe = "angels-solid-cobalt-hydroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-cobalt-hydroxide-smelting",
+        recipe = "angels-solid-cobalt-oxide-3",
       },
     },
     unit = {
@@ -159,13 +159,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-cobalt-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-cobalt-casting-fast",
+        recipe = "angels-roll-cobalt-2",
       },
     },
     unit = {

@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "steam-cracker",
+    name = "angels-steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-a",
-    place_result = "steam-cracker",
+    place_result = "angels-steam-cracker",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker",
+    name = "angels-steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-2",
+    minable = { mining_time = 1, result = "angels-steam-cracker" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +35,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -142,21 +142,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "steam-cracker-2",
+    name = "angels-steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-b",
-    place_result = "steam-cracker-2",
+    place_result = "angels-steam-cracker-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-2",
+    name = "angels-steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -165,9 +165,9 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-2" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-3",
+    minable = { mining_time = 1, result = "angels-steam-cracker-2" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -176,7 +176,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -267,21 +267,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "steam-cracker-3",
+    name = "angels-steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-c",
-    place_result = "steam-cracker-3",
+    place_result = "angels-steam-cracker-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-3",
+    name = "angels-steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -290,9 +290,9 @@ data:extend({
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-3" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-4",
+    minable = { mining_time = 1, result = "angels-steam-cracker-3" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -301,7 +301,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -392,21 +392,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "steam-cracker-4",
+    name = "angels-steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-d",
-    place_result = "steam-cracker-4",
+    place_result = "angels-steam-cracker-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-4",
+    name = "angels-steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -415,8 +415,8 @@ data:extend({
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-4" },
-    fast_replaceable_group = "steam-cracker",
+    minable = { mining_time = 1, result = "angels-steam-cracker-4" },
+    fast_replaceable_group = "angels-steam-cracker",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -425,7 +425,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",

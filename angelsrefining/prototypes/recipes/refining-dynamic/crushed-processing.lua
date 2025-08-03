@@ -2,15 +2,15 @@ data:extend({
   --Tier 1
   {
     type = "recipe",
-    name = "angelsore1-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore1-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -22,19 +22,19 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "a[angelsore1-crushed-processing]",
+    order = "a[angels-ore1-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore2-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore2-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore2-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -46,19 +46,19 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "b[angelsore2-crushed-processing]",
+    order = "b[angels-ore2-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore3-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore3-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -70,19 +70,19 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "c[angelsore3-crushed-processing]",
+    order = "c[angels-ore3-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore4-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore4-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore4-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -94,19 +94,19 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "d[angelsore4-crushed-processing]",
+    order = "d[angels-ore4-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore5-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore5-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -118,19 +118,19 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "e[angelsore5-crushed-processing]",
+    order = "e[angels-ore5-crushed-processing]",
   },
   {
     type = "recipe",
-    name = "angelsore6-crushed-processing",
-    category = "ore-sorting",
-    subgroup = "ore-sorting-t1",
+    name = "angels-ore6-crushed-processing",
+    category = "angels-ore-sorting",
+    subgroup = "angels-ore-sorting-t1",
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
     ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 4 } },
     results = {
-      { type = "item", name = "slag", amount = 1 },
+      { type = "item", name = "angels-slag", amount = 1 },
     },
     icons = {
       { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
@@ -142,6 +142,6 @@ data:extend({
         shift = { -10, 10 }
       },
     },
-    order = "f[angelsore6-crushed-processing]",
+    order = "f[angels-ore6-crushed-processing]",
   },
 })

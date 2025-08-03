@@ -17,10 +17,12 @@ data:extend({
   {
     type = "ammo-category",
     name = "angels-cab-deploy",
+    hidden = true,
   },
   {
     type = "ammo-category",
     name = "angels-cab-undeploy",
+    hidden = true,
   },
   --SUBGROUPS
   {

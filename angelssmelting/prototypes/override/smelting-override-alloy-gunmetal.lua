@@ -13,7 +13,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       --ITEMS
       {
         type = "fluid",
-        name = "liquid-molten-gunmetal",
+        name = "angels-liquid-molten-gunmetal",
         icon = "__angelssmeltinggraphics__/graphics/icons/molten-gunmetal.png",
         icon_size = 64,
         subgroup = "angels-alloys-casting",
@@ -30,34 +30,33 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       --SMELTING
       {
         type = "recipe",
-        name = "angels-gunmetal-smelting-1",
-        localised_name = { "fluid-name.liquid-molten-gunmetal" },
-        category = "induction-smelting-2",
+        name = "angels-liquid-molten-gunmetal",
+        category = "angels-induction-smelting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "item", name = "ingot-tin", amount = 6 },
-          { type = "item", name = "ingot-zinc", amount = 12 },
-          { type = "item", name = "ingot-copper", amount = 18 },
+          { type = "item", name = "angels-ingot-tin", amount = 6 },
+          { type = "item", name = "angels-ingot-zinc", amount = 12 },
+          { type = "item", name = "angels-ingot-copper", amount = 18 },
         },
         results = {
-          { type = "fluid", name = "liquid-molten-gunmetal", amount = 360 },
+          { type = "fluid", name = "angels-liquid-molten-gunmetal", amount = 360 },
         },
         order = "c[gunmetal]-a[liquid-molten-gunmetal]",
-        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-gunmetal"),
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-gunmetal"),
       },
       --CASTING
       {
         type = "recipe",
         name = "angels-plate-gunmetal",
         localised_name = { "item-name.bob-gunmetal-alloy" },
-        category = "casting-2",
+        category = "angels-casting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
         enabled = false,
         ingredients = {
-          { type = "fluid", name = "liquid-molten-gunmetal", amount = 40 },
+          { type = "fluid", name = "angels-liquid-molten-gunmetal", amount = 40 },
         },
         results = {
           { type = "item", name = "bob-gunmetal-alloy", amount = 4 },
@@ -78,7 +77,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         effects = {
           {
             type = "unlock-recipe",
-            recipe = "angels-gunmetal-smelting-1",
+            recipe = "angels-liquid-molten-gunmetal",
           },
           {
             type = "unlock-recipe",

@@ -70,7 +70,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting" },
+    crafting_categories = { "angels-chemical-smelting" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -201,7 +201,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -332,7 +332,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2", "angels-chemical-smelting-3" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -462,7 +462,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3", "chemical-smelting-4" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2", "angels-chemical-smelting-3", "angels-chemical-smelting-4" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",

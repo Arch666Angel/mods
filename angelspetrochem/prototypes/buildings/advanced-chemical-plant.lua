@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "advanced-chemical-plant",
+    name = "angels-advanced-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "b[advanced]-a",
-    place_result = "advanced-chemical-plant",
+    place_result = "angels-advanced-chemical-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "advanced-chemical-plant",
+    name = "angels-advanced-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "advanced-chemical-plant" },
-    fast_replaceable_group = "advanced-chemical-plant",
-    next_upgrade = "advanced-chemical-plant-2",
+    minable = { mining_time = 1, result = "angels-advanced-chemical-plant" },
+    fast_replaceable_group = "angels-advanced-chemical-plant",
+    next_upgrade = "angels-advanced-chemical-plant-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +35,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-chemistry" },
+    crafting_categories = { "angels-advanced-chemistry" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -128,21 +128,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "advanced-chemical-plant-2",
+    name = "angels-advanced-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "b[advanced]-b",
-    place_result = "advanced-chemical-plant-2",
+    place_result = "angels-advanced-chemical-plant-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "advanced-chemical-plant-2",
+    name = "angels-advanced-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
@@ -151,8 +151,8 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "advanced-chemical-plant-2" },
-    fast_replaceable_group = "advanced-chemical-plant",
+    minable = { mining_time = 1, result = "angels-advanced-chemical-plant-2" },
+    fast_replaceable_group = "angels-advanced-chemical-plant",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -161,7 +161,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-chemistry" },
+    crafting_categories = { "angels-advanced-chemistry" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",

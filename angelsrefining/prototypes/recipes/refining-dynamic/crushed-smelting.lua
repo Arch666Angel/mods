@@ -2,7 +2,7 @@ data:extend({
   --Tier 0
   {
     type = "recipe",
-    name = "angelsore1-crushed-smelting",
+    name = "angels-ore1-crushed-smelting",
     localised_name = { "item-name.iron-plate" },
     category = "smelting",
     subgroup = "raw-material",
@@ -31,7 +31,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore3-crushed-smelting",
+    name = "angels-ore3-crushed-smelting",
     localised_name = { "item-name.copper-plate" },
     category = "smelting",
     subgroup = "raw-material",
@@ -61,7 +61,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angelsore5-crushed-smelting",
+    name = "angels-ore5-crushed-smelting",
     localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
@@ -73,11 +73,11 @@ data:extend({
     enabled = true,
     allow_decomposition = false,
     icon_size = 32,
-    order = "a-a [angelsore5-crushed-smelting]",
+    order = "a-a [angels-ore5-crushed-smelting]",
   },
   {
     type = "recipe",
-    name = "angelsore6-crushed-smelting",
+    name = "angels-ore6-crushed-smelting",
     localised_name = { "item-name.angels-void" },
     category = "smelting",
     subgroup = "raw-material",
@@ -89,6 +89,6 @@ data:extend({
     enabled = true,
     allow_decomposition = false,
     icon_size = 32,
-    order = "a-a [angelsore6-crushed-smelting]",
+    order = "a-a [angels-ore6-crushed-smelting]",
   },
 })
