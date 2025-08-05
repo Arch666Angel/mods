@@ -26,8 +26,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "za",
-      probability_expression = 0.00005,
-      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      probability_expression = 0.00003,
     },
     pictures = {
       {

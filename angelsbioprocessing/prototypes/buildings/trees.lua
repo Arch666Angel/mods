@@ -2,7 +2,6 @@ data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["ange
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-tree"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-tree"] = {}
 
-
 data:extend({
   {
     type = "item",
