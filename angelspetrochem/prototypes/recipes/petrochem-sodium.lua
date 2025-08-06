@@ -223,14 +223,14 @@ data:extend({
     },
     main_product = "angels-liquid-aqueous-sodium-hydroxide",
     always_show_products = true,
-    icons = AF.create_liquid_recipe_icon(nil, { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }),
+    icons = AF.create_liquid_recipe_icon({ "angels-solid-sodium-carbonate" }, { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-aqueous-sodium-hydroxide",
       "angels-water-purified",
       AF.fluid_color("Na2CO3"),
       "angels-gas-carbon-dioxide",
     }),
-    order = "e[liquid-sodium-hydroxide]-a[generation]",
+    order = "e[liquid-sodium-hydroxide]-b[generation]",
   },
   {
     -- from solid
@@ -250,13 +250,13 @@ data:extend({
     },
     main_product = "angels-liquid-aqueous-sodium-hydroxide",
     always_show_products = true,
-    icons = AF.create_liquid_recipe_icon(nil, { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }),
+    icons = AF.create_liquid_recipe_icon({ "angels-solid-sodium-hydroxide" }, { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-aqueous-sodium-hydroxide",
       "angels-water-purified",
       AF.fluid_color("NaOH"),
     }),
-    order = "e[liquid-sodium-hydroxide]-b[hydroxide]",
+    order = "e[liquid-sodium-hydroxide]-a[hydroxide]",
   },
   -- LIQUID HYDROXIDE SYNTHESIS
   {
