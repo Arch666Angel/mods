@@ -46,6 +46,7 @@ data:extend({
     main_product = "angels-ore1-crushed",
     allow_decomposition = false,
     always_show_made_in = true,
+    hidden_in_factoriopedia = true,
     order = "a[angels-ore1-crushed-hand]",
   },
   {
@@ -117,6 +118,7 @@ data:extend({
     main_product = "angels-ore3-crushed",
     allow_decomposition = false,
     always_show_made_in = true,
+    hidden_in_factoriopedia = true,
     order = "b[angels-ore3-crushed-hand]",
   },
   {
