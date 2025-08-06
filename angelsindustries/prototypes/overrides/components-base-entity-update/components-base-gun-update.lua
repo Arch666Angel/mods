@@ -5,45 +5,45 @@ if angelsmods.industries.components then
     -- laser rifle
     OV.patch_recipes({
       --[[{
-          name = "laser-rifle-battery",
+          name = "bob-laser-rifle-battery",
           ingredients =
           {
             { type = "item", name = "battery-1", amount = "battery-1" }
           },
         },]]
       --[[{
-          name = "laser-rifle-battery-ruby",
+          name = "bob-laser-rifle-battery-ruby",
           ingredients =
           {
             { type = "item", name = "battery-1", amount = "battery-1" }
           },
         },]]
       {
-        name = "laser-rifle-battery-sapphire",
+        name = "bob-laser-rifle-battery-sapphire",
         ingredients = {
           { type = "item", name = "battery-2", amount = "battery-1" },
         },
       },
       {
-        name = "laser-rifle-battery-emerald",
+        name = "bob-laser-rifle-battery-emerald",
         ingredients = {
           { type = "item", name = "battery-3", amount = mods["bobplates"] and "battery-3" or "battery-1" },
         },
       },
       {
-        name = "laser-rifle-battery-amethyst",
+        name = "bob-laser-rifle-battery-amethyst",
         ingredients = {
           { type = "item", name = "battery-4", amount = mods["bobplates"] and "battery-3" or "battery-1" },
         },
       },
       {
-        name = "laser-rifle-battery-topaz",
+        name = "bob-laser-rifle-battery-topaz",
         ingredients = {
           { type = "item", name = "battery-5", amount = mods["bobplates"] and "battery-6" or "battery-1" },
         },
       },
       {
-        name = "laser-rifle-battery-diamond",
+        name = "bob-laser-rifle-battery-diamond",
         ingredients = {
           {
             type = "item",

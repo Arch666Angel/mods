@@ -221,4 +221,9 @@ if mods["bobgreenhouse"] then
   OV.add_prereq("angels-bio-arboretum-desert-1", "bob-greenhouse")
   OV.add_prereq("angels-bio-arboretum-swamp-1", "bob-greenhouse")
   OV.add_prereq("angels-bio-arboretum-temperate-1", "bob-greenhouse")
+
+  -- hide Bob's wood pellets
+  OV.global_replace_item("bob-wood-pellets", "angels-wood-pellets")
+  OV.disable_recipe({ "bob-wood-pellets" })
+  angelsmods.functions.hide("bob-wood-pellets")
 end

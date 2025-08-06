@@ -267,7 +267,7 @@ if angelsmods.industries.overhaul then
       if data.raw.item["bob-thorium-fuel-cell"] then
         OV.disable_recipe("bob-thorium-fuel-cell")
         if data.raw.reactor["bob-nuclear-reactor-2"] then
-          data.raw.item["angels-thorium-fuel-cell"].fuel_category = "thorium"
+          data.raw.item["angels-thorium-fuel-cell"].fuel_category = "bob-thorium"
           OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
           OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
         end
@@ -276,7 +276,7 @@ if angelsmods.industries.overhaul then
       if data.raw.item["bob-deuterium-fuel-cell"] then
         OV.disable_recipe("bob-deuterium-fuel-cell")
         if data.raw.reactor["bob-nuclear-reactor-3"] then
-          data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "deuterium"
+          data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
           OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power-1")
         end
       end

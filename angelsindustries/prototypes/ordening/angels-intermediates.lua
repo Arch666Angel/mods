@@ -56,30 +56,26 @@ if angelsmods.industries.overhaul then
   move_item("advanced-circuit", "angels-loaded-circuit-board", "y[vanilla]-b")
   move_item("processing-unit", "angels-loaded-circuit-board", "y[vanilla]-c")
 
-  if mods["bobplates"] then
-    move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
+  if mods["bobplates"] or mods["bobelectronics"] then
+    move_item("bob-advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-a")
   end
 
   if mods["bobelectronics"] then
-    move_item("basic-electronic-components", "angels-circuit-components", "z[bob]-a")
-    move_item("electronic-components", "angels-circuit-components", "z[bob]-b")
-    move_item("intergrated-electronics", "angels-circuit-components", "z[bob]-c")
-    move_item("processing-electronics", "angels-circuit-components", "z[bob]-d")
+    move_item("bob-basic-circuit-board", "angels-loaded-circuit-board", "x[bob]-a")
 
-    move_item("wooden-board", "angels-board", "z[bob]-a")
-    move_item("phenolic-board", "angels-board", "z[bob]-b")
-    move_item("fibreglass-board", "angels-board", "z[bob]-c")
+    move_item("bob-basic-electronic-components", "angels-circuit-components", "z[bob]-a")
+    move_item("bob-electronic-components", "angels-circuit-components", "z[bob]-b")
+    move_item("bob-integrated-electronics", "angels-circuit-components", "z[bob]-c")
+    move_item("bob-processing-electronics", "angels-circuit-components", "z[bob]-d")
+
+    move_item("bob-wooden-board", "angels-board", "z[bob]-a")
+    move_item("bob-phenolic-board", "angels-board", "z[bob]-b")
+    move_item("bob-fibreglass-board", "angels-board", "z[bob]-c")
     move_item("angels-glass-fiber-board", "angels-board", "z[bob]-c", "recipe")
 
-    move_item("bob-basic-circuit-board", "angels-circuit-board", "z[bob]-a")
-    move_item("circuit-board", "angels-circuit-board", "z[bob]-b")
-    move_item("bob-superior-circuit-board", "angels-circuit-board", "z[bob]-c")
-    move_item("bob-multi-layer-circuit-board", "angels-circuit-board", "z[bob]-d")
-
-    --move_item("electronic-circuit", "angels-loaded-circuit-board", "z[bob]-a")
-    --move_item("advanced-circuit", "angels-loaded-circuit-board", "z[bob]-b")
-    --move_item("processing-unit", "angels-loaded-circuit-board", "z[bob]-c")
-    --move_item("advanced-processing-unit", "angels-loaded-circuit-board", "z[bob]-d")
+    move_item("bob-circuit-board", "angels-circuit-board", "z[bob]-a")
+    move_item("bob-superior-circuit-board", "angels-circuit-board", "z[bob]-b")
+    move_item("bob-multi-layer-circuit-board", "angels-circuit-board", "z[bob]-c")
   end
 end
 
@@ -102,7 +98,6 @@ end
 move_item("rocket-silo", "production-machine", "z[rocket]-a[silo]")
 
 if angelsmods.industries.overhaul then
-  move_item("rocket-control-unit", "angels-basic-intermediate", "z[rocket]-a[rcu]")
   move_item("low-density-structure", "angels-basic-intermediate", "z[rocket]-b[lds]")
 
   if mods["bobrevamp"] then
@@ -118,6 +113,7 @@ if angelsmods.industries.overhaul then
     move_item("satellite", "angels-pack-components", "dba")
   else
     move_item("satellite", "angels-basic-intermediate", "z[rocket]-z[satellite]")
+    move_item("rocket-part", "angels-basic-intermediate", "z[rocket]-z[rocket-part]")
   end
 end
 

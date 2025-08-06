@@ -1,3 +1,7 @@
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-tree"] = {}
+
 data:extend({
   {
     type = "item",
@@ -31,19 +35,9 @@ data:extend({
     order = "z-a",
     impact_category = "wood",
     autoplace = {
---       order = "xaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.625,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      order = "xaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {
@@ -98,19 +92,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.875,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      order = "yaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {
@@ -171,19 +155,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.25,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      order = "yaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {
