@@ -76,22 +76,12 @@ if angelsmods.trigger.artifacts["red"] then
     OV.add_unlock("angels-bio-processing-alien-3", "angels-alien-pre-artifact-red")
     OV.add_unlock("angels-bio-processing-alien-3", "angels-small-alien-artifact-red")
 
-      if bobmods and bobmods.plates then
-        OV.patch_recipes({
-            { name = "alien-pre-artifact-" .. color, ingredients = { { type = "item", name = gem, amount = 1 } } },
-        })
-      end
-    end
-
-    if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-" .. color] then
-      if angelsmods.trigger.bio_pastes[paste] or angelsmods.exploration then
-        angelsmods.functions.move_item("bob-small-alien-artifact-" .. color, "bio-processing-alien-small", "a[" .. color .. "]")
-      end
-      angelsmods.functions.move_item("bob-alien-artifact-" .. color, "bio-processing-alien-large", "a[" .. color .. "]")
+    if bobmods and bobmods.plates then
       OV.patch_recipes({
         { name = "angels-alien-pre-artifact-red", ingredients = { { type = "item", name = "bob-ruby-4", amount = 1 } } },
       })
     end
+  end
 
   if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-red"] then
     if angelsmods.trigger.bio_pastes["copper"] or angelsmods.exploration then
