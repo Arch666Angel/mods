@@ -425,6 +425,10 @@ data:extend({
       },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-queen-small" },
+      "angels-bio-raw-meat"
+    ),
     order = "a[small]-b[queen]",
   },
   {
@@ -443,6 +447,10 @@ data:extend({
       { type = "item", name = "angels-crystal-splinter-raw", amount = 1, probability = 0.9 },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-small" },
+      "angels-bio-raw-meat"
+    ),
     order = "a[small]-a[normal]",
   },
   {
@@ -468,6 +476,10 @@ data:extend({
       },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-queen-medium" },
+      "angels-bio-raw-meat"
+    ),
     order = "b[medium]-b[queen]",
   },
   {
@@ -486,6 +498,10 @@ data:extend({
       { type = "item", name = "angels-crystal-shard-raw", amount = 1, probability = 0.7 },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-medium" },
+      "angels-bio-raw-meat"
+    ),
     order = "b[medium]-a[normal]",
   },
   {
@@ -511,6 +527,10 @@ data:extend({
       },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-queen-big" },
+      "angels-bio-raw-meat"
+    ),
     order = "c[big]-b[queen]",
   },
   {
@@ -529,6 +549,10 @@ data:extend({
       { type = "item", name = "angels-crystal-full-raw", amount = 1, probability = 0.5 },
     },
     main_product = "angels-bio-raw-meat",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-biter-big" },
+      "angels-bio-raw-meat"
+    ),
     order = "c[big]-a[normal]",
   },
 })

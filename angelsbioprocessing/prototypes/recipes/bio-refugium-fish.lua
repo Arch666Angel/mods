@@ -348,8 +348,10 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1, probability = 0.5 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "raw-fish" },
+      "angels-bio-raw-meat"
+    ),
     order = "aa",
   },
   {
@@ -366,8 +368,10 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-alien-fish-1-raw" },
+      "angels-bio-raw-meat"
+    ),
     order = "ab",
   },
   {
@@ -384,8 +388,10 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-alien-fish-2-raw" },
+      "angels-bio-raw-meat"
+    ),
     order = "ac",
   },
   {
@@ -402,8 +408,10 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 2 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-alien-fish-3-raw" },
+      "angels-bio-raw-meat"
+    ),
     order = "ad",
   },
   ---------------------------------------------------------------------------
