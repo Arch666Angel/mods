@@ -546,8 +546,18 @@ data:extend({
     results = {
       { type = "item", name = "angels-coal-crushed", amount = 2 },
     },
-    icon = "__angelspetrochemgraphics__/graphics/icons/coal-crushed.png",
-    icon_size = 32,
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-coal-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     order = "b[coal-crushed]",
   },
   {

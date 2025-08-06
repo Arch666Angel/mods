@@ -4,7 +4,7 @@ data:extend({
     type = "recipe",
     name = "angels-geode-blue-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -14,23 +14,25 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 1 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-blue.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-blue"),
+      { -10, 10 },
+      0.6
+    ),
     order = "a[geode-blue-processing]",
   },
   {
     type = "recipe",
     name = "angels-geode-red-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -40,23 +42,25 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 1 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-red.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-red"),
+      { -10, 10 },
+      0.5
+    ),
     order = "f[geode-red-processing]",
   },
   {
     type = "recipe",
     name = "angels-geode-yellow-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -66,23 +70,25 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-yellow.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-yellow"),
+      { -10, 10 },
+      0.5
+    ),
     order = "c[geode-yellow-processing]",
   },
   {
     type = "recipe",
     name = "angels-geode-purple-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -92,23 +98,25 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 3 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-purple.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-purple"),
+      { -10, 10 },
+      0.5
+    ),
     order = "b[geode-purple-processing]",
   },
   {
     type = "recipe",
     name = "angels-geode-cyan-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -118,23 +126,25 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 3 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-cyan.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-cyan"),
+      { -10, 10 },
+      0.5
+    ),
     order = "e[geode-cyan-processing]",
   },
   {
     type = "recipe",
     name = "angels-geode-lightgreen-processing",
     category = "angels-ore-refining-t1",
-    subgroup = "angels-geode-processing-1",
+    subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -144,16 +154,18 @@ data:extend({
       { type = "item", name = "angels-crystal-dust", amount = 3 },
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/crystal-dust.png",
-        icon_size = 32
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
       },
-      { icon = "__angelsrefininggraphics__/graphics/icons/geode-lightgreen.png",
-        icon_size = 32,
-        scale = 0.5,
-        shift = { -10, -10 }
-      },
-    },
+      angelsmods.functions.get_object_icons("angels-geode-lightgreen"),
+      { -10, 10 },
+      0.5
+    ),
     order = "d[geode-lightgreen-processing]",
   },
 })

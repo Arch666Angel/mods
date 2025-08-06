@@ -153,6 +153,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "angels-geode-processing-2",
+    group = "angels-resource-refining",
+    order = "c[sorting]-d[geode]2",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-ores",
     group = "angels-resource-refining",
     order = "d[ores]",

@@ -192,6 +192,18 @@ data:extend({
     results = {
       { type = "item", name = "angels-stone-crushed", amount = 2 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-stone-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     order = "c[slag-processing-stone]",
   },
   {

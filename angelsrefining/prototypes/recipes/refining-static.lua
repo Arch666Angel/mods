@@ -16,6 +16,18 @@ data:extend({
       { type = "item", name = "angels-ore1-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore1-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore1-crushed",
     order = "a[angels-ore1-crushed]",
   },
@@ -48,6 +60,18 @@ data:extend({
       { type = "item", name = "angels-ore2-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore2-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore2-crushed",
     order = "b[angels-ore2-crushed]",
   },
@@ -63,6 +87,18 @@ data:extend({
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore3-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore3-crushed",
     order = "c[angels-ore3-crushed]",
   },
@@ -95,6 +131,18 @@ data:extend({
       { type = "item", name = "angels-ore4-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore4-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore4-crushed",
     order = "d[angels-ore4-crushed]",
   },
@@ -110,6 +158,18 @@ data:extend({
       { type = "item", name = "angels-ore5-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore5-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore5-crushed",
     order = "e[angels-ore5-crushed]",
   },
@@ -125,6 +185,18 @@ data:extend({
       { type = "item", name = "angels-ore6-crushed", amount = 2 },
       { type = "item", name = "angels-stone-crushed", amount = 1 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore6-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     main_product = "angels-ore6-crushed",
     order = "f[angels-ore6-crushed]",
   },
@@ -146,6 +218,18 @@ data:extend({
     results = {
       { type = "item", name = "angels-ore8-crushed", amount = 6 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore8-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     always_show_products = true,
     show_amount_in_title = false,
     order = "g",
@@ -183,6 +267,18 @@ data:extend({
     results = {
       { type = "item", name = "angels-ore9-crushed", amount = 6 },
     },
+    icons = angelsmods.functions.add_icon_layer(
+      {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+          icon_size = 64,
+          scale = 0.5
+        }
+      },
+      angelsmods.functions.get_object_icons("angels-ore9-crushed"),
+      { 10, 10 },
+      0.5
+    ),
     always_show_products = true,
     show_amount_in_title = false,
     order = "i",
