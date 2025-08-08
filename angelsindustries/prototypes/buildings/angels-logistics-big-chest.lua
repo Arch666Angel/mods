@@ -1,5 +1,5 @@
 circuit_connector_definitions["angels-big-chest"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 26, main_offset = util.by_pixel(16, 16), shadow_offset = util.by_pixel(18, 28), show_shadow = false },
+  { variation =  5, main_offset = util.by_pixel( 13,  1.625), shadow_offset = util.by_pixel( 13,  1.625), show_shadow = true },
 })
 
 data:extend({
@@ -47,8 +47,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -96,8 +95,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -145,8 +143,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -184,8 +181,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -234,8 +230,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -283,8 +278,7 @@ data:extend({
       height = 256,
       shift = { 0, 0 },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-big-chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-big-chest"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-big-chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

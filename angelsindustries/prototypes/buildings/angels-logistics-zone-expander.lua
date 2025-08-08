@@ -1,12 +1,12 @@
-circuit_connector_definitions["angels-zone-expander-1"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 12), show_shadow = false },
-  })
-
-circuit_connector_definitions["angels-zone-expander-2"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 26, main_offset = util.by_pixel(8, 0), shadow_offset = util.by_pixel(10, 12), show_shadow = false },
-  })
+circuit_connector_definitions["angels-zone-expander"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-3.5,  5), shadow_offset = util.by_pixel(-3.5,  5), show_shadow = true },
+})
+circuit_connector_definitions["angels-zone-expander-2"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-3.875,  21.5), shadow_offset = util.by_pixel(-3.875,  21.5), show_shadow = true },
+})
+circuit_connector_definitions["angels-zone-expander-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 8.125,  11), shadow_offset = util.by_pixel( 8.125,  11), show_shadow = true },
+})
 
 data:extend({
   {
@@ -93,8 +93,7 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-zone-expander-1"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-zone-expander-1"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-zone-expander"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
@@ -188,8 +187,7 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-zone-expander-2"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-zone-expander-2"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-zone-expander-2"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
@@ -282,8 +280,7 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-zone-expander-2"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-zone-expander-2"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-zone-expander-3"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
