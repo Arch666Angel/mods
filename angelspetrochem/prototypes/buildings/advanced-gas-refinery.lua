@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-gas-refinery"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 60.875, -36.25), shadow_offset = util.by_pixel( 60.875, -36.25), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(-21.5,  12.75), shadow_offset = util.by_pixel(-21.5,  12.75), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-104, -114.875), shadow_offset = util.by_pixel(-104, -114.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 42.25, -148.75), shadow_offset = util.by_pixel( 42.25, -148.75), show_shadow = true },
+})
+
 data:extend({
   --ADVANCED REFINERY
   {
@@ -44,6 +51,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -362,6 +371,8 @@ data:extend({
       emissions_per_minute = { pollution = 4.8 },
     },
     energy_usage = "450kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -680,6 +691,8 @@ data:extend({
       emissions_per_minute = { pollution = 6 },
     },
     energy_usage = "500kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -997,6 +1010,8 @@ data:extend({
       emissions_per_minute = { pollution = 7.2 },
     },
     energy_usage = "600kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

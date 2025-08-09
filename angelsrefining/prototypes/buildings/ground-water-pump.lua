@@ -8,6 +8,13 @@ local create_static_stripes = function(stripe, stripe_count)
   return stripes
 end
 
+circuit_connector_definitions["angels-ground-water-pump"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 31, main_offset = util.by_pixel( 16.125, -0.5), shadow_offset = util.by_pixel( 16.125, -0.5), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 4.625,  6.375), shadow_offset = util.by_pixel( 4.625,  6.375), show_shadow = true },
+  { variation = 29, main_offset = util.by_pixel(-15.625,  5.625), shadow_offset = util.by_pixel(-15.625,  5.625), show_shadow = true },
+  { variation =  2, main_offset = util.by_pixel(-5.625,  8.375), shadow_offset = util.by_pixel(-5.625,  8.375), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -199,8 +206,7 @@ data:extend({
         },
       },
     },
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-ground-water-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

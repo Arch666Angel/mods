@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-salination-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -42,6 +49,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-salination-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -137,6 +146,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-salination-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

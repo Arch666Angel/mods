@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-ore-leaching-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 26.875,  23.75), shadow_offset = util.by_pixel( 26.875,  23.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 26.875,  23.75), shadow_offset = util.by_pixel( 26.875,  23.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 26.875,  23.75), shadow_offset = util.by_pixel( 26.875,  23.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 26.875,  23.75), shadow_offset = util.by_pixel( 26.875,  23.75), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -42,6 +49,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-leaching-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/1ore-leaching-plant.png",
@@ -120,6 +129,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-leaching-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -209,6 +220,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-leaching-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

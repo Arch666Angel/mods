@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-separator"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 30,  27.875), shadow_offset = util.by_pixel( 30,  27.875), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 30,  27.875), shadow_offset = util.by_pixel( 30,  27.875), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 30,  27.875), shadow_offset = util.by_pixel( 30,  27.875), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 30,  27.875), shadow_offset = util.by_pixel( 30,  27.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -43,6 +50,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-separator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -154,6 +163,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-separator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -264,6 +275,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-separator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -373,6 +386,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "325kW",
+    circuit_connector = circuit_connector_definitions["angels-separator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {

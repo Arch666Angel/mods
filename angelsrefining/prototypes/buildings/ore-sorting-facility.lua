@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-ore-sorting-facility"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -41,6 +48,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 2,
     graphics_set = {
       animation = {
@@ -118,6 +127,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -195,6 +206,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
     graphics_set = {
       animation = {
@@ -272,6 +285,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
     graphics_set = {
       animation = {
@@ -348,6 +363,8 @@ data:extend({
       emissions_per_minute = { pollution = 4.2 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

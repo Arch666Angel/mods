@@ -1,3 +1,24 @@
+circuit_connector_definitions["angels-storage-tank-1"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-storage-tank-2"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel(-43.5,  12.375), shadow_offset = util.by_pixel(-43.5,  12.375), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 43.375,  14), shadow_offset = util.by_pixel( 43.375,  14), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-43.5,  12.375), shadow_offset = util.by_pixel(-43.5,  12.375), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 43.375,  14), shadow_offset = util.by_pixel( 43.375,  14), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-storage-tank-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+})
+
 data:extend({
   ---------------------------------------------------------------------------
   -- GAS TANK ---------------------------------------------------------------
@@ -100,8 +121,7 @@ data:extend({
       match_volume_to_activity = true,
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-1"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   ---------------------------------------------------------------------------
@@ -204,8 +224,7 @@ data:extend({
       },
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-2"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   ---------------------------------------------------------------------------
@@ -302,8 +321,7 @@ data:extend({
       },
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-3"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })
