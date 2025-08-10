@@ -71,8 +71,8 @@ if mods["bobplates"] then
   OV.add_unlock("angels-fluid-control", "bob-small-storage-tank")
   OV.add_unlock("angels-fluid-control", "bob-small-inline-storage-tank")
 
-  OV.global_replace_technology("bob-electrolysis-1", "basic-chemistry")
-  OV.global_replace_technology("bob-electrolysis-2", "basic-chemistry-2")
+  OV.global_replace_technology("bob-electrolysis-1", "angels-basic-chemistry")
+  OV.global_replace_technology("bob-electrolysis-2", "angels-basic-chemistry-2")
   OV.disable_technology({ "bob-electrolysis-1", "bob-electrolysis-2" })
 
   --clean-up pre-requisites
@@ -86,9 +86,9 @@ if mods["bobplates"] then
   OV.remove_prereq("plastics", "chemical-plant")
   OV.remove_prereq("plastics", "bob-electrolysis-2")
   OV.remove_prereq("bob-aluminium-processing", "bob-electrolysis-2")
-  OV.add_prereq("bob-aluminium-processing", "chlorine-processing-1")
+  OV.add_prereq("bob-aluminium-processing", "angels-chlorine-processing-1")
   OV.remove_prereq("bob-gold-processing-2", "bob-electrolysis-2")
-  OV.add_prereq("bob-gold-processing", "chlorine-processing-1")
+  OV.add_prereq("bob-gold-processing", "angels-chlorine-processing-1")
   OV.remove_prereq("bob-battery-3", "electrolysis-2")
   OV.add_prereq("bob-grinding", "steel-processing")
 end
@@ -104,58 +104,58 @@ if mods["bobplates"] then
     {
       name = "bob-lithium-water-electrolysis",
       results = {
-        { name = "gas-hydrogen", type = "fluid", amount = 20 },
+        { name = "angels-gas-hydrogen", type = "fluid", amount = 20 },
       },
     },
   })
 
   -- oxygen processing --------------------------------------------------------
-  OV.converter_fluid("bob-oxygen", "gas-oxygen")
-  OV.converter_fluid("bob-hydrogen", "gas-hydrogen")
+  OV.converter_fluid("bob-oxygen", "angels-gas-oxygen")
+  OV.converter_fluid("bob-hydrogen", "angels-gas-hydrogen")
   OV.disable_recipe({ "bob-water-electrolysis", "bob-solid-fuel-from-hydrogen" })
-  OV.add_prereq("bob-chemical-processing-1", "basic-chemistry")
+  OV.add_prereq("bob-chemical-processing-1", "angels-basic-chemistry")
 
   -- chloride processing ------------------------------------------------------
-  OV.converter_fluid("bob-chlorine", "gas-chlorine")
+  OV.converter_fluid("bob-chlorine", "angels-gas-chlorine")
   OV.disable_recipe({ "bob-salt-water-electrolysis", "bob-salt" })
 
-  OV.converter_fluid("bob-hydrogen-chloride", "gas-hydrogen-chloride")
+  OV.converter_fluid("bob-hydrogen-chloride", "angels-gas-hydrogen-chloride")
   OV.remove_unlock("bob-chemical-processing-2", "bob-hydrogen-chloride")
 
-  OV.global_replace_item("bob-calcium-chloride", "solid-calcium-chloride")
+  OV.global_replace_item("bob-calcium-chloride", "angels-solid-calcium-chloride")
   angelsmods.functions.hide("bob-calcium-chloride")
   OV.disable_recipe("bob-calcium-chloride")
   OV.remove_unlock("bob-chemical-processing-2", "bob-calcium-chloride")
   if not mods["angelssmelting"] then
-    OV.add_prereq("bob-silicon-processing", "chlorine-processing-2")
-    OV.add_prereq("bob-titanium-processing", "chlorine-processing-2")
+    OV.add_prereq("bob-silicon-processing", "angels-chlorine-processing-2")
+    OV.add_prereq("bob-titanium-processing", "angels-chlorine-processing-2")
   end
 
-  OV.converter_fluid("bob-ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.converter_fluid("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
   OV.disable_recipe({ "bob-ferric-chloride-solution" })
 
   -- sodium processing --------------------------------------------------------
-  OV.global_replace_item("bob-sodium-hydroxide", "solid-sodium-hydroxide")
+  OV.global_replace_item("bob-sodium-hydroxide", "angels-solid-sodium-hydroxide")
   angelsmods.functions.hide("bob-sodium-hydroxide")
   OV.disable_recipe('bob-sodium-hydroxide-sink')
 
   -- nitrogen processing ------------------------------------------------------
-  OV.converter_fluid("bob-liquid-air", "gas-compressed-air")
+  OV.converter_fluid("bob-liquid-air", "angels-gas-compressed-air")
 
-  OV.converter_fluid("bob-nitrogen", "gas-nitrogen")
+  OV.converter_fluid("bob-nitrogen", "angels-gas-nitrogen")
   OV.global_replace_technology("bob-nitrogen-processing", "angels-nitrogen-processing-2")
   OV.remove_prereq("bob-ceramics", "bob-nitrogen-processing")
   OV.add_prereq("bob-ceramics", "angels-nitrogen-processing-1")
 
-  OV.converter_fluid("bob-nitric-acid", "liquid-nitric-acid")
-  OV.converter_fluid("bob-nitrogen-dioxide", "gas-nitrogen-dioxide")
+  OV.converter_fluid("bob-nitric-acid", "angels-liquid-nitric-acid")
+  OV.converter_fluid("bob-nitrogen-dioxide", "angels-gas-nitrogen-dioxide")
 
   -- sulfur processing --------------------------------------------------------
-  OV.converter_fluid("bob-sulfur-dioxide", "gas-sulfur-dioxide")
-  OV.converter_fluid("bob-hydrogen-sulfide", "gas-hydrogen-sulfide")
+  OV.converter_fluid("bob-sulfur-dioxide", "angels-gas-sulfur-dioxide")
+  OV.converter_fluid("bob-hydrogen-sulfide", "angels-gas-hydrogen-sulfide")
 elseif mods["bobelectronics"] then
   -- chloride processing ------------------------------------------------------
-  OV.converter_fluid("bob-ferric-chloride-solution", "liquid-ferric-chloride-solution")
+  OV.converter_fluid("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
   OV.disable_recipe({ "bob-ferric-chloride-solution" })
 end
 
@@ -163,8 +163,8 @@ end
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  move_item("bob-enriched-fuel", "petrochem-fuel", "a[solid-fuel]-b")
-  OV.patch_recipes({ { name = "bob-enriched-fuel", subgroup = "petrochem-fuel", order = "g" } })
+  move_item("bob-enriched-fuel", "angels-petrochem-fuel", "a[solid-fuel]-b")
+  OV.patch_recipes({ { name = "bob-enriched-fuel", subgroup = "angels-petrochem-fuel", order = "g" } })
   OV.disable_technology({ "oil-processing-2", "oil-processing-3", "oil-processing-4" })
 
   --hide disabled
@@ -196,7 +196,7 @@ if mods["bobplates"] then
     {
       name = "bob-polishing-compound",
       ingredients = {
-        { name = "liquid-mineral-oil", type = "fluid", amount = "liquid-fuel-oil" },
+        { name = "angels-liquid-mineral-oil", type = "fluid", amount = "angels-liquid-fuel-oil" },
       },
     },
   })
@@ -212,13 +212,13 @@ end
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.global_replace_item("bob-salt", "solid-salt")
+  OV.global_replace_item("bob-salt", "angels-solid-salt")
   angelsmods.functions.hide("bob-salt")
 
-  move_item("bob-heavy-water", "water-treatment-fluid", "eb")
-  move_item("bob-deuterium", "petrochem-basic-fluids", "i")
-  move_item("bob-heavy-water", "water-treatment", "b[bob-heavy-water]")
-  move_item("bob-heavy-water-electrolysis", "petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
+  move_item("bob-heavy-water", "angels-water-treatment-fluid", "eb")
+  move_item("bob-deuterium", "angels-petrochem-basic-fluids", "i")
+  move_item("bob-heavy-water", "angels-water-treatment", "b[bob-heavy-water]")
+  move_item("bob-heavy-water-electrolysis", "angels-petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
 end
 
 -------------------------------------------------------------------------------

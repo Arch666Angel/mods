@@ -8,13 +8,13 @@ for index, force in pairs(game.forces) do
 
   local researched = false
   for _, techName in pairs({
-    "bio-arboretum-2",
-    "bio-arboretum-desert-2",
-    "bio-arboretum-temperate-2",
-    "bio-arboretum-swamp-2",
-    "bio-desert-farm",
-    "bio-temperate-farm",
-    "bio-swamp-farm",
+    "angels-bio-arboretum-2",
+    "angels-bio-arboretum-desert-2",
+    "angels-bio-arboretum-temperate-2",
+    "angels-bio-arboretum-swamp-2",
+    "angels-bio-desert-farm",
+    "angels-bio-temperate-farm",
+    "angels-bio-swamp-farm",
   }) do
     if (force.technologies[techName] or {}).researched then
       researched = true
@@ -22,14 +22,14 @@ for index, force in pairs(game.forces) do
     end
   end
   if researched then
-    force.technologies["bio-farm-2"].researched = true
-    force.technologies["bio-farm-alien"].researched = true
-    force.technologies["gardens-2"].researched = true
+    force.technologies["angels-bio-farm-2"].researched = true
+    force.technologies["angels-bio-farm-alien"].researched = true
+    force.technologies["angels-gardens-2"].researched = true
 
     for techToResearch, techToCheck in pairs({
-      ["bio-temperate-farming-2"] = "bio-temperate-farming-1",
-      ["bio-desert-farming-2"] = "bio-desert-farming-1",
-      ["bio-swamp-farming-2"] = "bio-swamp-farming-1",
+      ["angels-bio-temperate-farming-2"] = "angels-bio-temperate-farming-1",
+      ["angels-bio-desert-farming-2"] = "angels-bio-desert-farming-1",
+      ["angels-bio-swamp-farming-2"] = "angels-bio-swamp-farming-1",
     }) do
       if force.technologies[techToResearch] and force.technologies[techToCheck] then
         force.technologies[techToResearch].researched = force.technologies[techToCheck].researched
@@ -39,11 +39,11 @@ for index, force in pairs(game.forces) do
   end
 
   for techToResearch, techToCheck in pairs({
-    ["bio-processing-crystal-splinter-2"] = "bio-processing-crystal-splinter-1",
-    ["bio-processing-crystal-splinter-3"] = "bio-processing-crystal-splinter-1",
-    ["bio-processing-crystal-shard-2"] = "bio-processing-crystal-shard-1",
-    ["bio-processing-crystal-shard-3"] = "bio-processing-crystal-shard-1",
-    ["bio-processing-alien-2"] = "bio-refugium-biter-2",
+    ["angels-bio-processing-crystal-splinter-2"] = "angels-bio-processing-crystal-splinter-1",
+    ["angels-bio-processing-crystal-splinter-3"] = "angels-bio-processing-crystal-splinter-1",
+    ["angels-bio-processing-crystal-shard-2"] = "angels-bio-processing-crystal-shard-1",
+    ["angels-bio-processing-crystal-shard-3"] = "angels-bio-processing-crystal-shard-1",
+    ["angels-bio-processing-alien-2"] = "angels-bio-refugium-biter-2",
   }) do
     if force.technologies[techToResearch] and force.technologies[techToCheck] then
       force.technologies[techToResearch].researched = force.technologies[techToCheck].researched

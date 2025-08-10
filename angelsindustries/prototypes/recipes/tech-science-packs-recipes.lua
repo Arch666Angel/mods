@@ -114,7 +114,7 @@ if angelsmods.industries.tech then
       enabled = true,
       ingredients = {
         { type = "item", name = "iron-stick", amount = 1 },
-        { type = "item", name = "angels-wire-copper", amount = 4 },
+        { type = "item", name = "copper-cable", amount = 4 },
       },
       results = {
         { type = "item", name = "science-data-analyzer", amount = 2 },

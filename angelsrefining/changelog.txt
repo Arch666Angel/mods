@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.0
+Version: 2.0.0
 Date: ???
   Bugfixes:
     - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)

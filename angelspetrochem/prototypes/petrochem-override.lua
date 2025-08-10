@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
 --PREPARATIONS
-OV.remove_output("gas-sulfur-dioxide-calcium-sulfate", "angels-void")
+OV.remove_output("angels-gas-sulfur-dioxide-calcium-sulfate", "angels-void")
 
 --OVERRIDE FOR BASE
 require("prototypes.override.base-game")
@@ -30,12 +30,12 @@ require("prototypes.recipes.petrochem-entity-angels")
 OV.execute()
 
 --ENABLE PRODUCTIVITY
-angelsmods.functions.allow_productivity("liquid-plastic-1")
-angelsmods.functions.allow_productivity("liquid-plastic-2")
-angelsmods.functions.allow_productivity("liquid-plastic-3")
+angelsmods.functions.allow_productivity("angels-liquid-plastic")
+angelsmods.functions.allow_productivity("angels-liquid-plastic-2")
+angelsmods.functions.allow_productivity("angels-liquid-plastic-3")
 
-angelsmods.functions.allow_productivity("liquid-resin-1")
-angelsmods.functions.allow_productivity("liquid-resin-2")
-angelsmods.functions.allow_productivity("liquid-resin-3")
+angelsmods.functions.allow_productivity("angels-liquid-resin")
+angelsmods.functions.allow_productivity("angels-liquid-resin-2")
+angelsmods.functions.allow_productivity("angels-liquid-resin-3")
 
-angelsmods.functions.allow_productivity("liquid-rubber-1")
+angelsmods.functions.allow_productivity("angels-liquid-rubber")

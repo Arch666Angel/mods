@@ -12,14 +12,14 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["silicon"] then
   if mods["bobores"] then
-    local angel_ore = data.raw.item["quartz"]
+    local angel_ore = data.raw.item["angels-quartz"]
     local bob_ore = data.raw.item["bob-quartz"]
     OV.global_replace_item(angel_ore.name, bob_ore.name)
     OV.copy_item_properties(angel_ore.name, bob_ore.name)
     angelsmods.functions.hide(angel_ore.name)
   end
 else
-  angelsmods.functions.hide("quartz")
+  angelsmods.functions.hide("angels-quartz")
 end
 
 -------------------------------------------------------------------------------
@@ -29,8 +29,8 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
   if angelsmods.trigger.smelting_products["silicon"].mono or angelsmods.trigger.smelting_products["silicon"].wafer then
   else
     -- no need for molten recipe
-    angelsmods.functions.hide("liquid-molten-silicon")
-    OV.disable_recipe({ "molten-silicon-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-silicon")
+    OV.disable_recipe({ "angels-liquid-molten-silicon" })
     OV.disable_technology({
       "angels-silicon-casting-2",--[[, "angels-silicon-casting-3"]]
     })
@@ -41,16 +41,16 @@ if angelsmods.trigger.smelting_products["silicon"].ingot then
     end
   end
 else
-  angelsmods.functions.hide("processed-silica")
-  angelsmods.functions.hide("pellet-silica")
-  angelsmods.functions.hide("liquid-trichlorosilane")
-  angelsmods.functions.hide("gas-silane")
-  angelsmods.functions.hide("ingot-silicon")
-  angelsmods.functions.hide("liquid-molten-silicon")
-  OV.disable_recipe({ "silica-ore-processing", "silica-processed-processing" })
-  OV.disable_recipe({ "processed-silicon-smelting", "pellet-silicon-smelting" })
-  OV.disable_recipe({ "silicon-ore-smelting", "liquid-trichlorosilane-smelting", "gas-silane-smelting" })
-  OV.disable_recipe({ "molten-silicon-smelting" })
+  angelsmods.functions.hide("angels-processed-silica")
+  angelsmods.functions.hide("angels-pellet-silica")
+  angelsmods.functions.hide("angels-liquid-trichlorosilane")
+  angelsmods.functions.hide("angels-gas-silane")
+  angelsmods.functions.hide("angels-ingot-silicon")
+  angelsmods.functions.hide("angels-liquid-molten-silicon")
+  OV.disable_recipe({ "angels-processed-silica", "angels-pellet-silica" })
+  OV.disable_recipe({ "angels-liquid-trichlorosilane", "angels-gas-silane" })
+  OV.disable_recipe({ "angels-ingot-silicon", "angels-ingot-silicon-2", "angels-ingot-silicon-3" })
+  OV.disable_recipe({ "angels-liquid-molten-silicon" })
   OV.disable_technology({ "angels-silicon-smelting-1", "angels-silicon-smelting-2", "angels-silicon-smelting-3" })
   OV.disable_technology({
     "angels-silicon-casting-2",--[[, "angels-silicon-casting-3"]]
@@ -75,7 +75,7 @@ else
   angelsmods.functions.hide("angels-mono-silicon")
   OV.disable_recipe({
     "angels-mono-silicon-seed",
-    "angels-mono-silicon-1",
+    "angels-mono-silicon",
     "angels-mono-silicon-2",
     "angels-quartz-crucible",
   })
@@ -115,20 +115,20 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["silicon"].powder then
   if mods["bobplates"] then
-    OV.global_replace_item("powder-silicon", "bob-silicon-powder")
+    OV.global_replace_item("angels-powder-silicon", "bob-silicon-powder")
     angelsmods.functions.override_item_conditions({
       value = 200,
       list = {
         "bob-silicon-powder",
       },
     })
-    angelsmods.functions.hide("powder-silicon")
-    OV.disable_recipe({ "powder-silicon" })
+    angelsmods.functions.hide("angels-powder-silicon")
+    OV.disable_recipe({ "angels-powder-silicon" })
 
     angelsmods.functions.move_item("bob-silicon-powder", "angels-silicon", "g")
     data.raw.item["bob-silicon-powder"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png"
     data.raw.item["bob-silicon-powder"].icon_size = 64
-    data.raw.item["bob-silicon-powder"].localised_name = { "item-name.powder-silicon" }
+    data.raw.item["bob-silicon-powder"].localised_name = { "item-name.angels-powder-silicon" }
     OV.patch_recipes({
       {
         name = "bob-silicon-powder",
@@ -136,7 +136,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
         energy_required = 0.5,
         ingredients = {
           { "!!" },
-          { "ingot-silicon", 1 },
+          { "angels-ingot-silicon", 1 },
         },
         order = "g[bobs-silicon]",
       },
@@ -154,6 +154,6 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
     })
   end
 else
-  angelsmods.functions.hide("powder-silicon")
-  OV.disable_recipe({ "powder-silicon" })
+  angelsmods.functions.hide("angels-powder-silicon")
+  OV.disable_recipe({ "angels-powder-silicon" })
 end

@@ -5,7 +5,7 @@ if angelsmods.industries.components then
   OV.patch_recipes({
     -- Ore crushers
     {
-      name = "burner-ore-crusher",
+      name = "angels-burner-ore-crusher",
       ingredients = {
         { "!!" },
         { type = "item", name = "block-construction-1", amount = 2 },
@@ -14,7 +14,7 @@ if angelsmods.industries.components then
       },
     },
     {
-      name = "ore-crusher",
+      name = "angels-ore-crusher",
       ingredients = {
         { "!!" },
         { type = "item", name = "block-production-1", amount = 1 },
@@ -25,7 +25,7 @@ if angelsmods.industries.components then
     },
     -- Ore sorting facilities
     {
-      name = "ore-sorting-facility",
+      name = "angels-ore-sorting-facility",
       ingredients = {
         { "!!" },
         { type = "item", name = "block-production-1", amount = 1 },
@@ -37,7 +37,7 @@ if angelsmods.industries.components then
     },
     -- Ore floatation cells
     {
-      name = "ore-floatation-cell",
+      name = "angels-ore-floatation-cell",
       ingredients = {
         { "!!" },
         { type = "item", name = "block-production-2", amount = 3 },

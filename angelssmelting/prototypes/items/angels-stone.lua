@@ -3,7 +3,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "solid-lime",
+    name = "angels-solid-lime",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-lime.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -13,7 +13,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "solid-cement",
+    name = "angels-solid-cement",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-cement.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -22,7 +22,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "clay-brick-raw",
+    name = "angels-clay-brick-raw",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay-raw.png",
     icon_size = 32,
     subgroup = "angels-stone",
@@ -31,14 +31,14 @@ data:extend({
   },
   {
     type = "item",
-    name = "clay-brick",
+    name = "angels-clay-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-clay.png",
     icon_size = 32,
     subgroup = "angels-stone",
     order = "e",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "clay-bricks",
+      result = "angels-tile-clay-brick",
       condition_size = 2,
       condition = {layers = {water_tile = true}},
     },
@@ -47,7 +47,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-concrete",
+    name = "angels-liquid-concrete",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-concrete.png",
     icon_size = 64,
     subgroup = "angels-stone-casting",
@@ -63,14 +63,14 @@ data:extend({
   -- order h reserved for base game concrete
   {
     type = "item",
-    name = "concrete-brick",
+    name = "angels-concrete-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-concrete.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "i",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "tile-concrete-brick",
+      result = "angels-tile-concrete-brick",
       -- result = "tutorial-grid",
       condition_size = 1,
       condition = {layers = {water_tile = true}},
@@ -78,14 +78,14 @@ data:extend({
   },
   {
     type = "item",
-    name = "reinforced-concrete-brick",
+    name = "angels-reinforced-concrete-brick",
     icon = "__angelssmeltinggraphics__/graphics/icons/brick-reinforced.png",
     icon_size = 32,
     subgroup = "angels-stone-casting",
     order = "j",
     stack_size = angelsmods.trigger.pavement_stack_size,
     place_as_tile = {
-      result = "tile-reinforced-concrete-brick",
+      result = "angels-tile-reinforced-concrete-brick",
       condition_size = 1,
       condition = {layers = {water_tile = true}},
     },

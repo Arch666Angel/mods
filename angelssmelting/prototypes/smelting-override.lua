@@ -17,15 +17,15 @@ if angelsmods.smelting then
   -- this should be moved to petrochem
   OV.patch_recipes({
     {
-      name = "gas-sulfur-dioxide-calcium-sulfate",
+      name = "angels-gas-sulfur-dioxide-calcium-sulfate",
       results = {
-        { name = "solid-lime", type = "item", amount = 1 },
+        { name = "angels-solid-lime", type = "item", amount = 1 },
       },
     },
     {
-      name = "filter-lime",
+      name = "angels-filter-lime",
       ingredients = {
-        { name = "solid-lime", type = "item", amount = "stone-crushed" },
+        { name = "angels-solid-lime", type = "item", amount = "angels-stone-crushed" },
       },
     },
   })

@@ -6,7 +6,7 @@ function make_fluid_robot()
     local fluid_per_bot = 5000
 
     if angelsmods and angelsmods.industry then
-      bot_category = "barreling-pump"
+      bot_category = "angels-barreling-pump"
     else
       bot_category = "crafting-with-fluid"
     end

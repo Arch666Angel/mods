@@ -2,7 +2,7 @@
 data:extend({
   {
     type = "item",
-    name = "thorium-ore",
+    name = "angels-thorium-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png",
     icon_size = 64,
     pictures = {

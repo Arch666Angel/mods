@@ -3,54 +3,51 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "tin-ore-processing",
-    localised_name = { "item-name.processed-tin" },
-    category = "ore-processing",
+    name = "angels-processed-tin",
+    category = "angels-ore-processing",
     subgroup = "angels-tin",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tin-ore", amount = 4 },
+      { type = "item", name = "angels-tin-ore", amount = 4 },
     },
     results = {
-      { type = "item", name = "processed-tin", amount = 2 },
+      { type = "item", name = "angels-processed-tin", amount = 2 },
     },
     order = "b[processed-tin]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   {
     type = "recipe",
-    name = "tin-processed-processing",
-    localised_name = { "item-name.pellet-tin" },
-    category = "pellet-pressing",
+    name = "angels-pellet-tin",
+    category = "angels-pellet-pressing",
     subgroup = "angels-tin",
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "processed-tin", amount = 3 },
+      { type = "item", name = "angels-processed-tin", amount = 3 },
     },
     results = {
-      { type = "item", name = "pellet-tin", amount = 4 },
+      { type = "item", name = "angels-pellet-tin", amount = 4 },
     },
     order = "c[pellet-tin]",
   },
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "tin-ore-smelting",
-    localised_name = { "item-name.ingot-tin" },
-    category = "blast-smelting",
+    name = "angels-ingot-tin",
+    category = "angels-blast-smelting",
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "tin-ore", amount = 24 },
+      { type = "item", name = "angels-tin-ore", amount = 24 },
     },
     results = {
-      { type = "item", name = "ingot-tin", amount = 24 },
+      { type = "item", name = "angels-ingot-tin", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-tin"),
+      angelsmods.functions.get_object_icons("angels-ingot-tin"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -58,21 +55,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "processed-tin-smelting",
-    localised_name = { "item-name.ingot-tin" },
-    category = "blast-smelting-2",
+    name = "angels-ingot-tin-2",
+    localised_name = { "item-name.angels-ingot-tin" },
+    category = "angels-blast-smelting-2",
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "processed-tin", amount = 8 },
-      { type = "item", name = "solid-coke", amount = 2 },
+      { type = "item", name = "angels-processed-tin", amount = 8 },
+      { type = "item", name = "angels-solid-coke", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-tin", amount = 24 },
+      { type = "item", name = "angels-ingot-tin", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-tin"),
+      angelsmods.functions.get_object_icons("angels-ingot-tin"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -80,21 +77,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-tin-smelting",
-    localised_name = { "item-name.ingot-tin" },
-    category = "blast-smelting-3",
+    name = "angels-ingot-tin-3",
+    localised_name = { "item-name.angels-ingot-tin" },
+    category = "angels-blast-smelting-3",
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "pellet-tin", amount = 8 },
-      { type = "item", name = "solid-carbon", amount = 2 },
+      { type = "item", name = "angels-pellet-tin", amount = 8 },
+      { type = "item", name = "angels-solid-carbon", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-tin", amount = 24 },
+      { type = "item", name = "angels-ingot-tin", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-tin"),
+      angelsmods.functions.get_object_icons("angels-ingot-tin"),
       3,
       angelsmods.smelting.number_tint
     ),
@@ -102,49 +99,46 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "powder-tin",
-    localised_name = { "item-name.powder-tin" },
+    name = "angels-powder-tin",
     category = "advanced-crafting",
     subgroup = "angels-tin",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ingot-tin", amount = 1 },
+      { type = "item", name = "angels-ingot-tin", amount = 1 },
     },
     results = {
-      { type = "item", name = "powder-tin", amount = 1 },
+      { type = "item", name = "angels-powder-tin", amount = 1 },
     },
     order = "e[powder-tin]",
   },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-tin-smelting",
-    localised_name = { "fluid-name.liquid-molten-tin" },
-    category = "induction-smelting",
+    name = "angels-liquid-molten-tin",
+    category = "angels-induction-smelting",
     subgroup = "angels-tin-casting",
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "ingot-tin", amount = 12 },
+      { type = "item", name = "angels-ingot-tin", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 120 },
     },
-    main_product = "liquid-molten-tin",
+    main_product = "angels-liquid-molten-tin",
     order = "f[liquid-molten-tin]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   {
     type = "recipe",
-    name = "roll-tin-casting",
-    localised_name = { "item-name.angels-roll-tin" },
-    category = "strand-casting",
+    name = "angels-roll-tin",
+    category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 80 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 80 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -156,23 +150,23 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "g[angels-roll-tin]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   {
     type = "recipe",
-    name = "roll-tin-casting-fast",
+    name = "angels-roll-tin-2",
     localised_name = { "item-name.angels-roll-tin" },
-    category = "strand-casting-2",
+    category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 140 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-roll-tin", amount = 4 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-roll-tin",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -181,19 +175,18 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "g[angels-roll-tin]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-casting",
-    localised_name = { "item-name.angels-wire-coil-tin" },
-    category = "strand-casting",
+    name = "angels-wire-coil-tin",
+    category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 40 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 40 },
       { type = "fluid", name = "water", amount = 40 },
     },
     results = {
@@ -205,24 +198,24 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "h[angels-wire-coil-tin]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-casting-fast",
+    name = "angels-wire-coil-tin-2",
     localised_name = { "item-name.angels-wire-coil-tin" },
-    category = "strand-casting-2",
+    category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
     enabled = false,
     energy_required = 2,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 70 },
-      { type = "fluid", name = "liquid-molten-copper", amount = 70 },
-      { type = "fluid", name = "liquid-coolant", amount = 40, ignored_by_stats = 32 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 70 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 70 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
     results = {
       { type = "item", name = "angels-wire-coil-tin", amount = 8 },
-      { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
     main_product = "angels-wire-coil-tin",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -231,26 +224,26 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "h[angels-wire-coil-tin]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tin"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tin"),
   },
   -- CASTING RESULT
   {
     type = "recipe",
     name = "angels-plate-tin",
     localised_name = { "item-name.angels-plate-tin" },
-    category = "casting",
+    category = "angels-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
     energy_required = 4,
     ingredients = {
-      { type = "fluid", name = "liquid-molten-tin", amount = 40 },
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-plate-tin", amount = 4 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-plate-tin"),
-      angelsmods.functions.get_object_icons("liquid-molten-tin"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-tin"),
       { -10, -10 },
       0.4375
     ),
@@ -258,7 +251,7 @@ data:extend({
   }, -- i[angels-plate-tin]-b reserved for tin ore smelting (see tin overrides)
   {
     type = "recipe",
-    name = "angels-roll-tin-converting",
+    name = "angels-plate-tin-2",
     localised_name = { "item-name.angels-plate-tin" },
     category = "advanced-crafting",
     subgroup = "angels-tin-casting",
@@ -281,7 +274,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "basic-tinned-copper-wire",
+    name = "angels-wire-tin",
     localised_name = { "item-name.angels-wire-tin" },
     subgroup = "angels-tin-casting",
     order = "m",
@@ -306,7 +299,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-wire-coil-tin-converting",
+    name = "angels-wire-tin-2",
     localised_name = { "item-name.angels-wire-tin" },
     category = "advanced-crafting",
     subgroup = "angels-tin-casting",

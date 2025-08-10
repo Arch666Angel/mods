@@ -1,24 +1,24 @@
 data:extend({
   {
     type = "item",
-    name = "barreling-pump",
+    name = "angels-barreling-pump",
     icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "c[barreling-pump]",
-    place_result = "barreling-pump",
+    place_result = "angels-barreling-pump",
     stack_size = 10,
   },
 })
 
 local barreling_pump = {
   type = "assembling-machine",
-  name = "barreling-pump",
+  name = "angels-barreling-pump",
   icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation" },
-  minable = { mining_time = 1, result = "barreling-pump" },
-  fast_replaceable_group = "barreling-pump",
+  minable = { mining_time = 1, result = "angels-barreling-pump" },
+  fast_replaceable_group = "angels-barreling-pump",
   max_health = 300,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
@@ -26,7 +26,7 @@ local barreling_pump = {
   selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
   module_slots = 2,
   allowed_effects = { "consumption", "speed", "pollution" },
-  crafting_categories = { "barreling-pump" },
+  crafting_categories = { "angels-barreling-pump" },
   crafting_speed = 2,
   energy_source = {
     type = "electric",

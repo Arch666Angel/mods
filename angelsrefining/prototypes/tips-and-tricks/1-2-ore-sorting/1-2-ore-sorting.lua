@@ -4,7 +4,7 @@ data:extend({
     name = "angels-ore-sorting",
 
     is_title = false,
-    tag = "[item=ore-sorting-facility]",
+    tag = "[item=angels-ore-sorting-facility]",
     localised_name = { "tips-and-tricks-name.angels-ore-sorting" },
     localised_description = require("prototypes.tips-and-tricks.1-2-ore-sorting.1-2-ore-sorting-description"),
 
@@ -16,7 +16,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "ore-crushing",
+      technology = "angels-ore-crushing",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",

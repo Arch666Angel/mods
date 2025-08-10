@@ -1,28 +1,18 @@
 local def_shift = { 0.75, -2 }
 
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["puffer-nest"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-puffer-nest"] = {}
 
 data:extend({
   {
-    type = "item",
-    name = "puffer-nest",
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
-    icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "a",
-    stack_size = 200,
-    place_result = "puffer-nest",
-  },
-  {
     type = "tree",
-    name = "puffer-nest",
+    name = "angels-puffer-nest",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "bio-puffer-egg-1",
+      result = "angels-bio-puffer-egg-1",
       count = 2,
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
@@ -36,21 +26,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "za",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.5,
---           water_range = 0.5,
---           water_max_range = 0.5,
---         },
---       },
-      probability_expression = 0.0025,
-      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      probability_expression = 0.00003,
     },
     pictures = {
       {

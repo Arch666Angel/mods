@@ -31,13 +31,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "angels-hq-graphics",
-    setting_type = "startup",
-    default_value = true,
-    order = "ad",
-  },
-  {
-    type = "bool-setting",
     name = "angels-starting-resource-ore1",
     setting_type = "startup",
     default_value = true,

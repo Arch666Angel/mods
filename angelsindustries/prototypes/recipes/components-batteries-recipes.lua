@@ -170,7 +170,7 @@ if angelsmods.industries.components then
       category = "crafting",
       energy_required = 0.5,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 2 },
+        { type = "item", name = "angels-solid-paper", amount = 2 },
         { type = "item", name = "angels-plate-lead", amount = 1 },
       },
       results = {
@@ -221,8 +221,8 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = {
-        { type = "fluid", name = "liquid-sulfuric-acid", amount = 20 },
-        { type = "fluid", name = "water-saline", amount = 5 },
+        { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 20 },
+        { type = "fluid", name = "angels-water-saline", amount = 5 },
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-1", amount = 10 },
@@ -230,8 +230,8 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-1",
-        "liquid-sulfuric-acid",
-        "water-saline",
+        "angels-liquid-sulfuric-acid",
+        "angels-water-saline",
         "battery-electrolyte-1",
       }),
       icon_size = 64,
@@ -283,7 +283,7 @@ if angelsmods.industries.components then
       category = "crafting-with-fluid",
       energy_required = 1,
       ingredients = {
-        { type = "fluid", name = "liquid-molten-glass", amount = 10 },
+        { type = "fluid", name = "angels-liquid-molten-glass", amount = 10 },
       },
       results = {
         { type = "item", name = "battery-frame-2", amount = 1 },
@@ -300,7 +300,7 @@ if angelsmods.industries.components then
       energy_required = 1.5,
       ingredients = {
         { type = "item", name = "angels-wire-tin", amount = 2 },
-        { type = "item", name = "solid-zinc-oxide", amount = 1 }, --move some of the zinc options down to equivalent tier, at least make a zinc-oxide from ore recipe
+        { type = "item", name = "angels-solid-zinc-oxide", amount = 1 }, --move some of the zinc options down to equivalent tier, at least make a zinc-oxide from ore recipe
       },
       results = {
         { type = "item", name = "battery-anode-2", amount = 3 },
@@ -333,8 +333,8 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = {
-        { type = "fluid", name = "water-purified", amount = 10 },
-        { type = "fluid", name = "water-saline", amount = 10 },
+        { type = "fluid", name = "angels-water-purified", amount = 10 },
+        { type = "fluid", name = "angels-water-saline", amount = 10 },
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-2", amount = 10 },
@@ -342,8 +342,8 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-2",
-        "water-purified",
-        "water-saline",
+        "angels-water-purified",
+        "angels-water-saline",
         "battery-electrolyte-2",
       }),
       icon_size = 64,
@@ -365,7 +365,7 @@ if angelsmods.industries.components then
       ingredients =
       {
         {type = "item", name = "angels-wire-tin", amount = 2},
-        {type = "item", name = "solid-manganese-oxide", amount =1} --manganese-cathode as alternative
+        {type = "item", name = "angels-solid-manganese-oxide", amount =1} --manganese-cathode as alternative
       },
       results=
       {
@@ -382,7 +382,7 @@ if angelsmods.industries.components then
       energy_required = 2.5,
       ingredients =
       {
-        {type = "fluid", name = "liquid-aqueous-sodium-hydroxide", amount = 20}
+        {type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 20}
       },
       results=
       {
@@ -438,7 +438,7 @@ if angelsmods.industries.components then
       category = "crafting-with-fluid",
       energy_required = 1.5,
       ingredients = {
-        { type = "fluid", name = "liquid-molten-aluminium", amount = 10 },
+        { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 10 },
       },
       results = {
         { type = "item", name = "battery-frame-3", amount = 1 },
@@ -455,7 +455,7 @@ if angelsmods.industries.components then
       energy_required = 2,
       ingredients = {
         { type = "item", name = "angels-wire-silver", amount = 2 },
-        { type = "item", name = "solid-carbon", amount = 1 }, --want carbon sheet or carbon electrode
+        { type = "item", name = "angels-solid-carbon", amount = 1 }, --want carbon sheet or carbon electrode
       },
       results = {
         { type = "item", name = "battery-anode-3", amount = 3 },
@@ -472,8 +472,8 @@ if angelsmods.industries.components then
       energy_required = 2,
       ingredients = {
         { type = "item", name = "angels-wire-silver", amount = 2 },
-        { type = "item", name = "solid-lithium", amount = 1 }, --would prefer lithium-cobalt-oxide over these 2, if bobs is active i guess
-        { type = "item", name = "solid-cobalt-oxide", amount = 1 },
+        { type = "item", name = "angels-solid-lithium", amount = 1 }, --would prefer lithium-cobalt-oxide over these 2, if bobs is active i guess
+        { type = "item", name = "angels-solid-cobalt-oxide", amount = 1 },
       },
       results = {
         { type = "item", name = "battery-cathode-3", amount = 3 },
@@ -489,16 +489,16 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = { --lithia-water/ethylene carbonate
-        { type = "fluid", name = "thermal-water", amount = 10 }, --prefer lithia water if active
-        { type = "fluid", name = "liquid-ethylene-carbonate", amount = 10 }, --need to change this to Ethylene carbonate(aka ethylene glycol carbonate) [https://en.wikipedia.org/wiki/Ethylene_carbonate]
+        { type = "fluid", name = "angels-thermal-water", amount = 10 }, --prefer lithia water if active
+        { type = "fluid", name = "angels-liquid-ethylene-carbonate", amount = 10 }, --need to change this to Ethylene carbonate(aka ethylene glycol carbonate) [https://en.wikipedia.org/wiki/Ethylene_carbonate]
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-3", amount = 10 },
       },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-3",
-        "liquid-ethylene-carbonate",
-        "thermal-water",
+        "angels-liquid-ethylene-carbonate",
+        "angels-thermal-water",
         "battery-electrolyte-3",
       }),
       allow_decomposition = true,
@@ -570,7 +570,7 @@ if angelsmods.industries.components then
       energy_required = 3.5,
       ingredients = {
         { type = "item", name = "angels-wire-gold", amount = 2 },
-        { type = "item", name = "solid-carbon", amount = 1 },
+        { type = "item", name = "angels-solid-carbon", amount = 1 },
       },
       results = {
         { type = "item", name = "battery-anode-4", amount = 3 },
@@ -587,8 +587,8 @@ if angelsmods.industries.components then
       energy_required = 3.5,
       ingredients = {
         { type = "item", name = "angels-wire-gold", amount = 2 },
-        { type = "item", name = "solid-lithium", amount = 1 },
-        { type = "item", name = "solid-manganese-oxide", amount = 1 },
+        { type = "item", name = "angels-solid-lithium", amount = 1 },
+        { type = "item", name = "angels-solid-manganese-oxide", amount = 1 },
       },
       results = {
         { type = "item", name = "battery-cathode-4", amount = 3 },
@@ -604,15 +604,15 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = {
-        { type = "fluid", name = "liquid-rubber", amount = 15 }, --realistically, should be PEO, PAN, PMMA or PVdF
-        { type = "item", name = "solid-lithium", amount = 1 },
+        { type = "fluid", name = "angels-liquid-rubber", amount = 15 }, --realistically, should be PEO, PAN, PMMA or PVdF
+        { type = "item", name = "angels-solid-lithium", amount = 1 },
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-4", amount = 10 },
       },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-4",
-        "liquid-rubber",
+        "angels-liquid-rubber",
         angelsmods.functions.fluid_color("Li"),
         "battery-electrolyte-4",
       }),
@@ -668,7 +668,7 @@ if angelsmods.industries.components then
       category = "crafting-with-fluid",
       energy_required = 3,
       ingredients = {
-        { type = "fluid", name = "liquid-molten-nickel", amount = 10 },
+        { type = "fluid", name = "angels-liquid-molten-nickel", amount = 10 },
       },
       results = {
         { type = "item", name = "battery-frame-5", amount = 1 },
@@ -685,9 +685,9 @@ if angelsmods.industries.components then
       energy_required = 5,
       ingredients = {
         { type = "item", name = "angels-wire-platinum", amount = 3 },
-        { type = "item", name = "solid-lithium", amount = 1 },
-        { type = "item", name = "solid-sodium-carbonate", amount = 1 }, --substitute for sodium-carbon mixture
-        { type = "item", name = "solid-manganese-oxide", amount = 1 }, --should be dioxide, not oxide
+        { type = "item", name = "angels-solid-lithium", amount = 1 },
+        { type = "item", name = "angels-solid-sodium-carbonate", amount = 1 }, --substitute for sodium-carbon mixture
+        { type = "item", name = "angels-solid-manganese-oxide", amount = 1 }, --should be dioxide, not oxide
       },
       results = {
         { type = "item", name = "battery-anode-5", amount = 3 },
@@ -704,9 +704,9 @@ if angelsmods.industries.components then
       energy_required = 5,
       ingredients = {
         { type = "item", name = "angels-wire-platinum", amount = 3 },
-        { type = "item", name = "solid-lithium", amount = 1 },
+        { type = "item", name = "angels-solid-lithium", amount = 1 },
         { type = "item", name = "copper-plate", amount = 1 },
-        { type = "item", name = "solid-manganese-oxide", amount = 1 }, --should be dioxide, not oxide
+        { type = "item", name = "angels-solid-manganese-oxide", amount = 1 }, --should be dioxide, not oxide
       },
       results = {
         { type = "item", name = "battery-cathode-5", amount = 3 },
@@ -722,15 +722,15 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = { --liquid-molten-glass/lithium-chloride
-        { type = "fluid", name = "liquid-molten-glass", amount = 10 },
-        { type = "item", name = "solid-lithium", amount = 5 }, --prefer lithium chloride or perchlorate
+        { type = "fluid", name = "angels-liquid-molten-glass", amount = 10 },
+        { type = "item", name = "angels-solid-lithium", amount = 5 }, --prefer lithium chloride or perchlorate
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-5", amount = 10 },
       },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-5",
-        "liquid-molten-glass",
+        "angels-liquid-molten-glass",
         angelsmods.functions.fluid_color("Li"),
         "battery-electrolyte-5",
       }),
@@ -781,10 +781,10 @@ if angelsmods.industries.components then
       subgroup = "angels-cathodes",
       order = "l",
       enabled = false,
-      category = "sintering-5",
+      category = "angels-sintering-5",
       energy_required = 5,
       ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 1 },
+        { type = "item", name = "angels-casting-powder-tungsten", amount = 1 },
       },
       results = {
         { type = "item", name = "battery-frame-6", amount = 1 },
@@ -818,7 +818,7 @@ if angelsmods.industries.components then
       energy_required = 7,
       ingredients = {
         { type = "item", name = "angels-wire-platinum", amount = 2 },
-        { type = "item", name = "solid-silver-nitrate", amount = 1 }, --want silver-oxide (with bobs?)
+        { type = "item", name = "angels-solid-silver-nitrate", amount = 1 }, --want silver-oxide (with bobs?)
       },
       results = {
         { type = "item", name = "battery-cathode-6", amount = 3 },
@@ -834,7 +834,7 @@ if angelsmods.industries.components then
       category = "chemistry",
       energy_required = 2.5,
       ingredients = {
-        { type = "fluid", name = "liquid-aqueous-sodium-hydroxide", amount = 20 },
+        { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 20 },
       },
       results = {
         { type = "fluid", name = "battery-electrolyte-6", amount = 10 },
@@ -842,8 +842,8 @@ if angelsmods.industries.components then
       allow_decomposition = true,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "battery-electrolyte-6",
-        "liquid-aqueous-sodium-hydroxide",
-        "liquid-aqueous-sodium-hydroxide",
+        "angels-liquid-aqueous-sodium-hydroxide",
+        "angels-liquid-aqueous-sodium-hydroxide",
         "battery-electrolyte-6",
       }),
       icon_size = 64,

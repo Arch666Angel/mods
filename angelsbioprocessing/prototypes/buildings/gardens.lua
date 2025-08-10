@@ -1,20 +1,20 @@
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["temperate-garden"] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["desert-garden"] = {}
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["swamp-garden"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-garden"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-garden"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-garden"] = {}
 
 data:extend({
   {
     type = "item",
-    name = "temperate-garden",
+    name = "angels-temperate-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
+    subgroup = "angels-farming-gardens",
     order = "b[garden]-a",
     stack_size = 200,
   },
   {
     type = "tree",
-    name = "temperate-garden",
+    name = "angels-temperate-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -22,12 +22,12 @@ data:extend({
       mining_particle = "wooden-particle",
       mining_time = 1,
       results = {
-        { type = 'item', name = "temperate-garden", amount = 1 },
-        { type = 'item', name = "temperate-1", amount = 5, probability = 0.4 },
-        { type = 'item', name = "temperate-2", amount = 5, probability = 0.3 },
-        { type = 'item', name = "temperate-3", amount = 5, probability = 0.2 },
-        { type = 'item', name = "temperate-4", amount = 5, probability = 0.1 },
-        { type = 'item', name = "temperate-5", amount = 5, probability = 0.05 },
+        { type = 'item', name = "angels-temperate-garden", amount = 1 },
+        { type = 'item', name = "angels-temperate-1", amount = 5, probability = 0.4 },
+        { type = 'item', name = "angels-temperate-2", amount = 5, probability = 0.3 },
+        { type = 'item', name = "angels-temperate-3", amount = 5, probability = 0.2 },
+        { type = 'item', name = "angels-temperate-4", amount = 5, probability = 0.1 },
+        { type = 'item', name = "angels-temperate-5", amount = 5, probability = 0.05 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
@@ -40,19 +40,6 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "xab",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.9,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
       probability_expression = 0.000025,
       tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
@@ -96,16 +83,16 @@ data:extend({
   },
   {
     type = "item",
-    name = "desert-garden",
+    name = "angels-desert-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
+    subgroup = "angels-farming-gardens",
     order = "b[garden]-c",
     stack_size = 200,
   },
   {
     type = "tree",
-    name = "desert-garden",
+    name = "angels-desert-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -113,12 +100,12 @@ data:extend({
       mining_particle = "wooden-particle",
       mining_time = 1,
       results = {
-        { type = 'item', name = "desert-garden", amount = 1 },
-        { type = 'item', name = "desert-1", amount = 5, probability = 0.4 },
-        { type = 'item', name = "desert-2", amount = 5, probability = 0.3 },
-        { type = 'item', name = "desert-3", amount = 5, probability = 0.2 },
-        { type = 'item', name = "desert-4", amount = 5, probability = 0.1 },
-        { type = 'item', name = "desert-5", amount = 5, probability = 0.05 },
+        { type = 'item', name = "angels-desert-garden", amount = 1 },
+        { type = 'item', name = "angels-desert-1", amount = 5, probability = 0.4 },
+        { type = 'item', name = "angels-desert-2", amount = 5, probability = 0.3 },
+        { type = 'item', name = "angels-desert-3", amount = 5, probability = 0.2 },
+        { type = 'item', name = "angels-desert-4", amount = 5, probability = 0.1 },
+        { type = 'item', name = "angels-desert-5", amount = 5, probability = 0.05 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
@@ -131,20 +118,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yab",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.9,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
-      probability_expression = 0.00025,
+      probability_expression = 0.000025,
       tile_restriction = {"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3", "sand-1", "sand-2", "sand-3"},
     },
     pictures = {
@@ -180,16 +154,16 @@ data:extend({
   },
   {
     type = "item",
-    name = "swamp-garden",
+    name = "angels-swamp-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icon_size = 32,
-    subgroup = "farming-gardens",
+    subgroup = "angels-farming-gardens",
     order = "b[garden]-b",
     stack_size = 200,
   },
   {
     type = "tree",
-    name = "swamp-garden",
+    name = "angels-swamp-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -197,12 +171,12 @@ data:extend({
       mining_particle = "wooden-particle",
       mining_time = 1,
       results = {
-        { type = 'item', name = "swamp-garden", amount = 1 },
-        { type = 'item', name = "swamp-1", amount = 5, probability = 0.4 },
-        { type = 'item', name = "swamp-2", amount = 5, probability = 0.3 },
-        { type = 'item', name = "swamp-3", amount = 5, probability = 0.2 },
-        { type = 'item', name = "swamp-4", amount = 5, probability = 0.1 },
-        { type = 'item', name = "swamp-5", amount = 5, probability = 0.05 },
+        { type = 'item', name = "angels-swamp-garden", amount = 1 },
+        { type = 'item', name = "angels-swamp-1", amount = 5, probability = 0.4 },
+        { type = 'item', name = "angels-swamp-2", amount = 5, probability = 0.3 },
+        { type = 'item', name = "angels-swamp-3", amount = 5, probability = 0.2 },
+        { type = 'item', name = "angels-swamp-4", amount = 5, probability = 0.1 },
+        { type = 'item', name = "angels-swamp-5", amount = 5, probability = 0.05 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
@@ -215,20 +189,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yab",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.9,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
-      probability_expression = 0.00025,
+      probability_expression = 0.000025,
       tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
@@ -253,20 +214,6 @@ data:extend({
         scale = 0.75,
         shift = { 0, 0 },
       },
-      -- {
-      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-4.png",
-      -- width = 128,
-      -- height = 128,
-      -- scale = 0.75,
-      -- shift = {0, 0}
-      -- },
-      -- {
-      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-5.png",
-      -- width = 128,
-      -- height = 128,
-      -- scale = 0.75,
-      -- shift = {0, 0}
-      -- },
     },
   },
 })

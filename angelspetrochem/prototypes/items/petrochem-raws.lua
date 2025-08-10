@@ -4,10 +4,10 @@ data:extend({
   --RAWS
   {
     type = "fluid",
-    name = "gas-natural-1",
+    name = "angels-gas-natural-1",
     icons = angelsmods.functions.create_gas_fluid_icon(nil, "NgNgNg"),
     --icon_size = 32,
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "aa",
     default_temperature = 0,
     gas_temperature = 0,
@@ -18,7 +18,7 @@ data:extend({
   },
   -- {
   -- type = "fluid",
-  -- name = "gas-natural-2",
+  -- name = "angels-gas-natural-2",
   -- icon = "__angelspetrochemgraphics__/graphics/icons/gas-natural-2.png",
   -- default_temperature = 0,
   -- heat_capacity = "1kJ",
@@ -28,12 +28,12 @@ data:extend({
   -- },
   {
     type = "fluid",
-    name = "liquid-multi-phase-oil",
+    name = "angels-liquid-multi-phase-oil",
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       nil,
       { { 100, 100, 100 }, { 127, 163, 109 }, nil, nil, { 171, 161, 055 } }
     ),
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "ba", --bb=crude oil
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -43,10 +43,10 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-raw-1",
+    name = "angels-gas-raw-1",
     icons = angelsmods.functions.create_gas_fluid_icon(nil, "NgNgS"),
     --icon_size = 32,
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "ab",
     default_temperature = 0,
     gas_temperature = 0,
@@ -57,7 +57,7 @@ data:extend({
   },
   -- {
   -- type = "fluid",
-  -- name = "gas-raw-2",
+  -- name = "angels-gas-raw-2",
   -- icon = "__angelspetrochemgraphics__/graphics/icons/gas-raw-1.png",
   -- default_temperature = 0,
   -- heat_capacity = "1kJ",
@@ -67,13 +67,13 @@ data:extend({
   -- },
   {
     type = "fluid",
-    name = "liquid-condensates",
+    name = "angels-liquid-condensates",
     icons = angelsmods.functions.create_liquid_fluid_icon(
       nil,
       { { 106, 106, 106 }, { 093, 093, 093 }, { 071, 071, 071 } }
     ),
     --icon_size = 32,
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "ca",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -83,10 +83,10 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-acid",
+    name = "angels-gas-acid",
     icons = angelsmods.functions.create_gas_fluid_icon(nil, "SSF"),
     --icon_size = 32,
-    subgroup = "petrochem-sulfer-fluids",
+    subgroup = "angels-petrochem-sulfur-fluids",
     order = "d",
     default_temperature = 0,
     gas_temperature = 0,
@@ -97,10 +97,10 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-ngl",
+    name = "angels-liquid-ngl",
     icons = angelsmods.functions.create_liquid_fluid_icon(nil, "NgNgOi"),
     --icon_size = 32,
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "ac",
     default_temperature = 0,
     heat_capacity = "0.1kJ",
@@ -110,13 +110,13 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "gas-residual",
+    name = "angels-gas-residual",
     icons = angelsmods.functions.create_gas_fluid_icon(
       nil,
       { { 064, 000, 064 }, { 128, 000, 128 }, { 192, 000, 192 } }
     ),
     --icon_size = 32,
-    subgroup = "petrochem-raw-fluids",
+    subgroup = "angels-petrochem-raw-fluids",
     order = "cb",
     default_temperature = 0,
     gas_temperature = 0,

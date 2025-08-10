@@ -6,20 +6,20 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "powder-metallurgy-2",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "glass-mixture-1",
+        recipe = "angels-solid-glass-mixture",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-glass-smelting",
+        recipe = "angels-liquid-molten-glass",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-plate-glass-1",
+        recipe = "angels-plate-glass",
       },
     },
     unit = {
@@ -39,16 +39,16 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "powder-metallurgy-3",
+      "angels-powder-metallurgy-3",
       "angels-glass-smelting-1",
       "angels-stone-smelting-2",
       "angels-lead-smelting-2", -- need this for the lead oxide processing
-      "strand-casting-2",
+      "angels-strand-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "glass-mixture-2",
+        recipe = "angels-solid-glass-mixture-2",
       },
       {
         type = "unlock-recipe",
@@ -77,22 +77,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "powder-metallurgy-4",
-      "strand-casting-3",
+      "angels-powder-metallurgy-4",
+      "angels-strand-casting-3",
       "angels-glass-smelting-2",
       "angels-aluminium-smelting-2",
       "angels-tin-casting-3",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
       --"angels-nitrogen-processing-1"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "glass-mixture-3",
+        recipe = "angels-solid-glass-mixture-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "glass-mixture-4",
+        recipe = "angels-solid-glass-mixture-4",
       },
       {
         type = "unlock-recipe",
@@ -100,7 +100,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-coil-glass-fiber-fast",
+        recipe = "angels-coil-glass-fiber-2",
       },
     },
     unit = {

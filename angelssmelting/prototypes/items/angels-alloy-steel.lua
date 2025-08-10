@@ -3,7 +3,7 @@ data:extend({
   -- STEEL SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-steel",
+    name = "angels-ingot-steel",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-steel.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -12,7 +12,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-steel",
+    name = "angels-powder-steel",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-steel.png",
     icon_size = 64,
     subgroup = "angels-iron",
@@ -22,7 +22,7 @@ data:extend({
   -- STEEL CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-steel",
+    name = "angels-liquid-molten-steel",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-steel.png",
     icon_size = 64,
     subgroup = "angels-steel-casting",

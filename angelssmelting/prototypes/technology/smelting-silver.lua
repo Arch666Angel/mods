@@ -7,17 +7,17 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       "angels-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-smelting",
+        recipe = "angels-ingot-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silver-smelting",
+        recipe = "angels-liquid-molten-silver",
       },
       {
         type = "unlock-recipe",
@@ -25,7 +25,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-silvered-copper-wire",
+        recipe = "angels-wire-silver",
       },
     },
     unit = {
@@ -45,26 +45,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-silver-smelting-1",
       "angels-nitrogen-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-processing",
+        recipe = "angels-processed-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-silver-smelting",
+        recipe = "angels-solid-silver-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-silver-nitrate-smelting",
+        recipe = "angels-ingot-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-silver",
+        recipe = "angels-powder-silver",
       },
     },
     unit = {
@@ -85,26 +85,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-silver-smelting-1",
       "angels-copper-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting",
+        recipe = "angels-wire-coil-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-converting",
+        recipe = "angels-wire-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting",
+        recipe = "angels-roll-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-silver-converting",
+        recipe = "angels-plate-silver-2",
       },
     },
     unit = {
@@ -125,26 +125,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-silver-smelting-2",
-      "sodium-processing-2",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-processed-processing",
+        recipe = "angels-pellet-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-silver-smelting",
+        recipe = "angels-solid-sodium-silver-cyanide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-silver-cyanide-smelting",
+        recipe = "angels-cathode-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-silver-smelting",
+        recipe = "angels-ingot-silver-3",
       },
     },
     unit = {
@@ -166,17 +166,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-silver-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting-fast",
+        recipe = "angels-wire-coil-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting-fast",
+        recipe = "angels-roll-silver-2",
       },
     },
     unit = {

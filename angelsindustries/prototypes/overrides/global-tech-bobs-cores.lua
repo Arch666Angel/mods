@@ -23,12 +23,12 @@ if angelsmods.industries.tech then
     AI.core_replace("bobingabout-enrichment-process", "processing", "energy")
 
     if not mods["bobtech"] then
-      AI.core_replace("alien-blue-research", "processing", "war")
-      AI.core_replace("alien-orange-research", "processing", "war")
-      AI.core_replace("alien-purple-research", "processing", "war")
-      AI.core_replace("alien-yellow-research", "processing", "war")
-      AI.core_replace("alien-green-research", "processing", "war")
-      AI.core_replace("alien-red-research", "processing", "war")
+      AI.core_replace("bob-alien-blue-research", "processing", "war")
+      AI.core_replace("bob-alien-orange-research", "processing", "war")
+      AI.core_replace("bob-alien-purple-research", "processing", "war")
+      AI.core_replace("bob-alien-yellow-research", "processing", "war")
+      AI.core_replace("bob-alien-green-research", "processing", "war")
+      AI.core_replace("bob-alien-red-research", "processing", "war")
     end
   end
 
@@ -236,12 +236,12 @@ if angelsmods.industries.tech then
   if mods["bobtech"] then
     --Remove cores associated with advanced alien technologies
     if data.raw.tool["science-pack-gold"] then
-      OV.remove_science_pack("alien-research-blue", "datacore-processing-1")
-      OV.remove_science_pack("alien-research-orange", "datacore-processing-1")
-      OV.remove_science_pack("alien-research-purple", "datacore-processing-1")
-      OV.remove_science_pack("alien-research-yellow", "datacore-processing-1")
-      OV.remove_science_pack("alien-research-green", "datacore-processing-1")
-      OV.remove_science_pack("alien-research-red", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-blue", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-orange", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-purple", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-yellow", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-green", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-red", "datacore-processing-1")
       --blue tier
       OV.remove_science_pack("bob-battery-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("bob-battery-equipment-5", "datacore-enhance-1")

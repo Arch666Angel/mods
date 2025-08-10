@@ -4,17 +4,17 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({
   {
     type = "item",
-    name = "seafloor-pump",
+    name = "angels-seafloor-pump",
     icon = "__angelsrefininggraphics__/graphics/icons/seafloor-pump-ico.png",
     icon_size = 32,
-    subgroup = "washing-building",
+    subgroup = "angels-washing-building",
     order = "a",
-    place_result = "seafloor-pump",
+    place_result = "angels-seafloor-pump",
     stack_size = 10,
   },
   {
     type = "offshore-pump",
-    name = "seafloor-pump",
+    name = "angels-seafloor-pump",
     icon = "__angelsrefininggraphics__/graphics/icons/seafloor-pump-ico.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation", "filter-directions" },
@@ -24,7 +24,7 @@ data:extend({
       { area = { { -1.4, -1.4 }, { 1.4, 0.4 } }, required_tiles = { layers = { ground_tile = true } }, colliding_tiles = { layers = { water_tile = true } }, remove_on_collision = true },
       { area = { { -2, -3 }, { 2, -2 } }, required_tiles = { layers = { water_tile = true } }, colliding_tiles = { layers = {} } },
     },
-    minable = { mining_time = 0.1, result = "seafloor-pump" },
+    minable = { mining_time = 0.1, result = "angels-seafloor-pump" },
     max_health = 150,
     corpse = "small-remnants",
     fluid_source_offset = { 0, -1 },
@@ -45,7 +45,7 @@ data:extend({
       volume = 100,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
-      filter = "water-viscous-mud",
+      filter = "angels-water-viscous-mud",
       pipe_connections = {
         {
           position = { 0, 0 },
