@@ -267,16 +267,6 @@ data:extend({
     },
     results = { { type = "item", name = "valve-underflow", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "valve-converter",
-    energy_required = 2,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-plate", amount = 1 },
-    },
-    results = { { type = "item", name = "valve-converter", amount = 1 } },
-  },
   --STORAGE TANKS
   {
     type = "recipe",

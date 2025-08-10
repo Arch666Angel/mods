@@ -6,9 +6,6 @@ angelsmods.petrochem.number_tint = { r = 1, g = 1, b = 1, a = 1 }
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
 
---CONVERTER RECIPES
-angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"].value
-angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
 angelsmods.trigger.resin = (not angelsmods.functions.is_special_vanilla()) or (mods["bobelectronics"] and true or false)

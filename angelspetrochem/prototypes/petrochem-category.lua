@@ -26,10 +26,6 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "angels-converter",
-  },
-  {
-    type = "recipe-category",
     name = "angels-petrochem-electrolyser",
   },
   {
@@ -273,12 +269,6 @@ data:extend({
     name = "angels-petrochem-tanks",
     group = "angels-petrochem-refining",
     order = "l",
-  },
-  {
-    type = "item-subgroup",
-    name = "angels-converter",
-    group = "angels-petrochem-refining",
-    order = "zb[converters]",
   },
   -- Steam boilers
   {

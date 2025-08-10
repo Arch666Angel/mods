@@ -7,43 +7,23 @@ local move_item = angelsmods.functions.move_item
 if mods["bobplates"] then
   -- water
   OV.converter_fluid("bob-pure-water", "angels-water-purified")
-  angelsmods.functions.disable_barreling_recipes("bob-pure-water")
-
   OV.converter_fluid("bob-oxygen", "angels-gas-oxygen")
-  angelsmods.functions.disable_barreling_recipes("bob-oxygen")
-
   OV.converter_fluid("bob-hydrogen", "angels-gas-hydrogen")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrogen")
 
   -- nitrogen (air)
   OV.converter_fluid("bob-liquid-air", "angels-gas-oxygen")
-  angelsmods.functions.disable_barreling_recipes("bob-liquid-air")
-
   OV.converter_fluid("bob-nitrogen", "angels-gas-nitrogen")
-  angelsmods.functions.disable_barreling_recipes("bob-nitrogen")
-
   OV.converter_fluid("bob-nitrogen-dioxide", "angels-gas-nitrogen-dioxide")
-  angelsmods.functions.disable_barreling_recipes("bob-nitrogen-dioxide")
-
   OV.converter_fluid("bob-nitric-acid", "angels-liquid-nitric-acid")
-  angelsmods.functions.disable_barreling_recipes("bob-nitric-acid")
 
   -- sulfur
   OV.converter_fluid("bob-hydrogen-sulfide", "angels-gas-hydrogen-sulfide")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrogen-sulfide")
-
   OV.converter_fluid("bob-sulfur-dioxide", "angels-gas-sulfur-dioxide")
-  angelsmods.functions.disable_barreling_recipes("bob-sulfur-dioxide")
 
   -- chlorine
   OV.converter_fluid("bob-chlorine", "angels-gas-chlorine")
-  angelsmods.functions.disable_barreling_recipes("bob-chlorine")
-
   OV.converter_fluid("bob-hydrogen-chloride", "angels-gas-hydrogen-chloride")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrogen-chloride")
-
   OV.converter_fluid("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
-  angelsmods.functions.disable_barreling_recipes("bob-ferric-chloride-solution")
 end
 
 -------------------------------------------------------------------------------
@@ -56,22 +36,13 @@ end
 local Energy_table = {
   --liquid Naphtha (heavy oil), bobs value is 1MJ (Heavy fuel oil 38.2 MJ/L)(39 MJ/kg)
   ["angels-liquid-naphtha"] = { fv = 244.7, em = 3, turr = false },
-  ["heavy-oil"] = {
-    fv = angelsmods.trigger.enableconverter and 244.7 or nil,
-    turr = angelsmods.trigger.enableconverter and true or false,
-  },
+  ["heavy-oil"] = { fv = nil, turr = false },
   --liquid Fuel oil (light oil), bobs value 1.5MJ (light fuel oil 39 MJ/L)(40.6 MJ/kg)
   ["angels-liquid-fuel-oil"] = { fv = 249.9, em = 2, turr = false }, --was 24.99kJ
-  ["light-oil"] = {
-    fv = angelsmods.trigger.enableconverter and 249.9 or nil,
-    turr = angelsmods.trigger.enableconverter and true or false,
-  },
+  ["light-oil"] = { fv = nil, turr = false },
   --gas methane (petrogas), bobs value 2.3MJ (methane 35.9 MJ/L)(49.85 MJ/kg)
   ["angels-gas-methane"] = { fv = 230 },
-  ["petroleum-gas"] = {
-    fv = angelsmods.trigger.enableconverter and 230 or nil,
-    turr = angelsmods.trigger.enableconverter and true or false,
-  },
+  ["petroleum-gas"] = { fv = nil, turr = false },
   ["angels-gas-ethane"] = { fv = 388.9, em = 1.5 }, --gas ethane (), - (ethane 60.7 MJ/L)(47.2 MJ/kg)
   ["angels-gas-butane"] = { fv = 710.5, em = 1.8 }, --gas butane (), - (butane 110.9 MJ/L)(46.46 MJ/kg)
   ["angels-gas-propene"] = { fv = 521.5, em = 5 }, --gas propene (), - (propylene 81.4 MJ/L)(45.8 MJ/kg)
