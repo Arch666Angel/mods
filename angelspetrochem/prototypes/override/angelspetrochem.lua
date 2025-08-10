@@ -8,9 +8,7 @@ local get_ore_name = angelsmods.functions.get_ore_name
 if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
   angelsmods.trigger.water_green_waste = true
   OV.converter_fluid("bob-heavy-water", "angels-liquid-water-heavy")
-  angelsmods.functions.disable_barreling_recipes("bob-heavy-water")
   OV.converter_fluid("bob-deuterium", "angels-gas-deuterium")
-  angelsmods.functions.disable_barreling_recipes("bob-deuterium")
 
   OV.disable_recipe({ "bob-heavy-water", "bob-heavy-water-electrolysis" })
 
@@ -196,15 +194,6 @@ else -- special vanilla
       },
     },
   })
-end
-
--------------------------------------------------------------------------------
--- VALVES ---------------------------------------------------------------------
--------------------------------------------------------------------------------
-if angelsmods.trigger.enableconverter then
-else
-  angelsmods.functions.hide("valve-converter")
-  OV.disable_recipe("valve-converter")
 end
 
 -------------------------------------------------------------------------------

@@ -8,6 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Angel's Petrochemical processing changes Oil processing and adds Gas processing, as well as a more complex web of chemical production. Includes overrides and tie-ins to Bob's technologies and recipes. Dependencies: Angel's Refining",
   "dependencies": [
+    "base >= 2.0.48",
     "angelsrefining >= 1.1.0",
     "~ angelspetrochemgraphics >= 1.0.0"
   ]

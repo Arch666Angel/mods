@@ -1,11 +1,11 @@
 {
   "item": [
-    [ "valve-check", "valve-inspector" ]
+    [ "valve-check", "angels-valve-inspector" ]
   ],
   "recipe": [
-    [ "valve-check", "valve-inspector" ]
+    [ "valve-check", "angels-valve-inspector" ]
   ],
   "entity": [
-    [ "valve-check", "valve-inspector" ]
+    [ "valve-check", "angels-valve-inspector" ]
   ]
 }

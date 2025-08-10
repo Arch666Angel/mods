@@ -1,50 +1,27 @@
+local OV = angelsmods.functions.OV
+
 if angelsmods.refining then
   --ADD UNLOCK TO BARRELS
-  angelsmods.functions.OV.add_prereq("bob-fluid-barreling", "angels-fluid-control")
+  OV.add_prereq("bob-fluid-barreling", "angels-fluid-control")
 
   --CREATE CONVERTER
-  angelsmods.functions.make_converter("sulfuric-acid", "angels-liquid-sulfuric-acid")
-  angelsmods.functions.disable_barreling_recipes("sulfuric-acid")
-  angelsmods.functions.make_converter("heavy-oil", "angels-liquid-naphtha")
-  angelsmods.functions.disable_barreling_recipes("heavy-oil")
-  angelsmods.functions.make_converter("light-oil", "angels-liquid-fuel-oil")
-  angelsmods.functions.disable_barreling_recipes("light-oil")
-  angelsmods.functions.make_converter("petroleum-gas", "angels-gas-methane")
-  angelsmods.functions.disable_barreling_recipes("petroleum-gas")
+  OV.converter_fluid("sulfuric-acid", "angels-liquid-sulfuric-acid")
+  OV.converter_fluid("heavy-oil", "angels-liquid-naphtha")
+  OV.converter_fluid("light-oil", "angels-liquid-fuel-oil")
+  OV.converter_fluid("petroleum-gas", "angels-gas-methane")
   if bobmods then
     if bobmods.plates then
-      angelsmods.functions.make_converter("bob-chlorine", "angels-gas-chlorine")
-      angelsmods.functions.disable_barreling_recipes("bob-chlorine")
-      angelsmods.functions.make_converter("bob-oxygen", "angels-gas-oxygen")
-      angelsmods.functions.disable_barreling_recipes("bob-oxygen")
-      angelsmods.functions.make_converter("bob-hydrogen", "angels-gas-hydrogen")
-      angelsmods.functions.disable_barreling_recipes("bob-hydrogen")
-      angelsmods.functions.make_converter("bob-hydrogen-chloride", "angels-gas-hydrogen-chloride")
-      angelsmods.functions.disable_barreling_recipes("bob-hydrogen-chloride")
-      angelsmods.functions.make_converter("bob-nitrogen", "angels-gas-nitrogen")
-      angelsmods.functions.disable_barreling_recipes("bob-nitrogen")
-      angelsmods.functions.make_converter("bob-sulfur-dioxide", "angels-gas-sulfur-dioxide")
-      angelsmods.functions.disable_barreling_recipes("bob-sulfur-dioxide")
-      angelsmods.functions.make_converter("bob-nitric-acid", "angels-liquid-nitric-acid")
-      angelsmods.functions.disable_barreling_recipes("bob-nitric-acid")
-      angelsmods.functions.make_converter("bob-nitrogen-dioxide", "angels-gas-nitrogen-dioxide")
-      angelsmods.functions.disable_barreling_recipes("bob-nitrogen-dioxide")
-      angelsmods.functions.make_converter("bob-liquid-air", "angels-gas-compressed-air")
-      angelsmods.functions.disable_barreling_recipes("bob-liquid-air")
-      angelsmods.functions.make_converter("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
-      angelsmods.functions.disable_barreling_recipes("bob-ferric-chloride-solution")
-      angelsmods.functions.make_converter("bob-hydrogen-sulfide", "angels-gas-hydrogen-sulfide")
-      angelsmods.functions.disable_barreling_recipes("bob-hydrogen-sulfide")
-    end
-    if data.raw["fluid"]["dinitrogen-tetroxide"] then
-      angelsmods.functions.make_converter("bob-ammonia", "angels-gas-ammonia")
-      angelsmods.functions.disable_barreling_recipes("bob-ammonia")
-      angelsmods.functions.make_converter("bob-nitric-oxide", "angels-gas-nitrogen-monoxide")
-      angelsmods.functions.disable_barreling_recipes("bob-nitric-oxide")
-      angelsmods.functions.make_converter("bob-dinitrogen-tetroxide", "angels-gas-dinitrogen-tetroxide")
-      angelsmods.functions.disable_barreling_recipes("bob-dinitrogen-tetroxide")
-      angelsmods.functions.make_converter("bob-hydrazine", "angels-gas-hydrazine")
-      angelsmods.functions.disable_barreling_recipes("bob-hydrazine")
+      OV.converter_fluid("bob-chlorine", "angels-gas-chlorine")
+      OV.converter_fluid("bob-oxygen", "angels-gas-oxygen")
+      OV.converter_fluid("bob-hydrogen", "angels-gas-hydrogen")
+      OV.converter_fluid("bob-hydrogen-chloride", "angels-gas-hydrogen-chloride")
+      OV.converter_fluid("bob-nitrogen", "angels-gas-nitrogen")
+      OV.converter_fluid("bob-sulfur-dioxide", "angels-gas-sulfur-dioxide")
+      OV.converter_fluid("bob-nitric-acid", "angels-liquid-nitric-acid")
+      OV.converter_fluid("bob-nitrogen-dioxide", "angels-gas-nitrogen-dioxide")
+      OV.converter_fluid("bob-liquid-air", "angels-gas-compressed-air")
+      OV.converter_fluid("bob-ferric-chloride-solution", "angels-liquid-ferric-chloride-solution")
+      OV.converter_fluid("bob-hydrogen-sulfide", "angels-gas-hydrogen-sulfide")
     end
   end
 
@@ -67,9 +44,6 @@ if angelsmods.refining then
   angelsmods.functions.make_void("angels-gas-epichlorhydrin", "chemical")
   angelsmods.functions.make_void("angels-gas-chlor-methane", "chemical")
   angelsmods.functions.make_void("angels-liquid-perchloric-acid", "chemical")
-  if data.raw.fluid["ferric-chloride-solution"] then
-    angelsmods.functions.make_void("ferric-chloride-solution", "chemical")
-  end
   angelsmods.functions.make_void("angels-liquid-ferric-chloride-solution", "chemical")
   angelsmods.functions.make_void("angels-liquid-cupric-chloride-solution", "chemical")
 
