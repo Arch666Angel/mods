@@ -1,12 +1,12 @@
-circuit_connector_definitions["angels-relay-station"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel(-3.625,  4.625), shadow_offset = util.by_pixel(-3.625,  4.625), show_shadow = true },
-})
-circuit_connector_definitions["angels-relay-station-2"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel(-3.625,  21.25), shadow_offset = util.by_pixel(-3.625,  21.25), show_shadow = true },
-})
-circuit_connector_definitions["angels-relay-station-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 25, main_offset = util.by_pixel( 8.125,  11), shadow_offset = util.by_pixel( 8.125,  11), show_shadow = true },
-})
+circuit_connector_definitions["angels-relay-station"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.625,  4.625), shadow_offset = util.by_pixel(-3.625,  4.625), show_shadow = true }
+)
+circuit_connector_definitions["angels-relay-station-2"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.625,  21.25), shadow_offset = util.by_pixel(-3.625,  21.25), show_shadow = true }
+)
+circuit_connector_definitions["angels-relay-station-3"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation = 25, main_offset = util.by_pixel( 8.125,  11), shadow_offset = util.by_pixel( 8.125,  11), show_shadow = true }
+)
 
 data:extend({
   {

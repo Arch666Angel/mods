@@ -1,6 +1,6 @@
-circuit_connector_definitions["angels-big-chest"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  5, main_offset = util.by_pixel( 13,  1.625), shadow_offset = util.by_pixel( 13,  1.625), show_shadow = true },
-})
+circuit_connector_definitions["angels-big-chest"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  5, main_offset = util.by_pixel( 13,  1.625), shadow_offset = util.by_pixel( 13,  1.625), show_shadow = true }
+)
 
 data:extend({
   {

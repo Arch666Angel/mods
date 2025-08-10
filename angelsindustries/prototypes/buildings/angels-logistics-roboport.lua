@@ -1,14 +1,14 @@
-circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create_single(universal_connector_template,
   { variation =  4, main_offset = util.by_pixel(-4.375,  94.25), shadow_offset = util.by_pixel(-4.375,  94.25), show_shadow = true }
-})
+)
 
-circuit_connector_definitions["cargo-box"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+circuit_connector_definitions["cargo-box"] = circuit_connector_definitions.create_single(universal_connector_template,
   { variation =  4, main_offset = util.by_pixel(-4.75,  55.125), shadow_offset = util.by_pixel(-4.75,  55.125), show_shadow = true }
-})
+)
 
-circuit_connector_definitions["cargo-roboport"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+circuit_connector_definitions["cargo-roboport"] = circuit_connector_definitions.create_single(universal_connector_template,
   { variation =  2, main_offset = util.by_pixel(-59.25, -31.375), shadow_offset = util.by_pixel(-59.25, -31.375), show_shadow = true }
-})
+)
 
 data:extend({
   {

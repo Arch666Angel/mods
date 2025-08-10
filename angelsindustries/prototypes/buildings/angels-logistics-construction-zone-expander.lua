@@ -1,12 +1,12 @@
-circuit_connector_definitions["angels-construction-zone-expander"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel(-3.125,  8), shadow_offset = util.by_pixel(-3.125,  8), show_shadow = true },
-})
-circuit_connector_definitions["angels-construction-zone-expander-2"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel(-3.875,  22.5), shadow_offset = util.by_pixel(-3.875,  22.5), show_shadow = true },
-})
-circuit_connector_definitions["angels-construction-zone-expander-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 25, main_offset = util.by_pixel( 7.875,  11.75), shadow_offset = util.by_pixel( 7.875,  11.75), show_shadow = true },
-})
+circuit_connector_definitions["angels-construction-zone-expander"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.125,  8), shadow_offset = util.by_pixel(-3.125,  8), show_shadow = true }
+)
+circuit_connector_definitions["angels-construction-zone-expander-2"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.875,  22.5), shadow_offset = util.by_pixel(-3.875,  22.5), show_shadow = true }
+)
+circuit_connector_definitions["angels-construction-zone-expander-3"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation = 25, main_offset = util.by_pixel( 7.875,  11.75), shadow_offset = util.by_pixel( 7.875,  11.75), show_shadow = true }
+)
 
 data:extend({
   {
