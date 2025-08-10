@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-ore-crusher"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+})
+
 data:extend({
   --Burner-Ore-Crusher
   {
@@ -52,6 +59,8 @@ data:extend({
       },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 2,
     graphics_set = {
       animation = {
@@ -130,6 +139,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -207,6 +218,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -283,6 +296,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {

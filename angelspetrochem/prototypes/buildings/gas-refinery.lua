@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-gas-refinery-small"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 29.875, -15.25), shadow_offset = util.by_pixel( 29.875, -15.25), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel(-35.25, -4.875), shadow_offset = util.by_pixel(-35.25, -4.875), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-69.75, -88.625), shadow_offset = util.by_pixel(-69.75, -88.625), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 56.375, -99.5), shadow_offset = util.by_pixel( 56.375, -99.5), show_shadow = true },
+})
+
 data:extend({
   --SMALL REFINERY
   {
@@ -44,6 +51,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -370,6 +379,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -696,6 +707,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -1021,6 +1034,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "425kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

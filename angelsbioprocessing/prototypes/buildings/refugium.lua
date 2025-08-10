@@ -1,3 +1,24 @@
+circuit_connector_definitions["angels-bio-refugium-fish"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 84.5,  105), shadow_offset = util.by_pixel( 84.5,  105), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 84.5,  105), shadow_offset = util.by_pixel( 84.5,  105), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 84.5,  105), shadow_offset = util.by_pixel( 84.5,  105), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 84.5,  105), shadow_offset = util.by_pixel( 84.5,  105), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-bio-refugium-puffer"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-60.125,  55.875), shadow_offset = util.by_pixel(-60.125,  55.875), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-60.125,  55.875), shadow_offset = util.by_pixel(-60.125,  55.875), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-60.125,  55.875), shadow_offset = util.by_pixel(-60.125,  55.875), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-60.125,  55.875), shadow_offset = util.by_pixel(-60.125,  55.875), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-bio-refugium-biter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-3.5, -49), shadow_offset = util.by_pixel(-3.5, -49), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-3.5, -49), shadow_offset = util.by_pixel(-3.5, -49), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-3.5, -49), shadow_offset = util.by_pixel(-3.5, -49), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-3.5, -49), shadow_offset = util.by_pixel(-3.5, -49), show_shadow = true },
+})
+
 data:extend({
   -- FISH
   {
@@ -35,6 +56,8 @@ data:extend({
     },
     energy_usage = "150kW",
     --ingredient_count = 4,
+    circuit_connector = circuit_connector_definitions["angels-bio-refugium-fish"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -136,6 +159,8 @@ data:extend({
       emissions_per_minute = { pollution = -30 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-refugium-puffer"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-puffer-off.png",
@@ -248,6 +273,8 @@ data:extend({
       emissions_per_minute = { pollution = -25 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-refugium-biter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-refugium/bio-refugium-biter-off.png",

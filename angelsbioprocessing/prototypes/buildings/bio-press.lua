@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-bio-press"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375, -15.625), shadow_offset = util.by_pixel(-4.375, -15.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -15.625), shadow_offset = util.by_pixel(-4.375, -15.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -15.625), shadow_offset = util.by_pixel(-4.375, -15.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -15.625), shadow_offset = util.by_pixel(-4.375, -15.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -32,6 +39,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.03 * 60 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-press"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/bio-press/bio-press.png",

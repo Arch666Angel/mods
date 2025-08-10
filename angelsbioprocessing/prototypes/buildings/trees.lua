@@ -1,3 +1,7 @@
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-tree"] = {}
+
 data:extend({
   {
     type = "noise-function",
@@ -38,19 +42,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "xaa",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_tree_probability(0.625)",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.625,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      probability_expression = 0.000025,
+      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {
@@ -106,19 +99,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yaa",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_tree_probability(0.875)",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.875,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {
@@ -180,19 +162,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yaa",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_tree_probability(0.25)",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.25,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {

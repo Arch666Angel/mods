@@ -48,23 +48,23 @@ if mods["bobwarfare"] then
     },
   })
 
-  reorder("ammo", "laser-rifle-battery", "angels-electric-c", "a[regular]")
-  reorder("ammo", "laser-rifle-battery-ruby", "angels-electric-c", "b[ruby]")
-  reorder("ammo", "laser-rifle-battery-sapphire", "angels-electric-c", "c[sapphire]")
-  reorder("ammo", "laser-rifle-battery-emerald", "angels-electric-c", "d[emerald]")
-  reorder("ammo", "laser-rifle-battery-amethyst", "angels-electric-c", "e[amethyst]")
-  reorder("ammo", "laser-rifle-battery-topaz", "angels-electric-c", "f[topaz]")
-  reorder("ammo", "laser-rifle-battery-diamond", "angels-electric-c", "g[diamond]")
-  reorder("item", "laser-rifle-battery-case", "angels-electric-c", "j[intermediate]")
+  reorder("ammo", "bob-laser-rifle-battery", "angels-electric-c", "a[regular]")
+  reorder("ammo", "bob-laser-rifle-battery-ruby", "angels-electric-c", "b[ruby]")
+  reorder("ammo", "bob-laser-rifle-battery-sapphire", "angels-electric-c", "c[sapphire]")
+  reorder("ammo", "bob-laser-rifle-battery-emerald", "angels-electric-c", "d[emerald]")
+  reorder("ammo", "bob-laser-rifle-battery-amethyst", "angels-electric-c", "e[amethyst]")
+  reorder("ammo", "bob-laser-rifle-battery-topaz", "angels-electric-c", "f[topaz]")
+  reorder("ammo", "bob-laser-rifle-battery-diamond", "angels-electric-c", "g[diamond]")
+  reorder("item", "bob-laser-rifle-battery-case", "angels-electric-c", "j[intermediate]")
 
   OV.patch_recipes({
-    { name = "laser-rifle-battery", subgroup = "angels-electric-c", order = "a[regular]" },
-    { name = "laser-rifle-battery-ruby", subgroup = "angels-electric-c", order = "b[ruby]" },
-    { name = "laser-rifle-battery-sapphire", subgroup = "angels-electric-c", order = "c[sapphire]" },
-    { name = "laser-rifle-battery-emerald", subgroup = "angels-electric-c", order = "d[emerald]" },
-    { name = "laser-rifle-battery-amethyst", subgroup = "angels-electric-c", order = "e[amethyst]" },
-    { name = "laser-rifle-battery-topaz", subgroup = "angels-electric-c", order = "f[topaz]" },
-    { name = "laser-rifle-battery-diamond", subgroup = "angels-electric-c", order = "g[diamond]" },
-    { name = "laser-rifle-battery-case", subgroup = "angels-electric-c", order = "j[intermediate]" },
+    { name = "bob-laser-rifle-battery", subgroup = "angels-electric-c", order = "a[regular]" },
+    { name = "bob-laser-rifle-battery-ruby", subgroup = "angels-electric-c", order = "b[ruby]" },
+    { name = "bob-laser-rifle-battery-sapphire", subgroup = "angels-electric-c", order = "c[sapphire]" },
+    { name = "bob-laser-rifle-battery-emerald", subgroup = "angels-electric-c", order = "d[emerald]" },
+    { name = "bob-laser-rifle-battery-amethyst", subgroup = "angels-electric-c", order = "e[amethyst]" },
+    { name = "bob-laser-rifle-battery-topaz", subgroup = "angels-electric-c", order = "f[topaz]" },
+    { name = "bob-laser-rifle-battery-diamond", subgroup = "angels-electric-c", order = "g[diamond]" },
+    { name = "bob-laser-rifle-battery-case", subgroup = "angels-electric-c", order = "j[intermediate]" },
   })
 end

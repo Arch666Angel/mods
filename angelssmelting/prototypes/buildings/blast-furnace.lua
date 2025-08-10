@@ -16,6 +16,14 @@ local function angels_blast_furnace_fluid_boxes()
     },
   }
 end
+
+circuit_connector_definitions["angels-blast-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 8.875,  58.625), shadow_offset = util.by_pixel( 8.875,  58.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 8.875,  58.625), shadow_offset = util.by_pixel( 8.875,  58.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 8.875,  58.625), shadow_offset = util.by_pixel( 8.875,  58.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 8.875,  58.625), shadow_offset = util.by_pixel( 8.875,  58.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -82,6 +90,8 @@ data:extend({
       },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-blast-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -236,6 +246,8 @@ data:extend({
       },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-blast-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -390,6 +402,8 @@ data:extend({
       },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-blast-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -543,6 +557,8 @@ data:extend({
       },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-blast-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {

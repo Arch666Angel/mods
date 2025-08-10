@@ -1,3 +1,11 @@
+circuit_connector_definitions["angels-crop-farm"] = circuit_connector_definitions.create_vector(universal_connector_template,
+{
+  { variation =  4, main_offset = util.by_pixel( 38.5,  55.125), shadow_offset = util.by_pixel( 38.5,  55.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 38.5,  55.125), shadow_offset = util.by_pixel( 38.5,  55.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 38.5,  55.125), shadow_offset = util.by_pixel( 38.5,  55.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 38.5,  55.125), shadow_offset = util.by_pixel( 38.5,  55.125), show_shadow = true }
+})
+
 data:extend({
   {
     type = "item",
@@ -32,6 +40,8 @@ data:extend({
       emissions_per_minute = { pollution = -40 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-crop-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -115,6 +125,8 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-crop-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -198,6 +210,8 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-crop-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -281,6 +295,8 @@ data:extend({
       emissions_per_minute = { pollution = -80 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-crop-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

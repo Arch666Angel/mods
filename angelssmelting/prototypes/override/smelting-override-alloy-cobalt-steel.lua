@@ -60,6 +60,17 @@ if angelsmods.trigger.smelting_products["cobalt-steel"].plate then
         results = {
           { type = "item", name = "bob-cobalt-steel-alloy", amount = 4 },
         },
+        icons = angelsmods.functions.add_icon_layer(
+          {
+            {
+              icon = "__angelssmeltinggraphics__/graphics/icons/plate-cobalt-steel.png",
+              icon_size = 32,
+            }
+          },
+          angelsmods.functions.get_object_icons("angels-liquid-molten-cobalt-steel"),
+          { -10, -10 },
+          0.4375
+        ),
         order = "e[cobalt-steel]-b[cobalt-steel-alloy]",
       },
       --TECHS

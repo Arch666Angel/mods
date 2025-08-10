@@ -274,6 +274,13 @@ local bio_turret_preparing_muzzle_animation = function(opts)
   }
 end
 
+circuit_connector_definitions["angels-bio-turret"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 14, main_offset = util.by_pixel(-7.25,  24.5), shadow_offset = util.by_pixel(-7.25,  24.5), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-42.875, -12.125), shadow_offset = util.by_pixel(-42.875, -12.125), show_shadow = true },
+  { variation =  2, main_offset = util.by_pixel( 7.625, -46.75), shadow_offset = util.by_pixel( 7.625, -46.75), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 44.5, -8.5), shadow_offset = util.by_pixel( 44.5, -8.5), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -370,6 +377,8 @@ data:extend({
     fluid_buffer_size = 100,
     fluid_buffer_input_flow = 250 / 60 / 5, -- 5s to fill the buffer
     activation_buffer_ratio = 0.25,
+    circuit_connector = circuit_connector_definitions["angels-bio-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     folded_animation = bio_turret_extension({ frame_count = 1, line_length = 1 }),
     preparing_animation = bio_turret_extension({}),
     prepared_animation = bio_turret_prepared(),

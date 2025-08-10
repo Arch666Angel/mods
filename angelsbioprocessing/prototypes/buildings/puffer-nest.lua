@@ -1,5 +1,7 @@
 local def_shift = { 0.75, -2 }
 
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-puffer-nest"] = {}
+
 data:extend({
   {
     type = "tree",
@@ -24,22 +26,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "za",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
       probability_expression = 0.00003,
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.5,
---           water_range = 0.5,
---           water_max_range = 0.5,
---         },
---       },
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {

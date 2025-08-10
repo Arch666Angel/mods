@@ -998,7 +998,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-milling-drum-used",
+        recipe = "angels-milling-drum-lubricated",
       },
     },
     unit = {

@@ -860,11 +860,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "angels-milling-drum-used",
-    icon = "__angelsrefininggraphics__/graphics/icons/milling-drum-used.png",
+    name = "angels-milling-drum-lubricated",
+    icon = "__angelsrefininggraphics__/graphics/icons/milling-drum-lubricated.png",
     icon_size = 32,
     subgroup = "angels-ore-powderizer",
-    order = "z[milling-drum]-b[used]",
+    order = "z[milling-drum]-b[lubricated]",
     stack_size = 200,
   },
   {

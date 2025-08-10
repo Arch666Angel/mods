@@ -1,6 +1,6 @@
 if angelsmods.refining then
   if bobmods and bobmods.plates then
-    angelsmods.functions.make_converter("bob-tungstic-acid", "angels-liquid-tungstic-acid")
+    angelsmods.functions.OV.converter_fluid("bob-tungstic-acid", "angels-liquid-tungstic-acid")
   end
 
   --CREATE BARRELS

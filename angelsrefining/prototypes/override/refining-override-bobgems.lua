@@ -57,12 +57,12 @@ if mods["bobplates"] then
             {type = "item", name = "angels-crystal-dust", amount = 5}
           },
           results = {
-            {type = "item", name = "ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio},
-            {type = "item", name = "sapphire-ore", amount = 1, probability = bobmods.gems.SapphireRatio},
-            {type = "item", name = "emerald-ore", amount = 1, probability = bobmods.gems.EmeraldRatio},
-            {type = "item", name = "amethyst-ore", amount = 1, probability = bobmods.gems.AmethystRatio},
-            {type = "item", name = "topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio},
-            {type = "item", name = "diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio}
+            {type = "item", name = "bob-ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio},
+            {type = "item", name = "bob-sapphire-ore", amount = 1, probability = bobmods.gems.SapphireRatio},
+            {type = "item", name = "bob-emerald-ore", amount = 1, probability = bobmods.gems.EmeraldRatio},
+            {type = "item", name = "bob-amethyst-ore", amount = 1, probability = bobmods.gems.AmethystRatio},
+            {type = "item", name = "bob-topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio},
+            {type = "item", name = "bob-diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio}
           },
           subgroup = "bob-gems-crystallization",
           icon = "__bobores__/graphics/icons/gem-ore.png",

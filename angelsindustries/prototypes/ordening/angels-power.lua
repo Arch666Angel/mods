@@ -29,6 +29,10 @@ if angelsmods.industries.overhaul then
   move_item("medium-electric-pole", "angels-power-poles", "b[medium]")
   move_item("big-electric-pole", "angels-power-poles", "c[big]")
   move_item("substation", "angels-power-poles", "d[substation]")
+
+  if mods["bobplates"] then
+    move_item("bob-thorium-232", "angels-power-nuclear-processing", "a[radioactive-element]-h[thorium-232]")
+  end
 end
 
 if mods["bobpower"] then
@@ -59,19 +63,19 @@ if mods["bobpower"] then
     })
 
     move_item("medium-electric-pole", "angels-medium-power-poles", "a")
-    move_item("medium-electric-pole-2", "angels-medium-power-poles", "b")
-    move_item("medium-electric-pole-3", "angels-medium-power-poles", "c")
-    move_item("medium-electric-pole-4", "angels-medium-power-poles", "d")
+    move_item("bob-medium-electric-pole-2", "angels-medium-power-poles", "b")
+    move_item("bob-medium-electric-pole-3", "angels-medium-power-poles", "c")
+    move_item("bob-medium-electric-pole-4", "angels-medium-power-poles", "d")
 
     move_item("big-electric-pole", "angels-big-power-poles", "a")
-    move_item("big-electric-pole-2", "angels-big-power-poles", "b")
-    move_item("big-electric-pole-3", "angels-big-power-poles", "c")
-    move_item("big-electric-pole-4", "angels-big-power-poles", "d")
+    move_item("bob-big-electric-pole-2", "angels-big-power-poles", "b")
+    move_item("bob-big-electric-pole-3", "angels-big-power-poles", "c")
+    move_item("bob-big-electric-pole-4", "angels-big-power-poles", "d")
 
     move_item("substation", "angels-sub-power-poles", "a")
-    move_item("substation-2", "angels-sub-power-poles", "b")
-    move_item("substation-3", "angels-sub-power-poles", "c")
-    move_item("substation-4", "angels-sub-power-poles", "d")
+    move_item("bob-substation-2", "angels-sub-power-poles", "b")
+    move_item("bob-substation-3", "angels-sub-power-poles", "c")
+    move_item("bob-substation-4", "angels-sub-power-poles", "d")
   end
 
   -----------------------------------------------------------------------------
@@ -95,50 +99,50 @@ if mods["bobpower"] then
     })
 
     move_item("boiler", "angels-power-steam-boiler", "a")
-    move_item("boiler-2", "angels-power-steam-boiler", "b")
-    move_item("boiler-3", "angels-power-steam-boiler", "c")
-    move_item("boiler-4", "angels-power-steam-boiler", "d")
-    move_item("boiler-5", "angels-power-steam-boiler", "e")
+    move_item("bob-boiler-2", "angels-power-steam-boiler", "b")
+    move_item("bob-boiler-3", "angels-power-steam-boiler", "c")
+    move_item("bob-boiler-4", "angels-power-steam-boiler", "d")
+    move_item("bob-boiler-5", "angels-power-steam-boiler", "e")
 
     move_item("boiler", "angels-power-steam-boiler", "aa", "recipe")
-    move_item("boiler-2", "angels-power-steam-boiler", "ba", "recipe")
-    move_item("boiler-3", "angels-power-steam-boiler", "ca", "recipe")
-    move_item("boiler-4", "angels-power-steam-boiler", "da", "recipe")
-    move_item("boiler-5", "angels-power-steam-boiler", "ea", "recipe")
+    move_item("bob-boiler-2", "angels-power-steam-boiler", "ba", "recipe")
+    move_item("bob-boiler-3", "angels-power-steam-boiler", "ca", "recipe")
+    move_item("bob-boiler-4", "angels-power-steam-boiler", "da", "recipe")
+    move_item("bob-boiler-5", "angels-power-steam-boiler", "ea", "recipe")
 
-    move_item("boiler-2-from-oil-boiler", "angels-power-steam-boiler", "bb", "recipe")
-    move_item("boiler-3-from-oil-boiler-2", "angels-power-steam-boiler", "cb", "recipe")
-    move_item("boiler-4-from-oil-boiler-3", "angels-power-steam-boiler", "db", "recipe")
-    move_item("boiler-5-from-oil-boiler-4", "angels-power-steam-boiler", "eb", "recipe")
+    move_item("bob-boiler-2-from-oil-boiler", "angels-power-steam-boiler", "bb", "recipe")
+    move_item("bob-boiler-3-from-oil-boiler-2", "angels-power-steam-boiler", "cb", "recipe")
+    move_item("bob-boiler-4-from-oil-boiler-3", "angels-power-steam-boiler", "db", "recipe")
+    move_item("bob-boiler-5-from-oil-boiler-4", "angels-power-steam-boiler", "eb", "recipe")
 
-    move_item("boiler-2-from-heat-exchanger", "angels-power-steam-boiler", "cc", "recipe")
-    move_item("boiler-3-from-heat-exchanger-2", "angels-power-steam-boiler", "dc", "recipe")
-    move_item("boiler-4-from-heat-exchanger-3", "angels-power-steam-boiler", "ec", "recipe")
-    move_item("boiler-5-from-heat-exchanger-4", "angels-power-steam-boiler", "fc", "recipe")
+    move_item("bob-boiler-2-from-heat-exchanger", "angels-power-steam-boiler", "cc", "recipe")
+    move_item("bob-boiler-3-from-heat-exchanger-2", "angels-power-steam-boiler", "dc", "recipe")
+    move_item("bob-boiler-4-from-heat-exchanger-3", "angels-power-steam-boiler", "ec", "recipe")
+    move_item("bob-boiler-5-from-heat-exchanger-4", "angels-power-steam-boiler", "fc", "recipe")
 
-    move_item("oil-boiler", "angels-power-steam-boiler", "f")
-    move_item("oil-boiler-2", "angels-power-steam-boiler", "g")
-    move_item("oil-boiler-3", "angels-power-steam-boiler", "h")
-    move_item("oil-boiler-4", "angels-power-steam-boiler", "i")
+    move_item("bob-oil-boiler", "angels-power-steam-boiler", "f")
+    move_item("bob-oil-boiler-2", "angels-power-steam-boiler", "g")
+    move_item("bob-oil-boiler-3", "angels-power-steam-boiler", "h")
+    move_item("bob-oil-boiler-4", "angels-power-steam-boiler", "i")
 
-    move_item("oil-boiler", "angels-power-steam-boiler", "fa", "recipe")
-    move_item("oil-boiler-2", "angels-power-steam-boiler", "ga", "recipe")
-    move_item("oil-boiler-3", "angels-power-steam-boiler", "ha", "recipe")
-    move_item("oil-boiler-4", "angels-power-steam-boiler", "ia", "recipe")
+    move_item("bob-oil-boiler", "angels-power-steam-boiler", "fa", "recipe")
+    move_item("bob-oil-boiler-2", "angels-power-steam-boiler", "ga", "recipe")
+    move_item("bob-oil-boiler-3", "angels-power-steam-boiler", "ha", "recipe")
+    move_item("bob-oil-boiler-4", "angels-power-steam-boiler", "ia", "recipe")
 
-    move_item("oil-boiler-2-from-boiler-3", "angels-power-steam-boiler", "gb", "recipe")
-    move_item("oil-boiler-3-from-boiler-4", "angels-power-steam-boiler", "hb", "recipe")
-    move_item("oil-boiler-4-from-boiler-5", "angels-power-steam-boiler", "ib", "recipe")
+    move_item("bob-oil-boiler-2-from-boiler-3", "angels-power-steam-boiler", "gb", "recipe")
+    move_item("bob-oil-boiler-3-from-boiler-4", "angels-power-steam-boiler", "hb", "recipe")
+    move_item("bob-oil-boiler-4-from-boiler-5", "angels-power-steam-boiler", "ib", "recipe")
 
     move_item("steam-engine", "angels-power-steam-generator", "a")
-    move_item("steam-engine-2", "angels-power-steam-generator", "b")
-    move_item("steam-engine-3", "angels-power-steam-generator", "c")
-    move_item("steam-engine-4", "angels-power-steam-generator", "d")
-    move_item("steam-engine-5", "angels-power-steam-generator", "e")
+    move_item("bob-steam-engine-2", "angels-power-steam-generator", "b")
+    move_item("bob-steam-engine-3", "angels-power-steam-generator", "c")
+    move_item("bob-steam-engine-4", "angels-power-steam-generator", "d")
+    move_item("bob-steam-engine-5", "angels-power-steam-generator", "e")
 
     move_item("steam-turbine", "angels-power-steam-generator", "f")
-    move_item("steam-turbine-2", "angels-power-steam-generator", "g")
-    move_item("steam-turbine-3", "angels-power-steam-generator", "h")
+    move_item("bob-steam-turbine-2", "angels-power-steam-generator", "g")
+    move_item("bob-steam-turbine-3", "angels-power-steam-generator", "h")
   end
 
   -- fluid generators
@@ -156,12 +160,12 @@ if mods["bobpower"] then
       move_item("bob-burner-generator", "angels-power-fluid-generator", "a")
     end
 
-    move_item("fluid-generator", "angels-power-fluid-generator", "b")
-    move_item("fluid-generator-2", "angels-power-fluid-generator", "c")
-    move_item("fluid-generator-3", "angels-power-fluid-generator", "d")
+    move_item("bob-fluid-generator", "angels-power-fluid-generator", "b")
+    move_item("bob-fluid-generator-2", "angels-power-fluid-generator", "c")
+    move_item("bob-fluid-generator-3", "angels-power-fluid-generator", "d")
 
-    if mods["bobrevamp"] and data.raw.item["hydrazine-generator"] then
-      move_item("hydrazine-generator", "angels-power-fluid-generator", "e")
+    if mods["bobrevamp"] and data.raw.item["bob-hydrazine-generator"] then
+      move_item("bob-hydrazine-generator", "angels-power-fluid-generator", "e")
     end
   else
     if settings.startup["bobmods-power-burnergenerator"].value then
@@ -183,17 +187,17 @@ if mods["bobpower"] then
       },
     })
 
-    move_item("solar-panel-small", "angels-power-solar-panel", "a[solar-panel]-a[small]-a")
-    move_item("solar-panel-small-2", "angels-power-solar-panel", "a[solar-panel]-a[small]-b")
-    move_item("solar-panel-small-3", "angels-power-solar-panel", "a[solar-panel]-a[small]-c")
+    move_item("bob-solar-panel-small", "angels-power-solar-panel", "a[solar-panel]-a[small]-a")
+    move_item("bob-solar-panel-small-2", "angels-power-solar-panel", "a[solar-panel]-a[small]-b")
+    move_item("bob-solar-panel-small-3", "angels-power-solar-panel", "a[solar-panel]-a[small]-c")
 
     move_item("solar-panel", "angels-power-solar-panel", "a[solar-panel]-b[medium]-a")
-    move_item("solar-panel-2", "angels-power-solar-panel", "a[solar-panel]-b[medium]-b")
-    move_item("solar-panel-3", "angels-power-solar-panel", "a[solar-panel]-b[medium]-c")
+    move_item("bob-solar-panel-2", "angels-power-solar-panel", "a[solar-panel]-b[medium]-b")
+    move_item("bob-solar-panel-3", "angels-power-solar-panel", "a[solar-panel]-b[medium]-c")
 
-    move_item("solar-panel-large", "angels-power-solar-panel", "a[solar-panel]-c[large]-a")
-    move_item("solar-panel-large-2", "angels-power-solar-panel", "a[solar-panel]-c[large]-b")
-    move_item("solar-panel-large-3", "angels-power-solar-panel", "a[solar-panel]-c[large]-c")
+    move_item("bob-solar-panel-large", "angels-power-solar-panel", "a[solar-panel]-c[large]-a")
+    move_item("bob-solar-panel-large-2", "angels-power-solar-panel", "a[solar-panel]-c[large]-b")
+    move_item("bob-solar-panel-large-3", "angels-power-solar-panel", "a[solar-panel]-c[large]-c")
   end
 
   -- accumulators
@@ -208,16 +212,16 @@ if mods["bobpower"] then
     })
 
     move_item("accumulator", "angels-power-accumulator", "a[capacity]-a")
-    move_item("large-accumulator-2", "angels-power-accumulator", "a[capacity]-b")
-    move_item("large-accumulator-3", "angels-power-accumulator", "a[capacity]-c")
+    move_item("bob-large-accumulator-2", "angels-power-accumulator", "a[capacity]-b")
+    move_item("bob-large-accumulator-3", "angels-power-accumulator", "a[capacity]-c")
 
-    move_item("slow-accumulator", "angels-power-accumulator", "b[slow]-a")
-    move_item("slow-accumulator-2", "angels-power-accumulator", "b[slow]-b")
-    move_item("slow-accumulator-3", "angels-power-accumulator", "b[slow]-c")
+    move_item("bob-slow-accumulator", "angels-power-accumulator", "b[slow]-a")
+    move_item("bob-slow-accumulator-2", "angels-power-accumulator", "b[slow]-b")
+    move_item("bob-slow-accumulator-3", "angels-power-accumulator", "b[slow]-c")
 
-    move_item("fast-accumulator", "angels-power-accumulator", "c[fast]-a")
-    move_item("fast-accumulator-2", "angels-power-accumulator", "c[fast]-b")
-    move_item("fast-accumulator-3", "angels-power-accumulator", "c[fast]-c")
+    move_item("bob-fast-accumulator", "angels-power-accumulator", "c[fast]-a")
+    move_item("bob-fast-accumulator-2", "angels-power-accumulator", "c[fast]-b")
+    move_item("bob-fast-accumulator-3", "angels-power-accumulator", "c[fast]-c")
   end
 
   -----------------------------------------------------------------------------
@@ -234,11 +238,11 @@ if mods["bobpower"] then
       },
     })
 
-    move_item("burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
-    move_item("burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
+    move_item("bob-burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
+    move_item("bob-burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
 
-    move_item("fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
-    move_item("fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
+    move_item("bob-fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
+    move_item("bob-fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
   end
 
   -- nuclear fuel
@@ -256,8 +260,8 @@ if mods["bobpower"] then
     })
 
     move_item("nuclear-reactor", "angels-power-nuclear-reactor-b", "a")
-    move_item("nuclear-reactor-2", "angels-power-nuclear-reactor-b", "b")
-    move_item("nuclear-reactor-3", "angels-power-nuclear-reactor-b", "c")
+    move_item("bob-nuclear-reactor-2", "angels-power-nuclear-reactor-b", "b")
+    move_item("bob-nuclear-reactor-3", "angels-power-nuclear-reactor-b", "c")
   end
 
   -- heat pipes
@@ -276,9 +280,9 @@ if mods["bobpower"] then
     })
 
     move_item("heat-pipe", "angels-power-nuclear-heat-pipe", "a")
-    move_item("heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
-    move_item("heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")
-    move_item("heat-pipe-4", "angels-power-nuclear-heat-pipe", "d")
+    move_item("bob-heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
+    move_item("bob-heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")
+    move_item("bob-heat-pipe-4", "angels-power-nuclear-heat-pipe", "d")
   end
 
   -- heat exchanger
@@ -293,17 +297,17 @@ if mods["bobpower"] then
     })
 
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "a")
-    move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "b")
-    move_item("heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "c")
-    move_item("heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "d")
+    move_item("bob-heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "b")
+    move_item("bob-heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "c")
+    move_item("bob-heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "d")
 
     move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "aa", "recipe")
-    move_item("heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "ba", "recipe")
-    move_item("heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "ca", "recipe")
-    move_item("heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "da", "recipe")
+    move_item("bob-heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "ba", "recipe")
+    move_item("bob-heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "ca", "recipe")
+    move_item("bob-heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "da", "recipe")
 
-    move_item("heat-exchanger-2-from-boiler-3", "angels-power-nuclear-heat-exchanger", "bb", "recipe")
-    move_item("heat-exchanger-3-from-boiler-4", "angels-power-nuclear-heat-exchanger", "cb", "recipe")
-    move_item("heat-exchanger-4-from-boiler-5", "angels-power-nuclear-heat-exchanger", "db", "recipe")
+    move_item("bob-heat-exchanger-2-from-boiler-3", "angels-power-nuclear-heat-exchanger", "bb", "recipe")
+    move_item("bob-heat-exchanger-3-from-boiler-4", "angels-power-nuclear-heat-exchanger", "cb", "recipe")
+    move_item("bob-heat-exchanger-4-from-boiler-5", "angels-power-nuclear-heat-exchanger", "db", "recipe")
   end
 end

@@ -1,3 +1,7 @@
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-garden"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-garden"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-garden"] = {}
+
 data:extend({
   {
     type = "noise-function",
@@ -42,22 +46,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "xab",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_garden_probability(0.6)",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.6,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      probability_expression = 0.000025,
+      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {
@@ -134,24 +124,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yab",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_garden_probability(0.225)",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.225,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
-        -- probability_expression = probability_expr,
-      -- probability_expression = "min(0.025, 0.0005*moisture_level(0.225, 0.1, 0.15))",
-      --tile_restriction = {"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3", "sand-1", "sand-2", "sand-3"},
+      probability_expression = 0.000025,
+      tile_restriction = {"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3", "sand-1", "sand-2", "sand-3"},
     },
     pictures = {
       {
@@ -221,24 +195,8 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "yab",
-      control = "trees", -- Otherwise it doesn't get placed on Nauvis
-      probability_expression = "angels_garden_probability(0.9)",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.9,
---           water_range = 0.1,
---           water_max_range = 0.15,
---         },
---       },
-      -- probability_expression = "min(0.025, 0.0005*moisture_level(0.9, 0.1, 0.15))",
-        -- probability_expression = 0.001,
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {
@@ -262,20 +220,6 @@ data:extend({
         scale = 0.75,
         shift = { 0, 0 },
       },
-      -- {
-      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-4.png",
-      -- width = 128,
-      -- height = 128,
-      -- scale = 0.75,
-      -- shift = {0, 0}
-      -- },
-      -- {
-      -- filename = "__angelsbioprocessinggraphics__/graphics/entity/gardens/water-garden-5.png",
-      -- width = 128,
-      -- height = 128,
-      -- scale = 0.75,
-      -- shift = {0, 0}
-      -- },
     },
   },
 })

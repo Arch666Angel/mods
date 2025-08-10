@@ -30,7 +30,6 @@ if mods["bobrevamp"] then
 
   OV.hide_recipe("bob-ammonia")
   OV.converter_fluid("bob-ammonia", "angels-gas-ammonia")
-  angelsmods.functions.disable_barreling_recipes("bob-ammonia")
 
   if settings.startup["bobmods-revamp-old-oil"] then
     OV.hide_recipe({
@@ -51,10 +50,7 @@ if mods["bobrevamp"] then
   end
 
   OV.converter_fluid("bob-dinitrogen-tetroxide", "angels-gas-dinitrogen-tetroxide")
-  angelsmods.functions.disable_barreling_recipes("bob-dinitrogen-tetroxide")
-
   OV.converter_fluid("bob-hydrazine", "angels-gas-hydrazine")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrazine")
   OV.global_replace_technology("bob-hydrazine", "angels-nitrogen-processing-3")
 
   OV.disable_recipe({
@@ -81,7 +77,6 @@ if mods["bobrevamp"] then
     OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
     OV.converter_fluid("bob-carbon-dioxide", "angels-gas-carbon-dioxide")
-    angelsmods.functions.disable_barreling_recipes("bob-carbon-dioxide")
 
     OV.global_replace_item("bob-sodium-carbonate", "angels-solid-sodium-carbonate")
     angelsmods.functions.hide("bob-sodium-carbonate")
@@ -93,10 +88,8 @@ if mods["bobrevamp"] then
     angelsmods.functions.hide("bob-sodium-chlorate")
 
     OV.converter_fluid("bob-nitric-oxide", "angels-gas-nitrogen-monoxide")
-    angelsmods.functions.disable_barreling_recipes("bob-nitric-oxide")
 
     OV.converter_fluid("bob-nitric-dioxide", "angels-gas-nitrogen-dioxide")
-    angelsmods.functions.disable_barreling_recipes("bob-nitric-dioxide")
 
     OV.disable_recipe({
       "bob-nitric-oxide",

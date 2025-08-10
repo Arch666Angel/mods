@@ -1,6 +1,6 @@
 {
   "name": "angelsaddons-cab",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "factorio_version": "2.0",
   "title": "Angel's Addons - C.A.B.",
   "author": "Arch666Angel, lovely_santa",
@@ -8,7 +8,7 @@
   "homepage": "",
   "description": "Adds another type of Crawler.",
   "dependencies": [
-     "? angelsindustries >= 1.0.0",
-     "base >= 1.2.0"
+     "? angelsindustries >= 1.1.0",
+     "base >= 2.0.0"
   ]
 }

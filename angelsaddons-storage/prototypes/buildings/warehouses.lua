@@ -1,3 +1,7 @@
+circuit_connector_definitions["angels-warehouse"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-4.625,  14.25), shadow_offset = util.by_pixel(-4.625,  14.25), show_shadow = true }
+)
+
 data:extend({
   {
     type = "sprite",
@@ -53,7 +57,7 @@ if angelsmods.addons.storage.warehouses then
         priority = "extra-high",
         shift = { 0, -0.5 },
       },
-      circuit_connector = circuit_connector_definitions["chest"],
+      circuit_connector = circuit_connector_definitions["angels-warehouse"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })

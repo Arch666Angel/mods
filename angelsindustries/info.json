@@ -1,6 +1,6 @@
 {
   "name": "angelsindustries",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "factorio_version": "2.0",
   "title": "Angel's Industries",
   "author": "Arch666Angel",
@@ -8,10 +8,10 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds industrial equipment as well as the tools you need to expand and grow your base. Adds extra components [BETA] and a tech [ALPHA] overhaul.",
   "dependencies": [
-    "angelsrefining >= 1.0.0",
-    "angelspetrochem >= 1.0.0",
-    "angelssmelting >= 1.0.0",
-    "angelsbioprocessing >= 1.0.0",
+    "angelsrefining >= 1.1.0",
+    "angelspetrochem >= 1.1.0",
+    "angelssmelting >= 1.1.0",
+    "angelsbioprocessing >= 1.1.0",
     "~ angelsindustriesgraphics >= 1.0.0",
     "(?) aai-industry >= 0.4.12"
   ]

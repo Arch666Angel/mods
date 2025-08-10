@@ -1,4 +1,12 @@
 if angelsmods.addons.storage.pressuretank then
+
+  circuit_connector_definitions["angels-pressure-tank-1"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+  })
+
   --PRESSURE TANKS
   data:extend({
     {
@@ -78,13 +86,21 @@ if angelsmods.addons.storage.pressuretank then
         },
         max_sounds_per_prototype = 3,
       },
-      circuit_connector = circuit_connector_definitions["storage-tank"],
+      circuit_connector = circuit_connector_definitions["angels-pressure-tank-1"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
 end
 
 if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
+
+  circuit_connector_definitions["angels-storage-tank-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  })
+
   --INLINE TANKS
   data:extend({
     {
@@ -166,7 +182,7 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
         },
         max_sounds_per_prototype = 3,
       },
-      circuit_connector = circuit_connector_definitions["storage-tank"],
+      circuit_connector = circuit_connector_definitions["angels-storage-tank-3"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })

@@ -153,6 +153,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "angels-geode-processing-2",
+    group = "angels-resource-refining",
+    order = "c[sorting]-d[geode]2",
+  },
+  {
+    type = "item-subgroup",
     name = "angels-ores",
     group = "angels-resource-refining",
     order = "d[ores]",
@@ -356,25 +362,6 @@ data:extend({
     name = "angels-barrels",
     group = "angels-fluid-control",
     order = "z",
-  },
-  --CONVERTER
-  {
-    type = "item-group",
-    name = "angels-fluid-converter",
-    order = "la[angels]-c[petrochem]-d",
-    icons = {
-      {
-        icon = "__angelsrefininggraphics__/graphics/item-group/converter-group.png",
-        icon_size = 64,
-        scale = 1,
-      },
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
-        icon_size = 32,
-        scale = 64 / 32 * 0.35,
-        shift = { 20, -20 },
-      },
-    },
   },
   --VOID
   {
