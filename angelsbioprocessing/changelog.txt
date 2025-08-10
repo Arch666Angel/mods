@@ -10,6 +10,7 @@ Date: ???
       - Reduced the tier of Algae farm 2's ingredients
       - Made Biters require Purple Science
     - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.27
 Date: 21.02.2024

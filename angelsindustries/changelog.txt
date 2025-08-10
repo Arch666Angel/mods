@@ -18,6 +18,7 @@ Date: ???
     - Science mode:
       - Adjusted the science packs for Bob's Assembling Machines when Technology Overhauls is enabled (985)
       - Hid Steam science pack from Bob's Technology mod (986)
+    - Added circuit connectors to all machines (1114)
   Bugfixes:
     - Fixed potential softlock with Tech Overhaul and Bob's Technology mod (986)
 ---------------------------------------------------------------------------------------------------

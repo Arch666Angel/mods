@@ -7,6 +7,7 @@ Date: ???
     - Adjusted the recipes for Bob's Assembling Machines (985)
     - Moved Cement Processing techs up a science pack tier so Clay Bricks are not available so early in the game (991)
     - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
   Bugfixes:
     - Fixed coolant production graphs (1000)
     - Moved Cobalt Oxide 1 recipe from Ore processor to Chemical furnace (1006)

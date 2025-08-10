@@ -5,6 +5,7 @@ Date: ???
     - Removed references to normal / expensive recipes (945)
     - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
     - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.26
 Date: 21.02.2024
