@@ -229,43 +229,43 @@ data:extend({
   --VALVES
   {
     type = "recipe",
-    name = "valve-inspector",
+    name = "angels-valve-inspector",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
     },
-    results = { { type = "item", name = "valve-inspector", amount = 1 } },
+    results = { { type = "item", name = "angels-valve-inspector", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "valve-return",
+    name = "angels-valve-one-way",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
     },
-    results = { { type = "item", name = "valve-return", amount = 1 } },
+    results = { { type = "item", name = "angels-valve-one-way", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "valve-overflow",
+    name = "angels-valve-overflow",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
     },
-    results = { { type = "item", name = "valve-overflow", amount = 1 } },
+    results = { { type = "item", name = "angels-valve-overflow", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "valve-underflow",
+    name = "angels-valve-top-up",
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
     },
-    results = { { type = "item", name = "valve-underflow", amount = 1 } },
+    results = { { type = "item", name = "angels-valve-top-up", amount = 1 } },
   },
   --STORAGE TANKS
   {

@@ -10,19 +10,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "valve-inspector",
+        recipe = "angels-valve-inspector",
       },
       {
         type = "unlock-recipe",
-        recipe = "valve-overflow",
+        recipe = "angels-valve-overflow",
       },
       {
         type = "unlock-recipe",
-        recipe = "valve-return",
+        recipe = "angels-valve-one-way",
       },
       {
         type = "unlock-recipe",
-        recipe = "valve-underflow",
+        recipe = "angels-valve-top-up",
       },
       {
         type = "unlock-recipe",
