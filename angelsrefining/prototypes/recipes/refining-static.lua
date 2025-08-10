@@ -245,11 +245,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-ore8-crushed", amount = 3 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-ore8-powder", amount = 3 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore8-powder",
     order = "h",
@@ -294,11 +294,11 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-ore9-crushed", amount = 3 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-ore9-powder", amount = 3 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-ore9-powder",
     order = "j",
@@ -1033,13 +1033,12 @@ data:extend({
   {
     type = "recipe",
     name = "angels-milling-drum",
-    category = "crafting-with-fluid",
+    category = "crafting",
     subgroup = "angels-ore-powderizer",
     energy_required = 1,
     enabled = false,
     ingredients = {
       { type = "item", name = "steel-plate", amount = 1 },
-      { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = {
       { type = "item", name = "angels-milling-drum", amount = 1 },
@@ -1050,22 +1049,21 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-milling-drum-used",
-    localised_name = { "item-name.angels-milling-drum" },
+    name = "angels-milling-drum-lubricated",
     category = "crafting-with-fluid",
     subgroup = "angels-ore-powderizer",
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-milling-drum-used", amount = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
       { type = "fluid", name = "lubricant", amount = 10 },
     },
     results = {
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
-    icon = "__angelsrefininggraphics__/graphics/icons/milling-drum-used.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/milling-drum-lubricated.png",
     icon_size = 32,
-    order = "z[milling-drum]-b[recycle]",
+    order = "z[milling-drum]-b[lubricated]",
   },
   {
     type = "recipe",

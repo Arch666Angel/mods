@@ -37,11 +37,11 @@ data:extend({
     energy_required = 1,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-egg-shell", amount = 2 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-bio-puffer-egg-shell-powder", amount = 2 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-bio-puffer-egg-shell-powder",
     icon_size = 32,

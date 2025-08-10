@@ -149,11 +149,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-blue-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 5 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -180,11 +180,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-red-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 5 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -211,11 +211,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-green-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 5 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -382,11 +382,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-blue-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 10 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -413,11 +413,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-red-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 10 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -444,11 +444,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-green-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 10 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -615,11 +615,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-blue-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 15 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -646,11 +646,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-red-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 15 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
@@ -677,11 +677,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-green-cut", amount = 5 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-powder", amount = 15 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     allow_decomposition = false,
     icons = {
