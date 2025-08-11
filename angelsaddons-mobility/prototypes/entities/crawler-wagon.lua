@@ -2,6 +2,7 @@ local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].mini
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
