@@ -40,6 +40,7 @@ funcs.generate_train_entities({
   max_health = 1000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_smelting_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   vertical_selection_shift = -0.796875,

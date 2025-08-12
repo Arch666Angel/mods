@@ -40,6 +40,7 @@ funcs.generate_train_entities({
   capacity = mods["angelspetrochem"] and 40000 or 25000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_petro_tank2,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   color = tintable_tint,
