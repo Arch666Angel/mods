@@ -73,8 +73,6 @@ require("prototypes.bio-processing-functions")
 --LOAD PROTOTYPES
 require("prototypes.bio-processing-category")
 
-require("prototypes.bio-processing-noise-expressions")
-
 require("prototypes.buildings.algae-farm")
 require("prototypes.buildings.crop-farm")
 require("prototypes.buildings.composter")

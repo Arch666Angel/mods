@@ -118,10 +118,6 @@ if angelsmods.industries.overhaul then
   -------------------------------------------------------------------------------
   -- New recipe unlocks
   -------------------------------------------------------------------------------
-  OV.add_prereq("atomic-bomb", "angels-plutonium-power")
-  OV.add_prereq("angels-nuclear-fuel", "angels-plutonium-power")
-  OV.add_prereq("angels-nuclear-fuel", "angels-thorium-power")
-
   OV.add_unlock("atomic-bomb", "angels-atomic-bomb")
   OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
   OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel")
@@ -300,7 +296,6 @@ if angelsmods.industries.overhaul then
           },
         },
       })
-      OV.add_prereq("bob-atomic-artillery-shell", "angels-plutonium-power")
     end
 
     -- bobequipment adjustments

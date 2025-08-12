@@ -4,12 +4,6 @@ data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["ange
 
 data:extend({
   {
-    type = "noise-function",
-    name = "angels_garden_probability",
-    parameters = {"moisture_optimal"},
-    expression = "0.00005*angels_moisture_level(moisture_optimal, 0.1, 0.15)",
-  },
-  {
     type = "item",
     name = "angels-temperate-garden",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",

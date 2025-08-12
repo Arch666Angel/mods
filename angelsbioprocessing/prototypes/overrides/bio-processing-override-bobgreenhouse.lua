@@ -217,7 +217,6 @@ if mods["bobgreenhouse"] then
   OV.set_science_pack("bob-greenhouse", "logistic-science-pack", 1)
   OV.add_prereq("bob-greenhouse", "angels-gardens")
   OV.add_unlock("bob-greenhouse", "wood-sawing-manual")
-
   OV.add_prereq("bob-greenhouse", "angels-bio-arboretum-1")
   OV.add_prereq("angels-bio-arboretum-desert-1", "bob-greenhouse")
   OV.add_prereq("angels-bio-arboretum-swamp-1", "bob-greenhouse")

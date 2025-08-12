@@ -184,7 +184,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-molten-chrome", amount = 120 },
     },
-    icons = angelsmods.functions.get_object_icons("liquid-molten-chrome"),
     order = "i[liquid-molten-chrome]",
     crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-chrome"),
   },

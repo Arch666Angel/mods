@@ -11,14 +11,5 @@
     ["used-up-AMOX-cell", "angels-depleted-mixed-oxide-cell"],
     ["used-up-angels-thorium-fuel-cell", "angels-depleted-thorium-fuel-cell"],
     ["used-up-angels-deuterium-fuel-cell", "angels-depleted-deuterium-fuel-cell"]
-  ],
-  "recipe":
-  [
-    ["fill-battery-electrolyte-1-barrel", "battery-electrolyte-1-barrel"],
-    ["fill-battery-electrolyte-2-barrel", "battery-electrolyte-2-barrel"],
-    ["fill-battery-electrolyte-3-barrel", "battery-electrolyte-3-barrel"],
-    ["fill-battery-electrolyte-4-barrel", "battery-electrolyte-4-barrel"],
-    ["fill-battery-electrolyte-5-barrel", "battery-electrolyte-5-barrel"],
-    ["fill-battery-electrolyte-6-barrel", "battery-electrolyte-6-barrel"]
   ]
 }
