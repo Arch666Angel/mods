@@ -204,6 +204,7 @@ if angelsmods.industries.overhaul then
       OV.disable_technology("bobingabout-enrichment-process")
     end
 
+    OV.global_replace_item("bob-plutonium-fuel-cell", "angels-mixed-oxide-cell")
     angelsmods.functions.hide("bob-plutonium-fuel-cell")
     angelsmods.functions.add_flag("bob-plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
@@ -228,6 +229,7 @@ if angelsmods.industries.overhaul then
     OV.disable_technology("bob-thorium-processing")
 
     OV.disable_recipe("bob-thorium-fuel-cell")
+    OV.global_replace_item("bob-thorium-fuel-cell", "angels-thorium-fuel-cell")
     angelsmods.functions.hide("bob-thorium-fuel-cell")
     angelsmods.functions.add_flag("bob-thorium-fuel-cell", "hide-from-fuel-tooltip")
 
@@ -236,12 +238,14 @@ if angelsmods.industries.overhaul then
     angelsmods.functions.hide("bob-depleted-thorium-fuel-cell")
 
     OV.disable_recipe("bob-thorium-plutonium-fuel-cell")
-    OV.disable_technology("bob-thorium-plutonium-fuel-cell")
+    OV.global_replace_item("bob-thorium-plutonium-fuel-cell", "angels-thorium-fuel-cell")
+    OV.global_replace_technology("bob-thorium-plutonium-fuel-cell", "angels-thorium-power")
     angelsmods.functions.hide("bob-thorium-plutonium-fuel-cell")
     angelsmods.functions.add_flag("bob-thorium-plutonium-fuel-cell", "hide-from-fuel-tooltip")
 
     -- deuterium processing
     OV.disable_recipe({ "bob-deuterium-fuel-cell", "bob-deuterium-fuel-cell-2" })
+    OV.global_replace_item("bob-deuterium-fuel-cell", "angels-deuterium-fuel-cell")
     angelsmods.functions.hide("bob-deuterium-fuel-cell")
     angelsmods.functions.add_flag("bob-deuterium-fuel-cell", "hide-from-fuel-tooltip")
     angelsmods.functions.hide("bob-deuterium-fuel-cell-2")
