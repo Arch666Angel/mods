@@ -1,4 +1,5 @@
 local def_shift = { 0.75, -2 }
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-puffer-nest"] = {}
 
@@ -16,6 +17,7 @@ data:extend({
       count = 2,
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_puffer_nest,
     max_health = 20,
     collision_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },

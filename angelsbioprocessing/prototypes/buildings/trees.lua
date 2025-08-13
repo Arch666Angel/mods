@@ -1,3 +1,5 @@
+local simulations = require("prototypes.factoriopedia-simulations")
+
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-tree"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-tree"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-tree"] = {}
@@ -27,6 +29,7 @@ data:extend({
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_temperate_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -2, -5 }, { 2, 1 } },
@@ -84,6 +87,7 @@ data:extend({
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_swamp_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1.5, -5 }, { 1.5, 1 } },
@@ -147,6 +151,7 @@ data:extend({
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_desert_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -2.5, -5 }, { 2.5, 1 } },
