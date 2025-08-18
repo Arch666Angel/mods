@@ -34,9 +34,9 @@ angelsmods.industries.block_replace = {
   --metals
   ["iron-plate"] = { new = "construction-frame-1", amt_multi = 1 },
   ["steel-plate"] = { new = "construction-frame-2", amt_multi = 1 },
-  ["bob-aluminium-plate"] = { new = "construction-frame-3", amt_multi = 1 },
-  ["bob-titanium-plate"] = { new = "construction-frame-4", amt_multi = 1 },
-  ["bob-tungsten-plate"] = { new = "construction-frame-5", amt_multi = 1 },
+  ["aluminium-plate"] = { new = "construction-frame-3", amt_multi = 1 },
+  ["titanium-plate"] = { new = "construction-frame-4", amt_multi = 1 },
+  ["tungsten-plate"] = { new = "construction-frame-5", amt_multi = 1 },
   --electronics
   ["electronic-circuit"] = { new = "block-electronics-1", amt_multi = 1 },
   ["advanced-circuit"] = { new = "block-electronics-2", amt_multi = 1 },
@@ -68,7 +68,7 @@ angelsmods.industries.block_replace = {
 angelsmods.industries.general_replace = {
   --electronics
   ["bob-basic-circuit-board"] = { new = "circuit-grey", amt_multi = 1 },
-  ["bob-basic-electronic-board"] = { new = "circuit-red-loaded", amt_multi = 1, unlock_by = "electronics" },
+  ["basic-electronic-board"] = { new = "circuit-red-loaded", amt_multi = 1, unlock_by = "electronics" },
   ["electronic-circuit"] = { new = "circuit-red-loaded", amt_multi = 1 },
   ["advanced-circuit"] = { new = "circuit-green-loaded", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["processing-unit"] = { new = "circuit-blue-loaded", amt_multi = 1, unlock_by = "processing-unit" },
