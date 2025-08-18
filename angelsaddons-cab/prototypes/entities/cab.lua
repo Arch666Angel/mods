@@ -92,6 +92,7 @@ data:extend({
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
     immune_to_tree_impacts = true,
+    trash_inventory_size = 20,
     energy_per_hit_point = 0.1,
     rotation_speed = 0.0035,
     tank_driving = false,

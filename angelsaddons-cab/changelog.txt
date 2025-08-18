@@ -3,6 +3,7 @@ Version: 2.0.0
 Date: ???
   Changes:
     - Updated for Factorio 2.0 (994)
+    - Enabled logistics tab for the CAB (1111)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.9
 Date: 22.12.2023
