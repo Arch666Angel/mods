@@ -18,24 +18,31 @@ local function angles_liquifier_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-liquifier"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "liquifier",
+    name = "angels-liquifier",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "f[liquifier]",
-    place_result = "liquifier",
+    place_result = "angels-liquifier",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "liquifier",
+    name = "angels-liquifier",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
@@ -43,9 +50,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "liquifier" },
-    fast_replaceable_group = "liquifier",
-    next_upgrade = "liquifier-2",
+    minable = { mining_time = 1, result = "angels-liquifier" },
+    fast_replaceable_group = "angels-liquifier",
+    next_upgrade = "angels-liquifier-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -53,7 +60,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "liquifying" },
+    crafting_categories = { "angels-liquifying" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -61,6 +68,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-liquifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -95,21 +104,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "liquifier-2",
+    name = "angels-liquifier-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "g[liquifier-2]",
-    place_result = "liquifier-2",
+    place_result = "angels-liquifier-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "liquifier-2",
+    name = "angels-liquifier-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
@@ -117,9 +126,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "liquifier-2" },
-    fast_replaceable_group = "liquifier",
-    next_upgrade = "liquifier-3",
+    minable = { mining_time = 1, result = "angels-liquifier-2" },
+    fast_replaceable_group = "angels-liquifier",
+    next_upgrade = "angels-liquifier-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -127,7 +136,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "liquifying" },
+    crafting_categories = { "angels-liquifying" },
     crafting_speed = 2.25,
     energy_source = {
       type = "electric",
@@ -135,6 +144,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-liquifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -169,21 +180,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "liquifier-3",
+    name = "angels-liquifier-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "h[liquifier-3]",
-    place_result = "liquifier-3",
+    place_result = "angels-liquifier-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "liquifier-3",
+    name = "angels-liquifier-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
@@ -191,9 +202,9 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "liquifier-3" },
-    fast_replaceable_group = "liquifier",
-    next_upgrade = "liquifier-4",
+    minable = { mining_time = 1, result = "angels-liquifier-3" },
+    fast_replaceable_group = "angels-liquifier",
+    next_upgrade = "angels-liquifier-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -201,7 +212,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "liquifying" },
+    crafting_categories = { "angels-liquifying" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",
@@ -209,6 +220,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-liquifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -243,21 +256,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "liquifier-4",
+    name = "angels-liquifier-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
         icon_size = 32,
       },
     }, 4, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "i[liquifier-4]",
-    place_result = "liquifier-4",
+    place_result = "angels-liquifier-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "liquifier-4",
+    name = "angels-liquifier-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/liquifier.png",
@@ -265,8 +278,8 @@ data:extend({
       },
     }, 4, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "liquifier-4" },
-    fast_replaceable_group = "liquifier",
+    minable = { mining_time = 1, result = "angels-liquifier-4" },
+    fast_replaceable_group = "angels-liquifier",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -274,7 +287,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 4,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "liquifying" },
+    crafting_categories = { "angels-liquifying" },
     crafting_speed = 3.75,
     energy_source = {
       type = "electric",
@@ -282,6 +295,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-liquifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

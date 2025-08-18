@@ -1,22 +1,29 @@
+circuit_connector_definitions["angels-gas-refinery"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 60.875, -36.25), shadow_offset = util.by_pixel( 60.875, -36.25), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(-21.5,  12.75), shadow_offset = util.by_pixel(-21.5,  12.75), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-104, -114.875), shadow_offset = util.by_pixel(-104, -114.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 42.25, -148.75), shadow_offset = util.by_pixel( 42.25, -148.75), show_shadow = true },
+})
+
 data:extend({
   --ADVANCED REFINERY
   {
     type = "item",
-    name = "gas-refinery",
+    name = "angels-gas-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
         icon_size = 64,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-a",
-    place_result = "gas-refinery",
+    place_result = "angels-gas-refinery",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery",
+    name = "angels-gas-refinery",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
@@ -25,9 +32,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery" },
-    fast_replaceable_group = "gas-refinery",
-    next_upgrade = "gas-refinery-2",
+    minable = { mining_time = 1, result = "angels-gas-refinery" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -36,7 +43,7 @@ data:extend({
     drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-gas-refining" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -44,6 +51,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -271,20 +280,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -292,7 +301,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -300,7 +309,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -308,7 +317,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
@@ -320,21 +329,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-2",
+    name = "angels-gas-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
         icon_size = 64,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-b",
-    place_result = "gas-refinery-2",
+    place_result = "angels-gas-refinery-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-2",
+    name = "angels-gas-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
@@ -343,9 +352,9 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-2" },
-    fast_replaceable_group = "gas-refinery",
-    next_upgrade = "gas-refinery-3",
+    minable = { mining_time = 1, result = "angels-gas-refinery-2" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -354,7 +363,7 @@ data:extend({
     drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-gas-refining" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -362,6 +371,8 @@ data:extend({
       emissions_per_minute = { pollution = 4.8 },
     },
     energy_usage = "450kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -589,20 +600,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -610,7 +621,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -618,7 +629,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -626,7 +637,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
@@ -638,21 +649,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-3",
+    name = "angels-gas-refinery-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
         icon_size = 64,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-c",
-    place_result = "gas-refinery-3",
+    place_result = "angels-gas-refinery-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-3",
+    name = "angels-gas-refinery-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
@@ -661,9 +672,9 @@ data:extend({
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-3" },
-    fast_replaceable_group = "gas-refinery",
-    next_upgrade = "gas-refinery-4",
+    minable = { mining_time = 1, result = "angels-gas-refinery-3" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -672,7 +683,7 @@ data:extend({
     drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-gas-refining" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -680,6 +691,8 @@ data:extend({
       emissions_per_minute = { pollution = 6 },
     },
     energy_usage = "500kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -907,20 +920,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -928,7 +941,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -936,7 +949,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -944,7 +957,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },
@@ -956,21 +969,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-4",
+    name = "angels-gas-refinery-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
         icon_size = 64,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-d",
-    place_result = "gas-refinery-4",
+    place_result = "angels-gas-refinery-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-4",
+    name = "angels-gas-refinery-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
@@ -979,8 +992,8 @@ data:extend({
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-4" },
-    fast_replaceable_group = "gas-refinery",
+    minable = { mining_time = 1, result = "angels-gas-refinery-4" },
+    fast_replaceable_group = "angels-gas-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -989,7 +1002,7 @@ data:extend({
     drawing_box_vertical_extension = 2.2,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-gas-refining" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -997,6 +1010,8 @@ data:extend({
       emissions_per_minute = { pollution = 7.2 },
     },
     energy_usage = "600kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -1224,20 +1239,20 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1245,7 +1260,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1253,7 +1268,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
         },
       },
       {
@@ -1261,7 +1276,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
         },
       },
     },

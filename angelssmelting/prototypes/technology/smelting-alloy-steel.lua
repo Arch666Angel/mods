@@ -6,16 +6,16 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-iron-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ingot-iron-smelting",
+        recipe = "angels-ingot-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-1",
+        recipe = "angels-liquid-molten-steel",
       },
       {
         type = "unlock-recipe",
@@ -38,7 +38,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-steel-smelting-1",
       "angels-silicon-smelting-1",
       "angels-manganese-smelting-1",
@@ -46,31 +46,31 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-2",
+        recipe = "angels-liquid-molten-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-3",
+        recipe = "angels-liquid-molten-steel-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-steel",
+        recipe = "angels-powder-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-casting",
+        recipe = "angels-roll-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-converting",
+        recipe = "angels-plate-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-steel-casting",
+        recipe = "angels-rod-stack-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-steel-converting",
+        recipe = "angels-rod-steel-2",
       },
     },
     unit = {
@@ -90,7 +90,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
     prerequisites = {
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-steel-smelting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",
@@ -98,15 +98,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-4",
+        recipe = "angels-liquid-molten-steel-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-casting-fast",
+        recipe = "angels-roll-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-steel-casting-fast",
+        recipe = "angels-rod-stack-steel-2",
       },
     },
     unit = {
@@ -134,7 +134,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-5",
+        recipe = "angels-liquid-molten-steel-5",
       },
     },
     unit = {

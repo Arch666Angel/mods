@@ -1,21 +1,28 @@
+circuit_connector_definitions["angels-steam-cracker"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 18, main_offset = util.by_pixel(-55.375,  63.375), shadow_offset = util.by_pixel(-55.375,  63.375), show_shadow = true },
+  { variation = 18, main_offset = util.by_pixel(-55.375,  63.375), shadow_offset = util.by_pixel(-55.375,  63.375), show_shadow = true },
+  { variation = 18, main_offset = util.by_pixel(-55.375,  63.375), shadow_offset = util.by_pixel(-55.375,  63.375), show_shadow = true },
+  { variation = 18, main_offset = util.by_pixel(-55.375,  63.375), shadow_offset = util.by_pixel(-55.375,  63.375), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "steam-cracker",
+    name = "angels-steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-a",
-    place_result = "steam-cracker",
+    place_result = "angels-steam-cracker",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker",
+    name = "angels-steam-cracker",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -24,9 +31,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-2",
+    minable = { mining_time = 1, result = "angels-steam-cracker" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +42,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -43,6 +50,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -111,14 +120,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -126,7 +135,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -135,28 +144,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "steam-cracker-2",
+    name = "angels-steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-b",
-    place_result = "steam-cracker-2",
+    place_result = "angels-steam-cracker-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-2",
+    name = "angels-steam-cracker-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -165,9 +174,9 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-2" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-3",
+    minable = { mining_time = 1, result = "angels-steam-cracker-2" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -176,7 +185,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -184,6 +193,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "225kW",
+    circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -236,14 +247,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -251,7 +262,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -260,28 +271,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "steam-cracker-3",
+    name = "angels-steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-c",
-    place_result = "steam-cracker-3",
+    place_result = "angels-steam-cracker-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-3",
+    name = "angels-steam-cracker-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -290,9 +301,9 @@ data:extend({
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-3" },
-    fast_replaceable_group = "steam-cracker",
-    next_upgrade = "steam-cracker-4",
+    minable = { mining_time = 1, result = "angels-steam-cracker-3" },
+    fast_replaceable_group = "angels-steam-cracker",
+    next_upgrade = "angels-steam-cracker-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -301,7 +312,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -309,6 +320,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -361,14 +374,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -376,7 +389,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -385,28 +398,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "steam-cracker-4",
+    name = "angels-steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
         icon_size = 32,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-steam",
+    subgroup = "angels-petrochem-buildings-steam",
     order = "a[steam-cracker]-d",
-    place_result = "steam-cracker-4",
+    place_result = "angels-steam-cracker-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "steam-cracker-4",
+    name = "angels-steam-cracker-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/steam-cracker.png",
@@ -415,8 +428,8 @@ data:extend({
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "steam-cracker-4" },
-    fast_replaceable_group = "steam-cracker",
+    minable = { mining_time = 1, result = "angels-steam-cracker-4" },
+    fast_replaceable_group = "angels-steam-cracker",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -425,7 +438,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "steam-cracking" },
+    crafting_categories = { "angels-steam-cracking" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -433,6 +446,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "275kW",
+    circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -485,14 +500,14 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -500,7 +515,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -509,7 +524,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },

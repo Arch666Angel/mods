@@ -1,21 +1,28 @@
+circuit_connector_definitions["angels-ore-sorting-facility"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 41.375, -13.125), shadow_offset = util.by_pixel( 41.375, -13.125), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "ore-sorting-facility",
+    name = "angels-ore-sorting-facility",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-sorter",
+    subgroup = "angels-ore-sorter",
     order = "a[ore-sorting-facility]",
-    place_result = "ore-sorting-facility",
+    place_result = "angels-ore-sorting-facility",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-sorting-facility",
+    name = "angels-ore-sorting-facility",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
@@ -23,9 +30,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-sorting-facility" },
-    fast_replaceable_group = "ore-sorting-facility",
-    next_upgrade = "ore-sorting-facility-2",
+    minable = { mining_time = 1, result = "angels-ore-sorting-facility" },
+    fast_replaceable_group = "angels-ore-sorting-facility",
+    next_upgrade = "angels-ore-sorting-facility-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -33,7 +40,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-sorting" },
+    crafting_categories = { "angels-ore-sorting" },
     crafting_speed = 0.5,
     energy_source = {
       type = "electric",
@@ -41,6 +48,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 2,
     graphics_set = {
       animation = {
@@ -78,21 +87,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-sorting-facility-2",
+    name = "angels-ore-sorting-facility-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-sorter",
+    subgroup = "angels-ore-sorter",
     order = "b[ore-sorting-facility-2]",
-    place_result = "ore-sorting-facility-2",
+    place_result = "angels-ore-sorting-facility-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-sorting-facility-2",
+    name = "angels-ore-sorting-facility-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
@@ -100,9 +109,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-sorting-facility-2" },
-    fast_replaceable_group = "ore-sorting-facility",
-    next_upgrade = "ore-sorting-facility-3",
+    minable = { mining_time = 1, result = "angels-ore-sorting-facility-2" },
+    fast_replaceable_group = "angels-ore-sorting-facility",
+    next_upgrade = "angels-ore-sorting-facility-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -110,7 +119,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-sorting", "ore-sorting-2" },
+    crafting_categories = { "angels-ore-sorting", "angels-ore-sorting-2" },
     crafting_speed = 0.75,
     energy_source = {
       type = "electric",
@@ -118,6 +127,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -155,21 +166,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-sorting-facility-3",
+    name = "angels-ore-sorting-facility-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "ore-sorter",
+    subgroup = "angels-ore-sorter",
     order = "c[ore-sorting-facility-3]",
-    place_result = "ore-sorting-facility-3",
+    place_result = "angels-ore-sorting-facility-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-sorting-facility-3",
+    name = "angels-ore-sorting-facility-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
@@ -177,9 +188,9 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-sorting-facility-3" },
-    fast_replaceable_group = "ore-sorting-facility",
-    next_upgrade = "ore-sorting-facility-4",
+    minable = { mining_time = 1, result = "angels-ore-sorting-facility-3" },
+    fast_replaceable_group = "angels-ore-sorting-facility",
+    next_upgrade = "angels-ore-sorting-facility-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -187,7 +198,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3" },
+    crafting_categories = { "angels-ore-sorting", "angels-ore-sorting-2", "angels-ore-sorting-3" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -195,6 +206,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
     graphics_set = {
       animation = {
@@ -232,21 +245,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-sorting-facility-4",
+    name = "angels-ore-sorting-facility-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
       },
     }, 4, angelsmods.refining.number_tint),
-    subgroup = "ore-sorter",
+    subgroup = "angels-ore-sorter",
     order = "d[ore-sorting-facility-4]",
-    place_result = "ore-sorting-facility-4",
+    place_result = "angels-ore-sorting-facility-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-sorting-facility-4",
+    name = "angels-ore-sorting-facility-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
@@ -254,9 +267,9 @@ data:extend({
       },
     }, 4, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-sorting-facility-4" },
-    fast_replaceable_group = "ore-sorting-facility",
-    next_upgrade = "ore-sorting-facility-5",
+    minable = { mining_time = 1, result = "angels-ore-sorting-facility-4" },
+    fast_replaceable_group = "angels-ore-sorting-facility",
+    next_upgrade = "angels-ore-sorting-facility-5",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -264,7 +277,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3", "ore-sorting-4" },
+    crafting_categories = { "angels-ore-sorting", "angels-ore-sorting-2", "angels-ore-sorting-3", "angels-ore-sorting-4" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -272,6 +285,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
     graphics_set = {
       animation = {
@@ -309,21 +324,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "ore-sorting-facility-5",
+    name = "angels-ore-sorting-facility-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
         icon_size = 64,
       },
     }, 5, angelsmods.refining.number_tint),
-    subgroup = "ore-sorter",
+    subgroup = "angels-ore-sorter",
     order = "e[ore-sorting-facility-5]",
-    place_result = "ore-sorting-facility-5",
+    place_result = "angels-ore-sorting-facility-5",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-sorting-facility-5",
+    name = "angels-ore-sorting-facility-5",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-sorting-facility.png",
@@ -331,8 +346,8 @@ data:extend({
       },
     }, 5, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "ore-sorting-facility-5" },
-    fast_replaceable_group = "ore-sorting-facility",
+    minable = { mining_time = 1, result = "angels-ore-sorting-facility-5" },
+    fast_replaceable_group = "angels-ore-sorting-facility",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -340,7 +355,7 @@ data:extend({
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-sorting", "ore-sorting-2", "ore-sorting-3", "ore-sorting-4", "ore-sorting-5" },
+    crafting_categories = { "angels-ore-sorting", "angels-ore-sorting-2", "angels-ore-sorting-3", "angels-ore-sorting-4", "angels-ore-sorting-5" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -348,6 +363,8 @@ data:extend({
       emissions_per_minute = { pollution = 4.2 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-sorting-facility"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

@@ -39,6 +39,7 @@ local function initialize_tables()
   }
 
   modify_table = {
+    recipes = {},
     technologies = {},
   }
 
@@ -235,8 +236,6 @@ ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq 
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
     if type(prereq) == "table" then
       for pr, req in pairs(prereq) do
         modify_table.technologies[technology].prereqs[req] = true
@@ -360,6 +359,18 @@ ov_functions.global_replace_item = function(old, new) -- replace all occurrences
   end
 end
 
+ov_functions.copy_item_properties = function(from, to)
+  local from_item = data.raw.item[from]
+  local to_item = data.raw.item[to]
+  to_item.localised_name = { "item-name."..from_item.name }
+  to_item.icon = from_item.icon
+  to_item.icon_size = from_item.icon_size
+  to_item.icons = from_item.icons
+  to_item.pictures = from_item.pictures
+  to_item.subgroup = from_item.subgroup
+  to_item.order = from_item.order
+end
+
 ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   local new_fluid = data.raw.fluid[new_fluid_name]
   local old_fluid = data.raw.fluid[old_fluid_name]
@@ -368,30 +379,8 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   end
 
   ov_functions.global_replace_item(old_fluid_name, new_fluid_name)
-
-  if angelsmods.trigger.enableconverter then
-    local converter_subgroup_name = "angels-fluid-converter-" .. (new_fluid.subgroup or "unknown")
-
-    if not data.raw["item-subgroup"][converter_subgroup_name] then
-      local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
-      local fluid_group_data =
-        data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]
-      data:extend({
-        {
-          type = "item-subgroup",
-          name = converter_subgroup_name,
-          group = "angels-fluid-converter",
-          order = (fluid_group_data and fluid_group_data.order or "z")
-            .. "-"
-            .. (fluid_subgroup_data and fluid_subgroup_data.order or "z"),
-        },
-      })
-    end
-
-    angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
-  else
-    angelsmods.functions.hide(old_fluid_name)
-  end
+  angelsmods.functions.hide(old_fluid_name)
+  angelsmods.functions.disable_barreling_recipes(old_fluid_name)
 end
 
 ov_functions.global_replace_icon = function(old, new)
@@ -403,10 +392,12 @@ ov_functions.hide_recipe = function(recipe) -- hides recipe (may be a table cont
     for _, rec in pairs(recipe) do
       guarantee_subtable(patch_table, rec)
       patch_table[rec].hidden = true
+      patch_table[rec].localised_name = { "item-name.angels-void" }
     end
   else
     guarantee_subtable(patch_table, recipe)
     patch_table[recipe].hidden = true
+    patch_table[recipe].localised_name = { "item-name.angels-void" }
   end
 end
 
@@ -428,6 +419,32 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
   end
 end
 
+ov_functions.add_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      add_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = true
+  end
+end
+
+ov_functions.remove_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      remove_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = false
+  end
+end
+
 -------------------------------------------------------------------------------
 -- OVERRIDE ITEM FUNCTIONS ----------------------------------------------------
 -------------------------------------------------------------------------------
@@ -446,7 +463,7 @@ end
 ov_functions.set_science_pack = function(technology, pack, amount)
   -- adds science packs of type pack to technology (both may be tables), may optionally take an amount of science packs (or a table if packs is a table) to set to (default 1)
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do
+    for _, tech in pairs(technology) do
       ov_functions.set_science_pack(tech, pack, amount)
     end
   elseif type(pack) == "table" then
@@ -525,7 +542,7 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
     },
   }
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
+    for _, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
       ov_functions.set_research_difficulty(tech, unit_time, unit_amount,trigger)
     end
   else
@@ -689,7 +706,7 @@ end
 -------------------------------------------------------------------------------
 -- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------
 -------------------------------------------------------------------------------
-local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
+local function adjust_recipe(recipe) -- check a recipe for basic adjustments based on tables and make any necessary changes
   local function adjust_member(parent, member, substitution_type)
     local old = parent[member]
     if old then
@@ -710,6 +727,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
           item.amount = item[2]
           item[1] = nil
           item[2] = nil
+          log("recipe "..parent.name.." "..subtable.." is still using the old format")
         end
         local new = substitution_table[substitution_type][item.name]
         if new then
@@ -742,10 +760,41 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
     adjust_subtable(path, "results", "recipe_items")
     adjust_member(path, "main_product", "recipe_items")
   end
-  if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
-    adjust_difficulty(recipe)
-    adjust_member(recipe, "icon", "recipe_icons")
+  local function safe_insert(array, new_item)
+    local addit = true
+    for i, item in pairs(array) do
+      if item == new_item then
+        addit = false
+        break
+      end
+    end
+    if addit then
+      table.insert(array, new_item)
+    end
   end
+  local function adjust_additional_categories()
+    local modifications = modify_table[recipe.name]
+    if modifications then
+      for category_name, flag in pairs(modifications.additional_categories) do
+        if flag then
+          local category = data.raw["recipe-category"][category_name]
+          if category then
+            guarantee_subtable(recipe, "additional_categories")
+            safe_insert(recipe.additional_categories, category_name)
+          end
+        elseif recipe.additional_categories then
+          for i, category in pairs(recipe.additional_categories) do
+            table.remove(recipe.additional_categories, i)
+            break
+          end
+        end
+      end
+    end
+  end
+
+  adjust_difficulty(recipe)
+  adjust_member(recipe, "icon", "recipe_icons")
+  adjust_additional_categories()
 end
 
 local function adjust_technology(tech, k) -- check a tech for basic adjustments based on tables and make any necessary changes
@@ -909,8 +958,8 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
 end
 
 ov_functions.execute = function()
-  for k, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
-    adjust_recipe(recipe, k)
+  for _, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
+    adjust_recipe(recipe)
   end
   for name, patch in pairs(patch_table) do
     patch.name = name

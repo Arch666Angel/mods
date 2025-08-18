@@ -88,9 +88,9 @@ function welcome_dialog:create_welcome_dialog(player_index)
     tooltip = { "angels-welcome-message-settings-tooltip.pollution-setting" },
   })
 
-  local enemySizeSetting = ((player.surface.map_gen_settings["autoplace_controls"] or {})["angels-biter-slider"] or {
-    ["size"] = 0,
-  })["size"] > 1 and "enabled" or "disabled"
+  local enemySizeSetting = (((player.surface.map_gen_settings["autoplace_controls"] or {})["angels-biter-slider"] or {["size"] = 0})["size"] >= 6) and
+    (((player.surface.map_gen_settings["autoplace_controls"] or {})["enemy-base"] or {["size"] = 0})["size"] > 0)
+    and "enabled" or "disabled"
   welcomeFrameContent.add({
     type = "label",
     name = "enemy_size_message",

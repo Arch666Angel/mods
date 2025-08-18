@@ -5,17 +5,24 @@ local function angels_air_filter_fluid_boxes()
       pipe_picture = angelsmods.petrochem.electrolyserpictures(),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -2.4 }, } },
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -2 }, } },
     },
     {
       production_type = "output",
       pipe_picture = angelsmods.petrochem.electrolyserpictures(),
       pipe_covers = pipecoverspictures(),
       volume = 100,
-      pipe_connections = { { flow_direction = "output", position = { 0, 2.4 }, direction = defines.direction.south } },
+      pipe_connections = { { flow_direction = "output", position = { 0, 2 }, direction = defines.direction.south } },
     },
   }
 end
+
+circuit_connector_definitions["angels-air-filter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+})
 
 data:extend({
   {
@@ -27,7 +34,7 @@ data:extend({
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "b[angels-air-filter]-a",
     place_result = "angels-air-filter",
     stack_size = 10,
@@ -54,7 +61,7 @@ data:extend({
     drawing_box_vertical_extension = 0.3,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-air-filtering" },
+    crafting_categories = { "angels-petrochem-air-filtering" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -62,6 +69,8 @@ data:extend({
       emissions_per_minute = { pollution = -6 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
@@ -89,7 +98,7 @@ data:extend({
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "b[angels-air-filter]-b",
     place_result = "angels-air-filter-2",
     stack_size = 10,
@@ -116,7 +125,7 @@ data:extend({
     drawing_box_vertical_extension = 0.3,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-air-filtering" },
+    crafting_categories = { "angels-petrochem-air-filtering" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -124,6 +133,8 @@ data:extend({
       emissions_per_minute = { pollution = -7.2 },
     },
     energy_usage = "175kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
@@ -151,7 +162,7 @@ data:extend({
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "b[angels-air-filter]-c",
     place_result = "angels-air-filter-3",
     stack_size = 10,
@@ -177,7 +188,7 @@ data:extend({
     drawing_box_vertical_extension = 0.3,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-air-filtering" },
+    crafting_categories = { "angels-petrochem-air-filtering" },
     crafting_speed = 2.25,
     energy_source = {
       type = "electric",
@@ -185,6 +196,8 @@ data:extend({
       emissions_per_minute = { pollution = -8.4 },
     },
     energy_usage = "225kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",

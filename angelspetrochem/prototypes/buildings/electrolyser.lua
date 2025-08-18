@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -8,7 +15,7 @@ data:extend({
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-a",
     place_result = "angels-electrolyser",
     stack_size = 10,
@@ -35,7 +42,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-electrolyser" },
+    crafting_categories = { "angels-petrochem-electrolyser" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -43,6 +50,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -96,7 +105,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -104,7 +113,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -112,7 +121,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -120,7 +129,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -133,7 +142,7 @@ data:extend({
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-b",
     place_result = "angels-electrolyser-2",
     stack_size = 10,
@@ -160,7 +169,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-electrolyser" },
+    crafting_categories = { "angels-petrochem-electrolyser" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -168,6 +177,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -221,7 +232,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -229,7 +240,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -237,7 +248,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -245,7 +256,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -258,7 +269,7 @@ data:extend({
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-c",
     place_result = "angels-electrolyser-3",
     stack_size = 10,
@@ -285,7 +296,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-electrolyser" },
+    crafting_categories = { "angels-petrochem-electrolyser" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -293,6 +304,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -346,7 +359,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -354,7 +367,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -362,7 +375,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -370,7 +383,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },
@@ -383,7 +396,7 @@ data:extend({
         icon_size = 32,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-electrolyser",
+    subgroup = "angels-petrochem-buildings-electrolyser",
     order = "ab[angels-electrolyser]-d",
     place_result = "angels-electrolyser-4",
     stack_size = 10,
@@ -409,7 +422,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "petrochem-electrolyser" },
+    crafting_categories = { "angels-petrochem-electrolyser" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -417,6 +430,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "450kW",
+    circuit_connector = circuit_connector_definitions["angels-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -470,7 +485,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { -2, -2.4 }, direction = defines.direction.south },
+          { flow_direction = "input", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -478,7 +493,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, -2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, -2 }, direction = defines.direction.north } },
       },
       {
         production_type = "output",
@@ -486,7 +501,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, 2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, 2 }, direction = defines.direction.south },
         },
       },
       {
@@ -494,7 +509,7 @@ data:extend({
         pipe_picture = angelsmods.petrochem.electrolyserpictures(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
-        pipe_connections = { { flow_direction = "output", position = { 2, 2.4 }, direction = defines.direction.north } },
+        pipe_connections = { { flow_direction = "output", position = { 2, 2 }, direction = defines.direction.south } },
       },
     },
   },

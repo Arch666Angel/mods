@@ -1,21 +1,28 @@
+circuit_connector_definitions["angels-advanced-chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 45.25,  65.25), shadow_offset = util.by_pixel( 45.25,  65.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 45.25,  65.25), shadow_offset = util.by_pixel( 45.25,  65.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 45.25,  65.25), shadow_offset = util.by_pixel( 45.25,  65.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 45.25,  65.25), shadow_offset = util.by_pixel( 45.25,  65.25), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "advanced-chemical-plant",
+    name = "angels-advanced-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "b[advanced]-a",
-    place_result = "advanced-chemical-plant",
+    place_result = "angels-advanced-chemical-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "advanced-chemical-plant",
+    name = "angels-advanced-chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
@@ -24,9 +31,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "advanced-chemical-plant" },
-    fast_replaceable_group = "advanced-chemical-plant",
-    next_upgrade = "advanced-chemical-plant-2",
+    minable = { mining_time = 1, result = "angels-advanced-chemical-plant" },
+    fast_replaceable_group = "angels-advanced-chemical-plant",
+    next_upgrade = "angels-advanced-chemical-plant-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -35,7 +42,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-chemistry" },
+    crafting_categories = { "angels-advanced-chemistry" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -43,6 +50,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-advanced-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -75,21 +84,21 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -97,7 +106,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -106,7 +115,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -115,7 +124,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 2, -2 }, direction = defines.direction.north },
         },
       },
       --off_when_no_fluid_recipe = true
@@ -128,21 +137,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "advanced-chemical-plant-2",
+    name = "angels-advanced-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "b[advanced]-b",
-    place_result = "advanced-chemical-plant-2",
+    place_result = "angels-advanced-chemical-plant-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "advanced-chemical-plant-2",
+    name = "angels-advanced-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/advanced-chemical-plant.png",
@@ -151,8 +160,8 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "advanced-chemical-plant-2" },
-    fast_replaceable_group = "advanced-chemical-plant",
+    minable = { mining_time = 1, result = "angels-advanced-chemical-plant-2" },
+    fast_replaceable_group = "angels-advanced-chemical-plant",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -161,7 +170,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "advanced-chemistry" },
+    crafting_categories = { "angels-advanced-chemistry" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -169,6 +178,8 @@ data:extend({
       emissions_per_minute = { pollution = 4.8 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-advanced-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -201,21 +212,21 @@ data:extend({
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         --pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -2, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -2, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -223,7 +234,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -2, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -2, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -232,7 +243,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -241,7 +252,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 2, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 2, -2 }, direction = defines.direction.north },
         },
       },
       --off_when_no_fluid_recipe = true

@@ -68,17 +68,17 @@ if alien_technology then
       },
     },
   })
-  OV.remove_unlock("bob-alien-research", "alien-science-pack-blue")
+  OV.remove_unlock("bob-alien-research", "bob-alien-science-pack-blue")
 
   if bobmods.warfare then
     for _, tech_name in pairs({
       (not bobmods.plates) and "bob-ap-bullets" or nil,
       (not bobmods.plates) and "bob-shotgun-ap-shells" or nil,
       (not bobmods.plates) and "bob-piercing-rocket" or nil,
-      bobmods.plates and "alien-blue-research" or nil,
+      bobmods.plates and "bob-alien-blue-research" or nil,
     }) do
       OV.remove_prereq(tech_name, "bob-alien-research")
-      OV.add_prereq(tech_name, "alien-research-blue")
+      OV.add_prereq(tech_name, "bob-alien-research-blue")
     end
   end
 end
@@ -280,7 +280,6 @@ if alien_technology then
     bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-5" or nil,
     bobmods.equipment and "bob-vehicle-battery-equipment-5" or nil,
     bobmods.equipment and "bob-vehicle-energy-shield-equipment-5" or nil,
-    bobmods.equipment and "bob-vehicle-big-turret-equipment-5" or nil,
   }) do
     OV.remove_prereq(tech_name, "bob-alien-research")
     OV.add_prereq(tech_name, "bob-alien-research-purple")
@@ -398,7 +397,6 @@ if alien_technology then
     bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-6" or nil,
     bobmods.equipment and "bob-vehicle-battery-equipment-6" or nil,
     bobmods.equipment and "bob-vehicle-energy-shield-equipment-6" or nil,
-    bobmods.equipment and "bob-vehicle-big-turret-equipment-6" or nil,
   }) do
     OV.remove_prereq(tech_name, "bob-alien-research")
     OV.add_prereq(tech_name, "bob-alien-research-green")

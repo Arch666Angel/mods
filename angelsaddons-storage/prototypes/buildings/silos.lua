@@ -1,3 +1,7 @@
+circuit_connector_definitions["angels-silo"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  3, main_offset = util.by_pixel(-43, -21.125), shadow_offset = util.by_pixel(-43, -21.125), show_shadow = true }
+)
+
 if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
   -----------------------------------------------------------------------------
   -- REGULAR SILO -------------------------------------------------------------
@@ -19,7 +23,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
       icon = "__angelsaddons-storage__/graphics/icons/silo.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      collision_mask = angelsmods.functions.set_building_collision_mask('container', {'elevated_rail'}),
+      collision_mask = angelsmods.functions.set_building_collision_mask("container", { "elevated_rail" }),
       minable = { mining_time = 1, result = "silo" },
       max_health = 300,
       corpse = "small-remnants",
@@ -43,8 +47,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
         height = 192,
         shift = { 0, 0 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["angels-silo"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
@@ -82,11 +85,11 @@ if angelsmods.addons.storage.silos then
   -- LOGISTIC SILOS -----------------------------------------------------------
   -----------------------------------------------------------------------------
   local log_names = {
-    ["aprovider"] = { order = "i", stacks = 384, mode = "active-provider" },
-    ["pprovider"] = { order = "j", stacks = 256, mode = "passive-provider" },
-    ["storage"] = { order = "k", stacks = 384, mode = "storage", slots = 1 },
-    ["buffer"] = { order = "l", stacks = 256, mode = "buffer" },
-    ["requester"] = { order = "m", stacks = 209, mode = "requester" },
+    ["aprovider"] = { order = "i", mode = "active-provider" },
+    ["pprovider"] = { order = "j", mode = "passive-provider" },
+    ["storage"] = { order = "k", mode = "storage", slots = 1 },
+    ["buffer"] = { order = "l", mode = "buffer" },
+    ["requester"] = { order = "m", mode = "requester" },
   }
   local silo_add = {}
   for name, stat in pairs(log_names) do
@@ -98,7 +101,6 @@ if angelsmods.addons.storage.silos then
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-log-" .. name .. ".png"
     cont_add.minable.result = "silo-" .. stat.mode
     cont_add.logistic_mode = stat.mode
-    cont_add.inventory_size = stat.stacks
     if stat.slots then
       cont_add.max_logistic_slots = stat.slots
     end

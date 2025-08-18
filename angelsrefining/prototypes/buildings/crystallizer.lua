@@ -40,33 +40,34 @@ local function angels_crystallizer_fluid_boxes()
       volume = 1000,
       pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
     },
-    -- {
-    -- production_type = "output",
-    -- pipe_covers = pipecoverspictures(),
-    -- volume = 100,
-    -- pipe_connections = {{ position = {0, -3} }}
-    -- },
   }
 end
+
+circuit_connector_definitions["angels-crystallizer"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375,  41.75), shadow_offset = util.by_pixel(-4.375,  41.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  41.75), shadow_offset = util.by_pixel(-4.375,  41.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  41.75), shadow_offset = util.by_pixel(-4.375,  41.75), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  41.75), shadow_offset = util.by_pixel(-4.375,  41.75), show_shadow = true },
+})
 
 data:extend({
   {
     type = "item",
-    name = "crystallizer",
+    name = "angels-crystallizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "c[crystallizer]-a[mk1]",
-    place_result = "crystallizer",
+    place_result = "angels-crystallizer",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "crystallizer",
+    name = "angels-crystallizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
@@ -74,9 +75,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "crystallizer" },
-    fast_replaceable_group = "crystallizer",
-    next_upgrade = "crystallizer-2",
+    minable = { mining_time = 1, result = "angels-crystallizer" },
+    fast_replaceable_group = "angels-crystallizer",
+    next_upgrade = "angels-crystallizer-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -84,7 +85,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "crystallizing" },
+    crafting_categories = { "angels-crystallizing" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -92,6 +93,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-crystallizer"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -127,21 +130,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "crystallizer-2",
+    name = "angels-crystallizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "c[crystallizer]-b[mk2]",
-    place_result = "crystallizer-2",
+    place_result = "angels-crystallizer-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "crystallizer-2",
+    name = "angels-crystallizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
@@ -149,9 +152,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "crystallizer-2" },
-    fast_replaceable_group = "crystallizer",
-    next_upgrade = "crystallizer-3",
+    minable = { mining_time = 1, result = "angels-crystallizer-2" },
+    fast_replaceable_group = "angels-crystallizer",
+    next_upgrade = "angels-crystallizer-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -159,7 +162,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "crystallizing", "crystallizing-2" },
+    crafting_categories = { "angels-crystallizing", "angels-crystallizing-2" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -167,6 +170,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-crystallizer"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {
@@ -202,21 +207,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "crystallizer-3",
+    name = "angels-crystallizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
         icon_size = 64,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "refining-buildings",
+    subgroup = "angels-refining-buildings",
     order = "c[crystallizer]-c[mk3]",
-    place_result = "crystallizer-3",
+    place_result = "angels-crystallizer-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "crystallizer-3",
+    name = "angels-crystallizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
@@ -224,8 +229,8 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "crystallizer-3" },
-    fast_replaceable_group = "crystallizer",
+    minable = { mining_time = 1, result = "angels-crystallizer-3" },
+    fast_replaceable_group = "angels-crystallizer",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -233,7 +238,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "crystallizing", "crystallizing-2", "crystallizing-3" },
+    crafting_categories = { "angels-crystallizing", "angels-crystallizing-2", "angels-crystallizing-3" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -241,6 +246,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-crystallizer"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

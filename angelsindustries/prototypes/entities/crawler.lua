@@ -37,6 +37,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     energy_per_hit_point = 0.03,
     immune_to_tree_impacts = true,
+    trash_inventory_size = 20,
     resistances = {
       {
         type = "fire",
@@ -300,8 +301,8 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
     impact_category = "metal",
+    impact_speed_to_volume_ratio = 4.0,
     working_sound = {
       sound = {
         filename = "__angelsindustriesgraphics__/sound/crawler-run.ogg",

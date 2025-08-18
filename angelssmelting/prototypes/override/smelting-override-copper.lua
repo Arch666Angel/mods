@@ -72,10 +72,8 @@ if angelsmods.trigger.smelting_products["copper"].plate then
     },
   })
   if not angelsmods.functions.is_special_vanilla() then
-    OV.remove_unlock("ore-crushing", "copper-plate")
+    OV.remove_unlock("angels-ore-crushing", "copper-plate")
   end
-  OV.global_replace_item("angels-plate-copper", "copper-plate")
-  angelsmods.functions.hide("angels-plate-copper")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -93,7 +91,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
   if angelsmods.refining then
     OV.patch_recipes({
       {
-        name = "angelsore3-crushed-smelting",
+        name = "angels-ore3-crushed-smelting",
         subgroup = "angels-copper-casting",
         order = "j[angels-plate-copper]-a",
       },
@@ -118,8 +116,8 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].powder then
 else
-  angelsmods.functions.hide("powder-copper")
-  OV.disable_recipe({ "powder-copper" })
+  angelsmods.functions.hide("angels-powder-copper")
+  OV.disable_recipe({ "angels-powder-copper" })
 end
 
 -------------------------------------------------------------------------------
@@ -147,8 +145,6 @@ if angelsmods.trigger.smelting_products["copper"].wire then
     },
   })
   angelsmods.functions.remove_productivity("copper-cable")
-  OV.global_replace_item("angels-wire-copper", "copper-cable")
-  angelsmods.functions.hide("angels-wire-copper")
   angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
   data.raw["item"]["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png"
   data.raw["item"]["copper-cable"].icon_size = 32
@@ -158,16 +154,8 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   )
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.patch_recipes({
-      {
-        name = "copper-cable",
-        category = "bob-electronics",
-      },
-      {
-        name = "angels-wire-coil-copper-converting",
-        category = "bob-electronics-machine",
-      },
-    })
+    OV.add_additional_category("copper-cable", "electronics")
+    OV.add_additional_category("angels-wire-copper-2", "electronics")
   end
 else
   -- todo

@@ -1,28 +1,35 @@
+circuit_connector_definitions["angels-bio-hatchery"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.125,  36.625), shadow_offset = util.by_pixel(-4.125,  36.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.125,  36.625), shadow_offset = util.by_pixel(-4.125,  36.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.125,  36.625), shadow_offset = util.by_pixel(-4.125,  36.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.125,  36.625), shadow_offset = util.by_pixel(-4.125,  36.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "bio-hatchery",
+    name = "angels-bio-hatchery",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-hatchery.png",
     icon_size = 32,
-    subgroup = "bio-processing-buildings-alien-a",
+    subgroup = "angels-bio-processing-buildings-alien-a",
     order = "c",
-    place_result = "bio-hatchery",
+    place_result = "angels-bio-hatchery",
     stack_size = 10,
   },
   {
     type = "furnace",
-    name = "bio-hatchery",
+    name = "angels-bio-hatchery",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-hatchery.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "bio-hatchery" },
+    minable = { mining_time = 1, result = "angels-bio-hatchery" },
     max_health = 100,
-    fast_replaceable_group = "bio-hatchery",
+    fast_replaceable_group = "angels-bio-hatchery",
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -1.75 }, { 1.5, 1.5 } },
-    crafting_categories = { "bio-hatchery" },
+    drawing_box_vertical_extension = 0.25,
+    crafting_categories = { "angels-bio-hatchery" },
     cant_insert_at_source_message_key = "cant_insert.angels-hatchery-limitation",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
@@ -45,6 +52,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.01 * 60 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-hatchery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

@@ -1,24 +1,31 @@
+circuit_connector_definitions["angels-barreling-pump"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  6, main_offset = util.by_pixel( 0.125,  32.125), shadow_offset = util.by_pixel( 0.125,  32.125), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 41.25, -5.5), shadow_offset = util.by_pixel( 41.25, -5.5), show_shadow = true },
+  { variation =  10, main_offset = util.by_pixel( 0.5, -46.875), shadow_offset = util.by_pixel( 0.5, -46.875), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-38.75, -6.875), shadow_offset = util.by_pixel(-38.75, -6.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "barreling-pump",
+    name = "angels-barreling-pump",
     icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
     icon_size = 32,
     subgroup = "angels-fluid-control",
     order = "c[barreling-pump]",
-    place_result = "barreling-pump",
+    place_result = "angels-barreling-pump",
     stack_size = 10,
   },
 })
 
 local barreling_pump = {
   type = "assembling-machine",
-  name = "barreling-pump",
+  name = "angels-barreling-pump",
   icon = "__angelsrefininggraphics__/graphics/icons/barreling-pump.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation" },
-  minable = { mining_time = 1, result = "barreling-pump" },
-  fast_replaceable_group = "barreling-pump",
+  minable = { mining_time = 1, result = "angels-barreling-pump" },
+  fast_replaceable_group = "angels-barreling-pump",
   max_health = 300,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
@@ -26,7 +33,7 @@ local barreling_pump = {
   selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
   module_slots = 2,
   allowed_effects = { "consumption", "speed", "pollution" },
-  crafting_categories = { "barreling-pump" },
+  crafting_categories = { "angels-barreling-pump" },
   crafting_speed = 2,
   energy_source = {
     type = "electric",
@@ -34,6 +41,8 @@ local barreling_pump = {
     emissions_per_minute = { pollution = 1.8 },
   },
   energy_usage = "60kW",
+  circuit_connector = circuit_connector_definitions["angels-barreling-pump"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance,
   ingredient_count = 2,
   graphics_set = {
     animation = {
@@ -99,13 +108,13 @@ local barreling_pump = {
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       volume = 1000,
-      pipe_connections = { { flow_direction = "input", position = { 0, 1.4 }, direction = defines.direction.south } },
+      pipe_connections = { { flow_direction = "input", position = { 0, 1 }, direction = defines.direction.south } },
     },
     {
       production_type = "output",
       pipe_covers = pipecoverspictures(),
       volume = 100,
-      pipe_connections = { { flow_direction = "output", position = { 0, -1.4 }, direction = defines.direction.north } },
+      pipe_connections = { { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north } },
     },
   },
 }

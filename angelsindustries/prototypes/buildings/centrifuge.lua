@@ -160,7 +160,8 @@ for _, centrifuge_name in pairs({
       },
     }
 
-    centrifuge.default_recipe_tint = {
+    centrifuge.graphics_set = centrifuge.graphics_set or {}
+    centrifuge.graphics_set.default_recipe_tint = {
       primary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green
       secondary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green
       tertiary = { r = 000 / 255, g = 255 / 255, b = 000 / 255, a = 1 }, -- green

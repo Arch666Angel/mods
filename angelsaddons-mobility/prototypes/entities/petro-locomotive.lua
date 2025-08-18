@@ -2,6 +2,7 @@ local minimap_representation = data.raw["locomotive"]["locomotive"].minimap_repr
 local selected_minimap_representation = data.raw["locomotive"]["locomotive"].selected_minimap_representation
 
 local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
 local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
@@ -38,9 +39,9 @@ funcs.generate_train_entities({
   max_health = 2500,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_petro_locomotive,
   collision_box = { { -0.6, -2.6 }, { 0.6, 2.6 } },
   selection_box = { { -1, -3 }, { 1, 3 } },
-  drawing_box = { { -1, -4 }, { 1, 3 } },
   color = tintable_tint,
   allow_manual_color = true,
   weight = 3000,
@@ -287,5 +288,4 @@ funcs.generate_train_entities({
   },
   open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 },
   close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-  sound_minimum_speed = 0.5,
 })

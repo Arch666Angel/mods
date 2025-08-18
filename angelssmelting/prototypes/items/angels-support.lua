@@ -2,10 +2,10 @@ data:extend({
   --COOLANT
   {
     type = "fluid",
-    name = "liquid-coolant",
+    name = "angels-liquid-coolant",
     icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fa",
     default_temperature = 0,
     base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
@@ -13,10 +13,10 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "liquid-coolant-used",
+    name = "angels-liquid-coolant-used",
     icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant-used.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fb",
     default_temperature = 25,
     heat_capacity = "0.1kJ",
@@ -28,7 +28,7 @@ data:extend({
   --MOLDS
   {
     type = "item",
-    name = "motor-casing-0",
+    name = "angels-motor-casing-0",
     icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
@@ -37,7 +37,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "mold-expendable",
+    name = "angels-mold-expendable",
     icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
@@ -46,7 +46,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "mold-non-expendable",
+    name = "angels-mold-non-expendable",
     icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
@@ -55,7 +55,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "spent-mold-non-expendable",
+    name = "angels-spent-mold-non-expendable",
     icons = {
       { icon = "__angelssmeltinggraphics__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32 },
       --{ icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}

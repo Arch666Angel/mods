@@ -833,6 +833,7 @@ function angelsmods.functions.make_resource()
         ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
       end
       ret_table.name = input.name
+      ret_table.subgroup = input.subgroup
       ret_table.icon_size = input.icon_size
       ret_table.category = input.category
       ret_table.order = input.order
@@ -984,7 +985,7 @@ function angelsmods.functions.update_autoplace()
               if angelsmods.trigger.enableacids then
                 input.acid_req = input.acid_to_mine
               else
-                input.acid_req = "liquid-sulfuric-acid"
+                input.acid_req = "angels-liquid-sulfuric-acid"
               end
             else
               if data.raw.fluid[input.acid_to_mine] then

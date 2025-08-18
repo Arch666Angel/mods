@@ -9,12 +9,11 @@ local function get_icons(object_name)
         return object.icons
       end
       if object.icon then
-        -- local scale = 64 / (object.icon_size or 64)
         return {
           {
             icon = object.icon,
             icon_size = object.icon_size or 64,
-            scale = 64 / (object.icon_size or 64),
+            scale = 32 / (object.icon_size or 64),
           },
         }
       end
@@ -123,7 +122,9 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
   elseif type(icon_layers) == "string" then --to deal with errors passing the void icon as a string
     icon_layers = { { icon = icon_layers, icon_size = 32 } }
   elseif icon_layers[1].scale then
-    icon_size_scale = (icon_layers[1].icon_size or 32) * icon_layers[1].scale / 32
+    icon_size_scale = (icon_layers[1].icon_size or 64) * icon_layers[1].scale / 32
+  else
+    icon_layers[1].scale = 32 / (icon_layers[1].icon_size or 64)
   end
 
   return angelsmods.functions.add_icon_layer(icon_layers, {
@@ -257,7 +258,7 @@ end
 local function create_recipe_molecule_icons(molecules_icon, molecules_shift, molecules_scale)
   molecules_icon = clean_table(molecules_icon) or {}
   molecules_shift = molecules_shift or { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }
-  molecules_scale = molecules_scale or (10.24 / 32) -- assume base 32 size
+  molecules_scale = molecules_scale or (10.24 / 32) -- assume base 64 size, scaled by 0.5
 
   for molecule_index, molecule_icon in pairs(molecules_icon) do
     if type(molecule_icon) ~= "table" and get_icons(molecule_icon) ~= "__angelsrefininggraphics__/graphics/icons/void.png" then
@@ -281,10 +282,11 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
           shift = mi.shift or mi[3] or nil,
           scale = mi.scale or mi[4] or nil,
           tint = mi.tint or mi[5] or nil,
+          floating = mi.floating or nil,
         },
       }
       if molecules_icon[molecule_index][1].icon then
-        molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 32
+        molecules_icon[molecule_index][1].icon_size = mi.icon_size or mi[2] or 64
         if molecules_icon[molecule_index][1].icon_size ~= 32 then
           molecules_icon[molecule_index][1].scale = (molecules_icon[molecule_index][1].scale or 1)
             * 32
@@ -302,7 +304,8 @@ local function create_recipe_molecule_icons(molecules_icon, molecules_shift, mol
     else
       for molecule_icon_layer_index, molecule_icon_layer in pairs(molecule_icon) do
         if not molecule_icon_layer.icon_size then
-          molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 32
+          molecules_icon[molecule_index][molecule_icon_layer_index].icon_size = 64
+          molecules_icon[molecule_index][molecule_icon_layer_index].scale = 0.5
         end
       end
     end
@@ -418,11 +421,11 @@ end
 -- CREATE GAS RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_gas_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
-  -- (assumes icon_size 32) or be a table with size defined
+  -- (assumes icon_size 64) or be a table with size defined
   bot_molecules_icon =
-    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } })
   top_molecules_icon =
-    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } })
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- uses the get_molecule_codes for default tints
@@ -535,18 +538,18 @@ end
 
 -- CREATE LIQUID FLUID ICONS (NOT FOR RECIPES)
 function angelsmods.functions.create_liquid_fluid_icon(molecule_icon, tints)
-  -- molecule_icon can be a string (assumes icon_size 32)
+  -- molecule_icon can be a string (assumes icon_size 64)
   -- or be a table with size defined
   if molecule_icon then
     if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
-        icon_size = 32,
+        icon_size = 64,
       }
     else
       molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
       if molecule_icon.icon then
-        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 64
       else
         --something is wrong here but we need to return something
         molecule_icon.icon = "__angelsrefininggraphics__/graphics/icons/void.png"
@@ -623,11 +626,11 @@ end
 -- CREATE LIQUID RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
-  -- (assumes icon_size 32) or be a table with size defined
+  -- (assumes icon_size 64) or be a table with size defined
   bot_molecules_icon =
-    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } } )
   top_molecules_icon =
-    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } } )
 
   -- tints is a table of 3 tints, for the top, mid and bot section,
   -- uses the get_molecule_codes for default tints
@@ -690,18 +693,18 @@ end
 
 -- CREATE VISCOUS LIQUID FLUID ICONS (NOT FOR RECIPES)
 function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, tints)
-  -- molecule_icon can be a string (assumes icon_size 32)
+  -- molecule_icon can be a string (assumes icon_size 64)
   -- or be a table with size defined
   if molecule_icon then
     if type(molecule_icon) ~= "table" then
       molecule_icon = {
         icon = molecule_icon,
-        icon_size = 32,
+        icon_size = 64,
       }
     else
       molecule_icon.icon = molecule_icon.icon or molecule_icon[1] or nil
       if molecule_icon.icon then
-        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 32
+        molecule_icon.icon_size = molecule_icon.icon_size or molecule_icon[2] or 64
       else
         --something is wrong here but we need to return something
         molecule_icon.icon = "__angelsrefininggraphics__/graphics/icons/void.png"
@@ -806,11 +809,11 @@ end
 -- CREATE VISCOUS LIQUID RECIPE ICONS (NOT FOR FLUIDS)
 function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_icon, tints, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
-  -- (assumes icon_size 32) or be a table with size defined
+  -- (assumes icon_size 64) or be a table with size defined
   bot_molecules_icon =
-    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } } )
   top_molecules_icon =
-    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } } )
 
   -- tints is a table of 5 tints, for the top, bot_left top_mask, bot_mask, bot_right,
   -- if bot_left is present, but not bot_right (nil), then both bottom sides will have
@@ -846,7 +849,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
     tints.bot
@@ -855,7 +857,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = tints.bot,
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
     tints.bot_left
@@ -864,7 +865,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = tints.bot_left,
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
     tints.bot_left
@@ -873,7 +873,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = tints.bot_right,
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
     tints.bot_mask
@@ -882,7 +881,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = tints.bot_mask,
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
     {
@@ -890,7 +888,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top,
-      --shift = top_molecules_icon and {3.5, 0} or nil
     },
     tints.top_mask
         and {
@@ -898,7 +895,6 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
           icon_size = 256,
           scale = 32 / 256,
           tint = tints.top_mask,
-          --shift = top_molecules_icon and {3.5, 0} or nil
         }
       or nil,
   }
@@ -923,11 +919,11 @@ function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
   top_molecules_icon
 )
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
-  -- (assumes icon_size 32) or be a table with size defined
+  -- (assumes icon_size 64) or be a table with size defined
   bot_molecules_icon =
-    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } } )
   top_molecules_icon =
-    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } } )
 
   -- filter_type is a string, can be "coal" or "ceramic"
   local valid_filter_type = {
@@ -943,8 +939,7 @@ function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
     {
       icon = string.format("__angelsrefininggraphics__/graphics/icons/filter-%s.png", filter_type),
       icon_size = 32,
-      scale = 32 / 32 * 0.85,
-      --shift = {0, -2},
+      scale = 0.85,
     },
   }
   viscous_liquid_fluid_icon[1] = nil
@@ -955,8 +950,7 @@ function angelsmods.functions.create_viscous_liquid_filtering_recipe_icon(
   table.insert(recipe_icons, {
     icon = string.format("__angelsrefininggraphics__/graphics/icons/angels-liquid/filter-%s-front.png", filter_type),
     icon_size = 32,
-    scale = 32 / 32 * 0.85,
-    --shift = {0, -2},
+    scale = 0.85,
   })
   for _, bot_molecule_icon in pairs(bot_molecules_icon) do
     for _, bot_molecule_icon_layer in pairs(bot_molecule_icon) do
@@ -974,11 +968,11 @@ end
 -- CREATE SOLID RECIPE ICONS (NOT FOR ICONS)
 function angelsmods.functions.create_solid_recipe_icon(bot_molecules_icon, solid_item_name, top_molecules_icon)
   -- bot_molecules_icon and top_molecules_icon is a table of molecule_icon, which can be a string
-  -- (assumes icon_size 32) or be a table with size defined
+  -- (assumes icon_size 64) or be a table with size defined
   bot_molecules_icon =
-    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(bot_molecules_icon, { { -11.5, 12 }, { 11.5, 12 }, { 0, 12 } } )
   top_molecules_icon =
-    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } }, 10.24 / 32)
+    create_recipe_molecule_icons(top_molecules_icon, { { -11.5, -12 }, { 11.5, -12 }, { 0, -12 } } )
 
   local recipe_icons = util.table.deepcopy(get_icons(solid_item_name))
 
@@ -1295,75 +1289,27 @@ end
 -- PRODUCTIVITY RESTRICTION ---------------------------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.allow_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
-    end
+  local recipe = data.raw.recipe[recipe_name] 
+  if recipe then
+    recipe.allow_productivity = true
   end
 end
 
 function angelsmods.functions.remove_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if not module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
-    end
+  local recipe = data.raw.recipe[recipe_name] 
+  if recipe then
+    recipe.allow_productivity = nil
   end
 end
 
-function angelsmods.functions.add_bio_productivity_module(to_add)
-  if --type(to_add) == string and
-    angelsmods.refining and angelsmods.refining.productivity_exception
-  then
-    table.insert(angelsmods.refining.productivity_exception, to_add)
+function angelsmods.functions.allow_bio_productivity(entity_name)
+  if data.raw["assembling-machine"][entity_name] then
+    angelsmods.refining.productivity_exception[entity_name] = true
   end
 end
 
-function angelsmods.functions.allow_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        table.insert(module.limitation, recipe_name)
-      end
-    end
-  end
-end
-
-function angelsmods.functions.remove_bio_productivity(recipe_name)
-  if data.raw.recipe[recipe_name] then
-    for i, module in pairs(data.raw.module) do
-      local module_exception = false
-      for i, module_except in pairs(angelsmods.refining.productivity_exception) do
-        module_exception = module_exception or (module.name == module_except)
-      end
-      if module_exception and module.limitation and module.effect.productivity then
-        for limitationIndex, limitationRecipeName in pairs(module.limitation) do
-          if limitationRecipeName == recipe_name then
-            table.remove(module.limitation, limitationIndex)
-          end
-        end
-      end
-    end
-  end
+function angelsmods.functions.remove_bio_productivity(entity_name)
+  angelsmods.refining.productivity_exception[entity_name] = nil
 end
 
 -------------------------------------------------------------------------------
@@ -1435,13 +1381,13 @@ end
 function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
     for _, ent in pairs(entity) do
-      angelsmods.functions.remove_flag(ent, flag)
+      angelsmods.functions.remove_flag(ent, flag_to_remove)
     end
     return
   end
-  if type(flag) == "table" then
-    for _, f in pairs(flag) do
-      angelsmods.functions.add_flag(entity, f)
+  if type(flag_to_remove) == "table" then
+    for _, f in pairs(flag_to_remove) do
+      angelsmods.functions.remove_flag(entity, f)
     end
     return
   end
@@ -1567,18 +1513,17 @@ function angelsmods.functions.modify_barreling_icon()
       for kx, fluid in pairs(data.raw.fluid) do
         if fluid.name == icon_name then
           if item.icons then
-            local icon_size = fluid.icon_size or 64
-            if fluid.icon then
+            if fluid.icons then
+              item.icons =
+                util.combine_icons(item.icons, fluid.icons, { scale = 0.5, shift = { 0, 5 } }, 64)
+            elseif fluid.icon then
+              local icon_size = fluid.icon_size or 64
               table.insert(item.icons, {
                 icon = fluid.icon,
                 icon_size = icon_size,
-                shift = { 0, 10 },
-                scale = 64 / icon_size,
+                shift = { 0, 5 },
+                scale = 16 / icon_size,
               })
-            end
-            if fluid.icons then -- for some reason, this is scaling the fluid icon down by a factor of 100 more than expected.
-              item.icons =
-                util.combine_icons(item.icons, fluid.icons, { scale = 64 / icon_size, shift = { 0, 10 } }, icon_size)
             end
           end
         end
@@ -1597,11 +1542,11 @@ function angelsmods.functions.modify_barreling_recipes()
       if data.raw.item[fn .. "-barrel"] then
         if recipes[fn .. "-barrel"] then
           recipes[fn .. "-barrel"].hidden = true
-          recipes[fn .. "-barrel"].category = "barreling-pump"
+          recipes[fn .. "-barrel"].category = "angels-barreling-pump"
         end
         if recipes["empty-" .. fn .. "-barrel"] then
           recipes["empty-" .. fn .. "-barrel"].hidden = true
-          recipes["empty-" .. fn .. "-barrel"].category = "barreling-pump"
+          recipes["empty-" .. fn .. "-barrel"].category = "angels-barreling-pump"
         end
       end
     end
@@ -1690,7 +1635,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 5
-      void_output_item = "water-void"
+      void_output_item = "angels-water-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
@@ -1700,7 +1645,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "chemical-void"
+      void_output_item = "angels-chemical-void"
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
@@ -1714,7 +1659,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "item"
       void_input_subgroup = data.raw.item[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "solid-compost"
+      void_output_item = "angels-solid-compost"
       void_output_amount = void_amount < 1 and 1 / void_amount or 1
       void_output_probability = 1
     else
@@ -1727,7 +1672,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
   if recipe then -- valid
     recipe.type = "recipe"
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
-    recipe.localised_name = { "recipe-name.angels-" .. void_category .. "-void", { "fluid-name." .. fluid_name }}
+    recipe.localised_name = { "recipe-name.angels-" .. void_category .. "-void", { void_input_type.."-name." .. fluid_name }}
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
     recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void
@@ -1768,7 +1713,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
 
     recipe.icons =
       util.table.deepcopy(get_icons(void_output_item) or { { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 } })
---     recipe.icon_size = 32
     local fluid_icon = util.table.deepcopy(get_icons(fluid_name) or {})
     for _, iconLayer in pairs(fluid_icon) do
       table.insert(recipe.icons, {
@@ -1784,81 +1728,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     end
 
     data:extend({ recipe })
-  end
-end
-
--------------------------------------------------------------------------------
--- CREATE CONVERTER RECIPES (PETROCHEM) ---------------------------------------
--------------------------------------------------------------------------------
-function angelsmods.functions.make_converter(fluid_name_other, fluid_name_angels)
-  if angelsmods.trigger.enableconverter then
-    if data.raw.fluid[fluid_name_angels] and data.raw.fluid[fluid_name_other] then
-      --LOCALS
-      local hide_converter = angelsmods.trigger.hideconverter
-
-      --ORDER COUNTER
-      if not angelsmods.functions.converter_counter then
-        angelsmods.functions.converter_counter = 0
-      end
-      angelsmods.functions.converter_counter = angelsmods.functions.converter_counter + 1
-
-      data:extend({
-        {
-          type = "recipe",
-          name = "converter-other-" .. fluid_name_other,
-          localised_name = {
-            "recipe-name.converter-angels",
-            { "fluid-name." .. fluid_name_other },
-            { "fluid-name." .. fluid_name_angels },
-          },
-          category = "angels-converter",
-          subgroup = "angels-converter",
-          energy_required = 0.5,
-          enabled = true,
-          hidden = hide_converter,
-          ingredients = {
-            { type = "fluid", name = fluid_name_angels, amount = 50 },
-          },
-          results = {
-            { type = "fluid", name = fluid_name_other, amount = 50 },
-          },
-          icon_size = 32,
-          order = "a" .. angelsmods.functions.converter_counter,
-        },
-        {
-          type = "recipe",
-          name = "converter-angels-" .. fluid_name_angels,
-          localised_name = {
-            "recipe-name.converter-angels",
-            { "fluid-name." .. fluid_name_other },
-            { "fluid-name." .. fluid_name_angels },
-          },
-          category = "angels-converter",
-          subgroup = "angels-converter",
-          energy_required = 0.5,
-          enabled = true,
-          hidden = hide_converter,
-          ingredients = {
-            { type = "fluid", name = fluid_name_other, amount = 50 },
-          },
-          results = {
-            { type = "fluid", name = fluid_name_angels, amount = 50 },
-          },
-          icon_size = 32,
-          order = "b" .. angelsmods.functions.converter_counter,
-        },
-      })
-      if hide_converter then
-        angelsmods.functions.OV.hide_recipe({
-          "converter-other-" .. fluid_name_other,
-          "converter-angels-" .. fluid_name_angels,
-        })
-      end
-      if angelsmods.trigger.enableconverter then
-      else -- hide the unused other fluid
-        angelsmods.functions.hide(fluid_name_other)
-      end
-    end
   end
 end
 
@@ -1896,27 +1765,27 @@ function angelsmods.functions.get_trigger_names()
     ["angels-copper-pebbles"] = special_vanilla and "copper" or "unused", -- special vanilla only
     ["angels-copper-slag"] = special_vanilla and "copper" or "unused", -- special vanilla only
     -- TIER 1.5 ORES
-    ["bob-tin-ore"] = "tin",
-    ["bob-lead-ore"] = "lead",
-    ["bob-quartz"] = "silicon",
-    ["bob-nickel-ore"] = "nickel",
-    ["manganese-ore"] = "manganese",
+    ["angels-tin-ore"] = "tin",
+    ["angels-lead-ore"] = "lead",
+    ["angels-quartz"] = "silicon",
+    ["angels-nickel-ore"] = "nickel",
+    ["angels-manganese-ore"] = "manganese",
     -- TIER 2 ORES
-    ["bob-zinc-ore"] = "zinc",
-    ["bob-bauxite-ore"] = "aluminium",
-    ["bob-cobalt-ore"] = "cobalt",
-    ["bob-silver-ore"] = "silver",
-    ["fluorite-ore"] = "fluorite", -- byproduct
+    ["angels-zinc-ore"] = "zinc",
+    ["angels-bauxite-ore"] = "aluminium",
+    ["angels-cobalt-ore"] = "cobalt",
+    ["angels-silver-ore"] = "silver",
+    ["angels-fluorite-ore"] = "fluorite", -- byproduct
     -- TIER 2.5 ORES
-    ["bob-gold-ore"] = "gold",
+    ["angels-gold-ore"] = "gold",
     -- TIER 3 ORES
-    ["bob-rutile-ore"] = "titanium",
+    ["angels-rutile-ore"] = "titanium",
     ["uranium-ore"] = "uranium",
     -- TIER 4 ORES
-    ["bob-tungsten-ore"] = "tungsten",
-    ["bob-thorium-ore"] = "thorium",
-    ["chrome-ore"] = "chrome",
-    ["platinum-ore"] = "platinum",
+    ["angels-tungsten-ore"] = "tungsten",
+    ["angels-thorium-ore"] = "thorium",
+    ["angels-chrome-ore"] = "chrome",
+    ["angels-platinum-ore"] = "platinum",
   }
 end
 
@@ -1928,6 +1797,36 @@ function angelsmods.functions.ore_enabled(ore_name)
     return true
   end
   return false
+end
+
+function angelsmods.functions.get_ore_name(ore_name)
+  local ore_lookup_table = {
+    ["angels-copper-nugget"] = "angels-copper-nugget",
+    ["angels-copper-pebbles"] = "angels-copper-pebbles",
+    ["angels-copper-slag"] = "angels-copper-slag",
+    ["angels-iron-nugget"] = "angels-iron-nugget",
+    ["angels-iron-pebbles"] = "angels-iron-pebbles",
+    ["angels-iron-slag"] = "angels-iron-slag",
+    ["angels-bauxite-ore"] = mods["bobores"] and "bob-bauxite-ore" or "angels-bauxite-ore",
+    ["angels-chrome-ore"] = "angels-chrome-ore",
+    ["angels-cobalt-ore"] = mods["bobores"] and "bob-cobalt-ore" or "angels-cobalt-ore",
+    ["copper-ore"] = "copper-ore",
+    ["angels-fluorite-ore"] = "angels-fluorite-ore",
+    ["angels-gold-ore"] = mods["bobores"] and "bob-gold-ore" or "angels-gold-ore",
+    ["iron-ore"] = "iron-ore",
+    ["angels-lead-ore"] = mods["bobores"] and "bob-lead-ore" or "angels-lead-ore",
+    ["angels-nickel-ore"] = mods["bobores"] and "bob-nickel-ore" or "angels-nickel-ore",
+    ["angels-platinum-ore"] = "angels-platinum-ore",
+    ["angels-quartz"] = mods["bobores"] and "bob-quartz" or "angels-quartz",
+    ["angels-rutile-ore"] = mods["bobores"] and "bob-rutile-ore" or "angels-rutile-ore",
+    ["angels-silver-ore"] = mods["bobores"] and "bob-silver-ore" or "angels-silver-ore",
+    ["angels-thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "angels-thorium-ore",
+    ["angels-tin-ore"] = mods["bobores"] and "bob-tin-ore" or "angels-tin-ore",
+    ["angels-tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "angels-tungsten-ore",
+    ["uranium-ore"] = "uranium-ore",
+    ["angels-zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "angels-zinc-ore",
+  }
+  return ore_lookup_table[ore_name] or ore_name
 end
 
 -------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 {
   "name": "angelsbioprocessing",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "factorio_version": "2.0",
   "title": "Angel's Bioprocessing",
   "author": "Arch666Angel",
@@ -8,9 +8,9 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds ways to recycle and process waste products through biological means and make use of biological processes and farming.",
   "dependencies": [
-    "angelsrefining >= 1.0.0",
-    "angelspetrochem >= 1.0.0",
-    "angelssmelting >= 1.0.0",
+    "angelsrefining >= 1.1.0",
+    "angelspetrochem >= 1.1.0",
+    "angelssmelting >= 1.1.0",
     "~ angelsbioprocessinggraphics >= 1.0.0"
   ]
 }

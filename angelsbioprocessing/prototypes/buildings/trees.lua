@@ -1,16 +1,22 @@
+local simulations = require("prototypes.factoriopedia-simulations")
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-temperate-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-swamp-tree"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-desert-tree"] = {}
+
 data:extend({
   {
     type = "item",
-    name = "temperate-tree",
+    name = "angels-temperate-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
     icon_size = 64,
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     order = "b",
     stack_size = 10,
   },
   {
     type = "tree",
-    name = "temperate-tree",
+    name = "angels-temperate-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -19,10 +25,11 @@ data:extend({
       mining_time = 1,
       results = {
         { type = "item", name = "wood", amount = 100 },
-        { type = "item", name = "temperate-tree", amount = 1 },
+        { type = "item", name = "angels-temperate-tree", amount = 1 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_temperate_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -2, -5 }, { 2, 1 } },
@@ -31,19 +38,9 @@ data:extend({
     order = "z-a",
     impact_category = "wood",
     autoplace = {
---       order = "xaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.625,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      order = "xaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
     },
     pictures = {
       {
@@ -68,16 +65,16 @@ data:extend({
   },
   {
     type = "item",
-    name = "swamp-tree",
+    name = "angels-swamp-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
     icon_size = 64,
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     order = "c",
     stack_size = 10,
   },
   {
     type = "tree",
-    name = "swamp-tree",
+    name = "angels-swamp-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -86,10 +83,11 @@ data:extend({
       mining_time = 1,
       results = {
         { type = "item", name = "wood", amount = 100 },
-        { type = "item", name = "swamp-tree", amount = 1 },
+        { type = "item", name = "angels-swamp-tree", amount = 1 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_swamp_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1.5, -5 }, { 1.5, 1 } },
@@ -98,19 +96,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.875,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      order = "yaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {
@@ -141,16 +129,16 @@ data:extend({
   },
   {
     type = "item",
-    name = "desert-tree",
+    name = "angels-desert-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",
     icon_size = 64,
-    subgroup = "bio-arboretum-temperate",
+    subgroup = "angels-bio-arboretum-temperate",
     order = "d",
     stack_size = 10,
   },
   {
     type = "tree",
-    name = "desert-tree",
+    name = "angels-desert-tree",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
@@ -159,10 +147,11 @@ data:extend({
       mining_time = 1,
       results = {
         { type = "item", name = "wood", amount = 100 },
-        { type = "item", name = "desert-tree", amount = 1 },
+        { type = "item", name = "angels-desert-tree", amount = 1 },
       },
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_desert_tree,
     max_health = 20,
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -2.5, -5 }, { 2.5, 1 } },
@@ -171,19 +160,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
---       order = "yaa",
---       max_probability = 0.025,
---       peaks = {
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.25,
---           water_range = 0.125,
---           water_max_range = 0.125,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
+      order = "yaa",
+      probability_expression = 0.000025,
+      tile_restriction = {"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7"},
     },
     pictures = {
       {

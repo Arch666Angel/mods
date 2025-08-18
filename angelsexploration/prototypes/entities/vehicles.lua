@@ -153,7 +153,6 @@ data:extend({
     --    },
     --  }
     --},
-    sound_minimum_speed = 1 / 60,
     sound_scaling_ratio = 0.005,
     impact_category = "metal",
     working_sound = {
@@ -355,7 +354,7 @@ data:extend({
     },
     collision_box = { { -1.55, -1.5 }, { 1.55, 3 } },
     selection_box = { { -1.55, -1.5 }, { 1.55, 3 } },
-    drawing_box = { { -1.55, -3 }, { 1.55, 3 } },
+    drawing_box_vertical_extension = 1.5,
     effectivity = 0.7,
     braking_power = "1000kW",
     energy_source =
@@ -704,7 +703,6 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.15,
     impact_category = "metal",
     working_sound = {
       sound = {

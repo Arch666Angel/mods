@@ -1,54 +1,34 @@
 local def_shift = { 0.75, -2 }
+local simulations = require("prototypes.factoriopedia-simulations")
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-puffer-nest"] = {}
 
 data:extend({
   {
-    type = "item",
-    name = "puffer-nest",
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
-    icon_size = 32,
-    subgroup = "farming-gardens",
-    order = "a",
-    stack_size = 200,
-    place_result = "puffer-nest",
-  },
-  {
     type = "tree",
-    name = "puffer-nest",
+    name = "angels-puffer-nest",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/puffer-nest.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
     minable = {
       mining_particle = "wooden-particle",
       mining_time = 1,
-      result = "bio-puffer-egg-1",
+      result = "angels-bio-puffer-egg-1",
       count = 2,
     },
     emissions_per_second = {pollution = -0.006}, --emissions_per_tick = -0.0001,
+    factoriopedia_simulation = simulations.factoriopedia_angels_puffer_nest,
     max_health = 20,
     collision_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
-    drawing_box = { { -2, -4 }, { 4, 1 } },
+    drawing_box_vertical_extension = 4,
     map_color = { r = 1.0, g = 0.8, b = 0.2 }, --{r = 0.2, g = 0.8, b = 0.2},
     subgroup = "trees",
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
---       order = "za",
---       max_probability = 0.025,
---       peaks = {
---         -- {
---         -- influence = 0.0002
---         -- },
---         {
---           influence = 0.0005,
---           min_influence = 0,
---           water_optimal = 0.5,
---           water_range = 0.5,
---           water_max_range = 0.5,
---         },
---       },
-        probability_expression = 0.01
-      --tile_restriction = {"grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt"},
+      order = "za",
+      probability_expression = 0.00003,
     },
     pictures = {
       {
@@ -58,7 +38,6 @@ data:extend({
             width = 192,
             height = 192,
             line_length = 1,
-            frame_count = 1,
             shift = def_shift,
           },
           {
@@ -66,7 +45,6 @@ data:extend({
             width = 192,
             height = 192,
             line_length = 1,
-            frame_count = 1,
             shift = def_shift,
           },
         },
@@ -78,7 +56,6 @@ data:extend({
             width = 192,
             height = 192,
             line_length = 1,
-            frame_count = 1,
             shift = def_shift,
           },
           {
@@ -86,7 +63,6 @@ data:extend({
             width = 192,
             height = 192,
             line_length = 1,
-            frame_count = 1,
             shift = def_shift,
           },
         },

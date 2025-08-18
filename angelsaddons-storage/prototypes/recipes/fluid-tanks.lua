@@ -23,7 +23,6 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
     {
       type = "recipe",
       name = "angels-storage-tank-3",
-      localised_name = { "item-name.angels-storage-tank-3" },
       energy_required = 5,
       enabled = false,
       ingredients = {

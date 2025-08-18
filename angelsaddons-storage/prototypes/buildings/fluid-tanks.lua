@@ -1,4 +1,12 @@
 if angelsmods.addons.storage.pressuretank then
+
+  circuit_connector_definitions["angels-pressure-tank-1"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+    { variation =  4, main_offset = util.by_pixel(-4.25,  50.625), shadow_offset = util.by_pixel(-4.25,  50.625), show_shadow = true },
+  })
+
   --PRESSURE TANKS
   data:extend({
     {
@@ -23,26 +31,23 @@ if angelsmods.addons.storage.pressuretank then
       collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
       selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
       fluid_box = {
-        volume = 35000,
+        volume = 350000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          { position = { 0, -2.3 }, direction = defines.direction.north },
-          { position = { 2.3, 0 }, direction = defines.direction.east },
-          { position = { -2.3, 0 }, direction = defines.direction.west },
-          { position = { 0, 2.3 }, direction = defines.direction.south },
+          { position = { 0, -2 }, direction = defines.direction.north },
+          { position = { 2, 0 }, direction = defines.direction.east },
+          { position = { -2, 0 }, direction = defines.direction.west },
+          { position = { 0, 2 }, direction = defines.direction.south },
         },
       },
       window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
       pictures = {
         picture = {
-          sheet = {
-            filename = "__angelsaddons-storage__/graphics/entity/pressure-tank-1.png",
-            priority = "extra-high",
-            frames = 1,
-            width = 224,
-            height = 224,
-            shift = { 0, 0 },
-          },
+          filename = "__angelsaddons-storage__/graphics/entity/pressure-tank-1.png",
+          priority = "extra-high",
+          size = { 448, 448 },
+          scale = 0.5,
+          shift = { 0, 0 },
         },
         fluid_background = {
           filename = "__base__/graphics/entity/storage-tank/fluid-background.png",
@@ -69,9 +74,7 @@ if angelsmods.addons.storage.pressuretank then
           width = 48,
           height = 30,
           frame_count = 60,
-          axially_symmetrical = false,
           animation_speed = 0.25,
-          direction_count = 1,
         },
       },
       flow_length_in_ticks = 360,
@@ -83,14 +86,21 @@ if angelsmods.addons.storage.pressuretank then
         },
         max_sounds_per_prototype = 3,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-      circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+      circuit_connector = circuit_connector_definitions["angels-pressure-tank-1"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
 end
 
 if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
+
+  circuit_connector_definitions["angels-storage-tank-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+    { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  })
+
   --INLINE TANKS
   data:extend({
     {
@@ -119,8 +129,8 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
         volume = 20000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          { position = { 0.5, -0.9 }, direction = defines.direction.north },
-          { position = { 0.5, 0.9 }, direction = defines.direction.south },
+          { position = { 0.5, -0.5 }, direction = defines.direction.north },
+          { position = { 0.5, 0.5 }, direction = defines.direction.south },
         },
       },
       window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
@@ -160,8 +170,6 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
           width = 1,
           height = 1,
           frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 1,
           animation_speed = 0.25,
         },
       },
@@ -174,8 +182,7 @@ if angelsmods.addons.storage.inlinetank and not mods["angelspetrochem"] then
         },
         max_sounds_per_prototype = 3,
       },
-      circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-      circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+      circuit_connector = circuit_connector_definitions["angels-storage-tank-3"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })

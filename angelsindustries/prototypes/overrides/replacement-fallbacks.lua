@@ -43,20 +43,20 @@ angelsmods.industries.block_replace = {
   ["processing-unit"] = { new = "block-electronics-4", amt_multi = 1 }, --always 4 with bobs or vanilla
   ["bob-basic-circuit-board"] = { new = "block-electronics-0", amt_multi = 1 },
   ["basic-electronic-board"] = { new = "block-electronics-1", amt_multi = 1 },
-  ["advanced-processing-unit"] = { new = "block-electronics-5", amt_multi = 1 },
+  ["bob-advanced-processing-unit"] = { new = "block-electronics-5", amt_multi = 1 },
   --pipes (fluid box replacements)
-  ["copper-pipe"] = { new = "block-fluidbox-1", amt_multi = 0.5 },
+  ["bob-copper-pipe"] = { new = "block-fluidbox-1", amt_multi = 0.5 },
   ["pipe"] = { new = "block-fluidbox-1", amt_multi = 1 },
-  ["stone-pipe"] = { new = "block-fluidbox-1", amt_multi = 1.5 },
-  ["steel-pipe"] = { new = "block-fluidbox-1", amt_multi = 2 },
-  ["bronze-pipe"] = { new = "block-fluidbox-1", amt_multi = 2.5 },
-  ["plastic-pipe"] = { new = "block-fluidbox-1", amt_multi = 3 },
-  ["brass-pipe"] = { new = "block-fluidbox-1", amt_multi = 3.5 },
-  ["titanium-pipe"] = { new = "block-fluidbox-2", amt_multi = 1 },
-  ["ceramic-pipe"] = { new = "block-fluidbox-2", amt_multi = 1.5 },
-  ["tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 2 },
-  ["nitinol-pipe"] = { new = "block-fluidbox-2", amt_multi = 2.5 },
-  ["copper-tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 3 },
+  ["bob-stone-pipe"] = { new = "block-fluidbox-1", amt_multi = 1.5 },
+  ["bob-steel-pipe"] = { new = "block-fluidbox-1", amt_multi = 2 },
+  ["bob-bronze-pipe"] = { new = "block-fluidbox-1", amt_multi = 2.5 },
+  ["bob-plastic-pipe"] = { new = "block-fluidbox-1", amt_multi = 3 },
+  ["bob-brass-pipe"] = { new = "block-fluidbox-1", amt_multi = 3.5 },
+  ["bob-titanium-pipe"] = { new = "block-fluidbox-2", amt_multi = 1 },
+  ["bob-ceramic-pipe"] = { new = "block-fluidbox-2", amt_multi = 1.5 },
+  ["bob-tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 2 },
+  ["bob-nitinol-pipe"] = { new = "block-fluidbox-2", amt_multi = 2.5 },
+  ["bob-copper-tungsten-pipe"] = { new = "block-fluidbox-2", amt_multi = 3 },
   --wire/cable
   ["copper-cable"] = { new = "cable-harness-1", amt_multi = 1 },
   ["bob-tinned-copper-cable"] = { new = "cable-harness-2", amt_multi = 1 },
@@ -72,30 +72,30 @@ angelsmods.industries.general_replace = {
   ["electronic-circuit"] = { new = "circuit-red-loaded", amt_multi = 1 },
   ["advanced-circuit"] = { new = "circuit-green-loaded", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["processing-unit"] = { new = "circuit-blue-loaded", amt_multi = 1, unlock_by = "processing-unit" },
-  ["advanced-processing-unit"] = { new = "circuit-yellow-loaded", amt_multi = 1, unlock_by = "advanced-electronics-3" },
+  ["bob-advanced-processing-unit"] = { new = "circuit-yellow-loaded", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
   --electronic components/boards
-  ["wooden-board"] = { new = "circuit-grey-board", amt_multi = 1, alt_rec = "bio-paper-1" },
-  ["phenolic-board"] = { new = "circuit-orange-board", amt_multi = 1, unlock_by = "advanced-circuit" },
+  ["bob-wooden-board"] = { new = "circuit-grey-board", amt_multi = 1, alt_rec = "angels-bio-paper-1" },
+  ["bob-phenolic-board"] = { new = "circuit-orange-board", amt_multi = 1, unlock_by = "advanced-circuit" },
   ["bob-fibreglass-board"] = {
     new = "circuit-blue-board",
     amt_multi = 1,
     unlock_by = "angels-glass-smelting-3",
     alt_rec = "angels-glass-fiber-board",
   },
-  ["circuit-board"] = { new = "circuit-orange", amt_multi = 1, unlock_by = "advanced-circuit" },
-  ["superior-circuit-board"] = { new = "circuit-blue", amt_multi = 1, unlock_by = "processing-unit" },
-  ["multi-layer-circuit-board"] = { new = "circuit-yellow", amt_multi = 1, unlock_by = "advanced-electronics-3" },
-  ["basic-electronic-components"] = { new = "circuit-resistor", amt_multi = 1, unlock_by = "electronics" },
-  ["electronic-components"] = { new = "circuit-transistor", amt_multi = 1, unlock_by = "advanced-circuit" },
-  ["intergrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
-  ["processing-electronics"] = { new = "circuit-cpu", amt_multi = 1, unlock_by = "advanced-electronics-3" },
+  ["bob-circuit-board"] = { new = "circuit-orange", amt_multi = 1, unlock_by = "advanced-circuit" },
+  ["bob-superior-circuit-board"] = { new = "circuit-blue", amt_multi = 1, unlock_by = "processing-unit" },
+  ["bob-multi-layer-circuit-board"] = { new = "circuit-yellow", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
+  ["bob-basic-electronic-components"] = { new = "circuit-resistor", amt_multi = 1, unlock_by = "electronics" },
+  ["bob-electronic-components"] = { new = "circuit-transistor", amt_multi = 1, unlock_by = "advanced-circuit" },
+  ["bob-intgrated-electronics"] = { new = "circuit-microchip", amt_multi = 1, unlock_by = "processing-unit" },
+  ["bob-processing-electronics"] = { new = "circuit-cpu", amt_multi = 1, unlock_by = "bob-advanced-processing-unit" },
   --gears
   ["iron-gear-wheel"] = { new = "mechanical-parts", amt_multi = 1 },
-  ["steel-gear-wheel"] = { new = "angels-gear", amt_multi = 1, unlock_by = "steel-processing" },
-  ["brass-gear-wheel"] = { new = "angels-axle", amt_multi = 1, unlocked_by = "bob-zinc-processing" },
-  ["cobalt-steel-gear-wheel"] = { new = "angels-roller-chain", amt_multi = 1, unlocked_by = "cobalt-processing" },
-  ["titanium-gear-wheel"] = { new = "angels-spring", amt_multi = 1, unlocked_by = "titanium-processing" },
-  ["tungsten-gear-wheel"] = { new = "angels-bearing", amt_multi = 1, unlocked_by = "tungsten-processing" },
+  ["bob-steel-gear-wheel"] = { new = "angels-gear", amt_multi = 1, unlock_by = "steel-processing" },
+  ["bob-brass-gear-wheel"] = { new = "angels-axle", amt_multi = 1, unlocked_by = "bob-zinc-processing" },
+  ["bob-cobalt-steel-gear-wheel"] = { new = "angels-roller-chain", amt_multi = 1, unlocked_by = "cobalt-processing" },
+  ["bob-titanium-gear-wheel"] = { new = "angels-spring", amt_multi = 1, unlocked_by = "titanium-processing" },
+  ["bob-tungsten-gear-wheel"] = { new = "angels-bearing", amt_multi = 1, unlocked_by = "tungsten-processing" },
   --intermediates (vanilla)
   ["engine-unit"] = { new = "motor-2", amt_multi = 1, unlocked_by = "engine" },
   ["electric-engine-unit"] = { new = "motor-4", amt_multi = 1, unlocked_by = "electric-engine" },
@@ -113,6 +113,6 @@ if mods["bobelectronics"] then
     { new = "circuit-orange-loaded", amt_multi = 1, unlock_by = "advanced-circuit" }
 end
 if mods["bobplates"] then
-  angelsmods.industries.general_replace["lithium-ion-battery"] = { new = "battery-3", amt_multi = 1 }
-  angelsmods.industries.general_replace["silver-zinc-battery"] = { new = "battery-6", amt_multi = 1 }
+  angelsmods.industries.general_replace["bob-lithium-ion-battery"] = { new = "battery-3", amt_multi = 1 }
+  angelsmods.industries.general_replace["bob-silver-zinc-battery"] = { new = "battery-6", amt_multi = 1 }
 end

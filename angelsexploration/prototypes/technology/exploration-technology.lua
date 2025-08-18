@@ -125,7 +125,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "military-science-pack",
-      -- "angels-alien-artifact", TODO where is this defined?
+      "angels-alien-artifact", --TODO where is this defined? [angelsbioprocessing\prototypes\technology\bio-processing-artifacts.lua]
     },
     effects = {
       {
@@ -165,11 +165,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-gun",
+        recipe = "angels-bio-gun",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-ammo",
+        recipe = "angels-bio-ammo",
       },
       {
         type = "unlock-recipe",

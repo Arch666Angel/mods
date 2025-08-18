@@ -1,7 +1,6 @@
-circuit_connector_definitions["angels-charging-station"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 26, main_offset = util.by_pixel(28, 36), shadow_offset = util.by_pixel(30, 48), show_shadow = false },
-  })
+circuit_connector_definitions["angels-charging-station"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation = 25, main_offset = util.by_pixel(-38.625, -1.25), shadow_offset = util.by_pixel(-38.625, -1.25), show_shadow = true }
+)
 
 data:extend({
   {
@@ -26,7 +25,7 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    drawing_box = { { -1.5, -2 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.5,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "electric",
@@ -66,15 +65,7 @@ data:extend({
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
       height = 1,
-      frame_count = 1,
     },
-    --[[door_animation =
-      {
-        filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
-        width = 1,
-        height = 1,
-        frame_count = 1
-      },]]
     door_animation_up = {
       filename = "__angelsindustriesgraphics__/graphics/entity/empty.png",
       width = 1,
@@ -101,8 +92,7 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-charging-station"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-charging-station"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-charging-station"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },

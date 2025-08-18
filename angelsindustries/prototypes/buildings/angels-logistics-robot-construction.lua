@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
@@ -18,6 +19,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "angels-construction-robot" },
+    factoriopedia_simulation = simulations.factoriopedia_angels_construction_robot,
     resistances = { { type = "fire", percent = 85 } },
     max_health = 100,
     collision_box = { { 0, 0 }, { 0, 0 } },
@@ -173,7 +175,7 @@ data:extend({
       },
     },
     working_sound = sounds.construction_robot(0.7),
-    cargo_centered = { 0.0, 0.2 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
     construction_vector = { 0.30, 0.22 },
   },
 })

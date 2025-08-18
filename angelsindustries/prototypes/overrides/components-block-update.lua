@@ -4,8 +4,8 @@ if angelsmods.industries.components then
   -- PREREQUISITES FOR COMPONENTS TO WORK CORRECTLY ---------------------------
   -----------------------------------------------------------------------------
   -- move molds from stone 2 to stone 1 to be at green science
-  OV.remove_prereq("angels-stone-smelting-2", "bio-arboretum-1")
-  OV.add_prereq("angels-stone-smelting-1", "bio-wood-processing-2")
+  OV.remove_prereq("angels-stone-smelting-2", "angels-bio-arboretum-1")
+  OV.add_prereq("angels-stone-smelting-1", "angels-bio-wood-processing-2")
   OV.add_prereq("angels-stone-smelting-1", "angels-components-mechanical-1")
   -- update depending technologies accordingly
   OV.remove_prereq("angels-iron-smelting-2", "angels-stone-smelting-2")
@@ -64,7 +64,7 @@ if angelsmods.industries.components then
         order = "a-5",
       },
     })
-    OV.add_prereq("ore-crushing", "angels-basic-blocks-1")
+    OV.add_prereq("angels-ore-crushing", "angels-basic-blocks-1")
     OV.add_prereq("angels-metallurgy-1", "angels-basic-blocks-1")
 
     -----------------------------------------------------------------------------
@@ -120,8 +120,8 @@ if angelsmods.industries.components then
         order = "a-5",
       },
     })
-    OV.add_prereq("advanced-ore-refining-1", "angels-basic-blocks-2")
-    OV.add_prereq("ore-floatation", "angels-basic-blocks-2")
+    OV.add_prereq("angels-advanced-ore-refining-1", "angels-basic-blocks-2")
+    OV.add_prereq("angels-ore-floatation", "angels-basic-blocks-2")
     OV.add_prereq("angels-metallurgy-2", "angels-basic-blocks-2")
 
     -----------------------------------------------------------------------------
@@ -179,8 +179,8 @@ if angelsmods.industries.components then
     })
     OV.add_unlock("military-science-pack", "block-fluidbox-2")
     OV.add_unlock("military-science-pack", "block-mechanical-2")
-    OV.add_prereq("ore-leaching", "angels-basic-blocks-3")
-    OV.add_prereq("advanced-ore-refining-2", "angels-basic-blocks-3")
+    OV.add_prereq("angels-ore-leaching", "angels-basic-blocks-3")
+    OV.add_prereq("angels-advanced-ore-refining-2", "angels-basic-blocks-3")
     OV.add_prereq("angels-advanced-chemistry-2", "angels-basic-blocks-3")
     OV.add_prereq("angels-metallurgy-3", "angels-basic-blocks-3")
 
@@ -238,12 +238,12 @@ if angelsmods.industries.components then
         order = "a-5",
       },
     })
-    OV.add_prereq("ore-refining", "angels-advanced-blocks-1")
-    OV.add_prereq("advanced-ore-refining-3", "angels-advanced-blocks-1")
+    OV.add_prereq("angels-ore-refining", "angels-advanced-blocks-1")
+    OV.add_prereq("angels-advanced-ore-refining-3", "angels-advanced-blocks-1")
     OV.add_prereq("angels-advanced-chemistry-4", "angels-advanced-blocks-1")
     OV.add_prereq("angels-metallurgy-4", "angels-advanced-blocks-1")
-    OV.remove_prereq("bio-refugium-biter-1", "stone-wall")
-    OV.add_prereq("bio-processing-blue", "angels-advanced-blocks-1")
+    OV.remove_prereq("angels-bio-refugium-biter-1", "stone-wall")
+    OV.add_prereq("angels-bio-processing-blue", "angels-advanced-blocks-1")
 
     -----------------------------------------------------------------------------
     -- ADVANCED BLOCKS 2 --------------------------------------------------------
@@ -301,8 +301,8 @@ if angelsmods.industries.components then
         order = "a-5",
       },
     })
-    OV.add_prereq("advanced-ore-refining-4", "angels-advanced-blocks-2")
-    OV.set_science_pack("advanced-ore-refining-4", "utility-science-pack", 1)
+    OV.add_prereq("angels-advanced-ore-refining-4", "angels-advanced-blocks-2")
+    OV.set_science_pack("angels-advanced-ore-refining-4", "utility-science-pack", 1)
     OV.add_prereq("angels-advanced-chemistry-5", "angels-advanced-blocks-2")
     OV.add_prereq("angels-metallurgy-5", "angels-advanced-blocks-2")
 

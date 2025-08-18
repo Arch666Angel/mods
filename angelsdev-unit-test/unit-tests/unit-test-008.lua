@@ -7,7 +7,7 @@ local fluids_to_ignore = {}
 local item_recipes_to_ignore = {}
 local fluid_recipes_to_ignore = {}
 local recipe_categories_to_ignore = {
-  "barreling-pump",
+  "angels-barreling-pump",
 }
 
 local function has_recipe(recipe_filters, recipes_to_ignore)

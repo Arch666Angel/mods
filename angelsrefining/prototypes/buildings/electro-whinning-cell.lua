@@ -1,21 +1,21 @@
 data:extend({
   {
     type = "item",
-    name = "electro-whinning-cell",
+    name = "angels-electro-whinning-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-whinning",
+    subgroup = "angels-ore-whinning",
     order = "d",
-    place_result = "electro-whinning-cell",
+    place_result = "angels-electro-whinning-cell",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "electro-whinning-cell",
+    name = "angels-electro-whinning-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
@@ -24,9 +24,9 @@ data:extend({
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "electro-whinning-cell" },
-    fast_replaceable_group = "electro-whinning-cell",
-    next_upgrade = "electro-whinning-cell-2",
+    minable = { mining_time = 1, result = "angels-electro-whinning-cell" },
+    fast_replaceable_group = "angels-electro-whinning-cell",
+    next_upgrade = "angels-electro-whinning-cell-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -34,7 +34,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t3-5" },
+    crafting_categories = { "angels-ore-refining-t3-5" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -66,14 +66,14 @@ data:extend({
         pipe_picture = angelsmods.refining.floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_picture = angelsmods.refining.floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -81,7 +81,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -90,28 +90,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "electro-whinning-cell-2",
+    name = "angels-electro-whinning-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-whinning",
+    subgroup = "angels-ore-whinning",
     order = "e",
-    place_result = "electro-whinning-cell-2",
+    place_result = "angels-electro-whinning-cell-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "electro-whinning-cell-2",
+    name = "angels-electro-whinning-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/electro-whinning-cell-ico.png",
@@ -120,8 +120,8 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "electro-whinning-cell-2" },
-    fast_replaceable_group = "electro-whinning-cell",
+    minable = { mining_time = 1, result = "angels-electro-whinning-cell-2" },
+    fast_replaceable_group = "angels-electro-whinning-cell",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -129,7 +129,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t3-5" },
+    crafting_categories = { "angels-ore-refining-t3-5" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -161,14 +161,14 @@ data:extend({
         pipe_picture = angelsmods.refining.floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_picture = angelsmods.refining.floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -176,7 +176,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
         },
       },
       {
@@ -185,7 +185,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
         },
       },
     },

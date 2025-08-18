@@ -1,5 +1,9 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
+circuit_connector_definitions["angels-gathering-turret"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 17, main_offset = util.by_pixel(-19.875,  1.75), shadow_offset = util.by_pixel(-19.875,  1.75), show_shadow = true },
+})
+
 -- GATHERING TURRET
 data:extend({
   {
@@ -64,9 +68,8 @@ data:extend({
 
     picture = angelsmods.functions.create_gathering_turret_base({}),
 
-    circuit_wire_connection_point = nil,
-    circuit_connector_sprites = nil,
-    circuit_wire_max_distance = 0,
+    circuit_connector_definitions["angels-gathering-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
     type = "electric-turret",
@@ -81,7 +84,7 @@ data:extend({
 
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    drawing_box = { { -1, -1.5 }, { 1, 0.5 } },
+    drawing_box_vertical_extension = 0.5,
 
     damaged_trigger_effect = nil,
 

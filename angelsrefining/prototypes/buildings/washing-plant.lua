@@ -27,24 +27,31 @@ local function angels_washing_plant_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-washing-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 3.5,  39.625), shadow_offset = util.by_pixel( 3.5,  39.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 3.5,  39.625), shadow_offset = util.by_pixel( 3.5,  39.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 3.5,  39.625), shadow_offset = util.by_pixel( 3.5,  39.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 3.5,  39.625), shadow_offset = util.by_pixel( 3.5,  39.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "washing-plant",
+    name = "angels-washing-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "washing-building",
+    subgroup = "angels-washing-building",
     order = "b",
-    place_result = "washing-plant",
+    place_result = "angels-washing-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "washing-plant",
+    name = "angels-washing-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
@@ -53,9 +60,9 @@ data:extend({
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "washing-plant" },
-    fast_replaceable_group = "washing-plant",
-    next_upgrade = "washing-plant-2",
+    minable = { mining_time = 1, result = "angels-washing-plant" },
+    fast_replaceable_group = "angels-washing-plant",
+    next_upgrade = "angels-washing-plant-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -63,7 +70,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "washing-plant" },
+    crafting_categories = { "angels-washing-plant" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -71,6 +78,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-washing-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -103,21 +112,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "washing-plant-2",
+    name = "angels-washing-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "washing-building",
+    subgroup = "angels-washing-building",
     order = "c",
-    place_result = "washing-plant-2",
+    place_result = "angels-washing-plant-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "washing-plant-2",
+    name = "angels-washing-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/washing-plant-ico.png",
@@ -126,8 +135,8 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "washing-plant-2" },
-    fast_replaceable_group = "washing-plant",
+    minable = { mining_time = 1, result = "angels-washing-plant-2" },
+    fast_replaceable_group = "angels-washing-plant",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -135,7 +144,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "washing-plant" },
+    crafting_categories = { "angels-washing-plant" },
     crafting_speed = 2.25,
     energy_source = {
       type = "electric",
@@ -143,6 +152,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-washing-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

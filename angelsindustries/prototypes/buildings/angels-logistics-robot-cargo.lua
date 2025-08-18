@@ -1,4 +1,5 @@
 local sounds = require("__base__.prototypes.entity.sounds")
+local simulations =require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
@@ -18,6 +19,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "cargo-robot" },
+    factoriopedia_simulation = simulations.factoriopedia_cargo_robot,
     max_health = 100,
     collision_box = { { 0, 0 }, { 0, 0 } },
     selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
@@ -120,7 +122,7 @@ data:extend({
       direction_count = 16,
     },
     working_sound = sounds.flying_robot(0.5),
-    cargo_centered = { 0.0, 0 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
   },
   {
     type = "item",
@@ -139,6 +141,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-player", "player-creation", "placeable-off-grid", "not-on-map" },
     minable = { mining_time = 0.1, result = "cargo-robot-2" },
+    factoriopedia_simulation = simulations.factoriopedia_cargo_robot_2,
     max_health = 100,
     collision_box = { { 0, 0 }, { 0, 0 } },
     selection_box = { { -0.5, -1.5 }, { 0.5, -0.5 } },
@@ -241,6 +244,6 @@ data:extend({
       direction_count = 16,
     },
     working_sound = sounds.flying_robot(0.5),
-    cargo_centered = { 0.0, 0 },
+    icon_draw_specification = {shift = {0, -0.2}, scale = 0.5, render_layer = "air-entity-info-icon"},
   },
 })

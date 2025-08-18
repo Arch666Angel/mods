@@ -1,6 +1,14 @@
-circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 26, main_offset = util.by_pixel(0, 64), shadow_offset = util.by_pixel(2, 78), show_shadow = false },
-})
+circuit_connector_definitions["cargo-hub"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-4.375,  94.25), shadow_offset = util.by_pixel(-4.375,  94.25), show_shadow = true }
+)
+
+circuit_connector_definitions["cargo-box"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-4.75,  55.125), shadow_offset = util.by_pixel(-4.75,  55.125), show_shadow = true }
+)
+
+circuit_connector_definitions["cargo-roboport"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  2, main_offset = util.by_pixel(-59.25, -31.375), shadow_offset = util.by_pixel(-59.25, -31.375), show_shadow = true }
+)
 
 data:extend({
   {
@@ -24,7 +32,7 @@ data:extend({
     corpse = "big-remnants",
     collision_box = { { -2.9, -2.9 }, { 2.9, 2.9 } },
     selection_box = { { -3, -3 }, { 3, 3 } },
-    drawing_box = { { -3, -4.33 }, { 3, 3 } },
+    drawing_box_vertical_extension = 2,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "electric",
@@ -58,7 +66,6 @@ data:extend({
       priority = "medium",
       width = 96,
       height = 96,
-      frame_count = 1,
       shift = { 46 / 32, -13 / 32 },
     },
     base_animation = {
@@ -117,8 +124,7 @@ data:extend({
         sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 },
       },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["cargo-hub"].points,
-    circuit_connector_sprites = circuit_connector_definitions["cargo-hub"].sprites,
+    circuit_connector = circuit_connector_definitions["cargo-roboport"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
@@ -182,7 +188,6 @@ data:extend({
       priority = "medium",
       width = 96,
       height = 96,
-      frame_count = 1,
       shift = { 0, -0.25 },
     },
     base_animation = {
@@ -241,8 +246,7 @@ data:extend({
         sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 },
       },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["cargo-hub"].points,
-    circuit_connector_sprites = circuit_connector_definitions["cargo-hub"].sprites,
+    circuit_connector = circuit_connector_definitions["cargo-hub"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
@@ -270,7 +274,7 @@ data:extend({
     corpse = "big-remnants",
     collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
-    drawing_box = { { -2, -3.33 }, { 2, 2 } },
+    drawing_box_vertical_extension = 1.33,
     dying_explosion = "medium-explosion",
     energy_source = {
       type = "electric",
@@ -302,7 +306,6 @@ data:extend({
       priority = "medium",
       width = 96,
       height = 96,
-      frame_count = 1,
       shift = { 0, -0.75 },
     },
     base_animation = {
@@ -363,8 +366,7 @@ data:extend({
         sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 },
       },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
-    circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
+    circuit_connector = circuit_connector_definitions["cargo-box"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },

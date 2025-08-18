@@ -1,3 +1,24 @@
+circuit_connector_definitions["angels-storage-tank-1"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+  { variation = 34, main_offset = util.by_pixel( 1.5,  59.375), shadow_offset = util.by_pixel( 1.5,  59.375), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-storage-tank-2"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel(-43.5,  12.375), shadow_offset = util.by_pixel(-43.5,  12.375), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 43.375,  14), shadow_offset = util.by_pixel( 43.375,  14), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-43.5,  12.375), shadow_offset = util.by_pixel(-43.5,  12.375), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 43.375,  14), shadow_offset = util.by_pixel( 43.375,  14), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-storage-tank-3"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+})
+
 data:extend({
   ---------------------------------------------------------------------------
   -- GAS TANK ---------------------------------------------------------------
@@ -18,7 +39,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-gas-tank.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation", "not-rotatable" },
-    minable = { mining_time = 3, result = "angels-storage-tank-1" },
+    minable = { mining_time = 0.5, result = "angels-storage-tank-1" },
     max_health = 500,
     corpse = "medium-remnants",
     collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
@@ -29,10 +50,10 @@ data:extend({
       volume = 125000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0, -2.3 }, direction = defines.direction.north },
-        { position = { 2.3, 0 }, direction = defines.direction.east },
-        { position = { -2.3, 0 }, direction = defines.direction.west },
-        { position = { 0, 2.3 }, direction = defines.direction.south },
+        { position = { 0, -2 }, direction = defines.direction.north },
+        { position = { 2, 0 }, direction = defines.direction.east },
+        { position = { -2, 0 }, direction = defines.direction.west },
+        { position = { 0, 2 }, direction = defines.direction.south },
       },
     },
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
@@ -86,9 +107,7 @@ data:extend({
         width = 48,
         height = 30,
         frame_count = 60,
-        axially_symmetrical = false,
         animation_speed = 0.25,
-        direction_count = 1,
         scale = 0.5,
       },
     },
@@ -102,8 +121,7 @@ data:extend({
       match_volume_to_activity = true,
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-1"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   ---------------------------------------------------------------------------
@@ -125,7 +143,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-oil-tank.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 3, result = "angels-storage-tank-2" },
+    minable = { mining_time = 0.5, result = "angels-storage-tank-2" },
     max_health = 500,
     corpse = "medium-remnants",
     collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
@@ -136,10 +154,10 @@ data:extend({
       volume = 80000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { -1.5, -1.9 }, direction = defines.direction.north },
-        { position = { 1.9, 1.5 }, direction = defines.direction.west },
-        { position = { 1.5, 1.9 }, direction = defines.direction.south },
-        { position = { -1.9, -1.5 }, direction = defines.direction.west },
+        { position = { -1.5, -1.5 }, direction = defines.direction.north },
+        { position = { 1.5, 1.5 }, direction = defines.direction.east },
+        { position = { 1.5, 1.5 }, direction = defines.direction.south },
+        { position = { -1.5, -1.5 }, direction = defines.direction.west },
       },
     },
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
@@ -193,9 +211,7 @@ data:extend({
         width = 48,
         height = 30,
         frame_count = 60,
-        axially_symmetrical = false,
         animation_speed = 0.25,
-        direction_count = 1,
         scale = 0.5,
       },
     },
@@ -208,8 +224,7 @@ data:extend({
       },
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-2"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   ---------------------------------------------------------------------------
@@ -231,7 +246,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-inline-tank.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 3, result = "angels-storage-tank-3" },
+    minable = { mining_time = 0.5, result = "angels-storage-tank-3" },
     max_health = 500,
     corpse = "medium-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
@@ -241,8 +256,8 @@ data:extend({
       volume = 20000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { 0.5, -0.9 }, direction = defines.direction.north },
-        { position = { 0.5, 0.9 }, direction = defines.direction.south },
+        { position = { 0.5, -0.5 }, direction = defines.direction.north },
+        { position = { 0.5, 0.5 }, direction = defines.direction.south },
       },
     },
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
@@ -294,8 +309,6 @@ data:extend({
         width = 1,
         height = 1,
         frame_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
         animation_speed = 0.25,
       },
     },
@@ -308,8 +321,7 @@ data:extend({
       },
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["angels-storage-tank-3"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

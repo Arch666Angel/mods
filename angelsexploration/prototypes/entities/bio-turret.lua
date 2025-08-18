@@ -274,6 +274,13 @@ local bio_turret_preparing_muzzle_animation = function(opts)
   }
 end
 
+circuit_connector_definitions["angels-bio-turret"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 14, main_offset = util.by_pixel(-7.25,  24.5), shadow_offset = util.by_pixel(-7.25,  24.5), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-42.875, -12.125), shadow_offset = util.by_pixel(-42.875, -12.125), show_shadow = true },
+  { variation =  2, main_offset = util.by_pixel( 7.625, -46.75), shadow_offset = util.by_pixel( 7.625, -46.75), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 44.5, -8.5), shadow_offset = util.by_pixel( 44.5, -8.5), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -287,7 +294,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "bio-turret-remnants",
+    name = "angels-bio-turret-remnants",
     icon = "__angelsexplorationgraphics__/graphics/icons/bio-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "not-on-map" },
@@ -337,7 +344,7 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-bio-turret" },
     max_health = 1400,
-    corpse = "bio-turret-remnants",
+    corpse = "angels-bio-turret-remnants",
     collision_box = { { -0.7, -1.2 }, { 0.7, 1.2 } },
     selection_box = { { -1, -1.5 }, { 1, 1.5 } },
     rotation_speed = 0.03, -- 0.015
@@ -370,6 +377,8 @@ data:extend({
     fluid_buffer_size = 100,
     fluid_buffer_input_flow = 250 / 60 / 5, -- 5s to fill the buffer
     activation_buffer_ratio = 0.25,
+    circuit_connector = circuit_connector_definitions["angels-bio-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     folded_animation = bio_turret_extension({ frame_count = 1, line_length = 1 }),
     preparing_animation = bio_turret_extension({}),
     prepared_animation = bio_turret_prepared(),
@@ -645,7 +654,7 @@ data:extend({
           type = "direct",
           action_delivery = {
             type = "stream",
-            stream = "bio-stream",
+            stream = "angels-bio-stream",
             source_offset = { 0.15, -0.5 },
           },
         },

@@ -10,7 +10,7 @@ data:extend({
     name = "angels-crystal-rock",
     flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
     icon = "__base__/graphics/icons/huge-rock.png",
-    icon_size = 32,
+    icon_size = 64,
     subgroup = "grass",
     order = "b[decorative]-k[stone-rock]-c[crystal]",
     collision_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },

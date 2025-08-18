@@ -16,25 +16,25 @@ if mods["bobrevamp"] and mods["bobplates"] then
   if mods["bobplates"] and settings.startup["bobmods-revamp-rtg"].value then
     data.raw["item"]["bob-sodium-cobaltate"].icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cobaltate.png"
     data.raw["item"]["bob-sodium-cobaltate"].icon_size = 32
-    move_item("bob-sodium-cobaltate", "petrochem-sodium", "b[sodium]-d[solid-sodium-cobaltate]")
+    move_item("bob-sodium-cobaltate", "angels-petrochem-sodium", "b[sodium]-d[solid-sodium-cobaltate]")
 
     OV.patch_recipes({
       {
         name = "bob-sodium-cobaltate",
         icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-cobaltate.png",
         icon_size = 32,
-        subgroup = "petrochem-sodium",
+        subgroup = "angels-petrochem-sodium",
         order = "b[sodium]-d[solid-sodium-cobaltate]",
       },
     })
     if settings.startup["bobmods-revamp-hardmode"].value then
       OV.patch_recipes({
         {
-          name = "solid-calcium-chloride",
+          name = "angels-solid-calcium-chloride",
           icons = angelsmods.functions.create_solid_recipe_icon(
             nil,
-            "solid-calcium-chloride",
-            { "gas-hydrogen-chloride" }
+            "angels-solid-calcium-chloride",
+            { "angels-gas-hydrogen-chloride" }
           ),
           order = "e[solid-calcium-chloride]-a",
         },

@@ -2,7 +2,7 @@ data:extend({
   --WEAPONARY
   {
     type = "technology",
-    name = "rocket-booster-1",
+    name = "angels-rocket-booster-1",
     icon = "__angelspetrochemgraphics__/graphics/technology/booster-tech.png",
     icon_size = 128,
     prerequisites = {
@@ -11,11 +11,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-ammonium-nitrate",
+        recipe = "angels-solid-ammonium-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "rocket-booster-1",
+        recipe = "angels-rocket-booster",
       },
     },
     unit = {
@@ -30,21 +30,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rocket-booster-2",
+    name = "angels-rocket-booster-2",
     icon = "__angelspetrochemgraphics__/graphics/technology/booster-tech.png",
     icon_size = 128,
     prerequisites = {
-      "rocket-booster-1",
-      "chlorine-processing-4",
+      "angels-rocket-booster-1",
+      "angels-chlorine-processing-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-ammonium-perchlorate",
+        recipe = "angels-solid-ammonium-perchlorate",
       },
       {
         type = "unlock-recipe",
-        recipe = "rocket-booster-2",
+        recipe = "angels-rocket-booster-2",
       },
     },
     unit = {
@@ -66,17 +66,17 @@ data:extend({
     prerequisites = {
       "explosives",
       "angels-nitrogen-processing-2",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
       "military-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-glycerol",
+        recipe = "angels-liquid-glycerol",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nitroglycerin",
+        recipe = "angels-solid-nitroglycerin",
       },
     },
     unit = {
@@ -102,15 +102,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-toluene-from-benzene",
+        recipe = "angels-liquid-toluene-from-benzene",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-toluene-from-naphtha",
+        recipe = "angels-liquid-toluene",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-trinitrotoluene",
+        recipe = "angels-solid-trinitrotoluene",
       },
     },
     unit = {

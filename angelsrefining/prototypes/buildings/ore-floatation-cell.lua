@@ -31,24 +31,31 @@ local function floatationpipepictures()
   }
 end
 
+circuit_connector_definitions["angels-ore-floatation-cell"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "ore-floatation-cell",
+    name = "angels-ore-floatation-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "ore-floatation",
+    subgroup = "angels-ore-floatation",
     order = "a[ore-floatation-cell]",
-    place_result = "ore-floatation-cell",
+    place_result = "angels-ore-floatation-cell",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-floatation-cell",
+    name = "angels-ore-floatation-cell",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
@@ -57,9 +64,9 @@ data:extend({
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "ore-floatation-cell" },
-    fast_replaceable_group = "ore-floatation-cell",
-    next_upgrade = "ore-floatation-cell-2",
+    minable = { mining_time = 1, result = "angels-ore-floatation-cell" },
+    fast_replaceable_group = "angels-ore-floatation-cell",
+    next_upgrade = "angels-ore-floatation-cell-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -67,7 +74,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t2" },
+    crafting_categories = { "angels-ore-refining-t2" },
     crafting_speed = 0.75,
     energy_source = {
       type = "electric",
@@ -75,6 +82,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -296,7 +305,7 @@ data:extend({
         pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -304,28 +313,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "ore-floatation-cell-2",
+    name = "angels-ore-floatation-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "ore-floatation",
+    subgroup = "angels-ore-floatation",
     order = "b[ore-floatation-cell-2]",
-    place_result = "ore-floatation-cell-2",
+    place_result = "angels-ore-floatation-cell-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-floatation-cell-2",
+    name = "angels-ore-floatation-cell-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
@@ -334,9 +343,9 @@ data:extend({
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "ore-floatation-cell-2" },
-    fast_replaceable_group = "ore-floatation-cell",
-    next_upgrade = "ore-floatation-cell-3",
+    minable = { mining_time = 1, result = "angels-ore-floatation-cell-2" },
+    fast_replaceable_group = "angels-ore-floatation-cell",
+    next_upgrade = "angels-ore-floatation-cell-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -344,7 +353,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t2" },
+    crafting_categories = { "angels-ore-refining-t2" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -352,6 +361,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -573,7 +584,7 @@ data:extend({
         pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -581,28 +592,28 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
         },
       },
     },
   },
   {
     type = "item",
-    name = "ore-floatation-cell-3",
+    name = "angels-ore-floatation-cell-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
         icon_size = 64,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "ore-floatation",
+    subgroup = "angels-ore-floatation",
     order = "c[ore-floatation-cell-3]",
-    place_result = "ore-floatation-cell-3",
+    place_result = "angels-ore-floatation-cell-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "ore-floatation-cell-3",
+    name = "angels-ore-floatation-cell-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/ore-floatation-cell.png",
@@ -611,8 +622,8 @@ data:extend({
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "ore-floatation-cell-3" },
-    fast_replaceable_group = "ore-floatation-cell",
+    minable = { mining_time = 1, result = "angels-ore-floatation-cell-3" },
+    fast_replaceable_group = "angels-ore-floatation-cell",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -620,7 +631,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-    crafting_categories = { "ore-refining-t2" },
+    crafting_categories = { "angels-ore-refining-t2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -628,6 +639,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 3,
     graphics_set = {
       animation = {
@@ -849,7 +862,7 @@ data:extend({
         pipe_picture = floatationpipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
+        pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
@@ -857,7 +870,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
+          { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
         },
       },
     },
