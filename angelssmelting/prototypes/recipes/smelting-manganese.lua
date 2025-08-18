@@ -193,7 +193,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-molten-manganese", amount = 120 },
     },
-    icons = angelsmods.functions.get_object_icons("liquid-molten-manganese"),
     order = "h[liquid-molten-manganese]",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-manganese"),
   },
