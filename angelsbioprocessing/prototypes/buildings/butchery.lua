@@ -1,28 +1,35 @@
+circuit_connector_definitions["angels-bio-butchery"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  0, main_offset = util.by_pixel( 5.5, -40), shadow_offset = util.by_pixel( 5.5, -40), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.5, -40), shadow_offset = util.by_pixel( 5.5, -40), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.5, -40), shadow_offset = util.by_pixel( 5.5, -40), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.5, -40), shadow_offset = util.by_pixel( 5.5, -40), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "bio-butchery",
+    name = "angels-bio-butchery",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
     icon_size = 32,
-    subgroup = "bio-processing-buildings-alien-a",
+    subgroup = "angels-bio-processing-buildings-alien-a",
     order = "b",
-    place_result = "bio-butchery",
+    place_result = "angels-bio-butchery",
     stack_size = 10,
   },
   {
     type = "furnace",
-    name = "bio-butchery",
+    name = "angels-bio-butchery",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/bio-butchery.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "bio-butchery" },
+    minable = { mining_time = 1, result = "angels-bio-butchery" },
     max_health = 100,
-    fast_replaceable_group = "bio-butchery",
+    fast_replaceable_group = "angels-bio-butchery",
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 0.25,
-    crafting_categories = { "bio-butchery" },
+    crafting_categories = { "angels-bio-butchery" },
     cant_insert_at_source_message_key = "cant_insert.angels-butchery-limitation",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
@@ -45,6 +52,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.01 * 60 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-butchery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         layers = {

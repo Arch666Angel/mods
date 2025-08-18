@@ -39,6 +39,7 @@ local function initialize_tables()
   }
 
   modify_table = {
+    recipes = {},
     technologies = {},
   }
 
@@ -378,30 +379,8 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   end
 
   ov_functions.global_replace_item(old_fluid_name, new_fluid_name)
-
-  if angelsmods.trigger.enableconverter then
-    local converter_subgroup_name = "angels-fluid-converter-" .. (new_fluid.subgroup or "unknown")
-
-    if not data.raw["item-subgroup"][converter_subgroup_name] then
-      local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
-      local fluid_group_data =
-        data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]
-      data:extend({
-        {
-          type = "item-subgroup",
-          name = converter_subgroup_name,
-          group = "angels-fluid-converter",
-          order = (fluid_group_data and fluid_group_data.order or "z")
-            .. "-"
-            .. (fluid_subgroup_data and fluid_subgroup_data.order or "z"),
-        },
-      })
-    end
-
-    angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
-  else
-    angelsmods.functions.hide(old_fluid_name)
-  end
+  angelsmods.functions.hide(old_fluid_name)
+  angelsmods.functions.disable_barreling_recipes(old_fluid_name)
 end
 
 ov_functions.global_replace_icon = function(old, new)
@@ -437,6 +416,32 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
     patch.enabled = false
     disable_table.recipes[recipe] = true
     ov_functions.hide_recipe(recipe)
+  end
+end
+
+ov_functions.add_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      add_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = true
+  end
+end
+
+ov_functions.remove_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      remove_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = false
   end
 end
 
@@ -755,10 +760,41 @@ local function adjust_recipe(recipe) -- check a recipe for basic adjustments bas
     adjust_subtable(path, "results", "recipe_items")
     adjust_member(path, "main_product", "recipe_items")
   end
-  if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
-    adjust_difficulty(recipe)
-    adjust_member(recipe, "icon", "recipe_icons")
+  local function safe_insert(array, new_item)
+    local addit = true
+    for i, item in pairs(array) do
+      if item == new_item then
+        addit = false
+        break
+      end
+    end
+    if addit then
+      table.insert(array, new_item)
+    end
   end
+  local function adjust_additional_categories()
+    local modifications = modify_table[recipe.name]
+    if modifications then
+      for category_name, flag in pairs(modifications.additional_categories) do
+        if flag then
+          local category = data.raw["recipe-category"][category_name]
+          if category then
+            guarantee_subtable(recipe, "additional_categories")
+            safe_insert(recipe.additional_categories, category_name)
+          end
+        elseif recipe.additional_categories then
+          for i, category in pairs(recipe.additional_categories) do
+            table.remove(recipe.additional_categories, i)
+            break
+          end
+        end
+      end
+    end
+  end
+
+  adjust_difficulty(recipe)
+  adjust_member(recipe, "icon", "recipe_icons")
+  adjust_additional_categories()
 end
 
 local function adjust_technology(tech, k) -- check a tech for basic adjustments based on tables and make any necessary changes

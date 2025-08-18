@@ -2,7 +2,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "zinc-ore",
+    name = "angels-zinc-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-zinc",
+    name = "angels-processed-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-zinc",
+    name = "angels-pellet-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc",
@@ -30,7 +30,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "solid-zinc-oxide",
+    name = "angels-solid-zinc-oxide",
     icon = "__angelssmeltinggraphics__/graphics/icons/solid-zinc-oxide.png",
     icon_size = 32,
     subgroup = "angels-zinc",
@@ -39,7 +39,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cathode-zinc",
+    name = "angels-cathode-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/cathode-zinc.png",
     icon_size = 32,
     subgroup = "angels-zinc",
@@ -49,7 +49,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-zinc",
+    name = "angels-ingot-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc",
@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-zinc",
+    name = "angels-powder-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc",
@@ -68,7 +68,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-zinc",
+    name = "angels-liquid-molten-zinc",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-zinc.png",
     icon_size = 64,
     subgroup = "angels-zinc-casting",

@@ -5,6 +5,13 @@ local extra_loss = 0.04 -- % of total power
 
 local dissipation_factor = 1 / (1 - extra_loss)
 
+circuit_connector_definitions["angels-electric-boiler"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  2, main_offset = util.by_pixel(-37.25, -28.5), shadow_offset = util.by_pixel(-37.25, -28.5), show_shadow = true },
+  { variation = 15, main_offset = util.by_pixel( 10.875, -55.5), shadow_offset = util.by_pixel( 10.875, -55.5), show_shadow = true },
+  { variation =  2, main_offset = util.by_pixel(-37.25, -28.5), shadow_offset = util.by_pixel(-37.25, -28.5), show_shadow = true },
+  { variation = 15, main_offset = util.by_pixel( 10.875, -55.5), shadow_offset = util.by_pixel( 10.875, -55.5), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -15,7 +22,7 @@ data:extend({
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "boiler-building",
+    subgroup = "angels-boiler-building",
     order = "c[electric-boiler]-a",
     place_result = "angels-electric-boiler",
     stack_size = 10,
@@ -39,7 +46,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "pollution" },
-    crafting_categories = { "petrochem-boiler" },
+    crafting_categories = { "angels-petrochem-boiler" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -50,6 +57,8 @@ data:extend({
     -- with drain power this comes exactly to 1.2 MW, produces 40/s steam (at speed 1)
     -- extra losses introduced when accounting for dissipation_factor
     energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 1),
+    circuit_connector = circuit_connector_definitions["angels-electric-boiler"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -159,7 +168,7 @@ data:extend({
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "boiler-building",
+    subgroup = "angels-boiler-building",
     order = "c[electric-boiler]-b",
     place_result = "angels-electric-boiler-2",
     stack_size = 10,
@@ -183,7 +192,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "pollution" },
-    crafting_categories = { "petrochem-boiler" },
+    crafting_categories = { "angels-petrochem-boiler" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -197,6 +206,8 @@ data:extend({
       "%.0fkW",
       (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 1.5
     ),
+    circuit_connector = circuit_connector_definitions["angels-electric-boiler"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -306,7 +317,7 @@ data:extend({
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "boiler-building",
+    subgroup = "angels-boiler-building",
     order = "c[electric-boiler]-c",
     place_result = "angels-electric-boiler-3",
     stack_size = 10,
@@ -329,7 +340,7 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
-    crafting_categories = { "petrochem-boiler" },
+    crafting_categories = { "angels-petrochem-boiler" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -340,6 +351,8 @@ data:extend({
     -- with drain power this comes exactly to 2.4 MW, produces 80/s steam (at speed 2)
     -- extra losses introduced when accounting for dissipation_factor
     energy_usage = string.format("%.0fkW", (steam_per_second * power_per_steam * dissipation_factor - drain_power) * 2),
+    circuit_connector = circuit_connector_definitions["angels-electric-boiler"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -418,8 +431,8 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-          { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.east },
-          { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.west },
+          { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
+          { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
         },
       },
       {

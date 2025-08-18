@@ -28,22 +28,11 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-        },
-        time = 15,
-      },
-      prerequisites = { "speed-module", "efficiency-module" },
-    },
-    {
-      unit = {
-        count = 100,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
           { "chemical-science-pack", 1 },
         },
         time = 15,
       },
-      prerequisites = { "speed-module-2", "efficiency-module-2", "low-density-structure", "electric-engine" },
+      prerequisites = { "speed-module", "efficiency-module", "chemical-science-pack" },
     },
     {
       unit = {
@@ -56,7 +45,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "speed-module-3", "efficiency-module-3", "construction-robotics" },
+      prerequisites = { "speed-module-2", "efficiency-module-2", "low-density-structure", "electric-engine", "production-science-pack" },
     },
     {
       unit = {
@@ -70,7 +59,22 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "rocket-control-unit", "logistic-system" },
+      prerequisites = { "speed-module-3", "efficiency-module-3", "construction-robotics", "utility-science-pack" },
+    },
+    {
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+          { "space-science-pack", 1 },
+        },
+        time = 60,
+      },
+      prerequisites = { "logistic-system", "space-science-pack" },
     },
   }
 

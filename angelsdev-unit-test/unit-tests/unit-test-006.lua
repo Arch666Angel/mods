@@ -83,16 +83,8 @@ local function calculate_science_pack_level()
   end
 
   if script.active_mods["angelsbioprocessing"] then
-    science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"]
-      or science_pack_level["automation-science-pack"]
-
-    science_pack_level["alien-artifact-tool"] = 0
-    science_pack_level["alien-artifact-red-tool"] = 0
-    science_pack_level["alien-artifact-yellow-tool"] = 0
-    science_pack_level["alien-artifact-orange-tool"] = 0
-    science_pack_level["alien-artifact-blue-tool"] = 0
-    science_pack_level["alien-artifact-purple-tool"] = 0
-    science_pack_level["alien-artifact-green-tool"] = 0
+    science_pack_level["angels-token-bio"] = science_pack_level["angels-science-pack-green"]
+      or science_pack_level["logistic-science-pack"]
   end
 
   if script.active_mods["bobtech"] then
@@ -131,7 +123,7 @@ local function calculate_science_pack_level()
 
   if script.active_mods["SeaBlock"] then
     for pack_name, pack_level in pairs({
-      ["sb-angelsore3-tool"] = 0,
+      ["sb-angels-ore3-tool"] = 0,
       ["sb-algae-brown-tool"] = 0,
       ["sb-lab-tool"] = 0,
       ["sb-basic-circuit-board-tool"] = 0,
@@ -141,7 +133,7 @@ local function calculate_science_pack_level()
   end
 
   if script.active_mods["ScienceCostTweakerM"] then
-    science_pack_level["sct-bio-science-pack"] = science_pack_level["token-bio"]
+    science_pack_level["sct-bio-science-pack"] = science_pack_level["angels-token-bio"]
   end
 
   if script.active_mods["SpaceMod"] then

@@ -1,31 +1,38 @@
+circuit_connector_definitions["angels-nutrient-extractor"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375, -13.625), shadow_offset = util.by_pixel(-4.375, -13.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -13.625), shadow_offset = util.by_pixel(-4.375, -13.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -13.625), shadow_offset = util.by_pixel(-4.375, -13.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375, -13.625), shadow_offset = util.by_pixel(-4.375, -13.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "nutrient-extractor",
+    name = "angels-nutrient-extractor",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/nutrient-extractor.png",
     icon_size = 32,
-    subgroup = "bio-processing-buildings-vegetabilis-b",
+    subgroup = "angels-bio-processing-buildings-vegetabilis-b",
     order = "d",
-    place_result = "nutrient-extractor",
+    place_result = "angels-nutrient-extractor",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "nutrient-extractor",
+    name = "angels-nutrient-extractor",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/nutrient-extractor.png",
     icon_size = 32,
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "nutrient-extractor" },
+    minable = { mining_time = 1, result = "angels-nutrient-extractor" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 0.5,
-    fast_replaceable_group = "nutrient-extractor",
+    fast_replaceable_group = "angels-nutrient-extractor",
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "nutrient-extractor" },
+    crafting_categories = { "angels-nutrient-extractor" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -33,6 +40,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.03 * 60 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-nutrient-extractor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/nutrient-extractor/nutrient-extractor.png",

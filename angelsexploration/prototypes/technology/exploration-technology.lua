@@ -165,11 +165,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bio-gun",
+        recipe = "angels-bio-gun",
       },
       {
         type = "unlock-recipe",
-        recipe = "bio-ammo",
+        recipe = "angels-bio-ammo",
       },
       {
         type = "unlock-recipe",

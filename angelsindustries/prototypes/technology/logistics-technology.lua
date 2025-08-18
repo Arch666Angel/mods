@@ -32,6 +32,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-logistic-chest-storage",
       },
+      {
+        type = "create-ghost-on-entity-death",
+        modifier = true
+      },
     },
     unit = {
       count = 50,
@@ -67,6 +71,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-logistic-chest-requester",
+      },
+      {
+        type = "character-logistic-requests",
+        modifier = true
+      },
+      {
+        type = "character-logistic-trash-slots",
+        modifier = 30
       },
     },
     unit = {
@@ -245,83 +257,4 @@ data:extend({
     },
     order = "c-a",
   },
-  --LOADERS
-  -- {
-  -- type = "technology",
-  -- name = "angels-yellow-loader",
-  -- icon = "__angelsindustriesgraphics__/graphics/technology/yellow-loader-tech.png",
-  -- icon_size = 128,
-  -- prerequisites =
-  -- {
-  -- },
-  -- effects =
-  -- {
-  -- {
-  -- type = "unlock-recipe",
-  -- recipe = "loader"
-  -- },
-  -- },
-  -- unit =
-  -- {
-  -- count = 60,
-  -- ingredients = {
-  -- {type="item", name="automation-science-pack", amount = 1},
-  -- },
-  -- time = 15
-  -- },
-  -- order = "c-a"
-  -- },
-  -- {
-  -- type = "technology",
-  -- name = "angels-red-loader",
-  -- icon = "__angelsindustriesgraphics__/graphics/technology/red-loader-tech.png",
-  -- icon_size = 128,
-  -- prerequisites =
-  -- {
-  -- },
-  -- effects =
-  -- {
-  -- {
-  -- type = "unlock-recipe",
-  -- recipe = "fast-loader"
-  -- },
-  -- },
-  -- unit =
-  -- {
-  -- count = 60,
-  -- ingredients = {
-  -- {type="item", name="automation-science-pack", amount = 1},
-  -- {type="item", name="logistic-science-pack", amount = 1},
-  -- },
-  -- time = 15
-  -- },
-  -- order = "c-a"
-  -- },
-  -- {
-  -- type = "technology",
-  -- name = "angels-blue-loader",
-  -- icon = "__angelsindustriesgraphics__/graphics/technology/blue-loader-tech.png",
-  -- icon_size = 128,
-  -- prerequisites =
-  -- {
-  -- },
-  -- effects =
-  -- {
-  -- {
-  -- type = "unlock-recipe",
-  -- recipe = "express-loader"
-  -- },
-  -- },
-  -- unit =
-  -- {
-  -- count = 60,
-  -- ingredients = {
-  -- {type="item", name="automation-science-pack", amount = 1},
-  -- {type="item", name="logistic-science-pack", amount = 1},
-  -- {type="item", name="chemical-science-pack", amount = 1},
-  -- },
-  -- time = 15
-  -- },
-  -- order = "c-a"
-  -- },
 })

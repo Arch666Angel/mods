@@ -6,7 +6,7 @@ data:extend({
     name = "angels-floatation",
 
     is_title = false,
-    tag = "[item=ore-floatation-cell]",
+    tag = "[item=angels-ore-floatation-cell]",
     localised_name = { "tips-and-tricks-name.angels-floatation" },
     localised_description = require("prototypes.tips-and-tricks.1-1-2-floatation.1-1-2-floatation-description"),
 
@@ -18,7 +18,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "ore-floatation",
+      technology = "angels-ore-floatation",
     },
 
     simulation = {

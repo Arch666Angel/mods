@@ -1,22 +1,29 @@
+circuit_connector_definitions["angels-gas-refinery-small"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 29.875, -15.25), shadow_offset = util.by_pixel( 29.875, -15.25), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel(-35.25, -4.875), shadow_offset = util.by_pixel(-35.25, -4.875), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-69.75, -88.625), shadow_offset = util.by_pixel(-69.75, -88.625), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 56.375, -99.5), shadow_offset = util.by_pixel( 56.375, -99.5), show_shadow = true },
+})
+
 data:extend({
   --SMALL REFINERY
   {
     type = "item",
-    name = "gas-refinery-small",
+    name = "angels-gas-refinery-small",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-a",
-    place_result = "gas-refinery-small",
+    place_result = "angels-gas-refinery-small",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-small",
+    name = "angels-gas-refinery-small",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
@@ -25,9 +32,9 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-small" },
-    fast_replaceable_group = "gas-refinery-small",
-    next_upgrade = "gas-refinery-small-2",
+    minable = { mining_time = 1, result = "angels-gas-refinery-small" },
+    fast_replaceable_group = "angels-gas-refinery-small",
+    next_upgrade = "angels-gas-refinery-small-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -36,7 +43,7 @@ data:extend({
     drawing_box_vertical_extension = 1.6,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "angels-gas-refining" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -44,6 +51,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -328,21 +337,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-small-2",
+    name = "angels-gas-refinery-small-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-b",
-    place_result = "gas-refinery-small-2",
+    place_result = "angels-gas-refinery-small-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-small-2",
+    name = "angels-gas-refinery-small-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
@@ -351,9 +360,9 @@ data:extend({
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-small-2" },
-    fast_replaceable_group = "gas-refinery-small",
-    next_upgrade = "gas-refinery-small-3",
+    minable = { mining_time = 1, result = "angels-gas-refinery-small-2" },
+    fast_replaceable_group = "angels-gas-refinery-small",
+    next_upgrade = "angels-gas-refinery-small-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -362,7 +371,7 @@ data:extend({
     drawing_box_vertical_extension = 1.6,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "angels-gas-refining" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -370,6 +379,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -654,21 +665,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-small-3",
+    name = "angels-gas-refinery-small-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-c",
-    place_result = "gas-refinery-small-3",
+    place_result = "angels-gas-refinery-small-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-small-3",
+    name = "angels-gas-refinery-small-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
@@ -677,9 +688,9 @@ data:extend({
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-small-3" },
-    fast_replaceable_group = "gas-refinery-small",
-    next_upgrade = "gas-refinery-small-4",
+    minable = { mining_time = 1, result = "angels-gas-refinery-small-3" },
+    fast_replaceable_group = "angels-gas-refinery-small",
+    next_upgrade = "angels-gas-refinery-small-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -688,7 +699,7 @@ data:extend({
     drawing_box_vertical_extension = 1.6,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "angels-gas-refining" },
     crafting_speed = 2.5,
     energy_source = {
       type = "electric",
@@ -696,6 +707,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -980,21 +993,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "gas-refinery-small-4",
+    name = "angels-gas-refinery-small-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
         icon_size = 64,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "a[gas-refinery-small]-d",
-    place_result = "gas-refinery-small-4",
+    place_result = "angels-gas-refinery-small-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-small-4",
+    name = "angels-gas-refinery-small-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery-small.png",
@@ -1003,8 +1016,8 @@ data:extend({
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "gas-refinery-small-4" },
-    fast_replaceable_group = "gas-refinery-small",
+    minable = { mining_time = 1, result = "angels-gas-refinery-small-4" },
+    fast_replaceable_group = "angels-gas-refinery-small",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -1013,7 +1026,7 @@ data:extend({
     drawing_box_vertical_extension = 1.6,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "gas-refining" },
+    crafting_categories = { "angels-gas-refining" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",
@@ -1021,6 +1034,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "425kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery-small"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

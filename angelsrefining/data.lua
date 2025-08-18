@@ -35,7 +35,6 @@ angelsmods.functions.TNT = require("prototypes.tips-and-tricks-functions")
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
 angelsmods.trigger.refinery_products = {}
-angelsmods.trigger.enable_hq_graphics = mods["reskins-angels"] and true or settings.startup["angels-hq-graphics"].value
 local aeab = settings.startup["angels-enable-auto-barreling"].value
 angelsmods.trigger.enable_auto_barreling = (aeab == "Enabled+Hidden" or aeab == "Enabled+Shown") and true or false
 angelsmods.trigger.enable_hide_barreling = (aeab == "Enabled+Hidden") and true or false

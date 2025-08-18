@@ -12,11 +12,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-ore-smelting",
+        recipe = "angels-ingot-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-1",
+        recipe = "angels-liquid-molten-iron",
       },
       {
         type = "unlock-recipe",
@@ -39,22 +39,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-iron-smelting-1",
       "angels-coal-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-ore-processing",
+        recipe = "angels-processed-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-iron-smelting",
+        recipe = "angels-ingot-iron-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-iron",
+        recipe = "angels-powder-iron",
       },
     },
     unit = {
@@ -74,7 +74,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-iron-smelting-1",
       "angels-manganese-smelting-1",
       "angels-silicon-smelting-1",
@@ -82,23 +82,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-3",
+        recipe = "angels-liquid-molten-iron-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-iron-casting",
+        recipe = "angels-roll-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-iron-converting",
+        recipe = "angels-plate-iron-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-iron-casting",
+        recipe = "angels-rod-stack-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-iron-converting",
+        recipe = "angels-rod-iron-2",
       },
     },
     unit = {
@@ -118,18 +118,18 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-iron-smelting-2",
       "angels-stone-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "iron-processed-processing",
+        recipe = "angels-pellet-iron",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-iron-smelting",
+        recipe = "angels-ingot-iron-3",
       },
     },
     unit = {
@@ -150,7 +150,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-iron-casting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",
@@ -158,15 +158,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-4",
+        recipe = "angels-liquid-molten-iron-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-iron-casting-fast",
+        recipe = "angels-roll-iron-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-iron-casting-fast",
+        recipe = "angels-rod-stack-iron-2",
       },
     },
     unit = {
@@ -193,7 +193,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-iron-smelting-5",
+        recipe = "angels-liquid-molten-iron-5",
       },
     },
     unit = {

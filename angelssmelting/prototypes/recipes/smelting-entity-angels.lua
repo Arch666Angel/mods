@@ -2,8 +2,7 @@ angelsmods.functions.RB.build({
   --ORE PROCESSING MACHINE
   {
     type = "recipe",
-    name = "ore-processing-machine",
-    localised_name = { "entity-name.ore-processing-machine" },
+    name = "angels-ore-processing-machine",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -12,12 +11,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-gears", amount = 2 },
       { type = "item", name = "t2-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-2",
-    localised_name = { "entity-name.ore-processing-machine-2" },
+    name = "angels-ore-processing-machine-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -26,12 +24,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 2 },
       { type = "item", name = "t3-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-2", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-3",
-    localised_name = { "entity-name.ore-processing-machine-3" },
+    name = "angels-ore-processing-machine-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -40,12 +37,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 2 },
       { type = "item", name = "t4-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-3", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "ore-processing-machine-4",
-    localised_name = { "entity-name.ore-processing-machine-4" },
+    name = "angels-ore-processing-machine-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -54,13 +50,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 2 },
       { type = "item", name = "t5-brick", amount = 4 },
     },
-    results = { { type = "item", name = "ore-processing-machine-4", amount = 1 } },
+    results = { { type = "item", name = "angels-ore-processing-machine-4", amount = 1 } },
   },
   --PELLET PRESS
   {
     type = "recipe",
-    name = "pellet-press",
-    localised_name = { "entity-name.pellet-press" },
+    name = "angels-pellet-press",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -69,12 +64,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 4 },
       { type = "item", name = "t3-brick", amount = 2 },
     },
-    results = { { type = "item", name = "pellet-press", amount = 1 } },
+    results = { { type = "item", name = "angels-pellet-press", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "pellet-press-2",
-    localised_name = { "entity-name.pellet-press-2" },
+    name = "angels-pellet-press-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -83,12 +77,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 4 },
       { type = "item", name = "t4-brick", amount = 2 },
     },
-    results = { { type = "item", name = "pellet-press-2", amount = 1 } },
+    results = { { type = "item", name = "angels-pellet-press-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "pellet-press-3",
-    localised_name = { "entity-name.pellet-press-3" },
+    name = "angels-pellet-press-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -97,12 +90,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 4 },
       { type = "item", name = "t5-brick", amount = 2 },
     },
-    results = { { type = "item", name = "pellet-press-3", amount = 1 } },
+    results = { { type = "item", name = "angels-pellet-press-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "pellet-press-4",
-    localised_name = { "entity-name.pellet-press-4" },
+    name = "angels-pellet-press-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -111,13 +103,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t6-gears", amount = 4 },
       { type = "item", name = "t6-brick", amount = 2 },
     },
-    results = { { type = "item", name = "pellet-press-4", amount = 1 } },
+    results = { { type = "item", name = "angels-pellet-press-4", amount = 1 } },
   },
   --POWDER MIXER
   {
     type = "recipe",
-    name = "powder-mixer",
-    localised_name = { "entity-name.powder-mixer" },
+    name = "angels-powder-mixer",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -126,12 +117,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-gears", amount = 1 },
       { type = "item", name = "t2-brick", amount = 1 },
     },
-    results = { { type = "item", name = "powder-mixer", amount = 1 } },
+    results = { { type = "item", name = "angels-powder-mixer", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "powder-mixer-2",
-    localised_name = { "entity-name.powder-mixer-2" },
+    name = "angels-powder-mixer-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -140,12 +130,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 1 },
       { type = "item", name = "t3-brick", amount = 1 },
     },
-    results = { { type = "item", name = "powder-mixer-2", amount = 1 } },
+    results = { { type = "item", name = "angels-powder-mixer-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "powder-mixer-3",
-    localised_name = { "entity-name.powder-mixer-3" },
+    name = "angels-powder-mixer-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -154,12 +143,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 1 },
       { type = "item", name = "t4-brick", amount = 1 },
     },
-    results = { { type = "item", name = "powder-mixer-3", amount = 1 } },
+    results = { { type = "item", name = "angels-powder-mixer-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "powder-mixer-4",
-    localised_name = { "entity-name.powder-mixer-4" },
+    name = "angels-powder-mixer-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -168,13 +156,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-gears", amount = 1 },
       { type = "item", name = "t5-brick", amount = 1 },
     },
-    results = { { type = "item", name = "powder-mixer-4", amount = 1 } },
+    results = { { type = "item", name = "angels-powder-mixer-4", amount = 1 } },
   },
   --BLAST FURNACE
   {
     type = "recipe",
-    name = "blast-furnace",
-    localised_name = { "entity-name.blast-furnace" },
+    name = "angels-blast-furnace",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -184,12 +171,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 10 },
       { type = "item", name = "t0-pipe", amount = 5 },
     },
-    results = { { type = "item", name = "blast-furnace", amount = 1 } },
+    results = { { type = "item", name = "angels-blast-furnace", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "blast-furnace-2",
-    localised_name = { "entity-name.blast-furnace-2" },
+    name = "angels-blast-furnace-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -199,12 +185,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 10 },
       { type = "item", name = "t1-pipe", amount = 5 },
     },
-    results = { { type = "item", name = "blast-furnace-2", amount = 1 } },
+    results = { { type = "item", name = "angels-blast-furnace-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "blast-furnace-3",
-    localised_name = { "entity-name.blast-furnace-3" },
+    name = "angels-blast-furnace-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -214,12 +199,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 10 },
       { type = "item", name = "t3-pipe", amount = 5 },
     },
-    results = { { type = "item", name = "blast-furnace-3", amount = 1 } },
+    results = { { type = "item", name = "angels-blast-furnace-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "blast-furnace-4",
-    localised_name = { "entity-name.blast-furnace-4" },
+    name = "angels-blast-furnace-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -229,13 +213,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 10 },
       { type = "item", name = "t4-pipe", amount = 5 },
     },
-    results = { { type = "item", name = "blast-furnace-4", amount = 1 } },
+    results = { { type = "item", name = "angels-blast-furnace-4", amount = 1 } },
   },
   --CHEMICAL FURNACE
   {
     type = "recipe",
     name = "angels-chemical-furnace",
-    localised_name = { "entity-name.angels-chemical-furnace" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -250,7 +233,6 @@ angelsmods.functions.RB.build({
   {
     type = "recipe",
     name = "angels-chemical-furnace-2",
-    localised_name = { "entity-name.angels-chemical-furnace-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -265,7 +247,6 @@ angelsmods.functions.RB.build({
   {
     type = "recipe",
     name = "angels-chemical-furnace-3",
-    localised_name = { "entity-name.angels-chemical-furnace-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -280,7 +261,6 @@ angelsmods.functions.RB.build({
   {
     type = "recipe",
     name = "angels-chemical-furnace-4",
-    localised_name = { "entity-name.angels-chemical-furnace-4" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -295,8 +275,7 @@ angelsmods.functions.RB.build({
   --INDUCTION FURNACE
   {
     type = "recipe",
-    name = "induction-furnace",
-    localised_name = { "entity-name.induction-furnace" },
+    name = "angels-induction-furnace",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -307,12 +286,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-gears", amount = 3 },
       { type = "item", name = "t0-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "induction-furnace", amount = 1 } },
+    results = { { type = "item", name = "angels-induction-furnace", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "induction-furnace-2",
-    localised_name = { "entity-name.induction-furnace-2" },
+    name = "angels-induction-furnace-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -323,12 +301,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-gears", amount = 3 },
       { type = "item", name = "t1-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "induction-furnace-2", amount = 1 } },
+    results = { { type = "item", name = "angels-induction-furnace-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "induction-furnace-3",
-    localised_name = { "entity-name.induction-furnace-3" },
+    name = "angels-induction-furnace-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -339,12 +316,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 3 },
       { type = "item", name = "t3-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "induction-furnace-3", amount = 1 } },
+    results = { { type = "item", name = "angels-induction-furnace-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "induction-furnace-4",
-    localised_name = { "entity-name.induction-furnace-4" },
+    name = "angels-induction-furnace-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -355,13 +331,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 3 },
       { type = "item", name = "t4-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "induction-furnace-4", amount = 1 } },
+    results = { { type = "item", name = "angels-induction-furnace-4", amount = 1 } },
   },
   --CASTING MACHINE
   {
     type = "recipe",
-    name = "casting-machine",
-    localised_name = { "entity-name.casting-machine" },
+    name = "angels-casting-machine",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -372,12 +347,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-brick", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 2 },
     },
-    results = { { type = "item", name = "casting-machine", amount = 1 } },
+    results = { { type = "item", name = "angels-casting-machine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "casting-machine-2",
-    localised_name = { "entity-name.casting-machine-2" },
+    name = "angels-casting-machine-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -388,12 +362,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-brick", amount = 1 },
       { type = "item", name = "t1-pipe", amount = 2 },
     },
-    results = { { type = "item", name = "casting-machine-2", amount = 1 } },
+    results = { { type = "item", name = "angels-casting-machine-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "casting-machine-3",
-    localised_name = { "entity-name.casting-machine-3" },
+    name = "angels-casting-machine-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -404,12 +377,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-brick", amount = 1 },
       { type = "item", name = "t3-pipe", amount = 2 },
     },
-    results = { { type = "item", name = "casting-machine-3", amount = 1 } },
+    results = { { type = "item", name = "angels-casting-machine-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "casting-machine-4",
-    localised_name = { "entity-name.casting-machine-4" },
+    name = "angels-casting-machine-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -420,13 +392,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-brick", amount = 1 },
       { type = "item", name = "t4-pipe", amount = 2 },
     },
-    results = { { type = "item", name = "casting-machine-4", amount = 1 } },
+    results = { { type = "item", name = "angels-casting-machine-4", amount = 1 } },
   },
   --SINTERING OVEN
   {
     type = "recipe",
-    name = "sintering-oven",
-    localised_name = { "entity-name.sintering-oven" },
+    name = "angels-sintering-oven",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -435,12 +406,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t1-circuit", amount = 5 },
       { type = "item", name = "t1-brick", amount = 9 },
     },
-    results = { { type = "item", name = "sintering-oven", amount = 1 } },
+    results = { { type = "item", name = "angels-sintering-oven", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "sintering-oven-2",
-    localised_name = { "entity-name.sintering-oven-2" },
+    name = "angels-sintering-oven-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -449,12 +419,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-circuit", amount = 5 },
       { type = "item", name = "t2-brick", amount = 9 },
     },
-    results = { { type = "item", name = "sintering-oven-2", amount = 1 } },
+    results = { { type = "item", name = "angels-sintering-oven-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "sintering-oven-3",
-    localised_name = { "entity-name.sintering-oven-3" },
+    name = "angels-sintering-oven-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -463,12 +432,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-circuit", amount = 5 },
       { type = "item", name = "t3-brick", amount = 9 },
     },
-    results = { { type = "item", name = "sintering-oven-3", amount = 1 } },
+    results = { { type = "item", name = "angels-sintering-oven-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "sintering-oven-4",
-    localised_name = { "entity-name.sintering-oven-4" },
+    name = "angels-sintering-oven-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -477,12 +445,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-circuit", amount = 5 },
       { type = "item", name = "t4-brick", amount = 9 },
     },
-    results = { { type = "item", name = "sintering-oven-4", amount = 1 } },
+    results = { { type = "item", name = "angels-sintering-oven-4", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "sintering-oven-5",
-    localised_name = { "entity-name.sintering-oven-5" },
+    name = "angels-sintering-oven-5",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -491,13 +458,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-circuit", amount = 5 },
       { type = "item", name = "t5-brick", amount = 9 },
     },
-    results = { { type = "item", name = "sintering-oven-5", amount = 1 } },
+    results = { { type = "item", name = "angels-sintering-oven-5", amount = 1 } },
   },
   --STRAND CASTING MACHINE
   {
     type = "recipe",
-    name = "strand-casting-machine",
-    localised_name = { "entity-name.strand-casting-machine" },
+    name = "angels-strand-casting-machine",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -508,12 +474,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 6 },
       { type = "item", name = "t2-gears", amount = 4 },
     },
-    results = { { type = "item", name = "strand-casting-machine", amount = 1 } },
+    results = { { type = "item", name = "angels-strand-casting-machine", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "strand-casting-machine-2",
-    localised_name = { "entity-name.strand-casting-machine-2" },
+    name = "angels-strand-casting-machine-2",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -524,12 +489,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-pipe", amount = 6 },
       { type = "item", name = "t3-gears", amount = 4 },
     },
-    results = { { type = "item", name = "strand-casting-machine-2", amount = 1 } },
+    results = { { type = "item", name = "angels-strand-casting-machine-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "strand-casting-machine-3",
-    localised_name = { "entity-name.strand-casting-machine-3" },
+    name = "angels-strand-casting-machine-3",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -540,12 +504,11 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-pipe", amount = 6 },
       { type = "item", name = "t4-gears", amount = 4 },
     },
-    results = { { type = "item", name = "strand-casting-machine-3", amount = 1 } },
+    results = { { type = "item", name = "angels-strand-casting-machine-3", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "strand-casting-machine-4",
-    localised_name = { "entity-name.strand-casting-machine-4" },
+    name = "angels-strand-casting-machine-4",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -556,13 +519,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t5-pipe", amount = 6 },
       { type = "item", name = "t5-gears", amount = 4 },
     },
-    results = { { type = "item", name = "strand-casting-machine-4", amount = 1 } },
+    results = { { type = "item", name = "angels-strand-casting-machine-4", amount = 1 } },
   },
   --COOLING TOWER
   {
     type = "recipe",
-    name = "cooling-tower",
-    localised_name = { "entity-name.cooling-tower" },
+    name = "angels-cooling-tower",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -572,6 +534,6 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-pipe", amount = 5 },
       { type = "item", name = "t2-brick", amount = 10 },
     },
-    results = { { type = "item", name = "cooling-tower", amount = 1 } },
+    results = { { type = "item", name = "angels-cooling-tower", amount = 1 } },
   },
 })

@@ -31,6 +31,13 @@ local function angels_chemical_furnace_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-chemical-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -70,7 +77,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting" },
+    crafting_categories = { "angels-chemical-smelting" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -78,6 +85,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -201,7 +210,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -209,6 +218,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -332,7 +343,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2", "angels-chemical-smelting-3" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -340,6 +351,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -462,7 +475,7 @@ data:extend({
     drawing_box_vertical_extension = 0.75,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "chemical-smelting", "chemical-smelting-2", "chemical-smelting-3", "chemical-smelting-4" },
+    crafting_categories = { "angels-chemical-smelting", "angels-chemical-smelting-2", "angels-chemical-smelting-3", "angels-chemical-smelting-4" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",
@@ -470,6 +483,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {

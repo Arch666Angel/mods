@@ -4,7 +4,7 @@ data:extend({
     name = "angels-water-processing",
 
     is_title = false,
-    tag = "[item=hydro-plant]",
+    tag = "[item=angels-hydro-plant]",
     localised_name = { "tips-and-tricks-name.angels-water-processing" },
     localised_description = require("prototypes.tips-and-tricks.1-3-water-processing.1-3-water-processing-description"),
 
@@ -16,7 +16,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "water-treatment",
+      technology = "angels-water-treatment",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-3-water-processing.1-3-water-processing-simulation",

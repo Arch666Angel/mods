@@ -5,14 +5,10 @@ if mods["bobrevamp"] then
   -----------------------------------------------------------------------------
   -- SOLID FUEL ---------------------------------------------------------------
   -----------------------------------------------------------------------------
-  move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a", "recipe")
-  move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b", "recipe")
-  move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c", "recipe")
-  move_item("bob-solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d", "recipe")
-  move_item("solid-fuel-from-light-oil", "petrochem-fuel", "e[bob]-a")
-  move_item("solid-fuel-from-petroleum-gas", "petrochem-fuel", "e[bob]-b")
-  move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c")
-  move_item("bob-solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d")
+  move_item("solid-fuel-from-light-oil", "angels-petrochem-fuel", "e[bob]-a", "recipe")
+  move_item("solid-fuel-from-petroleum-gas", "angels-petrochem-fuel", "e[bob]-b", "recipe")
+  move_item("solid-fuel-from-heavy-oil", "angels-petrochem-fuel", "e[bob]-c", "recipe")
+  move_item("bob-solid-fuel-from-hydrogen", "angels-petrochem-fuel", "e[bob]-d", "recipe")
 
   OV.disable_technology({ "solid-fuel" })
 
@@ -29,8 +25,7 @@ if mods["bobrevamp"] then
   angelsmods.functions.hide("bob-sour-gas")
 
   OV.hide_recipe("bob-ammonia")
-  OV.converter_fluid("bob-ammonia", "gas-ammonia")
-  angelsmods.functions.disable_barreling_recipes("bob-ammonia")
+  OV.converter_fluid("bob-ammonia", "angels-gas-ammonia")
 
   if settings.startup["bobmods-revamp-old-oil"] then
     OV.hide_recipe({
@@ -47,17 +42,11 @@ if mods["bobrevamp"] then
   end
 
   if angelsmods.trigger.disable_bobs_chemical_plants then
-    OV.global_replace_technology("chemical-plant", "basic-chemistry-2")
+    OV.global_replace_technology("chemical-plant", "angels-basic-chemistry-2")
   end
 
-  OV.converter_fluid("bob-dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
-  angelsmods.functions.disable_barreling_recipes("bob-dinitrogen-tetroxide")
-
-  OV.converter_fluid("bob-hydrogen-peroxide", "gas-hydrogen-peroxide")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrogen-peroxide")
-
-  OV.converter_fluid("bob-hydrazine", "gas-hydrazine")
-  angelsmods.functions.disable_barreling_recipes("bob-hydrazine")
+  OV.converter_fluid("bob-dinitrogen-tetroxide", "angels-gas-dinitrogen-tetroxide")
+  OV.converter_fluid("bob-hydrazine", "angels-gas-hydrazine")
   OV.global_replace_technology("bob-hydrazine", "angels-nitrogen-processing-3")
 
   OV.disable_recipe({
@@ -66,6 +55,7 @@ if mods["bobrevamp"] then
     "bob-hydrogen-peroxide",
     "bob-enriched-fuel-from-hydrazine",
   })
+  angelsmods.functions.hide("bob-hydrogen-peroxide")
 
   -----------------------------------------------------------------------------
   -- HARDMODE -----------------------------------------------------------------
@@ -79,26 +69,23 @@ if mods["bobrevamp"] then
     --OV.remove_unlock("lithium-processing", "sodium-chlorate")
     OV.disable_recipe({ "bob-sodium-chlorate", "bob-sodium-perchlorate" })
     --make pre-reqs match new unlock point
-    OV.add_prereq("bob-lithium-processing", "chlorine-processing-4")
+    OV.add_prereq("bob-lithium-processing", "angels-chlorine-processing-4")
     OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
-    OV.converter_fluid("bob-carbon-dioxide", "gas-carbon-dioxide")
-    angelsmods.functions.disable_barreling_recipes("bob-carbon-dioxide")
+    OV.converter_fluid("bob-carbon-dioxide", "angels-gas-carbon-dioxide")
 
-    OV.global_replace_item("bob-sodium-carbonate", "solid-sodium-carbonate")
+    OV.global_replace_item("bob-sodium-carbonate", "angels-solid-sodium-carbonate")
     angelsmods.functions.hide("bob-sodium-carbonate")
 
-    OV.global_replace_item("bob-sodium-perchlorate", "solid-sodium-perchlorate")
+    OV.global_replace_item("bob-sodium-perchlorate", "angels-solid-sodium-perchlorate")
     angelsmods.functions.hide("bob-sodium-perchlorate")
 
-    OV.global_replace_item("bob-sodium-chlorate", "solid-sodium-chlorate")
+    OV.global_replace_item("bob-sodium-chlorate", "angels-solid-sodium-chlorate")
     angelsmods.functions.hide("bob-sodium-chlorate")
 
-    OV.converter_fluid("bob-nitric-oxide", "gas-nitrogen-monoxide")
-    angelsmods.functions.disable_barreling_recipes("bob-nitric-oxide")
+    OV.converter_fluid("bob-nitric-oxide", "angels-gas-nitrogen-monoxide")
 
-    OV.converter_fluid("bob-nitric-dioxide", "gas-nitrogen-dioxide")
-    angelsmods.functions.disable_barreling_recipes("bob-nitric-dioxide")
+    OV.converter_fluid("bob-nitric-dioxide", "angels-gas-nitrogen-dioxide")
 
     OV.disable_recipe({
       "bob-nitric-oxide",
@@ -110,24 +97,24 @@ if mods["bobrevamp"] then
   -- RTG ----------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobplates"] and settings.startup["bobmods-revamp-rtg"].value then
-    OV.global_replace_item("bob-sodium-carbonate", "solid-sodium-carbonate")
+    OV.global_replace_item("bob-sodium-carbonate", "angels-solid-sodium-carbonate")
     angelsmods.functions.hide("bob-sodium-carbonate")
 
     if settings.startup["bobmods-revamp-hardmode"].value then
       OV.disable_recipe({
         "bob-ammoniated-brine",
         "bob-sodium-bicarbonate",
-        "bob-sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
+        "bob-sodium-carbonate", -- angels has own process of creating "angels-solid-sodium-carbonate" from saline water
       })
 
       angelsmods.functions.hide("bob-ammoniated-brine")
 
       angelsmods.functions.hide("bob-sodium-bicarbonate")
 
-      OV.global_replace_item("bob-sodium-chlorate", "solid-sodium-chlorate")
+      OV.global_replace_item("bob-sodium-chlorate", "angels-solid-sodium-chlorate")
       angelsmods.functions.hide("bob-sodium-chlorate")
 
-      OV.global_replace_item("bob-sodium-perchlorate", "solid-sodium-perchlorate")
+      OV.global_replace_item("bob-sodium-perchlorate", "angels-solid-sodium-perchlorate")
       angelsmods.functions.hide("bob-sodium-perchlorate")
 
       OV.disable_recipe({ "bob-ammonium-chloride-reprocessing" })

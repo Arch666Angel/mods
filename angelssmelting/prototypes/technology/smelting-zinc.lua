@@ -7,19 +7,19 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-zinc-tech.png",
     icon_size = 256,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       "angels-metallurgy-2",
       "angels-lead-smelting-1",
-      --"basic-chemistry"
+      --"angels-basic-chemistry"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-smelting",
+        recipe = "angels-ingot-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-zinc-smelting",
+        recipe = "angels-liquid-molten-zinc",
       },
       {
         type = "unlock-recipe",
@@ -27,7 +27,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-processing-alt",
+        recipe = "angels-solid-zinc-oxide",
       },
     },
     unit = {
@@ -47,22 +47,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-zinc-smelting-1",
       "angels-coal-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-ore-processing",
+        recipe = "angels-processed-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-zinc-smelting",
+        recipe = "angels-ingot-zinc-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-zinc",
+        recipe = "angels-powder-zinc",
       },
     },
     unit = {
@@ -83,17 +83,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-zinc-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-zinc-casting",
+        recipe = "angels-roll-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-zinc-converting",
+        recipe = "angels-plate-zin-2",
       },
     },
     unit = {
@@ -114,26 +114,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-zinc-smelting-2",
       "angels-sulfur-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "zinc-processed-processing",
+        recipe = "angels-pellet-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-zinc-smelting",
+        recipe = "angels-solid-zinc-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-zinc-oxide-smelting",
+        recipe = "angels-cathode-zinc",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-zinc-smelting",
+        recipe = "angels-ingot-zinc-3",
       },
     },
     unit = {
@@ -155,13 +155,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-zinc-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-zinc-casting-fast",
+        recipe = "angels-roll-zinc-2",
       },
     },
     unit = {

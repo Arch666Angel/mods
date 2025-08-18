@@ -8,16 +8,16 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-2",
-      "basic-chemistry-2",
+      "angels-basic-chemistry-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-ore-smelting",
+        recipe = "angels-ingot-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-nickel-smelting",
+        recipe = "angels-liquid-molten-nickel",
       },
       {
         type = "unlock-recipe",
@@ -41,26 +41,26 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-nickel-smelting-1",
       "angels-sulfur-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-ore-processing",
+        recipe = "angels-processed-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-nickel-smelting",
+        recipe = "angels-cathode-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-nickel-smelting",
+        recipe = "angels-ingot-nickel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-nickel",
+        recipe = "angels-powder-nickel",
       },
     },
     unit = {
@@ -81,17 +81,17 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-nickel-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-nickel-casting",
+        recipe = "angels-roll-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-nickel-converting",
+        recipe = "angels-plate-nickel-2",
       },
     },
     unit = {
@@ -112,22 +112,22 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-nickel-smelting-2",
       "angels-sulfur-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-processed-processing",
+        recipe = "angels-pellet-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-nickel-smelting",
+        recipe = "angels-solid-nickel-carbonyl",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nickel-carbonyl-smelting",
+        recipe = "angels-ingot-nickel-3",
       },
     },
     unit = {
@@ -149,13 +149,13 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-nickel-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-nickel-casting-fast",
+        recipe = "angels-roll-nickel-2",
       },
     },
     unit = {

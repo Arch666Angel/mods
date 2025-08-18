@@ -1,29 +1,36 @@
+circuit_connector_definitions["angels-cooling-tower"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  0, main_offset = util.by_pixel( 5.625,  23.75), shadow_offset = util.by_pixel( 5.625,  23.75), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.625,  23.75), shadow_offset = util.by_pixel( 5.625,  23.75), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.625,  23.75), shadow_offset = util.by_pixel( 5.625,  23.75), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 5.625,  23.75), shadow_offset = util.by_pixel( 5.625,  23.75), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "cooling-tower",
+    name = "angels-cooling-tower",
     icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
-    subgroup = "boiler-building",
+    subgroup = "angels-boiler-building",
     order = "f[cooling-tower]",
-    place_result = "cooling-tower",
+    place_result = "angels-cooling-tower",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "cooling-tower",
+    name = "angels-cooling-tower",
     icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
-    minable = { mining_time = 1, result = "cooling-tower" },
+    minable = { mining_time = 1, result = "angels-cooling-tower" },
     max_health = 100,
-    fast_replaceable_group = "cooling-tower",
+    fast_replaceable_group = "angels-cooling-tower",
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     drawing_box_vertical_extension = 1.5,
-    crafting_categories = { "cooling" },
+    crafting_categories = { "angels-cooling" },
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_speed = 2,
@@ -74,6 +81,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.6 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-cooling-tower"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {

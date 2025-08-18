@@ -56,17 +56,20 @@ local unit_test_014 = function()
   end
 
   local unit_test_result = unit_test_functions.test_successful
+  local filters = {
+   { filter = "hidden",       invert = true, mode = "and", },
+   { filter = "is-parameter", invert = true, mode = "and", },
+   { filter = "flag",         invert = true, mode = "and", flag = "only-in-cursor" },
+  }
 
   -- Check every item to see if it has a recycling recipe
-  for item_name, item in pairs(prototypes.item) do
-    if (not item.hidden) and ((not item.flags) or (not item.flags["only-in-cursor"])) then
-      local recipe = prototypes.recipe[item.name.."-recycling"]
-      if recipe and recipe.category == "recycling" then
-        unit_test_result = check_recipe_products(item_name, recipe)
-      else
-        unit_test_functions.print_msg(string.format("Item %q has no recycling recipe.", item_name))
-        unit_test_result = unit_test_functions.test_failed
-      end
+  for item_name, item in pairs(prototypes.get_item_filtered(filters)) do
+    local recipe = prototypes.recipe[item.name.."-recycling"]
+    if recipe and recipe.category == "recycling" then
+      unit_test_result = check_recipe_products(item_name, recipe)
+    else
+      unit_test_functions.print_msg(string.format("Item %q has no recycling recipe.", item_name))
+      unit_test_result = unit_test_functions.test_failed
     end
   end
 

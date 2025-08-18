@@ -6,12 +6,12 @@ data:extend({
     name = "angels-crushing",
 
     is_title = false,
-    tag = "[item=ore-crusher]",
+    tag = "[item=angels-ore-crusher]",
     localised_name = { "tips-and-tricks-name.angels-crushing" },
     localised_description = require("prototypes.tips-and-tricks.1-1-1-crushing.1-1-1-crushing-description"),
 
     category = "angels-ore-generation",
-    order = "a[ore-refining]-a[crushing]",
+    order = "a[angels-ore-refining]-a[crushing]",
     indent = 2,
 
     starting_status = "locked",
@@ -21,22 +21,22 @@ data:extend({
       triggers = {
         {
           type = "build-entity",
-          entity = "burner-ore-crusher",
+          entity = "angels-burner-ore-crusher",
           count = 1,
         },
         {
           type = "build-entity",
-          entity = "ore-crusher",
+          entity = "angels-ore-crusher",
           count = 1,
         },
         {
           type = "build-entity",
-          entity = "ore-crusher-2",
+          entity = "angels-ore-crusher-2",
           count = 1,
         },
         {
           type = "build-entity",
-          entity = "ore-crusher-3",
+          entity = "angels-ore-crusher-3",
           count = 1,
         },
       },

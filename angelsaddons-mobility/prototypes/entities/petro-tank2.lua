@@ -2,6 +2,7 @@ local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].mini
 local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
 local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
@@ -39,6 +40,7 @@ funcs.generate_train_entities({
   capacity = mods["angelspetrochem"] and 40000 or 25000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_petro_tank2,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   color = tintable_tint,

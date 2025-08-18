@@ -27,6 +27,13 @@ local function angels_chemical_plant_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -37,7 +44,7 @@ data:extend({
         icon_size = 32,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-a",
     place_result = "angels-chemical-plant",
     stack_size = 10,
@@ -67,6 +74,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 1,
@@ -161,7 +170,7 @@ data:extend({
         icon_size = 32,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-b",
     place_result = "angels-chemical-plant-2",
     stack_size = 10,
@@ -191,6 +200,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 2,
@@ -285,7 +296,7 @@ data:extend({
         icon_size = 32,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-c",
     place_result = "angels-chemical-plant-3",
     stack_size = 10,
@@ -315,6 +326,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 3,
@@ -409,7 +422,7 @@ data:extend({
         icon_size = 32,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-d",
     place_result = "angels-chemical-plant-4",
     stack_size = 10,
@@ -438,6 +451,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 4,

@@ -2,7 +2,7 @@ data:extend({
   -- ORE
   {
     type = "item",
-    name = "tin-ore",
+    name = "angels-tin-ore",
     icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png",
     icon_size = 32,
     subgroup = "angels-tin",
@@ -12,7 +12,7 @@ data:extend({
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-tin",
+    name = "angels-processed-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/processed-tin.png",
     icon_size = 64,
     subgroup = "angels-tin",
@@ -21,7 +21,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "pellet-tin",
+    name = "angels-pellet-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/pellet-tin.png",
     icon_size = 64,
     subgroup = "angels-tin",
@@ -31,7 +31,7 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-tin",
+    name = "angels-ingot-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/ingot-tin.png",
     icon_size = 64,
     subgroup = "angels-tin",
@@ -40,7 +40,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "powder-tin",
+    name = "angels-powder-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/powder-tin.png",
     icon_size = 64,
     subgroup = "angels-tin",
@@ -50,7 +50,7 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-tin",
+    name = "angels-liquid-molten-tin",
     icon = "__angelssmeltinggraphics__/graphics/icons/molten-tin.png",
     icon_size = 64,
     subgroup = "angels-tin-casting",

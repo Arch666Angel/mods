@@ -1,23 +1,30 @@
+circuit_connector_definitions["angels-composter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "composter",
+    name = "angels-composter",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/composter.png",
     icon_size = 32,
-    subgroup = "bio-processing-buildings-vegetabilis-b",
+    subgroup = "angels-bio-processing-buildings-vegetabilis-b",
     order = "b",
-    place_result = "composter",
+    place_result = "angels-composter",
     stack_size = 10,
   },
   {
     type = "furnace",
-    name = "composter",
+    name = "angels-composter",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/composter.png",
     icon_size = 32,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "composter" },
+    minable = { mining_time = 1, result = "angels-composter" },
     max_health = 100,
-    fast_replaceable_group = "composter",
+    fast_replaceable_group = "angels-composter",
     corpse = "small-remnants",
     collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -53,6 +60,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.01 * 60 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-composter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/composter/composter.png",

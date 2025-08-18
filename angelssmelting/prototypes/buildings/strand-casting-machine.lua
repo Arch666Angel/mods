@@ -30,11 +30,18 @@ local function angels_strand_casting_machine_fluid_boxes()
     },
   }
 end
-    
+
+circuit_connector_definitions["angels-strand-casting-machine"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "strand-casting-machine",
+    name = "angels-strand-casting-machine",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -44,12 +51,12 @@ data:extend({
     }, 1, angelsmods.smelting.number_tint),
     subgroup = "angels-strand-casting-machine",
     order = "a[strand-casting-machine]",
-    place_result = "strand-casting-machine",
+    place_result = "angels-strand-casting-machine",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "strand-casting-machine",
+    name = "angels-strand-casting-machine",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -58,9 +65,9 @@ data:extend({
       },
     }, 1, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "strand-casting-machine" },
-    fast_replaceable_group = "strand-casting-machine",
-    next_upgrade = "strand-casting-machine-2",
+    minable = { mining_time = 1, result = "angels-strand-casting-machine" },
+    fast_replaceable_group = "angels-strand-casting-machine",
+    next_upgrade = "angels-strand-casting-machine-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -69,7 +76,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 0,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "strand-casting" },
+    crafting_categories = { "angels-strand-casting" },
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -77,6 +84,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -155,7 +164,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "strand-casting-machine-2",
+    name = "angels-strand-casting-machine-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -165,12 +174,12 @@ data:extend({
     }, 2, angelsmods.smelting.number_tint),
     subgroup = "angels-strand-casting-machine",
     order = "b[strand-casting-machine-2]",
-    place_result = "strand-casting-machine-2",
+    place_result = "angels-strand-casting-machine-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "strand-casting-machine-2",
+    name = "angels-strand-casting-machine-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -179,9 +188,9 @@ data:extend({
       },
     }, 2, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "strand-casting-machine-2" },
-    fast_replaceable_group = "strand-casting-machine",
-    next_upgrade = "strand-casting-machine-3",
+    minable = { mining_time = 1, result = "angels-strand-casting-machine-2" },
+    fast_replaceable_group = "angels-strand-casting-machine",
+    next_upgrade = "angels-strand-casting-machine-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -190,7 +199,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 1,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "strand-casting", "strand-casting-2" },
+    crafting_categories = { "angels-strand-casting", "angels-strand-casting-2" },
     crafting_speed = 1.5,
     energy_source = {
       type = "electric",
@@ -198,6 +207,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -276,7 +287,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "strand-casting-machine-3",
+    name = "angels-strand-casting-machine-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -286,12 +297,12 @@ data:extend({
     }, 3, angelsmods.smelting.number_tint),
     subgroup = "angels-strand-casting-machine",
     order = "c[strand-casting-machine-3]",
-    place_result = "strand-casting-machine-3",
+    place_result = "angels-strand-casting-machine-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "strand-casting-machine-3",
+    name = "angels-strand-casting-machine-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -300,9 +311,9 @@ data:extend({
       },
     }, 3, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "strand-casting-machine-3" },
-    fast_replaceable_group = "strand-casting-machine",
-    next_upgrade = "strand-casting-machine-4",
+    minable = { mining_time = 1, result = "angels-strand-casting-machine-3" },
+    fast_replaceable_group = "angels-strand-casting-machine",
+    next_upgrade = "angels-strand-casting-machine-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -311,7 +322,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "strand-casting", "strand-casting-2", "strand-casting-3" },
+    crafting_categories = { "angels-strand-casting", "angels-strand-casting-2", "angels-strand-casting-3" },
     crafting_speed = 2,
     energy_source = {
       type = "electric",
@@ -319,6 +330,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -397,7 +410,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "strand-casting-machine-4",
+    name = "angels-strand-casting-machine-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -407,12 +420,12 @@ data:extend({
     }, 4, angelsmods.smelting.number_tint),
     subgroup = "angels-strand-casting-machine",
     order = "d[strand-casting-machine-4]",
-    place_result = "strand-casting-machine-4",
+    place_result = "angels-strand-casting-machine-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "strand-casting-machine-4",
+    name = "angels-strand-casting-machine-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/strand-casting-machine.png",
@@ -421,8 +434,8 @@ data:extend({
       },
     }, 4, angelsmods.smelting.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "strand-casting-machine-4" },
-    fast_replaceable_group = "strand-casting-machine",
+    minable = { mining_time = 1, result = "angels-strand-casting-machine-4" },
+    fast_replaceable_group = "angels-strand-casting-machine",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -431,7 +444,7 @@ data:extend({
     drawing_box_vertical_extension = 1,
     module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    crafting_categories = { "strand-casting", "strand-casting-2", "strand-casting-3", "strand-casting-4" },
+    crafting_categories = { "angels-strand-casting", "angels-strand-casting-2", "angels-strand-casting-3", "angels-strand-casting-4" },
     crafting_speed = 3,
     energy_source = {
       type = "electric",
@@ -439,6 +452,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {

@@ -1,7 +1,14 @@
+circuit_connector_definitions["angels-clarifier"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
-    name = "clarifier",
+    name = "angels-clarifier",
     icons = {
       {
         icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
@@ -9,14 +16,14 @@ data:extend({
         scale = 0.5,
       },
     },
-    subgroup = "water-treatment-building",
+    subgroup = "angels-water-treatment-building",
     order = "c[clarifier]",
-    place_result = "clarifier",
+    place_result = "angels-clarifier",
     stack_size = 10,
   },
   {
     type = "furnace",
-    name = "clarifier",
+    name = "angels-clarifier",
     icons = {
       {
         icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
@@ -25,9 +32,9 @@ data:extend({
       },
     },
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "clarifier" },
+    minable = { mining_time = 1, result = "angels-clarifier" },
     max_health = 100,
-    fast_replaceable_group = "clarifier",
+    fast_replaceable_group = "angels-clarifier",
     corpse = "small-remnants",
     collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
@@ -62,6 +69,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.6 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-clarifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-base.png",

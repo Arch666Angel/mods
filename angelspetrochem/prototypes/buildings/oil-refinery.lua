@@ -7,13 +7,13 @@ if not oilrefinery.fast_replaceable_group then
   oilrefinery.fast_replaceable_group = "oil-refinery"
 end
 if not oilrefinery.next_upgrade then
-  oilrefinery.next_upgrade = "oil-refinery-2"
+  oilrefinery.next_upgrade = "angels-oil-refinery-2"
 end
 
 data:extend({
   {
     type = "item",
-    name = "oil-refinery-2",
+    name = "angels-oil-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -21,14 +21,14 @@ data:extend({
         scale = 0.5,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "b[oil-refinery]-b",
-    place_result = "oil-refinery-2",
+    place_result = "angels-oil-refinery-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "oil-refinery-2",
+    name = "angels-oil-refinery-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -37,9 +37,9 @@ data:extend({
       },
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.2, result = "oil-refinery-2" },
+    minable = { mining_time = 0.2, result = "angels-oil-refinery-2" },
     fast_replaceable_group = "oil-refinery",
-    next_upgrade = "oil-refinery-3",
+    next_upgrade = "angels-oil-refinery-3",
     max_health = 350,
     corpse = "oil-refinery-remnants",
     dying_explosion = "oil-refinery-explosion",
@@ -243,7 +243,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "oil-refinery-3",
+    name = "angels-oil-refinery-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -251,14 +251,14 @@ data:extend({
         scale = 0.5,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "b[oil-refinery]-c",
-    place_result = "oil-refinery-3",
+    place_result = "angels-oil-refinery-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "oil-refinery-3",
+    name = "angels-oil-refinery-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -267,9 +267,9 @@ data:extend({
       },
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.2, result = "oil-refinery-3" },
+    minable = { mining_time = 0.2, result = "angels-oil-refinery-3" },
     fast_replaceable_group = "oil-refinery",
-    next_upgrade = "oil-refinery-4",
+    next_upgrade = "angels-oil-refinery-4",
     max_health = 350,
     corpse = "oil-refinery-remnants",
     dying_explosion = "oil-refinery-explosion",
@@ -473,7 +473,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "oil-refinery-4",
+    name = "angels-oil-refinery-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -481,14 +481,14 @@ data:extend({
         scale = 0.5,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-oil-refinery",
+    subgroup = "angels-petrochem-buildings-oil-refinery",
     order = "b[oil-refinery]-d",
-    place_result = "oil-refinery-4",
+    place_result = "angels-oil-refinery-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "oil-refinery-4",
+    name = "angels-oil-refinery-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__base__/graphics/icons/oil-refinery.png",
@@ -497,7 +497,7 @@ data:extend({
       },
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.2, result = "oil-refinery-4" },
+    minable = { mining_time = 0.2, result = "angels-oil-refinery-4" },
     fast_replaceable_group = "oil-refinery",
     max_health = 300,
     corpse = "oil-refinery-remnants",
