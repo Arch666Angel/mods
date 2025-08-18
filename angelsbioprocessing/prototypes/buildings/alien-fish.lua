@@ -1,3 +1,5 @@
+local simulations = require("prototypes.factoriopedia-simulations")
+
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-alien-fish-1"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-alien-fish-2"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["angels-alien-fish-3"] = {}
@@ -21,6 +23,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "angels-alien-fish-1-raw", count = 5 },
+    factoriopedia_simulation = simulations.factoriopedia_angels_alien_fish_1,
     max_health = 20,
     subgroup = "creatures",
     order = "xa",
@@ -48,6 +51,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "angels-alien-fish-2-raw", count = 5 },
+    factoriopedia_simulation = simulations.factoriopedia_angels_alien_fish_2,
     max_health = 20,
     subgroup = "creatures",
     order = "xb",
@@ -75,6 +79,7 @@ data:extend({
     icon_size = 32,
     flags = { "placeable-neutral", "not-on-map" },
     minable = { mining_time = 1, result = "angels-alien-fish-3-raw", count = 5 },
+    factoriopedia_simulation = simulations.factoriopedia_angels_alien_fish_3,
     max_health = 20,
     subgroup = "creatures",
     order = "xc",

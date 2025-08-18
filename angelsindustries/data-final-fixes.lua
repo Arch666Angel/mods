@@ -113,9 +113,6 @@ if angelsmods.industries.components then
   end
 end
 
---OTHER OVERRIDES
---require("prototypes.overrides.global-loaders")
-
 --TODO: actully fix techs with triggers
 for t, tech in pairs(data.raw.technology) do
   if tech.research_trigger == nil then --exclude triggered techs from giving a time

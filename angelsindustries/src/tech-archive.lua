@@ -143,17 +143,6 @@ function tech_archive:on_player_respawned(player_index)
       storage.is_lab_given = player.insert({ name = tech_archive.main_lab[0], count = 1 }) > 0
     end
   end
-
-  local force = player and player.force
-  if force then
-    local available = force.technologies["angels-hidden-ghosting"]
-        and force.technologies["angels-hidden-ghosting"].researched
-      or false
-    player.set_shortcut_available("toggle-ghosting", available)
-    if available then
-      player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
-    end
-  end
 end
 
 function tech_archive:on_entity_died(entity)

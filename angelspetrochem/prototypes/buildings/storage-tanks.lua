@@ -155,7 +155,7 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = { -1.5, -1.5 }, direction = defines.direction.north },
-        { position = { 1.5, 1.5 }, direction = defines.direction.west },
+        { position = { 1.5, 1.5 }, direction = defines.direction.east },
         { position = { 1.5, 1.5 }, direction = defines.direction.south },
         { position = { -1.5, -1.5 }, direction = defines.direction.west },
       },

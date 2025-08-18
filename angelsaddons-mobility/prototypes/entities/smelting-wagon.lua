@@ -2,6 +2,7 @@ local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].mini
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 local fixed_tint = { r = 119 / 255, g = 127 / 255, b = 113 / 255, a = 0.8 }
 local tintable_tint = { r = 1, g = 0.38, b = 0.0, a = 0.5 } -- alpha must be 0.5 due to base game...
@@ -39,6 +40,7 @@ funcs.generate_train_entities({
   max_health = 1000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_smelting_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   vertical_selection_shift = -0.796875,
