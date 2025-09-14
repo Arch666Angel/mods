@@ -578,5 +578,11 @@
     ["strand-casting-2", "angels-strand-casting-2"],
     ["strand-casting-3", "angels-strand-casting-3"],
     ["strand-casting-4", "angels-strand-casting-4"]
+  ],
+  "tile":
+  [
+    ["clay-bricks", "angels-tile-clay-brick"],
+    ["tile-concrete-brick", "angels-tile-concrete-brick"],
+    ["tile-reinforced-concrete-brick", "angels-tile-reinforced-concrete-brick"]
   ]
 }
