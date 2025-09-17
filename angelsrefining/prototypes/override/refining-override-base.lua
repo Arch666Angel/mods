@@ -30,3 +30,8 @@ for _, tnt_name in pairs({ "low-power", "entity-transfers" }) do
     end
   end
 end
+
+-- Fix uranium mining tech description, referencing uranium ore entity
+if data.raw.technology["uranium-mining"] then
+  data.raw.technology["uranium-mining"].localised_description = ""
+end

@@ -93,7 +93,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-plate-zin-2",
+        recipe = "angels-plate-zinc-2",
       },
     },
     unit = {

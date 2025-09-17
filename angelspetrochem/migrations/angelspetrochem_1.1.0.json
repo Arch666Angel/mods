@@ -4,8 +4,8 @@
     ["advanced-chemical-plant", "angels-advanced-chemical-plant"],
     ["advanced-chemical-plant-2", "angels-advanced-chemical-plant-2"],
     ["bob-overflow-valve", "angels-valve-overflow"],
-    ["bob-topup-valve", "angels-valve-underflow"],
-    ["bob-valve", "angels-valve-return"],
+    ["bob-topup-valve", "angels-valve-top-up"],
+    ["bob-valve", "angels-valve-one-way"],
     ["gas-refinery", "angels-gas-refinery"],
     ["gas-refinery-2", "angels-gas-refinery-2"],
     ["gas-refinery-3", "angels-gas-refinery-3"],
@@ -27,8 +27,8 @@
     ["steam-cracker-4", "angels-steam-cracker-4"],
     ["valve-inspector", "angels-valve-inspector"],
     ["valve-overflow", "angels-valve-overflow"],
-    ["valve-return", "angels-valve-return"],
-    ["valve-underflow", "angels-valve-underflow"]
+    ["valve-return", "angels-valve-one-way"],
+    ["valve-underflow", "angels-valve-top-up"]
   ],
   "fluid":
   [
@@ -112,8 +112,8 @@
     ["advanced-chemical-plant", "angels-advanced-chemical-plant"],
     ["advanced-chemical-plant-2", "angels-advanced-chemical-plant-2"],
     ["bob-overflow-valve", "angels-valve-overflow"],
-    ["bob-topup-valve", "angels-valve-underflow"],
-    ["bob-valve", "angels-valve-return"],
+    ["bob-topup-valve", "angels-valve-top-up"],
+    ["bob-valve", "angels-valve-one-way"],
     ["catalyst-metal-blue", "angels-catalyst-metal-blue"],
     ["catalyst-metal-carrier", "angels-catalyst-metal-carrier"],
     ["catalyst-metal-green", "angels-catalyst-metal-green"],
@@ -238,8 +238,8 @@
     ["steam-cracker-4", "angels-steam-cracker-4"],
     ["valve-inspector", "angels-valve-inspector"],
     ["valve-overflow", "angels-valve-overflow"],
-    ["valve-return", "angels-valve-return"],
-    ["valve-underflow", "angels-valve-underflow"]
+    ["valve-return", "angels-valve-one-way"],
+    ["valve-underflow", "angels-valve-top-up"]
   ],
   "recipe":
   [
@@ -318,6 +318,9 @@
     ["angels-water-enrichment-2", "angels-liquid-water-semiheavy-2"],
     ["angels-water-enrichment-3", "angels-liquid-water-semiheavy-3"],
     ["angels-water-void-liquid-aqueous-sodium-hydroxide", "angels-water-void-angels-liquid-aqueous-sodium-hydroxide"],
+    ["bob-overflow-valve", "angels-valve-overflow"],
+    ["bob-topup-valve", "angels-valve-top-up"],
+    ["bob-valve", "angels-valve-one-way"],
     ["carbon-separation-1", "angels-gas-carbon-monoxide"],
     ["carbon-separation-2", "angels-gas-carbon-dioxide"],
     ["catalyst-steam-cracking-butane", "angels-gas-butadiene"],
@@ -613,8 +616,8 @@
     ["steam-cracking-oil-residual", "angels-steam-cracking-oil-residual"],
     ["valve-inspector", "angels-valve-inspector"],
     ["valve-overflow", "angels-valve-overflow"],
-    ["valve-return", "angels-valve-return"],
-    ["valve-underflow", "angels-valve-underflow"],
+    ["valve-return", "angels-valve-one-way"],
+    ["valve-underflow", "angels-valve-top-up"],
     ["water-gas-shift-1", "angels-water-gas-shift-1"],
     ["water-gas-shift-2", "angels-water-gas-shift-2"]
   ],

@@ -265,7 +265,7 @@
     ["angels-roll-steel-converting", "angels-plate-steel-2"],
     ["angels-roll-tin-converting", "angels-plate-tin-2"],
     ["angels-roll-titanium-converting", "angels-plate-titanium-2"],
-    ["angels-roll-zinc-converting", "angels-plate-zin-2"],
+    ["angels-roll-zinc-converting", "angels-plate-zinc-2"],
     ["angels-solder-smelting-1", "angels-liquid-molten-solder"],
     ["angels-solder-smelting-2", "angels-liquid-molten-solder-2"],
     ["angels-solder-smelting-3", "angels-liquid-molten-solder-3"],
@@ -578,5 +578,11 @@
     ["strand-casting-2", "angels-strand-casting-2"],
     ["strand-casting-3", "angels-strand-casting-3"],
     ["strand-casting-4", "angels-strand-casting-4"]
+  ],
+  "tile":
+  [
+    ["clay-bricks", "angels-tile-clay-brick"],
+    ["tile-concrete-brick", "angels-tile-concrete-brick"],
+    ["tile-reinforced-concrete-brick", "angels-tile-reinforced-concrete-brick"]
   ]
 }

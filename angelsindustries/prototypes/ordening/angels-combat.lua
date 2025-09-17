@@ -1,13 +1,16 @@
-data.raw["item-group"]["combat"].icons = {
-  {
-    icon = "__base__/graphics/item-group/military.png",
-    icon_size = 64,
-  },
-  {
-    icon = "__angelsrefininggraphics__/graphics/icons/void.png",
-    icon_size = 32,
-    scale = 64 / 32 * 0.35,
-    shift = { 20, -20 },
-  },
-}
+local move_item = angelsmods.functions.move_item
+
 data.raw["item-group"]["combat"].order = "la[angels]-f[warfare]-a"
+
+-------------------------------------------------------------------------------
+-- REPAIR PACKS ---------------------------------------------------------------
+-------------------------------------------------------------------------------
+move_item("repair-pack", "angels-tool", "a[repair-pack]-a", "repair-tool")
+
+if mods["boblogistics"] then
+  -- repair packs
+  move_item("bob-repair-pack-2", "angels-tool", "a[repair-pack]-b", "repair-tool")
+  move_item("bob-repair-pack-3", "angels-tool", "a[repair-pack]-c", "repair-tool")
+  move_item("bob-repair-pack-4", "angels-tool", "a[repair-pack]-d", "repair-tool")
+  move_item("bob-repair-pack-5", "angels-tool", "a[repair-pack]-e", "repair-tool")
+end

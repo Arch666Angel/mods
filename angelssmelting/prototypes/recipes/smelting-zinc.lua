@@ -272,7 +272,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-plate-zin-2",
+    name = "angels-plate-zinc-2",
     localised_name = { "item-name.angels-plate-zinc" },
     category = "advanced-crafting",
     subgroup = "angels-zinc-casting",

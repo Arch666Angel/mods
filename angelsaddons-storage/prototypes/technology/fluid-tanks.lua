@@ -9,7 +9,7 @@ if angelsmods.addons.storage.pressuretank then
   data:extend({
     {
       type = "technology",
-      name = "pressure-tanks",
+      name = "angels-pressure-tanks",
       icon = "__angelsaddons-storage__/graphics/technology/pressure-tank-tech.png",
       icon_size = 128,
       prerequisites = {

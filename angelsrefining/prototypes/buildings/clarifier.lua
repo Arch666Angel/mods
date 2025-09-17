@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-clarifier"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 67,  63), shadow_offset = util.by_pixel( 67,  63), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -62,6 +69,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.6 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-clarifier"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsrefininggraphics__/graphics/entity/clarifier/clarifier-base.png",

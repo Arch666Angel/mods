@@ -2,6 +2,7 @@ local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].mini
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
 local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
@@ -36,6 +37,7 @@ funcs.generate_train_entities({
   max_health = 1000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_crawler_bot_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },

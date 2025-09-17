@@ -269,8 +269,6 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("fission-reactor-equipment-3", "datacore-enhance-1")
       OV.remove_science_pack("fission-reactor-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-big-turret-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-6", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-6", "datacore-enhance-1")

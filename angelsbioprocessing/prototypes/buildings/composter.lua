@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-composter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 31.5,  27.75), shadow_offset = util.by_pixel( 31.5,  27.75), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -53,6 +60,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.01 * 60 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-composter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelsbioprocessinggraphics__/graphics/entity/composter/composter.png",

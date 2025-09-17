@@ -559,6 +559,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-ore-processing-4",
+      "space-science-pack",
     },
     effects = {
       {
@@ -574,6 +575,7 @@ data:extend({
         { "chemical-science-pack", 1 },
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 30,
     },

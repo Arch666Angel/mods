@@ -61,7 +61,7 @@ angelsmods.functions.allow_productivity("angels-plate-titanium-2")
 angelsmods.functions.allow_productivity("angels-plate-tungsten")
 
 angelsmods.functions.allow_productivity("angels-plate-zinc")
-angelsmods.functions.allow_productivity("angels-plate-zin-2")
+angelsmods.functions.allow_productivity("angels-plate-zinc-2")
 
 angelsmods.functions.allow_productivity("angels-clay-brick")
 angelsmods.functions.allow_productivity("angels-concrete")

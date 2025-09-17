@@ -215,9 +215,9 @@ if mods["bobplates"] then
   OV.global_replace_item("bob-salt", "angels-solid-salt")
   angelsmods.functions.hide("bob-salt")
 
-  move_item("bob-heavy-water", "angels-water-treatment-fluid", "eb")
-  move_item("bob-deuterium", "angels-petrochem-basic-fluids", "i")
-  move_item("bob-heavy-water", "angels-water-treatment", "b[bob-heavy-water]")
+  move_item("bob-heavy-water", "angels-water-treatment-fluid", "eb", "fluid")
+  move_item("bob-deuterium", "angels-petrochem-basic-fluids", "i", "fluid")
+  move_item("bob-heavy-water", "angels-water-treatment", "b[bob-heavy-water]", "recipe")
   move_item("bob-heavy-water-electrolysis", "angels-petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
 end
 

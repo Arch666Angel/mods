@@ -44,7 +44,7 @@ if angelsmods.trigger.artifacts["red"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-copper", amount = 1 },
-          -- {type="item", name="ruby-4", amount=1},
+          -- {type="item", name="bob-ruby-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-red", amount = 1 },
@@ -197,7 +197,7 @@ if angelsmods.trigger.artifacts["yellow"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-gold", amount = 1 },
-          -- {type="item", name="diamond-4", amount=1},
+          -- {type="item", name="bob-diamond-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-yellow", amount = 1 },
@@ -350,7 +350,7 @@ if angelsmods.trigger.artifacts["orange"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-tungsten", amount = 1 },
-          -- {type="item", name="topaz-4", amount=1},
+          -- {type="item", name="bob-topaz-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-orange", amount = 1 },
@@ -503,7 +503,7 @@ if angelsmods.trigger.artifacts["blue"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-cobalt", amount = 1 },
-          -- {type="item", name="sapphire-4", amount=1},
+          -- {type="item", name="bob-sapphire-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-blue", amount = 1 },
@@ -657,7 +657,7 @@ if angelsmods.trigger.artifacts["purple"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-titanium", amount = 1 },
-          -- {type="item", name="amethyst-4", amount=1},
+          -- {type="item", name="bob-amethyst-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-purple", amount = 1 },
@@ -811,7 +811,7 @@ if angelsmods.trigger.artifacts["green"] then
         ingredients = {
           { type = "item", name = "angels-seeded-dish", amount = 1 },
           { type = "item", name = "angels-paste-zinc", amount = 1 },
-          -- {type="item", name="emerald-4", amount=1},
+          -- {type="item", name="bob-emerald-4", amount=1},
         },
         results = {
           { type = "item", name = "angels-alien-pre-artifact-green", amount = 1 },

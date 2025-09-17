@@ -6,7 +6,7 @@ if angelsmods.addons.storage.warehouses then
       icon = "__angelsaddons-storage__/graphics/technology/warehouses.png",
       icon_size = 128,
       prerequisites = {
-        (angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos) and "ore-silos" or "steel-processing",
+        (angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos) and "angels-ore-silos" or "steel-processing",
       },
       effects = {
         {

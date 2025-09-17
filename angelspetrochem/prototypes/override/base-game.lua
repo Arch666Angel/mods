@@ -1,6 +1,9 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
+-- Restore the 1:1 water to steam ratio
+data.raw.fluid["water"].heat_capacity = "0.2kJ"
+
 -------------------------------------------------------------------------------
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -183,17 +186,22 @@ angelsmods.functions.move_item(
   "capsule"
 )
 angelsmods.functions.move_item("cliff-explosives", "angels-petrochem-solids-2", "a[explosives]-d", "recipe")
+
 --hide disabled vanilla recipes
 OV.hide_recipe({
   "basic-oil-processing",
   "advanced-oil-processing",
-  "angels-solid-fuel-from-light-oil",
-  "angels-solid-fuel-from-petroleum-gas",
-  "angels-solid-fuel-from-heavy-oil",
+  "solid-fuel-from-light-oil",
+  "solid-fuel-from-petroleum-gas",
+  "solid-fuel-from-heavy-oil",
   "light-oil-cracking",
   "heavy-oil-cracking",
   "sulfuric-acid",
 })
+OV.remove_unlock("flammables", "solid-fuel-from-petroleum-gas")
+OV.remove_unlock("flammables", "solid-fuel-from-light-oil")
+OV.remove_unlock("flammables", "solid-fuel-from-heavy-oil")
+
 -------------------------------------------------------------------------------
 -- EXPLOSIVES -----------------------------------------------------------------
 -------------------------------------------------------------------------------

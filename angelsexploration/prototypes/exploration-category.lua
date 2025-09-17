@@ -52,8 +52,8 @@ data:extend({
       },
       {
         icon = "__angelsexplorationgraphics__/graphics/icons/void.png",
-        icon_size = 32,
-        scale = 64 / 32 * 0.35,
+        icon_size = 64,
+        scale = 0.35,
         shift = { 20, -20 },
       },
     },

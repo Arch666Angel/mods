@@ -113,6 +113,17 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
         results = {
           { type = "item", name = "bob-bronze-alloy", amount = 4 },
         },
+        icons = angelsmods.functions.add_icon_layer(
+          {
+            {
+              icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
+              icon_size = 32,
+            }
+          },
+          angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"),
+          { -10, -10 },
+          0.4375
+        ),
         order = "a[bronze]-b[bronze-alloy]",
       },
       --TECH
@@ -215,8 +226,8 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
     OV.remove_prereq("bob-tungsten-alloy-processing", "bob-alloy-processing")
     OV.remove_prereq("bob-zinc-processing", "bob-alloy-processing")
     if mods["bobpower"] then
-      OV.remove_prereq("fluid-generator-1", "bob-alloy-processing")
-      OV.add_prereq("fluid-generator-1", "angels-bronze-smelting-1")
+      OV.remove_prereq("bob-fluid-generator-1", "bob-alloy-processing")
+      OV.add_prereq("bob-fluid-generator-1", "angels-bronze-smelting-1")
     end
   end
 end

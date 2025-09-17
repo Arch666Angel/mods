@@ -63,6 +63,17 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         results = {
           { type = "item", name = "bob-invar-alloy", amount = 4 },
         },
+        icons = angelsmods.functions.add_icon_layer(
+          {
+            {
+              icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png",
+              icon_size = 32,
+            }
+          },
+          angelsmods.functions.get_object_icons("angels-liquid-molten-invar"),
+          { -10, -10 },
+          0.4375
+        ),
         order = "d[invar]-b[invar-alloy]",
       },
       --TECH

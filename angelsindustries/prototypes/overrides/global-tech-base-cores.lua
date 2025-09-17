@@ -139,17 +139,14 @@ if angelsmods.industries.tech then
   AI.core_replace("angels-components-cabling-4", "energy", "logistic")
   AI.core_replace("angels-components-cabling-5", "energy", "logistic")
   OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
-  OV.set_science_pack("angels-yellow-loader", "datacore-logistic-1", 2)
-  OV.set_science_pack("angels-red-loader", "datacore-logistic-1", 2)
-  OV.set_science_pack("angels-blue-loader", "datacore-logistic-1", 2)
   AI.core_replace("angels-rocket-ion-thruster", "war", "logistic")
   -- MOBILITY ADDONS
   if mods["angelsaddons-storage"] then
     if angelsmods.addons.storage.pressuretank then
-      OV.set_science_pack("pressure-tanks", "datacore-logistic-1", 2)
+      OV.set_science_pack("angels-pressure-tanks", "datacore-logistic-1", 2)
     end
     if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
-      AI.core_replace("ore-silos", "processing", "logistic")
+      AI.core_replace("angels-ore-silos", "processing", "logistic")
     end
   end
 

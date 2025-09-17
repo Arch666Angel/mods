@@ -27,6 +27,13 @@ local function angels_chemical_plant_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -67,6 +74,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 1,
@@ -191,6 +200,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 2,
@@ -315,6 +326,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "350kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 3,
@@ -438,6 +451,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
     module_slots = 4,

@@ -13,25 +13,25 @@ if mods["boblogistics"] then
     "angels-fluid-tanks",
     "b[medium-tank]-a[mk1]-b[all-corners]"
   )
-  angelsmods.functions.move_item("storage-tank-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-a[regular]")
+  angelsmods.functions.move_item("bob-storage-tank-2", "angels-fluid-tanks", "b[medium-tank]-b[mk2]-a[regular]")
   angelsmods.functions.move_item(
     "bob-storage-tank-all-corners-2",
     "angels-fluid-tanks",
     "b[medium-tank]-b[mk2]-b[all-corners]"
   )
-  angelsmods.functions.move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-a[regular]")
+  angelsmods.functions.move_item("bob-storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-c[mk3]-a[regular]")
   angelsmods.functions.move_item(
     "bob-storage-tank-all-corners-3",
     "angels-fluid-tanks",
     "b[medium-tank]-c[mk3]-b[all-corners]"
   )
-  angelsmods.functions.move_item("storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
+  angelsmods.functions.move_item("bob-storage-tank-3", "angels-fluid-tanks", "b[medium-tank]-d[mk3]-a[regular]")
   angelsmods.functions.move_item(
     "bob-storage-tank-all-corners-3",
     "angels-fluid-tanks",
     "b[medium-tank]-d[mk3]-b[all-corners]"
   )
-  angelsmods.functions.move_item("storage-tank-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-a[regular]")
+  angelsmods.functions.move_item("bob-storage-tank-4", "angels-fluid-tanks", "b[medium-tank]-e[mk4]-a[regular]")
   angelsmods.functions.move_item(
     "bob-storage-tank-all-corners-4",
     "angels-fluid-tanks",

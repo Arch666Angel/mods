@@ -7,43 +7,12 @@ if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
 end
 
 if mods["bobplates"] then
-  -- CATEGORY
-  if data.raw["item-group"]["bob-gems"] then
-    if angelsmods.industries and angelsmods.industries.overhaul then
-      -- gems group
-      data.raw["item-group"]["bob-gems"].icon = nil
-      data.raw["item-group"]["bob-gems"].icon_size = nil
-      data.raw["item-group"]["bob-gems"].icons = {
-        {
-          icon = "__bobplates__/graphics/icons/technology/gems.png",
-          icon_size = 64,
-        },
-        {
-          icon = "__angelsrefininggraphics__/graphics/icons/bobs-logo.png",
-          icon_size = 1080,
-          scale = 64 / 1080 * 0.35,
-          shift = { 20, -20 },
-        },
-      }
-      data.raw["item-group"]["bob-gems"].order = "lb[bobs]-c[gems]"
-    end
-
-    -- gems subgroups
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].group = "bob-gems"
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].order = "7"
-      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-splinter"].order
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].group = "bob-gems"
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].order = "7"
-      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-shard"].order
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].group = "bob-gems"
-    data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].order = "7"
-      .. data.raw["item-subgroup"]["angels-bio-biter-processing-crystal-full"].order
-
-    move_item("angels-crystal-grindstone", "angels-bio-biter-processing-crystal-splinter", "d")
-    move_item("angels-crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
-  end
-
   -- GEMS
+  for _, subgroup in pairs({ "bob-gems-ore", "bob-gems-raw", "bob-gems-cut", "bob-gems-polished" }) do
+    if data.raw["item-subgroup"][subgroup] then
+      data.raw["item-subgroup"][subgroup].group = "angels-resource-refining"
+    end
+  end
   OV.add_prereq("angels-bio-processing-alien-3", "bob-gem-processing-2")
 
   -- CRYSTALS

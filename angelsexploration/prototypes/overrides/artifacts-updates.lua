@@ -280,7 +280,6 @@ if alien_technology then
     bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-5" or nil,
     bobmods.equipment and "bob-vehicle-battery-equipment-5" or nil,
     bobmods.equipment and "bob-vehicle-energy-shield-equipment-5" or nil,
-    bobmods.equipment and "bob-vehicle-big-turret-equipment-5" or nil,
   }) do
     OV.remove_prereq(tech_name, "bob-alien-research")
     OV.add_prereq(tech_name, "bob-alien-research-purple")
@@ -398,7 +397,6 @@ if alien_technology then
     bobmods.equipment and "bob-vehicle-fusion-reactor-equipment-6" or nil,
     bobmods.equipment and "bob-vehicle-battery-equipment-6" or nil,
     bobmods.equipment and "bob-vehicle-energy-shield-equipment-6" or nil,
-    bobmods.equipment and "bob-vehicle-big-turret-equipment-6" or nil,
   }) do
     OV.remove_prereq(tech_name, "bob-alien-research")
     OV.add_prereq(tech_name, "bob-alien-research-green")

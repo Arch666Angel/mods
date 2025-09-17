@@ -629,7 +629,7 @@ function gathering_turret:on_remove_entity(removed_entity)
   end
 end
 
-function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealth)
+function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealt)
   -- Event filter 1: damage to (inactive) gathering turret with 0 health remaining
   if damaged_entity.name == self:get_turret_name() and damaged_entity.active == false then
     damaged_entity.active = true
@@ -640,7 +640,7 @@ function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw
     and damaging_entity
     and damaging_entity.name == self:get_turret_name()
   then
-    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position, raw_damage_dealth)
+    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position, raw_damage_dealt)
   end
 end
 

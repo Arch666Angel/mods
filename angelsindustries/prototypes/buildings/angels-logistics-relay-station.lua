@@ -1,12 +1,12 @@
-circuit_connector_definitions["angels-relay-station-1"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 12), show_shadow = false },
-  })
-
-circuit_connector_definitions["angels-relay-station-2"] =
-  circuit_connector_definitions.create_vector(universal_connector_template, {
-    { variation = 26, main_offset = util.by_pixel(8, 0), shadow_offset = util.by_pixel(10, 12), show_shadow = false },
-  })
+circuit_connector_definitions["angels-relay-station"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.625,  4.625), shadow_offset = util.by_pixel(-3.625,  4.625), show_shadow = true }
+)
+circuit_connector_definitions["angels-relay-station-2"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  4, main_offset = util.by_pixel(-3.625,  21.25), shadow_offset = util.by_pixel(-3.625,  21.25), show_shadow = true }
+)
+circuit_connector_definitions["angels-relay-station-3"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation = 25, main_offset = util.by_pixel( 8.125,  11), shadow_offset = util.by_pixel( 8.125,  11), show_shadow = true }
+)
 
 data:extend({
   {
@@ -44,6 +44,8 @@ data:extend({
     charging_energy = "50kW",
     recharge_minimum = "1MJ",
     energy_usage = "50kW",
+    circuit_connector = circuit_connector_definitions["angels-relay-station"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     logistics_radius = 4.5,
     construction_radius = 0,
     charge_approach_distance = 2,
@@ -98,9 +100,6 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-relay-station-1"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-relay-station-1"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
     default_available_construction_output_signal = { type = "virtual", name = "signal-Z" },
@@ -141,6 +140,8 @@ data:extend({
     charging_energy = "100kW",
     recharge_minimum = "2.5MJ",
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-relay-station-2"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     logistics_radius = 10,
     logistics_connection_distance = 10 * 1.5,
     construction_radius = 0,
@@ -196,9 +197,6 @@ data:extend({
     spawn_and_station_height = 0,
     draw_logistic_radius_visualization = true,
     draw_construction_radius_visualization = true,
-    circuit_wire_connection_point = circuit_connector_definitions["angels-relay-station-2"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-relay-station-2"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
     default_available_construction_output_signal = { type = "virtual", name = "signal-Z" },
@@ -239,6 +237,8 @@ data:extend({
     charging_energy = "200kW",
     recharge_minimum = "7.5MJ",
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-relay-station-3"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     logistics_radius = 15,
     logistics_connection_distance = 10 * 3,
     construction_radius = 0,
@@ -309,9 +309,6 @@ data:extend({
         sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 },
       },
     },
-    circuit_wire_connection_point = circuit_connector_definitions["angels-relay-station-2"].points,
-    circuit_connector_sprites = circuit_connector_definitions["angels-relay-station-2"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = { type = "virtual", name = "signal-X" },
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
     default_available_construction_output_signal = { type = "virtual", name = "signal-Z" },

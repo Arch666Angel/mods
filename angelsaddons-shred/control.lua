@@ -47,23 +47,4 @@ script.on_init(function()
       entity.minable = false
     end
   end
-  --[[
-  if remote.interfaces["silo_script"] and settings.startup["deco-shred-create-shrine-offer"].value then
-    for _,decoName in pairs({
-      "shred",
-      "santa",
-      "inter",
-      "voske",
-      "east",
-    }) do
-      local offerName = "offering-"..decoName.."-1"
-      if game.item_prototypes[offerName] then
-
-        remote.call("silo_script", "add_tracked_item", offerName)
-
-      end
-    end
-  end
-  ]]
-  --
 end)

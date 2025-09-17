@@ -17,6 +17,13 @@ local function angels_air_filter_fluid_boxes()
   }
 end
 
+circuit_connector_definitions["angels-air-filter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  62.625), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -62,6 +69,8 @@ data:extend({
       emissions_per_minute = { pollution = -6 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
@@ -124,6 +133,8 @@ data:extend({
       emissions_per_minute = { pollution = -7.2 },
     },
     energy_usage = "175kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
@@ -185,6 +196,8 @@ data:extend({
       emissions_per_minute = { pollution = -8.4 },
     },
     energy_usage = "225kW",
+    circuit_connector = circuit_connector_definitions["angels-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",

@@ -227,8 +227,6 @@ data:extend({
       frame_count = 33,
       priority = "high",
       blend_mode = "additive",
-      axially_symmetrical = false,
-      direction_count = 1,
       animation_speed = 2,
       shift = { 0, 0 },
     },
@@ -260,7 +258,6 @@ data:extend({
     ammo_type = {
       {
         source_type = "default",
-        category = "bio",
         target_type = "position",
         clamp_position = true,
         action = {

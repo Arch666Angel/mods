@@ -6,7 +6,6 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
     local recipe = {
       name = string.format(recipe_bace_name, ore_index),
       results = { { "!!" } },
-      subgroup = "bob-gems-crystallization",
     }
     local recipe_used = false
     local ore_name = type(ore_data) == "table" and ore_data[1] or ore_data
@@ -25,12 +24,6 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
       recipe_used = true
     end
     if recipe_used then
-      if not data.raw["item-subgroup"][recipe.subgroup] then
-        local item_group = data.raw["item-subgroup"]["bob-gems-ore"]
-        item_group.order = "2-2"
-        data:extend({ { type = "item-subgroup", name = recipe.subgroup, group = item_group.group, order = "2-1" } })
-      end
-      data.raw.item[ore_name].subgroup = recipe.subgroup
       data.raw.item[ore_name].order = recipe.order
       table.insert(recipes, recipe)
     else
@@ -38,40 +31,6 @@ local create_single_gem_crystallization = function(recipe_bace_name, ores)
     end
   end
   return recipes
-end
-
--------------------------------------------------------------------------------
---GEM SORTING -----------------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["bobplates"] then
-  angelsmods.functions.move_item("bob-gem-ore", "bob-gems-crystallization", "g")
-  angelsmods.functions.hide("bob-gem-ore")
-  --[[if mods["bobores"] and settings.startup["bobmods-ores-unsortedgemore"].value == true then
-    data:extend(
-      {
-        {
-          type = "recipe",
-          name = "sort-gem-ore",
-          energy_required = 1,
-          ingredients = {
-            {type = "item", name = "angels-crystal-dust", amount = 5}
-          },
-          results = {
-            {type = "item", name = "ruby-ore", amount = 1, probability = bobmods.gems.RubyRatio},
-            {type = "item", name = "sapphire-ore", amount = 1, probability = bobmods.gems.SapphireRatio},
-            {type = "item", name = "emerald-ore", amount = 1, probability = bobmods.gems.EmeraldRatio},
-            {type = "item", name = "amethyst-ore", amount = 1, probability = bobmods.gems.AmethystRatio},
-            {type = "item", name = "topaz-ore", amount = 1, probability = bobmods.gems.TopazRatio},
-            {type = "item", name = "diamond-ore", amount = 1, probability = bobmods.gems.DiamondRatio}
-          },
-          subgroup = "bob-gems-crystallization",
-          icon = "__bobores__/graphics/icons/gem-ore.png",
-          icon_size = 32,
-          order = "g"
-        }
-      }
-    )
-  end]]
 end
 
 -------------------------------------------------------------------------------
@@ -110,7 +69,6 @@ else
 
   if mods["bobores"] then
     angelsmods.functions.hide({
-      "bob-gem-ore",
       "bob-ruby-ore",
       "bob-sapphire-ore",
       "bob-emerald-ore",

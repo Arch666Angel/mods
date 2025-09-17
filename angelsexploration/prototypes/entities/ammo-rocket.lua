@@ -85,7 +85,6 @@ data:extend({
   -- flags = {"goes-to-main-inventory"},
   -- ammo_type =
   -- {
-  -- category = "rocket",
   -- action =
   -- {
   -- type = "direct",

@@ -45,7 +45,7 @@ end
 -------------------------------------------------------------------------------
 -- Behaviour functions, mostly event handlers
 -------------------------------------------------------------------------------
-function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealth)
+function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealt)
   if
     damaged_entity.name == self:get_bike_name()
     and damaging_entity
@@ -60,23 +60,26 @@ function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damag
       driver = driver.character
     end
     if driver and driver.valid then
-      driver.damage(raw_damage_dealth * damage_multiplier, damaged_entity.force, "impact", damaged_entity)
+      driver.damage(raw_damage_dealt * damage_multiplier, damaged_entity.force, "impact", damaged_entity)
     end
 
     -- damage passenger
+    if not damaged_entity.valid then
+      return
+    end    
     local passenger = damaged_entity.get_passenger()
     if passenger and passenger.object_name == "LuaPlayer" then
       passenger = passenger.character
     end
     if passenger and passenger.valid then
-      passenger.damage(raw_damage_dealth * damage_multiplier, damaged_entity.force, "impact", damaged_entity)
+      passenger.damage(raw_damage_dealt * damage_multiplier, damaged_entity.force, "impact", damaged_entity)
     end
 
     -- damage vehicle (more)
     local bike_damage_reduction = 15
     if damage_multiplier - 1 - bike_damage_reduction > 0 then
       damaged_entity.damage(
-        raw_damage_dealth * (damage_multiplier - 1 - bike_damage_reduction),
+        raw_damage_dealt * (damage_multiplier - 1 - bike_damage_reduction),
         damaged_entity.force,
         "impact"
       )

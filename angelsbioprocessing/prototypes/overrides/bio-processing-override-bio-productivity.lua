@@ -1,8 +1,6 @@
 local module_categories = {}
 for _, category in pairs(data.raw["module-category"]) do
-  if category.name ~= excluded then
-    table.insert(module_categories, category.name)
-  end
+  table.insert(module_categories, category.name)
 end
 
 -- Bio Productivity

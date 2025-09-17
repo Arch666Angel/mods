@@ -40,6 +40,7 @@ data:extend({
         percent = 30,
       },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",

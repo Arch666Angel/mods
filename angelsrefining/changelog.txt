@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.0
+Version: 2.0.0
 Date: ???
   Bugfixes:
     - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)
@@ -12,6 +12,9 @@ Date: ???
     - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
     - Updated for Factorio 2.0 (994)
     - Made heavy offshore pump ignore mining productivity research (1045)
+    - Reworked milling drum recipes so that milling drums can be hand crafted (1105)
+    - Added circuit connectors to all machines (1114)
+    - Increased the size of Thermal water bores. Pipes will need to be reconnected. (1113)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.7
 Date: 21.02.2024

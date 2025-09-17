@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-bio-processor"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  3, main_offset = util.by_pixel(-11.5, -30.875), shadow_offset = util.by_pixel(-11.5, -30.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-11.5, -30.875), shadow_offset = util.by_pixel(-11.5, -30.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-11.5, -30.875), shadow_offset = util.by_pixel(-11.5, -30.875), show_shadow = true },
+  { variation =  3, main_offset = util.by_pixel(-11.5, -30.875), shadow_offset = util.by_pixel(-11.5, -30.875), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -33,6 +40,8 @@ data:extend({
       emissions_per_minute = { pollution = 0.03 * 60 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-processor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
     graphics_set = {
       animation = {

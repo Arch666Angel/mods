@@ -30,7 +30,14 @@ local function angels_strand_casting_machine_fluid_boxes()
     },
   }
 end
-    
+
+circuit_connector_definitions["angels-strand-casting-machine"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+  { variation =  5, main_offset = util.by_pixel( 50,  11.625), shadow_offset = util.by_pixel( 50,  11.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -77,6 +84,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -198,6 +207,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -319,6 +330,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
@@ -439,6 +452,8 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-strand-casting-machine"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {

@@ -7,15 +7,19 @@ local move_item = angelsmods.functions.move_item
 if angelsmods.refining then
   move_item("angels-liquifier", "angels-petrochem-buildings-electrolyser", "c[liquifier]-a")
   data.raw["item"]["angels-liquifier"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["assembling-machine"]["angels-liquifier"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("angels-liquifier-2", "angels-petrochem-buildings-electrolyser", "c[liquifier]-b")
   data.raw["item"]["angels-liquifier-2"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["assembling-machine"]["angels-liquifier-2"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("angels-liquifier-3", "angels-petrochem-buildings-electrolyser", "c[liquifier]-c")
   data.raw["item"]["angels-liquifier-3"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["assembling-machine"]["angels-liquifier-3"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("angels-liquifier-4", "angels-petrochem-buildings-electrolyser", "c[liquifier]-d")
   data.raw["item"]["angels-liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["assembling-machine"]["angels-liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
 
   OV.patch_recipes({
     { name = "angels-gas-carbon-monoxide", category = "angels-liquifying" },

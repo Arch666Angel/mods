@@ -61,8 +61,6 @@ if angelsmods.trigger.paper then
   angelsmods.trigger.water_red_waste = true
   angelsmods.trigger.early_chemical_furnace = true
 end
-angelsmods.trigger.crystals_full = (not angelsmods.functions.is_special_vanilla())
-  or (mods["bobmodules"] and true or false)
 
 -- set triggers for other angel mods
 require("prototypes.bio-processing-triggers")

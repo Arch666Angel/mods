@@ -394,6 +394,10 @@ data:extend({
       { type = "fluid", name = "angels-gas-oxygen", amount = 100 },
     },
     main_product = "angels-solid-salt",
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        { "angels-solid-sodium-hypochlorite" },
+        "angels-solid-salt"
+    ),
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({ "angels-gas-oxygen", AF.fluid_color("NaOCl") }),
     order = "g[solid-sodium-hypochlorite-decomposition]",

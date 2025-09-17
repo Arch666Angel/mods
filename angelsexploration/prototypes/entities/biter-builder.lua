@@ -623,7 +623,6 @@ local function make_projectile_beam(pro_app, pro_dmg)
     flags = { "not-on-map" },
     width = 0.5,
     damage_interval = pro_dmg.cooldown,
-    graphics_set = {},
     action = {
       type = "direct",
       action_delivery = {
@@ -636,93 +635,93 @@ local function make_projectile_beam(pro_app, pro_dmg)
         },
       },
     },
-    start = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
-      line_length = 4,
-      width = 94,
-      height = 66,
-      frame_count = 16,
-      axially_symmetrical = false,
-      direction_count = 1,
-      shift = { 0.53125, 0 },
-      scale = 0.5,
-    },
-    ending = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
-      line_length = 4,
-      width = 91,
-      height = 93,
-      frame_count = 16,
-      axially_symmetrical = false,
-      direction_count = 1,
-      shift = { -0.078125, -0.046875 },
-      scale = 0.5,
-    },
-    head = {
-      filename = "__base__/graphics/entity/beam/beam-head.png",
-      line_length = 16,
-      width = 45,
-      height = 39,
-      frame_count = 16,
-      animation_speed = 0.5,
-      blend_mode = "additive-soft",
-    },
-    tail = {
-      filename = "__base__/graphics/entity/beam/beam-tail.png",
-      line_length = 16,
-      width = 45,
-      height = 39,
-      frame_count = 16,
-      blend_mode = "additive-soft",
-    },
-    body = {
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-1.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-2.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-3.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-4.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-5.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-6.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
+    graphics_set = {
+      beam = {
+        start = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
+          line_length = 4,
+          width = 94,
+          height = 66,
+          frame_count = 16,
+          shift = { 0.53125, 0 },
+          scale = 0.5,
+        },
+        ending = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
+          line_length = 4,
+          width = 91,
+          height = 93,
+          frame_count = 16,
+          shift = { -0.078125, -0.046875 },
+          scale = 0.5,
+        },
+        head = {
+          filename = "__base__/graphics/entity/beam/beam-head.png",
+          line_length = 16,
+          width = 45,
+          height = 39,
+          frame_count = 16,
+          animation_speed = 0.5,
+          blend_mode = "additive-soft",
+        },
+        tail = {
+          filename = "__base__/graphics/entity/beam/beam-tail.png",
+          line_length = 16,
+          width = 45,
+          height = 39,
+          frame_count = 16,
+          blend_mode = "additive-soft",
+        },
+        body = {
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-1.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-2.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-3.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-4.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-5.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-6.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+        },
       },
     },
     working_sound = {
@@ -870,7 +869,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 210,
             height = 224,
             frame_count = 26,
@@ -881,7 +879,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 266,
             height = 188,
             frame_count = 26,
@@ -897,7 +894,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 174,
             height = 150,
             frame_count = 29,
@@ -908,7 +904,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 238,
             height = 266,
             frame_count = 29,
@@ -924,7 +919,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 236,
             height = 208,
             frame_count = 29,
@@ -935,7 +929,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 214,
             height = 140,
             frame_count = 29,
@@ -951,7 +944,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 252,
             height = 154,
             frame_count = 24,
@@ -962,7 +954,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 248,
             height = 160,
             frame_count = 24,
@@ -981,7 +972,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 210,
             height = 224,
             frame_count = 26,
@@ -992,7 +982,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 266,
             height = 188,
             frame_count = 26,
@@ -1008,7 +997,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 174,
             height = 150,
             frame_count = 29,
@@ -1019,7 +1007,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 238,
             height = 266,
             frame_count = 29,
@@ -1035,7 +1022,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 236,
             height = 208,
             frame_count = 29,
@@ -1046,7 +1032,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 214,
             height = 140,
             frame_count = 29,
@@ -1062,7 +1047,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
             width = 252,
             height = 154,
             frame_count = 24,
@@ -1073,7 +1057,6 @@ local function make_projectile_stream(pro_app, pro_dmg)
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4-shadow.png",
             line_length = 8,
-            direction_count = 1,
             width = 248,
             height = 160,
             frame_count = 24,
@@ -1247,7 +1230,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.damage_modifier = nil
     data_dmg.warmup = nil
     data_dmg.ammo = {
-      category = "melee",
       target_type = "entity",
       action = {
         type = "direct",
@@ -1277,7 +1259,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.damage_modifier = nil
     data_dmg.warmup = nil
     data_dmg.ammo = {
-      category = "melee",
       target_type = "entity",
       action = {
         type = "direct",
@@ -1309,7 +1290,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.slow_seconds = 2
     data_dmg.vehicle_friction_modifier = 1.5
     data_dmg.ammo = {
-      category = "biological",
       action = {
         type = "direct",
         action_delivery = {
@@ -1325,7 +1305,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.type = "beam"
     data_dmg.category = "electric"
     data_dmg.ammo = {
-      category = "electric",
       action = {
         type = "direct",
         action_delivery = {

@@ -64,6 +64,13 @@ local function hydropipepictures2()
   }
 end
 
+circuit_connector_definitions["angels-hydro-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -107,6 +114,8 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -348,6 +357,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -418,6 +428,8 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -659,6 +671,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -728,6 +741,8 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -969,6 +984,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",

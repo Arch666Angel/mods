@@ -253,7 +253,7 @@ if angelsmods.industries.tech then
       AI.pack_replace("angels-logistic-warehouses", "blue", "yellow")
     end
     if angelsmods.addons.storage.silos then
-      AI.pack_replace("logistic-silos", "blue", "yellow")
+      AI.pack_replace("angels-logistic-silos", "blue", "yellow")
     end
   end
 

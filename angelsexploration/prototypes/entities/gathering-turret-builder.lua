@@ -58,8 +58,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
           priority = "high",
           width = 150,
           height = 118,
-          axially_symmetrical = false,
-          direction_count = 1,
           frame_count = 1,
           shift = modify_shift(util.by_pixel(0.5, -1), inputs.scale, inputs.shift),
           scale = modify_scale(0.5, inputs.scale),
@@ -70,8 +68,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
           line_length = 1,
           width = 122,
           height = 102,
-          axially_symmetrical = false,
-          direction_count = 1,
           frame_count = 1,
           shift = modify_shift(util.by_pixel(0, -4.5), inputs.scale, inputs.shift),
           apply_runtime_tint = inputs.apply_runtime_tint or false,
@@ -92,7 +88,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
           priority = "high",
           width = 138,
           height = 104,
-          direction_count = 1,
           frame_count = 1,
           shift = modify_shift(util.by_pixel(-0.5, 2), inputs.scale, inputs.shift),
           scale = modify_scale(0.5, inputs.scale),
@@ -103,7 +98,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
           width = 132,
           height = 82,
           draw_as_shadow = true,
-          direction_count = 1,
           frame_count = 1,
           shift = modify_shift(util.by_pixel(6, 3), inputs.scale, inputs.shift),
           scale = modify_scale(0.5, inputs.scale),
@@ -117,9 +111,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
     priority = "very-low",
     width = 1,
     height = 1,
-    axially_symmetrical = true,
-    direction_count = 1,
-    frame_count = 1,
   }
 end
 
@@ -133,7 +124,6 @@ local function create_gathering_turret_extension(inputs)
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     direction_count = 4,
     shift = modify_shift(util.by_pixel(0, -32.5), inputs.scale, inputs.shift),
     scale = modify_scale(0.5, inputs.scale),
@@ -149,7 +139,6 @@ local function create_gathering_turret_extension_shadow(inputs)
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     direction_count = 4,
     draw_as_shadow = true,
     shift = modify_shift(util.by_pixel(47, 2.5), inputs.scale, inputs.shift),
@@ -167,7 +156,6 @@ local function create_gathering_turret_extension_mask(inputs)
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     apply_runtime_tint = true,
     direction_count = 4,
     shift = modify_shift(util.by_pixel(0, -43), inputs.scale, inputs.shift),
@@ -280,7 +268,6 @@ function angelsmods.functions.create_gathering_turret_beam_start(inputs)
     width = 94,
     height = 66,
     frame_count = 16,
-    direction_count = 1,
     shift = { 0.53125, 0 },
     tint = inputs.tint,
     scale = 0.5,
@@ -295,7 +282,6 @@ function angelsmods.functions.create_gathering_turret_beam_end(inputs)
     width = 91,
     height = 93,
     frame_count = 16,
-    direction_count = 1,
     shift = { -0.078125, -0.046875 },
     tint = inputs.tint,
     scale = 0.5,
@@ -389,6 +375,7 @@ function angelsmods.functions.create_gathering_turret_beam_body(inputs)
   }
 end
 
+-- TODO: Remove this? Currently unused
 function angelsmods.functions.create_gathering_turret_beam_light(inputs)
   return {
     start = angelsmods.functions.create_gathering_turret_beam_start(inputs),
@@ -399,6 +386,7 @@ function angelsmods.functions.create_gathering_turret_beam_light(inputs)
   }
 end
 
+-- TODO: Remove this? Currently unused
 function angelsmods.functions.create_gathering_turret_beam_ground_light(inputs)
   return {
     head = {

@@ -30,7 +30,6 @@ local create_spider_vehicle_body = function(entity_name, entity_scale)
     mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 },
     open_sound = { filename = "__base__/sound/spidertron/spidertron-door-open.ogg", volume = 0.35 },
     close_sound = { filename = "__base__/sound/spidertron/spidertron-door-close.ogg", volume = 0.4 },
-    sound_scaling_ratio = 0.6,
     working_sound = {
       sound = {
         filename = "__base__/sound/spidertron/spidertron-vox.ogg",

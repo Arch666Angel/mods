@@ -65,7 +65,6 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   OV.converter_fluid("bob-glycerol", "angels-liquid-glycerol")
   OV.disable_recipe({ "bob-glycerol" })
-  angelsmods.functions.disable_barreling_recipes("bob-glycerol")
 
   -----------------------------------------------------------------------------
   -- GUN COTTON ---------------------------------------------------------------

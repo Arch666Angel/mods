@@ -94,6 +94,7 @@ data:extend({
       { -- bottom placeholder layer
         {
           icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon_size = 128,
         },
       },
       angelsmods.functions.add_icon_layer(
@@ -105,14 +106,15 @@ data:extend({
         {
           {
             icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon_size = 128,
           },
           {
             icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon_size = 128,
           },
         }
       )
     ),
-    icon_size = 128,
     prerequisites = {
       "angels-thorium-power",
       "angels-water-chemistry-2",
@@ -152,6 +154,7 @@ data:extend({
       { -- bottom placeholder layer
         {
           icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon_size = 128,
         },
       },
       angelsmods.functions.add_icon_layer(
@@ -163,14 +166,15 @@ data:extend({
         {
           {
             icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon_size = 128,
           },
           {
             icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon_size = 128,
           },
         }
       )
     ),
-    icon_size = 128,
     prerequisites = {
       "angels-fusion-power-1",
       "space-science-pack",

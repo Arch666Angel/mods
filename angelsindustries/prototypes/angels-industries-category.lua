@@ -174,8 +174,8 @@ data:extend({
   {
     type = "item-subgroup",
     name = "angels-tool",
-    group = "angels-components",
-    order = "h[tools]",
+    group = "combat",
+    order = "a[repair-tool]",
   },
   {
     type = "item-subgroup",
@@ -494,7 +494,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "angels-chests-big",
-    group = "angels-logistics",
+    group = "logistics",
     order = "ab[chests-big]",
   },
   {

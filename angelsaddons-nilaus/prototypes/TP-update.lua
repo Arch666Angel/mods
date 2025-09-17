@@ -54,7 +54,6 @@ if mods["angelsbioprocessing"] and data.raw.item["angels-solid-paper"] then
         },
         type = "direct",
       },
-      category = "melee",
       target_type = "entity",
     },
     animation = compilatron.attack_parameters.animation,

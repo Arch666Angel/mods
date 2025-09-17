@@ -37,11 +37,11 @@ data:extend({
     energy_required = 1,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-egg-shell", amount = 2 },
-      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-bio-puffer-egg-shell-powder", amount = 2 },
-      { type = "item", name = "angels-milling-drum-used", amount = 1, ignored_by_productivity = 1 },
+      { type = "item", name = "angels-milling-drum", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
     },
     main_product = "angels-bio-puffer-egg-shell-powder",
     icon_size = 32,
@@ -1208,7 +1208,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-puffer-butchery-1",
-    localised_name = { "item-name.angels-bio-raw-meat" },
+    localised_name = { "recipe-name.angels-butchering", { "item-name.angels-bio-puffer-1" }  },
     category = "angels-bio-butchery",
     subgroup = "angels-bio-puffer-butchery",
     enabled = false,
@@ -1220,14 +1220,16 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-bio-puffer-1" },
+      "angels-bio-raw-meat"
+    ),
     order = "aa",
   },
   {
     type = "recipe",
     name = "angels-puffer-butchery-2",
-    localised_name = { "item-name.angels-bio-raw-meat" },
+    localised_name = { "recipe-name.angels-butchering", { "item-name.angels-bio-puffer-2" }  },
     category = "angels-bio-butchery",
     subgroup = "angels-bio-puffer-butchery",
     enabled = false,
@@ -1239,14 +1241,16 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-bio-puffer-2" },
+      "angels-bio-raw-meat"
+    ),
     order = "ab",
   },
   {
     type = "recipe",
     name = "angels-puffer-butchery-3",
-    localised_name = { "item-name.angels-bio-raw-meat" },
+    localised_name = { "recipe-name.angels-butchering", { "item-name.angels-bio-puffer-3" }  },
     category = "angels-bio-butchery",
     subgroup = "angels-bio-puffer-butchery",
     enabled = false,
@@ -1258,14 +1262,16 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-bio-puffer-3" },
+      "angels-bio-raw-meat"
+    ),
     order = "ac",
   },
   {
     type = "recipe",
     name = "angels-puffer-butchery-4",
-    localised_name = { "item-name.angels-bio-raw-meat" },
+    localised_name = { "recipe-name.angels-butchering", { "item-name.angels-bio-puffer-4" }  },
     category = "angels-bio-butchery",
     subgroup = "angels-bio-puffer-butchery",
     enabled = false,
@@ -1277,14 +1283,16 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-bio-puffer-4" },
+      "angels-bio-raw-meat"
+    ),
     order = "ad",
   },
   {
     type = "recipe",
     name = "angels-puffer-butchery-5",
-    localised_name = { "item-name.angels-bio-raw-meat" },
+    localised_name = { "recipe-name.angels-butchering", { "item-name.angels-bio-puffer-5" }  },
     category = "angels-bio-butchery",
     subgroup = "angels-bio-puffer-butchery",
     enabled = false,
@@ -1296,8 +1304,10 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-raw-meat", amount = 1 },
     },
-    icon = "__angelsbioprocessinggraphics__/graphics/icons/raw-meat.png",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+      { "angels-bio-puffer-5" },
+      "angels-bio-raw-meat"
+    ),
     order = "ae",
   },
   ---------------------------------------------------------------------------

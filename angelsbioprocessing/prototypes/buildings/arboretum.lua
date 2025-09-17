@@ -1,3 +1,17 @@
+circuit_connector_definitions["angels-bio-arboretum-1"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  8, main_offset = util.by_pixel(-66.125, -11.5), shadow_offset = util.by_pixel(-66.125, -11.5), show_shadow = true },
+  { variation =  8, main_offset = util.by_pixel(-66.125, -11.5), shadow_offset = util.by_pixel(-66.125, -11.5), show_shadow = true },
+  { variation =  8, main_offset = util.by_pixel(-66.125, -11.5), shadow_offset = util.by_pixel(-66.125, -11.5), show_shadow = true },
+  { variation =  8, main_offset = util.by_pixel(-66.125, -11.5), shadow_offset = util.by_pixel(-66.125, -11.5), show_shadow = true },
+})
+
+circuit_connector_definitions["angels-bio-generator"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.625,  24.375), shadow_offset = util.by_pixel(-4.625,  24.375), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.625,  24.375), shadow_offset = util.by_pixel(-4.625,  24.375), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.625,  24.375), shadow_offset = util.by_pixel(-4.625,  24.375), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.625,  24.375), shadow_offset = util.by_pixel(-4.625,  24.375), show_shadow = true },
+})
+
 data:extend({
   -- GENERATOR
   {
@@ -36,6 +50,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "angels-tree-temperate", "angels-tree" },
     crafting_speed = 0.5,
+    circuit_connector = circuit_connector_definitions["angels-bio-generator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -165,6 +181,8 @@ data:extend({
       emissions_per_minute = { pollution = -75 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-generator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -288,6 +306,8 @@ data:extend({
       emissions_per_minute = { pollution = -75 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-generator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -413,6 +433,8 @@ data:extend({
       emissions_per_minute = { pollution = -100 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-bio-arboretum-1"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

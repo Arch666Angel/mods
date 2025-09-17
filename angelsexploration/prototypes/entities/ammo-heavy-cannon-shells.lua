@@ -72,7 +72,6 @@ data:extend({
     flags = {},
     ammo_category = "cannon-shell",
     ammo_type = {
-      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -182,7 +181,6 @@ data:extend({
     flags = {},
     ammo_category = "cannon-shell",
     ammo_type = {
-      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -277,7 +275,6 @@ data:extend({
     flags = {},
     ammo_category = "cannon-shell",
     ammo_type = {
-      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",
@@ -387,7 +384,6 @@ data:extend({
     flags = {},
     ammo_category = "cannon-shell",
     ammo_type = {
-      category = "heavy-cannon-shell",
       target_type = "direction",
       action = {
         type = "direct",

@@ -753,6 +753,11 @@ data:extend({
     results = {
       { type = "item", name = "atomic-bomb", amount = 1 },
     },
+    crafting_machine_tint = {
+      primary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+      secondary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+      tertiary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
+    },
     order = "d[rocket-launcher]-d[atomic-bomb]-a",
   },
   {

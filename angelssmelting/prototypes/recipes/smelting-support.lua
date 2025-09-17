@@ -47,7 +47,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-used-filtration-1",
-    localised_name = { "fluid-name.angels-liquid-coolant" },
     category = "angels-filtering-2",
     subgroup = "angels-coolant",
     energy_required = 5, --4
@@ -61,13 +60,16 @@ data:extend({
       { type = "item", name = "angels-filter-frame", amount = 1, ignored_by_stats = 1 },
     },
     main_product = "angels-liquid-coolant",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        nil,
+        "angels-liquid-coolant",
+        { "angels-filter-coal" }
+    ),
     order = "d",
   },
   {
     type = "recipe",
     name = "angels-coolant-used-filtration-2",
-    localised_name = { "fluid-name.angels-liquid-coolant" },
     category = "angels-filtering-3",
     subgroup = "angels-coolant",
     energy_required = 3.5, --4
@@ -81,7 +83,11 @@ data:extend({
       { type = "item", name = "angels-filter-ceramic-used", amount = 1 },
     },
     main_product = "angels-liquid-coolant",
-    icon_size = 32,
+    icons = angelsmods.functions.create_solid_recipe_icon(
+        nil,
+        "angels-liquid-coolant",
+        { "angels-filter-ceramic" }
+    ),
     order = "d",
   },
   --COOLING TOWER

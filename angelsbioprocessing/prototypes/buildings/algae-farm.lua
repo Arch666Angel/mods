@@ -1,3 +1,10 @@
+circuit_connector_definitions["angels-algae-farm"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  6, main_offset = util.by_pixel( 97, -51.375), shadow_offset = util.by_pixel( 97, -51.375), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 97, -51.375), shadow_offset = util.by_pixel( 97, -51.375), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 97, -51.375), shadow_offset = util.by_pixel( 97, -51.375), show_shadow = true },
+  { variation =  6, main_offset = util.by_pixel( 97, -51.375), shadow_offset = util.by_pixel( 97, -51.375), show_shadow = true }
+})
+
 data:extend({
   {
     type = "item",
@@ -41,6 +48,8 @@ data:extend({
       emissions_per_minute = { pollution = -100 / 3 * 0.5 },
     },
     energy_usage = "100kW",
+    circuit_connector = circuit_connector_definitions["angels-algae-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -131,6 +140,8 @@ data:extend({
       emissions_per_minute = { pollution = -100 / 3 * 1 },
     },
     energy_usage = "125kW",
+    circuit_connector = circuit_connector_definitions["angels-algae-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -221,6 +232,8 @@ data:extend({
       emissions_per_minute = { pollution = -100 / 3 * 1.5 },
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-algae-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {
@@ -310,6 +323,8 @@ data:extend({
       emissions_per_minute = { pollution = -100 / 3 * 2 },
     },
     energy_usage = "175kW",
+    circuit_connector = circuit_connector_definitions["angels-algae-farm"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     graphics_set = {
       animation = {

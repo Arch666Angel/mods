@@ -441,11 +441,6 @@ local function add_ignores()
 
   if script.active_mods["angelsrefining"] then
     ignore_building_recipes = true
-    ignored_unlocks["angels-ore-powderizer"] = {
-      items = {
-        ["angels-milling-drum-used"] = true,
-      },
-    }
     ignored_unlocks["angels-water-treatment-2"] = {
       items = {},
       fluids = {

@@ -114,7 +114,6 @@ data:extend({
           shift = { 0, 0 },
           animation_speed = 8,
           max_advance = 0.2,
-          axially_symmetrical = false,
           stripes = {
             {
               filename = "__angelsexplorationgraphics__/graphics/entity/bike/turbo-bike.png",
@@ -153,7 +152,6 @@ data:extend({
     --    },
     --  }
     --},
-    sound_scaling_ratio = 0.005,
     impact_category = "metal",
     working_sound = {
       --activate_sound = {
@@ -208,7 +206,7 @@ data:extend({
     type = "item-with-entity-data",
     name = "angels-heavy-tank",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {},
     subgroup = "angels-exploration-tank-b",
     order = "a[tank]-a[vanilla]",
@@ -219,7 +217,7 @@ data:extend({
     type = "gun",
     name = "heavy-tank-machine-gun",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-gun-icon.png",
-    icon_size = 32,
+    icon_size = 64,
     hidden = true,
     subgroup = "gun",
     order = "a[basic-clips]-b[tank-machine-gun]",
@@ -266,7 +264,7 @@ data:extend({
     type = "gun",
     name = "heavy-tank-cannon",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-cannon-icon.png",
-    icon_size = 32,
+    icon_size = 64,
     hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[cannon]",
@@ -291,7 +289,7 @@ data:extend({
     type = "gun",
     name = "heavy-tank-rocket-launcher",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
-    icon_size = 32,
+    icon_size = 64,
     hidden = true,
     subgroup = "gun",
     order = "d[heavy-tank-rocket-launcher]",
@@ -316,7 +314,7 @@ data:extend({
     type = "car",
     name = "angels-heavy-tank",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
     minable = { mining_time = 1, result = "angels-heavy-tank" },
     max_health = 5000,

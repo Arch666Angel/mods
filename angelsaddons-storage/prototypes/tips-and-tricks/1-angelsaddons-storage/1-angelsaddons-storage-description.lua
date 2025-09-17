@@ -14,12 +14,12 @@ end
 local available_storage = { "" }
 if angelsmods.addons.storage.silos then
   table.insert(available_storage, "\n\n[font=default-bold]STORAGE SILOS:[/font]\n")
-  table.insert(available_storage, get_item_from_name("silo"))
+  table.insert(available_storage, get_item_from_name("angels-silo"))
   table.insert(available_storage, "[font=default-bold] NOTE[/font]: Includes logistics versions once unlocked")
 end
 if angelsmods.addons.storage.oresilos then
   table.insert(available_storage, "\n[font=default-bold]ORE SILOS:[/font]\n")
-  table.insert(available_storage, get_item_from_name("silo-ore2"))
+  table.insert(available_storage, get_item_from_name("angels-silo-ore2"))
   table.insert(available_storage, "[font=default-bold] NOTE[/font]: Colours and textures based on angels 6 base ores")
 end
 if angelsmods.addons.storage.warehouses then
