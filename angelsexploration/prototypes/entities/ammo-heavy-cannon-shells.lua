@@ -97,7 +97,7 @@ data:extend({
   --HEAVY EXPLOSIVE CANNON SHELL
   {
     type = "projectile",
-    name = "heavy-explosive-cannon-projectile",
+    name = "angels-heavy-explosive-cannon-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.1, -1.1 }, { 0.1, 1.1 } },
     acceleration = 0,
@@ -187,7 +187,7 @@ data:extend({
         repeat_count = 2,
         action_delivery = {
           type = "projectile",
-          projectile = "heavy-explosive-cannon-projectile",
+          projectile = "angels-heavy-explosive-cannon-projectile",
           starting_speed = 1,
           direction_deviation = 0.2,
           range_deviation = 0.1,

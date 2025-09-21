@@ -185,7 +185,7 @@ biter_definitions.behemoth_biter = {
 biter_definitions.colossal_biter = {
   appearance = {
     type = "biter",
-    name = "colossal",
+    name = "angels-colossal",
     scale = 1.4,
     --tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
     --tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
@@ -360,7 +360,7 @@ biter_definitions.behemoth_spitter = {
 biter_definitions.colossal_spitter = {
   appearance = {
     type = "spitter",
-    name = "colossal",
+    name = "angels-colossal",
     scale = 1.4,
     --tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
     --tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
@@ -399,7 +399,7 @@ biter_definitions.colossal_spitter = {
 biter_definitions.small_scarab = {
   appearance = {
     type = "scarab",
-    name = "small",
+    name = "angels-small",
     scale = 0.4,
     tint1 = { r = 0.68, g = 0.40, b = 0.00, a = 1.00 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.40 },
@@ -432,7 +432,7 @@ biter_definitions.small_scarab = {
 biter_definitions.medium_scarab = {
   appearance = {
     type = "scarab",
-    name = "medium",
+    name = "angels-medium",
     scale = 0.6,
     tint1 = { r = 0.83, g = 0.39, b = 0.36, a = 1.00 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.40 },
@@ -465,7 +465,7 @@ biter_definitions.medium_scarab = {
 biter_definitions.big_scarab = {
   appearance = {
     type = "scarab",
-    name = "big",
+    name = "angels-big",
     scale = 0.9,
     tint1 = { r = 0.54, g = 0.58, b = 0.85, a = 1.00 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.40 },
@@ -498,7 +498,7 @@ biter_definitions.big_scarab = {
 biter_definitions.behemoth_scarab = {
   appearance = {
     type = "scarab",
-    name = "behemoth",
+    name = "angels-behemoth",
     scale = 1.1,
     tint1 = { r = 0.30, g = 0.90, b = 0.30, a = 1.00 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.40 },
@@ -531,7 +531,7 @@ biter_definitions.behemoth_scarab = {
 biter_definitions.colossal_scarab = {
   appearance = {
     type = "scarab",
-    name = "colossal",
+    name = "angels-colossal",
     scale = 1.3,
     tint1 = { r = 1.00, g = 0.68, b = 0.00, a = 1.00 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.40 },
@@ -567,7 +567,7 @@ biter_definitions.colossal_scarab = {
 biter_definitions.small_psyker = {
   appearance = {
     type = "psyker",
-    name = "small",
+    name = "angels-small",
     scale = 0.5,
     tint1 = { r = 0.56, g = 0.46, b = 0.42, a = 0.65 },
     tint2 = { r = 1.00, g = 0.63, b = 0.00, a = 0.40 },
@@ -600,7 +600,7 @@ biter_definitions.small_psyker = {
 biter_definitions.medium_psyker = {
   appearance = {
     type = "psyker",
-    name = "medium",
+    name = "angels-medium",
     scale = 0.7,
     tint1 = { r = 0.78, g = 0.15, b = 0.15, a = 0.50 },
     tint2 = { r = 0.90, g = 0.30, b = 0.30, a = 0.75 },
@@ -633,7 +633,7 @@ biter_definitions.medium_psyker = {
 biter_definitions.big_psyker = {
   appearance = {
     type = "psyker",
-    name = "big",
+    name = "angels-big",
     scale = 1,
     tint1 = { r = 0.34, g = 0.68, b = 0.90, a = 0.60 },
     tint2 = { r = 0.31, g = 0.61, b = 0.95, a = 0.85 },
@@ -666,7 +666,7 @@ biter_definitions.big_psyker = {
 biter_definitions.behemoth_psyker = {
   appearance = {
     type = "psyker",
-    name = "behemoth",
+    name = "angels-behemoth",
     scale = 1.2,
     tint1 = { r = 0.30, g = 0.90, b = 0.30, a = 0.65 },
     tint2 = { r = 0.88, g = 0.24, b = 0.24, a = 0.90 },
@@ -700,7 +700,7 @@ biter_definitions.behemoth_psyker = {
 biter_definitions.colossal_psyker = {
   appearance = {
     type = "psyker",
-    name = "colossal",
+    name = "angels-colossal",
     scale = 1.4,
     tint1 = { r = 1.00, g = 0.68, b = 0.00, a = 0.65 },
     tint2 = { r = 0.64, g = 0.03, b = 0.03, a = 0.90 },
@@ -901,7 +901,7 @@ biter_definitions.biter_spawner = {
     order = "b-d-a",
   },
   results = {
-    { "colossal-biter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
+    { "angels-colossal-biter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
   },
   resistance = {
     --[[{type = "physical", decrease = 5, percent = 10},
@@ -924,7 +924,7 @@ biter_definitions.spitter_spawner = {
     order = "b-d-b",
   },
   results = {
-    { "colossal-spitter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
+    { "angels-colossal-spitter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
   },
   resistance = {
     --[[{type = "physical", decrease = 5, percent = 10},
@@ -948,11 +948,11 @@ biter_definitions.scarab_spawner = {
   },
   results = {
     { "small-biter", { { 0.0, 0.2 }, { 0.15, 0.4 }, { 0.2, 0.0 } } },
-    { "small-scarab", { { 0.15, 0.0 }, { 0.25, 0.2 }, { 0.75, 0.0 } } },
-    { "medium-scarab", { { 0.25, 0.0 }, { 0.5, 0.3 }, { 1.0, 0.2 } } },
-    { "big-scarab", { { 0.55, 0.0 }, { 0.75, 0.4 }, { 0.8, 0.4 } } },
-    { "behemoth-scarab", { { 0.93, 0.0 }, { 1.0, 0.6 } } },
-    { "colossal-scarab", { { 0.965, 0.0 }, { 1.0, 0.8 } } },
+    { "angels-small-scarab", { { 0.15, 0.0 }, { 0.25, 0.2 }, { 0.75, 0.0 } } },
+    { "angels-medium-scarab", { { 0.25, 0.0 }, { 0.5, 0.3 }, { 1.0, 0.2 } } },
+    { "angels-big-scarab", { { 0.55, 0.0 }, { 0.75, 0.4 }, { 0.8, 0.4 } } },
+    { "angels-behemoth-scarab", { { 0.93, 0.0 }, { 1.0, 0.6 } } },
+    { "angels-colossal-scarab", { { 0.965, 0.0 }, { 1.0, 0.8 } } },
   },
   resistance = {
     { type = "physical", decrease = 5, percent = 10 },
@@ -976,12 +976,12 @@ biter_definitions.psyker_spawner = {
   },
   results = {
     { "small-biter", { { 0.0, 1.6 }, { 0.16, 1.6 }, { 0.2, 0.4 }, { 0.3, 0.0 } } },
-    { "small-scarab", { { 0.16, 0.0 }, { 0.2, 0.4 }, { 0.3, 1.5 }, { 0.4, 0.0 } } },
-    { "small-psyker", { { 0.3, 0.0 }, { 0.4, 0.4 }, { 0.7, 0.0 } } },
-    { "medium-psyker", { { 0.45, 0.0 }, { 0.55, 0.1 }, { 0.7, 0.8 }, { 1.0, 0.1 } } },
-    { "big-psyker", { { 0.55, 0.0 }, { 0.7, 0.5 } } },
-    { "behemoth-psyker", { { 0.93, 0.0 }, { 1.0, 0.6 } } },
-    { "colossal-psyker", { { 0.965, 0.0 }, { 1.0, 0.8 } } },
+    { "angels-small-scarab", { { 0.16, 0.0 }, { 0.2, 0.4 }, { 0.3, 1.5 }, { 0.4, 0.0 } } },
+    { "angels-small-psyker", { { 0.3, 0.0 }, { 0.4, 0.4 }, { 0.7, 0.0 } } },
+    { "angels-medium-psyker", { { 0.45, 0.0 }, { 0.55, 0.1 }, { 0.7, 0.8 }, { 1.0, 0.1 } } },
+    { "angels-big-psyker", { { 0.55, 0.0 }, { 0.7, 0.5 } } },
+    { "angels-behemoth-psyker", { { 0.93, 0.0 }, { 1.0, 0.6 } } },
+    { "angels-colossal-psyker", { { 0.965, 0.0 }, { 1.0, 0.8 } } },
   },
   resistance = {
     { type = "physical", decrease = 5, percent = 10 },

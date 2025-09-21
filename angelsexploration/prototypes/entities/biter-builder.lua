@@ -1461,7 +1461,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
   data:extend({
     {
       type = "unit-spawner",
-      name = spawn_data.appearance.type .. "-spawner",
+      name = "angels-"..spawn_data.appearance.type .. "-spawner",
       icon = "__base__/graphics/icons/biter-spawner.png",
       icon_size = 64,
       flags = { "placeable-player", "placeable-enemy", "not-repairable" },
@@ -1558,7 +1558,7 @@ function angelsmods.functions.update_spawner(us_data)
   if us_data == nil then
     return
   end
-  local spawner = data.raw["unit-spawner"][us_data.appearance.full_name or (us_data.appearance.type .. "-spawner")]
+  local spawner = data.raw["unit-spawner"][us_data.appearance.full_name or ("angels-"..us_data.appearance.type .. "-spawner")]
   if spawner then
     spawner.resistances = spawner.resistances or {}
     for _, new_resistance_data in pairs(us_data.resistance or {}) do
