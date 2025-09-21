@@ -22,6 +22,7 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/icons/cooling-tower.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
     minable = { mining_time = 1, result = "angels-cooling-tower" },
     max_health = 100,
     fast_replaceable_group = "angels-cooling-tower",
