@@ -7,7 +7,8 @@
     ["heavy-cannon-shell", "angels-heavy-cannon-shell"],
     ["heavy-explosive-cannon-shell", "angels-heavy-explosive-cannon-shell"],
     ["heavy-uranium-cannon-shell", "angels-heavy-uranium-cannon-shell"],
-    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"]
+    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"],
+    ["wall-0", "angels-wall-0"]
   ],
   "recipe":
   [
@@ -17,7 +18,8 @@
     ["heavy-cannon-shell", "angels-heavy-cannon-shell"],
     ["heavy-explosive-cannon-shell", "angels-heavy-explosive-cannon-shell"],
     ["heavy-uranium-cannon-shell", "angels-heavy-uranium-cannon-shell"],
-    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"]
+    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"],
+    ["wall-0", "angels-wall-0"]
   ],
   "ammo-category":
   [
@@ -32,5 +34,9 @@
     ["bio", "angels-bio"],
     ["gathering", "angels-gathering"],
     ["plasma", "angels-plasma"]
+  ],
+  "entity":
+  [
+    ["wall-0", "angels-wall-0"]
   ]
 }

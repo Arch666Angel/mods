@@ -799,7 +799,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
   local splash_fire_ground_patch_scale = 0.65
   local splash_fire = {
     type = "fire",
-    name = "acid-splash-fire-" .. pro_app.type .. "-" .. pro_app.name,
+    name = "angels-acid-splash-fire-" .. pro_app.type .. "-" .. pro_app.name,
     localised_name = { "entity-name.acid-splash" },
     flags = { "placeable-off-grid", "not-on-map" },
     damage_per_tick = { amount = 0 / 60, type = "acid" },
