@@ -6,6 +6,10 @@ if angelsmods.industries then
 
   if angelsmods.industries.overhaul then
     -- turrets require guns as ingredients, compensate recipe for it as well
+    
+    -- pistol recipe (hidden in 2.0)
+    data.raw.recipe["pistol"].hidden = false
+    OV.add_unlock("military", "pistol")
 
     -- gun turret
     OV.patch_recipes({
