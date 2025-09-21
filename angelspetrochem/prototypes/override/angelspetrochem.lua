@@ -357,7 +357,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_unlock("angels-sulfur-processing-3", "angels-hydrogen-fluoride-dissolving")
 
   OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime")
-  OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime-used-recycling")
+  OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime-used-acid-recovery")
   OV.remove_unlock("angels-sulfur-processing-3", "angels-sulfur-air-scrubbing")
 
   -- Sulfur 4
@@ -366,7 +366,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_prereq("angels-sulfur-processing-4", "chemical-science-pack")
 
   OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime")
-  OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime-used-recycling")
+  OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime-used-acid-recovery")
   OV.add_unlock("angels-sulfur-processing-4", "angels-sulfur-air-scrubbing")
 
   -- Dependent techs
