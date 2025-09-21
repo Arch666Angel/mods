@@ -2032,3 +2032,17 @@ function angelsmods.functions.set_building_collision_mask(b_type, layers_to_add)
 
     return collision_mask
 end
+
+-------------------------------------------------------------------------------
+-- PATCH RECYCLED RECIPE IF ENABLED -------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.patch_recycling_recipes(patched_recipes)
+  if mods["quality"] then
+      local recycling = require("__quality__/prototypes/recycling")
+      for _, item_name in pairs(patched_recipes) do
+        if data.raw.recipe[item_name] then
+          recycling.generate_recycling_recipe(data.raw.recipe[item_name])
+        end
+      end
+  end
+end
