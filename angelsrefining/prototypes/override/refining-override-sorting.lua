@@ -380,6 +380,20 @@ local function create_sorting_mix_recipe(recipe_data)
   angelsmods.functions.OV.disable_recipe(recipe_data.name)
 end
 
+-- Changes slag recipe names from Bobs' "Galena" to "Lead ore" etc.
+local function get_slag_ore_name(ore_name)
+  local old_lookup = get_ore_name(ore_name)
+
+  local new_lookup_table = {
+    ["bob-lead-ore"] = "angels-lead-ore",
+    ["bob-bauxite-ore"] = "angels-bauxite-ore",
+    ["bob-quartz"] = "angels-quartz",
+    ["bob-rutile-ore"] = "angels-rutile-ore"
+  }
+
+  return new_lookup_table[old_lookup] or old_lookup
+end
+
 -- function to create the slag sorting results disables it if it is unused
 local function create_slag_recipes(recipe_base_name, ore_result_products, recipe_icons)
   local recipes = {}
@@ -389,7 +403,7 @@ local function create_slag_recipes(recipe_base_name, ore_result_products, recipe
     local recipe_used = false
     local locale_index = {}
     for result_name, ore_amounts in pairs(ore_result_products or {}) do
-      local ore_name = get_ore_name(result_name)
+      local ore_name = get_slag_ore_name(result_name)
       local ore_amount = ore_amounts[recipe_index]
       local ore_probability = nil
       if angelsmods.trigger.ores[get_trigger_name[result_name]] and ore_amount > 0 then
