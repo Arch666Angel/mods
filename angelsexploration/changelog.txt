@@ -3,6 +3,7 @@ Version: 2.0.0
 Date: ???
   Changes:
     - Updated for Factorio 2.0 (994)
+    - Added "angels-" prefix for all prototypes
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.16
 Date: 21.02.2024
