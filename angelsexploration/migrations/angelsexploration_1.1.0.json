@@ -37,7 +37,25 @@
   ],
   "entity":
   [
-    ["wall-0", "angels-wall-0"]
+    ["wall-0", "angels-wall-0"],
+
+    ["psyker-spawner", "angels-psyker-spawner"],
+    ["scarab-spawner", "angels-scarab-spawner"],
+
+    ["colossal-spitter", "angels-colossal-spitter"],
+    ["colossal-biter", "angels-colossal-biter"],
+
+    ["small-psyker", "angels-small-psyker"],
+    ["medium-psyker", "angels-medium-psyker"],
+    ["big-psyker", "angels-big-psyker"],
+    ["behemoth-psyker", "angels-behemoth-psyker"],
+    ["colossal-psyker", "angels-colossal-psyker"],
+
+    ["small-scarab", "angels-small-scarab"],
+    ["medium-scarab", "angels-medium-scarab"],
+    ["big-scarab", "angels-big-scarab"],
+    ["behemoth-scarab", "angels-behemoth-scarab"],
+    ["colossal-scarab", "angels-colossal-scarab"]
   ],
   "technology":
   [
