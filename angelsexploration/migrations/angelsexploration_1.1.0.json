@@ -38,5 +38,22 @@
   "entity":
   [
     ["wall-0", "angels-wall-0"]
+  ],
+  "technology":
+  [
+    ["tips-and-tricks-trigger-angels-native-inhabitants-spawner-psyker-spawner", "tips-and-tricks-trigger-angels-native-inhabitants-spawner-angels-psyker-spawner"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-spawner-scarab-spawner", "tips-and-tricks-trigger-angels-native-inhabitants-spawner-angels-scarab-spawner"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-behemoth-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-behemoth-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-behemoth-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-behemoth-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-big-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-big-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-big-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-big-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-biter", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-biter"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-spitter", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-spitter"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-medium-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-medium-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-medium-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-medium-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-small-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-small-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-small-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-small-scarab"]
   ]
 }

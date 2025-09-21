@@ -899,6 +899,7 @@ biter_definitions.biter_spawner = {
     health = 500,
     spawn_cooldown = { 360, 150 },
     order = "b-d-a",
+    full_name = "biter-spawner"
   },
   results = {
     { "angels-colossal-biter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
@@ -922,6 +923,7 @@ biter_definitions.spitter_spawner = {
     health = 500,
     spawn_cooldown = { 360, 150 },
     order = "b-d-b",
+    full_name = "spitter-spawner"
   },
   results = {
     { "angels-colossal-spitter", { { 0.95, 0.0 }, { 1.0, 0.8 } } },
