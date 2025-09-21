@@ -1,5 +1,5 @@
 table.insert(data.raw.technology["military-4"].prerequisites, "angels-cannon-turret")
-table.insert(data.raw.technology["military-4"].effects, { type = "unlock-recipe", recipe = "cannon-turret-shell-2" })
+table.insert(data.raw.technology["military-4"].effects, { type = "unlock-recipe", recipe = "angels-cannon-turret-shell-2" })
 
 if angelsmods.industries then
   local OV = angelsmods.functions.OV

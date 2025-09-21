@@ -555,8 +555,8 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
     { type = "physical", percent = 100 },
     { type = "poison", percent = 100 },
     -- angels
-    { type = "bio", percent = 100 },
-    { type = "gathering", percent = 100 },
+    { type = "angels-bio", percent = 100 },
+    { type = "angels-gathering", percent = 100 },
   }
   if mods["bobwarfare"] then
     -- bobs
@@ -650,7 +650,7 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     effects = {
       inputs.modifier and (inputs.modifier > 0) and {
         type = "ammo-damage",
-        ammo_category = "gathering",
+        ammo_category = "angels-gathering",
         modifier = inputs.modifier,
       },
     },

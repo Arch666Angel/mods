@@ -23,12 +23,12 @@ angelsmods.trigger.artifacts["base"] = true -- pink
 --angelsmods.trigger.smelting_products["iron"].powder = true
 
 --LOAD PROTOTYPES
-require("prototypes.exploration-category")
+require("prototypes.exploration-category") -- TODO renaming
 require("prototypes.exploration-debug")
 
 --LOAD FUNCTIONS
-require("prototypes.entities.biter-builder")
-require("prototypes.entities.gathering-turret-builder")
+require("prototypes.entities.biter-builder") -- TODO renaming
+require("prototypes.entities.gathering-turret-builder") -- TODO renaming
 
 --PROTOTYPES
 require("prototypes.entities.ammo-cannon-turret-shells")

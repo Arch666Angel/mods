@@ -67,7 +67,7 @@ biter_definitions.small_biter = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 0, percent = 0 },
+    { type = "angels-plasma", decrease = 0, percent = 0 },
   },
   loot = {
     create_loot_definition("base", 0.25, 0.5), -- 0.0 - 0.5
@@ -102,7 +102,7 @@ biter_definitions.medium_biter = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 5, percent = 20 },
+    { type = "angels-plasma", decrease = 5, percent = 20 },
   },
   loot = {
     create_loot_definition("base", 0.5, 1), -- 0-1
@@ -137,7 +137,7 @@ biter_definitions.big_biter = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 0, percent = 0 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("base", 1, 2), -- 0-2
@@ -173,7 +173,7 @@ biter_definitions.behemoth_biter = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 15, percent = 40 },
+    { type = "angels-plasma", decrease = 15, percent = 40 },
   },
   loot = {
     create_loot_definition("base", 1.5, 1), -- 1-2
@@ -212,7 +212,7 @@ biter_definitions.colossal_biter = {
     { type = "fire", decrease = 5, percent = 30 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 30 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("base", 2, 2), -- 1-3
@@ -250,7 +250,7 @@ biter_definitions.small_spitter = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 0, percent = 0 },
+    { type = "angels-plasma", decrease = 0, percent = 0 },
   },
   loot = {
     create_loot_definition("orange", 0.25, 0.5), -- 0.0-0.5
@@ -283,7 +283,7 @@ biter_definitions.medium_spitter = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 5, percent = 20 },
+    { type = "angels-plasma", decrease = 5, percent = 20 },
   },
   loot = {
     create_loot_definition("orange", 0.5, 1), -- 0-1
@@ -316,7 +316,7 @@ biter_definitions.big_spitter = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 0, percent = 0 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("orange", 1, 2), -- 0-2
@@ -349,7 +349,7 @@ biter_definitions.behemoth_spitter = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 15, percent = 40 },
+    { type = "angels-plasma", decrease = 15, percent = 40 },
   },
   loot = {
     create_loot_definition("orange", 1.5, 1), -- 1-2
@@ -385,7 +385,7 @@ biter_definitions.colossal_spitter = {
     { type = "fire", decrease = 5, percent = 30 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 30 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("orange", 2, 2), -- 1-3
@@ -422,7 +422,7 @@ biter_definitions.small_scarab = {
     { type = "fire", decrease = 7.5, percent = 40 },
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 7.5, percent = 40 },
-    { type = "plasma", decrease = 2.5, percent = 20 },
+    { type = "angels-plasma", decrease = 2.5, percent = 20 },
   },
   loot = {
     create_loot_definition("base", 0.5, 1), -- 0-1
@@ -455,7 +455,7 @@ biter_definitions.medium_scarab = {
     { type = "fire", decrease = 2.5, percent = 30 },
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 2.5, percent = 30 },
-    { type = "plasma", decrease = 7.5, percent = 40 },
+    { type = "angels-plasma", decrease = 7.5, percent = 40 },
   },
   loot = {
     create_loot_definition("blue", 0.5, 1), -- 0-1
@@ -488,7 +488,7 @@ biter_definitions.big_scarab = {
     { type = "fire", decrease = 7.5, percent = 40 },
     { type = "explosion", decrease = 2.5, percent = 20 },
     { type = "laser", decrease = 7.5, percent = 40 },
-    { type = "plasma", decrease = 12.5, percent = 50 },
+    { type = "angels-plasma", decrease = 12.5, percent = 50 },
   },
   loot = {
     create_loot_definition("blue", 1, 2), -- 0-2
@@ -521,7 +521,7 @@ biter_definitions.behemoth_scarab = {
     { type = "fire", decrease = 12.5, percent = 30 },
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 12.5, percent = 30 },
-    { type = "plasma", decrease = 17.5, percent = 60 },
+    { type = "angels-plasma", decrease = 17.5, percent = 60 },
   },
   loot = {
     create_loot_definition("blue", 1.5, 1), -- 1-2
@@ -554,7 +554,7 @@ biter_definitions.colossal_scarab = {
     { type = "fire", decrease = 7.5, percent = 50 },
     { type = "explosion", decrease = 7.5, percent = 30 },
     { type = "laser", decrease = 7.5, percent = 50 },
-    { type = "plasma", decrease = 12.5, percent = 50 },
+    { type = "angels-plasma", decrease = 12.5, percent = 50 },
   },
   loot = {
     create_loot_definition("blue", 2, 2), -- 1-3
@@ -590,7 +590,7 @@ biter_definitions.small_psyker = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 0, percent = 0 },
+    { type = "angels-plasma", decrease = 0, percent = 0 },
   },
   loot = {
     create_loot_definition("blue", 0.5, 1), -- 0-1
@@ -623,7 +623,7 @@ biter_definitions.medium_psyker = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 5, percent = 20 },
+    { type = "angels-plasma", decrease = 5, percent = 20 },
   },
   loot = {
     create_loot_definition("purple", 0.5, 1.0), -- 0-1
@@ -656,7 +656,7 @@ biter_definitions.big_psyker = {
     { type = "fire", decrease = 5, percent = 20 },
     { type = "explosion", decrease = 0, percent = 0 },
     { type = "laser", decrease = 5, percent = 20 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("purple", 1, 2), -- 0-2
@@ -689,7 +689,7 @@ biter_definitions.behemoth_psyker = {
     { type = "fire", decrease = 0, percent = 10 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 0, percent = 10 },
-    { type = "plasma", decrease = 15, percent = 40 },
+    { type = "angels-plasma", decrease = 15, percent = 40 },
   },
   loot = {
     create_loot_definition("purple", 1.5, 1), -- 1-2
@@ -723,7 +723,7 @@ biter_definitions.colossal_psyker = {
     { type = "fire", decrease = 5, percent = 30 },
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "laser", decrease = 5, percent = 30 },
-    { type = "plasma", decrease = 10, percent = 30 },
+    { type = "angels-plasma", decrease = 10, percent = 30 },
   },
   loot = {
     create_loot_definition("purple", 2, 2), -- 1-3
@@ -908,7 +908,7 @@ biter_definitions.biter_spawner = {
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
-    { type = "plasma", decrease = 5, percent = 10 },
+    { type = "angels-plasma", decrease = 5, percent = 10 },
   },
   loot = {
     create_loot_definition("base", 15, 10), -- 10-20
@@ -931,7 +931,7 @@ biter_definitions.spitter_spawner = {
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
-    { type = "plasma", decrease = 5, percent = 10 },
+    { type = "angels-plasma", decrease = 5, percent = 10 },
   },
   loot = {
     create_loot_definition("base", 15, 10), -- 10-20
@@ -959,7 +959,7 @@ biter_definitions.scarab_spawner = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "fire", decrease = 30, percent = 60 },
     { type = "laser", decrease = 5, percent = 10 },
-    { type = "plasma", decrease = 5, percent = 10 },
+    { type = "angels-plasma", decrease = 5, percent = 10 },
   },
   loot = {
     create_loot_definition("base", 21, 8), -- 17-25
@@ -988,7 +988,7 @@ biter_definitions.psyker_spawner = {
     { type = "explosion", decrease = 5, percent = 10 },
     { type = "fire", decrease = 30, percent = 60 },
     { type = "laser", decrease = 5, percent = 10 },
-    { type = "plasma", decrease = 5, percent = 10 },
+    { type = "angels-plasma", decrease = 5, percent = 10 },
   },
   loot = {
     create_loot_definition("base", 21, 8), -- 17-25

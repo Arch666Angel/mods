@@ -2,37 +2,37 @@ data:extend({
   --AMMO
   {
     type = "ammo-category",
-    name = "cannon-turret",
+    name = "angels-cannon-turret",
   },
   {
     type = "ammo-category",
-    name = "heavy-cannon-shell",
+    name = "angels-heavy-cannon-shell",
   },
   {
     type = "ammo-category",
-    name = "bio",
+    name = "angels-bio",
     bonus_gui_order = "m-b",
   },
   {
     type = "ammo-category",
-    name = "electric",
+    name = "angels-electric",
   },
   {
     type = "ammo-category",
-    name = "gathering",
+    name = "angels-gathering",
   },
   --DAMAGE TYPE
   {
     type = "damage-type",
-    name = "plasma",
+    name = "angels-plasma",
   },
   {
     type = "damage-type",
-    name = "bio",
+    name = "angels-bio",
   },
   {
     type = "damage-type",
-    name = "gathering",
+    name = "angels-gathering",
   },
   --SUBGROUPS
   ---------------------------------------------------------------------------

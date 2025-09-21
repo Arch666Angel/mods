@@ -419,7 +419,7 @@ data:extend({
     impact_category = "metal",
     attack_parameters = {
       type = "projectile",
-      ammo_category = "cannon-turret",
+      ammo_category = "angels-cannon-turret",
       cooldown = 75,
       projectile_creation_distance = 1.75,
       projectile_center = { 0, 0 },

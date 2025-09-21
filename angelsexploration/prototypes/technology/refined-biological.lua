@@ -8,7 +8,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -38,7 +38,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -68,7 +68,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -102,7 +102,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.3,
       },
       {
@@ -137,7 +137,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.3,
       },
       {
@@ -169,7 +169,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.4,
       },
       {
@@ -201,7 +201,7 @@ data:extend({
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {

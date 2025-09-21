@@ -270,7 +270,7 @@ data:extend({
     order = "z[tank]-a[cannon]",
     attack_parameters = {
       type = "projectile",
-      ammo_categories = { "cannon-shell", "heavy-cannon-shell" },
+      ammo_categories = { "cannon-shell", "angels-heavy-cannon-shell" },
       cooldown = 120,
       movement_slow_down_factor = 0,
       projectile_creation_distance = 4,

@@ -219,7 +219,7 @@ if mods["bobwarfare"] then
     },
   })
 
-  reorder("ammo", "cannon-turret-shell-1", "angels-physical-bc", "a[regular]")
-  reorder("ammo", "cannon-turret-shell-2", "angels-physical-bc", "b[piercing]")
-  reorder("ammo", "cannon-turret-shell-3", "angels-physical-bc", "c[uranium]")
+  reorder("ammo", "angels-cannon-turret-shell-1", "angels-physical-bc", "a[regular]")
+  reorder("ammo", "angels-cannon-turret-shell-2", "angels-physical-bc", "b[piercing]")
+  reorder("ammo", "angels-cannon-turret-shell-3", "angels-physical-bc", "c[uranium]")
 end
