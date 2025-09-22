@@ -7,7 +7,7 @@ data:extend({
     icon = "__angelsaddons-cab__/graphics/technology/cab-tech.png",
     icon_size = 128,
     prerequisites = {
-      "automobilism",
+      "angels-crawler",
       "electric-energy-distribution-1",
       "circuit-network",
       "chemical-science-pack",
