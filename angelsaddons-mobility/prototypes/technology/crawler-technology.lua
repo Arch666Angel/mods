@@ -6,7 +6,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
     "railway",
   }
 
-  if mods["angelsindustries"] then
+  if mods["angelsaddons-cab"] then
     table.insert(prerequisites, "angels-crawler")
   end
 
