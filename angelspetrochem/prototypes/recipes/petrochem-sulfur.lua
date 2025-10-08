@@ -261,7 +261,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-filter-lime-used-recycling",
+    name = "angels-filter-lime-used-cleaning",
     category = "angels-liquifying",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,

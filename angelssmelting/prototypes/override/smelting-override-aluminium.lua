@@ -56,6 +56,10 @@ if angelsmods.trigger.smelting_products["aluminium"].ingot then
         util.table.deepcopy(data.raw.technology["angels-aluminium-smelting-2"][property])
     end
   end
+  if not angelsmods.trigger.smelting_products["silicon"].ingot then
+    OV.disable_recipe({ "angels-liquid-molten-aluminium-3" })
+    OV.remove_prereq("angels-aluminium-casting-3", "angels-silicon-smelting-2")
+  end
 else
   angelsmods.functions.hide("angels-processed-aluminium")
   angelsmods.functions.hide("angels-pellet-aluminium")

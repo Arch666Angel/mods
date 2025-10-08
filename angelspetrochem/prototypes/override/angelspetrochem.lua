@@ -44,44 +44,8 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
       },
     })
   end
-  
-  if mods["bobrevamp"] and mods["bobpower"] and settings.startup["bobmods-revamp-nuclear"].value == true then
-    -- deuterium-fuel-cell will be unlocked by bob-nuclear-power-3
-  else
-    OV.add_unlock("angels-water-chemistry-2", "bob-deuterium-fuel-cell")
-  end
-
-  OV.set_science_pack("bob-deuterium-fuel-reprocessing", "utility-science-pack", 1)
-  OV.set_science_pack("bob-deuterium-fuel-cell-2", "utility-science-pack", 1)
-elseif angelsmods.industries and angelsmods.industries.overhaul then
+else
   angelsmods.trigger.water_green_waste = true
-  -- everything is good, nothing to change
-
-  --elseif data.raw["fluid"]["deuterium"] then
-  -- not bobs mods, should we do something, usual thing is to do nothing...
-else -- no deuterium required, disabling it...
-  angelsmods.functions.hide("angels-gas-enriched-hydrogen-sulfide")
-  angelsmods.functions.hide("angels-liquid-water-semiheavy-1")
-  angelsmods.functions.hide("angels-liquid-water-semiheavy-2")
-  angelsmods.functions.hide("angels-liquid-water-semiheavy-3")
-  angelsmods.functions.hide("angels-liquid-water-heavy")
-  angelsmods.functions.hide("angels-gas-deuterium")
-
-  OV.disable_recipe({
-    "angels-gas-enriched-hydrogen-sulfide",
-    "angels-liquid-water-semiheavy-1",
-    "angels-water-enriched-cooling-1",
-    "angels-liquid-water-semiheavy-2",
-    "angels-water-enriched-cooling-2",
-    "angels-liquid-water-semiheavy-3",
-    "angels-water-enriched-cooling-3",
-    "angels-liquid-water-heavy",
-    "angels-heavy-water-cooling",
-    "angels-heavy-water-separation",
-    "angels-heavy-water-separation-2",
-  })
-
-  OV.disable_technology({ "angels-water-chemistry-1", "angels-water-chemistry-2" })
 end
 
 -- Enforce semiheavy water temp
@@ -129,7 +93,7 @@ if angelsmods.trigger.ores["platinum"] then
       },
     },
   })
-elseif mods["bobplates"] or angelsmods.industries and angelsmods.industries.overhaul then
+elseif mods["bobplates"] or mods["angelssmelting"] then
   -- regular overhaul/full angels mode
   OV.patch_recipes({
     {
@@ -258,7 +222,7 @@ else
     "angels-liquid-rubber",
     "angels-solid-rubber",
     "angels-liquid-styrene",
-    "angels-liquid-ethylbenze",
+    "angels-liquid-ethylbenzene",
     "angels-gas-butadiene",
   })
   angelsmods.functions.hide({
@@ -357,7 +321,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_unlock("angels-sulfur-processing-3", "angels-hydrogen-fluoride-dissolving")
 
   OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime")
-  OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime-used-recycling")
+  OV.remove_unlock("angels-sulfur-processing-3", "angels-filter-lime-used-cleaning")
   OV.remove_unlock("angels-sulfur-processing-3", "angels-sulfur-air-scrubbing")
 
   -- Sulfur 4
@@ -366,7 +330,7 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_prereq("angels-sulfur-processing-4", "chemical-science-pack")
 
   OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime")
-  OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime-used-recycling")
+  OV.add_unlock("angels-sulfur-processing-4", "angels-filter-lime-used-cleaning")
   OV.add_unlock("angels-sulfur-processing-4", "angels-sulfur-air-scrubbing")
 
   -- Dependent techs

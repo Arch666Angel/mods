@@ -349,26 +349,9 @@ angelsmods.functions.RB.set_fallback("item", "blastfur-3", { { "block-mprocessin
 angelsmods.functions.RB.set_fallback("item", "blastfur-4", { { "block-mprocessing-4", 3 }, { "angels-blast-furnace-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "chemfur-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "chemfur-2", {
-  { "block-production-3", 3 },
-  {
-    "angels-chemical-furnace",
-    1,
-    function(t, n)
-      return mods["angelssmelting"] and angelsmods.trigger.early_chemical_furnace or false
-    end,
-  },
-})
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "chemfur-3",
-  { { "block-mprocessing-4", 3 }, { "angels-chemical-furnace-2" } }
-)
-angelsmods.functions.RB.set_fallback(
-  "item",
-  "chemfur-4",
-  { { "block-mprocessing-5", 3 }, { "angels-chemical-furnace-3" } }
-)
+angelsmods.functions.RB.set_fallback("item", "chemfur-2", { { "block-production-3", 3 }, { "angels-chemical-furnace" } })
+angelsmods.functions.RB.set_fallback("item", "chemfur-3", { { "block-mprocessing-4", 3 }, { "angels-chemical-furnace-2" } })
+angelsmods.functions.RB.set_fallback("item", "chemfur-4", { { "block-mprocessing-5", 3 }, { "angels-chemical-furnace-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "indufur-1", { { "block-production-1", 3 } })
 angelsmods.functions.RB.set_fallback("item", "indufur-2", { { "block-production-2", 3 }, { "angels-induction-furnace" } })

@@ -6,14 +6,18 @@ angelsmods.smelting.number_tint = { r = 1, g = 0.8, b = 0.0, a = 1 }
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
 
-if angelsmods.trigger.ores["iron"] and angelsmods.trigger.ores["tin"] then -- not special vanilla, but has iron
-  -- set refining triggers
-  angelsmods.trigger.ores["manganese"] = true -- angels refining trigger
-  angelsmods.trigger.ores["chrome"] = true -- angels refining trigger
-end
-angelsmods.trigger.washing_tech = true -- angels refining trigger
+-- set refining triggers
+angelsmods.trigger.ores["aluminium"] = true
+angelsmods.trigger.ores["chrome"] = true
+angelsmods.trigger.ores["cobalt"] = true
+angelsmods.trigger.ores["manganese"] = true
+angelsmods.trigger.ores["nickel"] = true
+angelsmods.trigger.ores["silver"] = true
+angelsmods.trigger.ores["titanium"] = true
+angelsmods.trigger.ores["tungsten"] = true
+angelsmods.trigger.washing_tech = true
+
 angelsmods.trigger.early_sintering_oven = false
-angelsmods.trigger.early_chemical_furnace = not angelsmods.functions.is_special_vanilla()
 
 --create all the tables for smelting triggers ---------------------------------
 angelsmods.trigger.smelting_molds = false
@@ -65,7 +69,7 @@ angelsmods.trigger.smelting_products["solder"].wire = mods["bobplates"] and true
 angelsmods.trigger.smelting_products["steel"].plate = true
 angelsmods.trigger.smelting_products["steel"].rod = angelsmods.trigger.smelting_products["steel"].rod or false
 --aluminium
-angelsmods.trigger.smelting_products["aluminium"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["aluminium"].plate = true
 --cobalt
 angelsmods.trigger.smelting_products["cobalt"].plate = --[[mods["bobplates"] and true or]]
   false
@@ -75,10 +79,7 @@ angelsmods.trigger.smelting_products["copper"].wire = true
 --glass
 angelsmods.trigger.smelting_products["glass"].plate = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["glass"].fibre = false
-angelsmods.trigger.smelting_products["glass"].board = not angelsmods.functions.is_special_vanilla()
-    and mods["bobelectronics"]
-    and true
-  or false
+angelsmods.trigger.smelting_products["glass"].board = mods["bobplates"] and mods["bobelectronics"] and true or false
 --gold
 angelsmods.trigger.smelting_products["gold"].plate = mods["bobplates"] and true or false
 angelsmods.trigger.smelting_products["gold"].wire = angelsmods.trigger.smelting_products["gold"].plate
@@ -106,14 +107,14 @@ angelsmods.trigger.smelting_products["tin"].plate = mods["bobplates"] and true o
 angelsmods.trigger.smelting_products["tin"].wire = mods["bobelectronics"] and data.raw.item["bob-tin-plate"] and true
   or false
 --titanium
-angelsmods.trigger.smelting_products["titanium"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["titanium"].plate = true
 --tungsten
-angelsmods.trigger.smelting_products["tungsten"].plate = mods["bobplates"] and true or false
+angelsmods.trigger.smelting_products["tungsten"].plate = true
 --zinc
 angelsmods.trigger.smelting_products["zinc"].plate = mods["bobplates"] and true or false
 
 --create building triggers -----------------------------------------------------
-angelsmods.trigger.sintering_tech = not angelsmods.functions.is_special_vanilla()
+angelsmods.trigger.sintering_tech = true
 
 require("prototypes.angels-smelting-category")
 
@@ -148,7 +149,6 @@ require("prototypes.items.angels-silicon")
 require("prototypes.items.angels-silver")
 require("prototypes.items.angels-stone")
 require("prototypes.items.angels-support")
-require("prototypes.items.angels-thorium")
 require("prototypes.items.angels-tin")
 require("prototypes.items.angels-titanium")
 require("prototypes.items.angels-tungsten")

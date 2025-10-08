@@ -1,39 +1,19 @@
 local move_item = angelsmods.functions.move_item
 
-if angelsmods.industries.overhaul then
-  -----------------------------------------------------------------------------
-  -- VANILLA POWER STUFFS -----------------------------------------------------
-  -----------------------------------------------------------------------------
-  move_item("boiler", "angels-power-steam", "a[boiler]")
-  move_item("steam-engine", "angels-power-steam", "b[steam-engine]")
-  move_item("steam-turbine", "angels-power-steam", "c[steam-turbine]")
+-----------------------------------------------------------------------------
+-- VANILLA POWER STUFFS -----------------------------------------------------
+-----------------------------------------------------------------------------
+move_item("boiler", "angels-power-steam", "a[boiler]")
+move_item("steam-engine", "angels-power-steam", "b[steam-engine]")
+move_item("steam-turbine", "angels-power-steam", "c[steam-turbine]")
 
-  move_item("solar-panel", "angels-power-solar", "a[solar-panel]")
-  move_item("accumulator", "angels-power-solar", "b[accumulator]")
+move_item("solar-panel", "angels-power-solar", "a[solar-panel]")
+move_item("accumulator", "angels-power-solar", "b[accumulator]")
 
-  move_item("nuclear-reactor", "angels-power-nuclear", "a[reactor]")
-  move_item("heat-pipe", "angels-power-nuclear", "b[heat-pipe]")
-  move_item("heat-exchanger", "angels-power-nuclear", "c[heat-exchanger]")
-
-  move_item("uranium-235", "angels-power-nuclear-processing", "a[radioactive-element]-b[uranium-235]")
-  move_item("uranium-238", "angels-power-nuclear-processing", "a[radioactive-element]-c[uranium-238]")
-  move_item("uranium-processing", "angels-power-nuclear-processing", "a[uranium]-a[processing]", "recipe")
-  move_item("kovarex-enrichment-process", "angels-power-nuclear-processing", "a[uranium]-b[enrichment]", "recipe")
-
-  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-b")
-  move_item("depleted-uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-c")
-  move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-a", "recipe")
-  move_item("nuclear-fuel-reprocessing", "angels-power-nuclear-fuel-cell", "a[uranium]-c", "recipe")
-
-  move_item("small-electric-pole", "angels-power-poles", "a[small]")
-  move_item("medium-electric-pole", "angels-power-poles", "b[medium]")
-  move_item("big-electric-pole", "angels-power-poles", "c[big]")
-  move_item("substation", "angels-power-poles", "d[substation]")
-
-  if mods["bobplates"] then
-    move_item("bob-thorium-232", "angels-power-nuclear-processing", "a[radioactive-element]-h[thorium-232]")
-  end
-end
+move_item("small-electric-pole", "angels-power-poles", "a[small]")
+move_item("medium-electric-pole", "angels-power-poles", "b[medium]")
+move_item("big-electric-pole", "angels-power-poles", "c[big]")
+move_item("substation", "angels-power-poles", "d[substation]")
 
 if mods["bobpower"] then
   -----------------------------------------------------------------------------
@@ -223,17 +203,7 @@ if mods["bobpower"] then
         order = "c[nuclear]-b[angels-burner-reactor]",
       },
     })
-
-    move_item("bob-burner-reactor", "angels-power-nuclear-reactor-a", "a[fuel-burner]-a")
-    move_item("bob-burner-reactor-2", "angels-power-nuclear-reactor-a", "a[fuel-burner]-b")
-
-    move_item("bob-fluid-reactor", "angels-power-nuclear-reactor-a", "b[fluid-burner]-a")
-    move_item("bob-fluid-reactor-2", "angels-power-nuclear-reactor-a", "b[fluid-burner]-b")
   end
-
-  -- nuclear fuel
-  move_item("bob-plutonium-nucleosynthesis", "angels-power-nuclear-processing", "a[uranium]-z[plutonium-harvest]", "recipe")
-
   -- nuclear reactor
   if settings.startup["bobmods-power-nuclear"].value then
     data:extend({
@@ -244,10 +214,6 @@ if mods["bobpower"] then
         order = "c[nuclear]-c[nuclear-reactor]",
       },
     })
-
-    move_item("nuclear-reactor", "angels-power-nuclear-reactor-b", "a")
-    move_item("bob-nuclear-reactor-2", "angels-power-nuclear-reactor-b", "b")
-    move_item("bob-nuclear-reactor-3", "angels-power-nuclear-reactor-b", "c")
   end
 
   -- heat pipes
@@ -264,11 +230,6 @@ if mods["bobpower"] then
         order = "c[nuclear]-d[heat-pipe]",
       },
     })
-
-    move_item("heat-pipe", "angels-power-nuclear-heat-pipe", "a")
-    move_item("bob-heat-pipe-2", "angels-power-nuclear-heat-pipe", "b")
-    move_item("bob-heat-pipe-3", "angels-power-nuclear-heat-pipe", "c")
-    move_item("bob-heat-pipe-4", "angels-power-nuclear-heat-pipe", "d")
   end
 
   -- heat exchanger
@@ -281,15 +242,5 @@ if mods["bobpower"] then
         order = "c[nuclear]-e[heat-exchanger]",
       },
     })
-
-    move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "a")
-    move_item("bob-heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "b")
-    move_item("bob-heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "c")
-    move_item("bob-heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "d")
-
-    move_item("heat-exchanger", "angels-power-nuclear-heat-exchanger", "aa", "recipe")
-    move_item("bob-heat-exchanger-2", "angels-power-nuclear-heat-exchanger", "ba", "recipe")
-    move_item("bob-heat-exchanger-3", "angels-power-nuclear-heat-exchanger", "ca", "recipe")
-    move_item("bob-heat-exchanger-4", "angels-power-nuclear-heat-exchanger", "da", "recipe")
   end
 end

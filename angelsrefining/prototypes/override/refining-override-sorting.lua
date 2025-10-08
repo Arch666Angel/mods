@@ -65,8 +65,8 @@ local icon_lookup_table = {
     or mods["bobores"] and { icon = "__bobores__/graphics/icons/silver-ore.png", icon_size = 32 }
     or icon_lookup_table_fallback,
 
-  ["angels-thorium-ore"] = mods["angelsindustries"] and angelsmods.industries.overhaul and {
-    icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png",
+  ["angels-thorium-ore"] = mods["angelspetrochem"] and {
+    icon = "__angelspetrochemgraphics__/graphics/icons/ore-thorium.png",
     icon_size = 64,
     scale = 0.5,
   } or mods["bobplates"] and {

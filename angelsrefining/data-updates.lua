@@ -14,7 +14,7 @@ end
 
 angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"]
   or angelsmods.trigger.ores["chrome"]
-  or angelsmods.trigger.ores["thorium"]
+  or (angelsmods.trigger.ores["thorium"] and not angelsmods.functions.is_special_vanilla())
 if angelsmods.trigger.refinery_products["ferrous"] then
   angelsmods.trigger.refinery_products["saphirite"] = true
   angelsmods.trigger.refinery_products["jivolite"] = true
@@ -26,7 +26,7 @@ end
 
 angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.ores["platinum"]
   or angelsmods.trigger.ores["tungsten"]
-  or angelsmods.trigger.ores["thorium"]
+  or (angelsmods.trigger.ores["thorium"] and not angelsmods.functions.is_special_vanilla())
 if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.trigger.refinery_products["stiratite"] = true
   angelsmods.trigger.refinery_products["crotinnium"] = true

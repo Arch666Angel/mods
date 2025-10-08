@@ -67,6 +67,7 @@ if angelsmods.trigger.smelting_products["glass"].plate then
 else
   angelsmods.functions.hide("angels-plate-glass")
   OV.disable_recipe({ "angels-plate-glass", "angels-plate-glass-2", "angels-plate-glass-3" })
+  OV.remove_prereq("angels-glass-smelting-3", "angels-tin-casting-3")
 end
 
 -------------------------------------------------------------------------------

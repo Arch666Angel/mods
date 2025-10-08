@@ -13,9 +13,6 @@ require("prototypes.overrides.components-productivity-update")
 require("prototypes.overrides.components-block-update")
 OV.execute()
 
---UPDATE NUCLEAR OVERHAUL
-require("prototypes.overrides.overhaul-nuclear-power")
-
 --UPDATE TECHNOLOGY
 require("prototypes.overrides.tech-mod-update")
 OV.execute()

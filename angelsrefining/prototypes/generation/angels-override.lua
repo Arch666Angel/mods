@@ -7,7 +7,6 @@ if not angelsmods.refining.disable_ore_override then
 
   --ANGELS
   if angelsmods.functions.is_special_vanilla() then
-    --if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
   end

@@ -239,7 +239,6 @@ data:extend({
       { type = "item", name = "angels-concrete-brick", amount = 2 },
       { type = "item", name = "angels-token-bio", amount = 1 },
       { type = "item", name = "angels-solid-soil", amount = 2 },
-      --{type = "item", name = "steel-plate", amount = 1}
     },
     results = {
       { type = "item", name = "angels-bio-tile", amount_min = 5, amount_max = 10 },

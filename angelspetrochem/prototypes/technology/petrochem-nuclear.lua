@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-plutonium-power",
-    icon = "__angelsindustriesgraphics__/graphics/technology/plutonium-processing.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plutonium-processing.png",
     icon_size = 128,
     prerequisites = {
       "nuclear-fuel-reprocessing",
@@ -44,13 +44,12 @@ data:extend({
   {
     type = "technology",
     name = "angels-thorium-power",
-    icon = "__angelsindustriesgraphics__/graphics/technology/thorium-processing.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/thorium-processing.png",
     icon_size = 128,
     prerequisites = {
       "angels-plutonium-power",
       "angels-ore-electro-whinning-cell",
       "utility-science-pack",
-      "angels-zinc-smelting-1",
     },
     effects = {
       {
@@ -93,7 +92,7 @@ data:extend({
     icons = angelsmods.functions.add_icon_layer(
       { -- bottom placeholder layer
         {
-          icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
           icon_size = 128,
         },
       },
@@ -105,11 +104,11 @@ data:extend({
         ),
         {
           {
-            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
             icon_size = 128,
           },
           {
-            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
             icon_size = 128,
           },
         }
@@ -145,7 +144,6 @@ data:extend({
       time = 120,
     },
     order = "e-p-b-ca",
-    upgrade = true,
   },
   {
     type = "technology",
@@ -153,7 +151,7 @@ data:extend({
     icons = angelsmods.functions.add_icon_layer(
       { -- bottom placeholder layer
         {
-          icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+          icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
           icon_size = 128,
         },
       },
@@ -165,11 +163,11 @@ data:extend({
         ),
         {
           {
-            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
+            icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-cell.png",
             icon_size = 128,
           },
           {
-            icon = "__angelsindustriesgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
+            icon = "__angelspetrochemgraphics__/graphics/technology/deuterium-fuel-processing-arrow.png",
             icon_size = 128,
           },
         }
@@ -198,6 +196,5 @@ data:extend({
       time = 120,
     },
     order = "e-p-b-ca",
-    upgrade = true,
   },
 })

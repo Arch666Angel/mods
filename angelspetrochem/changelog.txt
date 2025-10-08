@@ -7,6 +7,7 @@ Date: ???
     - Updated for Factorio 2.0 (994)
     - Restored 1:1 water to steam ratio (1071)
     - Added circuit connectors to all machines (1114)
+    - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.26
 Date: 21.02.2024

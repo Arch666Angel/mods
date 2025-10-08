@@ -187,7 +187,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
-  OV.set_science_pack("angels-oil-gas-extraction", "datacore-processing-1", 2)
   OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
   OV.set_science_pack("angels-gas-synthesis", "datacore-processing-1", 2)
   OV.set_science_pack("angels-resin-1", "datacore-processing-1", 2)

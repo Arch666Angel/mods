@@ -482,7 +482,7 @@
     ["fill-liquid-water-semiheavy-2-barrel", "angels-liquid-water-semiheavy-2-barrel"],
     ["fill-liquid-water-semiheavy-3-barrel", "angels-liquid-water-semiheavy-3-barrel"],
     ["filter-lime", "angels-filter-lime"],
-    ["filter-lime-used", "angels-filter-lime-used-recycling"],
+    ["filter-lime-used", "angels-filter-lime-used-cleaning"],
     ["gas-acid-catalyst", "angels-gas-acid-catalyst"],
     ["gas-allylchlorid", "angels-gas-allylchlorid"],
     ["gas-ammonia", "angels-gas-ammonia"],

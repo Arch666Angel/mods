@@ -425,7 +425,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-filter-lime-used-recycling",
+        recipe = "angels-filter-lime-used-cleaning",
       },
     },
     unit = {
