@@ -2,46 +2,77 @@
 -- sure that they are also visible.
 local unit_test_functions = require("unit-test-functions")
 
-local unit_test_003 = function()
-  local recipe_prototypes = game.recipe_prototypes
-  local item_prototypes = game.item_prototypes
-  local fluid_prototypes =game.fluid_prototypes
-  for recipe_name, recipe_data in pairs(recipe_prototypes) do
-    if recipe_name.hidden == false then -- only test recipes that are not hidden
+local recipes_to_ignore = {
+  ["electric-energy-interface"] = true, -- base game
+  ["rocket-part"] = true, -- base game. Recipe is hidden from player crafting but item is hidden
+}
+local products_to_ignore = {
+  ["angels-chemical-void"] = true,
+  ["angels-water-void"] = true,
+  ["void"] = true, -- Bob's void
+}
 
+local unit_test_003 = function()
+  local unit_test_result = unit_test_functions.test_successful
+
+  local recipe_prototypes = prototypes.recipe
+  local item_prototypes = prototypes.item
+  local fluid_prototypes = prototypes.fluid
+  for recipe_name, recipe_data in pairs(recipe_prototypes) do
+    if not recipe_data.hidden and not recipes_to_ignore[recipe_name] then -- only test recipes that are not hidden or ignored
       local recipe_ingredients = recipe_data.ingredients
       for _, recipe_ingredient in pairs(recipe_ingredients) do
         if recipe_ingredient.type == "item" then
-          if game.item_prototypes[recipe_ingredient.name].has_flag("hidden") then
-            unit_test_functions.print_msg(string.format("Recipe %q requires %q (item), which is hidden.", recipe_ingredient.name))
+          if item_prototypes[recipe_ingredient.name].hidden then
+            unit_test_functions.print_msg(
+              string.format("Recipe %q requires %q (item), which is hidden.", recipe_name, recipe_ingredient.name)
+            )
+            unit_test_result = unit_test_functions.test_failed -- soft failure
           end
         elseif recipe_ingredient.type == "fluid" then
-          if game.fluid_prototypes[recipe_ingredient.name].hidden then
-            unit_test_functions.print_msg(string.format("Recipe %q requires %q (fluid), which is hidden.", recipe_ingredient.name))
+          if fluid_prototypes[recipe_ingredient.name].hidden then
+            unit_test_functions.print_msg(
+              string.format("Recipe %q requires %q (fluid), which is hidden.", recipe_name, recipe_ingredient.name)
+            )
+            unit_test_result = unit_test_functions.test_failed -- soft failure
           end
         else
-          unit_test_functions.print_msg(string.format("Unhandled testing case for recipe ingredient type %q!", recipe_ingredient.type))
+          unit_test_functions.print_msg(
+            string.format("Unhandled testing case for recipe ingredient type %q!", recipe_ingredient.type)
+          )
+          return unit_test_functions.test_invalid -- hard failure
         end
       end
 
       local recipe_products = recipe_data.products
-      for _, recipe_products in pairs(recipe_ingredients) do
-        if recipe_products.type == "item" then
-          if game.item_prototypes[recipe_products.name].has_flag("hidden") then
-            unit_test_functions.print_msg(string.format("Recipe %q requires %q (item), which is hidden.", recipe_products.name))
+      for _, recipe_product in pairs(recipe_products) do
+        --add exception list for results (void results)
+        if not products_to_ignore[recipe_product.name] then
+          if recipe_product.type == "item" then
+            if item_prototypes[recipe_product.name].hidden then
+              unit_test_functions.print_msg(
+                string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name)
+              )
+              unit_test_result = unit_test_functions.test_failed -- soft failure
+            end
+          elseif recipe_product.type == "fluid" then
+            if fluid_prototypes[recipe_product.name].hidden then
+              unit_test_functions.print_msg(
+                string.format("Recipe %q makes %q (fluid), which is hidden.", recipe_name, recipe_product.name)
+              )
+              unit_test_result = unit_test_functions.test_failed -- soft failure
+            end
+          else
+            unit_test_functions.print_msg(
+              string.format("Unhandled testing case for recipe result type %q!", recipe_product.type)
+            )
+            return unit_test_functions.test_invalid -- hard failure
           end
-        elseif recipe_products.type == "fluid" then
-          if game.fluid_prototypes[recipe_products.name].hidden then
-            unit_test_functions.print_msg(string.format("Recipe %q requires %q (fluid), which is hidden.", recipe_products.name))
-          end
-        else
-          unit_test_functions.print_msg(string.format("Unhandled testing case for recipe ingredient type %q!", recipe_products.type))
         end
       end
-
     end
   end
-  return true
+  return unit_test_result
 end
 
 return unit_test_003

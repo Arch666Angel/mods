@@ -1,104 +1,102 @@
-data:extend(
-{
+data:extend({
   -- ORE
   {
     type = "item",
-    name = "tin-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-tin.png",
+    name = "angels-tin-ore",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png",
     icon_size = 32,
     subgroup = "angels-tin",
     order = "a",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-tin",
-    icon = "__angelssmelting__/graphics/icons/processed-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-processed-tin",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin",
     order = "b",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "pellet-tin",
-    icon = "__angelssmelting__/graphics/icons/pellet-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-pellet-tin",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin",
     order = "c",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-tin",
-    icon = "__angelssmelting__/graphics/icons/ingot-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-ingot-tin",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin",
     order = "d",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "powder-tin",
-    icon = "__angelssmelting__/graphics/icons/powder-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-powder-tin",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin",
     order = "e",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-tin",
-    icon = "__angelssmelting__/graphics/icons/molten-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-liquid-molten-tin",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin-casting",
     order = "f",
     default_temperature = 231.9,
-    heat_capacity = "0KJ",
-    base_color = {r = 87/255, g = 130/255, b = 96/255},
-    flow_color = {r = 87/255, g = 130/255, b = 96/255},
+    heat_capacity = "0kJ",
+    base_color = { r = 87 / 255, g = 130 / 255, b = 96 / 255 },
+    flow_color = { r = 87 / 255, g = 130 / 255, b = 96 / 255 },
     max_temperature = 231.9,
-auto_barrel = false
+    auto_barrel = false,
   },
   {
     type = "item",
     name = "angels-roll-tin",
-    icon = "__angelssmelting__/graphics/icons/roll-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin-casting",
     order = "g",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-coil-tin",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
+    icon_size = 64,
     subgroup = "angels-tin-casting",
     order = "h",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING RESULT
   {
     type = "item",
     name = "angels-plate-tin",
-    icon = "__angelssmelting__/graphics/icons/plate-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "i",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-tin",
-    icon = "__angelssmelting__/graphics/icons/wire-tin.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-tin.png",
     icon_size = 32,
     subgroup = "angels-tin-casting",
     order = "j",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

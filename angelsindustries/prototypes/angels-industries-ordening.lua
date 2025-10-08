@@ -1,6 +1,3 @@
--- ordening
---require("prototypes.ordening.angels-industries-override-ordening") -- TEMPORARY, FILE HAS TO GO *POOF*
-
 -- components tab
 require("prototypes.ordening.angels-intermediates")
 -- power tab
@@ -12,4 +9,4 @@ require("prototypes.ordening.angels-personal-equipment")
 require("prototypes.ordening.angels-vehicles")
 require("prototypes.ordening.angels-vehicle-equipment")
 -- combat tab
---require("prototypes.ordening.angels-combat")
+require("prototypes.ordening.angels-combat")

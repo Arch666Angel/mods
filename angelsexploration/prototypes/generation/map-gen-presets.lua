@@ -15,17 +15,19 @@ map_settings.enemy_expansion.max_expansion_cooldown = 2 * 60 * 60 * 60 -- 2 hour
 local pollution_absorption_factor_multiplier = 2
 for _, tree in pairs(data.raw["tree"]) do
   if tree.emissions_per_second then
-    tree.emissions_per_second = tree.emissions_per_second * pollution_absorption_factor_multiplier
+    tree.emissions_per_second.pollution = tree.emissions_per_second.pollution * pollution_absorption_factor_multiplier
   end
 end
 
 for _, unit_spawner in pairs(data.raw["unit-spawner"]) do
   if unit_spawner.pollution_absorption_absolute then
-    unit_spawner.pollution_absorption_absolute = unit_spawner.pollution_absorption_absolute * pollution_absorption_factor_multiplier
+    unit_spawner.pollution_absorption_absolute = unit_spawner.pollution_absorption_absolute
+      * pollution_absorption_factor_multiplier
   end
 
   if unit_spawner.pollution_absorption_proportional then
-    unit_spawner.pollution_absorption_proportional = unit_spawner.pollution_absorption_proportional * pollution_absorption_factor_multiplier
+    unit_spawner.pollution_absorption_proportional = unit_spawner.pollution_absorption_proportional
+      * pollution_absorption_factor_multiplier
   end
 end
 

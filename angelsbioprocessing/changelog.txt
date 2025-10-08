@@ -1,4 +1,116 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ???
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Removed angelsmods.triggers table. Use angelsmods.trigger instead (970)
+    - Limited animation speed of fish, puffer, and biter refugiums (987)
+    - Tech tree changes: (991)
+      - Moved Garden Processing and Farming 1 techs from Red Science to Green Science
+      - Reduced the tier of Algae farm 2's ingredients
+      - Made Biters require Purple Science
+    - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.27
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.26
+Date: 04.01.2024
+  Changes:
+    - Adjust paper volume (964):
+      - Halve the output of the paper recipes
+      - Halve the amount of paper required for Phenolic boards
+  Bugfixes:
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.25
+Date: 22.12.2023
+  Changes:
+    - Added support for alien artifacts outside of bob enemies
+    - Compatibility with Bob's changes (911)
+    - Recipes that consume Gardens will now only buffer enough ingredients for 1 craft (918)
+    - Adjusted techs and added a new recipe (Sodium hypochlorite decomposition) to make Paper 2 viable when it is unlocked (922)
+    - Rebalanced paper and pulp recipes to make each tier feel like a significant upgrade (923)
+    - Made wood production available earlier (932)
+      - Recipe changes for Tree seed generators, Arboretum, and Composter
+      - Tech tree changes
+    - Added custom error message for when trying to insert invalid items into butchery, composter, or hatchery (933)
+    - Reworked recipes for Bob's circuit boards (936)
+      - Removed recipe paper to wooden boards
+      - Modified phenolic board recipe to require paper + liquid resin
+    - Prevent Bob's mods from enabling Agriculture Modules for non bio recipes (937)
+    - Remove unnecessary prerequisites from Alien Farming (943)
+  Bugfixes:
+    - Fixed Gaseous atmosphere puffing recipe missing product Acid gas (942)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.24
+Date: 23.02.2023
+  Bugfixes:
+    - Fixed info about pollution absorbtion rate was incorrect for the biologically active tile.
+    - Fixed production statistics of garden duplication.
+---------------------------------------------------------------------------------------------------
+Version: 0.7.23
+Date: 01.01.2023
+  Changes:
+    - Special Vanilla: Removed paper and full harmonic crystal as they had no use (at this point)
+    - Added blue science pack to techs (674)
+      - Butchery 2
+      - Desert farming 2
+      - Desert farming environment
+      - Hatchery
+      - Puffer refugium 1
+      - Swamp farming 2
+      - Swamp farming environment
+      - Temperate farming 2
+      - Temperate farming environment
+    - Changed which building some recipes require (802)
+      - Acetic acid from Fermentation base moved from Chemical plant to Liquefier
+      - Ethanol gas from Fermentation base moved from Chemical plant to Liquefier
+      - Liquid plastic from Propionic acid moved from Advanced chemical plant to Chemical plant
+    - Made Raw crystal shard recipes require Crystallizer 2 (805)
+    - Changed technologies Basic algae processing and Paper making 1 to ignore tech cost modifier (820)
+  Bugfixes:
+    - Fixed fishes prevented landfill from being blueprinted on water (815)
+    - Fixed machine output arrows (839)
+    - Fixed error when opening tech tree from FNEI (858)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.22
+Date: 06.06.2022
+  Changes:
+    - Moved Garden cultivation recipe unlock to a new technology Garden processing 3 (783)
+      This recipe exists in case gardens of a particular type do not spawn
+      It is not for duplication of Gardens / Alien plant-life samples
+  Bugfixes:
+    - Polluted fish water from fish breeding was not being included in fluid production graphs (750)
+    - Fixed Alien plant life sample recipes in expensive mode were bypassing Alienated fertilizer (783)
+---------------------------------------------------------------------------------------------------
+Version: 0.7.21
+Date: 19.12.2021
+  Changes:
+    - Reworked the biologically active tile:
+      - Added custom graphic icon
+      - Added custom walking sounds
+      - Added out-of-the-world pollution absorption (literally)
+      - Added pollution absorption modifier setting (default to 3x)
+      - Added localised description explaining the behaviour of this tile
+      - Reduced the complexity of the recipe slightly
+      - Added better walking sounds
+    - Alien plant-life samples changes (720):
+      - Reworked farming technologies such that garden duplication can be unlocked when
+        playing with a high tech cost modifier.
+      - Advanced farming recipes now require specialized farms
+      - More techs now require Alien plant-life samples to research
+    - Updated Acetic acid recipe to take Red metal catalyst instead of Green (692)
+    - Always enables bobs small artifacts (when artifacts are enabled in bobenemies)
+    - Always enables bobs coloured artifacts (when artifacts are enabled in bobenemies)
+  Bugfixes:
+    - Fixed incorrect properties on the new algae farm 4 (661)
+    - Fixed another bug where agricultural modules could be duplicated (682)
+    - Fixed progression of module research when playing with bobmodules
+---------------------------------------------------------------------------------------------------
 Version: 0.7.20
 Date: 10.08.2021
   Changes:

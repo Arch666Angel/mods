@@ -6,7 +6,7 @@
 - IV. [Angel's Metallurgy Smelting](https://forums.factorio.com/viewtopic.php?f=185&t=33566)
 - V. [Angel's Bio Processing](https://forums.factorio.com/viewtopic.php?f=185&t=25469)
 - VI. [Angel's Industries](https://forums.factorio.com/viewtopic.php?f=185&t=58585)
-- VII. Angel's Exploration (Beta)
+- VII. Angel's Exploration (Alpha)
 - VIII. [Angel's Add-ons](https://forums.factorio.com/viewtopic.php?f=185&t=30962)
     - VIII.I. Storage Options
         - [Warehouses](https://forums.factorio.com/viewtopic.php?p=396867#p396867)
@@ -65,7 +65,7 @@ This mod has some new overhaul settings:
 - Component Overhaul (Beta): All the complex machinery does not come out of the blue, add complex chains to create advanced intermediate products for your buildings. There is also an optional setting that will give you the building ingredients back instead of the building itself (without losses), because all these complex machinery is not so trivial to remove efficiently.
 - Technology Overhaul (Alpha): Instead of science packs, use different science analyzers and datacores to research new innovative way to grow your factory.
 
-### VII. Angel's Exploration (Beta)
+### VII. Angel's Exploration (Alpha)
 The alien life forms do not like you as much as you may like them. Add different tiers of biters and new weapons to counter these creatures.
 
 ### VIII. [Angel's Add-ons](https://forums.factorio.com/viewtopic.php?f=185&t=30962)

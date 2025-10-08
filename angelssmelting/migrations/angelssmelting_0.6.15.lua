@@ -1,4 +1,4 @@
-local angelsmods = require "__angelsrefining__/prototypes/migration-functions"
+local angelsmods = require("__angelsrefining__/prototypes/migration-functions")
 
 game.reload_script()
 
@@ -6,7 +6,7 @@ for index, force in pairs(game.forces) do
   force.reset_recipes()
   force.reset_technologies()
   force.reset_technology_effects()
-  for newTech, existingTech in pairs{
+  for newTech, existingTech in pairs({
     -- aluminium
     ["angels-aluminium-casting-2"] = "angels-aluminium-smelting-2",
     ["angels-aluminium-casting-3"] = "angels-aluminium-smelting-3",
@@ -51,9 +51,12 @@ for index, force in pairs(game.forces) do
     -- zinc
     ["angels-zinc-casting-2"] = "angels-zinc-smelting-2",
     ["angels-zinc-casting-3"] = "angels-zinc-smelting-3",
-  } do
-    if force.technologies[newTech     ] and force.technologies[newTech     ].prototype.enabled and
-       force.technologies[existingTech] and force.technologies[existingTech].prototype.enabled
+  }) do
+    if
+      force.technologies[newTech]
+      and force.technologies[newTech].prototype.enabled
+      and force.technologies[existingTech]
+      and force.technologies[existingTech].prototype.enabled
     then
       force.technologies[newTech].researched = force.technologies[existingTech].researched
     end
@@ -64,11 +67,8 @@ end
 for _, surface in pairs(game.surfaces) do
   for chunk in surface.get_chunks() do
     --local entities = surface.find_entities(chunk.area)
-    angelsmods.migration.replace_item(
-      surface.find_entities(chunk.area),
-      {
-        ["angels-rod-iron"] = "iron-stick",
-      }
-    )
+    angelsmods.migration.replace_item(surface.find_entities(chunk.area), {
+      ["angels-rod-iron"] = "iron-stick",
+    })
   end
 end

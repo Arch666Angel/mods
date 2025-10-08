@@ -1,986 +1,995 @@
-data:extend(
+data:extend({
   {
-    {
-      type = "technology",
-      name = "gardens",
-      icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "steel-processing"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "seed-extractor"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-a"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
-        },
-        time = 30
-      }
+    type = "technology",
+    name = "angels-composting",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-processing-brown",
+      "angels-water-washing-1",
     },
-    {
-      type = "technology",
-      name = "gardens-2",
-      icon = "__angelsbioprocessing__/graphics/technology/seed-extractor-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1",
-        --"bio-processing-brown",
-        "bio-paper-1",
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-composter",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-cultivating-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-cultivating-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-cultivating-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "garden-cultivating"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-soil",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-sand",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-soil-alternative",
+      },
     },
-    {
-      type = "technology",
-      name = "bio-farm-1",
-      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "gardens",
-        "water-washing-1"
+    unit = {
+      count = 10,
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "crop-farm"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "composter"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bio-processor"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-soil"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "bio-farm-2",
-      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1",
-        "angels-nitrogen-processing-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "solid-soil-alternative"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fertilizer"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+    ignore_tech_cost_multiplier = true,
+  },
+  {
+    type = "technology",
+    name = "angels-gardens",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "logistic-science-pack",
     },
-    {
-      type = "technology",
-      name = "bio-farm-alien",
-      icon = "__angelsbioprocessing__/graphics/technology/base-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-2",
-        "bio-processing-alien-1",
-        "bio-refugium-butchery-1",
-        "gardens-2"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-seed-extractor",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-polluted-fish-atmosphere"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "alien-goo"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-alienated-fertilizer"
-        },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-garden-a",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-        },
-        time = 30
-      }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-garden-a",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-garden-a",
+      },
     },
-    {
-      type = "technology",
-      name = "bio-temperate-farming-1",
-      icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-1-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-temperate-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-2-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-temperate-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-3-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-temperate-3"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-temperate-farming-2",
-      icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-temperate-farming-1",
-        "bio-farm-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-4-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-temperate-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-5"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-5-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-temperate-5"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-gardens-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "logistic-science-pack",
     },
-    {
-      type = "technology",
-      name = "bio-temperate-farm",
-      icon = "__angelsbioprocessing__/graphics/technology/temperate-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-temperate-farming-2",
-        "bio-farm-alien"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-garden-cultivating-a",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-garden-cultivating-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-farm"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "temperate-upgrade"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-garden-cultivating-a",
       },
-      unit = {
-        count = 64,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-garden-cultivating-a",
+      },
     },
-    {
-      type = "technology",
-      name = "bio-desert-farming-1",
-      icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "desert-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-1-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-desert-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-2-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-desert-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-3-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-desert-3"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-desert-farming-2",
-      icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-desert-farming-1",
-        "bio-farm-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "desert-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-4-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-desert-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-5"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-5-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-desert-5"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-gardens-3",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/seed-extractor-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-stone-smelting-2",
+      "angels-bio-farm-alien",
+      "angels-bio-paper-1",
+      "chemical-science-pack",
     },
-    {
-      type = "technology",
-      name = "bio-desert-farm",
-      icon = "__angelsbioprocessing__/graphics/technology/desert-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-desert-farming-2",
-        "bio-farm-alien"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-garden-cultivating",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-garden-cultivating-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-farm"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "desert-upgrade"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-bio-tile",
       },
-      unit = {
-        count = 64,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
     },
-    {
-      type = "technology",
-      name = "bio-swamp-farming-1",
-      icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1"
+    unit = {
+      count = 100,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "angels-token-bio", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-1-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-swamp-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-2-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-swamp-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-3-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-swamp-3"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-swamp-farming-2",
-      icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-swamp-farming-1",
-        "bio-farm-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-4-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-swamp-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-5"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-5-seed"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "sorting-swamp-5"
-        }
-      },
-      unit = {
-        count = 32,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-bio-farm-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-composting",
+      "angels-gardens",
     },
-    {
-      type = "technology",
-      name = "bio-swamp-farm",
-      icon = "__angelsbioprocessing__/graphics/technology/swamp-farm-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-swamp-farming-2",
-        "bio-farm-alien"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-crop-farm",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-garden-cultivating-b"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-farm"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "swamp-upgrade"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-bio-processor",
       },
-      unit = {
-        count = 64,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 4},
-          {type = "item", name = "logistic-science-pack", amount = 4},
-          {type = "item", name = "token-bio", amount = 1}
-        },
-        time = 30
-      }
     },
-    {
-      type = "technology",
-      name = "bio-nutrient-paste",
-      icon = "__angelsbioprocessing__/graphics/technology/nutrient-extractor-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1",
-        "gas-processing"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "nutrient-extractor"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-beans-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-corn-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-leafs-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-nuts-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-pips-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fruit-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "nutrients-refining-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "nutrients-refining-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "nutrients-refining-3"
-        }
-      },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-pressing-1",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1",
-        "slag-processing-1",
-        "angels-oil-processing"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "bio-press"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-nuts"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-pips"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-beans"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-filtering-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-vegetable-oil-refining"
-        }
-      },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-bio-farm-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "automation-2",
+      "angels-bio-farm-1",
+      "angels-nitrogen-processing-2",
     },
-    {
-      type = "technology",
-      name = "bio-pressing-2",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-pressing-1",
-        "slag-processing-2"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-fertilizer",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-vegetable-oil-filtering-2"
-        }
-      },
-      unit = {
-        count = 75,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 30
-      }
     },
-    {
-      type = "technology",
-      name = "bio-pressing-fish-1",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-pressing-1",
-        "bio-refugium-fish-1",
-        "bio-fermentation",
-        "thermal-water-extraction"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "fish-pressing-0"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fish-pressing-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fish-pressing-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fish-pressing-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fish-pulp-nutrients"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-fish-oil-filtering-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-fish-oil-refining"
-        },
-      },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-pressing-fish-2",
-      icon = "__angelsbioprocessing__/graphics/technology/press-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-pressing-fish-1",
-        "bio-pressing-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-raw-fish-oil-filtering-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-liquid-fish-oil-refining"
-        }
-      },
-      unit = {
-        count = 75,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-bio-farm-alien",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/base-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-2",
+      "angels-bio-processing-alien-1",
+      "angels-gardens-2",
     },
-    {
-      type = "technology",
-      name = "bio-fermentation",
-      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-farm-1",
-        "angels-sulfur-processing-1"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-goo",
       },
-      effects = {
-        -- {
-        -- type = "unlock-recipe",
-        -- recipe = "bio-press",
-        -- },
-        {
-          type = "unlock-recipe",
-          recipe = "fermentation-corn"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "fermentation-fruit"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "anaerobic-fermentation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "aerobic-fermentation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "ethanol-to-ethylene-synthesis"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-alienated-fertilizer",
       },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-garden",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-garden",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-garden",
+      },
     },
-    {
-      type = "technology",
-      name = "bio-plastic-1",
-      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-fermentation",
-        "bio-nutrient-paste",
-        "plastics"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-acetic-acid-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-acetic-anhydride"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-acetate-mixture"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-cellulose-acetate"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bio-plastic-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-plastic"
-        }
-      },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 30
-      }
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "bio-plastic-2",
-      icon = "__angelsbioprocessing__/graphics/technology/fermentation-tech.png",
-      icon_size = 128,
-      order = "c-a",
-      prerequisites = {
-        "bio-plastic-1"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-propionic-acid-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "bio-plastic-2"
-        }
-      },
-      unit = {
-        count = 40,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 30
-      }
+  },
+  {
+    type = "technology",
+    name = "angels-bio-temperate-farming-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "logistic-science-pack",
     },
-    --{
-    --  type = "technology",
-    --  name = "angels-garden-mutations",
-    --  icons = {
-    --    {icon = "__angelsbioprocessing__/graphics/technology/farm-mutation-tech.png", icon_size = 128}
-    --  },
-    --  icon_size = 128,
-    --  order = "c-a",
-    --  prerequisites = {
-    --    "uranium-processing",
-    --    "bio-temperate-farm",
-    --    "bio-swamp-farm",
-    --    "bio-desert-farm"
-    --  },
-    --  effects = {
-    --    {
-    --      type = "unlock-recipe",
-    --      recipe = "solid-nuclear-fertilizer"
-    --    },
-    --    {
-    --      type = "unlock-recipe",
-    --      recipe = "desert-garden-mutation-temperate"
-    --    },
-    --    --{
-    --    --  type = "unlock-recipe",
-    --    --  recipe = "swamp-garden-mutation-temperate"
-    --    --},
-    --    {
-    --      type = "unlock-recipe",
-    --      recipe = "temperate-garden-mutation-swamp"
-    --    },
-    --    --{
-    --    --  type = "unlock-recipe",
-    --    --  recipe = "desert-garden-mutation-swamp"
-    --    --},
-    --    {
-    --      type = "unlock-recipe",
-    --      recipe = "swamp-garden-mutation-desert"
-    --    }
-    --    --{
-    --    --  type = "unlock-recipe",
-    --    --  recipe = "temperate-garden-mutation-desert"
-    --    --},
-    --  },
-    --  unit = {
-    --    count = 200,
-    --    ingredients = {
-    --      {type = "item", name = "automation-science-pack", amount = 1},
-    --      {type = "item", name = "logistic-science-pack", amount = 1},
-    --      {type = "item", name = "chemical-science-pack", amount = 1},
-    --      {type = "item", name = "production-science-pack", amount = 1},
-    --      {type = "item", name = "token-bio", amount = 2}
-    --    },
-    --    time = 30
-    --  }
-    --}
-  }
-)
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-1-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-temperate-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-2-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-temperate-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-3-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-temperate-3",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "angels-token-bio", 1 },
+        { "logistic-science-pack",  4 },
+      },
+      time = 30,
+    },
+    ignore_tech_cost_multiplier = true,
+  },
+  {
+    type = "technology",
+    name = "angels-bio-temperate-farming-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-temperate-farm",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-4-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-temperate-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-5",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-5-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-temperate-5",
+      },
+    },
+    unit = {
+      count = 64,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-temperate-farm",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/temperate-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-temperate-farming-1",
+      "angels-bio-farm-alien",
+      "chemical-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-garden-b",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-farm",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-temperate-upgrade",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-desert-farming-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "logistic-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-1-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-desert-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-2-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-desert-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-3-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-desert-3",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "angels-token-bio", 1 },
+        { "logistic-science-pack",  4 },
+      },
+      time = 30,
+    },
+    ignore_tech_cost_multiplier = true,
+  },
+  {
+    type = "technology",
+    name = "angels-bio-desert-farming-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-desert-farm",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-4-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-desert-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-5",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-5-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-desert-5",
+      },
+    },
+    unit = {
+      count = 64,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-desert-farm",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/desert-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-desert-farming-1",
+      "angels-bio-farm-alien",
+      "chemical-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-garden-b",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-farm",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-desert-upgrade",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-swamp-farming-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "logistic-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-1-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-swamp-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-2-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-swamp-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-3-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-swamp-3",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "angels-token-bio", 1 },
+        { "logistic-science-pack",  4 },
+      },
+      time = 30,
+    },
+    ignore_tech_cost_multiplier = true,
+  },
+  {
+    type = "technology",
+    name = "angels-bio-swamp-farming-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-swamp-farm",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-4-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-swamp-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-5",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-5-seed",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-sorting-swamp-5",
+      },
+    },
+    unit = {
+      count = 64,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-swamp-farm",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/swamp-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-swamp-farming-1",
+      "angels-bio-farm-alien",
+      "chemical-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-garden-b",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-farm",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-swamp-upgrade",
+      },
+    },
+    unit = {
+      count = 32,
+      ingredients = {
+        { "automation-science-pack",  4 },
+        { "logistic-science-pack",  4 },
+        { "chemical-science-pack", 4 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-nutrient-paste",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/nutrient-extractor-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "angels-gas-processing",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nutrient-extractor",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-beans-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-corn-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-leafs-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-nuts-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-pips-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-fruit-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nutrients-refining-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nutrients-refining-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nutrients-refining-3",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-pressing-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "angels-slag-processing-1",
+      "angels-oil-processing",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-bio-press",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-vegetable-oil-nuts",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-vegetable-oil-pips",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-vegetable-oil-beans",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-vegetable-oil-filtering-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-vegetable-oil-refining",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-pressing-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-pressing-1",
+      "angels-slag-processing-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-vegetable-oil-filtering-2",
+      },
+    },
+    unit = {
+      count = 75,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-pressing-fish-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-pressing-1",
+      "angels-bio-refugium-fish-1",
+      "angels-bio-fermentation",
+      "angels-thermal-water-extraction",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-fish-pressing-0",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-fish-pressing-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-fish-pressing-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-fish-pressing-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-fish-pulp-nutrients",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-fish-oil-filtering-1",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-fish-oil-refining",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-pressing-fish-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/press-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-pressing-fish-1",
+      "angels-bio-pressing-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-raw-fish-oil-filtering-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-advanced-liquid-fish-oil-refining",
+      },
+    },
+    unit = {
+      count = 75,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-fermentation",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-farm-1",
+      "angels-sulfur-processing-1",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "fermentation-corn",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fermentation-fruit",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-ethanol",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-acetic-acid",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-ethanol-to-ethylene-synthesis",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-plastic-1",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-fermentation",
+      "angels-bio-nutrient-paste",
+      "plastics",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-acetic-acid-catalyst",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-acetic-anhydride",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-cellulose-acetate-mixture",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-cellulose-acetate",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-plastic-bio-1",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "angels-bio-plastic-2",
+    icon = "__angelsbioprocessinggraphics__/graphics/technology/fermentation-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "angels-bio-plastic-1",
+      "chemical-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-propionic-acid",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-plastic-bio-2",
+      },
+    },
+    unit = {
+      count = 40,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "angels-token-bio", 1 },
+      },
+      time = 30,
+    },
+  },
+})

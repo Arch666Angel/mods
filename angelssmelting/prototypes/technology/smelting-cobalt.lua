@@ -1,190 +1,184 @@
-data:extend(
+data:extend({
   {
-    {
-      type = "technology",
-      name = "angels-cobalt-smelting-1",
-      localised_name = {"technology-name.angels-cobalt-metallurgy"},
-      localised_description = {"technology-description.angels-cobalt-metallurgy"},
-      icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
-      prerequisites = {
-        "ore-leaching",
-        "angels-metallurgy-3",
-        "angels-coal-processing",
-        "water-washing-1"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "cobalt-ore-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "molten-cobalt-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-plate-cobalt"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "cobalt-ore-processing-alt"
-        }
-      },
-      unit = {
-        count = 150,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 30
-      },
-      order = "c-a"
+    type = "technology",
+    name = "angels-cobalt-smelting-1",
+    localised_name = { "technology-name.angels-cobalt-metallurgy" },
+    localised_description = { "technology-description.angels-cobalt-metallurgy" },
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-ore-leaching",
+      --"angels-metallurgy-3",
+      "angels-ore-processing-2",
+      "angels-coal-processing",
+      "angels-stone-smelting-1",
     },
-    {
-      type = "technology",
-      name = "angels-cobalt-smelting-2",
-      icon = "__angelssmelting__/graphics/technology/smelting-cobalt-tech.png",
-      icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
-      prerequisites = {
-        --"angels-metallurgy-4",
-        "ore-processing-3",
-        "angels-cobalt-smelting-1"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-ingot-cobalt",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "cobalt-ore-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "processed-cobalt-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-cobalt-oxide-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "powder-cobalt"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-molten-cobalt",
       },
-      unit = {
-        count = 200,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1}
-        },
-        time = 30
+      {
+        type = "unlock-recipe",
+        recipe = "angels-plate-cobalt",
       },
-      order = "c-a"
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-cobalt-oxide",
+      },
     },
-    {
-      type = "technology",
-      name = "angels-cobalt-casting-2",
-      icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
-      prerequisites = {
-        "angels-metallurgy-4",
-        "strand-casting-2",
-        "angels-cobalt-smelting-1"
+    unit = {
+      count = 200,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "roll-cobalt-casting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-roll-cobalt-converting"
-        }
-      },
-      unit = {
-        count = 200,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 30
-      },
-      order = "c-a"
+      time = 30,
     },
-    {
-      type = "technology",
-      name = "angels-cobalt-smelting-3",
-      icon = "__angelssmelting__/graphics/technology/smelting-cobalt-tech.png",
-      icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
-      prerequisites = {
-        "angels-metallurgy-5",
-        "ore-processing-3",
-        "angels-cobalt-smelting-2",
-        "angels-sulfur-processing-1",
-        "chlorine-processing-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "cobalt-processed-processing"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pellet-cobalt-smelting"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-cobalt-hydroxide-smelting"
-        }
-      },
-      unit = {
-        count = 250,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
-          {type = "item", name = "utility-science-pack", amount = 1}
-        },
-        time = 30
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-cobalt-smelting-2",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      --"angels-metallurgy-4",
+      "angels-ore-processing-3",
+      "angels-cobalt-smelting-1",
     },
-    {
-      type = "technology",
-      name = "angels-cobalt-casting-3",
-      icon = "__angelssmelting__/graphics/technology/casting-cobalt-tech.png",
-      icon_size = 256, icon_mipmaps = 4,
-      upgrade = true,
-      prerequisites = {
-        "angels-metallurgy-5",
-        "strand-casting-3",
-        "angels-cobalt-casting-2"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-processed-cobalt",
       },
-      effects = { 
-        {
-          type = "unlock-recipe",
-          recipe = "roll-cobalt-casting-fast"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-cobalt-oxide-2",
       },
-      unit = {
-        count = 250,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "production-science-pack", amount = 1},
-          {type = "item", name = "utility-science-pack", amount = 1}
-        },
-        time = 30
+      {
+        type = "unlock-recipe",
+        recipe = "angels-ingot-cobalt-2",
       },
-      order = "c-a"
-    }
-  }
-)
+      {
+        type = "unlock-recipe",
+        recipe = "angels-powder-cobalt",
+      },
+    },
+    unit = {
+      count = 250,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-cobalt-casting-2",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-metallurgy-4",
+      "angels-strand-casting-2",
+      "angels-cobalt-smelting-1",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-cobalt",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-plate-cobalt-2",
+      },
+    },
+    unit = {
+      count = 250,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-cobalt-smelting-3",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-cobalt-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      --"angels-metallurgy-5",
+      "angels-ore-processing-4",
+      "angels-cobalt-smelting-2",
+      "angels-sulfur-processing-1",
+      "angels-chlorine-processing-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-pellet-cobalt",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-cobalt-hydroxide",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-cobalt-oxide-3",
+      },
+    },
+    unit = {
+      count = 300,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-cobalt-casting-3",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-metallurgy-5",
+      "angels-strand-casting-3",
+      "angels-cobalt-casting-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-roll-cobalt-2",
+      },
+    },
+    unit = {
+      count = 300,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+})

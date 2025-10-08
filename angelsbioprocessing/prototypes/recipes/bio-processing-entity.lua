@@ -1,258 +1,248 @@
-data:extend(
+data:extend({
+  --ALGAE FARM
   {
-    --ALGAE FARM
-    {
-      type = "recipe",
-      name = "algae-farm",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "algae-farm"
+    type = "recipe",
+    name = "angels-algae-farm",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "algae-farm-2",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "algae-farm", amount = 1}
-      },
-      result = "algae-farm-2"
+    results = { { type = "item", name = "angels-algae-farm", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-algae-farm-2",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-algae-farm", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "algae-farm-3",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "algae-farm-2", amount = 1}
-      },
-      result = "algae-farm-3"
+    results = { { type = "item", name = "angels-algae-farm-2", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-algae-farm-3",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-algae-farm-2", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "algae-farm-4",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "algae-farm-3", amount = 1}
-      },
-      result = "algae-farm-4"
+    results = { { type = "item", name = "angels-algae-farm-3", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-algae-farm-4",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-algae-farm-3", amount = 1 },
     },
-    --CROP FARM
-    {
-      type = "recipe",
-      name = "crop-farm",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "crop-farm"
+    results = { { type = "item", name = "angels-algae-farm-4", amount = 1 } },
+  },
+  --CROP FARM
+  {
+    type = "recipe",
+    name = "angels-crop-farm",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "temperate-farm",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "temperate-farm"
+    results = { { type = "item", name = "angels-crop-farm", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-temperate-farm",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "desert-farm",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "desert-farm"
+    results = { { type = "item", name = "angels-temperate-farm", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-desert-farm",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "swamp-farm",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "swamp-farm"
+    results = { { type = "item", name = "angels-desert-farm", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-swamp-farm",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --COMPOSTER
-    {
-      type = "recipe",
-      name = "composter",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "composter"
+    results = { { type = "item", name = "angels-swamp-farm", amount = 1 } },
+  },
+  --COMPOSTER
+  {
+    type = "recipe",
+    name = "angels-composter",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --SEED EXTRACTOR
-    {
-      type = "recipe",
-      name = "seed-extractor",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "seed-extractor"
+    results = { { type = "item", name = "angels-composter", amount = 1 } },
+  },
+  --SEED EXTRACTOR
+  {
+    type = "recipe",
+    name = "angels-seed-extractor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --PRESS
-    {
-      type = "recipe",
-      name = "bio-press",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-press"
+    results = { { type = "item", name = "angels-seed-extractor", amount = 1 } },
+  },
+  --PRESS
+  {
+    type = "recipe",
+    name = "angels-bio-press",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --PROCESSOR
-    {
-      type = "recipe",
-      name = "bio-processor",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-processor"
+    results = { { type = "item", name = "angels-bio-press", amount = 1 } },
+  },
+  --PROCESSOR
+  {
+    type = "recipe",
+    name = "angels-bio-processor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --NUTRIENT EXTRACTOR
-    {
-      type = "recipe",
-      name = "nutrient-extractor",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "nutrient-extractor"
+    results = { { type = "item", name = "angels-bio-processor", amount = 1 } },
+  },
+  --NUTRIENT EXTRACTOR
+  {
+    type = "recipe",
+    name = "angels-nutrient-extractor",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --TREE GENERATOR
-    {
-      type = "recipe",
-      name = "bio-generator-temperate-1",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "temperate-tree", amount = 1}
-      },
-      result = "bio-generator-temperate-1"
+    results = { { type = "item", name = "angels-nutrient-extractor", amount = 1 } },
+  },
+  --TREE GENERATOR
+  {
+    type = "recipe",
+    name = "angels-bio-generator-temperate-1",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-temperate-tree", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-generator-swamp-1",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "swamp-tree", amount = 1}
-      },
-      result = "bio-generator-swamp-1"
+    results = { { type = "item", name = "angels-bio-generator-temperate-1", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-generator-swamp-1",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-swamp-tree", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-generator-desert-1",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "desert-tree", amount = 1}
-      },
-      result = "bio-generator-desert-1"
+    results = { { type = "item", name = "angels-bio-generator-swamp-1", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-generator-desert-1",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-desert-tree", amount = 1 },
     },
-    --ARBORETUM
-    {
-      type = "recipe",
-      name = "bio-arboretum-1",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-arboretum-1"
+    results = { { type = "item", name = "angels-bio-generator-desert-1", amount = 1 } },
+  },
+  --ARBORETUM
+  {
+    type = "recipe",
+    name = "angels-bio-arboretum-1",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --REFUGIUM
-    {
-      type = "recipe",
-      name = "bio-refugium-puffer",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-refugium-puffer"
+    results = { { type = "item", name = "angels-bio-arboretum-1", amount = 1 } },
+  },
+  --REFUGIUM
+  {
+    type = "recipe",
+    name = "angels-bio-refugium-puffer",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-refugium-hogger",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-refugium-hogger"
+    results = { { type = "item", name = "angels-bio-refugium-puffer", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-refugium-fish",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-refugium-fish",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-refugium-fish"
+    results = { { type = "item", name = "angels-bio-refugium-fish", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-refugium-biter",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-refugium-biter",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-refugium-biter"
+    results = { { type = "item", name = "angels-bio-refugium-biter", amount = 1 } },
+  },
+  --PROCESSING
+  {
+    type = "recipe",
+    name = "angels-bio-hatchery",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    --PROCESSING
-    {
-      type = "recipe",
-      name = "bio-hatchery",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-hatchery"
+    results = { { type = "item", name = "angels-bio-hatchery", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-butchery",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 1 },
     },
-    {
-      type = "recipe",
-      name = "bio-butchery",
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-      },
-      result = "bio-butchery"
+    results = { { type = "item", name = "angels-bio-butchery", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "angels-bio-tile",
+    energy_required = 1,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "angels-concrete-brick", amount = 2 },
+      { type = "item", name = "angels-token-bio", amount = 1 },
+      { type = "item", name = "angels-solid-soil", amount = 2 },
     },
-    {
-      type = "recipe",
-      name = "bio-tile",
-      energy_required = 1,
-      enabled = false,
-      ingredients = {
-        {type = "item", name = "reinforced-concrete-brick", amount = 1},
-        {type = "item", name = "token-bio", amount = 2},
-        {type = "item", name = "solid-soil", amount = 1},
-        --{type = "item", name = "steel-plate", amount = 1}
-      },
-      result = "bio-tile"
-    }
-  }
-)
+    results = {
+      { type = "item", name = "angels-bio-tile", amount_min = 5, amount_max = 10 },
+    },
+    main_product = "angels-bio-tile",
+  },
+})

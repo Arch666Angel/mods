@@ -5,8 +5,6 @@ end
 -------------------------------------------------------------------------------
 -- ARTILLERY ------------------------------------------------------------------
 -------------------------------------------------------------------------------
-reorder("capsule", "artillery-targeting-remote", "angels-artillery-a", "a[gun]-a[remote]")
-
 reorder("item", "artillery-turret", "angels-artillery-a", "b[turret]-a[artillery]")
 if mods["bobwarfare"] then
   reorder("item", "bob-artillery-turret-2", "angels-artillery-a", "b[turret]-b[artillery]")
@@ -15,16 +13,14 @@ end
 
 reorder("ammo", "artillery-shell", "angels-artillery-a", "c[ammo]-a[basic-shell]")
 if mods["bobwarfare"] then
-  data:extend(
+  data:extend({
     {
-      {
-        type = "item-subgroup",
-        name = "angels-artillery-b",
-        group = "angels-exploration",
-        order = "f-b"
-      },
-    }
-  )
+      type = "item-subgroup",
+      name = "angels-artillery-b",
+      group = "combat",
+      order = "f-b",
+    },
+  })
   reorder("ammo", "artillery-shell", "angels-artillery-b", "c[ammo]-a[basic-shell]")
 
   reorder("ammo", "distractor-artillery-shell", "angels-artillery-b", "c[ammo]-b[distractor-shell]")

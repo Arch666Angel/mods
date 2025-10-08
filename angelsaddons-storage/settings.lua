@@ -1,10 +1,9 @@
-data:extend(
-{
+data:extend({
   {
     type = "bool-setting",
     name = "angels-enable-oresilos",
     setting_type = "startup",
-    default_value =  mods["angelsrefining"] and true or false,
+    default_value = mods["angelsrefining"] and true or false,
     order = "a-a",
   },
   {
@@ -42,7 +41,4 @@ data:extend(
     default_value = false,
     order = "d",
   },
-}
-)
-
-
+})

@@ -1,551 +1,1289 @@
-data:extend(
-{
+circuit_connector_definitions["angels-gas-refinery"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 60.875, -36.25), shadow_offset = util.by_pixel( 60.875, -36.25), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(-21.5,  12.75), shadow_offset = util.by_pixel(-21.5,  12.75), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-104, -114.875), shadow_offset = util.by_pixel(-104, -114.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel( 42.25, -148.75), shadow_offset = util.by_pixel( 42.25, -148.75), show_shadow = true },
+})
+
+data:extend({
   --ADVANCED REFINERY
   {
     type = "item",
-    name = "gas-refinery",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    }, 1, angelsmods.petrochem.number_tint),
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-a",
-    place_result = "gas-refinery",
+    place_result = "angels-gas-refinery",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      1, angelsmods.petrochem.number_tint),
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1, result = "gas-refinery"},
-    fast_replaceable_group = "gas-refinery",
-    next_upgrade = "gas-refinery-2",
+    }, 1, angelsmods.petrochem.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-gas-refinery" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification =
-    {
-      module_slots = 2
-    },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"gas-refining"},
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 1,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.06 * 60
+      emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
-    animation =
-    {
-      filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery.png",
-      width = 704,
-      height = 704,
-      scale = 0.5,
-      frame_count = 1,
-      line_length = 1,
-      shift = {1, -1},
-    },
-    working_visualisations =
-    {
-      {
-        animation =
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 462,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 924,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 908,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 1386,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 1362,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+      },
+      working_visualisations = {
         {
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          line_length = 10,
-          width = 20,
-          height = 40,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 2,
-          shift = {2.9, -3.5},
-          hr_version = {
-            filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-89, -136.5),
+          east_position = util.by_pixel(34.5, -207.5),
+          south_position = util.by_pixel(90.5, -94),
+          west_position = util.by_pixel(-16, -35),
+          animation = {
+            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
             width = 40,
             height = 81,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 1,
-            shift = {2.9, -3.5},
+            draw_as_glow = true,
+            scale = 0.5,
           },
         },
-        light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-      }
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 462,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 924,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 1386,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, -3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 3, -3 },
+                scale = 0.5,
+              },
+            },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -3, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 1, 3 },
+                scale = 0.5,
+              },
+            },
+          },
+        },
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-3, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {3, -4} }}
-      }
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
+        },
+      },
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound =
-    {
-      sound = { filename = "__angelspetrochem__/sound/gas-refinery.ogg" },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
   },
   {
     type = "item",
-    name = "gas-refinery-2",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-2",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    }, 2, angelsmods.petrochem.number_tint),
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-b",
-    place_result = "gas-refinery-2",
+    place_result = "angels-gas-refinery-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-2",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-2",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      2, angelsmods.petrochem.number_tint),
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1, result = "gas-refinery-2"},
-    fast_replaceable_group = "gas-refinery",
-    next_upgrade = "gas-refinery-3",
+    }, 2, angelsmods.petrochem.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-gas-refinery-2" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification =
-    {
-      module_slots = 2
-    },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"gas-refining"},
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 1.5,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.08 * 60
+      emissions_per_minute = { pollution = 4.8 },
     },
     energy_usage = "450kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
-    animation =
-    {
-      filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery.png",
-      width = 704,
-      height = 704,
-      scale = 0.5,
-      frame_count = 1,
-      line_length = 1,
-      shift = {1, -1},
-    },
-    working_visualisations =
-    {
-      {
-        animation =
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 462,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 924,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 908,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 1386,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 1362,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+      },
+      working_visualisations = {
         {
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          line_length = 10,
-          width = 20,
-          height = 40,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 2,
-          shift = {2.9, -3.5},
-          hr_version = {
-            filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-89, -136.5),
+          east_position = util.by_pixel(34.5, -207.5),
+          south_position = util.by_pixel(90.5, -94),
+          west_position = util.by_pixel(-16, -35),
+          animation = {
+            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
             width = 40,
             height = 81,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 1,
-            shift = {2.9, -3.5},
+            draw_as_glow = true,
+            scale = 0.5,
           },
         },
-        light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-      }
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 462,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 924,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 1386,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, -3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 3, -3 },
+                scale = 0.5,
+              },
+            },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -3, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 1, 3 },
+                scale = 0.5,
+              },
+            },
+          },
+        },
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-3, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {3, -4} }}
-      }
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
+        },
+      },
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound =
-    {
-      sound = { filename = "__angelspetrochem__/sound/gas-refinery.ogg" },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
   },
   {
     type = "item",
-    name = "gas-refinery-3",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-3",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    }, 3, angelsmods.petrochem.number_tint),
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-c",
-    place_result = "gas-refinery-3",
+    place_result = "angels-gas-refinery-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-3",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-3",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      3, angelsmods.petrochem.number_tint),
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1, result = "gas-refinery-3"},
-    fast_replaceable_group = "gas-refinery",
+    }, 3, angelsmods.petrochem.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-gas-refinery-3" },
+    fast_replaceable_group = "angels-gas-refinery",
+    next_upgrade = "angels-gas-refinery-4",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification =
-    {
-      module_slots = 2
-    },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"gas-refining"},
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 2,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.10 * 60
+      emissions_per_minute = { pollution = 6 },
     },
     energy_usage = "500kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
-    animation =
-    {
-      filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery.png",
-      width = 704,
-      height = 704,
-      scale = 0.5,
-      frame_count = 1,
-      line_length = 1,
-      shift = {1, -1},
-    },
-    working_visualisations =
-    {
-      {
-        animation =
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 462,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 924,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 908,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 1386,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 1362,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+      },
+      working_visualisations = {
         {
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          line_length = 10,
-          width = 20,
-          height = 40,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 2,
-          shift = {2.9, -3.5},
-          hr_version = {
-            filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-89, -136.5),
+          east_position = util.by_pixel(34.5, -207.5),
+          south_position = util.by_pixel(90.5, -94),
+          west_position = util.by_pixel(-16, -35),
+          animation = {
+            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
             width = 40,
             height = 81,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 1,
-            shift = {2.9, -3.5},
+            draw_as_glow = true,
+            scale = 0.5,
           },
         },
-        light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-      }
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 462,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 924,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 1386,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, -3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 3, -3 },
+                scale = 0.5,
+              },
+            },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -3, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 1, 3 },
+                scale = 0.5,
+              },
+            },
+          },
+        },
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-3, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {3, -4} }}
-      }
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
+        },
+      },
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound =
-    {
-      sound = { filename = "__angelspetrochem__/sound/gas-refinery.ogg" },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
   },
   {
     type = "item",
-    name = "gas-refinery-4",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-4",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-gas-refinery",
+    }, 4, angelsmods.petrochem.number_tint),
+    subgroup = "angels-petrochem-buildings-gas-refinery",
     order = "b[gas-refinery]-d",
-    place_result = "gas-refinery-4",
+    place_result = "angels-gas-refinery-4",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "gas-refinery-4",
-    icons = angelsmods.functions.add_number_icon_layer(
+    name = "angels-gas-refinery-4",
+    icons = angelsmods.functions.add_number_icon_layer({
       {
-        {
-          icon = "__angelspetrochem__/graphics/icons/gas-refinery.png",
-          icon_size = 32, icon_mipmaps = 1,
-        }
+        icon = "__angelspetrochemgraphics__/graphics/icons/gas-refinery.png",
+        icon_size = 64,
       },
-      4, angelsmods.petrochem.number_tint),
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1, result = "gas-refinery-4"},
-    fast_replaceable_group = "gas-refinery",
+    }, 4, angelsmods.petrochem.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-gas-refinery-4" },
+    fast_replaceable_group = "angels-gas-refinery",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification =
-    {
-      module_slots = 2
-    },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-    crafting_categories = {"gas-refining"},
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 2.2,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-advanced-gas-refining" },
     crafting_speed = 2.5,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.12 * 60
+      emissions_per_minute = { pollution = 7.2 },
     },
     energy_usage = "600kW",
+    circuit_connector = circuit_connector_definitions["angels-gas-refinery"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
-    animation =
-    {
-      filename = "__angelspetrochem__/graphics/entity/gas-refinery/gas-refinery.png",
-      width = 704,
-      height = 704,
-      scale = 0.5,
-      frame_count = 1,
-      line_length = 1,
-      shift = {1, -1},
-    },
-    working_visualisations =
-    {
-      {
-        animation =
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 462,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 454,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 924,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 908,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-base.png",
+              priority = "high",
+              width = 462,
+              height = 657,
+              x = 1386,
+              shift = util.by_pixel(0, -42),
+              scale = 0.5,
+            },
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-shadow.png",
+              priority = "high",
+              width = 655,
+              height = 454,
+              y = 1362,
+              shift = util.by_pixel(48.5, 9.5),
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+      },
+      working_visualisations = {
         {
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          line_length = 10,
-          width = 20,
-          height = 40,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 2,
-          shift = {2.9, -3.5},
-          hr_version = {
-            filename = "__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
+          fadeout = true,
+          constant_speed = true,
+          north_position = util.by_pixel(-89, -136.5),
+          east_position = util.by_pixel(34.5, -207.5),
+          south_position = util.by_pixel(90.5, -94),
+          west_position = util.by_pixel(-16, -35),
+          animation = {
+            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
             line_length = 10,
             width = 40,
             height = 81,
             frame_count = 60,
             animation_speed = 0.75,
-            scale = 1,
-            shift = {2.9, -3.5},
+            draw_as_glow = true,
+            scale = 0.5,
           },
         },
-        light = {intensity = 0.8, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}}
-      }
+        {
+          fadeout = true,
+          north_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 462,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 924,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/advanced-gas-refinery-light.png",
+            priority = "high",
+            width = 462,
+            height = 657,
+            x = 1386,
+            shift = util.by_pixel(0, -42),
+            blend_mode = "additive-soft",
+            draw_as_glow = true,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, -3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 3, -3 },
+                scale = 0.5,
+              },
+            },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -3, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { -1, 3 },
+                scale = 0.5,
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelspetrochemgraphics__/graphics/entity/advanced-gas-refinery/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                shift = { 1, 3 },
+                scale = 0.5,
+              },
+            },
+          },
+        },
+      },
     },
-    fluid_boxes =
-    {
+    fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 0.50,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {1, 4} }}
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-3, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {-1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {1, -4} }}
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
+        },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = {{ position = {3, -4} }}
-      }
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
+        },
+      },
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound =
-    {
-      sound = { filename = "__angelspetrochem__/sound/gas-refinery.ogg" },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 2.5,
     },
   },
-}
-)
+})

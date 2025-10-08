@@ -1,5 +1,5 @@
 return {
   "",
-  {"tips-and-tricks-description.angels-leaching"},
-  {"tips-and-tricks-description.angels-leaching-notes"}
+  { "tips-and-tricks-description.angels-leaching" },
+  { "tips-and-tricks-description.angels-leaching-notes" },
 }

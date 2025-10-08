@@ -1,7 +1,7 @@
 local tnt = angelsmods.functions.TNT
-local description = {"tips-and-tricks-description.angels-ore-generation"}
+local description = { "tips-and-tricks-description.angels-ore-generation" }
 
-local available_ores = {""}
+local available_ores = { "" }
 
 table.insert(available_ores, tnt.get_item_from_name("angels-ore1"))
 table.insert(available_ores, tnt.get_item_from_name("angels-ore3"))
@@ -15,7 +15,7 @@ end
 
 table.insert(description, available_ores)
 
-local available_wells = {""}
+local available_wells = { "" }
 
 table.insert(available_wells, tnt.get_item_from_name("angels-fissure", "entity", ""))
 

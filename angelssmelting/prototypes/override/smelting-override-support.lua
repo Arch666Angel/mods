@@ -1,33 +1,30 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 -------------------------------------------------------------------------------
 -- MOLDS ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_molds then
 else
-  angelsmods.functions.add_flag("motor-casing-0", "hidden")
-  angelsmods.functions.add_flag("mold-expendable", "hidden")
-  angelsmods.functions.add_flag("mold-non-expendable", "hidden")
-  angelsmods.functions.add_flag("spent-mold-non-expendable", "hidden")
-  OV.disable_recipe({"angels-casing-resin-mold", "mold-expendable"})
-  OV.disable_recipe({"mold-non-expendable", "mold-non-expendable-wash"})
+  angelsmods.functions.hide("angels-motor-casing-0")
+  angelsmods.functions.hide("angels-mold-expendable")
+  angelsmods.functions.hide("angels-mold-non-expendable")
+  angelsmods.functions.hide("angels-spent-mold-non-expendable")
+  OV.disable_recipe({ "angels-casing-resin-mold", "angels-mold-expendable" })
+  OV.disable_recipe({ "angels-mold-non-expendable", "angels-mold-non-expendable-wash" })
   OV.remove_prereq("angels-metallurgy-2", "angels-stone-smelting-1")
   OV.remove_prereq("angels-metallurgy-3", "angels-stone-smelting-2")
-  OV.remove_prereq("angels-stone-smelting-2", "resins")
+  OV.remove_prereq("angels-stone-smelting-2", "angels-resins")
 end
 
 -------------------------------------------------------------------------------
 -- BOBS HEAT SHIELD -----------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods["bobrevamp"] then
-  OV.patch_recipes(
+if angelsmods.trigger.sintering_tech and mods["bobrevamp"] then
+  OV.patch_recipes({
     {
-      {
-        name = "heat-shield-tile",
-        category = "sintering-3"
-      }
-    }
-  )
-  OV.add_prereq("heat-shield", "powder-metallurgy-3")
+      name = "bob-heat-shield-tile",
+      category = "angels-sintering-4",
+    },
+  })
+  OV.add_prereq("bob-heat-shield", "angels-powder-metallurgy-4")
 end

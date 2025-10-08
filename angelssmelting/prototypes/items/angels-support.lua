@@ -1,38 +1,35 @@
-data:extend(
-{
+data:extend({
   --COOLANT
   {
     type = "fluid",
-    name = "liquid-coolant",
-    icon = "__angelssmelting__/graphics/icons/liquid-coolant.png",
+    name = "angels-liquid-coolant",
+    icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fa",
-    default_temperature = 25,
-    heat_capacity = "0.1KJ",
-    base_color = {r = 109/255, g = 136/255, b = 179/255},
-    flow_color = {r = 109/255, g = 136/255, b = 179/255},
-    max_temperature = 300,
+    default_temperature = 0,
+    base_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
+    flow_color = { r = 109 / 255, g = 136 / 255, b = 179 / 255 },
   },
   {
     type = "fluid",
-    name = "liquid-coolant-used",
-    icon = "__angelssmelting__/graphics/icons/liquid-coolant-used.png",
+    name = "angels-liquid-coolant-used",
+    icon = "__angelssmeltinggraphics__/graphics/icons/liquid-coolant-used.png",
     icon_size = 32,
-    subgroup = "water-treatment-fluid",
+    subgroup = "angels-water-treatment-fluid",
     order = "fb",
     default_temperature = 25,
-    heat_capacity = "0.1KJ",
-    base_color = {r = 68/255, g = 85/255, b = 112/255},
-    flow_color = {r = 68/255, g = 85/255, b = 112/255},
+    heat_capacity = "0.1kJ",
+    base_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
+    flow_color = { r = 68 / 255, g = 85 / 255, b = 112 / 255 },
     max_temperature = 300,
-auto_barrel = false
+    auto_barrel = false,
   },
   --MOLDS
   {
     type = "item",
-    name = "motor-casing-0",
-    icon = "__angelssmelting__/graphics/icons/motor-casing-0.png",
+    name = "angels-motor-casing-0",
+    icon = "__angelssmeltinggraphics__/graphics/icons/motor-casing-0.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "a[positive-mold]",
@@ -40,32 +37,31 @@ auto_barrel = false
   },
   {
     type = "item",
-    name = "mold-expendable",
-    icon = "__angelssmelting__/graphics/icons/expendable-mold.png",
+    name = "angels-mold-expendable",
+    icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "b[expendable]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "mold-non-expendable",
-    icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png",
+    name = "angels-mold-non-expendable",
+    icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
     icon_size = 32,
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-a[new]",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "spent-mold-non-expendable",
+    name = "angels-spent-mold-non-expendable",
     icons = {
-      { icon = "__angelssmelting__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32},
-      --{ icon = "__angelssmelting__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
+      { icon = "__angelssmeltinggraphics__/graphics/icons/spent-non-expendable-mold.png", icon_size = 32 },
+      --{ icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png", icon_size = 32, tint = {181,101,30,0.5}}
     },
     subgroup = "angels-mold-casting",
     order = "c[non-expendable]-b[used]",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

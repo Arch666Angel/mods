@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   --ROCKETS
   -- {
   -- type = "projectile",
@@ -86,7 +85,6 @@ data:extend(
   -- flags = {"goes-to-main-inventory"},
   -- ammo_type =
   -- {
-  -- category = "rocket",
   -- action =
   -- {
   -- type = "direct",
@@ -107,5 +105,4 @@ data:extend(
   -- order = "d[rocket-launcher]-b[explosive]",
   -- stack_size = 200
   -- },
-}
-)
+})

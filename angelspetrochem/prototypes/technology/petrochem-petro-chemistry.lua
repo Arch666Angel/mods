@@ -1,743 +1,670 @@
-data:extend(
+data:extend({
+  --PETRO CHEMISTRY
   {
-    --PETRO CHEMISTRY
-    {
-      type = "technology",
-      name = "oil-gas-extraction",
-      icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "basic-chemistry-3",
-        --"electronics",
-        "fluid-handling"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "pumpjack"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "separator"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-separation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-separation"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    type = "technology",
+    name = "angels-oil-processing",
+    icon = "__base__/graphics/technology/oil-processing.png",
+    icon_size = 256,
+    prerequisites = {
+      "oil-gathering",
     },
-    {
-      type = "technology",
-      name = "angels-oil-processing",
-      icon = "__base__/graphics/technology/oil-processing.png",
-      icon_size = 256,
-      icon_mipmaps = 4,
-      prerequisites = {
-        "oil-gas-extraction"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "oil-refinery",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refinery"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-storage-tank-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refining"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "condensates-oil-refining"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-naphtha"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-fuel-oil"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-storage-tank-2",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
+      {
+        type = "unlock-recipe",
+        recipe = "angels-oil-refining",
       },
-      order = "c-a"
+      {
+        type = "unlock-recipe",
+        recipe = "angels-condensates-oil-refining",
+      },
     },
-    {
-      type = "technology",
-      name = "angels-advanced-oil-processing",
-      icon = "__base__/graphics/technology/oil-processing.png",
-      icon_size = 256,
-      icon_mipmaps = 4,
-      prerequisites = {
-        "oil-processing"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-oil-refining"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "residual-oil-refining"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "gas-processing",
-      icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "oil-gas-extraction"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-small"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-storage-tank-1"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refining"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-fractioning"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-methane"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-oil-processing",
+    icon = "__base__/graphics/technology/oil-processing.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-advanced-chemistry-2",
     },
-    {
-      type = "technology",
-      name = "angels-advanced-gas-processing",
-      icon = "__angelspetrochem__/graphics/technology/gas-refinery-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "gas-processing"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-advanced-oil-refining",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-fractioning-synthesis"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-fractioning-condensates"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-fractioning-residual"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-residual-oil-refining",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
     },
-    {
-      type = "technology",
-      name = "angels-flare-stack",
-      icon = "__angelspetrochem__/graphics/technology/flare-stack.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-fluid-control",
-        "basic-chemistry-3"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-flare-stack"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "angels-advanced-chemistry-1",
-      icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        --"basic-chemistry-3",
-        "ore-floatation"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electrolyser-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-chemical-plant"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-methanol-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-formaldehyde-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-green"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-gas-processing",
+    icon = "__angelspetrochemgraphics__/graphics/technology/gas-refinery-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "oil-gathering",
     },
-    {
-      type = "technology",
-      name = "angels-advanced-chemistry-2",
-      icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-advanced-chemistry-1",
-        "advanced-electronics",
-        "gas-steam-cracking-1",
-        "oil-steam-cracking-1"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-small",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electrolyser-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "separator-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-small-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refinery-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-styrene-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-benzene-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-ethylbenzene-catalyst"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-storage-tank-1",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refining",
       },
-      order = "c-a"
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-fractioning",
+      },
     },
-    {
-      type = "technology",
-      name = "angels-advanced-chemistry-3",
-      icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-advanced-chemistry-2",
-        "advanced-electronics-2",
-        "angels-advanced-gas-processing",
-        "gas-steam-cracking-2",
-        "oil-steam-cracking-2"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electrolyser-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "separator-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-small-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refinery-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "advanced-chemical-plant-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "condensates-refining"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-mineral-oil-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-polyethylene-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-blue"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "angels-advanced-chemistry-4",
-      icon = "__angelspetrochem__/graphics/technology/advanced-chemical-plant-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-advanced-chemistry-3"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-chemical-plant-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "separator-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-3"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-refinery-small-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "oil-refinery-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker-4"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-phenol-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "cumene-process"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-bisphenol-a"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-metal-yellow"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "utility-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-gas-processing",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-gas-refinery-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-steam-cracking-2",
     },
-    {
-      type = "technology",
-      name = "gas-synthesis",
-      icons = angelsmods.functions.create_gas_tech_icon({{210, 120, 210}, {175, 100, 175}, {140, 080, 140}}),
-      prerequisites = {
-        "angels-advanced-chemistry-3"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "gas-synthesis-separation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-synthesis-reforming"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-synthesis-methanation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-synthesis-methanol"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-naphtha-catalyst"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "solid-fuel-synthesis"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-fractioning-synthesis",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-fractioning-condensates",
       },
-      order = "c-a"
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-fractioning-residual",
+      },
     },
-    {
-      type = "technology",
-      name = "gas-steam-cracking-1",
-      icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "gas-processing"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-methane"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-ethane"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-butane"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-propene-synthesis"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "gas-ethylene-oxide"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-ethylene-carbonate"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "gas-steam-cracking-2",
-      icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "gas-steam-cracking-1",
-        "angels-advanced-chemistry-2"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-gas-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-benzene"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-flare-stack",
+    icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
+    icon_size = 256,
+    prerequisites = {
+      "angels-fluid-control",
     },
-    {
-      type = "technology",
-      name = "oil-steam-cracking-1",
-      icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "oil-processing",
-        "angels-advanced-chemistry-1"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-flare-stack",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-steam-cracking-butane"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "catalyst-steam-cracking-naphtha"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
     },
-    {
-      type = "technology",
-      name = "oil-steam-cracking-2",
-      icon = "__angelspetrochem__/graphics/technology/steam-cracker-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "oil-steam-cracking-1",
-        "angels-advanced-chemistry-2"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracker-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-naphtha"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-mineral-oil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-fuel-oil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "steam-cracking-oil-residual"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "liquid-toluene-from-naphtha"
-        }
-      },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+      time = 15,
     },
-    {
-      type = "technology",
-      name = "angels-electric-boiler",
-      icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "oil-steam-cracking-1",
-        "gas-steam-cracking-1"
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electric-boiler"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-steam-water"
-        }
-      },
-      unit = {
-        count = 30,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1}
-        },
-        time = 15
-      },
-      order = "c-a"
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-chemistry-1",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      --"angels-basic-chemistry-3",
+      "angels-ore-floatation",
     },
-    {
-      type = "technology",
-      name = "angels-electric-boiler-2",
-      icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-electric-boiler",
-        "oil-steam-cracking-2",
-        "gas-steam-cracking-2"
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquifier-2",
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electric-boiler-2"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "angels-steam-water-purified"
-        }
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electrolyser-2",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1}
-        },
-        time = 15
+      {
+        type = "unlock-recipe",
+        recipe = "angels-chemical-plant-2",
       },
-      order = "c-b"
+      {
+        type = "unlock-recipe",
+        recipe = "angels-advanced-chemical-plant",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-methanol",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-formaldehyde",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-catalyst-metal-green",
+      },
     },
-    {
-      type = "technology",
-      name = "angels-electric-boiler-3",
-      icon = "__angelspetrochem__/graphics/technology/electric-boiler-tech.png",
-      icon_size = 128,
-      prerequisites = {
-        "angels-electric-boiler-2",
-        "angels-advanced-chemistry-4"
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "angels-electric-boiler-3"
-        }
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-chemistry-2",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-1",
+      "advanced-circuit",
+      "angels-steam-cracking-1",
+      "chemical-science-pack",
+      "angels-sulfur-processing-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquifier-3",
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          {type = "item", name = "automation-science-pack", amount = 1},
-          {type = "item", name = "logistic-science-pack", amount = 1},
-          {type = "item", name = "chemical-science-pack", amount = 1},
-          {type = "item", name = "utility-science-pack", amount = 1}
-        },
-        time = 15
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electrolyser-3",
       },
-      order = "c-c"
-    }
-  }
-)
+      {
+        type = "unlock-recipe",
+        recipe = "angels-chemical-plant-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-separator-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-small-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-oil-refinery-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-styrene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-benzene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-ethylbenzene",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-chemistry-3",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-2",
+      "angels-advanced-gas-processing",
+      "angels-chlorine-processing-1",
+      "angels-steam-cracking-2",
+      "angels-thermal-water-extraction",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-condensates-refining",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-mineral-oil-catalyst",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-polyethylene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-catalyst-metal-blue",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-chemistry-4",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-3",
+      "processing-unit",
+      "production-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquifier-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electrolyser-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-chemical-plant-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-separator-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-small-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-oil-refinery-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracker-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-advanced-chemical-plant-2",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-advanced-chemistry-5",
+    icon = "__angelspetrochemgraphics__/graphics/technology/advanced-chemical-plant-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-4",
+      "utility-science-pack",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-separator-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-refinery-small-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-oil-refinery-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracker-4",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-phenol",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-cumene-process",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-bisphenol-a",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-catalyst-metal-yellow",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-gas-synthesis",
+    icons = angelsmods.functions.create_gas_tech_icon({ { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }),
+    prerequisites = {
+      "angels-advanced-chemistry-3",
+      "flammables",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-synthesis-separation",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-synthesis-reforming",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-synthesis-methanation",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-synthesis-methanol",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-naphtha-catalyst",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-fuel-synthesis",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-steam-cracking-1",
+    icon = "__angelspetrochemgraphics__/graphics/technology/steam-cracker-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-1",
+      "angels-gas-processing",
+      "oil-processing",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracker",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-butadiene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-catalyst-steam-cracking-naphtha",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-methane",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-ethylene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-butane",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-propene",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-ethylene-oxide",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-ethylene-carbonate",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-steam-cracking-2",
+    icon = "__angelspetrochemgraphics__/graphics/technology/steam-cracker-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-advanced-chemistry-2",
+      "angels-steam-cracking-1",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracker-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-naphtha",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-mineral-oil",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-fuel-oil",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-oil-residual",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-cracking-gas-residual",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-electric-boiler",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-steam-cracking-1",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electric-boiler",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-water",
+      },
+    },
+    unit = {
+      count = 30,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
+    name = "angels-electric-boiler-2",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-electric-boiler",
+      "angels-steam-cracking-2",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electric-boiler-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-steam-water-purified",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-b",
+  },
+  {
+    type = "technology",
+    name = "angels-electric-boiler-3",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electric-boiler-tech.png",
+    icon_size = 128,
+    prerequisites = {
+      "angels-electric-boiler-2",
+      "angels-advanced-chemistry-5",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-electric-boiler-3",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+      time = 15,
+    },
+    order = "c-c",
+  },
+})

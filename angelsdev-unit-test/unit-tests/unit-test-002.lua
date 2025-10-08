@@ -10,7 +10,9 @@ local function log_invalid_science_configuration(tech_name, tech_analysers, tech
       unit_test_functions.print_msg(string.format("                     %s", tech_analysers[i]))
     end
   end
-  unit_test_functions.print_msg(string.format("  Science datacores: %s", tech_datacore_T1[1] or tech_datacore_T2[1] or "None"))
+  unit_test_functions.print_msg(
+    string.format("  Science datacores: %s", tech_datacore_T1[1] or tech_datacore_T2[1] or "None")
+  )
   if #tech_datacore_T1 > 1 then
     for i = 2, #tech_datacore_T1 do
       unit_test_functions.print_msg(string.format("                     %s", tech_datacore_T1[i]))
@@ -24,11 +26,17 @@ local function log_invalid_science_configuration(tech_name, tech_analysers, tech
 end
 
 local unit_test_002 = function()
-  if not game.active_mods["angelsindustries"] then return true end -- skip test
-  local industries_tech_setting = settings.startup["angels-enable-tech"]
-  if (not industries_tech_setting) or (industries_tech_setting.value == false) then return true end -- skip test
+  local unit_test_result = unit_test_functions.test_successful
 
-  local tech_prototypes = game.technology_prototypes
+  if not script.active_mods["angelsindustries"] then
+    return true
+  end -- skip test
+  local industries_tech_setting = settings.startup["angels-enable-tech"]
+  if not industries_tech_setting or (industries_tech_setting.value == false) then
+    return true
+  end -- skip test
+
+  local tech_prototypes = prototypes.technology
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     if tech_prototype.hidden == false then
       local tech_ingredients = tech_prototype.research_unit_ingredients
@@ -88,16 +96,19 @@ local unit_test_002 = function()
       -- Key researches have (one or) more analysers but no datacores
       if #tech_analysers > 1 and (#tech_datacore_T1 + #tech_datacore_T2) > 0 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       -- Other researches should only have one type of datacore
       if (#tech_datacore_T1 + #tech_datacore_T2) > 1 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       -- Other researches should also have one type of analyser
       if (#tech_datacore_T1 + #tech_datacore_T2) == 1 and #tech_analysers ~= 1 then
         log_invalid_science_configuration(tech_name, tech_analysers, tech_datacore_T1, tech_datacore_T2)
+        unit_test_result = unit_test_functions.test_failed -- soft failure
       end
 
       if (#tech_analysers + #tech_datacore_T1 + #tech_datacore_T2) == 0 then
@@ -106,7 +117,7 @@ local unit_test_002 = function()
     end
   end
 
-  return true
+  return unit_test_result
 end
 
 return unit_test_002

@@ -1,315 +1,1019 @@
-data:extend(
-  {
-    {
-      type = "item",
-      name = "hydro-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      subgroup = "water-treatment-building",
-      order = "a[hydro-plant]",
-      place_result = "hydro-plant",
-      stack_size = 10
+local function hydropipepictures()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-north1.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { -0.08, 0.45 },
     },
-    {
-      type = "assembling-machine",
-      name = "hydro-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "hydro-plant"},
-      fast_replaceable_group = "hydro-plant",
-      next_upgrade = "hydro-plant-2",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-      selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-      module_specification = {
-        module_slots = 1
-      },
-      allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"water-treatment"},
-      crafting_speed = 1,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.03 * 60
-      },
-      energy_usage = "150kW",
-      ingredient_count = 4,
-      animation = {
-        layers = {
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/1hydro-plant.png",
-            priority = "extra-high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
-          },
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/2hydro-plant-overlay.png",
-            --tint= {r=0.2, g=0.3, b=0.45},
-            priority = "high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0}
-          }
-        }
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-2, -4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures2(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
-        }
-      },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/blank.png",
+      priority = "extra-high",
+      width = 1,
+      height = 1,
+      shift = { 0, 0 },
     },
-    {
-      type = "item",
-      name = "hydro-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        2, angelsmods.refining.number_tint),
-      subgroup = "water-treatment-building",
-      order = "b[hydro-plant2-]",
-      place_result = "hydro-plant-2",
-      stack_size = 10
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-south1.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { 0.06, -0.6 },
     },
-    {
-      type = "assembling-machine",
-      name = "hydro-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        2, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "hydro-plant-2"},
-      fast_replaceable_group = "hydro-plant",
-      next_upgrade = "hydro-plant-3",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-      selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-      module_specification = {
-        module_slots = 2
-      },
-      allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"water-treatment"},
-      crafting_speed = 1.5,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.04 * 60
-      },
-      energy_usage = "200kW",
-      ingredient_count = 4,
-      animation = {
-        layers = {
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/1hydro-plant.png",
-            priority = "extra-high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
-          },
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/2hydro-plant-overlay.png",
-            tint = {r = 0.2, g = 0.3, b = 0.45},
-            priority = "high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0}
-          }
-        }
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-2, -4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures2(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
-        }
-      },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-east1.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { 0.62, 0.05 },
     },
-    {
-      type = "item",
-      name = "hydro-plant-3",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        3, angelsmods.refining.number_tint),
-      subgroup = "water-treatment-building",
-      order = "b[hydro-plant2-]",
-      place_result = "hydro-plant-3",
-      stack_size = 10
-    },
-    {
-      type = "assembling-machine",
-      name = "hydro-plant-3",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/hydro-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        3, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "hydro-plant-3"},
-      fast_replaceable_group = "hydro-plant",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-      selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-      module_specification = {
-        module_slots = 2
-      },
-      allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"water-treatment"},
-      crafting_speed = 2,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.05 * 60
-      },
-      energy_usage = "250kW",
-      ingredient_count = 4,
-      animation = {
-        layers = {
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/1hydro-plant.png",
-            priority = "extra-high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0},
-            animation_speed = 0.5
-          },
-          {
-            filename = "__angelsrefining__/graphics/entity/hydro-plant/2hydro-plant-overlay.png",
-            tint = {r = 0.2, g = 0.3, b = 0.45},
-            priority = "high",
-            width = 288,
-            height = 288,
-            frame_count = 25,
-            line_length = 5,
-            shift = {0, 0}
-          }
-        }
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-2, -4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures2(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {2, 4}}}
-        },
-        {
-          production_type = "output",
-          pipe_picture = hydropipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {-2, 4}}}
-        }
-      },
-    }
   }
-)
+end
+
+local function hydropipepictures2()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-north2.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { -0.08, 0.45 },
+    },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/blank.png",
+      priority = "extra-high",
+      width = 1,
+      height = 1,
+      shift = { 0, 0 },
+    },
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-south1.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { 0.06, -0.6 },
+    },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-east2.png",
+      priority = "extra-high",
+      width = 48,
+      height = 48,
+      shift = { 0.62, 0.05 },
+    },
+  }
+end
+
+circuit_connector_definitions["angels-hydro-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+})
+
+data:extend({
+  {
+    type = "item",
+    name = "angels-hydro-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    subgroup = "angels-water-treatment-building",
+    order = "a[hydro-plant]",
+    place_result = "angels-hydro-plant",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "angels-hydro-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-hydro-plant" },
+    fast_replaceable_group = "angels-hydro-plant",
+    next_upgrade = "angels-hydro-plant-2",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_slots = 1,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-water-treatment" },
+    crafting_speed = 1,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 1.8 },
+    },
+    energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    ingredient_count = 4,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-base.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5,
+          },
+        },
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          north_position = util.by_pixel(-52.5, -43),
+          east_position = util.by_pixel(-52.5, -43),
+          south_position = util.by_pixel(-52.5, -43),
+          west_position = util.by_pixel(-52.5, -43),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_position = util.by_pixel(14.5, -21.5),
+          east_position = util.by_pixel(14.5, -21.5),
+          south_position = util.by_pixel(14.5, -21.5),
+          west_position = util.by_pixel(14.5, -21.5),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            shift = util.by_pixel(20, 10.5),
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 538,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          south_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            x = 1076,
+            y = 0,
+            height = 454,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          west_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 1614,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 459,
+            height = 491,
+            x = 459,
+            y = 0,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 918,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 1377,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+            priority = "high",
+            width = 128,
+            height = 128,
+            repeat_count = 36,
+            scale = 0.5,
+            shift = { -2, -3 },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { -2, -3 },
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { 2, -3 },
+              },
+            },
+          },
+        },
+      },
+    },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -2, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures2(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 2, 3 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -2, 3 }, direction = defines.direction.south },
+        },
+      },
+    },
+  },
+  {
+    type = "item",
+    name = "angels-hydro-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    subgroup = "angels-water-treatment-building",
+    order = "b[hydro-plant2-]",
+    place_result = "angels-hydro-plant-2",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "angels-hydro-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-hydro-plant-2" },
+    fast_replaceable_group = "angels-hydro-plant",
+    next_upgrade = "angels-hydro-plant-3",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-water-treatment" },
+    crafting_speed = 1.5,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 2.4 },
+    },
+    energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    ingredient_count = 4,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-base.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5,
+          },
+        },
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          north_position = util.by_pixel(-52.5, -43),
+          east_position = util.by_pixel(-52.5, -43),
+          south_position = util.by_pixel(-52.5, -43),
+          west_position = util.by_pixel(-52.5, -43),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_position = util.by_pixel(14.5, -21.5),
+          east_position = util.by_pixel(14.5, -21.5),
+          south_position = util.by_pixel(14.5, -21.5),
+          west_position = util.by_pixel(14.5, -21.5),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            shift = util.by_pixel(20, 10.5),
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 538,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          south_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            x = 1076,
+            y = 0,
+            height = 454,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          west_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 1614,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 459,
+            height = 491,
+            x = 459,
+            y = 0,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 918,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 1377,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+            priority = "high",
+            width = 128,
+            height = 128,
+            repeat_count = 36,
+            scale = 0.5,
+            shift = { -2, -3 },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { -2, -3 },
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { 2, -3 },
+              },
+            },
+          },
+        },
+      },
+    },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -2, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures2(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 2, 3 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -2, 3 }, direction = defines.direction.south },
+        },
+      },
+    },
+  },
+  {
+    type = "item",
+    name = "angels-hydro-plant-3",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 3, angelsmods.refining.number_tint),
+    subgroup = "angels-water-treatment-building",
+    order = "b[hydro-plant2-]",
+    place_result = "angels-hydro-plant-3",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "angels-hydro-plant-3",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/hydro-plant.png",
+        icon_size = 64,
+      },
+    }, 3, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-hydro-plant-3" },
+    fast_replaceable_group = "angels-hydro-plant",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-water-treatment" },
+    crafting_speed = 2,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 3 },
+    },
+    energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    ingredient_count = 4,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-base.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5,
+          },
+        },
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          north_position = util.by_pixel(-52.5, -43),
+          east_position = util.by_pixel(-52.5, -43),
+          south_position = util.by_pixel(-52.5, -43),
+          west_position = util.by_pixel(-52.5, -43),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-fan.png",
+                priority = "extra-high",
+                width = 107,
+                height = 77,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_position = util.by_pixel(14.5, -21.5),
+          east_position = util.by_pixel(14.5, -21.5),
+          south_position = util.by_pixel(14.5, -21.5),
+          west_position = util.by_pixel(14.5, -21.5),
+          animation = {
+            layers = {
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, -47.75),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 0.125),
+                scale = 0.5,
+              },
+              {
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-dynamo.png",
+                priority = "extra-high",
+                width = 40,
+                height = 36,
+                frame_count = 24,
+                line_length = 6,
+                animation_speed = 0.5,
+                shift = util.by_pixel(0, 48),
+                scale = 0.5,
+              },
+            },
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            shift = util.by_pixel(20, 10.5),
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 538,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          south_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            x = 1076,
+            y = 0,
+            height = 454,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+          west_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-shadow.png",
+            priority = "extra-high",
+            width = 538,
+            height = 454,
+            x = 1614,
+            y = 0,
+            frame_count = 1,
+            shift = util.by_pixel(20, 10.5),
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 0,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          east_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 459,
+            height = 491,
+            x = 459,
+            y = 0,
+            scale = 0.5,
+          },
+          south_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 918,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          west_animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/hydro-plant-pipe-connections.png",
+            priority = "extra-high",
+            width = 459,
+            height = 491,
+            x = 1377,
+            y = 0,
+            frame_count = 1,
+            scale = 0.5,
+          },
+        },
+        {
+          always_draw = true,
+          north_animation = {
+            draw_as_shadow = true,
+            filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+            priority = "high",
+            width = 128,
+            height = 128,
+            repeat_count = 36,
+            scale = 0.5,
+            shift = { -2, -3 },
+          },
+          south_animation = {
+            layers = {
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { -2, -3 },
+              },
+              {
+                draw_as_shadow = true,
+                filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/vertical-pipe-shadow-patch.png",
+                priority = "high",
+                width = 128,
+                height = 128,
+                repeat_count = 36,
+                scale = 0.5,
+                shift = { 2, -3 },
+              },
+            },
+          },
+        },
+      },
+    },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.65 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -2, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures2(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 2, 3 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "output",
+        pipe_picture = hydropipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -2, 3 }, direction = defines.direction.south },
+        },
+      },
+    },
+  },
+})

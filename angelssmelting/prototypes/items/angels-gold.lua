@@ -1,137 +1,140 @@
 local show_formula = settings.startup["angels-show-chemical-formula"].value
 
-data:extend(
-{
+data:extend({
   -- ORE
   {
     type = "item",
-    name = "gold-ore",
-    icon = "__angelssmelting__/graphics/icons/ore-gold.png",
+    name = "angels-gold-ore",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "a",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING INTERMEDIATE
   {
     type = "item",
-    name = "processed-gold",
-    icon = "__angelssmelting__/graphics/icons/processed-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-processed-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/processed-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold",
     order = "b",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "pellet-gold",
-    icon = "__angelssmelting__/graphics/icons/pellet-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-pellet-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/pellet-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold",
     order = "c",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "solid-sodium-gold-cyanide",
-    icon = "__angelssmelting__/graphics/icons/solid-sodium-gold-cyanide.png",
+    name = "angels-solid-sodium-gold-cyanide",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-sodium-gold-cyanide.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "d",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "fluid",
-    name = "liquid-chlorauric-acid",
-    localised_description = show_formula and {"tooltip-description.chemical-formula", "HAuCl[font=default-tiny-bold]4[/font]"} or nil,
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(nil, { {120,203,000}, {120,203,000}, {241,214,020}, {241,214,020} }),
+    name = "angels-liquid-chlorauric-acid",
+    localised_description = show_formula
+        and { "tooltip-description.chemical-formula", "HAuCl[font=default-tiny-bold]4[/font]" }
+      or nil,
+    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
+      nil,
+      { { 120, 203, 000 }, { 120, 203, 000 }, { 241, 214, 020 }, { 241, 214, 020 } }
+    ),
     subgroup = "angels-gold",
     order = "e",
-    default_temperature = 100,
-    heat_capacity = "0KJ",
-    base_color = {r = 237/255, g = 191/255, b = 29/255},
-    flow_color = {r = 237/255, g = 191/255, b = 29/255},
-    max_temperature = 100,
+    default_temperature = 0,
+    heat_capacity = "0kJ",
+    base_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
+    flow_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
+    max_temperature = 0,
   },
   {
     type = "item",
-    name = "cathode-gold",
-    icon = "__angelssmelting__/graphics/icons/cathode-gold.png",
+    name = "angels-cathode-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/cathode-gold.png",
     icon_size = 32,
     subgroup = "angels-gold",
     order = "f",
-    stack_size = 200
+    stack_size = 200,
   },
   -- SMELTING RESULTS
   {
     type = "item",
-    name = "ingot-gold",
-    icon = "__angelssmelting__/graphics/icons/ingot-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-ingot-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ingot-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold",
     order = "g",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
-    name = "powder-gold",
-    icon = "__angelssmelting__/graphics/icons/powder-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-powder-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold",
     order = "h",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING INTERMEDIATE
   {
     type = "fluid",
-    name = "liquid-molten-gold",
-    icon = "__angelssmelting__/graphics/icons/molten-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "angels-liquid-molten-gold",
+    icon = "__angelssmeltinggraphics__/graphics/icons/molten-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold-casting",
     order = "i",
     default_temperature = 1064,
-    heat_capacity = "0KJ",
-    base_color = {r = 237/255, g = 191/255, b = 29/255},
-    flow_color = {r = 237/255, g = 191/255, b = 29/255},
+    heat_capacity = "0kJ",
+    base_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
+    flow_color = { r = 237 / 255, g = 191 / 255, b = 29 / 255 },
     max_temperature = 1064,
-    auto_barrel = false
+    auto_barrel = false,
   },
   {
     type = "item",
     name = "angels-roll-gold",
-    icon = "__angelssmelting__/graphics/icons/roll-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold-casting",
     order = "j",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-coil-gold",
-    icon = "__angelssmelting__/graphics/icons/wire-coil-gold.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-gold.png",
+    icon_size = 64,
     subgroup = "angels-gold-casting",
     order = "k",
-    stack_size = 200
+    stack_size = 200,
   },
   -- CASTING RESULT
   {
     type = "item",
     name = "angels-plate-gold",
-    icon = "__angelssmelting__/graphics/icons/plate-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "l",
-    stack_size = 200
+    stack_size = 200,
   },
   {
     type = "item",
     name = "angels-wire-gold",
-    icon = "__angelssmelting__/graphics/icons/wire-gold.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-gold.png",
     icon_size = 32,
     subgroup = "angels-gold-casting",
     order = "m",
-    stack_size = 200
+    stack_size = 200,
   },
-}
-)
+})

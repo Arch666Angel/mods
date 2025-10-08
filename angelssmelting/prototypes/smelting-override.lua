@@ -1,43 +1,39 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 --PREPARATIONS
 
 --OVERRIDE FOR BASE
-angelsmods.functions.override_item_conditions(
-  {
-    value = 200,
-    list = {
-      "coal",
-      "uranium-ore"
-    }
-  }
-)
+angelsmods.functions.override_item_conditions({
+  value = 200,
+  list = {
+    "coal",
+    "uranium-ore",
+  },
+})
 
 angelsmods.functions.move_item("uranium-ore", "angels-ores", "h[uranium-ore]")
 
 if angelsmods.smelting then
   -- this should be moved to petrochem
-  OV.patch_recipes(
+  OV.patch_recipes({
     {
-      {
-        name = "gas-sulfur-dioxide-calcium-sulfate",
-        results = {
-          {name = "solid-lime", type = "item", amount = 1}
-        }
+      name = "angels-gas-sulfur-dioxide-calcium-sulfate",
+      results = {
+        { name = "angels-solid-lime", type = "item", amount = 1 },
       },
-      {
-        name = "filter-lime",
-        ingredients = {
-          {name = "solid-lime", type = "item", amount = "stone-crushed"}
-        }
-      }
-    }
-  )
+    },
+    {
+      name = "angels-filter-lime",
+      ingredients = {
+        { name = "angels-solid-lime", type = "item", amount = "angels-stone-crushed" },
+      },
+    },
+  })
 end
 
 --DYNAMIC OVERRIDES
 require("prototypes.recipes.smelting-entity-angels")
+require("prototypes.override.smelting-override-entity")
 require("prototypes.override.smelting-override-support")
 require("prototypes.override.smelting-override-alloy-support")
 
@@ -64,11 +60,12 @@ require("prototypes.override.smelting-override-platinum")
 require("prototypes.override.smelting-override-silicon")
 require("prototypes.override.smelting-override-silver")
 require("prototypes.override.smelting-override-stone")
-require("prototypes.override.smelting-override-thorium")
 require("prototypes.override.smelting-override-tin")
 require("prototypes.override.smelting-override-titanium")
 require("prototypes.override.smelting-override-tungsten")
 require("prototypes.override.smelting-override-zinc")
+
+require("prototypes.override.smelting-override-bobassembly")
 
 --ENABLE PRODUCTIVITY
 require("prototypes.override.smelting-override-productivity")

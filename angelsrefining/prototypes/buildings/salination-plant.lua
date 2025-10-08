@@ -1,169 +1,206 @@
-data:extend(
+circuit_connector_definitions["angels-salination-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-11, -52.25), shadow_offset = util.by_pixel(-11, -52.25), show_shadow = true },
+})
+
+data:extend({
   {
-    {
-      type = "item",
-      name = "salination-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      subgroup = "water-treatment-building",
-      order = "d[salination-plant]",
-      place_result = "salination-plant",
-      stack_size = 10
+    type = "item",
+    name = "angels-salination-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
+        icon_size = 64,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    subgroup = "angels-water-treatment-building",
+    order = "d[salination-plant]",
+    place_result = "angels-salination-plant",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "angels-salination-plant",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
+        icon_size = 64,
+      },
+    }, 1, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-salination-plant" },
+    fast_replaceable_group = "angels-salination-plant",
+    next_upgrade = "angels-salination-plant-2",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_slots = 1,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-salination-plant" },
+    crafting_speed = 1,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 1.8 },
     },
-    {
-      type = "assembling-machine",
-      name = "salination-plant",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        1, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "salination-plant"},
-      fast_replaceable_group = "salination-plant",
-      next_upgrade = "salination-plant-2",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-      selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-      module_specification = {
-        module_slots = 1
-      },
-      allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"salination-plant"},
-      crafting_speed = 1,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.03 * 60
-      },
-      energy_usage = "200kW",
-      ingredient_count = 4,
+    energy_usage = "200kW",
+    circuit_connector = circuit_connector_definitions["angels-salination-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    ingredient_count = 4,
+    graphics_set = {
       animation = {
-        filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant.png",
-        priority = "extra-high",
-        width = 288,
-        height = 320,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0, -0.5},
-        animation_speed = 0.5
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          --pipe_picture = salinationpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-1, -4}}}
+        layers = {
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-base.png",
+            priority = "extra-high",
+            width = 484,
+            height = 540,
+            frame_count = 36,
+            line_length = 6,
+            shift = util.by_pixel(-2.5, -12),
+            animation_speed = 0.5,
+            scale = 0.5,
+          },
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-shadow.png",
+            priority = "extra-high",
+            width = 509,
+            height = 467,
+            repeat_count = 36,
+            shift = util.by_pixel(10, 6.5),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            scale = 0.5,
+          },
         },
-        {
-          production_type = "output",
-          --pipe_picture = salinationpipepictures2(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {1, 4}}}
-        }
       },
     },
-    {
-      type = "item",
-      name = "salination-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
-        },
-        2, angelsmods.refining.number_tint),
-      subgroup = "water-treatment-building",
-      order = "e[salination-plant2-]",
-      place_result = "salination-plant-2",
-      stack_size = 10
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.8 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    {
-      type = "assembling-machine",
-      name = "salination-plant-2",
-      icons = angelsmods.functions.add_number_icon_layer(
-        {
-          {
-            icon = "__angelsrefining__/graphics/icons/salination-plant.png",
-            icon_size = 32, icon_mipmaps = 1
-          }
+    forced_symmetry = "horizontal",
+    fluid_boxes = {
+      {
+        production_type = "input",
+        --pipe_picture = salinationpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -1, -3 }, direction = defines.direction.north },
         },
-        2, angelsmods.refining.number_tint),
-      flags = {"placeable-neutral", "player-creation"},
-      minable = {mining_time = 1, result = "salination-plant-2"},
-      fast_replaceable_group = "salination-plant",
-      max_health = 300,
-      corpse = "big-remnants",
-      dying_explosion = "medium-explosion",
-      collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-      selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-      module_specification = {
-        module_slots = 2
       },
-      allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-      crafting_categories = {"salination-plant"},
-      crafting_speed = 2,
-      energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.04 * 60
+      {
+        production_type = "output",
+        --pipe_picture = salinationpipepictures2(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 1, 3 }, direction = defines.direction.south } },
       },
-      energy_usage = "250kW",
-      ingredient_count = 4,
+    },
+  },
+  {
+    type = "item",
+    name = "angels-salination-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
+        icon_size = 64,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    subgroup = "angels-water-treatment-building",
+    order = "e[salination-plant2-]",
+    place_result = "angels-salination-plant-2",
+    stack_size = 10,
+  },
+  {
+    type = "assembling-machine",
+    name = "angels-salination-plant-2",
+    icons = angelsmods.functions.add_number_icon_layer({
+      {
+        icon = "__angelsrefininggraphics__/graphics/icons/salination-plant.png",
+        icon_size = 64,
+      },
+    }, 2, angelsmods.refining.number_tint),
+    flags = { "placeable-neutral", "player-creation" },
+    collision_mask = angelsmods.functions.set_building_collision_mask("asm", { "elevated_rail" }),
+    minable = { mining_time = 1, result = "angels-salination-plant-2" },
+    fast_replaceable_group = "angels-salination-plant",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+    crafting_categories = { "angels-salination-plant" },
+    crafting_speed = 2,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 2.4 },
+    },
+    energy_usage = "250kW",
+    circuit_connector = circuit_connector_definitions["angels-salination-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    ingredient_count = 4,
+    graphics_set = {
       animation = {
-        filename = "__angelsrefining__/graphics/entity/salination-plant/salination-plant.png",
-        priority = "extra-high",
-        width = 288,
-        height = 320,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0, -0.5},
-        animation_speed = 0.5
-      },
-      vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-      working_sound = {
-        sound = {filename = "__angelsrefining__/sound/ore-leaching-plant.ogg"},
-        idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
-      },
-      fluid_boxes = {
-        {
-          production_type = "input",
-          --pipe_picture = salinationpipepictures(),
-          pipe_covers = pipecoverspictures(),
-          base_area = 10,
-          base_level = -1,
-          pipe_connections = {{type = "input", position = {-1, -4}}}
+        layers = {
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-base.png",
+            priority = "extra-high",
+            width = 484,
+            height = 540,
+            frame_count = 36,
+            line_length = 6,
+            shift = util.by_pixel(-2.5, -12),
+            animation_speed = 0.5,
+            scale = 0.5,
+          },
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/salination-plant-shadow.png",
+            priority = "extra-high",
+            width = 509,
+            height = 467,
+            repeat_count = 36,
+            shift = util.by_pixel(10, 6.5),
+            draw_as_shadow = true,
+            animation_speed = 0.5,
+            scale = 0.5,
+          },
         },
-        {
-          production_type = "output",
-          --pipe_picture = salinationpipepictures2(),
-          pipe_covers = pipecoverspictures(),
-          base_level = 1,
-          pipe_connections = {{position = {1, 4}}}
-        }
       },
-    }
-  }
-)
+    },
+    impact_category = "metal",
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg", volume = 0.8 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
+    forced_symmetry = "horizontal",
+    fluid_boxes = {
+      {
+        production_type = "input",
+        --pipe_picture = salinationpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -1, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        --pipe_picture = salinationpipepictures2(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = { { flow_direction = "output", position = { 1, 3 }, direction = defines.direction.south } },
+      },
+    },
+  },
+})

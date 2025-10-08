@@ -1,29 +1,70 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.industries = angelsmods.industries or {}
-angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 1}
+angelsmods.industries.number_tint = { r = 1, g = 0, b = 1, a = 1 }
 angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
---angelsmods.industries.tech=false --temp overrides to disable until ready
 
 angelsmods.industries.components = settings.startup["angels-enable-components"].value
---Enforce components to be true if tech is true, can remove this later once we re-jig the recipes to allow tech without components.
+angelsmods.industries.blocks = angelsmods.industries.blocks or {}
+angelsmods.industries.blocks.exploration = false
+angelsmods.industries.blocks.logistic = false
+angelsmods.industries.blocks.warfare = false
+angelsmods.industries.blocks.enhancement5 = false
+angelsmods.industries.blocks.energy5 = false
+
 if angelsmods.industries.tech == true then
   angelsmods.industries.components = true
+  angelsmods.industries.blocks.exploration = true
+  angelsmods.industries.blocks.logistic = true
+  angelsmods.industries.blocks.warfare = true
+  angelsmods.industries.blocks.enhancement5 = true
+  angelsmods.industries.blocks.energy5 = true
+  if mods["bobtech"] then
+    bobmods.tech.advanced_logistic_science = false
+  end
 end
---angelsmods.industries.components = false --temp overrides to disable until ready
 
-angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
-if mods["bobplates"] or angelsmods.industries.components then
-  angelsmods.industries.overhaul = true
-end
---angelsmods.industries.overhaul=false --temp overrides
-
-angelsmods.industries.return_ingredients =
-  angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
+angelsmods.industries.return_ingredients = angelsmods.industries.components
+    and settings.startup["angels-return-ingredients"].value
+  or false
 angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
+
+angelsmods.industries.component_result_multiplier = 1
+angelsmods.industries.component_crafting_time_multiplier = 1
+local component_result_multiplier = settings.startup["angels-components-component-difficulty"].value
+if component_result_multiplier == "normal" then
+  angelsmods.industries.component_result_multiplier = 2
+  angelsmods.industries.component_crafting_time_multiplier = 2
+elseif component_result_multiplier == "easy" then
+  angelsmods.industries.component_result_multiplier = 2
+  angelsmods.industries.component_crafting_time_multiplier = 1
+elseif component_result_multiplier ~= "hard" then
+  console.log(
+    "Error: Angels startup setting 'angels-components-component-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. "' configured! Falling back to default..."
+  )
+end
+
+angelsmods.industries.block_result_multiplier = 1
+angelsmods.industries.block_crafting_time_multiplier = 1
+local block_result_multiplier = settings.startup["angels-components-block-difficulty"].value
+if block_result_multiplier == "normal" then
+  angelsmods.industries.block_result_multiplier = 2
+  angelsmods.industries.block_crafting_time_multiplier = 2
+elseif block_result_multiplier == "easy" then
+  angelsmods.industries.block_result_multiplier = 2
+  angelsmods.industries.block_crafting_time_multiplier = 1
+elseif block_result_multiplier ~= "hard" then
+  console.log(
+    "Error: Angels startup setting 'angels-components-block-difficulty' has an invalid value '"
+      .. block_result_multiplier
+      .. " configured! Falling back to default..."
+  )
+end
 
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")
@@ -98,27 +139,7 @@ require("prototypes.buildings.angels-logistics-relay-station")
 require("prototypes.buildings.angels-logistics-big-chest")
 require("prototypes.buildings.angels-logistics-robot-construction")
 require("prototypes.buildings.angels-logistics-robot-cargo")
---ENTITIES
-require("prototypes.entities.crawler")
-require("prototypes.entities.equipment")
 --RECIPES
-require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")
-require("prototypes.recipes.vehicles-recipe")
 --TECHS
-require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")
--- TOOLS
-require("prototypes.angels-logistics-ghosting")
-
--- NUCLEAR -----------------------------------------------------------
---ENTITIES
-require("prototypes.buildings.centrifuge")
-require("prototypes.buildings.angels-reactor")
---ITEMS
-require("prototypes.items.overhaul-nuclear-power")
-require("prototypes.items.angels-reactor")
---RECIPES
-require("prototypes.recipes.overhaul-nuclear-power")
---TECHS
-require("prototypes.technology.overhaul-nuclear-power")

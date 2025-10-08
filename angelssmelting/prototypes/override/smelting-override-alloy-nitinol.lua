@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["nitinol"].plate = true
@@ -10,100 +9,111 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["nitinol"].plate then
   if mods["bobplates"] then
-    data:extend(
+    data:extend({
+      --ITEMS
       {
-        --ITEMS
-        {
-          type = "fluid",
-          name = "liquid-molten-nitinol",
-          icon = "__angelssmelting__/graphics/icons/molten-nitinol.png",
-          icon_size = 64, icon_mipmaps = 4,
-          subgroup = "angels-alloys-casting",
-          order = "f[nitinol]-a[liquid-molten-nitinol]",
-          default_temperature = 100,
-          heat_capacity = "0KJ",
-          base_color = {r = 106 / 256, g = 92 / 256, b = 153 / 256},
-          flow_color = {r = 106 / 256, g = 92 / 256, b = 153 / 256},
-          max_temperature = 100,
-          auto_barrel = false
-        }
-      }
-    )
-    data:extend(
+        type = "fluid",
+        name = "angels-liquid-molten-nitinol",
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-nitinol.png",
+        icon_size = 64,
+        subgroup = "angels-alloys-casting",
+        order = "f[nitinol]-a[liquid-molten-nitinol]",
+        default_temperature = 0,
+        heat_capacity = "0kJ",
+        base_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },
+        flow_color = { r = 106 / 256, g = 92 / 256, b = 153 / 256 },
+        max_temperature = 0,
+        auto_barrel = false,
+      },
+    })
+    data:extend({
+      --SMELTING
       {
-        --SMELTING
-        {
-          type = "recipe",
-          name = "angels-nitinol-smelting-1",
-          category = "induction-smelting",
-          subgroup = "angels-alloys-casting",
-          energy_required = 4,
-          enabled = false,
-          ingredients = {
-            {type = "item", name = "ingot-titanium", amount = 24},
-            {type = "item", name = "ingot-nickel", amount = 12}
-          },
-          results = {
-            {type = "fluid", name = "liquid-molten-nitinol", amount = 360}
-          },
-          order = "f[nitinol]-a[liquid-molten-nitinol]",
-          crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-nitinol")
+        type = "recipe",
+        name = "angels-liquid-molten-nitinol",
+        category = "angels-induction-smelting-4",
+        subgroup = "angels-alloys-casting",
+        energy_required = 4,
+        enabled = false,
+        ingredients = {
+          { type = "item", name = "angels-ingot-titanium", amount = 24 },
+          { type = "item", name = "angels-ingot-nickel", amount = 12 },
         },
-        --CASTING
-        {
-          type = "recipe",
-          name = "angels-plate-nitinol",
-          category = "casting",
-          subgroup = "angels-alloys-casting",
-          energy_required = 4,
-          enabled = false,
-          ingredients = {
-            {type = "fluid", name = "liquid-molten-nitinol", amount = 40}
-          },
-          results = {
-            {type = "item", name = "nitinol-alloy", amount = 4}
-          },
-          order = "f[nitinol]-b[nitinol-alloy]"
+        results = {
+          { type = "fluid", name = "angels-liquid-molten-nitinol", amount = 360 },
         },
-        --TECHS
-        {
-          type = "technology",
-          name = "angels-nitinol-smelting-1",
-          icon = "__angelssmelting__/graphics/technology/casting-nitinol-tech.png",
-          icon_size = 256, icon_mipmaps = 4,
-          prerequisites = {
-            "angels-titanium-smelting-1",
-            "angels-nickel-smelting-3"
-          },
-          effects = {
+        order = "f[nitinol]-a[liquid-molten-nitinol]",
+        crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-nitinol"),
+      },
+      --CASTING
+      {
+        type = "recipe",
+        name = "angels-plate-nitinol",
+        localised_name = { "item-name.bob-nitinol-alloy" },
+        category = "angels-casting-4",
+        subgroup = "angels-alloys-casting",
+        energy_required = 4,
+        enabled = false,
+        ingredients = {
+          { type = "fluid", name = "angels-liquid-molten-nitinol", amount = 40 },
+        },
+        results = {
+          { type = "item", name = "bob-nitinol-alloy", amount = 4 },
+        },
+        icons = angelsmods.functions.add_icon_layer(
+          {
             {
-              type = "unlock-recipe",
-              recipe = "angels-nitinol-smelting-1"
-            },
-            {
-              type = "unlock-recipe",
-              recipe = "angels-plate-nitinol"
+              icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png",
+              icon_size = 32,
             }
           },
-          unit = {
-            count = 50,
-            ingredients = {
-              {type = "item", name = "automation-science-pack", amount = 1},
-              {type = "item", name = "logistic-science-pack", amount = 1},
-              {type = "item", name = "chemical-science-pack", amount = 1}
-            },
-            time = 30
+          angelsmods.functions.get_object_icons("angels-liquid-molten-nitinol"),
+          { -10, -10 },
+          0.4375
+        ),
+        order = "f[nitinol]-b[nitinol-alloy]",
+      },
+      --TECHS
+      {
+        type = "technology",
+        name = "angels-nitinol-smelting-1",
+        icon = "__angelssmeltinggraphics__/graphics/technology/casting-nitinol-tech.png",
+        icon_size = 256,
+        prerequisites = {
+          "angels-metallurgy-4",
+          "angels-titanium-smelting-1",
+          "angels-nickel-smelting-2",
+        },
+        effects = {
+          {
+            type = "unlock-recipe",
+            recipe = "angels-liquid-molten-nitinol",
           },
-          order = "c-a"
-        }
-      }
-    )
-    angelsmods.functions.move_item("nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
-    data.raw["item"]["nitinol-alloy"].icon = "__angelssmelting__/graphics/icons/plate-nitinol.png"
-    data.raw["item"]["nitinol-alloy"].icon_size = 32
-    data.raw["item"]["nitinol-alloy"].icon_mipmaps = 1
-    OV.add_prereq("nitinol-processing", "angels-nitinol-smelting-1")
-    OV.disable_recipe({"nitinol-alloy"})
+          {
+            type = "unlock-recipe",
+            recipe = "angels-plate-nitinol",
+          },
+        },
+        unit = {
+          count = 250,
+          ingredients = {
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 },
+            { "chemical-science-pack", 1 },
+            { "production-science-pack", 1 },
+          },
+          time = 30,
+        },
+        order = "c-a",
+      },
+    })
+    angelsmods.functions.move_item("bob-nitinol-alloy", "angels-alloys-casting", "f[nitinol]-b[nitinol-alloy]")
+    data.raw["item"]["bob-nitinol-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-nitinol.png"
+    data.raw["item"]["bob-nitinol-alloy"].icon_size = 32
+    OV.add_prereq("bob-nitinol-processing", "angels-nitinol-smelting-1")
+    OV.add_prereq("bob-nitinol-processing", "lubricant")
+    OV.remove_prereq("bob-nitinol-processing", "bob-titanium-processing")
+    OV.disable_recipe({ "bob-nitinol-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-nitinol")
   end
 end

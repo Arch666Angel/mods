@@ -1,6 +1,4 @@
-
 if settings.startup["deco-shred-create-shrine-offer"].value then
-
   local satteliteTechnologyName = "space-science-pack"
 
   if settings.startup["deco-shred-create-tech"].value then
@@ -18,9 +16,8 @@ if settings.startup["deco-shred-create-shrine-offer"].value then
 
         effects = {},
 
-        unit =
-        {
-          count = data.raw["item"]["satellite"].rocket_launch_product[2] or 1000,
+        unit = {
+          count = data.raw["item"]["satellite"].rocket_launch_products[1].amount or 1000,
           ingredients = data.raw["technology"][satteliteTechnologyName].unit.ingredients,
           time = 60,
         },
@@ -30,20 +27,20 @@ if settings.startup["deco-shred-create-shrine-offer"].value then
     satteliteTechnologyName = "shrine-offering"
   end
 
-  for _,decoName in pairs({
+  for _, decoName in pairs({
     "shred",
     "santa",
     "inter",
     "voske",
     "east",
   }) do
-    local offeringName = "offering-"..decoName.."-1"
+    local offeringName = "offering-" .. decoName .. "-1"
     if data.raw.recipe[offeringName] then
-
       data.raw["recipe"][offeringName].enabled = false
-      table.insert(data.raw["technology"][satteliteTechnologyName].effects, {type = "unlock-recipe", recipe = offeringName})
-
+      table.insert(
+        data.raw["technology"][satteliteTechnologyName].effects,
+        { type = "unlock-recipe", recipe = offeringName }
+      )
     end
   end
-
 end

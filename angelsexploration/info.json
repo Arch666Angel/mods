@@ -1,19 +1,18 @@
 {
   "name": "angelsexploration",
-  "version": "0.3.11",
-  "factorio_version": "1.1",
+  "version": "1.1.0",
+  "factorio_version": "2.0",
   "title": "Angel's Exploration (BETA)",
   "author": "Arch666Angel",
   "contact": "",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "",
   "dependencies": [
-    "angelsrefining >= 0.12.0",
-    "angelspetrochem >= 0.9.20",
-    "angelssmelting >= 0.6.17",
-    "angelsbioprocessing >= 0.7.20",
-    "angelsindustries >= 0.4.14",
-    "? bobenemies >= 0.18.5",
-    "? bobwarfare >= 0.18.6"
+    "angelsrefining >= 1.1.0",
+    "angelspetrochem >= 1.1.0",
+    "angelssmelting >= 1.1.0",
+    "angelsbioprocessing >= 1.1.0",
+    "angelsindustries >= 1.1.0",
+    "~ angelsexplorationgraphics >= 1.0.0"
   ]
 }

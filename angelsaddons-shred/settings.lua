@@ -1,4 +1,4 @@
-data:extend{
+data:extend({
   {
     -- create shred spawnpoint
     type = "bool-setting",
@@ -25,4 +25,4 @@ data:extend{
     default_value = true,
     order = "shred-a[deco]-c",
   },
-}
+})
