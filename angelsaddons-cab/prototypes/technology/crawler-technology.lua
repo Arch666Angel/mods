@@ -2,10 +2,10 @@ data:extend({
   {
     type = "technology",
     name = "angels-crawler",
-    icon = "__angelsindustriesgraphics__/graphics/technology/crawler-tech.png",
+    icon = "__angelsaddons-cab__/graphics/technology/crawler-tech.png",
     icon_size = 128,
     prerequisites = {
-    "angels-vequipment-1",
+      "angels-vequipment-1",
     },
     effects = {
     {

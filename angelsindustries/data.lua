@@ -148,13 +148,9 @@ require("prototypes.buildings.angels-logistics-relay-station")
 require("prototypes.buildings.angels-logistics-big-chest")
 require("prototypes.buildings.angels-logistics-robot-construction")
 require("prototypes.buildings.angels-logistics-robot-cargo")
---ENTITIES
-require("prototypes.entities.equipment")
 --RECIPES
-require("prototypes.recipes.equipment-recipes")
 require("prototypes.recipes.logistics-entity")
 --TECHS
-require("prototypes.technology.vequip-technology")
 require("prototypes.technology.logistics-technology")
 
 -- NUCLEAR -----------------------------------------------------------

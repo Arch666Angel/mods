@@ -14,3 +14,4 @@ require("prototypes.recipes.equipment-recipe")
 
 require("prototypes.technology.cab-technology")
 require("prototypes.technology.crawler-technology")
+require("prototypes.technology.vequip-technology")

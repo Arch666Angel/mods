@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-vequipment-1",
-    icon = "__angelsindustriesgraphics__/graphics/technology/vequip.png",
+    icon = "__angelsaddons-cab__/graphics/technology/vequip.png",
     icon_size = 128,
     prerequisites = {
       "advanced-circuit",
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "technology",
     name = "angels-vequipment-2",
-    icon = "__angelsindustriesgraphics__/graphics/technology/vequip.png",
+    icon = "__angelsaddons-cab__/graphics/technology/vequip.png",
     icon_size = 128,
     prerequisites = {
       "angels-vequipment-1",
