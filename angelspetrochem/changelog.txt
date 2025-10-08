@@ -2,6 +2,7 @@
 Version: 2.0.0
 Date: ???
   Changes:
+    - Moved coke pellets earlier in the tech tree (714)
     - Removed references to normal / expensive recipes (945)
     - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
     - Updated for Factorio 2.0 (994)
