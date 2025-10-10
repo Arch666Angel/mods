@@ -2,49 +2,11 @@ data:extend({
   --PETRO CHEMISTRY
   {
     type = "technology",
-    name = "angels-oil-gas-extraction",
-    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
-    icon_size = 128,
-    prerequisites = {
-      "angels-basic-chemistry-3",
-      --"electronics",
-      "fluid-handling",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "pumpjack",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-separator",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-gas-separation",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-oil-separation",
-      },
-    },
-    unit = {
-      count = 50,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-      },
-      time = 15,
-    },
-    order = "c-a",
-  },
-  {
-    type = "technology",
     name = "angels-oil-processing",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
     prerequisites = {
-      "angels-oil-gas-extraction",
+      "oil-gathering",
     },
     effects = {
       {
@@ -109,7 +71,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/gas-refinery-tech.png",
     icon_size = 256,
     prerequisites = {
-      "angels-oil-gas-extraction",
+      "oil-gathering",
     },
     effects = {
       {

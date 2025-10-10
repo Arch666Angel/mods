@@ -13,6 +13,38 @@ data:extend({
     type = "equipment-category",
     name = "angels-cab",
   },
+  {
+    type = "equipment-category",
+    name = "angels-light-attack",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-heavy-attack",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-repair",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-light-defense",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-heavy-defense",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-energy",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-construction",
+  },
+  {
+    type = "equipment-category",
+    name = "angels-movement",
+  },
   --AMMO CATEGORY
   {
     type = "ammo-category",
@@ -30,5 +62,11 @@ data:extend({
     name = "angels-cab",
     group = mods["angelsindustries"] and "angels-vehicles" or "logistics",
     order = mods["angelsindustries"] and "da" or "zc",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-vehicle-equipment",
+    group = mods["angelsindustries"] and "angels-vehicles" or "logistics",
+    order = mods["angelsindustries"] and "db" or "zd",
   },
 })

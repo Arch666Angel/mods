@@ -139,14 +139,14 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-enhancer",
-    category = "crafting-with-fluid",
+    category = "advanced-crafting",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-seeded-dish", amount = 1 },
       { type = "item", name = "angels-crystal-powder", amount = 1 },
-      { type = "fluid", name = "angels-crystal-slurry", amount = 5 },
+      { type = "item", name = "angels-catalysator-green", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-crystal-enhancer", amount = 1 },

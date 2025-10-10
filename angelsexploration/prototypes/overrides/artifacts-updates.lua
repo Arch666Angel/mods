@@ -21,20 +21,6 @@ if alien_technology then
   }) do
     OV.add_prereq(tech_name, "angels-alien-artifact")
   end
-
-  if angelsmods.functions.is_special_vanilla() then
-    if bobmods.modules then
-      for _, tech_name in pairs({
-        "bob-speed-module-5",
-        "bob-productivity-module-5",
-        "bob-efficiency-module-5",
-        "bob-pollution-clean-module-5",
-        "bob-pollution-create-module-5",
-      }) do
-        OV.add_prereq(tech_name, "angels-alien-artifact")
-      end
-    end
-  end
 end
 
 -------------------------------------------------------------------------------

@@ -129,8 +129,8 @@ end
 -- NUCLEAR POWER --------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  if mods["angelsindustries"] then
-    -- angels industries takes care of this with angels nuclear overhaul
+  if mods["angelspetrochem"] then
+    -- angels petrochem takes care of this with angels nuclear overhaul
   else
     OV.add_prereq("bob-thorium-processing", "angels-ore-electro-whinning-cell")
     OV.set_science_pack("bob-thorium-processing", "production-science-pack", 1)

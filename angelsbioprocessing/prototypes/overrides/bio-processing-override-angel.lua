@@ -5,20 +5,6 @@ if angelsmods.trigger.smelting_products["glass"].mixture then --only change it i
   OV.add_prereq("angels-gardens-3", "angels-glass-smelting-1")
 end
 
-if angelsmods.industries and angelsmods.industries.overhaul then
-  OV.patch_recipes({
-    {
-      name = "angels-algae-brown-burning",
-      results = { { "!!" }, { name = "angels-solid-lithium", amount = 2 } },
-    },
-  })
-elseif mods["bobplates"] then
-  -- nothing to change
-else
-  OV.modify_input("angels-bio-tile", { type = "item", name = "steel-plate", amount = 1 })
-  OV.disable_recipe("angels-algae-brown-burning")
-end
-
 -- FARMING TOOLTIPS
 for _, item_name in pairs({ "angels-solid-beans", "angels-solid-corn", "angels-solid-leafs", "angels-solid-nuts", "angels-solid-pips", "angels-solid-fruit" }) do
   local item = data.raw["item"][item_name]

@@ -1,5 +1,4 @@
 data:extend({
-  --VEHICLES
   {
     type = "recipe",
     name = "angels-crawler",

@@ -13,10 +13,8 @@ end
 local one = { "" }
 table.insert(one, get_item_from_name("plastic-bar"))
 table.insert(one, get_item_from_name("explosives"))
-if not angelsmods.functions.is_special_vanilla() then
-  table.insert(one, get_item_from_name(data.raw.item["bob-resin"] and "bob-resin" or "angels-solid-resin"))
-  table.insert(one, get_item_from_name(data.raw.item["bob-rubber"] and "bob-rubber" or "angels-solid-rubber"))
-end
+table.insert(one, get_item_from_name(data.raw.item["bob-resin"] and "bob-resin" or "angels-solid-resin"))
+table.insert(one, get_item_from_name(data.raw.item["bob-rubber"] and "bob-rubber" or "angels-solid-rubber"))
 table.insert(one, get_item_from_name("angels-liquid-sulfuric-acid", "fluid"))
 table.insert(one, { "", "- [img=item/solid-fuel]", " and various fuels", "\n" })
 table.insert(description, one)

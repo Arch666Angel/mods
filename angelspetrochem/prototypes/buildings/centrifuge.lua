@@ -1,8 +1,8 @@
 -- add runtime tints to centrifuge animation
 for _, centrifuge_name in pairs({
   "centrifuge",
-  "centrifuge-2",
-  "centrifuge-3",
+  "bob-centrifuge-2",
+  "bob-centrifuge-3",
 }) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then
@@ -87,7 +87,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "primary",
         animation = {
-          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-A-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/centrifuge/centrifuge-A-light.png",
           priority = "high",
           scale = 0.5,
           blend_mode = "additive",
@@ -105,7 +105,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "secondary",
         animation = {
-          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-B-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/centrifuge/centrifuge-B-light.png",
           priority = "high",
           scale = 0.5,
           blend_mode = "additive",
@@ -123,7 +123,7 @@ for _, centrifuge_name in pairs({
         fadeout = true,
         apply_recipe_tint = "tertiary",
         animation = {
-          filename = "__angelsindustriesgraphics__/graphics/entity/centrifuge/centrifuge-C-light.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/centrifuge/centrifuge-C-light.png",
           priority = "high",
           scale = 0.5,
           blend_mode = "additive",
@@ -172,8 +172,8 @@ end
 -- add pipe input to the centrifuge
 for _, centrifuge_name in pairs({
   "centrifuge",
-  "centrifuge-2",
-  "centrifuge-3",
+  "bob-centrifuge-2",
+  "bob-centrifuge-3",
 }) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then
@@ -219,13 +219,13 @@ for _, centrifuge_name in pairs({
 end
 
 -- add tiered crafting categories
-local bob_centrifuge_2 = mods["bobassembly"] and data.raw["assembling-machine"]["centrifuge-2"] and true or false
-local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["centrifuge-3"] and true or false
+local bob_centrifuge_2 = mods["bobassembly"] and data.raw["assembling-machine"]["bob-centrifuge-2"] and true or false
+local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["bob-centrifuge-3"] and true or false
 for centrifuge_name, centrifuge_categegories in pairs({
   ["centrifuge"] = bob_centrifuge_2 and { "centrifuging" } or { "centrifuging", "centrifuging-2", "centrifuging-3" },
-  ["centrifuge-2"] = bob_centrifuge_3 and { "centrifuging", "centrifuging-2" }
+  ["bob-centrifuge-2"] = bob_centrifuge_3 and { "centrifuging", "centrifuging-2" }
     or { "centrifuging", "centrifuging-2", "centrifuging-3" },
-  ["centrifuge-3"] = { "centrifuging", "centrifuging-2", "centrifuging-3" },
+  ["bob-centrifuge-3"] = { "centrifuging", "centrifuging-2", "centrifuging-3" },
 }) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then

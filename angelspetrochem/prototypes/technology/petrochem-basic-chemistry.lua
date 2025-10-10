@@ -284,6 +284,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-coke-purification-2",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-pellet-coke"
+      },
     },
     unit = {
       count = 50,
@@ -304,10 +308,6 @@ data:extend({
       "angels-advanced-chemistry-3",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-pellet-coke",
-      },
       {
         type = "unlock-recipe",
         recipe = "angels-coal-cracking-1",
@@ -425,7 +425,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-filter-lime-used-recycling",
+        recipe = "angels-filter-lime-used-cleaning",
       },
     },
     unit = {

@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
+-- ORE ------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+data:extend({
+  {
+    type = "item",
+    name = "angels-thorium-ore",
+    icon = "__angelspetrochemgraphics__/graphics/icons/ore-thorium.png",
+    icon_size = 64,
+    pictures = {
+      { size = 64, filename = "__angelspetrochemgraphics__/graphics/icons/ore-thorium.png", scale = 0.5 },
+      { size = 64, filename = "__angelspetrochemgraphics__/graphics/icons/ore-thorium-1.png", scale = 0.5 },
+      { size = 64, filename = "__angelspetrochemgraphics__/graphics/icons/ore-thorium-2.png", scale = 0.5 },
+      { size = 64, filename = "__angelspetrochemgraphics__/graphics/icons/ore-thorium-3.png", scale = 0.5 },
+    },
+    subgroup = "angels-ores",
+    order = "i[thorium-ore]",
+    stack_size = 200,
+  },
+})
+
+-------------------------------------------------------------------------------
 -- RADIOACTIVE ELEMENTS -------------------------------------------------------
 -------------------------------------------------------------------------------
 data:extend({
@@ -6,7 +27,7 @@ data:extend({
   {
     type = "item",
     name = "angels-uranium-234", -- green (the rarest of the shiny rocks)
-    icon = "__angelsindustriesgraphics__/graphics/icons/uranium-234.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/uranium-234.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-a[uranium-234]",
@@ -18,7 +39,7 @@ data:extend({
   {
     type = "item",
     name = "angels-neptunium-240", -- cyan/blue
-    icon = "__angelsindustriesgraphics__/graphics/icons/neptunium-240.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-240.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-d[neptunium-240]",
@@ -28,7 +49,7 @@ data:extend({
   {
     type = "item",
     name = "angels-plutonium-240", -- orange
-    icon = "__angelsindustriesgraphics__/graphics/icons/plutonium-239.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-239.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-e[plutonium-240]",
@@ -38,7 +59,7 @@ data:extend({
   {
     type = "item",
     name = "angels-americium-241", -- translucent white (bleeched color)
-    icon = "__angelsindustriesgraphics__/graphics/icons/americium-241.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/americium-241.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-f[americium-241]",
@@ -48,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "angels-curium-245", -- yellowed silver
-    icon = "__angelsindustriesgraphics__/graphics/icons/curium-245.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/curium-245.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-g[curium-245]",
@@ -58,7 +79,7 @@ data:extend({
   {
     type = "item",
     name = "angels-thorium-232", -- red (almost maroon)
-    icon = "__angelsindustriesgraphics__/graphics/icons/thorium-232.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/thorium-232.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "a[radioactive-element]-h[thorium-232]",
@@ -74,7 +95,7 @@ data:extend({
   {
     type = "item",
     name = "angels-muon-fusion-catalyst",
-    icon = "__angelsindustriesgraphics__/graphics/icons/fusion-catalyst.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/fusion-catalyst.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
     order = "b[nuclear-intermediate]-a",
@@ -84,7 +105,7 @@ data:extend({
   {
     type = "item",
     name = "angels-nuclear-fuel",
-    icon = "__angelsindustriesgraphics__/graphics/icons/plutonium-fuel.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-fuel.png",
     icon_size = 64,
     fuel_category = "chemical",
     fuel_value = "1.4641GJ", --1.21*1.21
@@ -97,7 +118,7 @@ data:extend({
   {
     type = "item",
     name = "angels-nuclear-fuel-2",
-    icon = "__angelsindustriesgraphics__/graphics/icons/thorium-fuel.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/thorium-fuel.png",
     icon_size = 64,
     fuel_category = "chemical",
     fuel_value = "2.1962GJ", --1.21*(1.21*1.5)
@@ -120,7 +141,7 @@ data:extend({
   {
     type = "item",
     name = "angels-uranium-fuel-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/uranium-234-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/uranium-234-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "a[uranium]-a",
@@ -136,7 +157,7 @@ data:extend({
   {
     type = "item",
     name = "angels-mixed-oxide-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/plutonium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-a",
@@ -149,7 +170,7 @@ data:extend({
   {
     type = "item",
     name = "angels-depleted-mixed-oxide-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/used-up-plutonium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/used-up-plutonium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-b",
@@ -159,7 +180,7 @@ data:extend({
   {
     type = "item",
     name = "angels-thorium-fuel-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/thorium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/thorium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
@@ -172,7 +193,7 @@ data:extend({
   {
     type = "item",
     name = "angels-depleted-thorium-fuel-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/used-up-thorium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/used-up-thorium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-b",
@@ -182,7 +203,7 @@ data:extend({
   {
     type = "item",
     name = "angels-deuterium-fuel-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/deuterium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/deuterium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-a",
@@ -195,7 +216,7 @@ data:extend({
   {
     type = "item",
     name = "angels-depleted-deuterium-fuel-cell",
-    icon = "__angelsindustriesgraphics__/graphics/icons/used-up-deuterium-fuel-cell.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/used-up-deuterium-fuel-cell.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-b",

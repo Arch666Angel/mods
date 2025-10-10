@@ -1066,7 +1066,5 @@ end
 if mods["angelsindustries"] then
     fix_e_confirm()
     fix_bulk_crafting()
-    if angelsmods.industries.overhaul then
-      fix_splitters()
-    end
+    fix_splitters()
 end

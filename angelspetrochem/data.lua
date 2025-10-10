@@ -8,14 +8,8 @@ angelsmods.trigger = angelsmods.trigger or {}
 
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
-angelsmods.trigger.resin = (not angelsmods.functions.is_special_vanilla()) or (mods["bobelectronics"] and true or false)
-angelsmods.trigger.rubber = (
-  (not angelsmods.functions.is_special_vanilla())
-  or mods["bobelectronics"]
-  or mods["bobplates"]
-)
-    and true
-  or false
+angelsmods.trigger.resin = mods["bobelectronics"] and true or false
+angelsmods.trigger.rubber = mods["bobelectronics"] or mods["bobplates"] and true or false
 angelsmods.trigger.liquid_ferric_chloride_solution = mods["bobelectronics"] and true or false
 angelsmods.trigger.liquid_cupric_chloride_solution = false
 angelsmods.trigger.gas_ammonium_chloride = false
@@ -34,10 +28,11 @@ angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"]
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
+angelsmods.trigger.ores["thorium"] = true
+angelsmods.trigger.ores["uranium"] = true
 angelsmods.trigger.slag = true
 angelsmods.trigger.salt_production = true
-angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids
-  or (angelsmods.functions.is_special_vanilla() == false)
+angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids or mods["angelssmelting"]
 angelsmods.trigger.water_green_waste = (
   angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["bob-deuterium"])
 )
@@ -47,13 +42,7 @@ angelsmods.trigger.water_green_waste = (
 if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true
 elseif mods["angelsindustries"] then
-  if -- overhaul enabled
-    settings.startup["angels-enable-industries"].value
-    or settings.startup["angels-enable-components"].value
-    or settings.startup["angels-enable-tech"].value
-  then
-    angelsmods.trigger.ores["fluorite"] = true
-  end
+  angelsmods.trigger.ores["fluorite"] = true
 end
 
 --LOAD PROTOTYPES
@@ -75,6 +64,8 @@ require("prototypes.buildings.flare-stack")
 require("prototypes.buildings.electric-boiler")
 require("prototypes.buildings.valves")
 require("prototypes.buildings.storage-tanks")
+require("prototypes.buildings.nuclear-reactor")
+require("prototypes.buildings.centrifuge")
 
 require("prototypes.items.petrochem-basics")
 require("prototypes.items.petrochem-carbons")
@@ -83,6 +74,7 @@ require("prototypes.items.petrochem-nitrogen")
 require("prototypes.items.petrochem-raws")
 require("prototypes.items.petrochem-solids")
 require("prototypes.items.petrochem-sulfur")
+require("prototypes.items.petrochem-nuclear")
 
 require("prototypes.recipes.petrochem-basics")
 require("prototypes.recipes.petrochem-carbons")
@@ -92,9 +84,11 @@ require("prototypes.recipes.petrochem-sodium")
 require("prototypes.recipes.petrochem-sulfur")
 require("prototypes.recipes.petrochem-chlorine")
 require("prototypes.recipes.petrochem-entity")
+require("prototypes.recipes.petrochem-nuclear")
 
 require("prototypes.technology.petrochem-basics")
 require("prototypes.technology.petrochem-basic-chemistry")
+require("prototypes.technology.petrochem-nuclear")
 require("prototypes.technology.petrochem-petro-chemistry")
 require("prototypes.technology.petrochem-solids")
 require("prototypes.technology.petrochem-weaponary")

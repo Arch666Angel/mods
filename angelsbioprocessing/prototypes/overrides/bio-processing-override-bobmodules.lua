@@ -8,35 +8,42 @@ if mods["bobmodules"] then
   -- modules group
   data.raw["item-group"]["bobmodules"].order = "lb[bobs]-d[modules]"
 
-  -- modules subgroups
-  data.raw["item-subgroup"]["module-intermediates"].order = "f-0-a"
-  data:extend({
-    {
-      type = "item-subgroup",
-      name = "module-intermediates-2",
-      group = "bobmodules",
-      order = "f-0-b",
-    },
-    {
-      type = "item-subgroup",
-      name = "module-intermediates-3",
-      group = "bobmodules",
-      order = "f-0-c",
-    },
-  })
-  data.raw["item"]["bob-module-contact"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-module-processor-board-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-module-processor-board-3"].subgroup = "module-intermediates-3"
-  data.raw["item"]["bob-speed-processor-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-speed-processor-3"].subgroup = "module-intermediates-3"
-  data.raw["item"]["bob-efficiency-processor-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-efficiency-processor-3"].subgroup = "module-intermediates-3"
-  data.raw["item"]["bob-productivity-processor-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-productivity-processor-3"].subgroup = "module-intermediates-3"
-  data.raw["item"]["bob-pollution-clean-processor-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-pollution-clean-processor-3"].subgroup = "module-intermediates-3"
-  data.raw["item"]["bob-pollution-create-processor-2"].subgroup = "module-intermediates-2"
-  data.raw["item"]["bob-pollution-create-processor-3"].subgroup = "module-intermediates-3"
+  -- TODO: Move this section to Bob's Modules mod
+  --
+      -- modules subgroups
+      data.raw["item-subgroup"]["module-intermediates"].order = "f-0-a"
+      data:extend({
+        {
+          type = "item-subgroup",
+          name = "module-intermediates-2",
+          group = "bobmodules",
+          order = "f-0-b",
+        },
+        {
+          type = "item-subgroup",
+          name = "module-intermediates-3",
+          group = "bobmodules",
+          order = "f-0-c",
+        },
+      })
+      data.raw["item"]["bob-module-processor-board"].order = "c"
+      data.raw["item"]["bob-module-processor-board"].subgroup = "module-intermediates"
+      data.raw["item"]["bob-module-case"].subgroup = "module-intermediates"
+      data.raw["item"]["bob-module-contact"].subgroup = "module-intermediates"
+      data.raw["item"]["bob-module-circuit-board"].subgroup = "module-intermediates"
+      data.raw["item"]["bob-module-processor-board-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-module-processor-board-3"].subgroup = "module-intermediates-3"
+      data.raw["item"]["bob-speed-processor-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-speed-processor-3"].subgroup = "module-intermediates-3"
+      data.raw["item"]["bob-efficiency-processor-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-efficiency-processor-3"].subgroup = "module-intermediates-3"
+      data.raw["item"]["bob-productivity-processor-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-productivity-processor-3"].subgroup = "module-intermediates-3"
+      data.raw["item"]["bob-pollution-clean-processor-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-pollution-clean-processor-3"].subgroup = "module-intermediates-3"
+      data.raw["item"]["bob-pollution-create-processor-2"].subgroup = "module-intermediates-2"
+      data.raw["item"]["bob-pollution-create-processor-3"].subgroup = "module-intermediates-3"
+  -- END TODO
 
   -----------------------------------------------------------------------------
   -- EXISTING MODULES RECIPES -------------------------------------------------
@@ -52,6 +59,7 @@ if mods["bobmodules"] then
     { name = "efficiency-module-2", ingredients = { { type = "item", name = "angels-crystal-shard-green", amount = 0 } } },
     { name = "efficiency-module-3", ingredients = { { type = "item", name = "angels-crystal-full-green", amount = 0 } } },
   })
+  OV.set_research_difficulty("modules", 30, 25)
   OV.remove_prereq("modules", "angels-bio-processing-crystal-splinter-1")
   OV.remove_prereq("speed-module-2", "angels-bio-processing-crystal-shard-1")
   OV.remove_prereq("productivity-module-2", "angels-bio-processing-crystal-shard-1")
@@ -125,7 +133,7 @@ if mods["bobmodules"] then
         },
       },
       unit = {
-        count = 100,
+        count = 50,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
@@ -245,6 +253,40 @@ if mods["bobmodules"] then
   else
     OV.remove_unlock("processing-unit", "bob-module-processor-board-3")
   end
+
+  -- tier 5 modules
+
+  data:extend({
+    {
+      type = "technology",
+      name = "modules-5",
+      icon = "__base__/graphics/technology/module.png",
+      icon_size = 256,
+      prerequisites = {
+        "modules-4",
+        "space-science-pack",
+      },
+      effects = {
+      },
+      unit = {
+        count = 100,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
+          { "space-science-pack", 1 },
+        },
+        time = 30,
+      },
+    },
+  })
+  OV.add_prereq("bob-speed-module-5", "modules-5")
+  OV.add_prereq("bob-productivity-module-5", "modules-5")
+  OV.add_prereq("bob-efficiency-module-5", "modules-5")
+  OV.add_prereq("bob-pollution-create-module-5", "modules-5")
+  OV.add_prereq("bob-pollution-clean-module-5", "modules-5")
 
   -----------------------------------------------------------------------------
   -- BIO YIELD MODULES --------------------------------------------------------

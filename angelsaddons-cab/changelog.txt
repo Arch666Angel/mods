@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Updated for Factorio 2.0 (994)
     - Enabled logistics tab for the CAB (1111)
+    - Moved Crawler Construction Vehicle from Angel's Industries to C.A.B. mod (1133)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.9
 Date: 22.12.2023

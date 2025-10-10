@@ -120,9 +120,9 @@ if angelsmods.trigger.washing_tech == false then --not angelsmods.smelting then
   OV.disable_recipe({
     "angels-water-viscous-mud",
     "angels-water-heavy-mud",
-    "angels-concentrated-mud",
-    "angels-light-mud",
-    "angels-thin-mud",
+    "angels-water-concentrated-mud",
+    "angels-water-light-mud",
+    "angels-water-thin-mud",
     "angels-water-saline",
     "angels-solid-mud-landfill",
     "angels-solid-geodes",
@@ -299,7 +299,9 @@ else
   else
     angelsmods.functions.hide("angels-solid-lithium")
     OV.disable_recipe("angels-solid-lithium")
-    OV.disable_recipe("angels-algae-brown-burning")
+    if angelsmods.bioprocessing then
+      OV.disable_recipe("angels-algae-brown-burning")
+    end
   end
 end
 

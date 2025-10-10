@@ -86,7 +86,7 @@ if angelsmods.industries.components then
       ingredients = {
         { type = "item", name = "low-density-structure", amount = 20 },
         { type = "item", name = "processing-unit", amount = 50 },
-        { type = "item", name = "angels-heavy-energy-shield-vequip", amount = 5 },
+        { type = "item", name = mods["angelsaddons-cab"] and "angels-heavy-energy-shield-vequip" or "energy-shield-mk2-equipment", amount = 5 },
         { type = "item", name = "radar", amount = 10 },
       },
       results = { { type = "item", name = "angels-rocket-shield-array", amount = 1 } },

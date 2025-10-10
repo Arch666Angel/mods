@@ -608,4 +608,19 @@ angelsmods.functions.RB.build({
     },
     results = { { type = "item", name = "angels-electric-boiler-3", amount = 1 } },
   },
+  --BURNER REACTOR
+  {
+    type = "recipe",
+    name = "angels-burner-reactor",
+    energy_required = 8,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "t4-brick", amount = 100 },
+      { type = "item", name = "t4-plate", amount = 100 },
+      { type = "item", name = "t4-circuit", amount = 500 },
+      { type = "item", name = "t5-plate", amount = 100 },
+      { type = "item", name = data.raw.item["bob-lead-plate"] and "bob-lead-plate" or mods["angelssmelting"] and angelsmods.trigger.smelting_products["lead"].plate and "angels-plate-lead" or "steel-plate", amount = 350 },
+    },
+    results = { { type = "item", name = "angels-burner-reactor", amount = 1 } },
+  },
 })

@@ -119,7 +119,7 @@ if angelsmods.industries.components then
       prerequisites = {
         "angels-rocket",
         "discharge-defense-equipment",
-        "angels-vequipment-2",
+        mods["angelsaddons-cab"] and "angels-vequipment-2" or "energy-shield-mk2-equipment",
       },
       effects = {
         {

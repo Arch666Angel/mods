@@ -80,7 +80,7 @@ else
   angelsmods.functions.hide("angels-plate-zinc")
   angelsmods.functions.hide("angels-roll-zinc")
   OV.disable_recipe({ "angels-roll-zinc", "angels-roll-zinc-2" })
-  OV.disable_recipe({ "angels-plate-zinc", "angels-plate-zin=2" })
+  OV.disable_recipe({ "angels-plate-zinc", "angels-plate-zinc-2" })
 end
 
 -------------------------------------------------------------------------------

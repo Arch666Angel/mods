@@ -318,7 +318,7 @@ function angelsmods.migration.replace_inventory_content(entities_to_check, items
   end
 
   for _, entity in pairs(entities_to_check) do
-    for inventoryType = 1, maxInventoryType do
+    for _, inventoryType in pairs(defines.inventory) do
       local inventory = entity.get_inventory(inventoryType)
       if inventory and inventory.valid then
         for oldItemName, newItemName in pairs(items_to_replace) do
@@ -427,6 +427,23 @@ function angelsmods.migration.replace_entity(entities_to_check, items_to_replace
   end
 end
 
+function angelsmods.migration.replace_currently_burning(entities_to_check, items_to_replace)
+  -- items_to_replace is a table where the keys are the old item, and
+  -- the values are the new item.
+  items_to_replace = items_to_replace or {}
+
+  for _, entity in pairs(entities_to_check) do
+    if entity.burner and entity.burner.currently_burning then
+      local burner = entity.burner
+      for oldItemName, newItemName in pairs(items_to_replace) do
+        if burner.currently_burning.name.name == oldItemName then
+          burner.currently_burning = newItemName
+        end
+      end
+    end
+  end
+end
+
 function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   -- items_to_replace is a table where the keys are the old item, and
   -- the values are the new item.
@@ -435,6 +452,7 @@ function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   angelsmods.migration.replace_inserter_content(entities_to_check, items_to_replace)
   angelsmods.migration.replace_signals(entities_to_check, items_to_replace)
   angelsmods.migration.replace_entity(entities_to_check, items_to_replace)
+  angelsmods.migration.replace_currently_burning(entities_to_check, items_to_replace)
 end
 
 function angelsmods.migration.replace_quick_bar_slot(items_to_replace)

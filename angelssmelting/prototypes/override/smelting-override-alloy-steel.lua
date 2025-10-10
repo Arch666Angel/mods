@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local special_vanilla = angelsmods.functions.is_special_vanilla()
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["steel"].ingot = true
@@ -20,20 +19,34 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["steel"].ingot then
-  if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
-    -- special vanilla
-    OV.disable_recipe({
-      "angels-liquid-molten-steel-2",
-      "angels-liquid-molten-steel-3",
-      "angels-liquid-molten-steel-4",
-      "angels-liquid-molten-steel-5",
+  if not angelsmods.trigger.smelting_products["silicon"].ingot then
+    OV.disable_recipe({ "angels-liquid-molten-steel-2" })
+    OV.patch_recipes({
+      {
+        name = "angels-liquid-molten-steel-3",
+        icons = angelsmods.functions.add_number_icon_layer(
+          angelsmods.functions.get_object_icons("angels-liquid-molten-steel"),
+          2,
+          angelsmods.smelting.number_tint
+        )
+      },
+      {
+        name = "angels-liquid-molten-steel-4",
+        icons = angelsmods.functions.add_number_icon_layer(
+          angelsmods.functions.get_object_icons("angels-liquid-molten-steel"),
+          3,
+          angelsmods.smelting.number_tint
+        )
+      },
+      {
+        name = "angels-liquid-molten-steel-5",
+        icons = angelsmods.functions.add_number_icon_layer(
+          angelsmods.functions.get_object_icons("angels-liquid-molten-steel"),
+          4,
+          angelsmods.smelting.number_tint
+        )
+      },
     })
-    OV.disable_technology("angels-steel-smelting-4")
-  end
-
-  if
-    not angelsmods.trigger.smelting_products["silicon"] or not angelsmods.trigger.smelting_products["silicon"].ingot
-  then
     OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-1")
     OV.add_prereq("angels-steel-smelting-2", "angels-strand-casting-1")
   end

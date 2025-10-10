@@ -205,7 +205,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
     local wire_name = "copper-cable"
     if mods["bobplates"] and mods["bobelectronics"] then
       wire_name = "bob-tinned-copper-cable"
-    elseif mods["angelssmelting"] then
+    elseif mods["angelssmelting"] and angelsmods.trigger.smelting_products["tin"].wire then
       wire_name = "angels-wire-tin"
     end
     OV.patch_recipes({

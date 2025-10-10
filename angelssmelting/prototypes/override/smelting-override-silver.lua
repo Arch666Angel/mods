@@ -126,7 +126,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
 else
   angelsmods.functions.hide("angels-wire-silver")
   angelsmods.functions.hide("angels-wire-coil-silver")
-  OV.disable_recipe({ "angels-wire-coil-silver", "angels-wire-silver-2" })
+  OV.disable_recipe({ "angels-wire-coil-silver", "angels-wire-coil-silver-2" })
   OV.disable_recipe({ "angels-wire-silver", "angels-wire-silver-2" })
 end
 

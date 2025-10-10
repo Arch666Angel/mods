@@ -1,4 +1,3 @@
-require("prototypes.overrides.bio-processing-override-special-vanilla")
 --UPDATE BUILDING RECIPES
 require("prototypes.recipes.bio-processing-entity-angels")
 --UPDATE BIO PRODUCT RECIPES
@@ -59,20 +58,6 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     },
   })
   OV.remove_prereq("angels-bio-processing-alien-2", "plastics")
-end
-
-if angelsmods.functions.is_special_vanilla() then
-else
-  OV.patch_recipes({
-    {
-      name = "angels-crystal-enhancer",
-      category = "advanced-crafting",
-      ingredients = {
-        { name = "angels-catalysator-green", amount = 1 },
-        { name = "angels-crystal-slurry", amount = 0, type = "fluid" },
-      },
-    },
-  })
 end
 
 --ADD TILE RESTRICTION FOR ALIEN BIOMES

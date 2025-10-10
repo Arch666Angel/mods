@@ -475,4 +475,15 @@ data:extend({
     },
     results = { { type = "item", name = "angels-electric-boiler-3", amount = 1 } },
   },
+  --BURNER REACTOR
+  {
+    type = "recipe",
+    name = "angels-burner-reactor",
+    energy_required = 8,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-plate", amount = 10 },
+    },
+    results = { { type = "item", name = "angels-burner-reactor", amount = 1 } },
+  },
 })
