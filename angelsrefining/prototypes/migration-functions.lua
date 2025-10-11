@@ -18,6 +18,21 @@ function angelsmods.migration.replace_recipes(entities_to_check, recipe_replacem
   end
 end
 
+---This function will safely replace tables and avoid dropping fields
+local function safe_replace_table(init_table, replacement_table)
+  local new_table = init_table or {}
+
+  for name, value in pairs(replacement_table) do
+    if (type(value) == "table" and type(new_table[name]) == "table") then
+      safe_replace_table(new_table[name], value)
+    else
+      if value then --to avoid nil overwrite
+        new_table[name] = value
+      end
+    end
+  end
+end
+
 function angelsmods.migration.replace_signals(entities_to_check, signals_to_replace, signal_type)
   -- signals_to_replace is a table where the keys are the old signals, and
   -- the values are the new signals. signal_type is optional, defaults to item
@@ -39,27 +54,28 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.mining_drill
         or controlBehavior.type == defines.control_behavior.type.programmable_speaker
       then
-        local oldCondition = controlBehavior.circuit_condition.condition
-        controlBehavior.circuit_condition = oldCondition
-            and {
-              condition = {
-                comparator = oldCondition.comparator,
-                first_signal = oldCondition.first_signal and {
-                  type = oldCondition.first_signal.type,
-                  name = oldCondition.first_signal.type == signal_type
-                      and signals_to_replace[oldCondition.first_signal.name or "none"]
-                    or oldCondition.first_signal.name,
-                } or nil,
-                second_signal = oldCondition.second_signal and {
-                  type = oldCondition.second_signal.type,
-                  name = oldCondition.second_signal.type == signal_type
-                      and signals_to_replace[oldCondition.second_signal.name or "none"]
-                    or oldCondition.second_signal.name,
-                } or nil,
-                constant = oldCondition.constant,
-              },
-            }
-          or nil
+        local oldCondition = controlBehavior.circuit_condition
+
+        local new_condition = {
+          circuit_condition = {
+            comparator = oldCondition.comparator,
+            first_signal = oldCondition.first_signal and {
+              type = oldCondition.first_signal.type,
+              name = oldCondition.first_signal.type == signal_type
+                  and signals_to_replace[oldCondition.first_signal.name or "none"]
+                or oldCondition.first_signal.name,
+            } or nil,
+            second_signal = oldCondition.second_signal and {
+              type = oldCondition.second_signal.type,
+              name = oldCondition.second_signal.type == signal_type
+                  and signals_to_replace[oldCondition.second_signal.name or "none"]
+                or oldCondition.second_signal.name,
+            } or nil,
+            constant = oldCondition.constant,
+          }
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- logistic condition
@@ -71,90 +87,103 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.transport_belt
         or controlBehavior.type == defines.control_behavior.type.mining_drill
       then
-        local oldCondition = controlBehavior.logistic_condition.condition
-        controlBehavior.logistic_condition = oldCondition
-            and {
-              condition = {
-                comparator = oldCondition.comparator,
-                first_signal = oldCondition.first_signal and {
-                  type = oldCondition.first_signal.type,
-                  name = oldCondition.first_signal.type == signal_type
-                      and signals_to_replace[oldCondition.first_signal.name or "none"]
-                    or oldCondition.first_signal.name,
-                } or nil,
-                second_signal = oldCondition.second_signal and {
-                  type = oldCondition.second_signal.type,
-                  name = oldCondition.second_signal.type == signal_type
-                      and signals_to_replace[oldCondition.second_signal.name or "none"]
-                    or oldCondition.second_signal.name,
-                } or nil,
-                constant = oldCondition.constant,
-              },
-            }
-          or nil
+        local oldCondition = controlBehavior.logistic_condition
+
+        local new_condition = {
+          logistic_condition = {
+            condition = {
+              comparator = oldCondition.comparator,
+              first_signal = oldCondition.first_signal and {
+                type = oldCondition.first_signal.type,
+                name = oldCondition.first_signal.type == signal_type
+                    and signals_to_replace[oldCondition.first_signal.name or "none"]
+                  or oldCondition.first_signal.name,
+              } or nil,
+              second_signal = oldCondition.second_signal and {
+                type = oldCondition.second_signal.type,
+                name = oldCondition.second_signal.type == signal_type
+                    and signals_to_replace[oldCondition.second_signal.name or "none"]
+                  or oldCondition.second_signal.name,
+              } or nil,
+              constant = oldCondition.constant,
+            },
+          }
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- stack control signal
       if controlBehavior.type == defines.control_behavior.type.inserter then
         local oldSignalID = controlBehavior.circuit_stack_control_signal
-        controlBehavior.circuit_stack_control_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+
+        local new_condition = {
+          circuit_stack_control_signal = oldSignalID and {
+            type = oldSignalID.type,
+            name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+              or oldSignalID.name,
+          } or { type = signal_type}
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- roboport stuffs
       if controlBehavior.type == defines.control_behavior.type.roboport then
         local oldSignalID = controlBehavior.available_logistic_output_signal
-        controlBehavior.available_logistic_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+
+        local new_condition = {
+          available_logistic_output_signal = oldSignalID and {
+            type = oldSignalID.type,
+            name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+              or oldSignalID.name,
+          }
+          or { type = signal_type },
+          
+        }
 
         oldSignalID = controlBehavior.total_logistic_output_signal
-        controlBehavior.total_logistic_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        new_condition.total_logistic_output_signal = oldSignalID and {
+          type = oldSignalID.type,
+          name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+            or oldSignalID.name,
+        }
+        or { type = signal_type }
 
         oldSignalID = controlBehavior.available_construction_output_signal
-        controlBehavior.available_construction_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        new_condition.available_construction_output_signal = oldSignalID and {
+          type = oldSignalID.type,
+          name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+            or oldSignalID.name,
+        }
+        or { type = signal_type }
 
         oldSignalID = controlBehavior.total_construction_output_signal
-        controlBehavior.total_construction_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        new_condition.total_construction_output_signal = oldSignalID and {
+          type = oldSignalID.type,
+          name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+            or oldSignalID.name,
+        }
+        or { type = signal_type }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- stopped train signal
       if controlBehavior.type == defines.control_behavior.type.train_stop then
         local oldSignalID = controlBehavior.stopped_train_signal
-        controlBehavior.stopped_train_signal = oldSignalID
+
+        new_condition = {
+          stopped_train_signal = oldSignalID
             and {
               type = oldSignalID.type,
               name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
                 or oldSignalID.name,
             }
           or { type = signal_type }
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- decider combinator parameters
@@ -185,7 +214,8 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
               copy_count_from_input = oldParams.copy_count_from_input,
             }
           or nil
-        controlBehavior.parameters = controlBehavior.parameters.parameters and { parameters = newParams } or newParams
+
+        safe_replace_table(controlBehavior, { parameters = newParams })
       end
 
       -- arithmetic combinator parameters
@@ -199,11 +229,19 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
                     and signals_to_replace[oldParams.first_signal.name or "none"]
                   or oldParams.first_signal.name,
               } or nil,
+              first_signal_networks = oldParams.first_signal_networks and {
+                red = oldParams.first_signal_networks.red,
+                green = oldParams.first_signal_networks.green
+              } or nil,
               second_signal = oldParams.second_signal and {
                 type = oldParams.second_signal.type,
                 name = oldParams.second_signal.type == signal_type
                     and signals_to_replace[oldParams.second_signal.name or "none"]
                   or oldParams.second_signal.name,
+              } or nil,
+              second_signal_networks = oldParams.second_signal_networks and {
+                red = oldParams.second_signal_networks.red,
+                green = oldParams.second_signal_networks.green
               } or nil,
               first_constant = oldParams.first_constant,
               second_constant = oldParams.second_constant,
@@ -216,7 +254,8 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
               } or { type = signal_type },
             }
           or nil
-        controlBehavior.parameters = controlBehavior.parameters.parameters and { parameters = newParams } or newParams
+
+        safe_replace_table(controlBehavior, { parameters = newParams })
       end
 
       -- constant combinator parameters
@@ -238,13 +277,17 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.wall
       then
         local oldSignalID = controlBehavior.output_signal
-        controlBehavior.output_signal = oldSignalID
+        local new_condition = {
+          output_signal = oldSignalID
             and {
               type = oldSignalID.type,
               name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
                 or oldSignalID.name,
             }
           or { type = signal_type }
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- rail signal colors
@@ -253,43 +296,53 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.rail_chain_signal
       then
         local oldSignalID = controlBehavior.red_signal
-        controlBehavior.red_signal = oldSignalID
+
+        local new_condition = {
+          red_signal = oldSignalID
             and {
               type = oldSignalID.type,
               name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
                 or oldSignalID.name,
             }
           or { type = signal_type }
+        }
 
         oldSignalID = controlBehavior.orange_signal
-        controlBehavior.orange_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
+        new_condition.orange_signal = oldSignalID
+          and {
+            type = oldSignalID.type,
+            name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+              or oldSignalID.name,
+          }
           or { type = signal_type }
 
         oldSignalID = controlBehavior.green_signal
-        controlBehavior.green_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
+        new_condition.green_signal = oldSignalID
+          and {
+            type = oldSignalID.type,
+            name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
+              or oldSignalID.name,
+          }
           or { type = signal_type }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
 
       -- chain signal
       if controlBehavior.type == defines.control_behavior.type.rail_chain_signal then
         local oldSignalID = controlBehavior.blue_signal
-        controlBehavior.blue_signal = oldSignalID
+
+        local new_condition = {
+          blue_signal = oldSignalID
             and {
               type = oldSignalID.type,
               name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
                 or oldSignalID.name,
             }
           or { type = signal_type }
+        }
+
+        safe_replace_table(controlBehavior, new_condition)
       end
     end
   end
