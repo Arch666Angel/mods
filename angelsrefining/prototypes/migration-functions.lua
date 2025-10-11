@@ -188,9 +188,14 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
 
       -- decider combinator parameters
       if controlBehavior.type == defines.control_behavior.type.decider_combinator then
-        local oldParams = controlBehavior.parameters.parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
-        local newParams = oldParams
-            and {
+        local old_params = controlBehavior.parameters.parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
+
+        local newParams = {
+          conditions = {}
+        }
+
+        for _, oldParams in pairs(old_params.conditions) do
+          table.insert(newParams.conditions, oldParams and {
               first_signal = oldParams.first_signal and {
                 type = oldParams.first_signal.type,
                 name = oldParams.first_signal.type == signal_type
@@ -213,9 +218,19 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
               } or nil,
               copy_count_from_input = oldParams.copy_count_from_input,
             }
-          or nil
+          or nil)
+          log (oldParams.second_signal.name)
+          log(signal_type and signals_to_replace[oldParams.second_signal.name or "none"]
+                  or oldParams.second_signal.name)
+        end
 
-        safe_replace_table(controlBehavior, { parameters = newParams })
+        log_table(controlBehavior.parameters)
+
+        log_table(newParams)
+
+        safe_replace_table(controlBehavior.parameters, newParams)
+
+        log_table(controlBehavior.parameters)
       end
 
       -- arithmetic combinator parameters
@@ -255,7 +270,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
             }
           or nil
 
-        safe_replace_table(controlBehavior, { parameters = newParams })
+        safe_replace_table(controlBehavior.parameters, newParams)
       end
 
       -- constant combinator parameters
