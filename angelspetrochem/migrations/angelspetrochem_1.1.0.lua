@@ -9,8 +9,9 @@ for _, force in pairs(game.forces) do
   }) do
     if force.technologies[newTech] then
       for _, oldTech in pairs(oldTechs) do
-        force.technologies[newTech].researched = force.technologies[newTech].researched
-          or (force.technologies[oldTech] and force.technologies[oldTech].researched)
+        if force.technologies[oldTech] then
+          force.technologies[newTech].researched = force.technologies[oldTech].researched
+        end
       end
     end
   end

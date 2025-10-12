@@ -30,6 +30,17 @@ local function find_and_replace(init_table, replacement_table)
   end
 end
 
+local function replace_control_behavior(name, controlBehavior, signals_to_replace)
+  local to_change = controlBehavior[name]
+
+  if not to_change then
+    return
+  end
+
+  find_and_replace(to_change, signals_to_replace)
+  controlBehavior[name] = to_change
+end
+
 function angelsmods.migration.replace_signals(entities_to_check, signals_to_replace)
   -- signals_to_replace is a table where the keys are the old signals, and
   -- the values are the new signals.
@@ -49,10 +60,12 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.wall
         or controlBehavior.type == defines.control_behavior.type.mining_drill
         or controlBehavior.type == defines.control_behavior.type.programmable_speaker
+        or controlBehavior.type == defines.control_behavior.type.loader
+        or controlBehavior.type == defines.control_behavior.type.pump
+        or controlBehavior.type == defines.control_behavior.type.turret
+
       then
-        local circuit_condition = controlBehavior.circuit_condition
-        find_and_replace(circuit_condition, signals_to_replace)
-        controlBehavior.circuit_condition = circuit_condition
+        replace_control_behavior("circuit_condition", controlBehavior, signals_to_replace)
       end
 
       -- logistic condition
@@ -63,52 +76,42 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.train_stop
         or controlBehavior.type == defines.control_behavior.type.transport_belt
         or controlBehavior.type == defines.control_behavior.type.mining_drill
+        or controlBehavior.type == defines.control_behavior.type.loader
+        or controlBehavior.type == defines.control_behavior.type.pump
+        or controlBehavior.type == defines.control_behavior.type.turret
       then
-        local logistic_condition = controlBehavior.logistic_condition
-        find_and_replace(logistic_condition, signals_to_replace)
-        controlBehavior.logistic_condition = logistic_condition
+        replace_control_behavior("logistic_condition", controlBehavior, signals_to_replace)
       end
 
       -- stack control signal
       if controlBehavior.type == defines.control_behavior.type.inserter then
-        local circuit_stack_control_signal = controlBehavior.circuit_stack_control_signal
-        find_and_replace(circuit_stack_control_signal, signals_to_replace)
-        controlBehavior.circuit_stack_control_signal = circuit_stack_control_signal
+        replace_control_behavior("circuit_stack_control_signal", controlBehavior, signals_to_replace)
       end
 
       -- roboport stuffs
       if controlBehavior.type == defines.control_behavior.type.roboport then
-        local available_logistic_output_signal = controlBehavior.available_logistic_output_signal
-        find_and_replace(available_logistic_output_signal, signals_to_replace)
-        controlBehavior.available_logistic_output_signal = available_logistic_output_signal
+        replace_control_behavior("available_logistic_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("total_logistic_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("available_construction_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("total_construction_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("roboport_count_output_signal", controlBehavior, signals_to_replace)
       end
 
-      -- stopped train signal
+      -- train stop signal
       if controlBehavior.type == defines.control_behavior.type.train_stop then
-        local stopped_train_signal = controlBehavior.stopped_train_signal
-        find_and_replace(stopped_train_signal, signals_to_replace)
-        controlBehavior.stopped_train_signal = stopped_train_signal
+        replace_control_behavior("stopped_train_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("trains_count_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("trains_limit_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("priority_signal", controlBehavior, signals_to_replace)
       end
 
-      -- decider combinator parameters
-      if controlBehavior.type == defines.control_behavior.type.decider_combinator then
-        local params = controlBehavior.parameters
-        find_and_replace(params, signals_to_replace)
-        controlBehavior.parameters = params
-      end
-
-      -- arithmetic combinator parameters
-      if controlBehavior.type == defines.control_behavior.type.arithmetic_combinator then
-        local params = controlBehavior.parameters
-        find_and_replace(params, signals_to_replace)
-        controlBehavior.parameters = params
-      end
-
-      -- selector combinator parameters
-      if controlBehavior.type == defines.control_behavior.type.selector_combinator then
-        local params = controlBehavior.parameters
-        find_and_replace(params, signals_to_replace)
-        controlBehavior.parameters = params
+      -- combinator parameters
+      if
+        controlBehavior.type == defines.control_behavior.type.decider_combinator
+        or controlBehavior.type == defines.control_behavior.type.arithmetic_combinator
+        or controlBehavior.type == defines.control_behavior.type.selector_combinator
+      then
+        replace_control_behavior("parameters", controlBehavior, signals_to_replace)
       end
 
       -- constant combinator parameters
@@ -125,9 +128,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         controlBehavior.type == defines.control_behavior.type.accumulator
         or controlBehavior.type == defines.control_behavior.type.wall
       then
-        local output_signal = controlBehavior.output_signal
-        find_and_replace(output_signal, signals_to_replace)
-        controlBehavior.output_signal = output_signal
+        replace_control_behavior("output_signal", controlBehavior, signals_to_replace)
       end
 
       -- rail signal colors
@@ -135,24 +136,32 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         controlBehavior.type == defines.control_behavior.type.rail_signal
         or controlBehavior.type == defines.control_behavior.type.rail_chain_signal
       then
-        local red_signal = controlBehavior.red_signal
-        find_and_replace(red_signal, signals_to_replace)
-        controlBehavior.red_signal = red_signal
-        
-        local green_signal = controlBehavior.green_signal
-        find_and_replace(green_signal, signals_to_replace)
-        controlBehavior.green_signal = green_signal
-
-        local orange_signal = controlBehavior.orange_signal
-        find_and_replace(orange_signal, signals_to_replace)
-        controlBehavior.orange_signal = orange_signal
+        replace_control_behavior("red_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("green_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("orange_signal", controlBehavior, signals_to_replace)
       end
 
       -- chain signal
       if controlBehavior.type == defines.control_behavior.type.rail_chain_signal then
-        local blue_signal = controlBehavior.blue_signal
-        find_and_replace(blue_signal, signals_to_replace)
-        controlBehavior.blue_signal = blue_signal
+        replace_control_behavior("blue_signal", controlBehavior, signals_to_replace)
+      end
+
+      -- reactor
+      if controlBehavior.type == defines.control_behavior.type.reactor then
+        replace_control_behavior("temperature_signal", controlBehavior, signals_to_replace)
+      end
+
+      -- splitter
+      if controlBehavior.type == defines.control_behavior.type.splitter then
+        replace_control_behavior("input_left_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("input_right_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("output_left_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("output_right_condition", controlBehavior, signals_to_replace)
+      end
+
+      -- turret
+      if controlBehavior.type == defines.control_behavior.type.turret then
+        replace_control_behavior("ignore_unlisted_targets_condition", controlBehavior, signals_to_replace)
       end
     end
   end
