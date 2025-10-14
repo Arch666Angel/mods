@@ -278,7 +278,7 @@ if mods["bobplates"] then
       name = "bob-petroleum-gas-cracking",
       ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } },
     },
-    { name = "coal-cracking", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
+    { name = "bob-coal-cracking", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
     {
       name = "bob-lithium-water-electrolysis",
       ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } },
