@@ -18,12 +18,12 @@ if mods["bobassembly"] then
   angelsmods.functions.RB.set_fallback(
     "item",
     "assmach-5",
-    { { "block-mprocessing-5", 1 }, { "assembling-machine-4" } }
+    { { "block-mprocessing-5", 1 }, { "bob-assembling-machine-4" } }
   )
   angelsmods.functions.RB.set_fallback(
     "item",
     "assmach-6",
-    { { "block-mprocessing-5", 5 }, { "assembling-machine-5" } }
+    { { "block-mprocessing-5", 5 }, { "bob-assembling-machine-5" } }
   )
 
   OV.patch_recipes({
@@ -60,7 +60,7 @@ if mods["bobassembly"] then
       },
     },
     {
-      name = "assembling-machine-4",
+      name = "bob-assembling-machine-4",
       ingredients = {
         { "!!" },
         { type = "item", name = "assmach-4", amount = 1 },
@@ -71,7 +71,7 @@ if mods["bobassembly"] then
       },
     },
     {
-      name = "assembling-machine-5",
+      name = "bob-assembling-machine-5",
       ingredients = {
         { "!!" },
         { type = "item", name = "assmach-5", amount = 1 },
@@ -82,7 +82,7 @@ if mods["bobassembly"] then
       },
     },
     {
-      name = "assembling-machine-6",
+      name = "bob-assembling-machine-6",
       ingredients = {
         { "!!" },
         { type = "item", name = "assmach-6", amount = 1 },

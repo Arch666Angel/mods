@@ -459,22 +459,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-slag-processing-4",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-slag-processing-5",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-slag-processing-6",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-slag-processing-7",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "angels-filter-ceramic",
       },
       {
@@ -523,14 +507,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-catalysator-orange",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-slag-processing-8",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-slag-processing-9",
       },
     },
     unit = {
