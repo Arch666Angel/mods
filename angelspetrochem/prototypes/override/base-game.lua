@@ -225,3 +225,11 @@ if data.raw["reactor"]["nuclear-reactor"] then
     light_intensity_to_size_coefficient = 0,
   }
 end
+
+-------------------------------------------------------------------------------
+-- NUCLEAR TECHNOLOGIES -------------------------------------------------------
+-------------------------------------------------------------------------------
+data.raw.technology["kovarex-enrichment-process"].hidden = true
+
+OV.remove_prereq("atomic-bomb", "kovarex-enrichment-process")
+OV.add_prereq("atomic-bomb", "uranium-processing")

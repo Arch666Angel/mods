@@ -105,7 +105,6 @@ data.raw.recipe["nuclear-fuel-reprocessing"].icon = nil
 OV.disable_recipe("kovarex-enrichment-process")
 OV.add_unlock("nuclear-power", "angels-uranium-fuel-cell")
 data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"
-data.raw.technology["kovarex-enrichment-process"].unit.count = 10 -- down from 1500 (Considering empty)
 
 -----------------------------------------------------------------------------
 -- VANILLA POWER STUFFS -----------------------------------------------------
