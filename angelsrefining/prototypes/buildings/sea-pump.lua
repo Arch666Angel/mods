@@ -292,7 +292,7 @@ data:extend({
         height = 160,
       },
     },
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
+    circuit_connector = circuit_connector_definitions["angels-seafloor-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })
