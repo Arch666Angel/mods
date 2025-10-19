@@ -233,3 +233,5 @@ data.raw.technology["kovarex-enrichment-process"].hidden = true
 
 OV.remove_prereq("atomic-bomb", "kovarex-enrichment-process")
 OV.add_prereq("atomic-bomb", "uranium-processing")
+
+OV.add_prereq("angels-nuclear-fuel", "uranium-processing")
