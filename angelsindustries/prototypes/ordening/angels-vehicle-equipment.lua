@@ -18,8 +18,8 @@ if mods["bobvehicleequipment"] then
   reorder("item", "bob-vehicle-solar-panel-equipment-1", "angels-vehicle-equipment-bobpower-a", "a")
   reorder("item", "bob-vehicle-solar-panel-equipment-2", "angels-vehicle-equipment-bobpower-a", "b")
   reorder("item", "bob-vehicle-solar-panel-equipment-3", "angels-vehicle-equipment-bobpower-a", "c")
-  reorder("item", "bob-vehicle-solar-panel-equipment-3", "angels-vehicle-equipment-bobpower-a", "d")
-  reorder("item", "bob-vehicle-solar-panel-equipment-3", "angels-vehicle-equipment-bobpower-a", "e")
+  reorder("item", "bob-vehicle-solar-panel-equipment-4", "angels-vehicle-equipment-bobpower-a", "d")
+  reorder("item", "bob-vehicle-solar-panel-equipment-5", "angels-vehicle-equipment-bobpower-a", "e")
 
   -- fusion cells
   data:extend({

@@ -48,7 +48,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       name = "copper-plate",
       energy_required = 10.5,
       enabled = false,
-      hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
+      hidden = true,
       ingredients = {
         { name = "copper-ore", type = "item", amount = "+3" },
       },
@@ -71,9 +71,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
       order = "j[angels-plate-copper]-b",
     },
   })
-  if not angelsmods.functions.is_special_vanilla() then
-    OV.remove_unlock("angels-ore-crushing", "copper-plate")
-  end
+  OV.remove_unlock("angels-ore-crushing", "copper-plate")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -88,27 +86,13 @@ if angelsmods.trigger.smelting_products["copper"].plate then
     "__angelssmeltinggraphics__/graphics/icons/plate-copper.png"
   )
 
-  if angelsmods.refining then
-    OV.patch_recipes({
-      {
-        name = "angels-ore3-crushed-smelting",
-        subgroup = "angels-copper-casting",
-        order = "j[angels-plate-copper]-a",
-      },
-      {
-        name = "angels-copper-pebbles-smelting",
-        subgroup = "angels-copper-casting",
-        order = "j[angels-plate-copper]-ab",
-      },
-      {
-        name = "angels-copper-nugget-smelting",
-        subgroup = "angels-copper-casting",
-        order = "j[angels-plate-copper]-ac",
-      },
-    })
-  end
-else
-  -- todo
+  OV.patch_recipes({
+    {
+      name = "angels-ore3-crushed-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-a",
+    },
+  })
 end
 
 -------------------------------------------------------------------------------

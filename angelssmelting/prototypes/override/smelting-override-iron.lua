@@ -54,16 +54,26 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].ingot then
-  if angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate then
-  else
-    -- special vanilla
-    OV.disable_recipe({
-      "angels-liquid-molten-iron-2",
-      "angels-liquid-molten-iron-3",
-      "angels-liquid-molten-iron-4",
-      "angels-liquid-molten-iron-5",
+  if not angelsmods.trigger.smelting_products["silicon"].ingot then
+    OV.disable_recipe({ "angels-liquid-molten-iron-3" })
+    OV.patch_recipes({
+      {
+        name = "angels-liquid-molten-iron-4",
+        icons = angelsmods.functions.add_number_icon_layer(
+          angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
+          3,
+          angelsmods.smelting.number_tint
+        )
+      },
+      {
+        name = "angels-liquid-molten-iron-5",
+        icons = angelsmods.functions.add_number_icon_layer(
+          angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
+          4,
+          angelsmods.smelting.number_tint
+        )
+      },
     })
-    OV.disable_technology("angels-iron-casting-4")
   end
 
   if angelsmods.trigger.smelting_products["iron"].plate or angelsmods.trigger.smelting_products["iron"].rod then
@@ -88,7 +98,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       name = "iron-plate",
       energy_required = 10.5,
       enabled = false,
-      hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
+      hidden = true,
       ingredients = {
         { name = "iron-ore", type = "item", amount = "+3" },
       },
@@ -111,9 +121,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
       order = "l[angels-plate-iron]-b",
     },
   })
-  if not angelsmods.functions.is_special_vanilla() then
-    OV.remove_unlock("angels-ore-crushing", "iron-plate")
-  end
+  OV.remove_unlock("angels-ore-crushing", "iron-plate")
   angelsmods.functions.move_item("iron-plate", "angels-iron-casting", "l")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -128,27 +136,13 @@ if angelsmods.trigger.smelting_products["iron"].plate then
     "__angelssmeltinggraphics__/graphics/icons/plate-iron.png"
   )
 
-  if angelsmods.refining then
-    OV.patch_recipes({
-      {
-        name = "angels-ore1-crushed-smelting",
-        subgroup = "angels-iron-casting",
-        order = "l[angels-plate-iron]-a",
-      },
-      {
-        name = "angels-iron-pebbles-smelting",
-        subgroup = "angels-iron-casting",
-        order = "l[angels-plate-iron]-ab",
-      },
-      {
-        name = "angels-iron-nugget-smelting",
-        subgroup = "angels-iron-casting",
-        order = "l[angels-plate-iron]-ac",
-      },
-    })
-  end
-else
-  --todo
+  OV.patch_recipes({
+    {
+      name = "angels-ore1-crushed-smelting",
+      subgroup = "angels-iron-casting",
+      order = "l[angels-plate-iron]-a",
+    },
+  })
 end
 
 -------------------------------------------------------------------------------

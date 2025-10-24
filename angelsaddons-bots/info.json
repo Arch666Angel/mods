@@ -1,0 +1,13 @@
+{
+  "name": "angelsaddons-bots",
+  "version": "1.1.0",
+  "factorio_version": "2.0",
+  "title": "Angel's Addons - Robot Logistics",
+  "author": "Arch666Angel",
+  "contact": "https://discord.gg/ff5p6KE",
+  "homepage": "https://forums.factorio.com/viewforum.php?f=185",
+  "description": "Adds slow but powerful bots, new robot infrastructure buildings including chests, roboports, and zone expanders.",
+  "dependencies": [
+    "base >= 2.0.0"
+  ]
+}

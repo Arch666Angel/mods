@@ -9,7 +9,7 @@ data:extend({
     order = "a[gun]-b[bio-rounds]",
     attack_parameters = {
       type = "stream",
-      ammo_category = "bio",
+      ammo_category = "angels-bio",
       cooldown = 2,
       movement_slow_down_factor = 0.6,
       --projectile_creation_distance = 0.6,

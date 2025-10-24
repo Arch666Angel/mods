@@ -2,8 +2,8 @@ data:extend({
   -- CANNON TURRET SHELL
   {
     type = "recipe",
-    name = "cannon-turret-shell-1",
-    localised_name = { "item-name.cannon-turret-shell-1" },
+    name = "angels-cannon-turret-shell-1",
+    localised_name = { "item-name.angels-cannon-turret-shell-1" },
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -11,13 +11,13 @@ data:extend({
       { type = "item", name = "coal", amount = 2 },
     },
     results = {
-      { type = "item", name = "cannon-turret-shell-1", amount = 1 },
+      { type = "item", name = "angels-cannon-turret-shell-1", amount = 1 },
     },
   },
   {
     type = "recipe",
-    name = "cannon-turret-shell-2",
-    localised_name = { "item-name.cannon-turret-shell-2" },
+    name = "angels-cannon-turret-shell-2",
+    localised_name = { "item-name.angels-cannon-turret-shell-2" },
     energy_required = 2,
     enabled = false,
     ingredients = {
@@ -25,29 +25,29 @@ data:extend({
       { type = "item", name = "coal", amount = 4 },
     },
     results = {
-      { type = "item", name = "cannon-turret-shell-2", amount = 1 },
+      { type = "item", name = "angels-cannon-turret-shell-2", amount = 1 },
     },
   },
   {
     type = "recipe",
-    name = "cannon-turret-shell-3",
-    localised_name = { "item-name.cannon-turret-shell-3" },
+    name = "angels-cannon-turret-shell-3",
+    localised_name = { "item-name.angels-cannon-turret-shell-3" },
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "cannon-turret-shell-2", amount = 1 },
+      { type = "item", name = "angels-cannon-turret-shell-2", amount = 1 },
       { type = "item", name = "coal", amount = 4 },
       { type = "item", name = "uranium-238", amount = 2 },
     },
     results = {
-      { type = "item", name = "cannon-turret-shell-3", amount = 1 },
+      { type = "item", name = "angels-cannon-turret-shell-3", amount = 1 },
     },
   },
   -- HEAVY CANNON SHELL
   {
     type = "recipe",
-    name = "heavy-cannon-shell",
-    localised_name = { "item-name.heavy-cannon-shell" },
+    name = "angels-heavy-cannon-shell",
+    localised_name = { "item-name.angels-heavy-cannon-shell" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -55,13 +55,13 @@ data:extend({
       --{type="item", name="lead-plate", amount = 3},
     },
     results = {
-      { type = "item", name = "heavy-cannon-shell", amount = 1 },
+      { type = "item", name = "angels-heavy-cannon-shell", amount = 1 },
     },
   },
   {
     type = "recipe",
-    name = "heavy-explosive-cannon-shell",
-    localised_name = { "item-name.heavy-explosive-cannon-shell" },
+    name = "angels-heavy-explosive-cannon-shell",
+    localised_name = { "item-name.angels-heavy-explosive-cannon-shell" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -69,13 +69,13 @@ data:extend({
       --{type="item", name="lead-plate", amount = 3},
     },
     results = {
-      { type = "item", name = "heavy-explosive-cannon-shell", amount = 1 },
+      { type = "item", name = "angels-heavy-explosive-cannon-shell", amount = 1 },
     },
   },
   {
     type = "recipe",
-    name = "heavy-uranium-cannon-shell",
-    localised_name = { "item-name.heavy-uranium-cannon-shell" },
+    name = "angels-heavy-uranium-cannon-shell",
+    localised_name = { "item-name.angels-heavy-uranium-cannon-shell" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -83,13 +83,13 @@ data:extend({
       --{type="item", name="lead-plate", amount = 3},
     },
     results = {
-      { type = "item", name = "heavy-uranium-cannon-shell", amount = 1 },
+      { type = "item", name = "angels-heavy-uranium-cannon-shell", amount = 1 },
     },
   },
   {
     type = "recipe",
-    name = "heavy-explosive-uranium-cannon-shell",
-    localised_name = { "item-name.heavy-explosive-uranium-cannon-shell" },
+    name = "angels-heavy-explosive-uranium-cannon-shell",
+    localised_name = { "item-name.angels-heavy-explosive-uranium-cannon-shell" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -97,7 +97,7 @@ data:extend({
       --{type="item", name="lead-plate", amount = 3},
     },
     results = {
-      { type = "item", name = "heavy-explosive-uranium-cannon-shell", amount = 1 },
+      { type = "item", name = "angels-heavy-explosive-uranium-cannon-shell", amount = 1 },
     },
   },
 })

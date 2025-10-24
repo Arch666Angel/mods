@@ -10,8 +10,8 @@ table.insert(items, { "", { "tips-and-tricks-sub.angels-algae-green" }, "\n" })
 table.insert(items, { "tips-and-tricks-description.angels-nauvis-notes-algae-green" })
 table.insert(items, tnt.get_item_from_name("angels-algae-brown"))
 table.insert(items, { "", { "tips-and-tricks-sub.angels-algae-brown" }, "\n" })
-if not angelsmods.functions.is_special_vanilla() then
-  table.insert(items, { "tips-and-tricks-description.angels-nauvis-notes-algae-brown-bobs" })
+if angelsmods.trigger.smelting_products["lithium"].plate then
+  table.insert(items, { "tips-and-tricks-description.angels-nauvis-notes-algae-brown-lithia" })
 end
 table.insert(items, { "tips-and-tricks-description.angels-nauvis-notes-algae-brown" })
 

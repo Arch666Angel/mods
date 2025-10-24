@@ -335,7 +335,7 @@ data:extend({
     turret_base_has_direction = true,
     resistances = {
       {
-        type = "bio",
+        type = "angels-bio",
         percent = 100,
       },
     },

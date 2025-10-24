@@ -80,6 +80,7 @@ if angelsmods.industries.tech then
     mods["angelsaddons-cab"] --[[angelsmods.addons.cab]]
   then
     OV.set_science_pack("angels-cab", "datacore-exploration-1", 2)
+    OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
   end
   -- DECORATION ADDONS
   if
@@ -138,7 +139,6 @@ if angelsmods.industries.tech then
   AI.core_replace("angels-components-cabling-3", "energy", "logistic")
   AI.core_replace("angels-components-cabling-4", "energy", "logistic")
   AI.core_replace("angels-components-cabling-5", "energy", "logistic")
-  OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
   AI.core_replace("angels-rocket-ion-thruster", "war", "logistic")
   -- MOBILITY ADDONS
   if mods["angelsaddons-storage"] then
@@ -187,7 +187,6 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-thermal-water-extraction", "datacore-processing-1", 2)
   -- PETROCHEM
   OV.set_science_pack("angels-coal-cracking", "datacore-processing-1", 2)
-  OV.set_science_pack("angels-oil-gas-extraction", "datacore-processing-1", 2)
   OV.set_science_pack("angels-flare-stack", "datacore-processing-1", 2)
   OV.set_science_pack("angels-gas-synthesis", "datacore-processing-1", 2)
   OV.set_science_pack("angels-resin-1", "datacore-processing-1", 2)

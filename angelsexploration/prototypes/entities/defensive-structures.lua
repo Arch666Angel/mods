@@ -2,25 +2,25 @@
 --entity:
 local st_wall = table.deepcopy(data.raw["wall"]["stone-wall"])
 st_wall.next_upgrade = st_wall.name
-st_wall.name = "wall-0"
-st_wall.minable.result = "wall-0"
+st_wall.name = "angels-wall-0"
+st_wall.minable.result = "angels-wall-0"
 st_wall.max_health = st_wall.max_health * 2 / 3
 data:extend({ st_wall })
 --item:
 local st_wall = table.deepcopy(data.raw.item["stone-wall"])
-st_wall.name = "wall-0"
+st_wall.name = "angels-wall-0"
 st_wall.order = "a[stone-wall]-b[stone-wall]"
-st_wall.place_result = "wall-0"
+st_wall.place_result = "angels-wall-0"
 data:extend({ st_wall })
 --recipe:
 data:extend({
   {
     type = "recipe",
-    name = "wall-0",
-    localised_name = { "entity-name.wall-0" },
+    name = "angels-wall-0",
+    localised_name = { "entity-name.angels-wall-0" },
     enabled = true,
     ingredients = { { type = "item", name = "stone", amount = 5 }, { type = "item", name = "wood", amount = 1 } },
-    results = { { type = "item", name = "wall-0", amount = 1 } },
+    results = { { type = "item", name = "angels-wall-0", amount = 1 } },
   },
 })
 -- STONE WALL TIER 1 -----------------------------------------------------------
@@ -92,4 +92,4 @@ local wall_sprite_tint_update = function(wall_entity, tint)
   end
 end
 --updates:
-wall_sprite_tint_update(data.raw["wall"]["wall-0"], { r = 0.75, g = 0.75, b = 0.75, a = 1 })
+wall_sprite_tint_update(data.raw["wall"]["angels-wall-0"], { r = 0.75, g = 0.75, b = 0.75, a = 1 })

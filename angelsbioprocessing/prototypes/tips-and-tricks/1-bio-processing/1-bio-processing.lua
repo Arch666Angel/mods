@@ -20,9 +20,10 @@ data:extend({
 
     starting_status = "locked",
     dependencies = nil,
-    trigger = {
-      type = "time-elapsed",
-      ticks = 10 * 60,
+    trigger =
+    {
+      type = "research",
+      technology = "angels-bio-processing-brown"
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-bio-processing.1-bio-processing-simulation",

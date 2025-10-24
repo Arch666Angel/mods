@@ -3,7 +3,7 @@ data:extend({
   --HEAVY CANNON SHELL
   {
     type = "projectile",
-    name = "heavy-cannon-projectile",
+    name = "angels-heavy-cannon-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.1, -1.1 }, { 0.1, 1.1 } },
     acceleration = 0,
@@ -53,7 +53,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "heavy-cannon-shell",
+    name = "angels-heavy-cannon-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/cannon-shell.png",
@@ -78,7 +78,7 @@ data:extend({
         repeat_count = 2,
         action_delivery = {
           type = "projectile",
-          projectile = "heavy-cannon-projectile",
+          projectile = "angels-heavy-cannon-projectile",
           starting_speed = 1,
           direction_deviation = 0.2,
           range_deviation = 0.1,
@@ -97,7 +97,7 @@ data:extend({
   --HEAVY EXPLOSIVE CANNON SHELL
   {
     type = "projectile",
-    name = "heavy-explosive-cannon-projectile",
+    name = "angels-heavy-explosive-cannon-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.1, -1.1 }, { 0.1, 1.1 } },
     acceleration = 0,
@@ -162,7 +162,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "heavy-explosive-cannon-shell",
+    name = "angels-heavy-explosive-cannon-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/explosive-cannon-shell.png",
@@ -187,7 +187,7 @@ data:extend({
         repeat_count = 2,
         action_delivery = {
           type = "projectile",
-          projectile = "heavy-explosive-cannon-projectile",
+          projectile = "angels-heavy-explosive-cannon-projectile",
           starting_speed = 1,
           direction_deviation = 0.2,
           range_deviation = 0.1,
@@ -206,7 +206,7 @@ data:extend({
   --HEAVY URANIUM CANNON SHELL
   {
     type = "projectile",
-    name = "heavy-uranium-cannon-projectile",
+    name = "angels-heavy-uranium-cannon-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.1, -1.1 }, { 0.1, 1.1 } },
     acceleration = 0,
@@ -256,7 +256,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "heavy-uranium-cannon-shell",
+    name = "angels-heavy-uranium-cannon-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/uranium-cannon-shell.png",
@@ -281,7 +281,7 @@ data:extend({
         repeat_count = 2,
         action_delivery = {
           type = "projectile",
-          projectile = "heavy-uranium-cannon-projectile",
+          projectile = "angels-heavy-uranium-cannon-projectile",
           starting_speed = 1,
           direction_deviation = 0.2,
           range_deviation = 0.1,
@@ -300,7 +300,7 @@ data:extend({
   --HEAVY EXPLOSIVE URANIUM CANNON SHELL
   {
     type = "projectile",
-    name = "heavy-explosive-uranium-cannon-projectile",
+    name = "angels-heavy-explosive-uranium-cannon-projectile",
     flags = { "not-on-map" },
     collision_box = { { -0.1, -1.1 }, { 0.1, 1.1 } },
     acceleration = 0,
@@ -365,7 +365,7 @@ data:extend({
   },
   {
     type = "ammo",
-    name = "heavy-explosive-uranium-cannon-shell",
+    name = "angels-heavy-explosive-uranium-cannon-shell",
     icons = {
       {
         icon = "__base__/graphics/icons/explosive-uranium-cannon-shell.png",
@@ -390,7 +390,7 @@ data:extend({
         repeat_count = 2,
         action_delivery = {
           type = "projectile",
-          projectile = "heavy-explosive-uranium-cannon-projectile",
+          projectile = "angels-heavy-explosive-uranium-cannon-projectile",
           starting_speed = 1,
           direction_deviation = 0.2,
           range_deviation = 0.1,

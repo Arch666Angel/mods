@@ -27,15 +27,6 @@ if angelsmods.industries.tech == true then
   end
 end
 
-angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
-if mods["bobplates"] or angelsmods.industries.components then
-  angelsmods.industries.overhaul = true
-end
-if angelsmods.industries.overhaul then
-  angelsmods.trigger.water_greenyellow_waste = true
-  angelsmods.trigger.water_green_waste = true
-end
-
 angelsmods.industries.return_ingredients = angelsmods.industries.components
     and settings.startup["angels-return-ingredients"].value
   or false
@@ -135,38 +126,3 @@ require("prototypes.recipes.tech-entity")
 --TECHS
 require("prototypes.technology.tech-lab-technology")
 require("prototypes.technology.tech-pack-technology")
-
--- LOGISTICS -----------------------------------------------------------
-
---ENTITIES
-require("prototypes.buildings.angels-logistics-lamp")
-require("prototypes.buildings.angels-logistics-roboport")
-require("prototypes.buildings.angels-logistics-charging-station")
-require("prototypes.buildings.angels-logistics-zone-expander")
-require("prototypes.buildings.angels-logistics-construction-zone-expander")
-require("prototypes.buildings.angels-logistics-relay-station")
-require("prototypes.buildings.angels-logistics-big-chest")
-require("prototypes.buildings.angels-logistics-robot-construction")
-require("prototypes.buildings.angels-logistics-robot-cargo")
---ENTITIES
-require("prototypes.entities.crawler")
-require("prototypes.entities.equipment")
---RECIPES
-require("prototypes.recipes.equipment-recipes")
-require("prototypes.recipes.logistics-entity")
-require("prototypes.recipes.vehicles-recipe")
---TECHS
-require("prototypes.technology.vequip-technology")
-require("prototypes.technology.logistics-technology")
-
--- NUCLEAR -----------------------------------------------------------
---ENTITIES
-require("prototypes.buildings.centrifuge")
-require("prototypes.buildings.angels-reactor")
---ITEMS
-require("prototypes.items.overhaul-nuclear-power")
-require("prototypes.items.angels-reactor")
---RECIPES
-require("prototypes.recipes.overhaul-nuclear-power")
---TECHS
-require("prototypes.technology.overhaul-nuclear-power")

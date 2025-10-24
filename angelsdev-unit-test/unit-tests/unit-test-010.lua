@@ -554,12 +554,13 @@ local function add_ignores()
     }
   end
 
-  if script.active_mods["angelsindustries"] then
+  if script.active_mods["angelspetrochem"] then
     ignored_unlocks["angels-nuclear-fuel"] = {
       items = {
         ["bob-plutonium-239"] = true,
         ["angels-plutonium-240"] = true,
         ["bob-thorium-232"] = true,
+        ["angels-thorium-232"] = true,
       },
       categories = {
         ["centrifuging-2"] = true,

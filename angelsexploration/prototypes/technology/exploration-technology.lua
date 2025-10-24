@@ -38,11 +38,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "heavy-cannon-shell",
+        recipe = "angels-heavy-cannon-shell",
       },
       {
         type = "unlock-recipe",
-        recipe = "heavy-explosive-cannon-shell",
+        recipe = "angels-heavy-explosive-cannon-shell",
       },
       -- {
       -- type = "unlock-recipe",
@@ -76,11 +76,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "cannon-turret-shell-1",
+        recipe = "angels-cannon-turret-shell-1",
       },
       --{
       --  type = "unlock-recipe",
-      --  recipe = "cannon-turret-shell-2"     -- moved to military 3 (see overrides)
+      --  recipe = "angels-cannon-turret-shell-2"     -- moved to military 3 (see overrides)
       --},
     },
     unit = {
@@ -200,15 +200,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cannon-turret-shell-3",
+        recipe = "angels-cannon-turret-shell-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "heavy-uranium-cannon-shell",
+        recipe = "angels-heavy-uranium-cannon-shell",
       },
       {
         type = "unlock-recipe",
-        recipe = "heavy-explosive-uranium-cannon-shell",
+        recipe = "angels-heavy-explosive-uranium-cannon-shell",
       },
     },
     unit = {

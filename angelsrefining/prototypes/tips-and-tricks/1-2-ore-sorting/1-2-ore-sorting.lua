@@ -12,7 +12,7 @@ data:extend({
     order = "b[ore-sorting]",
     indent = 1,
 
-    starting_status = "dependencies-not-met",
+    starting_status = "locked",
     dependencies = nil,
     trigger = {
       type = "research",

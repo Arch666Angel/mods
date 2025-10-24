@@ -1,0 +1,77 @@
+{
+  "item":
+  [
+    ["cannon-turret-shell-1", "angels-cannon-turret-shell-1"],
+    ["cannon-turret-shell-2", "angels-cannon-turret-shell-2"],
+    ["cannon-turret-shell-3", "angels-cannon-turret-shell-3"],
+    ["heavy-cannon-shell", "angels-heavy-cannon-shell"],
+    ["heavy-explosive-cannon-shell", "angels-heavy-explosive-cannon-shell"],
+    ["heavy-uranium-cannon-shell", "angels-heavy-uranium-cannon-shell"],
+    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"],
+    ["wall-0", "angels-wall-0"]
+  ],
+  "recipe":
+  [
+    ["cannon-turret-shell-1", "angels-cannon-turret-shell-1"],
+    ["cannon-turret-shell-2", "angels-cannon-turret-shell-2"],
+    ["cannon-turret-shell-3", "angels-cannon-turret-shell-3"],
+    ["heavy-cannon-shell", "angels-heavy-cannon-shell"],
+    ["heavy-explosive-cannon-shell", "angels-heavy-explosive-cannon-shell"],
+    ["heavy-uranium-cannon-shell", "angels-heavy-uranium-cannon-shell"],
+    ["heavy-explosive-uranium-cannon-shell", "angels-heavy-explosive-uranium-cannon-shell"],
+    ["wall-0", "angels-wall-0"]
+  ],
+  "ammo-category":
+  [
+    ["cannon-turret", "angels-cannon-turret"],
+    ["heavy-cannon-shell", "angels-heavy-cannon-shell"],
+    ["bio", "angels-bio"],
+    ["gathering", "angels-gathering"],
+    ["electric", "angels-electric"]
+  ],
+  "damage-type":
+  [
+    ["bio", "angels-bio"],
+    ["gathering", "angels-gathering"],
+    ["plasma", "angels-plasma"]
+  ],
+  "entity":
+  [
+    ["wall-0", "angels-wall-0"],
+
+    ["psyker-spawner", "angels-psyker-spawner"],
+    ["scarab-spawner", "angels-scarab-spawner"],
+
+    ["colossal-spitter", "angels-colossal-spitter"],
+    ["colossal-biter", "angels-colossal-biter"],
+
+    ["small-psyker", "angels-small-psyker"],
+    ["medium-psyker", "angels-medium-psyker"],
+    ["big-psyker", "angels-big-psyker"],
+    ["behemoth-psyker", "angels-behemoth-psyker"],
+    ["colossal-psyker", "angels-colossal-psyker"],
+
+    ["small-scarab", "angels-small-scarab"],
+    ["medium-scarab", "angels-medium-scarab"],
+    ["big-scarab", "angels-big-scarab"],
+    ["behemoth-scarab", "angels-behemoth-scarab"],
+    ["colossal-scarab", "angels-colossal-scarab"]
+  ],
+  "technology":
+  [
+    ["tips-and-tricks-trigger-angels-native-inhabitants-spawner-psyker-spawner", "tips-and-tricks-trigger-angels-native-inhabitants-spawner-angels-psyker-spawner"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-spawner-scarab-spawner", "tips-and-tricks-trigger-angels-native-inhabitants-spawner-angels-scarab-spawner"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-behemoth-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-behemoth-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-behemoth-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-behemoth-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-big-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-big-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-big-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-big-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-biter", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-biter"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-colossal-spitter", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-colossal-spitter"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-medium-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-medium-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-medium-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-medium-scarab"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-small-psyker", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-small-psyker"],
+    ["tips-and-tricks-trigger-angels-native-inhabitants-unit-small-scarab", "tips-and-tricks-trigger-angels-native-inhabitants-unit-angels-small-scarab"]
+  ]
+}

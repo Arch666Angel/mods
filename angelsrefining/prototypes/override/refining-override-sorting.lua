@@ -65,8 +65,8 @@ local icon_lookup_table = {
     or mods["bobores"] and { icon = "__bobores__/graphics/icons/silver-ore.png", icon_size = 32 }
     or icon_lookup_table_fallback,
 
-  ["angels-thorium-ore"] = mods["angelsindustries"] and angelsmods.industries.overhaul and {
-    icon = "__angelssmeltinggraphics__/graphics/icons/ore-thorium.png",
+  ["angels-thorium-ore"] = mods["angelspetrochem"] and {
+    icon = "__angelspetrochemgraphics__/graphics/icons/ore-thorium.png",
     icon_size = 64,
     scale = 0.5,
   } or mods["bobplates"] and {
@@ -380,49 +380,6 @@ local function create_sorting_mix_recipe(recipe_data)
   angelsmods.functions.OV.disable_recipe(recipe_data.name)
 end
 
--- function to create the slag sorting results disables it if it is unused
-local function create_slag_recipes(recipe_base_name, ore_result_products, recipe_icons)
-  local recipes = {}
-  for recipe_index = 1, 9 do
-    local recipe =
-      { name = string.format(recipe_base_name, string.format("-%i", recipe_index)), results = { { "!!" } } }
-    local recipe_used = false
-    local locale_index = {}
-    for result_name, ore_amounts in pairs(ore_result_products or {}) do
-      local ore_name = get_ore_name(result_name)
-      local ore_amount = ore_amounts[recipe_index]
-      local ore_probability = nil
-      if angelsmods.trigger.ores[get_trigger_name[result_name]] and ore_amount > 0 then
-        if ore_amount < 1 then
-          ore_probability, ore_amount = ore_amount, 1
-        end
-        table.insert(
-          recipe.results,
-          { name = ore_name, type = "item", amount = ore_amount, probability = ore_probability }
-        )
-        locale_index[#locale_index + 1] = { "item-name." .. ore_name }
-        recipe_used = true
-      end
-    end
-    if recipe_used then
-      recipe.icons = recipe_icons[recipe_index] -- maybe improve this?
-      table.insert(recipes, recipe)
-    else
-      OV.disable_recipe(recipe.name)
-    end
-    --localisation set-up
-    if #locale_index == 2 then
-      recipe.localised_name = { "recipe-name.angels-slag_processing_2", locale_index[1], locale_index[2] }
-    elseif #locale_index == 3 then
-      recipe.localised_name = { "recipe-name.angels-slag_processing_3", locale_index[1], locale_index[2], locale_index[3] }
-    else
-      recipe.localised_name = { "recipe-name.angels-slag_processing_1", locale_index[1] }
-    end
-  end
-
-  return recipes
-end
-
 -- function to merge tables, but not override indexes, but keep (different) contents
 local function merge_table_of_tables(recipes_table)
   local big_table = {}
@@ -536,16 +493,8 @@ OV.patch_recipes(merge_table_of_tables({
 }))
 
 if special_vanilla then
-  OV.remove_prereq("uranium-processing", "angels-ore-leaching")
-  OV.add_prereq("uranium-processing", "angels-slag-processing-2")
-  OV.remove_unlock("angels-slag-processing-3", "angels-slag-processing-9")
-  OV.add_unlock("angels-slag-processing-2", "angels-slag-processing-9")
-  OV.patch_recipes({
-    {
-      name = "angels-slag-processing-9",
-      category = "angels-crystallizing-2",
-    },
-  })
+  OV.remove_unlock("angels-slag-processing-1", "angels-slag-processing-3")
+  OV.add_prereq("angels-thorium-power", "angels-advanced-ore-refining-4")
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe({
@@ -714,11 +663,22 @@ OV.patch_recipes(merge_table_of_tables({
   }),
   create_sorting_mix_recipe({
     name = "angels-ore-chunk-mix3-processing",
-    result = { type = "item", name = "angels-bauxite-ore", amount = 4 },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
-      tweaked_icon_lookup("angels-bauxite-ore", 0.5, { 10, 10 }),
-    },
+    result = special_vanilla and { type = "item", name = "uranium-ore", amount = 1 }
+      or { type = "item", name = "angels-bauxite-ore", amount = 4 },
+    icons = special_vanilla
+        and angelsmods.functions.add_icon_layer(
+          angelsmods.functions.add_number_icon_layer({
+            {
+              icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
+              icon_size = 32,
+            },
+          }, 1, angelsmods.refining.number_tint),
+          tweaked_icon_lookup("uranium-ore", 0.5, { 10, 10 })
+        )
+      or {
+        { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
+        tweaked_icon_lookup("angels-bauxite-ore", 0.5, { 10, 10 }),
+      },
   }),
   create_sorting_mix_recipe({
     name = "angels-ore-chunk-mix4-processing",
@@ -760,7 +720,7 @@ OV.patch_recipes(merge_table_of_tables({
               icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
               icon_size = 32,
             },
-          }, 1, angelsmods.refining.number_tint),
+          }, 2, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, { 10, 10 })
         )
       or {
@@ -816,7 +776,7 @@ OV.patch_recipes(merge_table_of_tables({
               icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
               icon_size = 32,
             },
-          }, 2, angelsmods.refining.number_tint),
+          }, 3, angelsmods.refining.number_tint),
           tweaked_icon_lookup("uranium-ore", 0.5, { 10, 10 })
         )
       or {
@@ -826,10 +786,19 @@ OV.patch_recipes(merge_table_of_tables({
   }),
   create_sorting_mix_recipe({
     name = "angels-ore-pure-mix2-processing",
-    result = { type = "item", name = "angels-platinum-ore", amount = 3 },
-    icons = {
-      { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
-      ore_enabled("platinum") and tweaked_icon_lookup("angels-platinum-ore", 0.5, { 10, 10 }) or nil,
+    result = special_vanilla and { type = "item", name = "angels-thorium-ore", amount = 3 }
+      or { type = "item", name = "angels-platinum-ore", amount = 3 },
+    icons = special_vanilla
+      and {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png",
+          icon_size = 32,
+        },
+        tweaked_icon_lookup("angels-thorium-ore", 0.5, { 10, 10 })
+      }
+      or {
+        { icon = "__angelsrefininggraphics__/graphics/icons/sort-icon.png", icon_size = 32 },
+        ore_enabled("platinum") and tweaked_icon_lookup("angels-platinum-ore", 0.5, { 10, 10 }) or nil,
     },
   }),
   create_sorting_mix_recipe({
@@ -856,22 +825,40 @@ if special_vanilla then
       order = "b[copper]-b[slag]",
     },
     {
+      name = "angels-ore-chunk-mix3-processing",
+      ingredients = {
+        { type = "item", name = "angels-catalysator-green", amount = 0 },
+        { type = "item", name = "angels-ore1-chunk", amount = "angels-ore2-chunk" },
+      },
+      order = "c[uranium]-a[ore]-a",
+    },
+    {
       name = "angels-ore-crystal-mix1-processing",
       ingredients = {
         { type = "item", name = "angels-catalysator-orange", amount = 0 },
         { type = "item", name = "angels-ore5-crystal", amount = 0 },
       },
-      order = "c[uranium]-a[ore]-a",
+      order = "c[uranium]-a[ore]-b",
     },
     {
       name = "angels-ore-pure-mix1-processing",
       ingredients = {
         { type = "item", name = "angels-catalysator-orange", amount = 0 },
         { type = "item", name = "angels-ore3-pure", amount = 0 },
-        { type = "item", name = "angels-ore4-pure", amount = "angels-ore6-pure" },
+        { type = "item", name = "angels-ore4-pure", amount = "angels-ore2-pure" },
       },
-      order = "c[uranium]-a[ore]-b",
+      order = "c[uranium]-a[ore]-c",
     },
+    {
+      name = "angels-ore-pure-mix2-processing",
+      ingredients = {
+        { type = "item", name = "angels-catalysator-orange", amount = 0 },
+        { type = "item", name = "angels-ore2-pure", amount = "angels-ore5-pure" },
+        { type = "item", name = "angels-ore5-pure", amount = 0 },
+        { type = "item", name = "angels-ore6-pure", amount = 0 },
+      },
+      order = "d[thorium]-a[ore]-a",
+    }
   })
 end
 
@@ -879,98 +866,88 @@ end
 -- SLAG SORTING ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 local slag_color = { { 202, 099, 017 }, { 097, 052, 020 }, { 097, 052, 020 } }
-OV.patch_recipes(merge_table_of_tables({
-  create_slag_recipes("angels-slag-processing%s", {
-    ["iron-ore"] = { special_vanilla and 0.8 or 0.4, 0, 0, 0, 0, 0, 0, 0, 0 },
-    ["angels-iron-pebbles"] = special_vanilla and { 0, 0, 0, 3 * 0.8, 0, 0, 0, 0, 0 } or nil,
-    ["copper-ore"] = { special_vanilla and 0 or 0.4, special_vanilla and 0.8 or 0, 0, 0, 0, 0, 0, 0, 0 },
-    ["angels-copper-pebbles"] = special_vanilla and { 0, 0, 0, 0, 3 * 0.8, 0, 0, 0, 0 } or nil,
-    ["angels-lead-ore"] = { 0, 0.4, 0, 0, 0, 0, 0, 0, 0 },
-    ["angels-tin-ore"] = { 0, 0.4, 0, 0, 0, 0, 0, 0, 0 },
-    ["angels-quartz"] = { 0, 0, 0.4, 0, 0, 0, 0, 0, 0 },
-    ["angels-silver-ore"] = { 0, 0, 0.4, 0, 0, 0, 0, 0, 0 },
-    ["angels-gold-ore"] = { 0, 0, 0, 0.4, 0, 0, 0, 0, 0 },
-    ["angels-nickel-ore"] = { 0, 0, 0, 0.4, 0, 0, 0, 0, 0 },
-    ["angels-zinc-ore"] = { 0, 0, 0, 0, 0.4, 0, 0, 0, 0 },
-    ["angels-rutile-ore"] = { 0, 0, 0, 0, 0.4, 0, 0, 0, 0 },
-    ["angels-bauxite-ore"] = { 0, 0, 0, 0, 0, 0.4, 0, 0, 0 },
-    ["angels-manganese-ore"] = {
-      0,
-      0,
-      0,
-      0,
-      0,
-      ore_enabled("angels-platinum-ore") and ore_enabled("angels-chrome-ore") and 0.4 or ore_enabled("angels-chrome-ore") and 0.2 or 0.4,
-      0,
-      0,
-      0,
+
+if angelsmods.functions.is_special_vanilla() then
+  -- Rubyte and Bobmonium ore are disabled (5 and 6)
+  -- saphirite + crotinnium (1+4)
+  -- jivolite  + stiratite  (2+3)
+  OV.patch_recipes({
+    {
+      name = "angels-slag-processing-1",
+      localised_name = { "recipe-name.angels-slag_processing_2", { "item-name.angels-ore1" }, { "item-name.angels-ore4" } },
+      results = {
+        { "!!" },
+        { type = "item", name = "angels-ore1", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore4", amount = 1, probability = 0.4 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+          "angels-ore1",
+          "angels-ore4",
+        }, slag_color),
+      hidden = false,
     },
-    ["angels-chrome-ore"] = {
-      0,
-      0,
-      0,
-      0,
-      0,
-      ore_enabled("angels-platinum-ore") and 0 or 0.2,
-      ore_enabled("angels-platinum-ore") and 0.4 or 0,
-      0,
-      0,
+    {
+      name = "angels-slag-processing-2",
+      localised_name = { "recipe-name.angels-slag_processing_2", { "item-name.angels-ore2" }, { "item-name.angels-ore3" } },
+      results = {
+        { "!!" },
+        { type = "item", name = "angels-ore2", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore3", amount = 1, probability = 0.4 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+          "angels-ore2",
+          "angels-ore3",
+        }, slag_color),
+      hidden = false,
     },
-    ["angels-platinum-ore"] = { 0, 0, 0, 0, 0, 0, 0.4, 0, 0 },
-    ["angels-cobalt-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0.4, 0 },
-    ["angels-tungsten-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0.4, 0 },
-    ["uranium-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.4 },
-    ["angels-fluorite-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.2 },
-    ["angels-thorium-ore"] = { 0, 0, 0, 0, 0, 0, 0, 0, 0.005 },
-  }, {
-    --[[1]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      get_ore_name("iron-ore"),
-      not special_vanilla and get_ore_name("copper-ore") or nil,
-    }, slag_color),
-    --[[2]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      special_vanilla and get_ore_name("copper-ore") or get_ore_name("angels-lead-ore"),
-      not special_vanilla and get_ore_name("angels-tin-ore") or nil,
-    }, slag_color),
-    --[[3]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      get_ore_name("angels-silver-ore"),
-      get_ore_name("angels-quartz"),
-    }, slag_color),
-    --[[4]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      special_vanilla and get_ore_name("angels-iron-pebbles") or get_ore_name("angels-gold-ore"),
-      not special_vanilla and get_ore_name("angels-nickel-ore") or nil,
-    }, slag_color),
-    --[[5]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      special_vanilla and get_ore_name("angels-copper-pebbles") or get_ore_name("angels-zinc-ore"),
-      not special_vanilla and get_ore_name("angels-rutile-ore") or nil,
-    }, slag_color),
-    --[[6]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      get_ore_name("angels-bauxite-ore"),
-      ore_enabled("angels-manganese-ore") and get_ore_name("angels-manganese-ore") or nil,
-      (not ore_enabled("angels-platinum-ore")) and ore_enabled("angels-chrome-ore") and get_ore_name("angels-chrome-ore") or nil,
-    }, slag_color),
-    --[[7]]
-    ore_enabled("angels-platinum-ore")
-        and angelsmods.functions.create_liquid_recipe_icon({
-          get_ore_name("angels-platinum-ore"),
-          get_ore_name("angels-chrome-ore"),
-        }, slag_color)
-      or nil,
-    --[[8]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      get_ore_name("angels-cobalt-ore"),
-      get_ore_name("angels-tungsten-ore"),
-    }, slag_color),
-    --[[9]]
-    angelsmods.functions.create_liquid_recipe_icon({
-      get_ore_name("uranium-ore"),
-      ore_enabled("angels-fluorite-ore") and get_ore_name("angels-fluorite-ore") or nil,
-      ore_enabled("angels-thorium-ore") and get_ore_name("angels-thorium-ore") or nil,
-    }, slag_color),
-  }),
-}))
+  })
+else
+  -- saphirite + bobmonium  (1+6)
+  -- jivolite  + crotinnium (2+4)
+  -- stiratite + rubyte     (3+5)
+  OV.patch_recipes({
+    {
+      name = "angels-slag-processing-1",
+      localised_name = { "recipe-name.angels-slag_processing_2", { "item-name.angels-ore1" }, { "item-name.angels-ore6" } },
+      results = {
+        { "!!" },
+        { type = "item", name = "angels-ore1", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore6", amount = 1, probability = 0.4 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+          "angels-ore1",
+          "angels-ore6",
+        }, slag_color),
+      hidden = false,
+    },
+    {
+      name = "angels-slag-processing-2",
+      localised_name = { "recipe-name.angels-slag_processing_2", { "item-name.angels-ore2" }, { "item-name.angels-ore4" } },
+      results = {
+        { "!!" },
+        { type = "item", name = "angels-ore2", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore4", amount = 1, probability = 0.4 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+          "angels-ore2",
+          "angels-ore4",
+        }, slag_color),
+      hidden = false,
+    },
+    {
+      name = "angels-slag-processing-3",
+      localised_name = { "recipe-name.angels-slag_processing_2", { "item-name.angels-ore3" }, { "item-name.angels-ore5" } },
+      results = {
+        { "!!" },
+        { type = "item", name = "angels-ore3", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore5", amount = 1, probability = 0.4 },
+      },
+      icons = angelsmods.functions.create_liquid_recipe_icon({
+          "angels-ore3",
+          "angels-ore5",
+        }, slag_color),
+      hidden = false,
+    },
+  })
+end
+

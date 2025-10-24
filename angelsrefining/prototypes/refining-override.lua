@@ -367,12 +367,6 @@ end
 angelsmods.functions.allow_productivity("angels-slag-processing-1")
 angelsmods.functions.allow_productivity("angels-slag-processing-2")
 angelsmods.functions.allow_productivity("angels-slag-processing-3")
-angelsmods.functions.allow_productivity("angels-slag-processing-4")
-angelsmods.functions.allow_productivity("angels-slag-processing-5")
-angelsmods.functions.allow_productivity("angels-slag-processing-6")
-angelsmods.functions.allow_productivity("angels-slag-processing-7")
-angelsmods.functions.allow_productivity("angels-slag-processing-8")
-angelsmods.functions.allow_productivity("angels-slag-processing-9")
 angelsmods.functions.allow_productivity("angels-catalysator-brown")
 
 angelsmods.functions.allow_productivity("angels-ore1-crushed-processing")

@@ -40,6 +40,15 @@ data:extend({
     type = "recipe-category",
     name = "angels-chemical-void",
   },
+  -- centrifuging category part of base game
+  {
+    type = "recipe-category",
+    name = "centrifuging-2",
+  },
+  {
+    type = "recipe-category",
+    name = "centrifuging-3",
+  },
   --SUBGROUPS
   {
     type = "item-group",
@@ -289,5 +298,24 @@ data:extend({
     name = "angels-chemical-void",
     group = "angels-void",
     order = "a-b[chemical]",
+  },
+  -- NUCLEAR
+  {
+    type = "item-subgroup",
+    name = "angels-power-nuclear",
+    group = "production",
+    order = "c[nuclear]-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-power-nuclear-processing",
+    group = "production",
+    order = "d[nuclear-processing]-a",
+  },
+  {
+    type = "item-subgroup",
+    name = "angels-power-nuclear-fuel-cell",
+    group = "production",
+    order = "d[nuclear-processing]-b",
   },
 })

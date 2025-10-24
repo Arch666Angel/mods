@@ -38,7 +38,7 @@ data:extend({
       { type = "item", name = "angels-algae-brown", amount = 20 },
     },
     results = {
-      { type = "item", name = "angels-solid-lithium", amount = 1 },
+      { type = "item", name = "angels-solid-lithium", amount = 2 },
     },
     icon_size = 32,
     order = "b[algae-brown-burning]",

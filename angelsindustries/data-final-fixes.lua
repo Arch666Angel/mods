@@ -2,11 +2,6 @@ local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
 require("prototypes.overrides.global-components-recipe")
 
---hide the unused advanced defences
-OV.hide_recipe("angels-rocket-defense-equipment-vequip")
-angelsmods.functions.hide("angels-rocket-defense-equipment-vequip")
-OV.execute()
-
 if angelsmods.industries.components then
   --hide the unused advanced tech blocks
   OV.global_replace_item({

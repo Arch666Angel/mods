@@ -13,10 +13,10 @@ data:extend({
       "angels-void",
       "angels-cab",
       "angels-energy",
-      --"angels-repair",
-      --"angels-heavy-defense",
-      --"angels-construction",
-      --"angels-movement"
+      "angels-repair",
+      "angels-heavy-defense",
+      "angels-construction",
+      "angels-movement"
     },
   },
   {

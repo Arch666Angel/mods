@@ -19,13 +19,13 @@ data:extend({
     },
     duration_in_ticks = 30 * 60,
     target_movement_modifier = 0.4,
-    --damage_per_tick = { amount = 0 / 60, type = "bio" },
+    --damage_per_tick = { amount = 0 / 60, type = "angels-bio" },
   },
   {
     type = "fire",
     name = "angels-bio-splash",
     flags = { "placeable-off-grid", "not-on-map" },
-    damage_per_tick = { amount = 0 / 60, type = "bio" },
+    damage_per_tick = { amount = 0 / 60, type = "angels-bio" },
     on_damage_tick_effect = {
       type = "direct",
       --force = "enemy",
@@ -42,7 +42,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 7.5 / 6, type = "bio" }, -- 7.5 dmg/sec
+            damage = { amount = 7.5 / 6, type = "angels-bio" }, -- 7.5 dmg/sec
             apply_damage_to_trees = false,
             show_in_tooltip = true,
           },
@@ -158,7 +158,7 @@ data:extend({
             },
             {
               type = "damage",
-              damage = { amount = 5, type = "bio" },
+              damage = { amount = 5, type = "angels-bio" },
               apply_damage_to_trees = false,
               show_in_tooltip = true,
             },
@@ -197,7 +197,7 @@ data:extend({
             --},
             --{
             --  type = "damage",
-            --  damage = {amount = 5, type = "bio"}
+            --  damage = {amount = 5, type = "angels-bio"}
             --}
             {
               type = "create-fire",

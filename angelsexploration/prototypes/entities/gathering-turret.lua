@@ -205,7 +205,7 @@ data:extend({
         target_effects = {
           {
             type = "damage",
-            damage = { amount = 2, type = "gathering" },
+            damage = { amount = 2, type = "angels-gathering" },
           },
         },
       },

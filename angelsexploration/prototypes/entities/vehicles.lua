@@ -215,7 +215,7 @@ data:extend({
   },
   {
     type = "gun",
-    name = "heavy-tank-machine-gun",
+    name = "angels-heavy-tank-machine-gun",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-gun-icon.png",
     icon_size = 64,
     hidden = true,
@@ -262,7 +262,7 @@ data:extend({
   },
   {
     type = "gun",
-    name = "heavy-tank-cannon",
+    name = "angels-heavy-tank-cannon",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-cannon-icon.png",
     icon_size = 64,
     hidden = true,
@@ -270,7 +270,7 @@ data:extend({
     order = "z[tank]-a[cannon]",
     attack_parameters = {
       type = "projectile",
-      ammo_categories = { "cannon-shell", "heavy-cannon-shell" },
+      ammo_categories = { "cannon-shell", "angels-heavy-cannon-shell" },
       cooldown = 120,
       movement_slow_down_factor = 0,
       projectile_creation_distance = 4,
@@ -287,7 +287,7 @@ data:extend({
   },
   {
     type = "gun",
-    name = "heavy-tank-rocket-launcher",
+    name = "angels-heavy-tank-rocket-launcher",
     icon = "__angelsexplorationgraphics__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
     icon_size = 64,
     hidden = true,
@@ -723,7 +723,7 @@ data:extend({
     tank_driving = true,
     weight = 30000,
     inventory_size = 100,
-    guns = { "heavy-tank-cannon", "heavy-tank-machine-gun", "heavy-tank-rocket-launcher" },
+    guns = { "angels-heavy-tank-cannon", "angels-heavy-tank-machine-gun", "angels-heavy-tank-rocket-launcher" },
     --equipment_grid = "angels-heavy-tank",
   },
 })

@@ -35,7 +35,7 @@ OV.patch_recipes({
   },
   { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
-  { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
+  { name = "refined-hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
 
 -------------------------------------------------------------------------------
