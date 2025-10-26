@@ -53,7 +53,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "water-synthesis",
+        recipe = "angels-water-synthesis",
       },
       {
         type = "unlock-recipe",

@@ -195,7 +195,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "water-synthesis",
+    name = "angels-water-synthesis",
     localised_name = { "fluid-name.angels-water-purified" },
     category = "chemistry",
     subgroup = "angels-petrochem-basics",

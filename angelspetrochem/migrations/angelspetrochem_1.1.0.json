@@ -619,7 +619,8 @@
     ["valve-return", "angels-valve-one-way"],
     ["valve-underflow", "angels-valve-top-up"],
     ["water-gas-shift-1", "angels-water-gas-shift-1"],
-    ["water-gas-shift-2", "angels-water-gas-shift-2"]
+    ["water-gas-shift-2", "angels-water-gas-shift-2"],
+    ["water-synthesis", "angels-water-synthesis"]
   ],
   "technology":
   [
