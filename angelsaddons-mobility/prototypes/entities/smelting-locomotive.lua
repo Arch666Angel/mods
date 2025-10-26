@@ -19,22 +19,22 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "smelting-locomotive-1",
+  name = "angels-smelting-locomotive-1",
   icon = "__angelsaddons-mobility__/graphics/icons/smelting-loco-1.png",
   icon_size = 32,
   subgroup = "angels-smeltingtrain",
   order = "z[angel-train]-b[smelting]-a[locomotive]",
-  place_result = "smelting-locomotive-1",
+  place_result = "angels-smelting-locomotive-1",
   stack_size = 5,
 })
 
 funcs.generate_train_entities({
   type = "locomotive",
-  name = "smelting-locomotive-1",
+  name = "angels-smelting-locomotive-1",
   icon = "__angelsaddons-mobility__/graphics/icons/smelting-loco-1.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "smelting-locomotive-1" },
+  minable = { mining_time = 1, result = "angels-smelting-locomotive-1" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 2500,
   corpse = "medium-remnants",

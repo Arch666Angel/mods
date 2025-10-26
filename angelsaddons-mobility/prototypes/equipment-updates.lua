@@ -66,8 +66,8 @@ if angelsmods.petrochem then
   local OV = angelsmods.functions.OV
   if angelsmods.addons.mobility.petrotrain.tier_amount > 1 then
     for i = 1, angelsmods.addons.mobility.petrotrain.tier_amount, 1 do
-      local tank1 = i == 1 and "petro-tank1" or "petro-tank1-" .. i
-      local tank2 = i == 1 and "petro-tank2" or "petro-tank2-" .. i
+      local tank1 = i == 1 and "angels-petro-tank1" or "petro-tank1-" .. i
+      local tank2 = i == 1 and "angels-petro-tank2" or "petro-tank2-" .. i
       OV.modify_input(tank1, { type = "item", name = "angels-storage-tank-1", amount = "storage-tank" })
       OV.modify_input(tank2, { type = "item", name = "angels-storage-tank-2", amount = "storage-tank" })
     end

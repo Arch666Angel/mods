@@ -19,22 +19,22 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "petro-locomotive-1",
+  name = "angels-petro-locomotive-1",
   icon = "__angelsaddons-mobility__/graphics/icons/petro-loco-1-ico.png",
   icon_size = 32,
   subgroup = "angels-petrotrain",
   order = "z[angel-train]-c[petro]-a[locomotive]",
-  place_result = "petro-locomotive-1",
+  place_result = "angels-petro-locomotive-1",
   stack_size = 5,
 })
 
 funcs.generate_train_entities({
   type = "locomotive",
-  name = "petro-locomotive-1",
+  name = "angels-petro-locomotive-1",
   icon = "__angelsaddons-mobility__/graphics/icons/petro-loco-1-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "petro-locomotive-1" },
+  minable = { mining_time = 1, result = "angels-petro-locomotive-1" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 2500,
   corpse = "medium-remnants",

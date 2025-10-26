@@ -19,22 +19,22 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "petro-tank2",
+  name = "angels-petro-tank2",
   icon = "__angelsaddons-mobility__/graphics/icons/petro-tank2-ico.png",
   icon_size = 32,
   subgroup = "angels-petrotrain",
   order = "z[angel-train]-c[petro]-c[tank2]",
-  place_result = "petro-tank2",
+  place_result = "angels-petro-tank2",
   stack_size = 5,
 })
 
 funcs.generate_train_entities({
   type = "fluid-wagon",
-  name = "petro-tank2",
+  name = "angels-petro-tank2",
   icon = "__angelsaddons-mobility__/graphics/icons/petro-tank2-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "petro-tank2" },
+  minable = { mining_time = 1, result = "angels-petro-tank2" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 600,
   capacity = mods["angelspetrochem"] and 40000 or 25000,
