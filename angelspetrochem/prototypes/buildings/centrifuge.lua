@@ -222,10 +222,10 @@ end
 local bob_centrifuge_2 = mods["bobassembly"] and data.raw["assembling-machine"]["bob-centrifuge-2"] and true or false
 local bob_centrifuge_3 = bob_centrifuge_2 and data.raw["assembling-machine"]["bob-centrifuge-3"] and true or false
 for centrifuge_name, centrifuge_categegories in pairs({
-  ["centrifuge"] = bob_centrifuge_2 and { "centrifuging" } or { "centrifuging", "centrifuging-2", "centrifuging-3" },
-  ["bob-centrifuge-2"] = bob_centrifuge_3 and { "centrifuging", "centrifuging-2" }
-    or { "centrifuging", "centrifuging-2", "centrifuging-3" },
-  ["bob-centrifuge-3"] = { "centrifuging", "centrifuging-2", "centrifuging-3" },
+  ["centrifuge"] = bob_centrifuge_2 and { "centrifuging" } or { "centrifuging", "angels-centrifuging-2", "angels-centrifuging-3" },
+  ["bob-centrifuge-2"] = bob_centrifuge_3 and { "centrifuging", "angels-centrifuging-2" }
+    or { "centrifuging", "angels-centrifuging-2", "angels-centrifuging-3" },
+  ["bob-centrifuge-3"] = { "centrifuging", "angels-centrifuging-2", "angels-centrifuging-3" },
 }) do
   local centrifuge = data.raw["assembling-machine"][centrifuge_name]
   if centrifuge then

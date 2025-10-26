@@ -43,11 +43,11 @@ data:extend({
   -- centrifuging category part of base game
   {
     type = "recipe-category",
-    name = "centrifuging-2",
+    name = "angels-centrifuging-2",
   },
   {
     type = "recipe-category",
-    name = "centrifuging-3",
+    name = "angels-centrifuging-3",
   },
   --SUBGROUPS
   {

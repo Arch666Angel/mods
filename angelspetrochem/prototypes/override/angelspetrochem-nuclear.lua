@@ -242,9 +242,9 @@ if mods["bobplates"] then
       else
         OV.set_science_pack("bob-rtg", "production-science-pack", 1)
         OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
-        data.raw.recipe["bobingabout-enrichment-process"].category = "centrifuging-2"
+        data.raw.recipe["bobingabout-enrichment-process"].category = "angels-centrifuging-2"
         if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
-          data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "centrifuging-2"
+          data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "angels-centrifuging-2"
         end
       end
     end

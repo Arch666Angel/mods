@@ -563,8 +563,8 @@ local function add_ignores()
         ["angels-thorium-232"] = true,
       },
       categories = {
-        ["centrifuging-2"] = true,
-        ["centrifuging-3"] = true,
+        ["angels-centrifuging-2"] = true,
+        ["angels-centrifuging-3"] = true,
       },
     }
     ignored_unlocks["atomic-bomb"] = {

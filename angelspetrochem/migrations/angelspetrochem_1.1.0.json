@@ -650,5 +650,9 @@
     ["steam-cracking-2", "angels-steam-cracking-2"],
     ["water-chemistry-1", "angels-water-chemistry-1"],
     ["water-chemistry-2", "angels-water-chemistry-2"]
+  ],
+  "recipe-category": [
+    ["centrifuging-2", "angels-centrifuging-2"],
+    ["centrifuging-3", "angels-centrifuging-3"]
   ]
 }
