@@ -418,7 +418,7 @@ data:extend({
     order = "la[angels]-e[industries]-d",
     icons = {
       {
-        icon = "__angelsaddons-bots__/graphics/technology/cargo-roboport-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/cargo-roboport-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
