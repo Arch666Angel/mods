@@ -462,7 +462,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "crawler-locomotive-4",
+        name = "angels-crawler-locomotive-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -472,11 +472,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "angels-cabling", amount = 15 },
           { type = "item", name = "angels-crawler-locomotive-3", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-locomotive-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-locomotive-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-locomotive-wagon-4",
+        name = "angels-crawler-locomotive-wagon-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -486,11 +486,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "angels-cabling", amount = 15 },
           { type = "item", name = "angels-crawler-locomotive-wagon-3", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-locomotive-wagon-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-locomotive-wagon-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-wagon-4",
+        name = "angels-crawler-wagon-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -500,11 +500,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "angels-big-chest", amount = 5 },
           { type = "item", name = "angels-crawler-wagon-3", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-wagon-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-wagon-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-bot-wagon-4",
+        name = "angels-crawler-bot-wagon-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -514,7 +514,7 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "angels-big-chest", amount = 5 },
           { type = "item", name = "angels-crawler-bot-wagon-3", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-bot-wagon-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-bot-wagon-4", amount = 1 }},
       },
     })
   end
@@ -523,7 +523,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "petro-locomotive-1-4",
+        name = "angels-petro-locomotive-1-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -533,11 +533,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "angels-cabling", amount = 5 },
           { type = "item", name = "angels-petro-locomotive-1-3", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-locomotive-1-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-locomotive-1-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "petro-tank1-4",
+        name = "angels-petro-tank1-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -547,11 +547,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "construction-components", amount = 5 },
           { type = "item", name = "angels-petro-tank1-3", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-tank1-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-tank1-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "petro-tank2-4",
+        name = "angels-petro-tank2-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -561,7 +561,7 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "construction-components", amount = 5 },
           { type = "item", name = "angels-petro-tank2-3", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-tank2-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-tank2-4", amount = 1 }},
       },
     })
   end
@@ -570,7 +570,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "smelting-locomotive-1-4",
+        name = "angels-smelting-locomotive-1-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -580,11 +580,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "mechanical-parts", amount = 10 },
           { type = "item", name = "angels-smelting-locomotive-1-3", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-locomotive-1-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-locomotive-1-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "smelting-locomotive-tender-4",
+        name = "angels-smelting-locomotive-tender-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -594,11 +594,11 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "mechanical-parts", amount = 5 },
           { type = "item", name = "angels-smelting-locomotive-tender-3", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-locomotive-tender-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-locomotive-tender-4", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "smelting-wagon-1-4",
+        name = "angels-smelting-wagon-1-4",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -608,7 +608,7 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "mechanical-parts", amount = 5 },
           { type = "item", name = "angels-smelting-wagon-1-3", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-wagon-1-4", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-wagon-1-4", amount = 1 }},
       },
     })
   end
@@ -617,7 +617,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "crawler-locomotive-5",
+        name = "angels-crawler-locomotive-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -625,13 +625,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 20 },
           { type = "item", name = "construction-frame-5", amount = 40 },
           { type = "item", name = "angels-cabling", amount = 15 },
-          { type = "item", name = "crawler-locomotive-4", amount = 1 },
+          { type = "item", name = "angels-crawler-locomotive-4", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-locomotive-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-locomotive-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-locomotive-wagon-5",
+        name = "angels-crawler-locomotive-wagon-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -639,13 +639,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 15 },
           { type = "item", name = "construction-frame-5", amount = 35 },
           { type = "item", name = "angels-cabling", amount = 15 },
-          { type = "item", name = "crawler-locomotive-wagon-4", amount = 1 },
+          { type = "item", name = "angels-crawler-locomotive-wagon-4", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-locomotive-wagon-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-locomotive-wagon-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-wagon-5",
+        name = "angels-crawler-wagon-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -653,13 +653,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 15 },
           { type = "item", name = "construction-frame-5", amount = 20 },
           { type = "item", name = "angels-big-chest", amount = 5 },
-          { type = "item", name = "crawler-wagon-4", amount = 1 },
+          { type = "item", name = "angels-crawler-wagon-4", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-wagon-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-wagon-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "crawler-bot-wagon-5",
+        name = "angels-crawler-bot-wagon-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -667,9 +667,9 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 15 },
           { type = "item", name = "construction-frame-5", amount = 20 },
           { type = "item", name = "angels-big-chest", amount = 5 },
-          { type = "item", name = "crawler-bot-wagon-4", amount = 1 },
+          { type = "item", name = "angels-crawler-bot-wagon-4", amount = 1 },
         },
-        results = {{ type = "item", name = "crawler-bot-wagon-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-crawler-bot-wagon-5", amount = 1 }},
       },
     })
   end
@@ -678,7 +678,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "petro-locomotive-1-5",
+        name = "angels-petro-locomotive-1-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -686,13 +686,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 10 },
           { type = "item", name = "construction-frame-5", amount = 5 },
           { type = "item", name = "angels-cabling", amount = 5 },
-          { type = "item", name = "petro-locomotive-1-4", amount = 1 },
+          { type = "item", name = "angels-petro-locomotive-1-4", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-locomotive-1-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-locomotive-1-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "petro-tank1-5",
+        name = "angels-petro-tank1-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -700,13 +700,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 10 },
           { type = "item", name = "construction-frame-5", amount = 5 },
           { type = "item", name = "construction-components", amount = 5 },
-          { type = "item", name = "petro-tank1-4", amount = 1 },
+          { type = "item", name = "angels-petro-tank1-4", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-tank1-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-tank1-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "petro-tank2-5",
+        name = "angels-petro-tank2-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -714,9 +714,9 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 10 },
           { type = "item", name = "construction-frame-5", amount = 5 },
           { type = "item", name = "construction-components", amount = 5 },
-          { type = "item", name = "petro-tank2-4", amount = 1 },
+          { type = "item", name = "angels-petro-tank2-4", amount = 1 },
         },
-        results = {{ type = "item", name = "petro-tank2-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-petro-tank2-5", amount = 1 }},
       },
     })
   end
@@ -725,7 +725,7 @@ if angelsmods.industries and angelsmods.industries.components then
     RB.build({
       {
         type = "recipe",
-        name = "smelting-locomotive-1-5",
+        name = "angels-smelting-locomotive-1-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -733,13 +733,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 15 },
           { type = "item", name = "construction-frame-5", amount = 10 },
           { type = "item", name = "mechanical-parts", amount = 10 },
-          { type = "item", name = "smelting-locomotive-1-4", amount = 1 },
+          { type = "item", name = "angels-smelting-locomotive-1-4", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-locomotive-1-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-locomotive-1-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "smelting-locomotive-tender-5",
+        name = "angels-smelting-locomotive-tender-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -747,13 +747,13 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 10 },
           { type = "item", name = "construction-frame-5", amount = 5 },
           { type = "item", name = "mechanical-parts", amount = 5 },
-          { type = "item", name = "smelting-locomotive-tender-4", amount = 1 },
+          { type = "item", name = "angels-smelting-locomotive-tender-4", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-locomotive-tender-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-locomotive-tender-5", amount = 1 }},
       },
       {
         type = "recipe",
-        name = "smelting-wagon-1-5",
+        name = "angels-smelting-wagon-1-5",
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -761,9 +761,9 @@ if angelsmods.industries and angelsmods.industries.components then
           { type = "item", name = "circuit-yellow-loaded", amount = 10 },
           { type = "item", name = "construction-frame-5", amount = 5 },
           { type = "item", name = "mechanical-parts", amount = 5 },
-          { type = "item", name = "smelting-wagon-1-4", amount = 1 },
+          { type = "item", name = "angels-smelting-wagon-1-4", amount = 1 },
         },
-        results = {{ type = "item", name = "smelting-wagon-1-5", amount = 1 }},
+        results = {{ type = "item", name = "angels-smelting-wagon-1-5", amount = 1 }},
       },
     })
   end
