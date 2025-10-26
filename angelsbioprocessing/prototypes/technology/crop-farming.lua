@@ -889,11 +889,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fermentation-corn",
+        recipe = "angels-fermentation-corn",
       },
       {
         type = "unlock-recipe",
-        recipe = "fermentation-fruit",
+        recipe = "angels-fermentation-fruit",
       },
       {
         type = "unlock-recipe",

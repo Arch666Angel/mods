@@ -2,7 +2,7 @@ local AF = angelsmods.functions
 data:extend({
   {
     type = "recipe",
-    name = "fermentation-corn",
+    name = "angels-fermentation-corn",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
@@ -38,7 +38,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fermentation-fruit",
+    name = "angels-fermentation-fruit",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
