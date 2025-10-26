@@ -127,5 +127,19 @@ for t, tech in pairs(data.raw.technology) do
   end
 end
 
-local patched_recipes = {"angels-burner-ore-crusher, block-construction-1, block-mechanical-1, motor, angels-ore-crusher, block-production-1, block-construction-1, block-mechanical-1, electric-motor, angels-ore-sorting-facility, block-production-1, block-construction-1, block-mechanical-1, block-electronics-0, electric-motor, angels-ore-floatation-cell, block-production-2, block-construction-2, block-fluidbox-1, block-electronics-2, electric-motor"}
+local patched_recipes = {
+  "advanced-circuit",
+  "automation-science-pack",
+  "chemical-science-pack",
+  "electric-engine-unit",
+  "electronic-circuit",
+  "engine-unit",
+  "iron-gear-wheel",
+  "logistic-science-pack",
+  "military-science-pack",
+  "processing-unit",
+  "production-science-pack",
+  "space-science-pack",
+  "utility-science-pack",
+}
 angelsmods.functions.patch_recycling_recipes(patched_recipes)

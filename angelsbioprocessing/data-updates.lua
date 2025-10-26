@@ -5,5 +5,31 @@ require("prototypes.bio-processing-generate")
 require("prototypes.tips-and-tricks.tips-and-tricks")
 
 OV.execute()
-local patched_recipes = {"angels-alien-pre-artifact-red, angels-small-alien-artifact-red, angels-alien-pre-artifact-red, angels-alien-artifact-red-from-basic, angels-alien-artifact-red-from-small, angels-alien-artifact-red-from-basic, angels-alien-artifact-red-from-small, angels-alien-artifact-red-from-basic, angels-alien-pre-artifact-yellow, angels-small-alien-artifact-yellow, angels-alien-pre-artifact-yellow, angels-alien-artifact-yellow-from-basic, angels-alien-artifact-yellow-from-small, angels-alien-artifact-yellow-from-basic, angels-alien-artifact-yellow-from-small, angels-alien-artifact-yellow-from-basic, angels-alien-pre-artifact-orange, angels-small-alien-artifact-orange, angels-alien-pre-artifact-orange, angels-alien-artifact-orange-from-basic, angels-alien-artifact-orange-from-small, angels-alien-artifact-orange-from-basic, angels-alien-artifact-orange-from-small, angels-alien-artifact-orange-from-basic, angels-alien-pre-artifact-blue, angels-small-alien-artifact-blue, angels-alien-pre-artifact-blue, angels-alien-artifact-blue-from-basic, angels-alien-artifact-blue-from-small, angels-alien-artifact-blue-from-basic, angels-alien-artifact-blue-from-small, angels-alien-artifact-blue-from-basic, angels-alien-pre-artifact-purple, angels-small-alien-artifact-purple, angels-alien-pre-artifact-purple, angels-alien-artifact-purple-from-basic, angels-alien-artifact-purple-from-small, angels-alien-artifact-purple-from-basic, angels-alien-artifact-purple-from-small, angels-alien-artifact-purple-from-basic, angels-alien-pre-artifact-green, angels-small-alien-artifact-green, angels-alien-pre-artifact-green, angels-alien-artifact-green-from-basic, angels-alien-artifact-green-from-small, angels-alien-artifact-green-from-basic, angels-alien-artifact-green-from-small, angels-alien-artifact-green-from-basic, angels-alien-pre-artifact-base, angels-small-alien-artifact, angels-alien-artifact-from-small, angels-alien-artifact-from-small, angels-garden-cultivating, angels-paste-cellulose, angels-algae-brown-burning, angels-solid-lithium, angels-petri-dish, angels-crystal-enhancer, angels-catalysator-green, angels-crystal-slurry, bob-carbon-from-wood, bob-wooden-board, bob-wooden-board, bob-phenolic-board, angels-liquid-resin, angels-solid-paper, speed-module, speed-module-2, speed-module-3, productivity-module, productivity-module-2, productivity-module-3, efficiency-module, efficiency-module-2, efficiency-module-3, bob-speed-processor, bob-speed-processor-2, bob-speed-processor-3, bob-productivity-processor, bob-productivity-processor-2, bob-productivity-processor-3, bob-efficiency-processor, angels-crystal-splinter-green, bob-efficiency-processor-2, bob-efficiency-processor-3, bob-pollution-clean-processor, angels-crystal-splinter-harmonic, bob-pollution-clean-processor-2, angels-crystal-shard-harmonic, bob-pollution-clean-processor-3, angels-crystal-full-harmonic, bob-pollution-create-processor, angels-crystal-splinter-harmonic, bob-pollution-create-processor-2, angels-crystal-shard-harmonic, bob-pollution-create-processor-3, angels-crystal-full-harmonic, angels-bio-yield-module, productivity-module, bob-pollution-create-module-1, angels-token-bio, angels-bio-yield-module-2, angels-bio-yield-module, productivity-module-2, bob-pollution-create-module-2, angels-token-bio, angels-bio-yield-module-3, angels-bio-yield-module-2, productivity-module-3, bob-pollution-create-module-3, angels-token-bio, angels-bio-yield-module, bob-solder, angels-bio-yield-module-2, bob-solder, angels-bio-yield-module-3, bob-solder, angels-bio-yield-module-4, angels-bio-yield-module-5, bob-solder, beacon, beacon, bob-beacon-2, bob-beacon-3, bob-fertiliser, bob-seedling, bob-basic-greenhouse-cycle, angels-solid-tree, angels-solid-tree, bob-advanced-greenhouse-cycle, angels-solid-tree, angels-solid-tree, angels-solid-tree, angels-solid-tree-2, angels-solid-tree-3, angels-seed-extractor, electronic-circuit, bob-basic-circuit-board, wood-sawing-manual, angels-tree-temperate-seed, angels-tree-temperate-seed-2, angels-tree-temperate-seed-3, angels-tree-swamp-seed, angels-tree-swamp-seed-2, angels-tree-swamp-seed-3, angels-tree-desert-seed, angels-tree-desert-seed-2, angels-tree-desert-seed-3"}
+
+local patched_recipes = {
+    "angels-algae-brown-burning-wash",
+    "angels-bio-tile",
+    "angels-crystal-grindstone",
+    "angels-paste-cobalt",
+    "angels-paste-copper",
+    "angels-paste-gold",
+    "angels-paste-iron",
+    "angels-paste-silver",
+    "angels-paste-titanium",
+    "angels-paste-tungsten",
+    "angels-paste-zinc",
+    "beacon",
+    "bob-fertiliser",
+    "bob-phenolic-board",
+    "bob-wood-pellets",
+    "efficiency-module",
+    "efficiency-module-2",
+    "efficiency-module-3",
+    "productivity-module",
+    "productivity-module-2",
+    "productivity-module-3",
+    "speed-module",
+    "speed-module-2",
+    "speed-module-3",
+}
 angelsmods.functions.patch_recycling_recipes(patched_recipes)

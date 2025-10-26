@@ -3,5 +3,33 @@ require("prototypes.petrochem-override")
 
 -- EXECUTE OVERRIDES
 angelsmods.functions.OV.execute()
-local patched_recipes = {"flamethrower-ammo, steel-plate, angels-liquid-fuel-oil, angels-liquid-naphtha, rocket-fuel, angels-rocket-fuel-capsule, angels-rocket-oxidizer-capsule, rocket, iron-plate, angels-rocket-booster, atomic-bomb, angels-rocket-booster, angels-gas-carbon-monoxide, angels-gas-carbon-dioxide, angels-liquifier, angels-liquifier-2, angels-liquifier-3, angels-liquifier-4, angels-ore8-dust, angels-ore9-dust, angels-ore8-anode-sludge, angels-liquid-ferric-chloride-solution, angels-ore9-anode-sludge, angels-liquid-cupric-chloride-solution, fission-reactor-equipment, angels-liquid-water-semiheavy-3, bob-vehicle-fission-cell-equipment-2, angels-liquid-water-semiheavy-3, bob-vehicle-fission-reactor-equipment-2, angels-liquid-water-semiheavy-3, angels-catalyst-metal-red, angels-catalyst-metal-green, angels-catalyst-metal-blue, angels-catalyst-metal-yellow, angels-catalyst-metal-red, angels-catalyst-metal-green, angels-catalyst-metal-blue, angels-catalyst-metal-yellow, angels-catalyst-metal-red, angels-ore1, angels-ore3, angels-catalyst-metal-green, angels-ore1, angels-ore2, angels-catalyst-metal-blue, angels-ore3, angels-ore4, angels-catalyst-metal-yellow, angels-ore2, angels-ore4, angels-gas-acid-catalyst, angels-gas-hydrogen-fluoride, bob-liquid-fuel, angels-liquid-fuel-oil, angels-gas-residual, bob-liquid-fuel, bob-tungstic-acid, angels-solid-resin, angels-solid-rubber, arithmetic-combinator, decider-combinator, constant-combinator, bob-sodium-cobaltate, angels-solid-calcium-chloride, bob-insulated-cable"}
+
+local patched_recipes = {
+    "angels-advanced-deuterium-fuel-cell-reprocessing",
+    "angels-gas-sulfur-dioxide-calcium-sulfate",
+    "angels-plutonium-240",
+    "angels-solid-rubber",
+    "angels-thorium-232",
+    "angels-thorium-ore",
+    "bob-carbon",
+    "bob-carbon-from-wood",
+    "bob-deuterium-fuel-cell",
+    "bob-deuterium-fuel-cell-2",
+    "bob-deuterium-fuel-reprocessing",
+    "bob-empty-nuclear-fuel-cell",
+    "bob-fusion-catalyst",
+    "bob-heavy-water",
+    "bob-heavy-water-electrolysis",
+    "bobingabout-enrichment-process",
+    "bob-oil-processing",
+    "bob-plutonium-fuel-cell",
+    "bob-plutonium-nucleosynthesis",
+    "bob-rubber",
+    "bob-synthetic-wood",
+    "bob-thorium-fuel-cell",
+    "bob-thorium-fuel-reprocessing",
+    "bob-thorium-plutonium-fuel-cell",
+    "bob-thorium-processing",
+    "kovarex-enrichment-process",
+}
 angelsmods.functions.patch_recycling_recipes(patched_recipes)

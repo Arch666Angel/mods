@@ -3,5 +3,41 @@ require("prototypes.petrochem-global-override")
 -- EXECUTE OVERRIDES
 angelsmods.functions.OV.execute()
 require("prototypes.tips-and-tricks.tips-and-tricks")
-local patched_recipes = {"angels-ore2-crystal, angels-liquid-hydrofluoric-acid, angels-ore4-crystal, angels-liquid-hydrochloric-acid, angels-ore5-crystal, angels-liquid-nitric-acid, angels-storage-tank-3, bob-small-inline-storage-tank, bob-lithium-water-electrolysis, angels-gas-hydrogen, bob-polishing-compound, angels-liquid-mineral-oil, bob-polishing-compound, angels-liquid-mineral-oil, rocket-body, angels-rocket-booster, bob-nitroglycerin, bob-sulfuric-nitric-acid, angels-liquid-sulfuric-acid, angels-liquid-nitric-acid, bob-gun-cotton, angels-liquid-nitric-acid, bob-gun-cotton-synthetic, angels-liquid-nitric-acid, bob-petroleum-jelly, angels-gas-residual, bob-nitroglycerin, bob-sulfuric-nitric-acid, angels-liquid-sulfuric-acid, angels-liquid-nitric-acid, bob-gun-cotton, angels-liquid-nitric-acid, bob-gun-cotton-synthetic, angels-liquid-nitric-acid, bob-petroleum-jelly, angels-gas-residual, bob-fertiliser, angels-gas-urea, angels-gas-methane, angels-gas-nitrogen"}
+
+
+
+local patched_recipes = {
+    "bob-ammonia",
+    "bob-ammonium-chloride-reprocessing",
+    "bob-calcium-chloride",
+    "bob-carbon-dioxide-oil-processing",
+    "bob-chemical-plant-2",
+    "bob-chemical-plant-3",
+    "bob-chemical-plant-4",
+    "bob-electrolyser",
+    "bob-electrolyser-2",
+    "bob-electrolyser-3",
+    "bob-electrolyser-4",
+    "bob-electrolyser-5",
+    "bob-ferric-chloride-solution",
+    "bob-glycerol",
+    "bob-petroleum-gas-sweetening",
+    "bob-salt",
+    "bob-salt-water-electrolysis",
+    "bob-sodium-carbonate",
+    "bob-sodium-chlorate",
+    "bob-sodium-hydroxide",
+    "bob-sodium-hydroxide-sink",
+    "bob-sodium-perchlorate",
+    "bob-solid-fuel-from-hydrogen",
+    "bob-solid-fuel-from-sour-gas",
+    "bob-sulfuric-nitric-acid",
+    "bob-water-electrolysis",
+    "chemical-plant",
+    "coal-liquefaction",
+    "fluorite",
+    "lubricant",
+    "plastic-bar",
+    "sulfur",
+}
 angelsmods.functions.patch_recycling_recipes(patched_recipes)
