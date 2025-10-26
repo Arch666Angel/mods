@@ -15,3 +15,6 @@ OV.execute()
 
 require("prototypes.overrides.tech-productivity-update")
 OV.execute()
+
+-- RECYCLING
+require("prototypes.overrides.recycling")

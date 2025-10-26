@@ -83,3 +83,6 @@ require("prototypes.overrides.bio-processing-override-bobgreenhouse")
 
 --BIO PRODUCTIVITY
 require("prototypes.overrides.bio-processing-override-bio-productivity")
+
+-- RECYCLING
+require("prototypes.overrides.recycling")

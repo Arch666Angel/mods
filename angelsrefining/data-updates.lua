@@ -56,33 +56,5 @@ angelsmods.functions.update_autoplace()
 
 --angelsmods.functions.index_check()
 
-local patched_recipes = {
-  "angels-algae-brown-burning",
-  "angels-ore5-crushed-smelting",
-  "angels-ore6-crushed-smelting",
-  "angels-ore7-crystallization-1",
-  "angels-ore7-crystallization-2",
-  "angels-ore7-crystallization-3",
-  "angels-ore7-crystallization-4",
-  "angels-ore7-crystallization-5",
-  "angels-ore7-crystallization-6",
-  "angels-ore8-crushed",
-  "angels-ore8-crushed-processing",
-  "angels-ore9-crushed",
-  "angels-ore9-crushed-processing",
-  "angels-ore-crystal-mix6-processing",
-  "angels-red-waste-water-purification",
-  "angels-solid-lithium",
-  "angels-solid-salt-dissolving",
-  "angels-water-saline-from-water",
-  "automation-science-pack",
-  "bob-brine",
-  "bob-brine-electrolysis",
-  "bob-distillery",
-  "bob-limestone",
-  "bob-lithium-chloride",
-  "bob-pure-water",
-  "bob-pure-water-from-lithia",
-  "bob-salt",
-}
-angelsmods.functions.patch_recycling_recipes(patched_recipes)
+-- RECYCLING
+require("prototypes.override.recycling")

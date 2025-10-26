@@ -127,7 +127,7 @@ for t, tech in pairs(data.raw.technology) do
   end
 end
 
-local patched_recipes = {
+local updated_recipes = {
   "advanced-circuit",
   "automation-science-pack",
   "chemical-science-pack",
@@ -142,4 +142,4 @@ local patched_recipes = {
   "space-science-pack",
   "utility-science-pack",
 }
-angelsmods.functions.patch_recycling_recipes(patched_recipes)
+angelsmods.functions.patch_recycling_recipes(updated_recipes)

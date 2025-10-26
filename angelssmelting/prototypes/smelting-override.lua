@@ -69,3 +69,6 @@ require("prototypes.override.smelting-override-bobassembly")
 
 --ENABLE PRODUCTIVITY
 require("prototypes.override.smelting-override-productivity")
+
+-- RECYCLING
+require("prototypes.override.recycling")

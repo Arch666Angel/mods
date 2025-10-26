@@ -4,9 +4,7 @@ require("prototypes.petrochem-global-override")
 angelsmods.functions.OV.execute()
 require("prototypes.tips-and-tricks.tips-and-tricks")
 
-
-
-local patched_recipes = {
+local updated_recipes = {
     "bob-ammonia",
     "bob-ammonium-chloride-reprocessing",
     "bob-calcium-chloride",
@@ -40,4 +38,4 @@ local patched_recipes = {
     "plastic-bar",
     "sulfur",
 }
-angelsmods.functions.patch_recycling_recipes(patched_recipes)
+angelsmods.functions.patch_recycling_recipes(updated_recipes)
