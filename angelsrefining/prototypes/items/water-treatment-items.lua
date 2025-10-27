@@ -107,7 +107,7 @@ data:extend({
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       mods["angelspetrochem"] and { icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png", icon_size = 32 } or {"__base__/graphics/icons/sulfur.png"},
       { { 116, 140, 211 }, { 255, 219, 051 }, { 109, 070, 020, 0.8 }, { 254, 204, 049 } },
-      false
+      true
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "a",
@@ -124,7 +124,7 @@ data:extend({
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       mods["angelspetrochem"] and { icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-nitrate.png", icon_size = 32 } or nil,
       { { 116, 140, 211 }, { 155, 063, 061 }, { 109, 070, 020, 0.8 }, { 124, 050, 048 } },
-      false
+      true
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "d",
@@ -141,7 +141,7 @@ data:extend({
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       { icon = "__angelsrefininggraphics__/graphics/icons/solid-salt.png", icon_size = 32 },
       { { 116, 140, 211 }, { 102, 204, 049 }, { 109, 070, 020, 0.8 }, { 096, 207, 052 } },
-      false
+      true
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "c",
@@ -158,7 +158,7 @@ data:extend({
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
       { icon = "__angelsrefininggraphics__/graphics/icons/ore-fluorite.png", icon_size = 32 },
       { { 116, 140, 211 }, { 218, 253, 064 }, { 109, 070, 020, 0.8 }, { 173, 210, 042 } },
-      false
+      true
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "b",
