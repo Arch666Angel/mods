@@ -30,6 +30,9 @@ require("prototypes.recipes.petrochem-entity-angels")
 
 OV.execute()
 
+--RECYCLING
+require("prototypes.override.recycling")
+
 --ENABLE PRODUCTIVITY
 angelsmods.functions.allow_productivity("angels-liquid-plastic")
 angelsmods.functions.allow_productivity("angels-liquid-plastic-2")

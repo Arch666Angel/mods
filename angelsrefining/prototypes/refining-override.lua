@@ -61,17 +61,11 @@ if mods["bobplates"] then
     OV.patch_recipes({
       {
         name = "bob-empty-canister",
-        ingredients = {
-          { name = "barrel", amount = 5 },
-        },
         subgroup = "angels-fluid-control",
         order = "i",
       },
       {
         name = "bob-gas-canister",
-        ingredients = {
-          { name = "bob-empty-canister", amount = 5 },
-        },
         subgroup = "angels-fluid-control",
         order = "j",
       },

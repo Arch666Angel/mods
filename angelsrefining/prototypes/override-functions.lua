@@ -699,6 +699,7 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
       end
+      angelsmods.functions.patch_recycling_recipes({F_Fill.name})
     end
   end
 end

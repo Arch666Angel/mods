@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-rutile-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-titanium", amount = 3 },
     },
@@ -39,6 +41,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 8,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-rutile-ore", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -65,6 +68,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 8,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-titanium", amount = 8 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -91,6 +95,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
       --{type="item", name="angels-ingot-manganese", amount=6},
@@ -108,6 +113,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-sponge-titanium", amount = 24 },
     },
@@ -129,6 +135,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-titanium", amount = 8 },
       { type = "item", name = "angels-solid-calcium-chloride", amount = 6 },
@@ -153,6 +160,7 @@ data:extend({
     subgroup = "angels-titanium",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 1 },
     },
@@ -169,6 +177,7 @@ data:extend({
     subgroup = "angels-titanium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
     },
@@ -191,6 +200,7 @@ data:extend({
     subgroup = "angels-titanium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-manganese", amount = 12 },
@@ -214,6 +224,7 @@ data:extend({
     subgroup = "angels-titanium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-nickel", amount = 12 },
@@ -237,6 +248,7 @@ data:extend({
     subgroup = "angels-titanium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-aluminium", amount = 12 },
@@ -261,6 +273,7 @@ data:extend({
     subgroup = "angels-titanium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-cobalt", amount = 12 },
@@ -283,6 +296,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-titanium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-titanium", amount = 80 },
@@ -306,6 +320,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-titanium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-titanium", amount = 140 },
@@ -331,6 +346,7 @@ data:extend({
     category = "angels-casting-3",
     subgroup = "angels-titanium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-titanium", amount = 40 },
@@ -355,6 +371,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-titanium", amount = 1 },
     },

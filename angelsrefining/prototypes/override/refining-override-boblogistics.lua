@@ -38,17 +38,6 @@ if mods["boblogistics"] then
     "b[medium-tank]-e[mk4]-b[all-corners]"
   )
 
-  if mods["bobplates"] then
-    OV.patch_recipes({
-      {
-        name = "bob-storage-tank-all-corners",
-        ingredients = {
-          { name = "bob-small-storage-tank", amount = 1 },
-          { name = "pipe", amount = 2 },
-        },
-      },
-    })
-  end
   --repair pack techs
   OV.patch_recipes({
     {

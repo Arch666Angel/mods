@@ -9,6 +9,7 @@ data:extend({
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-limestone", amount = 4 },
     },
@@ -27,6 +28,7 @@ data:extend({
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-lime", amount = 1 },
       { type = "item", name = "angels-quartz", amount = 1 },
@@ -49,6 +51,7 @@ data:extend({
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 1 },
       { type = "item", name = "angels-solid-lime", amount = 1 },
@@ -73,6 +76,7 @@ data:extend({
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-clay", amount = 4 },
       { type = "item", name = "angels-solid-sand", amount = 2 },
@@ -91,6 +95,7 @@ data:extend({
     subgroup = "angels-stone",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-clay-brick-raw", amount = 4 },
     },
@@ -108,6 +113,7 @@ data:extend({
     subgroup = "angels-stone-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-cement", amount = 8 },
       { type = "fluid", name = "water", amount = 100 },
@@ -131,6 +137,7 @@ data:extend({
     subgroup = "angels-stone-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-cement", amount = 6 },
       { type = "fluid", name = "water", amount = 100 },
@@ -156,6 +163,7 @@ data:extend({
     subgroup = "angels-stone-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-concrete", amount = 40 },
     },

@@ -9,6 +9,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore1-crushed", amount = 2 },
       { type = "item", name = "angels-ore2-crushed", amount = 2 },
@@ -29,6 +30,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
       { type = "item", name = "angels-ore4-crushed", amount = 2 },
@@ -49,6 +51,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore4-crushed", amount = 2 },
       { type = "item", name = "angels-ore5-crushed", amount = 2 },
@@ -69,6 +72,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore6-crushed", amount = 2 },
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
@@ -89,6 +93,7 @@ data:extend({
     energy_required = 1,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore8-crushed", amount = 4 },
     },
@@ -115,6 +120,7 @@ data:extend({
     energy_required = 1,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore8-powder", amount = 6 },
     },
@@ -141,6 +147,7 @@ data:extend({
     energy_required = 1,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore9-crushed", amount = 4 },
     },
@@ -167,6 +174,7 @@ data:extend({
     energy_required = 1,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore9-powder", amount = 6 },
     },

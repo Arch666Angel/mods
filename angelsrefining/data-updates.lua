@@ -55,3 +55,6 @@ angelsmods.functions.OV.execute()
 angelsmods.functions.update_autoplace()
 
 --angelsmods.functions.index_check()
+
+-- RECYCLING
+require("prototypes.override.recycling")

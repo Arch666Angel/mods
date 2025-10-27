@@ -62,6 +62,7 @@ data:extend({
     subgroup = "angels-petrochem-basics",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 100 },
     },
@@ -96,6 +97,7 @@ data:extend({
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 100 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
@@ -165,6 +167,7 @@ data:extend({
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-water-purified", amount = 100 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
@@ -282,6 +285,7 @@ data:extend({
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-stone-crushed", amount = 6 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 30 },
@@ -377,6 +381,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "coal", amount = 5 },
     },
@@ -411,6 +416,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "coal", amount = 5 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
@@ -487,6 +493,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 2 },
       { type = "fluid", name = "steam", amount = 30 },
@@ -509,6 +516,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 4 },
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 1 },
@@ -540,6 +548,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "coal", amount = 1 },
     },
@@ -568,6 +577,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-coal-crushed", amount = 2 },
     },
@@ -584,6 +594,7 @@ data:extend({
     subgroup = "angels-petrochem-coal",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-coal-crushed", amount = 2 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -940,6 +951,7 @@ data:extend({
     subgroup = "angels-petrochem-basics",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-water-heavy", amount = 100, maximum_temperature = 30 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },

@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-tin-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-tin", amount = 3 },
     },
@@ -40,6 +42,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-tin-ore", amount = 24 },
     },
@@ -61,6 +64,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-tin", amount = 8 },
       { type = "item", name = "angels-solid-coke", amount = 2 },
@@ -83,6 +87,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-tin", amount = 8 },
       { type = "item", name = "angels-solid-carbon", amount = 2 },
@@ -104,6 +109,7 @@ data:extend({
     subgroup = "angels-tin",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 1 },
     },
@@ -120,6 +126,7 @@ data:extend({
     subgroup = "angels-tin-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
     },
@@ -136,6 +143,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-tin", amount = 80 },
@@ -159,6 +167,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-tin", amount = 140 },
@@ -183,6 +192,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-tin", amount = 40 },
@@ -207,6 +217,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-tin-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-tin", amount = 70 },
@@ -234,6 +245,7 @@ data:extend({
     category = "angels-casting",
     subgroup = "angels-tin-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-tin", amount = 40 },
@@ -258,6 +270,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-tin", amount = 1 },
     },
@@ -306,6 +319,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-wire-coil-tin", amount = 4 },
     },

@@ -6,6 +6,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-wood",
     enabled = true,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "wood", amount = 2 },
@@ -59,6 +60,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-wood-pellets", amount = 1 },
@@ -85,6 +87,7 @@ data:extend({
     category = "smelting",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-wood-pellets", amount = 2 },
@@ -102,6 +105,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-wood-charcoal", amount = 1 },
@@ -127,6 +131,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-paper",
     enabled = false,
+    auto_recycle = false,
     energy_required = 20,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 20 },
@@ -149,6 +154,7 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-liquor",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 100 },
@@ -174,6 +180,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-liquor",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-brown-liquor", amount = 50 },
@@ -209,6 +216,7 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-paper",
     enabled = false,
+    auto_recycle = false,
     energy_required = 6,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 20 },
@@ -236,6 +244,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-liquor",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 2 },
@@ -262,6 +271,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-liquor",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-black-liquor", amount = 40 },
@@ -286,6 +296,7 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-liquor",
     enabled = false,
+    auto_recycle = false,
     energy_required = 6,
     ingredients = {
       { type = "fluid", name = "angels-liquid-green-liquor", amount = 60 },
@@ -312,6 +323,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-paper",
     enabled = false,
+    auto_recycle = false,
     energy_required = 6,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 20 },
@@ -358,6 +370,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-paper",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-wood-pulp", amount = 2 },
@@ -386,6 +399,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hypochlorite", amount = 10 },
     },
@@ -408,6 +422,7 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-paper",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-wood-pulp", amount = 2 },

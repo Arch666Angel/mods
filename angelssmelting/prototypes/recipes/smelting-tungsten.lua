@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-tungsten-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = { { type = "item", name = "angels-processed-tungsten", amount = 3 } },
     results = {
       { type = "item", name = "angels-pellet-tungsten", amount = 4 },
@@ -38,6 +40,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-tungsten-ore", amount = 12 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
@@ -61,6 +64,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-tungstic-acid", amount = 120 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
@@ -84,6 +88,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-tungsten", amount = 4 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 30 },
@@ -107,6 +112,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 30 },
@@ -130,6 +136,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-tungsten", amount = 8 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
@@ -154,6 +161,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-tungsten-hexafluoride", amount = 120 },
     },
@@ -172,6 +180,7 @@ data:extend({
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-ammonium-paratungstate", amount = 12 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
@@ -195,6 +204,7 @@ data:extend({
     subgroup = "angels-tungsten-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-powder-tungsten", amount = 12 },
       { type = "item", name = "angels-powder-cobalt", amount = 12 },
@@ -217,6 +227,7 @@ data:extend({
     subgroup = "angels-tungsten-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-powder-tungsten", amount = 12 },
       { type = "item", name = "angels-powder-nickel", amount = 12 },
@@ -239,6 +250,7 @@ data:extend({
     category = "angels-sintering-4",
     subgroup = "angels-tungsten-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-casting-powder-tungsten", amount = 12 },

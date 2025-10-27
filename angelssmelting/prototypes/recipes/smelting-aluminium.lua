@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-bauxite-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-aluminium", amount = 3 },
     },
@@ -39,6 +41,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-aluminium", amount = 6 },
       { type = "item", name = "angels-solid-sodium-carbonate", amount = 3 },
@@ -56,6 +59,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-bauxite-ore", amount = 12 },
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
@@ -78,6 +82,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-aluminium", amount = 4 },
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
@@ -100,6 +105,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-aluminium-hydroxide", amount = 24 },
     },
@@ -121,6 +127,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-aluminate", amount = 24 },
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 3 },
@@ -146,6 +153,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-aluminium-oxide", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 3 },
@@ -162,6 +170,7 @@ data:extend({
     subgroup = "angels-aluminium",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-aluminium", amount = 1 },
     },
@@ -178,6 +187,7 @@ data:extend({
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-aluminium", amount = 12 },
     },
@@ -200,6 +210,7 @@ data:extend({
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-aluminium", amount = 12 },
       { type = "item", name = "angels-ingot-manganese", amount = 12 },
@@ -223,6 +234,7 @@ data:extend({
     subgroup = "angels-aluminium-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-aluminium", amount = 12 },
       { type = "item", name = "angels-ingot-silicon", amount = 12 },
@@ -245,6 +257,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-aluminium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 80 },
@@ -268,6 +281,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-aluminium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 140 },
@@ -294,6 +308,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-aluminium-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-aluminium", amount = 40 },
@@ -318,6 +333,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-aluminium", amount = 1 },
     },

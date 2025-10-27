@@ -175,6 +175,7 @@ data:extend({
     subgroup = "angels-petrochem-carbon-gas-feed",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-condensates", amount = 60 },
       { type = "fluid", name = "angels-thermal-water", amount = 20 },
@@ -541,6 +542,7 @@ data:extend({
     subgroup = "angels-petrochem-carbon-synthesis",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 40 },
@@ -568,6 +570,7 @@ data:extend({
     subgroup = "angels-petrochem-carbon-synthesis",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 150 },
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 50 },
@@ -591,6 +594,7 @@ data:extend({
     subgroup = "angels-petrochem-carbon-synthesis",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 40 },
@@ -734,6 +738,7 @@ data:extend({
     subgroup = "angels-petrochem-cracking",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 60 },
       { type = "fluid", name = "steam", amount = 60 },
@@ -759,6 +764,7 @@ data:extend({
     subgroup = "angels-petrochem-cracking",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
       { type = "fluid", name = "steam", amount = 100 },
@@ -784,6 +790,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-methane", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
@@ -808,6 +815,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-blue", amount = 1 }, --Ti OR Cr
@@ -838,6 +846,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 100 },
@@ -862,6 +871,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 100 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 50 },
@@ -886,6 +896,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 100 },
@@ -910,6 +921,7 @@ data:extend({
     subgroup = "angels-petrochem-feedstock",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-benzene", amount = 100 },
       { type = "fluid", name = "angels-gas-chlor-methane", amount = 50 },
@@ -940,6 +952,7 @@ data:extend({
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Ag, Or FeO & Mo and/or V
@@ -964,6 +977,7 @@ data:extend({
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-ethylbenzene", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Fe
@@ -988,6 +1002,7 @@ data:extend({
     subgroup = "angels-petrochem-chemistry",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-benzene", amount = 100 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 100 },
@@ -1069,6 +1084,7 @@ data:extend({
     subgroup = "angels-petrochem-chemistry",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene-oxide", amount = 100 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 100 },
@@ -1096,6 +1112,7 @@ data:extend({
     subgroup = "angels-petrochem-chemistry",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-benzene", amount = 50 },
       { type = "fluid", name = "angels-gas-propene", amount = 50 },

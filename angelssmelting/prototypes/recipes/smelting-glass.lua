@@ -9,6 +9,7 @@ data:extend({
     subgroup = "angels-glass",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 1 },
     },
@@ -30,6 +31,7 @@ data:extend({
     subgroup = "angels-glass",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 1 },
       { type = "item", name = "angels-solid-lime", amount = 1 },
@@ -52,6 +54,7 @@ data:extend({
     subgroup = "angels-glass",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 1 },
       { type = "item", name = "angels-solid-aluminium-oxide", amount = 1 },
@@ -75,6 +78,7 @@ data:extend({
     subgroup = "angels-glass",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 1 },
       { type = "item", name = "angels-solid-sodium-carbonate", amount = 1 },
@@ -99,6 +103,7 @@ data:extend({
     subgroup = "angels-glass-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-glass-mixture", amount = 12 },
     },
@@ -114,6 +119,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-glass-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-glass", amount = 80 },
@@ -137,6 +143,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-glass-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-glass", amount = 140 },
@@ -163,6 +170,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-glass-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-glass", amount = 40 },
@@ -184,6 +192,7 @@ data:extend({
     category = "angels-casting-3",
     subgroup = "angels-glass-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-glass", amount = 40 },
@@ -208,6 +217,7 @@ data:extend({
     category = "angels-casting-4",
     subgroup = "angels-glass-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-glass", amount = 40 },
@@ -234,6 +244,7 @@ data:extend({
     subgroup = "angels-glass-casting",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-coil-glass-fiber", amount = 1 },
       { type = "fluid", name = "angels-liquid-resin", amount = 40 },

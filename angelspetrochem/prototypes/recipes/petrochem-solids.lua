@@ -458,6 +458,7 @@ data:extend({
     subgroup = "angels-petrochem-catalysts",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-electrode-used", amount = 1 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -481,6 +482,7 @@ data:extend({
     subgroup = "angels-petrochem-solids-2",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-glycerol", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
@@ -508,6 +510,7 @@ data:extend({
     subgroup = "angels-petrochem-solids-2",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },

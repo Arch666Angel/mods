@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-iron", amount = 3 },
     },
@@ -41,6 +43,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 24 },
     },
@@ -62,6 +65,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-iron", amount = 8 },
       { type = "item", name = "angels-solid-coke", amount = 2 },
@@ -84,6 +88,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-iron", amount = 8 },
       { type = "item", name = "angels-solid-coke", amount = 2 },
@@ -106,6 +111,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-iron-hydroxide", amount = 6 },
       { type = "item", name = "angels-solid-coke", amount = 2 },
@@ -131,6 +137,7 @@ data:extend({
     subgroup = "angels-iron",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 1 },
     },
@@ -149,6 +156,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 12 },
     },
@@ -171,6 +179,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 12 },
       { type = "item", name = "angels-ingot-manganese", amount = 12 },
@@ -194,6 +203,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 12 },
       { type = "item", name = "angels-ingot-silicon", amount = 12 },
@@ -217,6 +227,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 12 },
       { type = "item", name = "angels-ingot-nickel", amount = 12 },
@@ -241,6 +252,7 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-iron", amount = 12 },
       { type = "item", name = "angels-ingot-nickel", amount = 12 },
@@ -263,6 +275,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 80 },
@@ -286,6 +299,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 140 },
@@ -310,6 +324,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 60 },
@@ -333,6 +348,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 110 },
@@ -359,6 +375,7 @@ data:extend({
     category = "angels-casting",
     subgroup = "angels-iron-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-iron", amount = 40 },
@@ -388,6 +405,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-iron", amount = 1 },
     },
@@ -415,14 +433,12 @@ data:extend({
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
     enabled = true,
-    allow_decomposition = true,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "iron-stick", amount = 1 },
     },
-    allow_decomposition = false,
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("iron-stick"),
       {
@@ -443,6 +459,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-rod-stack-iron", amount = 1 },
     },

@@ -9,6 +9,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-acid", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Al
@@ -132,6 +133,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-fluorite-ore", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
@@ -244,6 +246,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 10,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-filter-lime", amount = 1 },
       { type = "fluid", name = "water", amount = 20 },
@@ -266,6 +269,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-filter-lime-used", amount = 1 },
     },

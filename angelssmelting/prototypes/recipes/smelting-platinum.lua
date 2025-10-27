@@ -11,6 +11,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-platinum-ore", amount = 4 },
     },
@@ -28,6 +29,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-platinum", amount = 3 },
     },
@@ -44,6 +46,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-platinum", amount = 4 },
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 30 },
@@ -66,6 +69,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-hexachloroplatinic-acid", amount = 120 },
       { type = "fluid", name = "angels-gas-ammonium-chloride", amount = 60 },
@@ -84,6 +88,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-platinum-ore", amount = 24 },
     },
@@ -101,6 +106,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-platinum", amount = 8 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
@@ -119,6 +125,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-ammonium-chloroplatinate", amount = 24 },
     },
@@ -135,6 +142,7 @@ data:extend({
     subgroup = "angels-platinum",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-platinum", amount = 1 },
     },
@@ -151,6 +159,7 @@ data:extend({
     subgroup = "angels-platinum-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-platinum", amount = 12 },
     },
@@ -166,6 +175,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-platinum", amount = 80 },
@@ -185,6 +195,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-platinum", amount = 140 },
@@ -205,6 +216,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-platinum", amount = 40 },
@@ -229,6 +241,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-platinum", amount = 70 },
@@ -256,6 +269,7 @@ data:extend({
     category = "angels-casting-4",
     subgroup = "angels-platinum-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-platinum", amount = 40 },
@@ -280,6 +294,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-platinum", amount = 1 },
     },
@@ -327,6 +342,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-wire-coil-platinum", amount = 4 },
     },

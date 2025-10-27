@@ -15,6 +15,7 @@ data:extend({
     type = "recipe",
     name = "angels-plutonium-synthesis",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 120, --180
@@ -62,6 +63,7 @@ data:extend({
     type = "recipe",
     name = "angels-americium-regeneration",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-2",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 210, --540
@@ -110,6 +112,7 @@ data:extend({
     type = "recipe",
     name = "angels-thorium-processing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
@@ -165,6 +168,7 @@ data:extend({
     type = "recipe",
     name = "angels-uranium-fuel-cell",
     enabled = false,
+    auto_recycle = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 700, --7000
@@ -191,6 +195,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-uranium-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "centrifuging",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --120
@@ -239,6 +244,7 @@ data:extend({
     type = "recipe",
     name = "angels-mixed-oxide-cell",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --1200
@@ -264,6 +270,7 @@ data:extend({
     type = "recipe",
     name = "angels-mixed-oxide-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 110, --330
@@ -313,6 +320,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-mixed-oxide-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-2",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 260,
@@ -369,6 +377,7 @@ data:extend({
     name = "angels-thorium-fuel-cell",
     localised_name = { "item-name.angels-thorium-fuel-cell" },
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 500, --1000
@@ -396,6 +405,7 @@ data:extend({
     type = "recipe",
     name = "angels-thorium-fuel-cell-2",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 900,
@@ -426,6 +436,7 @@ data:extend({
     type = "recipe",
     name = "angels-thorium-fuel-cell-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 400, --450
@@ -481,6 +492,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-thorium-fuel-cell-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, -- 1000
@@ -544,6 +556,7 @@ data:extend({
     --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-deuterium"),
     localised_name = { "item-name.angels-deuterium-fuel-cell" },
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 150, --1500
@@ -569,6 +582,7 @@ data:extend({
     type = "recipe",
     name = "angels-deuterium-fuel-cell-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
@@ -623,6 +637,7 @@ data:extend({
     type = "recipe",
     name = "angels-advanced-deuterium-fuel-cell-reprocessing",
     enabled = false,
+    auto_recycle = false,
     category = "angels-centrifuging-3",
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
@@ -714,6 +729,7 @@ data:extend({
     localised_name = { "item-name.atomic-bomb" },
     category = "angels-advanced-chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 50,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("atomic-bomb"),
@@ -742,6 +758,7 @@ data:extend({
     localised_name = { "item-name.atomic-bomb" },
     category = "angels-advanced-chemistry",
     enabled = false,
+    auto_recycle = false,
     energy_required = 50,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("atomic-bomb"),

@@ -6,6 +6,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-raw", amount = 1 },
@@ -48,6 +49,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-blue-cut", amount = 1 },
@@ -74,6 +76,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-red-cut", amount = 1 },
@@ -100,6 +103,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-green-cut", amount = 1 },
@@ -146,6 +150,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-blue-cut", amount = 5 },
@@ -177,6 +182,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-red-cut", amount = 5 },
@@ -208,6 +214,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-splinter-green-cut", amount = 5 },
@@ -239,6 +246,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-raw", amount = 1 },
@@ -281,6 +289,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-blue-cut", amount = 1 },
@@ -307,6 +316,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-red-cut", amount = 1 },
@@ -333,6 +343,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-green-cut", amount = 1 },
@@ -410,6 +421,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-red-cut", amount = 5 },
@@ -441,6 +453,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-shard",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-shard-green-cut", amount = 5 },
@@ -472,6 +485,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-raw", amount = 1 },
@@ -514,6 +528,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-blue-cut", amount = 1 },
@@ -540,6 +555,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-red-cut", amount = 1 },
@@ -566,6 +582,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-green-cut", amount = 1 },
@@ -612,6 +629,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-blue-cut", amount = 5 },
@@ -643,6 +661,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-red-cut", amount = 5 },
@@ -674,6 +693,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-full-green-cut", amount = 5 },

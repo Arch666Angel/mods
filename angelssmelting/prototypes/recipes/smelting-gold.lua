@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-gold-ore", amount = 4 },
     },
@@ -25,6 +26,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-gold", amount = 3 },
     },
@@ -41,6 +43,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-gold", amount = 6 },
       { type = "item", name = "angels-solid-sodium-cyanide", amount = 4 },
@@ -61,6 +64,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-gold", amount = 12 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 30 },
@@ -85,6 +89,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-gold", amount = 2 },
       { type = "fluid", name = "angels-liquid-chlorauric-acid", amount = 60 },
@@ -107,6 +112,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-gold-cyanide", amount = 12 },
     },
@@ -128,6 +134,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-gold-ore", amount = 24 },
       { type = "fluid", name = "angels-gas-chlorine", amount = 60 },
@@ -150,6 +157,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cathode-gold", amount = 24 },
     },
@@ -170,6 +178,7 @@ data:extend({
     subgroup = "angels-gold",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-gold", amount = 1 },
     },
@@ -186,6 +195,7 @@ data:extend({
     subgroup = "angels-gold-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-gold", amount = 12 },
     },
@@ -202,6 +212,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-gold", amount = 80 },
@@ -225,6 +236,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-gold", amount = 140 },
@@ -249,6 +261,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-gold", amount = 40 },
@@ -273,6 +286,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-gold", amount = 70 },
@@ -300,6 +314,7 @@ data:extend({
     category = "angels-casting-3",
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-gold", amount = 40 },
@@ -324,6 +339,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-gold", amount = 1 },
     },
@@ -344,6 +360,7 @@ data:extend({
     localised_name = { "item-name.angels-wire-gold" },
     subgroup = "angels-gold-casting",
     enabled = false,
+    auto_recycle = false,
     category = "crafting",
     energy_required = 0.5,
     ingredients = {
@@ -371,6 +388,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-wire-coil-gold", amount = 4 },
     },

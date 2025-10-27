@@ -5,6 +5,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "fluid", name = "angels-alien-goo", amount = 2 },
@@ -27,6 +28,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-crystal-seed", amount = 1 },
@@ -47,6 +49,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-crystal-seed", amount = 1 },
@@ -68,6 +71,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-crystal-seed", amount = 1 },
@@ -91,6 +95,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-queen-small", amount = 2, ignored_by_stats = 2 },
@@ -146,6 +151,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-queen-medium", amount = 2, ignored_by_stats = 2 },
@@ -199,6 +205,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-queen-big", amount = 2, ignored_by_stats = 2 },
@@ -249,6 +256,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-small-egg", amount = 1 },
@@ -270,6 +278,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-medium-egg", amount = 1 },
@@ -291,6 +300,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter-egg",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-biter-big-egg", amount = 1 },
@@ -315,6 +325,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-small", amount = 4, ignored_by_stats = 4 },
@@ -345,6 +356,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-medium", amount = 4, ignored_by_stats = 4 },
@@ -375,6 +387,7 @@ data:extend({
     category = "angels-bio-refugium-biter",
     subgroup = "angels-bio-biter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-big", amount = 4, ignored_by_stats = 4 },
@@ -409,6 +422,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 45,
     ingredients = {
       { type = "item", name = "angels-biter-queen-small", amount = 1 },
@@ -438,6 +452,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-small", amount = 1 },
@@ -460,6 +475,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 45,
     ingredients = {
       { type = "item", name = "angels-biter-queen-medium", amount = 1 },
@@ -489,6 +505,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-medium", amount = 1 },
@@ -511,6 +528,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 45,
     ingredients = {
       { type = "item", name = "angels-biter-queen-big", amount = 1 },
@@ -540,6 +558,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-biter-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-biter-big", amount = 1 },

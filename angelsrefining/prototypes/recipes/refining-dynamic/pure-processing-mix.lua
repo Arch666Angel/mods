@@ -9,6 +9,7 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore2-pure", amount = 2 },
       { type = "item", name = "angels-ore3-pure", amount = 2 },
@@ -30,6 +31,7 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore3-pure", amount = 2 },
       { type = "item", name = "angels-ore5-pure", amount = 2 },
@@ -51,6 +53,7 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ore2-pure", amount = 2 },
       { type = "item", name = "angels-ore4-pure", amount = 2 },

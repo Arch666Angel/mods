@@ -6,6 +6,7 @@ data:extend({
     category = "angels-temperate-farming",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-temperate-1-seed", amount = 5 },
@@ -30,6 +31,7 @@ data:extend({
     category = "angels-temperate-farming",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-temperate-2-seed", amount = 5 },
@@ -54,6 +56,7 @@ data:extend({
     category = "angels-temperate-farming",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-temperate-3-seed", amount = 5, ignored_by_stats = 5 },
@@ -78,6 +81,7 @@ data:extend({
     category = "angels-advanced-temperate-farming",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-temperate-4-seed", amount = 5, ignored_by_stats = 5 },
@@ -103,6 +107,7 @@ data:extend({
     category = "angels-advanced-temperate-farming",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-temperate-5-seed", amount = 5, ignored_by_stats = 5 },
@@ -129,6 +134,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-temperate-1", amount = 5 },
@@ -145,6 +151,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-temperate-2", amount = 5 },
@@ -161,6 +168,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-temperate-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -179,6 +187,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-temperate-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -197,6 +206,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-temperate-5-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -216,6 +226,7 @@ data:extend({
     category = "angels-desert-farming",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-desert-1-seed", amount = 5 },
@@ -240,6 +251,7 @@ data:extend({
     category = "angels-desert-farming",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-desert-2-seed", amount = 5 },
@@ -264,6 +276,7 @@ data:extend({
     category = "angels-desert-farming",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-desert-3-seed", amount = 5, ignored_by_stats = 5 },
@@ -288,6 +301,7 @@ data:extend({
     category = "angels-advanced-desert-farming",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-desert-4-seed", amount = 5, ignored_by_stats = 5 },
@@ -313,6 +327,7 @@ data:extend({
     category = "angels-advanced-desert-farming",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-desert-5-seed", amount = 5, ignored_by_stats = 5 },
@@ -339,6 +354,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-desert-1", amount = 5 },
@@ -355,6 +371,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-desert-2", amount = 5 },
@@ -371,6 +388,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-desert-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -389,6 +407,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-desert-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -407,6 +426,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-desert-5-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -426,6 +446,7 @@ data:extend({
     category = "angels-swamp-farming",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-swamp-1-seed", amount = 5 },
@@ -450,6 +471,7 @@ data:extend({
     category = "angels-swamp-farming",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-swamp-2-seed", amount = 5 },
@@ -474,6 +496,7 @@ data:extend({
     category = "angels-swamp-farming",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-swamp-3-seed", amount = 5, ignored_by_stats = 5 },
@@ -498,6 +521,7 @@ data:extend({
     category = "angels-advanced-swamp-farming",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-swamp-4-seed", amount = 5, ignored_by_stats = 5 },
@@ -523,6 +547,7 @@ data:extend({
     category = "angels-advanced-swamp-farming",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-swamp-5-seed", amount = 5, ignored_by_stats = 5 },
@@ -549,6 +574,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-swamp-1", amount = 5 },
@@ -565,6 +591,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-swamp-2", amount = 5 },
@@ -581,6 +608,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-swamp-3-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -599,6 +627,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-swamp-4-seed-dormant", amount = 5, ignored_by_stats = 5 },
@@ -617,6 +646,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 0.5,
     ingredients = {
       { type = "item", name = "angels-swamp-5-seed-dormant", amount = 5, ignored_by_stats = 5 },

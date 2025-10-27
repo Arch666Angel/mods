@@ -10,6 +10,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-chrome-ore", amount = 4 },
     },
@@ -26,6 +27,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-chrome", amount = 3 },
     },
@@ -41,6 +43,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-chrome", amount = 8 },
       { type = "item", name = "angels-solid-sodium-carbonate", amount = 7 },
@@ -58,6 +61,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-chromate", amount = 12 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
@@ -83,6 +87,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-dichromate", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 3 },
@@ -103,6 +108,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-chrome-ore", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 3 },
@@ -123,6 +129,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-chrome", amount = 8 },
       { type = "item", name = "angels-solid-carbon", amount = 3 },
@@ -143,6 +150,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-chrome-oxide", amount = 24, ignored_by_stats = 6 },
       { type = "item", name = "angels-ingot-chrome", amount = 6, ignored_by_stats = 6 },
@@ -162,6 +170,7 @@ data:extend({
     subgroup = "angels-chrome",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-chrome", amount = 1 },
     },
@@ -178,6 +187,7 @@ data:extend({
     subgroup = "angels-chrome-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-chrome", amount = 12 },
     },
@@ -193,6 +203,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-chrome-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-chrome", amount = 80 },
@@ -212,6 +223,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-chrome-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-chrome", amount = 140 },
@@ -234,6 +246,7 @@ data:extend({
     category = "angels-casting-4",
     subgroup = "angels-chrome-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-chrome", amount = 40 },
@@ -258,6 +271,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-chrome", amount = 1 },
     },

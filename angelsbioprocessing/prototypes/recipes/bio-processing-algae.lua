@@ -15,6 +15,7 @@ data:extend({
     category = "angels-bio-processing-2",
     subgroup = "angels-bio-processing-brown",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "fluid", name = "angels-water-saline", amount = 100 },
@@ -33,6 +34,7 @@ data:extend({
     category = "smelting",
     subgroup = "angels-bio-processing-brown",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "angels-algae-brown", amount = 20 },
@@ -50,6 +52,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-brown",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "angels-algae-brown", amount = 20 },
@@ -73,6 +76,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-brown",
     enabled = false,
+    auto_recycle = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "angels-algae-brown", amount = 10 },
@@ -91,6 +95,7 @@ data:extend({
     category = "angels-bio-processing",
     subgroup = "angels-bio-processing-green",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     main_product = "angels-algae-green",
     ingredients = {
@@ -115,6 +120,7 @@ data:extend({
     category = "angels-bio-processing-2",
     subgroup = "angels-bio-processing-green",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "fluid", name = "angels-water-mineralized", amount = 80 },
@@ -138,6 +144,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-green",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "item", name = "angels-algae-green", amount = 10 },
@@ -155,6 +162,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-green",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 20 },
@@ -176,6 +184,7 @@ data:extend({
     category = "angels-bio-processing-4",
     subgroup = "angels-bio-processing-blue",
     enabled = false,
+    auto_recycle = false,
     energy_required = 20,
     ingredients = {
       { type = "fluid", name = "angels-water-yellow-waste", amount = 100 },
@@ -195,6 +204,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-blue",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "item", name = "angels-algae-blue", amount = 10 },
@@ -213,6 +223,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-blue",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-blue-cellulose-fiber", amount = 20 },
@@ -234,6 +245,7 @@ data:extend({
     category = "angels-bio-processing-3",
     subgroup = "angels-bio-processing-red",
     enabled = false,
+    auto_recycle = false,
     energy_required = 20,
     ingredients = {
       { type = "fluid", name = "angels-thermal-water", amount = 100 },
@@ -253,6 +265,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-red",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "item", name = "angels-algae-red", amount = 10 },
@@ -270,6 +283,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-red",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-red-cellulose-fiber", amount = 20 },

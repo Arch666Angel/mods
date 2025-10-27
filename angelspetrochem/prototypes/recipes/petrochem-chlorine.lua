@@ -124,6 +124,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-salt", amount = 6 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 120 },

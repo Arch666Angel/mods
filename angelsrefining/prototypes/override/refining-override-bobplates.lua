@@ -38,22 +38,6 @@ if mods["bobplates"] then
 
   angelsmods.functions.move_item("bob-small-inline-storage-tank", "angels-fluid-tanks", "a[small-tank]-a")
   angelsmods.functions.move_item("bob-small-storage-tank", "angels-fluid-tanks", "a[small-tank]-b")
-  OV.patch_recipes({
-    {
-      name = "bob-small-storage-tank",
-      ingredients = {
-        { "!!" },
-        { name = "bob-small-inline-storage-tank", amount = 1 },
-        { name = "pipe", amount = 1 },
-      },
-    },
-    {
-      name = "storage-tank",
-      ingredients = {
-        { name = "bob-small-inline-storage-tank", amount = 1 },
-      },
-    },
-  })
 end
 
 -------------------------------------------------------------------------------

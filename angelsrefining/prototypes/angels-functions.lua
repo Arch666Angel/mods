@@ -2032,3 +2032,30 @@ function angelsmods.functions.set_building_collision_mask(b_type, layers_to_add)
 
     return collision_mask
 end
+
+-------------------------------------------------------------------------------
+-- PATCH RECYCLING RECIPES IF QUALITY IS ENABLED ------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.patch_recycling_recipes(updated_recipes)
+  if mods["quality"] then
+      local recycling = require("__quality__/prototypes/recycling")
+      for _, recipe_name in pairs(updated_recipes) do
+        local recipe = data.raw.recipe[recipe_name]
+        if recipe then
+          recycling.generate_recycling_recipe(recipe)
+        end
+      end
+  end
+end
+
+function angelsmods.functions.patch_self_recycling_recipes(updated_items)
+  if mods["quality"] then
+      local recycling = require("__quality__/prototypes/recycling")
+      for _, item_name in pairs(updated_items) do
+        local item = data.raw.item[item_name]
+        if item then
+          recycling.generate_self_recycling_recipe(item)
+        end
+      end
+  end
+end

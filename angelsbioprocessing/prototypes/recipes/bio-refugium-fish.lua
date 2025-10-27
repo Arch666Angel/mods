@@ -6,6 +6,7 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "fluid", name = "water", amount = 50 },
@@ -32,6 +33,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
@@ -55,6 +57,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 4, ignored_by_stats = 4 },
@@ -93,6 +96,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-alien-fish-1-raw", amount = 4, ignored_by_stats = 4 },
@@ -122,6 +126,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-alien-fish-2-raw", amount = 4, ignored_by_stats = 4 },
@@ -151,6 +156,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-alien-fish-3-raw", amount = 4, ignored_by_stats = 4 },
@@ -183,6 +189,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 2, ignored_by_stats = 2 },
@@ -221,6 +228,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-algae-brown", amount = 2 },
@@ -260,6 +268,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-algae-green", amount = 2 },
@@ -299,6 +308,7 @@ data:extend({
     category = "angels-bio-refugium-fish",
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-raw-meat", amount = 2 },
@@ -341,6 +351,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-fish-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 1 },
@@ -362,6 +373,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-fish-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "angels-alien-fish-1-raw", amount = 1 },
@@ -383,6 +395,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-fish-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "angels-alien-fish-2-raw", amount = 1 },
@@ -404,6 +417,7 @@ data:extend({
     category = "angels-bio-butchery",
     subgroup = "angels-bio-fish-butchery",
     enabled = false,
+    auto_recycle = false,
     energy_required = 7.5,
     ingredients = {
       { type = "item", name = "angels-alien-fish-3-raw", amount = 1 },
@@ -428,6 +442,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 12,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 1 },
@@ -455,6 +470,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 10,
     ingredients = {
       { type = "item", name = "angels-alien-fish-1-raw", amount = 1 },
@@ -482,6 +498,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 8,
     ingredients = {
       { type = "item", name = "angels-alien-fish-2-raw", amount = 1 },
@@ -509,6 +526,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 6,
     ingredients = {
       { type = "item", name = "angels-alien-fish-3-raw", amount = 1 },
@@ -536,6 +554,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-fish-pulp", amount = 5 },
@@ -555,6 +574,7 @@ data:extend({
     category = "angels-filtering",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 150 },
@@ -580,6 +600,7 @@ data:extend({
     category = "angels-filtering-2",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-raw-fish-oil", amount = 150 },
@@ -605,6 +626,7 @@ data:extend({
     category = "oil-processing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fish-oil", amount = 100 },
@@ -626,6 +648,7 @@ data:extend({
     category = "oil-processing",
     subgroup = "angels-bio-processor-press-fish",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fish-oil", amount = 100 },
@@ -651,6 +674,7 @@ data:extend({
     category = "angels-crystallizing",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },
@@ -673,6 +697,7 @@ data:extend({
     category = "angels-crystallizing",
     subgroup = "angels-bio-biter-processing-crystal-splinter",
     enabled = false,
+    auto_recycle = false,
     energy_required = 8,
     ingredients = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 50 },

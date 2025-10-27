@@ -54,15 +54,6 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   if mods["boblogistics"] then
-    OV.patch_recipes({
-      {
-        name = "angels-storage-tank-3",
-        ingredients = {
-          { name = "bob-small-inline-storage-tank", amount = 1 },
-        },
-      },
-    })
-
     data.raw["storage-tank"]["angels-storage-tank-1"].fluid_box.volume = 200000
     data.raw["storage-tank"]["angels-storage-tank-2"].fluid_box.volume = 150000
   end
