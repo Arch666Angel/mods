@@ -103,9 +103,11 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-yellow-waste",
+    --Icons include their respective cleaned counterpart
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 116, 140, 211 }, { 255, 219, 051 }, { 109, 070, 020, 0.8 }, { 254, 204, 049 } }
+      mods["angelspetrochem"] and { icon = "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png", icon_size = 32 } or {"__base__/graphics/icons/sulfur.png"},
+      { { 116, 140, 211 }, { 255, 219, 051 }, { 109, 070, 020, 0.8 }, { 254, 204, 049 } },
+      false
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "a",
@@ -118,9 +120,11 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-red-waste",
+    --Icons include their respective cleaned counterpart
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 116, 140, 211 }, { 155, 063, 061 }, { 109, 070, 020, 0.8 }, { 124, 050, 048 } }
+      mods["angelspetrochem"] and { icon = "__angelspetrochemgraphics__/graphics/icons/solid-sodium-nitrate.png", icon_size = 32 } or nil,
+      { { 116, 140, 211 }, { 155, 063, 061 }, { 109, 070, 020, 0.8 }, { 124, 050, 048 } },
+      false
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "d",
@@ -133,9 +137,11 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-green-waste",
+    --Icons include their respective cleaned counterpart
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 116, 140, 211 }, { 102, 204, 049 }, { 109, 070, 020, 0.8 }, { 096, 207, 052 } }
+      { icon = "__angelsrefininggraphics__/graphics/icons/solid-salt.png", icon_size = 32 },
+      { { 116, 140, 211 }, { 102, 204, 049 }, { 109, 070, 020, 0.8 }, { 096, 207, 052 } },
+      false
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "c",
@@ -148,9 +154,11 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-greenyellow-waste",
+    --Icons include their respective cleaned counterpart
     icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 116, 140, 211 }, { 218, 253, 064 }, { 109, 070, 020, 0.8 }, { 173, 210, 042 } }
+      { icon = "__angelsrefininggraphics__/graphics/icons/ore-fluorite.png", icon_size = 32 },
+      { { 116, 140, 211 }, { 218, 253, 064 }, { 109, 070, 020, 0.8 }, { 173, 210, 042 } },
+      false
     ),
     subgroup = "angels-water-cleaning-fluid",
     order = "b",

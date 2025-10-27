@@ -692,7 +692,11 @@ function angelsmods.functions.create_liquid_recipe_icon(bot_molecules_icon, tint
 end
 
 -- CREATE VISCOUS LIQUID FLUID ICONS (NOT FOR RECIPES)
-function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, tints)
+function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, tints, apply_shift)
+  if apply_shift ~= false then
+    apply_shift = true
+  end
+
   -- molecule_icon can be a string (assumes icon_size 64)
   -- or be a table with size defined
   if molecule_icon then
@@ -757,7 +761,7 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
           icon_size = 256,
           scale = 32 / 256,
           tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-          shift = molecule_icon and { 3.5, 0 } or nil,
+          shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
         }
       or nil,
     tints.bot and {
@@ -765,42 +769,42 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.bot,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_left and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-left.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.bot_left,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_left and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-right.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.bot_right,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     } or nil,
     tints.bot_mask and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot-mask.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.bot_mask,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     } or nil,
     {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-top.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     },
     tints.top_mask and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-top-mask.png",
       icon_size = 256,
       scale = 32 / 256,
       tint = tints.top_mask,
-      shift = molecule_icon and { 3.5, 0 } or nil,
+      shift = (molecule_icon and apply_shift) and { 3.5, 0 } or nil,
     } or nil,
     molecule_icon,
   })
