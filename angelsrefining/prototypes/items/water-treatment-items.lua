@@ -202,9 +202,13 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-heavy-mud",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 070, 133, 232 }, { 117, 089, 036 }, { 102, 076, 029, 0.8 }, { 102, 076, 029, 0.8 } }
+    --adds number to icon to better distinguish
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.create_viscous_liquid_fluid_icon(
+        nil,
+        { { 070, 133, 232 }, { 117, 089, 036 }, { 102, 076, 029, 0.8 }, { 102, 076, 029, 0.8 } }
+      ),
+      1, angelsmods.refining.number_tint
     ),
     subgroup = "angels-water-washing-fluid",
     order = "b",
@@ -217,9 +221,13 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-concentrated-mud",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 070, 133, 232 }, { 070, 133, 232 }, { 109, 070, 020, 0.8 }, { 109, 070, 020, 0.8 } }
+    --adds number to icon to better distinguish
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.create_viscous_liquid_fluid_icon(
+        nil,
+        { { 070, 133, 232 }, { 070, 133, 232 }, { 109, 070, 020, 0.8 }, { 109, 070, 020, 0.8 } }
+      ),
+      2, angelsmods.refining.number_tint
     ),
     subgroup = "angels-water-washing-fluid",
     order = "c",
@@ -232,9 +240,13 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-light-mud",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 109, 070, 020 }, { 109, 070, 020 }, { 070, 133, 232, 0.8 }, { 070, 133, 232, 0.8 } }
+    --adds number to icon to better distinguish
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.create_viscous_liquid_fluid_icon(
+        nil,
+        { { 109, 070, 020 }, { 109, 070, 020 }, { 070, 133, 232, 0.8 }, { 070, 133, 232, 0.8 } }
+      ),
+      3, angelsmods.refining.number_tint
     ),
     subgroup = "angels-water-washing-fluid",
     order = "d",
@@ -247,9 +259,13 @@ data:extend({
   {
     type = "fluid",
     name = "angels-water-thin-mud",
-    icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-      nil,
-      { { 039, 112, 194 }, { 109, 070, 020 }, { 070, 133, 232, 0.8 }, { 070, 133, 232, 0.8 } }
+    --adds number to icon to better distinguish
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.create_viscous_liquid_fluid_icon(
+        nil,
+        { { 039, 112, 194 }, { 109, 070, 020 }, { 070, 133, 232, 0.8 }, { 070, 133, 232, 0.8 } }
+      ),
+      4, angelsmods.refining.number_tint
     ),
     subgroup = "angels-water-washing-fluid",
     order = "e",
