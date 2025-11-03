@@ -145,6 +145,81 @@ function angelsmods.functions.add_number_icon_layer(icon_layers, number_tier, nu
   })
 end
 
+---
+---Gets an `Animation` object configured to draw a vertical pipe shadow at the given `shift`,
+---for a single tile.
+---
+---Conventional use is by non-pipe entities that have pipe connections, and need to dynamically
+---draw a shadow at the connection point for a given rotation state, rather than bake the shadow
+---into the entity's sprite.
+---
+---### Example
+---```lua
+----- Add a vertical pipe shadow in the north and south directions to the working_visualisations
+----- field of an assembly machine prototype. The shadow will offset up 1 tile for north, and
+----- down 1 tile for south, along the centerline of a 3 x 3 entity.
+---local greenhouse = data.raw["assembling-machine"]["bob-greenhouse"]
+---table.insert(greenhouse.working_visualisations, {
+---    always_draw = true,
+---    north_animation = _pipes.get_vertical_pipe_shadow({0, -1}),
+---    south_animation = _pipes.get_vertical_pipe_shadow({0, 1}),
+---)}
+---```
+---@param shift data.Vector
+---@return data.Animation
+---@nodiscard
+function angelsmods.functions.get_vertical_pipe_shadow(shift)
+	---@type data.Animation
+	local shadow_animation = {
+		filename = "__angelsrefininggraphics__/graphics/entity/common/pipe-patches/vertical-pipe-shadow-patch.png",
+		priority = "high",
+		width = 128,
+		height = 128,
+		draw_as_shadow = true,
+		shift = shift,
+		scale = 0.5,
+	}
+
+	return shadow_animation
+end
+
+---
+---Gets an `Animation` object configured to draw a horizontal pipe shadow at the given `shift`,
+---for a single tile.
+---
+---Conventional use is by non-pipe entities that have pipe connections, and need to dynamically
+---draw a shadow at the connection point for a given rotation state, rather than bake the shadow
+---into the entity's sprite.
+---
+---### Example
+---```lua
+----- Add a horizontal pipe shadow in the north and south directions to the working_visualisations
+----- field of an assembly machine prototype. The shadow will offset right 1 tile for east, and
+----- left 1 tile for west, along the centerline of a 3 x 3 entity.
+---local greenhouse = data.raw["assembling-machine"]["bob-greenhouse"]
+---table.insert(greenhouse.working_visualisations, {
+---    always_draw = true,
+---    east_animation = _pipes.get_horizontal_pipe_shadow({1, 0}),
+---    west_animation = _pipes.get_horizontal_pipe_shadow({-1, 0}),
+---)}
+---```
+---@param shift data.Vector The shift to apply to the shadow. Typically whole-tile or half-tile increments.
+---@nodiscard
+function angelsmods.functions.get_horizontal_pipe_shadow(shift)
+	---@type data.Animation
+	local shadow_animation = {
+		filename = "__angelsrefininggraphics__/graphics/entity/common/pipe-patches/horizontal-pipe-shadow-patch.png",
+		priority = "high",
+		width = 128,
+		height = 128,
+		draw_as_shadow = true,
+		shift = shift,
+		scale = 0.5,
+	}
+
+	return shadow_animation
+end
+
 -------------------------------------------------------------------------------
 -- ICON GENERATION ------------------------------------------------------------
 -------------------------------------------------------------------------------
