@@ -20,7 +20,7 @@ funcs.generate_train_items({
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-bot-wagon-ico.png",
   icon_size = 32,
   subgroup = "angels-vehicle-train-crawler",
-  order = "d[bot-wagon]",
+  order = "d[robot-wagon]",
   place_result = "angels-crawler-robot-wagon",
   stack_size = 5,
 })

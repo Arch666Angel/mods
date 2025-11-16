@@ -22,7 +22,7 @@ funcs.generate_train_items({
   icon = "__angelsaddons-mobility__/graphics/icons/petro-tank2-ico.png",
   icon_size = 32,
   subgroup = "angels-petrotrain",
-  order = "z[angel-train]-c[petro]-c[tank2]",
+  order = "z[angel-train]-c[petro]-c[oil-wagon]",
   place_result = "angels-petro-oil-wagon",
   stack_size = 5,
 })

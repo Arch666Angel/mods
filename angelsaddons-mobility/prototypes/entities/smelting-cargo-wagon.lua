@@ -20,7 +20,7 @@ funcs.generate_train_items({
   icon = "__angelsaddons-mobility__/graphics/icons/smelting-wagon1.png",
   icon_size = 32,
   subgroup = "angels-smeltingtrain",
-  order = "z[angel-train]-b[smelting]-c[wagon]",
+  order = "z[angel-train]-b[smelting]-c[cargo-wagon]",
   place_result = "angels-smelting-cargo-wagon",
   stack_size = 5,
 })

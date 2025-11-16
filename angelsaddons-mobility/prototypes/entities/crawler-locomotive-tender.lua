@@ -7,7 +7,7 @@ local simulations = require("prototypes.factoriopedia-simulations")
 data:extend({
   {
     type = "equipment-grid",
-    name = "angels-crawler-locomotive-wagon",
+    name = "angels-crawler-locomotive-tender",
     width = 6,
     height = 6,
     equipment_categories = { "angels-void" },
@@ -20,7 +20,7 @@ funcs.generate_train_items({
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-loco-wagon-ico.png",
   icon_size = 32,
   subgroup = "angels-vehicle-train-crawler",
-  order = "b[locomotive-wagon]",
+  order = "b[locomotive-tender]",
   place_result = "angels-crawler-locomotive-tender",
   stack_size = 5,
 })
@@ -56,8 +56,8 @@ funcs.generate_train_entities({
   connection_distance = 3,
   joint_distance = 4,
   energy_per_hit_point = 5,
-  equipment_grid = "angels-crawler-locomotive-wagon",
-  fast_replaceable_group = "angels-crawler-locomotive-wagon",
+  equipment_grid = "angels-crawler-locomotive-tender",
+  fast_replaceable_group = "angels-crawler-locomotive-tender",
   allow_robot_dispatch_in_automatic_mode = true,
   minimap_representation = minimap_representation,
   selected_minimap_representation = selected_minimap_representation,
