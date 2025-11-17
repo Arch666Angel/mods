@@ -152,19 +152,6 @@ if mods["bobgreenhouse"] then
     },
   })
 
-  -- make sure the seed extractor can be unlocked early on
-  if bobmods and bobmods.electronics then
-    OV.patch_recipes({
-      {
-        name = "angels-seed-extractor",
-        ingredients = {
-          { name = "electronic-circuit", amount = 0 },
-          { name = "bob-basic-circuit-board", amount = 4 },
-        },
-      },
-    })
-  end
-
   -- allow manually creating wood without a sawblade (because nerfed bob greenhouse)
   data:extend({
     {

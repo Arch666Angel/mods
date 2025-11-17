@@ -138,6 +138,7 @@ data:extend({
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
     flags = { "placeable-neutral", "not-on-map" },
+    hidden = true,
     hidden_in_factoriopedia = true,
     selectable_in_game = false,
     category = "angels-sea-pump",
@@ -292,7 +293,7 @@ data:extend({
         height = 160,
       },
     },
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
+    circuit_connector = circuit_connector_definitions["angels-seafloor-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

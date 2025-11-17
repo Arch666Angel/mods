@@ -1,11 +1,6 @@
 local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
-if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
-  OV.add_prereq("angels-bio-wood-processing", "automation-science-pack")
-  OV.add_prereq("angels-bio-processing-brown", "bob-electricity")
-end
-
 if mods["bobplates"] then
   -- GEMS
   for _, subgroup in pairs({ "bob-gems-ore", "bob-gems-raw", "bob-gems-cut", "bob-gems-polished" }) do

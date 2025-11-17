@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cobalt-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-cobalt", amount = 3 },
     },
@@ -39,6 +41,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-cobalt", amount = 2 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 20 },
@@ -57,6 +60,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cobalt-ore", amount = 8 },
       { type = "item", name = "angels-solid-limestone", amount = 3 },
@@ -79,6 +83,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-cobalt", amount = 8 },
       { type = "item", name = "angels-solid-limestone", amount = 6 },
@@ -101,6 +106,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-cobalt-hydroxide", amount = 24 },
       { type = "item", name = "angels-solid-calcium-chloride", amount = 6 },
@@ -123,6 +129,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cobalt-ore", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -145,6 +152,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-cobalt-oxide", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -166,6 +174,7 @@ data:extend({
     subgroup = "angels-cobalt",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-cobalt", amount = 1 },
     },
@@ -182,6 +191,7 @@ data:extend({
     subgroup = "angels-cobalt-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-cobalt", amount = 12 },
     },
@@ -197,6 +207,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-cobalt-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-cobalt", amount = 80 },
@@ -220,6 +231,7 @@ data:extend({
     category = "angels-strand-casting-4",
     subgroup = "angels-cobalt-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-cobalt", amount = 140 },
@@ -246,6 +258,7 @@ data:extend({
     category = "angels-casting-3",
     subgroup = "angels-cobalt-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-cobalt", amount = 40 },
@@ -270,6 +283,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-cobalt", amount = 1 },
     },

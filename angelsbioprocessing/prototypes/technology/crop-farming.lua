@@ -43,6 +43,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-steel-smelting-1",
+      "angels-stone-smelting-1",
       "logistic-science-pack",
     },
     effects = {
@@ -347,8 +349,10 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-aluminium-smelting-1",
       "angels-bio-temperate-farming-1",
       "angels-bio-farm-alien",
+      "angels-stone-smelting-2",
       "chemical-science-pack",
     },
     effects = {
@@ -488,8 +492,10 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-aluminium-smelting-1",
       "angels-bio-desert-farming-1",
       "angels-bio-farm-alien",
+      "angels-stone-smelting-2",
       "chemical-science-pack",
     },
     effects = {
@@ -629,8 +635,10 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-aluminium-smelting-1",
       "angels-bio-swamp-farming-1",
       "angels-bio-farm-alien",
+      "angels-stone-smelting-2",
       "chemical-science-pack",
     },
     effects = {
@@ -889,11 +897,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fermentation-corn",
+        recipe = "angels-fermentation-corn",
       },
       {
         type = "unlock-recipe",
-        recipe = "fermentation-fruit",
+        recipe = "angels-fermentation-fruit",
       },
       {
         type = "unlock-recipe",

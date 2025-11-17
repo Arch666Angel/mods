@@ -18,10 +18,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-chemical-plant",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "angels-dirt-water-separation",
       },
       {
@@ -49,11 +45,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
+        recipe = "chemical-plant",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "angels-water-separation",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-synthesis",
+        recipe = "angels-water-synthesis",
       },
       {
         type = "unlock-recipe",
@@ -463,7 +463,7 @@ data:extend({
     name = "angels-nitrogen-processing-1",
     icons = angelsmods.functions.create_gas_tech_icon("NNN"),
     prerequisites = {
-      "angels-basic-chemistry",
+      "angels-basic-chemistry-2",
     },
     effects = {
       {

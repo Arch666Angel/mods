@@ -66,6 +66,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     OV.copy_item_properties("angels-plate-tungsten", "bob-tungsten-plate")
     OV.disable_recipe({ "bob-tungsten-plate" })
     OV.add_prereq("bob-tungsten-processing", "angels-tungsten-smelting-1")
+    OV.set_research_difficulty("bob-tungsten-processing", "bob-tungsten-plate", 10, "craft-item")
   end
 
   if mods["bobplates"] then

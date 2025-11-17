@@ -9,6 +9,8 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-acid", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Al
@@ -40,6 +42,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen-sulfide", amount = 60 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
@@ -62,6 +65,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "sulfur", amount = 1 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
@@ -83,6 +87,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-calcium-sulfate", amount = 2 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -110,6 +115,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 90 },
       { type = "fluid", name = "angels-water-purified", amount = 40 },
@@ -132,6 +138,8 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-fluorite-ore", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
@@ -166,6 +174,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 90 },
       { type = "fluid", name = "angels-water-purified", amount = 40 },
@@ -199,6 +208,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 50 },
     },
@@ -226,6 +236,7 @@ data:extend({
     subgroup = "angels-petrochem-catalysts",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-filter-frame", amount = 1, ignored_by_stats = 1 },
       { type = "item", name = "angels-stone-crushed", amount = 5 },
@@ -244,6 +255,8 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 10,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-filter-lime", amount = 1 },
       { type = "fluid", name = "water", amount = 20 },
@@ -266,6 +279,8 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-filter-lime-used", amount = 1 },
     },
@@ -288,6 +303,7 @@ data:extend({
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2.5,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "steam", amount = 50, minimum_temperature = 125, maximum_temperature = 165 },
       { type = "fluid", name = "angels-gas-hydrogen-sulfide", amount = 50 },

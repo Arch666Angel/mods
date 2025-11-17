@@ -8,6 +8,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-gardens",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -39,6 +40,7 @@ data:extend({
     category = "angels-temperate-farming",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     overload_multiplier = 1,
     ingredients = {
@@ -62,6 +64,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -125,6 +128,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -182,6 +186,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-gardens",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -213,6 +218,7 @@ data:extend({
     category = "angels-desert-farming",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     overload_multiplier = 1,
     ingredients = {
@@ -236,6 +242,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -299,6 +306,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-desert-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -356,6 +364,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-gardens",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -387,6 +396,7 @@ data:extend({
     category = "angels-swamp-farming",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 60,
     overload_multiplier = 1,
     ingredients = {
@@ -473,6 +483,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
+    auto_recycle = false,
     energy_required = 300,
     overload_multiplier = 1,
     ingredients = {
@@ -531,6 +542,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-mud", amount = 1 },
@@ -550,6 +562,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 1 },
@@ -568,6 +581,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "angels-solid-compost", amount = 2 },
@@ -585,6 +599,7 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-bio-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-fertilizer", amount = 1 },
@@ -657,6 +672,7 @@ data:extend({
     category = "angels-basic-farming",
     subgroup = "angels-farming-gardens",
     enabled = false,
+    auto_recycle = false,
     energy_required = 100,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 1 },

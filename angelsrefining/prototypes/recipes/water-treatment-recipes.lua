@@ -422,6 +422,7 @@ data:extend({
     subgroup = "angels-water-washing-filtering",
     energy_required = 5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-mud", amount = 25 },
     },

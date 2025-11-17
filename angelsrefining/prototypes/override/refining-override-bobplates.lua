@@ -38,22 +38,6 @@ if mods["bobplates"] then
 
   angelsmods.functions.move_item("bob-small-inline-storage-tank", "angels-fluid-tanks", "a[small-tank]-a")
   angelsmods.functions.move_item("bob-small-storage-tank", "angels-fluid-tanks", "a[small-tank]-b")
-  OV.patch_recipes({
-    {
-      name = "bob-small-storage-tank",
-      ingredients = {
-        { "!!" },
-        { name = "bob-small-inline-storage-tank", amount = 1 },
-        { name = "pipe", amount = 1 },
-      },
-    },
-    {
-      name = "storage-tank",
-      ingredients = {
-        { name = "bob-small-inline-storage-tank", amount = 1 },
-      },
-    },
-  })
 end
 
 -------------------------------------------------------------------------------
@@ -231,6 +215,9 @@ if mods["bobplates"] then
   OV.add_unlock("angels-ore-crushing", "bob-tin-plate")
   OV.add_unlock("angels-ore-crushing", "bob-lead-plate")
   OV.add_unlock("angels-ore-crushing", "bob-glass")
+  if mods["bobgreenhouse"] then
+    OV.add_prereq("bob-greenhouse", "angels-ore-crushing")
+  end
   OV.add_unlock("bob-lead-processing", "bob-silver-plate")
   if data.raw.recipe["bob-solder-alloy"] then
     OV.remove_unlock("bob-electronics", "bob-solder-alloy")
@@ -261,4 +248,22 @@ if mods["bobplates"] then
     },
   })
   OV.add_prereq("bob-nickel-processing", "angels-ore-crushing")
+end
+
+-------------------------------------------------------------------------------
+-- BUILDING PREREQUISITES -----------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  OV.add_prereq("angels-slag-processing-2", "bob-aluminium-processing")
+  OV.add_prereq("angels-water-treatment-3", "bob-aluminium-processing")
+  OV.add_prereq("angels-slag-processing-3", "bob-titanium-processing")
+  OV.add_prereq("angels-water-treatment-4", "bob-titanium-processing")
+
+  if mods["boblogistics"] then
+    OV.add_prereq("angels-slag-processing-2", "bob-zinc-processing")
+    OV.add_prereq("angels-water-treatment-3", "bob-zinc-processing")
+    OV.add_prereq("angels-advanced-ore-refining-4", "bob-tungsten-processing")
+  end
+
+  OV.add_prereq("angels-advanced-ore-refining-4", "bob-advanced-processing-unit")
 end

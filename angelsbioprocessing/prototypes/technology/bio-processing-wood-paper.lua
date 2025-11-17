@@ -13,6 +13,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-wood-pellets",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-wood-bricks",
+      },
     },
     unit = {
       count = 50,
@@ -30,19 +34,20 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-bio-wood-processing",
+      "angels-coal-processing",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-bio-processor",
-      },
       {
         type = "unlock-recipe",
         recipe = "angels-wood-charcoal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-bio-resin-wood-reprocessing",
+        recipe = "angels-carbon-from-charcoal",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-gas-carbon-dioxide-from-wood",
       },
     },
     unit = {
@@ -60,22 +65,18 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "angels-coal-processing",
       "angels-bio-wood-processing-2",
-      "logistic-science-pack",
+      "angels-steel-smelting-1",
+      "angels-stone-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wood-bricks",
+        recipe = "angels-bio-processor",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-carbon-from-charcoal",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-gas-carbon-dioxide-from-wood",
+        recipe = "angels-bio-resin-wood-reprocessing",
       },
     },
     unit = {
@@ -133,6 +134,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-solid-saw",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-cellulose-fiber-raw-wood",
       },
     },
     unit = {

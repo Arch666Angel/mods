@@ -241,7 +241,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/nuclear-fuel.png",
     icon_size = 128,
     prerequisites = {
-      "kovarex-enrichment-process",
+      "uranium-processing",
       "utility-science-pack",
       "rocket-fuel",
     },
@@ -249,6 +249,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nuclear-fuel",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nuclear-fuel",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nuclear-fuel-2",
       },
     },
     unit = {

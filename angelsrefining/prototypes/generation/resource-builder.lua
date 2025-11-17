@@ -912,7 +912,15 @@ function angelsmods.functions.remove_resource(resource)
   end
 
   -- Remove from planets
-  for _, planet in pairs(data.raw.planet) do
+  for planet_name, planet in pairs(data.raw.planet) do
+    -- Remove the planet-specific generation setting
+    local planet_resource = planet_name .. "_" .. resource
+    if data.raw["autoplace-control"][planet_resource]
+    then
+      data.raw["autoplace-control"][planet_resource] = nil
+    end
+
+    -- Remove the generic resource entry
     if
       planet
       and planet.map_gen_settings
@@ -920,8 +928,28 @@ function angelsmods.functions.remove_resource(resource)
       and planet.map_gen_settings.autoplace_controls[resource]
     then
       planet.map_gen_settings.autoplace_controls[resource] = nil
+    end
+    if
+      planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_settings
+      and planet.map_gen_settings.autoplace_settings.entity
+      and planet.map_gen_settings.autoplace_settings.entity.settings
+      and planet.map_gen_settings.autoplace_settings.entity.settings[resource]
+    then
       planet.map_gen_settings.autoplace_settings.entity.settings[resource] = nil
     end
+
+    -- Remove the planet-specific resource entry (e.g. "gleba_stone")
+    if
+      planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_controls
+      and planet.map_gen_settings.autoplace_controls[planet_resource]
+    then
+      planet.map_gen_settings.autoplace_controls[planet_resource] = nil
+    end
+
     if
       infinite_resource
       and planet

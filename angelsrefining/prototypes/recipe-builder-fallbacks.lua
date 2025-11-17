@@ -312,7 +312,7 @@ angelsmods.functions.RB.set_fallback("item", "oilref-3", { { "block-cprocessing-
 angelsmods.functions.RB.set_fallback("item", "oilref-4", { { "block-cprocessing-5", 3 }, { "angels-oil-refinery-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "chem-1", { { "block-production-1", 1 } })
-angelsmods.functions.RB.set_fallback("item", "chem-2", { { "block-production-2", 1 }, { "angels-chemical-plant" } })
+angelsmods.functions.RB.set_fallback("item", "chem-2", { { "block-production-2", 1 }, { "chemical-plant" } })
 angelsmods.functions.RB.set_fallback("item", "chem-3", { { "block-cprocessing-3", 1 }, { "angels-chemical-plant-2" } })
 angelsmods.functions.RB.set_fallback("item", "chem-4", { { "block-cprocessing-4", 1 }, { "angels-chemical-plant-3" } })
 

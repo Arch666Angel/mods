@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 4 },
     },
@@ -25,6 +26,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-silica", amount = 3 },
     },
@@ -41,6 +43,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-silica", amount = 8 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 60 },
@@ -63,6 +66,8 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-pellet-silica", amount = 8 },
       { type = "item", name = "angels-ingot-aluminium", amount = 6 },
@@ -87,6 +92,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -109,6 +115,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-trichlorosilane", amount = 90 },
       { type = "item", name = "angels-ingot-silicon", amount = 6, ignored_by_stats = 6 },
@@ -131,6 +138,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-silane", amount = 90 },
       { type = "item", name = "angels-ingot-silicon", amount = 6, ignored_by_stats = 6 },
@@ -152,6 +160,7 @@ data:extend({
     subgroup = "angels-silicon",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-silicon", amount = 1 },
     },
@@ -168,6 +177,7 @@ data:extend({
     subgroup = "angels-silicon-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-silicon", amount = 12 },
     },
@@ -185,6 +195,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-silicon-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-silicon", amount = 5 },
@@ -202,6 +213,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-silicon-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 1 },
@@ -218,6 +230,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-silicon-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 6,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-silicon", amount = 40 },
@@ -240,6 +253,7 @@ data:extend({
     category = "angels-casting-3",
     subgroup = "angels-silicon-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-silicon", amount = 40 },

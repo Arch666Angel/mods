@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-zinc-ore", amount = 4 },
     },
@@ -25,6 +26,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-zinc", amount = 3 },
     },
@@ -41,6 +43,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-zinc-ore", amount = 8 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
@@ -65,6 +68,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-zinc", amount = 8 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
@@ -88,6 +92,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-zinc-oxide", amount = 12 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
@@ -105,6 +110,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-zinc-ore", amount = 24 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
@@ -131,6 +137,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-zinc", amount = 8 },
       { type = "item", name = "angels-solid-carbon", amount = 6 },
@@ -156,6 +163,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cathode-zinc", amount = 24 },
     },
@@ -176,6 +184,7 @@ data:extend({
     subgroup = "angels-zinc",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-zinc", amount = 1 },
     },
@@ -192,6 +201,7 @@ data:extend({
     subgroup = "angels-zinc-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-zinc", amount = 12 },
     },
@@ -207,6 +217,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-zinc-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-zinc", amount = 80 },
@@ -230,6 +241,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-zinc-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-zinc", amount = 140 },
@@ -255,6 +267,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-zinc-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-zinc", amount = 40 },
@@ -279,6 +292,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-zinc", amount = 1 },
     },

@@ -11,8 +11,6 @@ else
   angelsmods.functions.hide("angels-spent-mold-non-expendable")
   OV.disable_recipe({ "angels-casing-resin-mold", "angels-mold-expendable" })
   OV.disable_recipe({ "angels-mold-non-expendable", "angels-mold-non-expendable-wash" })
-  OV.remove_prereq("angels-metallurgy-2", "angels-stone-smelting-1")
-  OV.remove_prereq("angels-metallurgy-3", "angels-stone-smelting-2")
   OV.remove_prereq("angels-stone-smelting-2", "angels-resins")
 end
 

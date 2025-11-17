@@ -2,11 +2,13 @@ local AF = angelsmods.functions
 data:extend({
   {
     type = "recipe",
-    name = "fermentation-corn",
+    name = "angels-fermentation-corn",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-corn", amount = 10 },
@@ -38,11 +40,13 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "fermentation-fruit",
+    name = "angels-fermentation-fruit",
     localised_name = { "fluid-name.angels-liquid-fermentation-raw" },
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-fruit", amount = 10 },
@@ -79,6 +83,8 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fermentation-raw", amount = 100 },
@@ -108,6 +114,8 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-fermentation-raw", amount = 100 },
@@ -136,6 +144,8 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-processor-fermentation",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 50 },
@@ -166,6 +176,8 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-methanol", amount = 70 },
@@ -197,6 +209,8 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 100 },
@@ -225,6 +239,8 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 10 },
@@ -252,6 +268,8 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-cellulose-acetate-mixture", amount = 50 },
@@ -281,6 +299,8 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-cellulose-acetate", amount = 25 },
@@ -309,6 +329,8 @@ data:extend({
     category = "angels-advanced-chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 50 },
@@ -340,6 +362,8 @@ data:extend({
     category = "chemistry",
     subgroup = "angels-bio-plastic",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 10 },

@@ -283,14 +283,6 @@ if angelsmods.industries.tech then
         { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
     end
-
-    if settings.startup["bobmods-burnerphase"].value then
-      AI.core_replace("steam-power", "energy", "basic")
-      if data.raw.technology["basic-automation"] then
-        AI.core_replace("automation", "basic", "processing")
-        AI.core_replace("steam-automation", "processing", "basic")
-      end
-    end
   end
 
   OV.execute()

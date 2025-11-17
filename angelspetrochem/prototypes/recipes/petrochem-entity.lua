@@ -406,13 +406,13 @@ data:extend({
   --CHEMICAL PLANT
   {
     type = "recipe",
-    name = "angels-chemical-plant",
+    name = "chemical-plant",
     energy_required = 5,
     enabled = false,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
     },
-    results = { { type = "item", name = "angels-chemical-plant", amount = 1 } },
+    results = { { type = "item", name = "chemical-plant", amount = 1 } },
   },
   {
     type = "recipe",
@@ -420,7 +420,7 @@ data:extend({
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-chemical-plant", amount = 1 },
+      { type = "item", name = "chemical-plant", amount = 1 },
     },
     results = { { type = "item", name = "angels-chemical-plant-2", amount = 1 } },
   },

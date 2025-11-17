@@ -126,18 +126,18 @@ end
 ---
 ---The first tier is just the base name; otherwise, it is the base name suffixed with `-#`.
 local angel_train_base_names = {
-  "crawler-locomotive",
-  "crawler-locomotive-wagon",
-  "crawler-wagon",
-  "crawler-bot-wagon",
+  "angels-crawler-locomotive",
+  "angels-crawler-locomotive-wagon",
+  "angels-crawler-wagon",
+  "angels-crawler-bot-wagon",
 
-  "petro-locomotive-1",
-  "petro-tank1",
-  "petro-tank2",
+  "angels-petro-locomotive-1",
+  "angels-petro-tank1",
+  "angels-petro-tank2",
 
-  "smelting-locomotive-1",
-  "smelting-locomotive-tender",
-  "smelting-wagon-1",
+  "angels-smelting-locomotive-1",
+  "angels-smelting-locomotive-tender",
+  "angels-smelting-wagon-1",
 }
 
 ---Generates the [`additional_pastable_entities`](https://lua-api.factorio.com/latest/prototypes/EntityPrototype.html#additional_pastable_entities)

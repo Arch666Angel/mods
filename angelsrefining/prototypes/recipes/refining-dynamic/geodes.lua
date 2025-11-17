@@ -7,6 +7,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-blue", amount = 2 },
     },
@@ -35,6 +36,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-red", amount = 2 },
     },
@@ -63,6 +65,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-yellow", amount = 2 },
     },
@@ -91,6 +94,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-purple", amount = 2 },
     },
@@ -119,6 +123,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-cyan", amount = 2 },
     },
@@ -147,6 +152,7 @@ data:extend({
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-lightgreen", amount = 2 },
     },

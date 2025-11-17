@@ -27,7 +27,7 @@ local function angels_chemical_plant_fluid_boxes()
   }
 end
 
-circuit_connector_definitions["angels-chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+circuit_connector_definitions["chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
   { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
   { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
@@ -37,7 +37,7 @@ circuit_connector_definitions["angels-chemical-plant"] = circuit_connector_defin
 data:extend({
   {
     type = "item",
-    name = "angels-chemical-plant",
+    name = "chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
@@ -46,12 +46,12 @@ data:extend({
     }, 1, angelsmods.petrochem.number_tint),
     subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-a",
-    place_result = "angels-chemical-plant",
+    place_result = "chemical-plant",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "angels-chemical-plant",
+    name = "chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
@@ -59,11 +59,11 @@ data:extend({
       },
     }, 1, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "angels-chemical-plant" },
+    minable = { mining_time = 0.5, result = "chemical-plant" },
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     next_upgrade = "angels-chemical-plant-2",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -74,7 +74,7 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
-    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
@@ -189,7 +189,7 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     next_upgrade = "angels-chemical-plant-3",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -200,7 +200,7 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
-    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
@@ -315,7 +315,7 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     next_upgrade = "angels-chemical-plant-4",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -326,7 +326,7 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "350kW",
-    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },
@@ -441,7 +441,7 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_speed = 3.25,
@@ -451,7 +451,7 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
-    circuit_connector = circuit_connector_definitions["angels-chemical-plant"],
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     ingredient_count = 4,
     crafting_categories = { "chemistry" },

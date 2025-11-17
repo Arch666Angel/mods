@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-lead-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-lead", amount = 3 },
     },
@@ -40,6 +42,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-lead", amount = 8 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 120 },
@@ -58,6 +61,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-lead", amount = 8 },
       { type = "item", name = "angels-solid-limestone", amount = 2 },
@@ -78,6 +82,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-quartz", amount = 3 },
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 30 },
@@ -101,6 +106,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-lead-ore", amount = 24 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
@@ -125,6 +131,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-lead-oxide", amount = 24 },
       { type = "item", name = "angels-solid-carbon", amount = 2 },
@@ -148,6 +155,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-anode-lead", amount = 12 },
       { type = "fluid", name = "angels-liquid-hexafluorosilicic-acid", amount = 30 },
@@ -171,6 +179,7 @@ data:extend({
     subgroup = "angels-lead",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-lead", amount = 1 },
     },
@@ -187,6 +196,7 @@ data:extend({
     subgroup = "angels-lead-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-lead", amount = 12 },
     },
@@ -202,6 +212,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-lead-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-lead", amount = 80 },
@@ -225,6 +236,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-lead-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-lead", amount = 140 },
@@ -251,6 +263,7 @@ data:extend({
     category = "angels-casting",
     subgroup = "angels-lead-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-lead", amount = 40 },
@@ -275,6 +288,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-lead", amount = 1 },
     },

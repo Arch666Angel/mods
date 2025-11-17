@@ -512,7 +512,7 @@ angelsmods.functions.RB.build({
   --CHEMICAL PLANT
   {
     type = "recipe",
-    name = "angels-chemical-plant",
+    name = "chemical-plant",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -522,7 +522,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t0-circuit", amount = 1 },
       { type = "item", name = "t0-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "angels-chemical-plant", amount = 1 } },
+    results = { { type = "item", name = "chemical-plant", amount = 1 } },
   },
   {
     type = "recipe",

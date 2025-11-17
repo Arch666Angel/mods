@@ -16,22 +16,22 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "crawler-locomotive",
+  name = "angels-crawler-locomotive",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-loco-ico.png",
   icon_size = 32,
   subgroup = "angels-vehicle-train-crawler",
   order = "a[locomotive]",
-  place_result = "crawler-locomotive",
+  place_result = "angels-crawler-locomotive",
   stack_size = 5,
 })
 
 funcs.generate_train_entities({
   type = "locomotive",
-  name = "crawler-locomotive",
+  name = "angels-crawler-locomotive",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-loco-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "crawler-locomotive" },
+  minable = { mining_time = 1, result = "angels-crawler-locomotive" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 2500,
   corpse = "medium-remnants",

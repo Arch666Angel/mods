@@ -21,14 +21,6 @@ if angelsmods.refining then
   OV.remove_unlock("angels-water-treatment", "angels-water-mineralized")
 end
 
---SMELTING
-if not angelsmods.smelting then
-  OV.disable_recipe("angels-algae-brown-burning-wash")
-
-  OV.remove_prereq("angels-stone-smelting-2", "angels-resins")
-  OV.add_prereq("angels-stone-smelting-2", "angels-bio-arboretum-1")
-end
-
 --UPDATE LABS INPUT
 for labs_n, labs in pairs(data.raw["lab"]) do
   if not lab_ignore[labs_n] and labs.inputs then
@@ -81,5 +73,13 @@ require("prototypes.overrides.bio-processing-override-bob")
 require("prototypes.overrides.bio-processing-override-bobmodules")
 require("prototypes.overrides.bio-processing-override-bobgreenhouse")
 
+--BUILDING PREREQUISITES
+require("prototypes.overrides.bio-processing-override-prerequisites")
+
 --BIO PRODUCTIVITY
 require("prototypes.overrides.bio-processing-override-bio-productivity")
+
+OV.execute()
+
+-- RECYCLING
+require("prototypes.overrides.recycling")

@@ -25,6 +25,8 @@ data:extend({
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solder-mixture", amount = 12 },
     },
@@ -47,6 +49,8 @@ data:extend({
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-lead", amount = 12 },
@@ -70,6 +74,8 @@ data:extend({
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-zinc", amount = 12 },
@@ -93,6 +99,8 @@ data:extend({
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-copper", amount = 12 },
@@ -115,6 +123,7 @@ data:extend({
     category = "angels-strand-casting",
     subgroup = "angels-solder-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-solder", amount = 80 },
@@ -138,6 +147,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-solder-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-solder", amount = 140 },
@@ -164,6 +174,7 @@ data:extend({
     category = "smelting",
     subgroup = "angels-solder-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solder-mixture", amount = 2 },
@@ -186,6 +197,7 @@ data:extend({
     category = "angels-casting",
     subgroup = "angels-solder-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-solder", amount = 40 },
@@ -210,6 +222,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-solder", amount = 4 },
     },

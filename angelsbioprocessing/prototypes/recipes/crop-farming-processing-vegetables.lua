@@ -7,6 +7,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-1", amount = 20 },
@@ -42,6 +44,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-2", amount = 20 },
@@ -76,6 +80,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-3", amount = 20 },
@@ -109,6 +115,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-4", amount = 20 },
@@ -142,6 +150,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-5", amount = 20 },
@@ -178,6 +188,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-1", amount = 20 },
@@ -213,6 +225,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-2", amount = 20 },
@@ -247,6 +261,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-3", amount = 20 },
@@ -281,6 +297,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-4", amount = 20 },
@@ -315,6 +333,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-5", amount = 20 },
@@ -351,6 +371,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-1", amount = 20 },
@@ -385,6 +407,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-2", amount = 20 },
@@ -419,6 +443,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-3", amount = 20 },
@@ -452,6 +478,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-4", amount = 20 },
@@ -486,6 +514,8 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-5", amount = 20 },

@@ -115,9 +115,9 @@ if mods["bobassembly"] then
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-1", amount = 1 },
-          { type = "item", name = "t0-plate", amount = 4 },
-          { type = "item", name = "t0-circuit", amount = 4 },
-          { type = "item", name = "t0-gears", amount = 2 },
+          { type = "item", name = "t2-plate", amount = 4 },
+          { type = "item", name = "t2-circuit", amount = 4 },
+          { type = "item", name = "t2-gears", amount = 2 },
         },
       },
       {
@@ -125,10 +125,10 @@ if mods["bobassembly"] then
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-2", amount = 1 },
-          { type = "item", name = "t3-plate", amount = 3 },
-          { type = "item", name = "t3-circuit", amount = 4 },
-          { type = "item", name = "t3-gears", amount = 2 },
-          { type = "item", name = "t3-pipe", amount = 1 },
+          { type = "item", name = "t4-plate", amount = 3 },
+          { type = "item", name = "t4-circuit", amount = 4 },
+          { type = "item", name = "t4-gears", amount = 2 },
+          { type = "item", name = "t4-pipe", amount = 1 },
         },
       },
       {
@@ -136,10 +136,10 @@ if mods["bobassembly"] then
         ingredients = {
           { "!!" },
           { type = "item", name = "elecmach-3", amount = 1 },
-          { type = "item", name = "t5-plate", amount = 3 },
-          { type = "item", name = "t5-circuit", amount = 4 },
-          { type = "item", name = "t5-gears", amount = 2 },
-          { type = "item", name = "t5-pipe", amount = 1 },
+          { type = "item", name = "t6-plate", amount = 3 },
+          { type = "item", name = "t6-circuit", amount = 4 },
+          { type = "item", name = "t6-gears", amount = 2 },
+          { type = "item", name = "t6-pipe", amount = 1 },
         },
       },
     })

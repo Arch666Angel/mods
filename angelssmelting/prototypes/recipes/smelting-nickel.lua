@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-nickel-ore", amount = 4 },
     },
@@ -24,6 +25,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-nickel", amount = 3 },
     },
@@ -39,6 +41,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-nickel", amount = 4 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
@@ -55,6 +58,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-pellet-nickel", amount = 8 },
       { type = "item", name = "sulfur", amount = 1 },
@@ -73,6 +77,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-nickel-ore", amount = 24 },
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 60 },
@@ -95,6 +100,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-cathode-nickel", amount = 24 },
     },
@@ -116,6 +122,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-nickel-carbonyl", amount = 18 },
       { type = "item", name = "angels-ingot-nickel", amount = 6, ignored_by_stats = 6 },
@@ -137,6 +144,7 @@ data:extend({
     subgroup = "angels-nickel",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-nickel", amount = 1 },
     },
@@ -153,6 +161,7 @@ data:extend({
     subgroup = "angels-nickel-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-ingot-nickel", amount = 12 },
     },
@@ -168,6 +177,7 @@ data:extend({
     category = "angels-strand-casting-2",
     subgroup = "angels-nickel-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-nickel", amount = 80 },
@@ -191,6 +201,7 @@ data:extend({
     category = "angels-strand-casting-3",
     subgroup = "angels-nickel-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-nickel", amount = 140 },
@@ -217,6 +228,7 @@ data:extend({
     category = "angels-casting-2",
     subgroup = "angels-nickel-casting",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-molten-nickel", amount = 40 },
@@ -241,6 +253,7 @@ data:extend({
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-nickel", amount = 1 },
     },

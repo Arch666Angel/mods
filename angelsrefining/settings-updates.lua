@@ -59,3 +59,7 @@ if mods["boblogistics"] then
     angelsmods.settings.hide_setting("bool-setting", "bobmods-logistics-inserterrequireprevious")
   end
 end
+
+if mods["bobtech"] then
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-burnerphase", false)
+end

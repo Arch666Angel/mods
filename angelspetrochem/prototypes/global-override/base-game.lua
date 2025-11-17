@@ -6,18 +6,6 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 move_item("chemical-plant", "angels-petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
 
-if angelsmods.trigger.disable_vanilla_chemical_plants then
-  angelsmods.functions.hide("chemical-plant")
-  angelsmods.functions.set_next_upgrade("assembling-machine", "chemical-plant", nil)
-  OV.global_replace_item("chemical-plant", "angels-chemical-plant")
-  OV.disable_recipe("chemical-plant")
-  angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant", {
-    "chemistry",
-  })
-else
-  OV.add_unlock("angels-basic-chemistry-2", "chemical-plant") --give the item a new home if still active
-end
-
 -------------------------------------------------------------------------------
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------

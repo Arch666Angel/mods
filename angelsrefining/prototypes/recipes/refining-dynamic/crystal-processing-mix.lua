@@ -9,6 +9,8 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore1-crystal", amount = 2 },
       { type = "item", name = "angels-ore4-crystal", amount = 2 },
@@ -30,6 +32,8 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore1-crystal", amount = 2 },
       { type = "item", name = "angels-ore6-crystal", amount = 2 },
@@ -51,6 +55,8 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore2-crystal", amount = 2 },
       { type = "item", name = "angels-ore4-crystal", amount = 2 },
@@ -72,6 +78,8 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore2-crystal", amount = 2 },
       { type = "item", name = "angels-ore4-crystal", amount = 2 },
@@ -93,6 +101,8 @@ data:extend({
     energy_required = 1.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore1-crystal", amount = 2 },
       { type = "item", name = "angels-ore3-crystal", amount = 2 },
@@ -114,6 +124,8 @@ data:extend({
     energy_required = 1.5,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore8-crystal", amount = 9 },
     },
@@ -140,6 +152,8 @@ data:extend({
     energy_required = 1.5,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore9-crystal", amount = 9 },
     },
@@ -168,6 +182,8 @@ data:extend({
     energy_required = 1.5,
     allow_decomposition = false,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore8-crystal", amount = 2 },
       { type = "item", name = "angels-ore9-crystal", amount = 2 },

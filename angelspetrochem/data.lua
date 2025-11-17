@@ -19,13 +19,6 @@ angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids
 angelsmods.trigger.gas_acetone = angelsmods.trigger.resin
 angelsmods.trigger.gas_urea = (mods["bobgreenhouse"] or angelsmods.trigger.resin) and true or false
 
---HIDE UNUSED BUILDINGS
-angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
-angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
-angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"]
-    and settings.startup["angels-disable-bobs-chemical-plants"].value
-  or angelsmods.trigger.disable_bobs_chemical_plants
-
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 angelsmods.trigger.ores["thorium"] = true

@@ -1,53 +1,11 @@
 data:extend({
   {
     type = "technology",
-    name = "angels-plutonium-power",
-    icon = "__angelspetrochemgraphics__/graphics/technology/plutonium-processing.png",
-    icon_size = 128,
-    prerequisites = {
-      "nuclear-fuel-reprocessing",
-    },
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-advanced-uranium-reprocessing",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-plutonium-synthesis",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-americium-regeneration",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-mixed-oxide-cell",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-mixed-oxide-reprocessing",
-      },
-    },
-    unit = {
-      count = 600,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-      },
-      time = 60,
-    },
-    order = "e-p-b-ca",
-  },
-  {
-    type = "technology",
     name = "angels-thorium-power",
     icon = "__angelspetrochemgraphics__/graphics/technology/thorium-processing.png",
     icon_size = 128,
     prerequisites = {
-      "angels-plutonium-power",
+      "kovarex-enrichment-process",
       "angels-ore-electro-whinning-cell",
       "utility-science-pack",
     },

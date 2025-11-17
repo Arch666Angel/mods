@@ -1517,7 +1517,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
     },
     {
       type = "corpse",
-      name = spawn_data.appearance.type .. "-spawner-corpse",
+      name = "angels-"..spawn_data.appearance.type .. "-spawner-corpse",
       flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
       icon = "__base__/graphics/icons/biter-spawner-corpse.png",
       icon_size = 32,

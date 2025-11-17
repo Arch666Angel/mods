@@ -508,6 +508,8 @@
     ["empty-liquid-raw-vegetable-oil-barrel", "empty-angels-liquid-raw-vegetable-oil-barrel"],
     ["empty-liquid-vegetable-oil-barrel", "empty-angels-liquid-vegetable-oil-barrel"],
     ["ethanol-to-ethylene-synthesis", "angels-ethanol-to-ethylene-synthesis"],
+    ["fermentation-corn", "angels-fermentation-corn"],
+    ["fermentation-fruit", "angels-fermentation-fruit"],
     ["fill-alien-goo-barrel", "angels-alien-goo-barrel"],
     ["fill-alien-spores-barrel", "angels-alien-spores-barrel"],
     ["fill-gas-ethanol-barrel", "angels-gas-ethanol-barrel"],

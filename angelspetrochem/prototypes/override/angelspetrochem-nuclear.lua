@@ -11,12 +11,13 @@ local tint_colors = {
 -------------------------------------------------------------------------------
 --need to also update recipe for uranium fuel cells to the new ratio
 --1 U-235 + 29 U-238 + 3 lead plate --> 30 U_fuel_cell
---need to kill kovarex entirely (tech and recipe stuffs)
+--need to kill kovarex entirely (recipe stuffs)
 --update uranium fuel cell reprocessing
 --24 {used}U_fuel_cell--> 4 U-238 + 6 lead
 OV.patch_recipes({
   {
     name = "uranium-processing",
+    hide_from_signal_gui = true,
     results = {
       { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.000055 },
     },
@@ -37,6 +38,7 @@ OV.patch_recipes({
   },
   {
     name = "uranium-fuel-cell",
+    hide_from_signal_gui = true,
     category = "centrifuging",
     ingredients = {
       { "!!" },
@@ -57,6 +59,7 @@ OV.patch_recipes({
   },
   {
     name = "nuclear-fuel-reprocessing",
+    hide_from_signal_gui = true,
     ingredients = {
       { "!!" },
       { type = "item", name = "depleted-uranium-fuel-cell", amount = 5 },
@@ -102,7 +105,20 @@ data.raw.recipe["nuclear-fuel-reprocessing"].icon = nil
 OV.disable_recipe("kovarex-enrichment-process")
 OV.add_unlock("nuclear-power", "angels-uranium-fuel-cell")
 data.raw.item["uranium-fuel-cell"].fuel_value = "2GJ"
-data.raw.technology["kovarex-enrichment-process"].unit.count = 10 -- down from 1500 (Considering empty)
+
+local kovarex = data.raw.technology["kovarex-enrichment-process"]
+kovarex.icon = "__angelspetrochemgraphics__/graphics/technology/plutonium-processing.png"
+kovarex.icon_size = 128
+kovarex.unit.count = 600
+
+OV.add_unlock("kovarex-enrichment-process", "angels-advanced-uranium-reprocessing")
+OV.add_unlock("kovarex-enrichment-process", "angels-plutonium-synthesis")
+OV.add_unlock("kovarex-enrichment-process", "angels-americium-regeneration")
+OV.add_unlock("kovarex-enrichment-process", "angels-mixed-oxide-cell")
+OV.add_unlock("kovarex-enrichment-process", "angels-mixed-oxide-reprocessing")
+OV.add_prereq("kovarex-enrichment-process", "nuclear-fuel-reprocessing")
+OV.add_prereq("atomic-bomb", "uranium-processing")
+OV.remove_prereq("atomic-bomb", "kovarex-enrichment-process")
 
 -----------------------------------------------------------------------------
 -- VANILLA POWER STUFFS -----------------------------------------------------
@@ -116,7 +132,6 @@ move_item("heat-exchanger", "angels-power-nuclear", "c[heat-exchanger]")
 move_item("uranium-235", "angels-power-nuclear-processing", "a[radioactive-element]-b[uranium-235]")
 move_item("uranium-238", "angels-power-nuclear-processing", "a[radioactive-element]-c[uranium-238]")
 move_item("uranium-processing", "angels-power-nuclear-processing", "a[uranium]-a[processing]", "recipe")
-move_item("kovarex-enrichment-process", "angels-power-nuclear-processing", "a[uranium]-b[enrichment]", "recipe")
 
 move_item("uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-b")
 move_item("depleted-uranium-fuel-cell", "angels-power-nuclear-fuel-cell", "a[uranium]-c")
@@ -142,8 +157,6 @@ angelsmods.functions.allow_productivity("angels-thorium-fuel-cell-2")
 -------------------------------------------------------------------------------
 OV.add_unlock("atomic-bomb", "angels-atomic-bomb")
 OV.add_unlock("atomic-bomb", "angels-atomic-bomb-2")
-OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel")
-OV.add_unlock("angels-nuclear-fuel", "angels-nuclear-fuel-2")
 
 -------------------------------------------------------------------------------
 -- Angels nuclear adaption
@@ -198,9 +211,7 @@ end
 -- Bob nuclear adaption
 -------------------------------------------------------------------------------
 if mods["bobassembly"] and data.raw["assembling-machine"]["bob-centrifuge-2"] then
-  OV.add_prereq("angels-plutonium-power", "bob-centrifuge-2")
-else
-  OV.add_prereq("angels-plutonium-power", "production-science-pack")
+  OV.add_prereq("kovarex-enrichment-process", "bob-centrifuge-2")
 end
 if mods["bobassembly"] and data.raw["assembling-machine"]["bob-centrifuge-3"] then
   OV.remove_prereq("angels-thorium-power", "utility-science-pack")
@@ -241,10 +252,10 @@ if mods["bobplates"] then
         OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
       else
         OV.set_science_pack("bob-rtg", "production-science-pack", 1)
-        OV.add_prereq("bobingabout-enrichment-process", "angels-plutonium-power")
-        data.raw.recipe["bobingabout-enrichment-process"].category = "centrifuging-2"
+        OV.add_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
+        data.raw.recipe["bobingabout-enrichment-process"].category = "angels-centrifuging-2"
         if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
-          data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "centrifuging-2"
+          data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "angels-centrifuging-2"
         end
       end
     end
@@ -262,7 +273,7 @@ if mods["bobplates"] then
     OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
     OV.disable_recipe("bobingabout-enrichment-process")
     OV.disable_recipe("bob-plutonium-nucleosynthesis")
-    OV.global_replace_technology("bobingabout-enrichment-process", "angels-plutonium-power")
+    OV.global_replace_technology("bobingabout-enrichment-process", "kovarex-enrichment-process")
     OV.disable_technology("bobingabout-enrichment-process")
   end
 
@@ -331,7 +342,7 @@ if mods["bobplates"] then
     --if overhaul, remove unlocks in each reactor tech
     --add each cell to each reactor... or would it be quicker to just set the setting?
     OV.disable_recipe("bob-plutonium-fuel-cell") --keep as "uranium tier"
-    OV.global_replace_technology("bob-plutonium-fuel-cell", "angels-plutonium-power")
+    OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
     OV.disable_technology("bob-plutonium-fuel-cell")
 
     if data.raw.item["bob-thorium-fuel-cell"] then
@@ -349,7 +360,7 @@ if mods["bobplates"] then
     end
   else --remove them from their individual techs
     OV.disable_recipe({ "bob-plutonium-fuel-cell", "bob-thorium-processing" })
-    OV.global_replace_technology("bob-plutonium-fuel-cell", "angels-plutonium-power")
+    OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
     OV.disable_technology("bob-plutonium-fuel-cell")
   end
 

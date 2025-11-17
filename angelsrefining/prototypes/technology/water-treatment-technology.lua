@@ -164,6 +164,7 @@ data:extend({
     prerequisites = {
       "angels-water-treatment-3",
       "angels-thermal-water-processing",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {

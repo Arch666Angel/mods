@@ -92,18 +92,13 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-petrochem-solids",
     enabled = false,
+    hide_from_signal_gui = true,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-resin", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-solid-resin", amount = 4 },
-    },
-    icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/solid-resin.png",
-        icon_size = 32,
-      },
     },
     crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-resin"),
     order = "b[resin]-b[solid]",
@@ -181,18 +176,13 @@ data:extend({
     category = "crafting-with-fluid",
     subgroup = "angels-petrochem-solids-2",
     enabled = false,
+    hide_from_signal_gui = true,
     energy_required = 2,
     ingredients = {
       { type = "fluid", name = "angels-liquid-rubber", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-solid-rubber", amount = 4 },
-    },
-    icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/solid-rubber.png",
-        icon_size = 32,
-      },
     },
     crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-rubber"),
     order = "b[rubber]-b[solid]",
@@ -458,6 +448,7 @@ data:extend({
     subgroup = "angels-petrochem-catalysts",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-electrode-used", amount = 1 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -481,6 +472,7 @@ data:extend({
     subgroup = "angels-petrochem-solids-2",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-glycerol", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
@@ -508,6 +500,7 @@ data:extend({
     subgroup = "angels-petrochem-solids-2",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },

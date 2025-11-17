@@ -29,6 +29,53 @@ local function angels_casting_machine_fluid_boxes()
   }
 end
 
+---@param is_flipped boolean?
+---@return data.CraftingMachineGraphicsSet
+local function get_graphics_set(is_flipped, pipes)
+	local flipped = is_flipped == true and "-flipped" or ""
+
+  ---@type data.CraftingMachineGraphicsSet
+  local graphics_set = {
+    animation = {
+      layers = {
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = 0.5,
+          scale = 0.5,
+        }),
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation-shadow" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = 0.5,
+          draw_as_shadow = true,
+          scale = 0.5,
+        }),
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-lights" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = 0.5,
+          draw_as_light = true,
+          scale = 0.5,
+        }),
+      },
+    },
+    working_visualisations = {
+      -- Integration patch.
+      {
+        always_draw = true,
+        render_layer = "floor",
+        animation = util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-integration-patch" .. flipped, {
+          priority = "high",
+          scale = 0.5,
+        }),
+      },
+    }
+  }
+
+  return graphics_set
+end
+
 circuit_connector_definitions["angels-casting-machine"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
   { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
@@ -85,49 +132,8 @@ data:extend({
     circuit_connector = circuit_connector_definitions["angels-casting-machine"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 2,
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5,
-          },
-        },
-      },
-      working_visualisations = {
-        {
-          always_draw = true,
-          animation = {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            shift = util.by_pixel(0, -2),
-            draw_as_light = true,
-            scale = 0.5,
-          },
-        },
-      },
-    },
+    graphics_set = get_graphics_set(),
+    graphics_set_flipped = get_graphics_set(true),
     forced_symmetry = "horizontal",
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
@@ -184,49 +190,8 @@ data:extend({
     circuit_connector = circuit_connector_definitions["angels-casting-machine"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 4,
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5,
-          },
-        },
-      },
-      working_visualisations = {
-        {
-          always_draw = true,
-          animation = {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            shift = util.by_pixel(0, -2),
-            draw_as_light = true,
-            scale = 0.5,
-          },
-        },
-      },
-    },
+    graphics_set = get_graphics_set(),
+    graphics_set_flipped = get_graphics_set(true),
     forced_symmetry = "horizontal",
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
@@ -283,49 +248,8 @@ data:extend({
     circuit_connector = circuit_connector_definitions["angels-casting-machine"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5,
-          },
-        },
-      },
-      working_visualisations = {
-        {
-          always_draw = true,
-          animation = {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            shift = util.by_pixel(0, -2),
-            draw_as_light = true,
-            scale = 0.5,
-          },
-        },
-      },
-    },
+    graphics_set = get_graphics_set(),
+    graphics_set_flipped = get_graphics_set(true),
     forced_symmetry = "horizontal",
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
@@ -381,49 +305,8 @@ data:extend({
     circuit_connector = circuit_connector_definitions["angels-casting-machine"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     --ingredient_count = 6,
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5,
-          },
-        },
-      },
-      working_visualisations = {
-        {
-          always_draw = true,
-          animation = {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            shift = util.by_pixel(0, -2),
-            draw_as_light = true,
-            scale = 0.5,
-          },
-        },
-      },
-    },
+    graphics_set = get_graphics_set(),
+    graphics_set_flipped = get_graphics_set(true),
     forced_symmetry = "horizontal",
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",

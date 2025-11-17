@@ -127,6 +127,7 @@ if angelsmods.trigger.smelting_products["steel"].plate then
     "__base__/graphics/icons/plate/steel-plate.png",
     "__angelssmeltinggraphics__/graphics/icons/plate-steel.png"
   )
+  OV.set_research_difficulty("steel-processing", "steel-plate", 10, "craft-item")
 else
   angelsmods.functions.hide("angels-plate-steel")
   angelsmods.functions.hide("angels-roll-steel")

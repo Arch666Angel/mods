@@ -9,6 +9,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-water-saline", amount = 100 },
     },
@@ -33,6 +34,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-chlorine", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
@@ -54,6 +56,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
     },
@@ -77,6 +80,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-chlorine", amount = 60 },
       { type = "fluid", name = "angels-gas-methane", amount = 40 },
@@ -99,6 +103,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -124,6 +129,8 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-salt", amount = 6 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 120 },
@@ -152,6 +159,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 2 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 40 },
@@ -178,6 +186,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "copper-ore", amount = 2 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 40 },
@@ -203,6 +212,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine-2",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-propene", amount = 50 },
       { type = "fluid", name = "angels-gas-chlorine", amount = 50 },
@@ -232,6 +242,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine-2",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-allylchlorid", amount = 100 },
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 50 },
@@ -259,6 +270,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine-2",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 100 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -281,6 +293,7 @@ data:extend({
     subgroup = "angels-petrochem-chlorine-2",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-perchlorate", amount = 2 },
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 50 },

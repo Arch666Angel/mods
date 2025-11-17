@@ -8,9 +8,23 @@ local function check_recipe_products(item_name, recycing_recipe)
 
   -- Try find the base recipe
   local recipe = prototypes.recipe[item_name]
+
   if not recipe then
-    unit_test_functions.print_msg(string.format("Could not find original recipe for item %q.", item_name))
-    return unit_test_functions.test_failed
+    local filters = {
+     { filter = "hidden", invert = true, mode = "and", },
+     { filter = "has-product-item", elem_filters = {{filter = "name", name = item_name}}, mode = "and", }
+    }
+    for _, test_recipe in pairs(prototypes.get_recipe_filtered(filters)) do
+      if #test_recipe.ingredients == 1 or test_recipe.main_product == item_name then
+        recipe = test_recipe
+        break
+      end
+    end
+
+    if not recipe then
+      unit_test_functions.print_msg(string.format("Could not find original recipe for item %q.", item_name))
+      return unit_test_functions.test_failed
+    end
   end
 
   -- Check that all recycling products are ingredients

@@ -3,7 +3,7 @@ local angelsmods = require("__angelsrefining__/prototypes/migration-functions")
 -- fix nuclear technologies
 for _, force in pairs(game.forces) do
   for newTech, oldTechs in pairs({
-    ["angels-plutonium-power"] = { "bob-plutonium-fuel-cell" },
+    ["kovarex-enrichment-process"] = { "bob-plutonium-fuel-cell" },
     ["angels-thorium-power"] = { "bob-nuclear-power-2" },
     ["angels-fusion-power-1"] = { "bob-nuclear-power-3" },
   }) do

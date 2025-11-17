@@ -21,22 +21,6 @@ data.raw["assembling-machine"]["oil-refinery"].icon_size = nil
 data.raw["assembling-machine"]["oil-refinery"].icons = util.table.deepcopy(data.raw["item"]["oil-refinery"].icons)
 data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
---chemical plants
-if angelsmods.trigger.disable_vanilla_chemical_plants then
-else
-  data.raw["item"]["chemical-plant"].icons = angelsmods.functions.add_number_icon_layer(
-    angelsmods.functions.get_object_icons("chemical-plant"),
-    1,
-    angelsmods.petrochem.number_tint
-  )
-  data.raw["item"]["chemical-plant"].icon = nil
-  data.raw["item"]["chemical-plant"].icon_size = nil
-  data.raw["assembling-machine"]["chemical-plant"].icon = nil
-  data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
-  data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
-  data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-end
-
 -- oil
 data.raw["resource"]["crude-oil"]["minable"].results = {
   { type = "fluid", name = "angels-liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1 },

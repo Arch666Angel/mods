@@ -6,6 +6,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-green",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-cellulose-fiber", amount = 5 },
@@ -26,6 +27,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -44,6 +46,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -62,6 +65,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -80,6 +84,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -98,6 +103,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -116,6 +122,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -134,6 +141,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },
@@ -152,6 +160,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-paste",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-paste-cellulose", amount = 1 },

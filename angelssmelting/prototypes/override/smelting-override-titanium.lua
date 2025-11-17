@@ -94,6 +94,7 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
     angelsmods.functions.hide("angels-plate-titanium")
     OV.copy_item_properties("angels-plate-titanium", "bob-titanium-plate")
     OV.disable_recipe({ "bob-titanium-plate" })
+    OV.set_research_difficulty("bob-titanium-processing", "bob-titanium-plate", 10, "craft-item")
   end
 else
   angelsmods.functions.hide("angels-plate-titanium")

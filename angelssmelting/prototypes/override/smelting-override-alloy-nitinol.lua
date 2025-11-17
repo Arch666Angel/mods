@@ -115,5 +115,6 @@ if angelsmods.trigger.smelting_products["nitinol"].plate then
     OV.remove_prereq("bob-nitinol-processing", "bob-titanium-processing")
     OV.disable_recipe({ "bob-nitinol-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-nitinol")
+    OV.set_research_difficulty("bob-nitinol-processing", "bob-nitinol-alloy", 10, "craft-item")
   end
 end

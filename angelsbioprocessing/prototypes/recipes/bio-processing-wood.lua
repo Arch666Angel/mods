@@ -6,6 +6,7 @@ data:extend({
     category = "angels-tree",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -28,6 +29,7 @@ data:extend({
     category = "angels-tree",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -51,6 +53,7 @@ data:extend({
     category = "angels-tree",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -75,6 +78,8 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 16 },
@@ -112,6 +117,8 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },
@@ -139,6 +146,8 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },
@@ -167,6 +176,8 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },
@@ -247,6 +258,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-tree", amount = 1 },
@@ -279,6 +291,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-tree", amount = 1 },
@@ -311,6 +324,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-processing-wood",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-tree", amount = 1 },
@@ -343,6 +357,7 @@ data:extend({
     category = "angels-tree-temperate",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -365,6 +380,7 @@ data:extend({
     category = "angels-tree-temperate",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -388,6 +404,7 @@ data:extend({
     category = "angels-tree-temperate",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-soil", amount = 5 },
@@ -412,6 +429,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 16 },
@@ -450,6 +468,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-temperate-seed", amount = 2 },
@@ -479,6 +498,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-temperate-seed", amount = 2 },
@@ -510,6 +530,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-temperate-tree", amount = 1 },
@@ -528,6 +549,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 40 },
@@ -557,6 +579,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 10,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 100 }, -- 20 ethanol / 5 liquid resin
@@ -587,6 +610,7 @@ data:extend({
     category = "angels-bio-processor",
     subgroup = "angels-bio-arboretum-temperate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "item", name = "wood", amount = 10 },
@@ -609,6 +633,7 @@ data:extend({
     category = "angels-tree-swamp",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-mud", amount = 5 },
@@ -634,6 +659,7 @@ data:extend({
     category = "angels-tree-swamp",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-mud", amount = 5 },
@@ -660,6 +686,7 @@ data:extend({
     category = "angels-tree-swamp",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-mud", amount = 5 },
@@ -687,6 +714,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 16 },
@@ -725,6 +753,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-swamp-seed", amount = 2 },
@@ -754,6 +783,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-swamp-seed", amount = 2 },
@@ -785,6 +815,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-swamp-tree", amount = 1 },
@@ -803,6 +834,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-arboretum-swamp",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-acetone", amount = 40 },
@@ -832,6 +864,7 @@ data:extend({
     category = "angels-tree-desert",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 5 },
@@ -857,6 +890,7 @@ data:extend({
     category = "angels-tree-desert",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 5 },
@@ -883,6 +917,7 @@ data:extend({
     category = "angels-tree-desert",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 5 },
@@ -910,6 +945,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 16 },
@@ -948,6 +984,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-desert-seed", amount = 2 },
@@ -977,6 +1014,7 @@ data:extend({
     category = "angels-arboretum",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-desert-seed", amount = 2 },
@@ -1007,6 +1045,7 @@ data:extend({
     category = "angels-seed-extractor",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-desert-tree", amount = 1 },
@@ -1025,6 +1064,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-arboretum-desert",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-acetone", amount = 40 },

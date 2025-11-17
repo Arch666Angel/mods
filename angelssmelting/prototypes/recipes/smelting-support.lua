@@ -51,6 +51,7 @@ data:extend({
     subgroup = "angels-coolant",
     energy_required = 5, --4
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-coolant-used", amount = 200, maximum_temperature = 50 },
       { type = "item", name = "angels-filter-coal", amount = 1 },
@@ -74,6 +75,7 @@ data:extend({
     subgroup = "angels-coolant",
     energy_required = 3.5, --4
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-coolant-used", amount = 200, maximum_temperature = 50 },
       { type = "item", name = "angels-filter-ceramic", amount = 1 },
@@ -219,6 +221,7 @@ data:extend({
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-sand", amount = 40 },
       { type = "item", name = "angels-motor-casing-0", amount = 1 },
@@ -250,6 +253,7 @@ data:extend({
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-clay", amount = 50 },
       { type = "item", name = "angels-motor-casing-0", amount = 1 },
@@ -280,6 +284,7 @@ data:extend({
     subgroup = "angels-mold-casting",
     energy_required = 3,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-spent-mold-non-expendable", amount = 1 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 20 },

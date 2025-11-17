@@ -37,9 +37,6 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   end
 
   if angelsmods.trigger.smelting_products["solder"].mixture then
-    if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
-      OV.add_prereq("angels-solder-smelting-basic", "automation-science-pack")
-    end
   else
     angelsmods.functions.hide("angels-solder-mixture")
     OV.disable_recipe({ "angels-solder-mixture", "angels-liquid-molten-solder", "angels-solder-mixture-smelting" })

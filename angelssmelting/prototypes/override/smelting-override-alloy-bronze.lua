@@ -229,5 +229,6 @@ if angelsmods.trigger.smelting_products["bronze"].plate then
       OV.remove_prereq("bob-fluid-generator-1", "bob-alloy-processing")
       OV.add_prereq("bob-fluid-generator-1", "angels-bronze-smelting-1")
     end
+    OV.set_research_difficulty("bob-alloy-processing", "bob-bronze-alloy", 10, "craft-item")
   end
 end

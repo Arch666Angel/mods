@@ -8,6 +8,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 6,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {},
     results = {
       { type = "fluid", name = "angels-gas-compressed-air", amount = 200 },
@@ -27,6 +28,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-compressed-air", amount = 100 },
     },
@@ -49,6 +51,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-nitrate", amount = 5 },
       { type = "fluid", name = "angels-gas-compressed-air", amount = 60 },
@@ -77,6 +80,8 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
@@ -101,6 +106,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-oxygen", amount = 60 },
       { type = "fluid", name = "angels-gas-nitrogen-monoxide", amount = 40 },
@@ -122,6 +128,8 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
       { type = "fluid", name = "angels-gas-nitrogen", amount = 50 },
@@ -146,6 +154,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 50 },
@@ -167,6 +176,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 40 },
@@ -191,6 +201,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-nitrogen-dioxide", amount = 100 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -218,6 +229,7 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-nitrate", amount = 5 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
@@ -249,6 +261,8 @@ data:extend({
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-urea", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-blue", amount = 1 }, --Pl
@@ -273,6 +287,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hypochlorite", amount = 5 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 250 },
@@ -294,6 +309,8 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-monochloramine", amount = 50 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 200 },
@@ -324,6 +341,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-methanol", amount = 50 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 250 },
@@ -348,6 +366,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-methylamine", amount = 200 },
       { type = "fluid", name = "angels-gas-methanol", amount = 50 },
@@ -377,6 +396,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-dimethylamine", amount = 200 },
       { type = "fluid", name = "angels-gas-monochloramine", amount = 50 },
@@ -406,6 +426,8 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-nitrogen-dioxide", amount = 100 },
       { type = "item", name = "angels-catalyst-metal-yellow", amount = 1 },
@@ -430,6 +452,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 100 },
@@ -449,6 +472,7 @@ data:extend({
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
       { type = "fluid", name = "angels-liquid-perchloric-acid", amount = 100 },
@@ -476,6 +500,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 10 },
       { type = "fluid", name = "angels-gas-dinitrogen-tetroxide", amount = 10 },
@@ -494,6 +519,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-dimethylhydrazine", amount = 30 },
       { type = "fluid", name = "angels-gas-hydrazine", amount = 30 },
@@ -513,6 +539,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-ammonium-nitrate", amount = 3 },
       { type = "item", name = "pipe", amount = 1 },
@@ -531,6 +558,8 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-ammonium-perchlorate", amount = 3 },
       { type = "item", name = "pipe", amount = 1 },

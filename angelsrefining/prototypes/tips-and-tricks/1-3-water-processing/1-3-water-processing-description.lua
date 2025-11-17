@@ -6,14 +6,10 @@ else -- overhaul mode
   table.insert(description, { "tips-and-tricks-description.angels-water-processing-overhaul" })
   if mods["angelspetrochem"] then
     local items = { "" }
-    table.insert(items, tnt.get_item_from_name("angels-water-yellow-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("sulfur", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("angels-water-red-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("angels-solid-sodium-nitrate", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("angels-water-green-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("angels-solid-salt", "item", "- gives: "))
-    table.insert(items, tnt.get_item_from_name("angels-water-greenyellow-waste", "fluid", "\n[font=default-bold]"))
-    table.insert(items, tnt.get_item_from_name("angels-fluorite-ore", "item", "- gives: "))
+    table.insert(items, { "tips-and-tricks-misc.a-gives-b", "[fluid=angels-water-yellow-waste]", "[item=sulfur]"})
+    table.insert(items, { "tips-and-tricks-misc.a-gives-b", "[fluid=angels-water-red-waste]", "[item=angels-solid-sodium-nitrate]"})
+    table.insert(items, { "tips-and-tricks-misc.a-gives-b", "[fluid=angels-water-green-waste]", "[item=angels-solid-salt]"})
+    table.insert(items, { "tips-and-tricks-misc.a-gives-b", "[fluid=angels-water-greenyellow-waste]", "[item=angels-fluorite-ore]"})
     table.insert(description, items)
   end
 end

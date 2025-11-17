@@ -6,6 +6,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-nuts", amount = 10 },
@@ -30,6 +31,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-pips", amount = 10 },
@@ -54,6 +56,7 @@ data:extend({
     category = "angels-bio-pressing",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "item", name = "angels-solid-beans", amount = 10 },
@@ -78,6 +81,7 @@ data:extend({
     category = "angels-filtering",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-raw-vegetable-oil", amount = 100 },
@@ -102,6 +106,7 @@ data:extend({
     category = "angels-filtering-2",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-raw-vegetable-oil", amount = 100 },
@@ -126,6 +131,7 @@ data:extend({
     category = "oil-processing",
     subgroup = "angels-bio-processor-press-vegetables",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-vegetable-oil", amount = 100 },

@@ -7,6 +7,7 @@ data:extend({
     category = "angels-water-treatment",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 10,
     ingredients = {
       { type = "fluid", name = "angels-liquid-polluted-fish-atmosphere", amount = 100 },
@@ -24,6 +25,7 @@ data:extend({
     category = "angels-bio-processing",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "fluid", name = "angels-alien-spores", amount = 50 },
@@ -42,6 +44,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 3,
     ingredients = {
       { type = "item", name = "angels-alien-bacteria", amount = 1 },
@@ -108,6 +111,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-seeded-dish", amount = 1 },
@@ -125,6 +129,7 @@ data:extend({
     category = "crafting",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-seeded-dish", amount = 1 },
@@ -142,6 +147,7 @@ data:extend({
     category = "advanced-crafting",
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-seeded-dish", amount = 1 },
@@ -177,6 +183,7 @@ data:extend({
     category = "angels-ore-refining-t1-5",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-dust", amount = 10 },
@@ -207,6 +214,7 @@ data:extend({
     category = "angels-liquifying",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-crystal-powder", amount = 1 },

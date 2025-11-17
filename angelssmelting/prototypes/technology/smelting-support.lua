@@ -40,6 +40,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-1",
+      "angels-stone-smelting-1",
       "advanced-material-processing",
     },
     effects = {
@@ -76,7 +77,9 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
     prerequisites = {
+      "angels-aluminium-smelting-1",
       "angels-metallurgy-2",
+      "angels-stone-smelting-2",
       "chemical-science-pack",
     },
     effects = {
@@ -115,7 +118,10 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-3",
+      "angels-stone-smelting-3",
+      "angels-titanium-smelting-1",
       "production-science-pack",
+      "processing-unit",
     },
     effects = {
       {
@@ -154,6 +160,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-4",
+      "angels-tungsten-smelting-1",
       "utility-science-pack",
     },
     effects = {
@@ -591,6 +598,7 @@ data:extend({
     icon_size = 128,
     prerequisites = {
       "advanced-material-processing",
+      "angels-stone-smelting-1",
       "angels-water-treatment",
     },
     effects = {

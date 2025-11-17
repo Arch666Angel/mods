@@ -121,6 +121,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "angels-aluminium-smelting-1",
+      "angels-stone-smelting-2",
       "angels-bio-processing-red",
       "chemical-science-pack",
     },

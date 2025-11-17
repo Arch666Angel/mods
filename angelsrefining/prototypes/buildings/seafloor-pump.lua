@@ -1,6 +1,13 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+circuit_connector_definitions["angels-seafloor-pump"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 31, main_offset = util.by_pixel( 46.5, -16), shadow_offset = util.by_pixel( 46.5, -16), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 17.5,  25.25), shadow_offset = util.by_pixel( 17.5,  25.25), show_shadow = true },
+  { variation = 28, main_offset = util.by_pixel( 46.125,  4.375), shadow_offset = util.by_pixel( 46.125,  4.375), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(-17.5,  25.25), shadow_offset = util.by_pixel(-17.5,  25.25), show_shadow = true },
+})
+
 data:extend({
   {
     type = "item",
@@ -121,7 +128,7 @@ data:extend({
       scale = 0.5,
       x = 3 * 64,
     },
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
+    circuit_connector = circuit_connector_definitions["angels-seafloor-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

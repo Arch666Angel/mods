@@ -12,6 +12,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -33,6 +34,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -54,6 +56,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -75,6 +78,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -96,6 +100,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -117,6 +122,7 @@ data:extend({
     allow_decomposition = false,
     show_amount_in_title = false,
     always_show_products = true,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -134,6 +140,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-slag", amount = 1 } },
     results = {
       { type = "item", name = "angels-stone-crushed", amount = 2 },

@@ -228,6 +228,9 @@ if mods["bobplates"] or mods["bobelectronics"] then
         },
       },
     })
+    if mods["bobpower"] then
+      OV.add_prereq("bob-electric-pole-3", "angels-rubbers")
+    end
   else
     angelsmods.functions.hide("bob-rubber")
     OV.disable_recipe("bob-rubber")
@@ -258,4 +261,22 @@ if mods["bobplates"] then
   OV.add_prereq("bob-silicon-processing", "angels-coal-processing")
   OV.remove_prereq("bob-electronics", "bob-chemical-processing-1")
   OV.add_prereq("bob-electronics", "angels-coal-processing")
+end
+
+-------------------------------------------------------------------------------
+-- BUILDING PREREQUISITES -----------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  if not angelsmods.smelting then
+    OV.add_prereq("angels-advanced-chemistry-2", "bob-aluminium-processing")
+    OV.add_prereq("angels-advanced-chemistry-4", "bob-titanium-processing")
+    OV.add_prereq("angels-advanced-chemistry-5", "bob-tungsten-processing")
+  end
+
+  if mods["boblogistics"] then
+    OV.add_prereq("angels-advanced-chemistry-2", "bob-zinc-processing")
+    OV.add_prereq("angels-nitrogen-processing-4", "bob-tungsten-alloy-processing")
+  end
+  
+  OV.add_prereq("angels-advanced-chemistry-5", "bob-advanced-processing-unit")
 end

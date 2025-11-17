@@ -90,6 +90,8 @@ data:extend({
     icon_size = 160,
     order = "c-a",
     prerequisites = {
+      "angels-aluminium-smelting-1",
+      "angels-stone-smelting-2",
       "lamp",
       "chemical-science-pack",
     },
@@ -326,6 +328,9 @@ data:extend({
       "angels-bio-refugium-butchery-2",
       "angels-bio-refugium-puffer-2",
       "angels-bio-processing-crystal-splinter-2",
+      "angels-stone-smelting-3",
+      "angels-titanium-smelting-1",
+      "processing-unit",
       "production-science-pack",
       "stone-wall",
     },

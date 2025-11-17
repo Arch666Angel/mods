@@ -6,6 +6,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-beans", amount = 5 },
@@ -30,6 +31,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-corn", amount = 5 },
@@ -54,6 +56,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-leafs", amount = 5 },
@@ -78,6 +81,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-nuts", amount = 5 },
@@ -102,6 +106,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-pips", amount = 5 },
@@ -126,6 +131,7 @@ data:extend({
     category = "angels-nutrient-extractor",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     ingredients = {
       { type = "item", name = "angels-solid-fruit", amount = 5 },
@@ -150,6 +156,7 @@ data:extend({
     category = "angels-gas-refining",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 100 },
@@ -173,6 +180,7 @@ data:extend({
     category = "angels-gas-refining",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 100 },
@@ -196,6 +204,7 @@ data:extend({
     category = "angels-gas-refining",
     subgroup = "angels-bio-processor-nutrient",
     enabled = false,
+    auto_recycle = false,
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 100 },

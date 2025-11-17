@@ -440,7 +440,6 @@ local function add_ignores()
   }
 
   if script.active_mods["angelsrefining"] then
-    ignore_building_recipes = true
     ignored_unlocks["angels-water-treatment-2"] = {
       items = {},
       fluids = {
@@ -563,8 +562,8 @@ local function add_ignores()
         ["angels-thorium-232"] = true,
       },
       categories = {
-        ["centrifuging-2"] = true,
-        ["centrifuging-3"] = true,
+        ["angels-centrifuging-2"] = true,
+        ["angels-centrifuging-3"] = true,
       },
     }
     ignored_unlocks["atomic-bomb"] = {
@@ -580,7 +579,6 @@ local function add_ignores()
   end
 
   if script.active_mods["SeaBlock"] then
-    ignore_building_recipes = false
     ignored_unlocks["starting"] = {
       items = {
         ["bob-basic-circuit-board"] = true,

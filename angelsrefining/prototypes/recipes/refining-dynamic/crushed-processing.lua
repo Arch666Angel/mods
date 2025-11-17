@@ -8,6 +8,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -32,6 +34,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore2-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -56,6 +60,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -80,6 +86,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore4-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -104,6 +112,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -128,6 +138,8 @@ data:extend({
     energy_required = 1,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 4 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
