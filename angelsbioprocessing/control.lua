@@ -4,7 +4,6 @@ script.on_event(defines.events.on_entity_died, function(event)
   if (not killing_force) or loot.is_empty() then
     return
   end
-  loot = loot.get_contents()
   for loot_item_name, loot_technology_to_research in pairs({
     ["angels-small-alien-artifact"] = "angels-alien-artifact",
     ["angels-small-alien-artifact-red"] = "angels-alien-artifact-red",
@@ -14,7 +13,7 @@ script.on_event(defines.events.on_entity_died, function(event)
     ["angels-small-alien-artifact-purple"] = "angels-alien-artifact-purple",
     ["angels-small-alien-artifact-green"] = "angels-alien-artifact-green",
   }) do
-    if loot[loot_item_name] then
+    if loot.find_item_stack(loot_item_name) then
       local technology = killing_force.technologies[loot_technology_to_research]
       if technology then
         technology.researched = true
