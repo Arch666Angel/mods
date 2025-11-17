@@ -14,9 +14,10 @@ script.on_event(defines.events.on_entity_died, function(event)
     ["angels-small-alien-artifact-green"] = "angels-alien-artifact-green",
   }) do
     if loot.find_item_stack(loot_item_name) then
-      local technology = killing_force.technologies[loot_technology_to_research]
-      if technology then
-        technology.researched = true
+      if killing_force.technologies[loot_technology_to_research] then
+        -- Using this trigger function takes care of checking tech prerequisites.
+        -- It also will show the "Technology researched" chat message.
+        killing_force.script_trigger_research(loot_technology_to_research)
       end
     end
   end
