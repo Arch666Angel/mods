@@ -8,7 +8,7 @@
       type = "technology",
       name = "angels-alien-artifact-red",
       localised_name = { "item-name.angels-alien-artifact-red" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-red.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -40,7 +40,7 @@
       type = "technology",
       name = "angels-alien-artifact-yellow",
       localised_name = { "item-name.angels-alien-artifact-yellow" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-yellow.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -71,7 +71,7 @@
       type = "technology",
       name = "angels-alien-artifact-orange",
       localised_name = { "item-name.angels-alien-artifact-orange" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-orange.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -101,7 +101,7 @@
       type = "technology",
       name = "angels-alien-artifact-blue",
       localised_name = { "item-name.angels-alien-artifact-blue" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-blue.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -131,7 +131,7 @@
       type = "technology",
       name = "angels-alien-artifact-purple",
       localised_name = { "item-name.angels-alien-artifact-purple" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-purple.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -162,7 +162,7 @@
       type = "technology",
       name = "angels-alien-artifact-green",
       localised_name = { "item-name.angels-alien-artifact-green" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact-green.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {
@@ -193,7 +193,7 @@
       type = "technology",
       name = "angels-alien-artifact",
       localised_name = { "item-name.angels-alien-artifact" },
-      icon = "__angelsbioprocessinggraphics__/graphics/technology/paste.png",
+      icon = "__angelsbioprocessinggraphics__/graphics/technology/alien-artifact.png",
       icon_size = 128,
       order = "c-a",
       prerequisites = {},
