@@ -5,18 +5,6 @@
     -- RED ARTIFACTS --------------------------------------------------------------
     -------------------------------------------------------------------------------
     {
-      type = "tool",
-      name = "angels-alien-artifact-red-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-red" },
-      localised_description = { "item-description.angels-alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-red-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
-    {
       type = "technology",
       name = "angels-alien-artifact-red",
       localised_name = { "item-name.angels-alien-artifact-red" },
@@ -37,29 +25,17 @@
           recipe = "angels-alien-artifact-red-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-red-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-red.png",
+        icon_size = 32,
+      }
+
     },
     -------------------------------------------------------------------------------
     -- YELLOW ARTIFACTS -----------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-yellow-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-yellow" },
-      localised_description = { "item-description.angels-alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-yellow-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact-yellow",
@@ -81,29 +57,16 @@
           recipe = "angels-alien-artifact-yellow-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-yellow-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-yellow.png",
+        icon_size = 32,
+      }
     },
     -------------------------------------------------------------------------------
     -- ORANGE ARTIFACTS -----------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-orange-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-orange" },
-      localised_description = { "item-description.angels-alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-orange-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact-orange",
@@ -124,29 +87,16 @@
           recipe = "angels-alien-artifact-orange-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-orange-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-orange.png",
+        icon_size = 32,
+      }
     },
     -------------------------------------------------------------------------------
     -- BLUE ARTIFACTS -------------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-blue-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-blue" },
-      localised_description = { "item-description.angels-alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact-blue",
@@ -167,29 +117,16 @@
           recipe = "angels-alien-artifact-blue-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-blue-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-blue.png",
+        icon_size = 32,
+      }
     },
     -------------------------------------------------------------------------------
     -- PURPLE ARTIFACTS -----------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-purple-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-purple" },
-      localised_description = { "item-description.angels-alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-purple-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact-purple",
@@ -211,29 +148,16 @@
           recipe = "angels-alien-artifact-purple-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-purple-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-purple.png",
+        icon_size = 32,
+      }
     },
     -------------------------------------------------------------------------------
     -- GREEN ARTIFACTS ------------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-green-tool",
-      localised_name = { "item-name.angels-small-alien-artifact-green" },
-      localised_description = { "item-description.alien-artifact-tool" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-green-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact-green",
@@ -255,28 +179,16 @@
           recipe = "angels-alien-artifact-green-from-basic",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --{ "angels-alien-artifact-green-tool", 1 },
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-green.png",
+        icon_size = 32,
+      }
     },
     -------------------------------------------------------------------------------
     -- BASE ARTIFACTS (pink) ------------------------------------------------------
     -------------------------------------------------------------------------------
-    {
-      type = "tool",
-      name = "angels-alien-artifact-tool",
-      localised_name = { "item-name.angels-small-alien-artifact" },
-      icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact-small.png",
-      icon_size = 32,
-      hidden = true,
-      stack_size = 1,
-      durability = 1,
-      order = "zzz",
-    },
     {
       type = "technology",
       name = "angels-alien-artifact",
@@ -291,13 +203,12 @@
           recipe = "angels-alien-artifact-from-small",
         },]]
       },
-      unit = {
-        count = 50,
-        ingredients = {
-          { "chemical-science-pack", 1 }, --alien-artifact-tool not recognised in lab
-        },
-        time = 30,
-      },
+      research_trigger = {
+        type = "scripted",
+        trigger_description = "Locate this artifact in your fight against the biters!",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/alien-artifact.png",
+        icon_size = 32,
+      }
     },
   })
 --end
