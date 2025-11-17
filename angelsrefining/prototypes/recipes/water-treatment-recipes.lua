@@ -283,7 +283,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-lithium", amount = 20 },
     },
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-thermal-water"),
     order = "d[solid-lithium]",
   },
@@ -304,7 +303,6 @@ data:extend({
       { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
     },
     main_product = "angels-water-heavy-mud",
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-water-heavy-mud", "angels-water-viscous-mud", "water" }),
     order = "b",
   },
@@ -324,7 +322,6 @@ data:extend({
       { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
     },
     main_product = "angels-water-concentrated-mud",
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-water-concentrated-mud",
       "angels-water-heavy-mud",
@@ -348,7 +345,6 @@ data:extend({
       { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
     },
     main_product = "angels-water-light-mud",
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-water-light-mud",
       "angels-water-concentrated-mud",
@@ -372,7 +368,6 @@ data:extend({
       { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
     },
     main_product = "angels-water-thin-mud",
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-water-thin-mud", "angels-water-light-mud", "water" }),
     order = "e",
   },
@@ -392,7 +387,13 @@ data:extend({
       { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
     },
     main_product = "angels-water-saline",
-    icon_size = 32,
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.create_viscous_liquid_fluid_icon(
+        nil,
+        { { 039, 112, 194 }, { 168, 173, 173 }, { 070, 133, 232 }, { 185, 185, 185, 0.8 } }
+      ),    
+      5, angelsmods.refining.number_tint
+    ),
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-water-saline", "angels-water-thin-mud", "water" }),
     order = "f",
   },
@@ -410,7 +411,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-water-viscous-mud", amount = 150 },
     },
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-water-viscous-mud", "water" }),
     order = "a",
   },
@@ -429,7 +429,6 @@ data:extend({
     results = {
       { type = "item", name = "landfill", amount = 1 },
     },
-    icon_size = 32,
     order = "a",
   },
   --WASHING FILTERING
@@ -480,7 +479,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-clay", amount = 3 },
     },
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       { r = 100 / 255, g = 065 / 255, b = 042 / 255 },
       "angels-water-concentrated-mud",
@@ -503,7 +501,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-limestone", amount = 3 },
     },
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       { r = 185 / 255, g = 152 / 255, b = 126 / 255 },
       "angels-water-light-mud",
@@ -526,7 +523,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-sand", amount = 5 },
     },
-    icon_size = 32,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       { r = 199 / 255, g = 192 / 255, b = 181 / 255 },
       "angels-water-thin-mud",
