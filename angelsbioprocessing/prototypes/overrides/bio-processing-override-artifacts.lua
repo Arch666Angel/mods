@@ -2,20 +2,20 @@ local OV = angelsmods.functions.OV
 
 local contains_artifact_creation = false
 local artifact = {
-  ["reg"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact" or "angels-alien-artifact",
-  ["small-reg"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact" or "angels-small-alien-artifact",
-  ["red"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-red" or "angels-alien-artifact-red",
-  ["small-red"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-red" or "angels-small-alien-artifact-red",
-  ["yellow"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-yellow" or "angels-alien-artifact-yellow",
-  ["small-yellow"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-yellow" or "angels-small-alien-artifact-yellow",
-  ["orange"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-orange" or "angels-alien-artifact-orange",
-  ["small-orange"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-orange" or "angels-small-alien-artifact-orange",
-  ["green"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-green" or "angels-alien-artifact-green",
-  ["small-green"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-green" or "angels-small-alien-artifact-green",
-  ["blue"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-blue" or "angels-alien-artifact-blue",
-  ["small-blue"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-blue" or "angels-small-alien-artifact-blue",
-  ["purple"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-alien-artifact-purple" or "angels-alien-artifact-purple",
-  ["small-purple"] = (bobmods and bobmods.plates and bobmods.enemies) and "bob-small-alien-artifact-purple" or "angels-small-alien-artifact-purple",
+  ["reg"]          = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact"])              and "bob-alien-artifact"              or "angels-alien-artifact",
+  ["small-reg"]    = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact"])        and "bob-small-alien-artifact"        or "angels-small-alien-artifact",
+  ["red"]          = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-red"])          and "bob-alien-artifact-red"          or "angels-alien-artifact-red",
+  ["small-red"]    = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-red"])    and "bob-small-alien-artifact-red"    or "angels-small-alien-artifact-red",
+  ["yellow"]       = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-yellow"])       and "bob-alien-artifact-yellow"       or "angels-alien-artifact-yellow",
+  ["small-yellow"] = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-yellow"]) and "bob-small-alien-artifact-yellow" or "angels-small-alien-artifact-yellow",
+  ["orange"]       = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-orange"])       and "bob-alien-artifact-orange"       or "angels-alien-artifact-orange",
+  ["small-orange"] = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-orange"]) and "bob-small-alien-artifact-orange" or "angels-small-alien-artifact-orange",
+  ["green"]        = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-green"])        and "bob-alien-artifact-green"        or "angels-alien-artifact-green",
+  ["small-green"]  = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-green"])  and "bob-small-alien-artifact-green"  or "angels-small-alien-artifact-green",
+  ["blue"]         = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-blue"])         and "bob-alien-artifact-blue"         or "angels-alien-artifact-blue",
+  ["small-blue"]   = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"])   and "bob-small-alien-artifact-blue"   or "angels-small-alien-artifact-blue",
+  ["purple"]       = (bobmods and bobmods.enemies and data.raw.item["bob-alien-artifact-purple"])       and "bob-alien-artifact-purple"       or "angels-alien-artifact-purple",
+  ["small-purple"] = (bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-purple"]) and "bob-small-alien-artifact-purple" or "angels-small-alien-artifact-purple",
 }
 -------------------------------------------------------------------------------
 -- RED ARTIFACTS --------------------------------------------------------------
