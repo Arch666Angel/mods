@@ -125,7 +125,11 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "military-science-pack",
-      "angels-alien-artifact", --TODO where is this defined? [angelsbioprocessing\prototypes\technology\bio-processing-artifacts.lua]
+      -- Commit 381f85e removed this this prerequisite technology from
+      -- angelsbioprocessing/prototypes/technology/bio-processing-artifacts.lua
+      -- It used to be a tech that would get researched as you drop the artifact loop from biter kills.
+      -- For now this is commented out - maybe this trigger research could be re-added to exploration instead.
+      --"angels-alien-artifact",
     },
     effects = {
       {
