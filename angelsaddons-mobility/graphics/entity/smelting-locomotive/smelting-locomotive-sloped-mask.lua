@@ -1,8 +1,8 @@
 return
 {
-  width = 455,
-  height = 536,
-  shift = util.by_pixel_hr( 0.5, -40.0 ),
+  width = 456,
+  height = 543,
+  shift = util.by_pixel_hr(0.0, -36.5),
   line_length = 4,
   filenames = {
     "-1.png",
