@@ -11,26 +11,32 @@ local ore_data = {
   {
     name = "angels-ore1", -- Saphirite
     enabled = true,
+    tint = { r = 0.5, g = 0.6, b = 1.0 },
   },
   {
     name = "angels-ore2", -- Jivolite
     enabled = true,
+    tint = { r = 1.0, g = 1.0, b = 0.6 },
   },
   {
     name = "angels-ore3", -- Stiratite
     enabled = true,
+    tint = { r = 0.5, g = 0.8, b = 1.0 },
   },
   {
     name = "angels-ore4", -- Crotinnium
     enabled = true,
+    tint = { r = 0.95, g = 0.95, b = 0.95 },
   },
   {
     name = "angels-ore5", -- Rubyte
     enabled = not angelsmods.functions.is_special_vanilla(),
+    tint = { r = 0.9, g = 0.5, b = 0.5 },
   },
   {
     name = "angels-ore6", -- Bobmonium
     enabled = not angelsmods.functions.is_special_vanilla(),
+    tint = { r = 0.6, g = 0.5, b = 0.5 },
   },
 }
 
@@ -91,24 +97,28 @@ do
             width = 192,
             height = 160,
             shift = { 0.5, 0 },
+            tint = ore.tint,
           },
           {
             filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-2.png",
             width = 192,
             height = 160,
             shift = { 0.5, 0 },
+            tint = ore.tint,
           },
           {
             filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-3.png",
             width = 192,
             height = 160,
             shift = { 0.5, 0 },
+            tint = ore.tint,
           },
           {
             filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-4.png",
             width = 192,
             height = 160,
             shift = { 0.5, 0 },
+            tint = ore.tint,
           },
         },
       },
