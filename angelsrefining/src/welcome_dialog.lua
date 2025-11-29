@@ -90,6 +90,7 @@ function welcome_dialog:create_welcome_dialog(player_index)
 
   local peaceful_mode = player.surface.map_gen_settings.peaceful_mode
   local no_enemies_mode = player.surface.map_gen_settings.no_enemies_mode
+  local enemies_text = (no_enemies_mode and "disabled") or (peaceful_mode and "peaceful") or "enabled"
   local enemies_text = (not no_enemies_mode and not peaceful_mode and "enabled") or "disabled"
   welcomeFrameContent.add({
   type = "label",
