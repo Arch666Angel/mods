@@ -42,8 +42,6 @@ funcs.generate_train_entities({
   factoriopedia_simulation = simulations.factoriopedia_crawler_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
-  color = funcs.default_train_colors.crawler,
-  allow_manual_color = true,
   vertical_selection_shift = -0.796875,
   weight = 1500,
   max_speed = 1.5,
@@ -58,6 +56,8 @@ funcs.generate_train_entities({
   allow_robot_dispatch_in_automatic_mode = true,
   minimap_representation = cargo_minimap_representation,
   selected_minimap_representation = cargo_selected_minimap_representation,
+  allow_manual_color = true,
+  color = funcs.default_train_colors.crawler,
   resistances = {
     {
       type = "fire",
@@ -133,6 +133,18 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-mask", {
+          dice = 4,
+          priority = "very-low",
+          apply_runtime_tint = true,
+          tint_as_overlay = true,
+          flags = { "mask" },
+          allow_low_quality_rotation = true,
+          back_equals_front = true,
+          direction_count = 128,
+          scale = 0.5,
+          usage = "train",
+        }),
         util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-shadow", {
           dice = 4,
           priority = "very-low",
@@ -147,12 +159,23 @@ funcs.generate_train_entities({
       },
     },
     slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_back_equals_front = true,
     sloped = funcs.use_sloped_train_features and {
       layers = {
         util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-sloped", {
           dice = 4,
           priority = "very-low",
-          direction_count = 160,
+          direction_count = 80,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-sloped-mask", {
+          dice = 4,
+          priority = "very-low",
+          apply_runtime_tint = true,
+          tint_as_overlay = true,
+          flags = { "mask" },
+          direction_count = 80,
           scale = 0.5,
           usage = "train",
         }),
@@ -161,7 +184,7 @@ funcs.generate_train_entities({
           priority = "very-low",
           flags = { "shadow" },
           draw_as_shadow = true,
-          direction_count = 160,
+          direction_count = 80,
           scale = 0.5,
           usage = "train",
         }),
@@ -171,6 +194,14 @@ funcs.generate_train_entities({
   horizontal_doors = {
     layers = {
       util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-horizontal", {
+        frame_count = 8,
+        scale = 0.5,
+        usage = "train",
+      }),
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-horizontal-mask", {
+        apply_runtime_tint = true,
+        tint_as_overlay = true,
+        flags = { "mask" },
         frame_count = 8,
         scale = 0.5,
         usage = "train",
@@ -187,6 +218,14 @@ funcs.generate_train_entities({
   vertical_doors = {
     layers = {
       util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-vertical", {
+        frame_count = 8,
+        scale = 0.5,
+        usage = "train",
+      }),
+      util.sprite_load("__angelsaddons-mobility__/graphics/entity/crawler-cargo-wagon/crawler-cargo-wagon-door-vertical-mask", {
+        apply_runtime_tint = true,
+        tint_as_overlay = true,
+        flags = { "mask" },
         frame_count = 8,
         scale = 0.5,
         usage = "train",
