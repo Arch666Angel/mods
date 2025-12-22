@@ -587,8 +587,8 @@ end
 ---@type Angels.Addons.Mobility.TrainColors
 local train_colors = {
   petro = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 1 },
-  crawler = { r = 0.92, g = 0.07, b = 0, a = 1 },
-  smelting = { r = 1, g = 0.38, b = 0.0, a = 1 },
+  crawler = { r = 1, g = 0.73, b = 0, a = 1 },
+  smelting = { r = 1, g = 0.38, b = 0, a = 1 },
 }
 
 return {

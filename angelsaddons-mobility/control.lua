@@ -12,6 +12,8 @@ local destination_entity_types = {
 
 local petro_tier_amount = settings.startup["angels-petrotrain-tier-amount"].value
 local smelting_tier_amount = settings.startup["angels-smeltingtrain-tier-amount"].value
+local crawler_tier_amount = settings.startup["angels-crawlertrain-tier-amount"].value
+
 local wagons_to_copy = {
   ["angels-petro-gas-wagon"] = petro_tier_amount >= 1,
   ["angels-petro-gas-wagon-2"] = petro_tier_amount >= 2,
@@ -30,6 +32,18 @@ local wagons_to_copy = {
   ["angels-smelting-cargo-wagon-3"] = smelting_tier_amount >= 3,
   ["angels-smelting-cargo-wagon-4"] = smelting_tier_amount >= 4,
   ["angels-smelting-cargo-wagon-5"] = smelting_tier_amount >= 5,
+
+  ["angels-crawler-cargo-wagon"] = crawler_tier_amount >= 1,
+  ["angels-crawler-cargo-wagon-2"] = crawler_tier_amount >= 2,
+  ["angels-crawler-cargo-wagon-3"] = crawler_tier_amount >= 3,
+  ["angels-crawler-cargo-wagon-4"] = crawler_tier_amount >= 4,
+  ["angels-crawler-cargo-wagon-5"] = crawler_tier_amount >= 5,
+
+  ["angels-crawler-robot-wagon"] = crawler_tier_amount >= 1,
+  ["angels-crawler-robot-wagon-2"] = crawler_tier_amount >= 2,
+  ["angels-crawler-robot-wagon-3"] = crawler_tier_amount >= 3,
+  ["angels-crawler-robot-wagon-4"] = crawler_tier_amount >= 4,
+  ["angels-crawler-robot-wagon-5"] = crawler_tier_amount >= 5,
 }
 
 ---Copies and pastes the color from the source entity to the destination entity, if the source and

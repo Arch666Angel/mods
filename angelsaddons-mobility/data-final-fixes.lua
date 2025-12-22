@@ -19,6 +19,18 @@ local wagons = {
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 3 and "angels-smelting-cargo-wagon-3" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 4 and "angels-smelting-cargo-wagon-4" or nil,
   angelsmods.addons.mobility.smeltingtrain.tier_amount >= 5 and "angels-smelting-cargo-wagon-5" or nil,
+
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 1 and "angels-crawler-cargo-wagon" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 2 and "angels-crawler-cargo-wagon-2" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 3 and "angels-crawler-cargo-wagon-3" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 4 and "angels-crawler-cargo-wagon-4" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 5 and "angels-crawler-cargo-wagon-5" or nil,
+
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 1 and "angels-crawler-robot-wagon" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 2 and "angels-crawler-robot-wagon-2" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 3 and "angels-crawler-robot-wagon-3" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 4 and "angels-crawler-robot-wagon-4" or nil,
+  angelsmods.addons.mobility.crawlertrain.tier_amount >= 5 and "angels-crawler-robot-wagon-5" or nil,
 }
 
 for _, prototype_type in pairs({
