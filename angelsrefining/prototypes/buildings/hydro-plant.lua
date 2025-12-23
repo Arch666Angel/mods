@@ -22,7 +22,7 @@ local function hydropipepictures()
       shift = { 0.06, -0.6 },
     },
     west = {
-      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-east1.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-west1.png",
       priority = "extra-high",
       width = 48,
       height = 48,
@@ -55,7 +55,7 @@ local function hydropipepictures2()
       shift = { 0.06, -0.6 },
     },
     west = {
-      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-east2.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/hydro-plant/pipe-west2.png",
       priority = "extra-high",
       width = 48,
       height = 48,

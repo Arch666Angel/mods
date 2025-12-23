@@ -65,13 +65,48 @@ function angelsmods.refining.leachingpipepictures()
   }
 end
 
-function angelsmods.refining.filtrationpipepictures()
+function angelsmods.refining.filtrationpipepictures1()
   return {
     north = {
-      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-north.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-north1.png",
+      priority = "extra-high",
+      width = 68,
+      height = 74,
+      scale = 0.5,
+      shift = { 0, 1 },
+    },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-east.png",
       priority = "extra-high",
       width = 34,
-      height = 37,
+      height = 47,
+      shift = { -0.7, -0.1 },
+    },
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-south.png",
+      priority = "extra-high",
+      width = 34,
+      height = 39,
+      shift = { 0, -0.75 },
+    },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-west.png",
+      priority = "extra-high",
+      width = 34,
+      height = 47,
+      shift = { 0.7, -0.1 },
+    },
+  }
+end
+
+function angelsmods.refining.filtrationpipepictures2()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-north2.png",
+      priority = "extra-high",
+      width = 68,
+      height = 74,
+      scale = 0.5,
       shift = { 0, 1 },
     },
     east = {
