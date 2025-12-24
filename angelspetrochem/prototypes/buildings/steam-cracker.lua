@@ -113,7 +113,6 @@ data:extend({
       sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -248,7 +247,6 @@ data:extend({
       sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -383,7 +381,6 @@ data:extend({
       sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -517,7 +514,6 @@ data:extend({
       sound = { filename = "__angelspetrochemgraphics__/sound/steam-cracker.ogg", volume = 0.65 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
