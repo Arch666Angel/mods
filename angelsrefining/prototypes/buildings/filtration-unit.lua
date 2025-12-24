@@ -72,6 +72,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
+        mirrored_pipe_picture = angelsmods.refining.filtrationpipepictures2(),
         pipe_covers = pipecoverspictures(),
         pipe_picture = angelsmods.refining.filtrationpipepictures1(),
         volume = 1000,
@@ -81,6 +82,7 @@ data:extend({
       },
       {
         production_type = "input",
+        mirrored_pipe_picture = angelsmods.refining.filtrationpipepictures1(),
         pipe_covers = pipecoverspictures(),
         pipe_picture = angelsmods.refining.filtrationpipepictures2(),
         volume = 1000,
@@ -90,6 +92,7 @@ data:extend({
       },
       {
         production_type = "output",
+        mirrored_pipe_picture = angelsmods.refining.filtrationpipepictures1(),
         pipe_covers = pipecoverspictures(),
         pipe_picture = angelsmods.refining.filtrationpipepictures2(),
         volume = 100,
@@ -99,6 +102,7 @@ data:extend({
       },
       {
         production_type = "output",
+        mirrored_pipe_picture = angelsmods.refining.filtrationpipepictures2(),
         pipe_covers = pipecoverspictures(),
         pipe_picture = angelsmods.refining.filtrationpipepictures1(),
         volume = 100,

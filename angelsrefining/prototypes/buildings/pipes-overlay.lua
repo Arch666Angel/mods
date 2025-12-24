@@ -104,10 +104,10 @@ function angelsmods.refining.filtrationpipepictures2()
     north = {
       filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-north2.png",
       priority = "extra-high",
-      width = 68,
-      height = 74,
+      width = 128,
+      height = 128,
       scale = 0.5,
-      shift = { 0, 1 },
+      shift = { 0, 1.5 },
     },
     east = {
       filename = "__angelsrefininggraphics__/graphics/entity/filtration-unit/pipe-east.png",
