@@ -4,8 +4,6 @@ local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wag
 local funcs = require("prototypes.train-functions")
 local simulations = require("prototypes.factoriopedia-simulations")
 
-local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
-
 data:extend({
   {
     type = "equipment-grid",
@@ -35,16 +33,15 @@ funcs.generate_train_entities({
   icon = "__angelsaddons-mobility__/graphics/icons/petro-tank2-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
+  capacity = mods["angelspetrochem"] and 40000 or 25000,
   minable = { mining_time = 1, result = "angels-petro-oil-wagon" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 600,
-  capacity = mods["angelspetrochem"] and 40000 or 25000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
   factoriopedia_simulation = simulations.factoriopedia_petro_tank2,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
-  color = funcs.default_train_colors.petro,
   vertical_selection_shift = -0.796875,
   weight = 1000,
   max_speed = 1.5,
@@ -54,6 +51,12 @@ funcs.generate_train_entities({
   connection_distance = 3,
   joint_distance = 4,
   energy_per_hit_point = 6,
+  equipment_grid = "angels-petro-oil-wagon",
+  fast_replaceable_group = "angels-petro-oil-wagon",
+  minimap_representation = fluid_minimap_representation,
+  selected_minimap_representation = fluid_selected_minimap_representation,
+  allow_manual_color = true,
+  color = funcs.default_train_colors.petro,
   resistances = {
     {
       type = "fire",
@@ -120,76 +123,70 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon", {
+          dice = 4,
           priority = "very-low",
-          width = 256,
-          height = 256,
-          direction_count = 64,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          shift = { 0, -0.75 },
-        },
-        {
+          allow_low_quality_rotation = true,
+          back_equals_front = true,
+          direction_count = 128,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon-mask", {
+          dice = 4,
           priority = "very-low",
-          flags = { "mask" },
-          width = 256,
-          height = 256,
-          direction_count = 64,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
           apply_runtime_tint = true,
-          shift = { 0.0, -0.75 },
-          back_equals_front = true,
-        },
-        {
-          priority = "very-low",
-          width = 256,
-          height = 256,
-          direction_count = 64,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          apply_runtime_tint = false,
-          tint = fixed_tint,
-          shift = { 0.0, -0.75 },
-          back_equals_front = true,
-        },
-        {
-          priority = "very-low",
+          tint_as_overlay = true,
           flags = { "mask" },
-          width = 256,
-          height = 256,
-          direction_count = 64,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-tint-2.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          apply_runtime_tint = false,
-          tint = { r = 0.2, g = 0.2, b = 0.2, a = 10 / 255 },
-          shift = { 0.0, -0.75 },
+          allow_low_quality_rotation = true,
           back_equals_front = true,
-        },
-        {
-          width = 256,
-          height = 256,
+          direction_count = 128,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon-shadow", {
+          dice = 4,
+          priority = "very-low",
+          flags = { "shadow" },
           draw_as_shadow = true,
-          direction_count = 64,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-tank2/petro-tank2-shadow.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          shift = { 0.0, -0.5 },
-        },
+          allow_low_quality_rotation = true,
+          back_equals_front = true,
+          direction_count = 128,
+          scale = 0.5,
+          usage = "train",
+        }),
+      },
+    },
+    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_back_equals_front = true,
+    sloped = funcs.use_sloped_train_features and {
+      layers = {
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon-sloped", {
+          dice = 4,
+          priority = "very-low",
+          direction_count = 80,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon-sloped-mask", {
+          dice = 4,
+          priority = "very-low",
+          apply_runtime_tint = true,
+          tint_as_overlay = true,
+          flags = { "mask" },
+          direction_count = 80,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-oil-wagon/petro-oil-wagon-sloped-shadow", {
+          dice = 4,
+          priority = "very-low",
+          flags = { "shadow" },
+          draw_as_shadow = true,
+          direction_count = 80,
+          scale = 0.5,
+          usage = "train",
+        }),
       },
     },
   },
@@ -208,8 +205,4 @@ funcs.generate_train_entities({
   },
   crash_trigger = crash_trigger(),
   impact_category = "wood",
-  equipment_grid = "angels-petro-oil-wagon",
-  fast_replaceable_group = "angels-petro-oil-wagon",
-  minimap_representation = fluid_minimap_representation,
-  selected_minimap_representation = fluid_selected_minimap_representation,
 })
