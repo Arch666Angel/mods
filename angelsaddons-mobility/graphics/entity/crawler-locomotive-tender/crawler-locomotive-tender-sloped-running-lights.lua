@@ -1,6 +1,6 @@
 return
 {
-  width = 160,
+  width = 158,
   height = 72,
   shift = util.by_pixel_hr(0.0, -3.0),
   line_length = 4,
