@@ -32,7 +32,7 @@ function angelsmods.refining.floatationpipepictures()
   }
 end
 
-function angelsmods.refining.leachingpipepictures()
+function angelsmods.refining.leachingpipepictures1()
   return {
     north = {
       filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/empty.png",
@@ -42,11 +42,12 @@ function angelsmods.refining.leachingpipepictures()
       shift = { 0, 0 },
     },
     east = {
-      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-east.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-east1.png",
       priority = "extra-high",
-      width = 41,
-      height = 40,
-      shift = { -0.71875, 0.05 },
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      shift = { -1, 0 },
     },
     south = {
       filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-south.png",
@@ -61,6 +62,41 @@ function angelsmods.refining.leachingpipepictures()
       width = 1,
       height = 1,
       shift = { 0, 0 },
+    },
+  }
+end
+function angelsmods.refining.leachingpipepictures2()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-north2.png",
+      priority = "extra-high",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      shift = { 0, 1 },
+    },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-east2.png",
+      priority = "extra-high",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      shift = { -1, 0 },
+    },
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-south.png",
+      priority = "extra-high",
+      width = 41,
+      height = 40,
+      shift = { 0.05, -0.375 },
+    },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/ore-leaching-plant/pipe-west2.png",
+      priority = "extra-high",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      shift = { 1, 0 },
     },
   }
 end

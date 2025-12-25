@@ -70,14 +70,16 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
@@ -164,14 +166,16 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
@@ -256,14 +260,16 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
       },
       {
         production_type = "output",
-        pipe_picture = angelsmods.refining.leachingpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.leachingpipepictures2(),
+        pipe_picture = angelsmods.refining.leachingpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = {
