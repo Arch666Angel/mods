@@ -7,7 +7,7 @@ if mods["boblogistics"] then
     "bob-overflow-valve",
     "bob-topup-valve",
   })
-  angelsmods.functions.add_flag("bob-valve", "hidden")
-  angelsmods.functions.add_flag("bob-overflow-valve", "hidden")
-  angelsmods.functions.add_flag("bob-topup-valve", "hidden")
+  angelsmods.functions.hide("bob-valve")
+  angelsmods.functions.hide("bob-overflow-valve")
+  angelsmods.functions.hide("bob-topup-valve")
 end
