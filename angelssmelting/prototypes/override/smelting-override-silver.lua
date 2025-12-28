@@ -81,6 +81,7 @@ if angelsmods.trigger.smelting_products["silver"].plate then
     OV.global_replace_item("angels-plate-silver", "bob-silver-plate")
     angelsmods.functions.hide("angels-plate-silver")
     OV.copy_item_properties("angels-plate-silver", "bob-silver-plate")
+    OV.remove_unlock("bob-electronics", "bob-silver-plate")
     OV.hide_recipe({ "bob-silver-plate" })
   end
 else
