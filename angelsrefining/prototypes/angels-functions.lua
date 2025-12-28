@@ -1426,7 +1426,9 @@ local building_types = {
   "gate",
   "container",
   "storage-tank",
+  "valve",
 }
+
 function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/fluid (may be a table containing a list of items/fluids)
   if type(entity) == "table" then
     for _, ent in pairs(entity) do
