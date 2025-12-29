@@ -168,3 +168,77 @@ function angelsmods.refining.filtrationpipepictures2()
     },
   }
 end
+
+function angelsmods.refining.salinationplantpipepictures1()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+  }
+end
+
+function angelsmods.refining.salinationplantpipepictures2()
+  return {
+    north = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+    east = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/pipe-east2-test.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { -1, 0 },
+    },
+    south = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+    west = {
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = { 0, 0 },
+    },
+  }
+end

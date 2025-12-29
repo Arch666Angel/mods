@@ -88,7 +88,8 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        --pipe_picture = salinationpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.salinationplantpipepictures2(),
+        pipe_picture = angelsmods.refining.salinationplantpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
@@ -185,7 +186,8 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        --pipe_picture = salinationpipepictures(),
+        mirrored_pipe_picture = angelsmods.refining.salinationplantpipepictures2(),
+        pipe_picture = angelsmods.refining.salinationplantpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
