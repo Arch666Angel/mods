@@ -98,7 +98,8 @@ data:extend({
       },
       {
         production_type = "output",
-        --pipe_picture = salinationpipepictures2(),
+        mirrored_pipe_picture = angelsmods.refining.salinationplantpipepictures2(),
+        pipe_picture = angelsmods.refining.salinationplantpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = { { flow_direction = "output", position = { 1, 3 }, direction = defines.direction.south } },
@@ -196,7 +197,8 @@ data:extend({
       },
       {
         production_type = "output",
-        --pipe_picture = salinationpipepictures2(),
+        mirrored_pipe_picture = angelsmods.refining.salinationplantpipepictures2(),
+        pipe_picture = angelsmods.refining.salinationplantpipepictures1(),
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections = { { flow_direction = "output", position = { 1, 3 }, direction = defines.direction.south } },
