@@ -217,7 +217,7 @@ function angelsmods.refining.salinationplantpipepictures2()
       shift = { 0, 0 },
     },
     east = {
-      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/pipe-east2-test.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/salination-plant/pipe-east2.png",
       priority = "extra-high",
       width = 128,
       height = 128,
