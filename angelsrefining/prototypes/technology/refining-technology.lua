@@ -696,7 +696,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-ore-powderizer-3",
+        recipe = "angels-powderizer-3",
       },
       {
         type = "unlock-recipe",
@@ -942,7 +942,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-ore-powderizer",
+        recipe = "angels-powderizer",
       },
       {
         type = "unlock-recipe",
@@ -993,7 +993,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-ore-powderizer-2",
+        recipe = "angels-powderizer-2",
       },
       {
         type = "unlock-recipe",

@@ -537,18 +537,18 @@ else
   else
     -- hide milling drums
     OV.hide_recipe({
-      "angels-ore-powderizer",
-      "angels-ore-powderizer-2",
-      "angels-ore-powderizer-3",
+      "angels-powderizer",
+      "angels-powderizer-2",
+      "angels-powderizer-3",
       "angels-milling-drum",
       "angels-milling-drum-lubricated",
     })
-    angelsmods.functions.hide("angels-ore-powderizer")
-    angelsmods.functions.hide("angels-ore-powderizer-2")
-    angelsmods.functions.hide("angels-ore-powderizer-3")
+    angelsmods.functions.hide("angels-powderizer")
+    angelsmods.functions.hide("angels-powderizer-2")
+    angelsmods.functions.hide("angels-powderizer-3")
     angelsmods.functions.hide("angels-milling-drum")
     angelsmods.functions.hide("angels-milling-drum-lubricated")
-    OV.remove_unlock("angels-advanced-ore-refining-3", "angels-ore-powderizer-3")
+    OV.remove_unlock("angels-advanced-ore-refining-3", "angels-powderizer-3")
   end
 end
 

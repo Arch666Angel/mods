@@ -470,36 +470,36 @@ data:extend({
   --ORE POWDERIZER
   {
     type = "recipe",
-    name = "angels-ore-powderizer",
-    localised_name = { "entity-name.angels-ore-powderizer" },
+    name = "angels-powderizer",
+    localised_name = { "entity-name.angels-powderizer" },
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "angels-ore-powderizer-2",
-    localised_name = { "entity-name.angels-ore-powderizer-2" },
+    name = "angels-powderizer-2",
+    localised_name = { "entity-name.angels-powderizer-2" },
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer-2", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "angels-ore-powderizer-3",
-    localised_name = { "entity-name.angels-ore-powderizer-3" },
+    name = "angels-powderizer-3",
+    localised_name = { "entity-name.angels-powderizer-3" },
     energy_required = 2,
     enabled = false,
     ingredients = {
       { type = "item", name = "angels-void", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer-3", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer-3", amount = 1 } },
   },
   --ELECTRO WHINNING CELL
   {

@@ -622,8 +622,8 @@ angelsmods.functions.RB.build({
   --ORE POWDERIZER
   {
     type = "recipe",
-    name = "angels-ore-powderizer",
-    localised_name = { "entity-name.angels-ore-powderizer" },
+    name = "angels-powderizer",
+    localised_name = { "entity-name.angels-powderizer" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -632,12 +632,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t2-brick", amount = 1 },
       { type = "item", name = "t2-gears", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "angels-ore-powderizer-2",
-    localised_name = { "entity-name.angels-ore-powderizer-2" },
+    name = "angels-powderizer-2",
+    localised_name = { "entity-name.angels-powderizer-2" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -646,12 +646,12 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t3-gears", amount = 1 },
       { type = "item", name = "t3-brick", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer-2", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer-2", amount = 1 } },
   },
   {
     type = "recipe",
-    name = "angels-ore-powderizer-3",
-    localised_name = { "entity-name.angels-ore-powderizer-3" },
+    name = "angels-powderizer-3",
+    localised_name = { "entity-name.angels-powderizer-3" },
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -660,7 +660,7 @@ angelsmods.functions.RB.build({
       { type = "item", name = "t4-gears", amount = 1 },
       { type = "item", name = "t4-brick", amount = 1 },
     },
-    results = { { type = "item", name = "angels-ore-powderizer-3", amount = 1 } },
+    results = { { type = "item", name = "angels-powderizer-3", amount = 1 } },
   },
   --ELECTRO WHINNING CELL
   {

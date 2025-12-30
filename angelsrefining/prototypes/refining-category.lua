@@ -228,7 +228,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "angels-ore-powderizer",
+    name = "angels-powderizer",
     group = "angels-resource-refining",
     order = "z[building]-f[powderizer]",
   },

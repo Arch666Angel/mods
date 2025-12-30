@@ -249,8 +249,8 @@ angelsmods.functions.RB.set_fallback("item", "wash-1", { { "block-production-1",
 angelsmods.functions.RB.set_fallback("item", "wash-2", { { "block-production-2", 3 }, { "angels-washing-plant" } })
 
 angelsmods.functions.RB.set_fallback("item", "orepowder-1", { { "block-production-2", 1 } })
-angelsmods.functions.RB.set_fallback("item", "orepowder-2", { { "block-mprocessing-3", 1 }, { "angels-ore-powderizer" } })
-angelsmods.functions.RB.set_fallback("item", "orepowder-3", { { "block-mprocessing-4", 1 }, { "angels-ore-powderizer-2" } })
+angelsmods.functions.RB.set_fallback("item", "orepowder-2", { { "block-mprocessing-3", 1 }, { "angels-powderizer" } })
+angelsmods.functions.RB.set_fallback("item", "orepowder-3", { { "block-mprocessing-4", 1 }, { "angels-powderizer-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "oreelectro-1", { { "block-mprocessing-4", 3 } })
 angelsmods.functions.RB.set_fallback(

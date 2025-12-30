@@ -1,4 +1,4 @@
-circuit_connector_definitions["angels-ore-powderizer"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+circuit_connector_definitions["angels-powderizer"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 25, main_offset = util.by_pixel(-18, -17.625), shadow_offset = util.by_pixel(-18, -17.625), show_shadow = true },
   { variation = 25, main_offset = util.by_pixel(-18, -17.625), shadow_offset = util.by_pixel(-18, -17.625), show_shadow = true },
   { variation = 25, main_offset = util.by_pixel(-18, -17.625), shadow_offset = util.by_pixel(-18, -17.625), show_shadow = true },
@@ -8,21 +8,21 @@ circuit_connector_definitions["angels-ore-powderizer"] = circuit_connector_defin
 data:extend({
   {
     type = "item",
-    name = "angels-ore-powderizer",
+    name = "angels-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 1, angelsmods.refining.number_tint),
-    subgroup = "angels-ore-powderizer",
+    subgroup = "angels-powderizer",
     order = "a",
-    place_result = "angels-ore-powderizer",
+    place_result = "angels-powderizer",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "angels-ore-powderizer",
+    name = "angels-powderizer",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -30,9 +30,9 @@ data:extend({
       },
     }, 1, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "angels-ore-powderizer" },
-    fast_replaceable_group = "angels-ore-powderizer",
-    next_upgrade = "angels-ore-powderizer-2",
+    minable = { mining_time = 1, result = "angels-powderizer" },
+    fast_replaceable_group = "angels-powderizer",
+    next_upgrade = "angels-powderizer-2",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -48,7 +48,7 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "100kW",
-    circuit_connector = circuit_connector_definitions["angels-ore-powderizer"],
+    circuit_connector = circuit_connector_definitions["angels-powderizer"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
@@ -71,21 +71,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "angels-ore-powderizer-2",
+    name = "angels-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 2, angelsmods.refining.number_tint),
-    subgroup = "angels-ore-powderizer",
+    subgroup = "angels-powderizer",
     order = "b",
-    place_result = "angels-ore-powderizer-2",
+    place_result = "angels-powderizer-2",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "angels-ore-powderizer-2",
+    name = "angels-powderizer-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -93,9 +93,9 @@ data:extend({
       },
     }, 2, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "angels-ore-powderizer-2" },
-    fast_replaceable_group = "angels-ore-powderizer",
-    next_upgrade = "angels-ore-powderizer-3",
+    minable = { mining_time = 1, result = "angels-powderizer-2" },
+    fast_replaceable_group = "angels-powderizer",
+    next_upgrade = "angels-powderizer-3",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -111,7 +111,7 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "125kW",
-    circuit_connector = circuit_connector_definitions["angels-ore-powderizer"],
+    circuit_connector = circuit_connector_definitions["angels-powderizer"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
@@ -134,21 +134,21 @@ data:extend({
   },
   {
     type = "item",
-    name = "angels-ore-powderizer-3",
+    name = "angels-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
         icon_size = 32,
       },
     }, 3, angelsmods.refining.number_tint),
-    subgroup = "angels-ore-powderizer",
+    subgroup = "angels-powderizer",
     order = "c",
-    place_result = "angels-ore-powderizer-3",
+    place_result = "angels-powderizer-3",
     stack_size = 10,
   },
   {
     type = "assembling-machine",
-    name = "angels-ore-powderizer-3",
+    name = "angels-powderizer-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/powderizer-ico.png",
@@ -156,8 +156,8 @@ data:extend({
       },
     }, 3, angelsmods.refining.number_tint),
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 1, result = "angels-ore-powderizer-3" },
-    fast_replaceable_group = "angels-ore-powderizer",
+    minable = { mining_time = 1, result = "angels-powderizer-3" },
+    fast_replaceable_group = "angels-powderizer",
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -173,7 +173,7 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "150kW",
-    circuit_connector = circuit_connector_definitions["angels-ore-powderizer"],
+    circuit_connector = circuit_connector_definitions["angels-powderizer"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
