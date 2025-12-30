@@ -197,7 +197,7 @@ data:extend({
         shift = { -8, 8 },
       },
       {
-        icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-240.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-239.png",
         icon_size = 64,
         scale = 32 / 64 * 32 / 64,
         shift = { 8, 8 },
