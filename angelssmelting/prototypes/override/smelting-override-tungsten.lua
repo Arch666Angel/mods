@@ -115,12 +115,6 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     
     OV.remove_prereq("bob-tungsten-processing", "bob-nickel-processing")
   end
-
-  if mods["angelsindustries"] and angelsmods.industries.tech then
-  else -- not angels industry tech mode
-    OV.remove_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-2")
-    OV.add_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-1")
-  end
 else
   angelsmods.functions.hide("angels-casting-powder-tungsten")
   angelsmods.functions.hide("angels-plate-tungsten")

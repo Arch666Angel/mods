@@ -33,7 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-bio-puffer-egg-shell-powder",
-    category = "angels-powderizing-1",
+    category = "angels-powderizing-2",
     subgroup = "angels-bio-puffer-egg",
     enabled = false,
     auto_recycle = false,

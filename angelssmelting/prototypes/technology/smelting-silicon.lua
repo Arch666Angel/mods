@@ -7,9 +7,10 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-silicon-tech.png",
     icon_size = 256,
     prerequisites = {
-      "angels-metallurgy-2",
+      --"angels-metallurgy-2",
       "angels-coal-processing",
       "angels-nitrogen-processing-1",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {

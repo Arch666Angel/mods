@@ -337,7 +337,7 @@ data:extend({
       "angels-bio-processing-alien-2",
       "angels-bio-refugium-puffer-2",
       "angels-bio-processing-crystal-splinter-1",
-      "angels-ore-powderizer",
+      "angels-ore-advanced-floatation",
       "angels-slag-processing-2",
     },
     effects = {
@@ -439,6 +439,7 @@ data:extend({
     prerequisites = {
       "angels-bio-processing-crystal-shard-1",
       "angels-bio-refugium-biter-3",
+      "angels-advanced-ore-refining-3",
     },
     effects = {
       {

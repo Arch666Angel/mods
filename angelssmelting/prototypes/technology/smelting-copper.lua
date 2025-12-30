@@ -42,6 +42,7 @@ data:extend({
       "angels-ore-processing-1",
       "angels-copper-smelting-1",
       "angels-basic-chemistry",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {

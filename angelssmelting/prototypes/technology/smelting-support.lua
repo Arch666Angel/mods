@@ -226,6 +226,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-powder-mixer",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-powderizer",
+      },
     },
     unit = {
       count = 100,
@@ -254,6 +258,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-powder-mixer-2",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-powderizer-2",
       },
     },
     unit = {
@@ -284,6 +292,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-powder-mixer-3",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-powderizer-3",
       },
     },
     unit = {

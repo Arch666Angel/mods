@@ -170,7 +170,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-cobalt",
-    category = "angels-powderizing-2",
+    category = "angels-powderizing-3",
     subgroup = "angels-cobalt",
     energy_required = 0.5,
     enabled = false,

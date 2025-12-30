@@ -156,7 +156,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-titanium",
-    category = "angels-powderizing-2",
+    category = "angels-powderizing-3",
     subgroup = "angels-titanium",
     energy_required = 0.5,
     enabled = false,

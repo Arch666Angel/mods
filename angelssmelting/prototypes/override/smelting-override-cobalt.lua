@@ -111,11 +111,6 @@ end
 -- POWDER ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["cobalt"].powder then
-  if mods["angelsindustries"] and angelsmods.industries.tech then
-  else -- not angels industry tech mode
-    OV.remove_unlock("angels-cobalt-smelting-2", "angels-powder-cobalt")
-    OV.add_unlock("angels-cobalt-smelting-1", "angels-powder-cobalt")
-  end
 else
   angelsmods.functions.hide("angels-powder-cobalt")
   OV.disable_recipe({ "angels-powder-cobalt" })

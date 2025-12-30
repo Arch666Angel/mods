@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-gold",
-    category = "angels-powderizing-2",
+    category = "angels-powderizing-3",
     subgroup = "angels-gold",
     energy_required = 0.5,
     enabled = false,
