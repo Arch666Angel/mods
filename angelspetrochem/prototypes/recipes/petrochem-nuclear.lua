@@ -24,7 +24,7 @@ data:extend({
       { type = "item", name = "angels-neptunium-240", amount = 8 },
     },
     results = {
-      { type = "item", name = "angels-plutonium-240", amount = 5 },
+      { type = "item", name = "angels-plutonium-240", amount = 8 },--was 5
     },
     main_product = "angels-plutonium-240",
     always_show_products = true,
@@ -157,6 +157,57 @@ data:extend({
       primary = tint_colors.red,
       secondary = tint_colors.red,
       tertiary = tint_colors.red,
+    },
+  },
+  {
+    type = "recipe",
+    name = "angels-plutonium-breeding",
+    enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
+    category = "angels-centrifuging-3",
+    subgroup = "angels-power-nuclear-processing",
+    energy_required = 20,
+    ingredients = {
+      { type = "item", name = "angels-neptunium-240", amount = 5 },
+      { type = "item", name = "uranium-238", amount = 52 },
+    },
+    results = {
+      { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.95, ignored_by_productivity = 1 }, --balances the isotope numbers
+      { type = "item", name = "angels-plutonium-240", amount = 13, ignored_by_productivity = 13},
+      { type = "item", name = "uranium-238", amount = 43, ignored_by_productivity = 43 },
+    },
+    icons = {
+      { -- need to have something as bottom layer
+        icon = "__base__/graphics/icons/uranium-processing.png",
+        icon_size = 64,
+        scale = 32 / 64,
+        tint = { a = 0.01 },
+      },
+      {
+        icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-240.png",
+        icon_size = 64,
+        scale = 32 / 64 * 40 / 64,
+        shift = { 0, -6 },
+      },
+      {
+        icon = "__base__/graphics/icons/uranium-238.png",
+        icon_size = 64,
+        scale = 32 / 64 * 32 / 64,
+        shift = { -8, 8 },
+      },
+      {
+        icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-240.png",
+        icon_size = 64,
+        scale = 32 / 64 * 32 / 64,
+        shift = { 8, 8 },
+      },
+    },
+    order = "b[mox]-c[processing]",
+    crafting_machine_tint = {
+      primary = tint_colors.orange,
+      secondary = tint_colors.orange,
+      tertiary = tint_colors.orange,
     },
   },
 })
@@ -338,7 +389,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-plutonium-240", amount = 2 },
-      { type = "item", name = "angels-slag", amount = 10, ignored_by_productivity = 10 },
+      { type = "item", name = "angels-slag", amount = 4, ignored_by_productivity = 4 },
       { type = "item", name = "angels-curium-245", amount = 3, probability = 0.45 },
       { type = "item", name = "uranium-235", amount = 1, probability = 0.2 },
       { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
@@ -514,7 +565,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-slag", amount = 10, ignored_by_productivity = 10 },
-      { type = "item", name = "angels-neptunium-240", amount = 2 },
+      { type = "item", name = "angels-neptunium-240", amount = 3 }, --2
       { type = "item", name = "angels-uranium-234", amount = 2, probability = 0.05 },
       { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
       {

@@ -30,6 +30,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-burner-reactor",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-plutonium-breeding",
+      },
     },
     unit = {
       count = 1200,

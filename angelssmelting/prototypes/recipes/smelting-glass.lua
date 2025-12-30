@@ -11,10 +11,10 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "angels-powder-silicon", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 2 },
     },
     results = {
-      { type = "item", name = "angels-solid-glass-mixture", amount = 1 },
+      { type = "item", name = "angels-solid-glass-mixture", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-glass-mixture"),

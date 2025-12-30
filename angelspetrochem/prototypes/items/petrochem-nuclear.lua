@@ -265,4 +265,9 @@ angels-mixed-oxide-reprocessing
 angels-americium-regeneration
 5 Am-241 + 25 U-235 -> 2 U-238 + 1 Pu-240 + 15 U-235
 "centrifuging" (centrifuge)
+
+Add in a plutonium breeding reaction - as a variant of the neptunium renegeration reaction
+angels-plutonium-breeding
+5 Np-240 + 52 U-238 -> 13 Pu-240 + 43 U-238 + 0.95 U-234
+
 ]]
