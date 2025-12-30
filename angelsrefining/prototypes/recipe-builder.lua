@@ -15,14 +15,8 @@ local function check_raw_for(i_type, i_name)
     local dr = data.raw
     for _, it in pairs(item_subtypes) do
       local result = dr[it][i_name]
-      if result then
-        local result_hidden = false
-        for _, f in pairs(result.flags or {}) do
-          result_hidden = result_hidden or (f == "hidden")
-        end
-        if not result_hidden then
-          return result
-        end
+      if result and not result.hidden then
+        return result
       end
     end
     return nil
@@ -31,33 +25,34 @@ local function check_raw_for(i_type, i_name)
   end
 end
 
-RB.set_fallback =
-  function(i_type, i_name, fb_list, i_condition) -- i_type either "item" or "fluid", i_name the name of the item, fb_list a table containing subtables { name, multiplier, condition } where item_name is a string, multiplier is a positive number (defaults to 1), and condition is a function taking i_type and i_name as arguments and returning a boolean (defaults to return true) can also be formatted { name = name, multiplier = multiplier, condition = condition }, condition (optional) is like the condition field in a subtable of fb_list but for i_name
-    local parent = fallbacks[i_type]
-    if parent then
-      if check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
-        parent[i_name] = nil
-      else
-        local sentinel = true
-        for _, fb in pairs(fb_list) do
-          local n, m, c
-          if fb[1] then
-            n, m, c = fb[1], fb[2] or 1, fb[3]
-          else
-            n, m, c = fb.name, fb.multiplier or 1, fb.condition
-          end
-          if check_raw_for(i_type, n) and (not c or c(i_type, n)) then
-            parent[i_name] = { n, m }
-            sentinel = false
-            break
-          end
+RB.set_fallback = function(i_type, i_name, fb_list, i_condition) -- i_type either "item" or "fluid", i_name the name of the item, fb_list a table containing subtables { name, multiplier, condition } where item_name is a string, multiplier is a positive number (defaults to 1), and condition is a function taking i_type and i_name as arguments and returning a boolean (defaults to return true) can also be formatted { name = name, multiplier = multiplier, condition = condition }, condition (optional) is like the condition field in a subtable of fb_list but for i_name
+  local parent = fallbacks[i_type]
+  if parent then
+    if parent[i_name] ~= nil then
+      -- fallback already exists
+    elseif check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
+      parent[i_name] = nil
+    else
+      local sentinel = true
+      for _, fb in pairs(fb_list) do
+        local n, m, c
+        if fb[1] then
+          n, m, c = fb[1], fb[2] or 1, fb[3]
+        else
+          n, m, c = fb.name, fb.multiplier or 1, fb.condition
         end
-        if sentinel then
-          parent[i_name] = { "fallback-sentinel", 0 }
+        if check_raw_for(i_type, n) and (not c or c(i_type, n)) then
+          parent[i_name] = { n, m }
+          sentinel = false
+          break
         end
+      end
+      if sentinel then
+        parent[i_name] = { "fallback-sentinel", 0 }
       end
     end
   end
+end
 
 local function get_fallback(i_type, i_name)
   local parent = fallbacks[i_type]
@@ -79,50 +74,31 @@ local function check_ingredients(ingredients)
   local i, l = 1, #ingredients
   while i <= l do
     local item = ingredients[i]
-    local i_type, i_name, i_count
-    if not item.name then
-      i_type = "item"
-      i_name = item[1]
-      i_count = item[2]
-    else
-      i_type = item.type
-      i_name = item.name
-      i_count = item.amount
+    if item.type and item.name then
+      local i_name = item.name
+      local i_amount = item.amount
+      local n, m = get_fallback(item.type, i_name)
+      i_name, i_amount = n, math.ceil(i_amount * m)
+      local j = ingredient_map[item.type][i_name]
+      if j then -- ingredient is already present, add to existing ingredient
+        ingredients[j].amount = ingredients[j].amount + i_amount
+        table.remove(ingredients, i)
+        l = l - 1
+      elseif i_amount == 0 then -- delete ingredient on fallback sentinel
+        table.remove(ingredients, i)
+        l = l - 1
+      else -- adjust ingredient for fallback
+        ingredients[i] = { type = item.type, name = i_name, amount = i_amount, maximum_temperature = item.maximum_temperature, minimum_temperature = item.minimum_temperature }
+        ingredient_map[item.type][i_name] = i
+        i = i + 1
+      end
     end
-    local n, m = get_fallback(i_type, i_name)
-    i_name, i_count = n, math.ceil(i_count * m)
-    local j = ingredient_map[i_type][i_name]
-    if j then -- ingredient is already present, add to existing ingredient
-      ingredients[j].amount = ingredients[j].amount + i_count
-      table.remove(ingredients, i)
-      l = l - 1
-    elseif i_count == 0 then -- delete ingredient on fallback sentinel
-      table.remove(ingredients, i)
-      l = l - 1
-    else -- adjust ingredient for fallback
-      ingredients[i] = { type = i_type, name = i_name, amount = i_count }
-      ingredient_map[i_type][i_name] = i
-      i = i + 1
-    end
-  end
-end
-
-local function check_recipe(recipe)
-  if recipe.normal or recipe.expensive then
-    if recipe.normal then
-      check_ingredients(recipe.normal.ingredients)
-    end
-    if recipe.expensive then
-      check_ingredients(recipe.expensive.ingredients)
-    end
-  else
-    check_ingredients(recipe.ingredients)
   end
 end
 
 RB.build = function(recipe_list) -- use like data:extend
   for _, recipe in pairs(recipe_list) do
-    check_recipe(recipe)
+    check_ingredients(recipe.ingredients)
   end
   data:extend(recipe_list)
 end
@@ -130,33 +106,11 @@ end
 local p_blocked = {
   type = true,
   name = true,
-  expensive = true,
-  normal = true,
-  result = true,
-  result_count = true,
   results = true,
   amount = true,
   amount_min = true,
   amount_max = true,
   crafting_machine_tints = true,
-}
--- list of properties which activate in the normal/expensive blocks
-local p_splittable = {
-  ingredients = true,
-  enabled = true,
-  hidden = true,
-  energy_required = true,
-  main_product = true,
-  --products = true,
-  emissions_multiplier = true,
-  hide_from_flow_stats = true,
-  hide_from_player_crafting = true,
-  allow_decomposition = true,
-  allow_as_intermediate = true,
-  always_show_in_title = true,
-  always_show_made_in = true,
-  show_amount_in_title = true,
-  always_show_products = true,
 }
 
 local function prioritize(a, b)
@@ -483,50 +437,17 @@ local function p_merge(base, patch, k)
   end
 end
 
-local function p_split_key(t, k, e, d)
-  local v, v_e, v_n = t[k], t.expensive and t.expensive[k], t.normal and t.normal[k]
-  if e then
-    if d then
-      return prioritize(v_e, prioritize(v, v_n))
-    else
-      return prioritize(v_e, v)
-    end
-  else
-    if d then
-      return prioritize(v_n, prioritize(v, v_e))
-    else
-      return prioritize(v_n, v)
-    end
-  end
-end
-
-local function p_result_merge(target, base, patch, split, e)
-  local b, bc, bs
-  local p, pc, ps
-  if split then
-    b, bc, bs =
-      p_split_key(base, "result", e, true),
-      p_split_key(base, "result_count", e, true),
-      p_split_key(base, "results", e, true)
-    p, pc, ps = p_split_key(patch, "result", e), p_split_key(patch, "result_count", e), p_split_key(patch, "results", e)
-  else
-    b, bc, bs = base.result, base.result_count, base.results
-    p, pc, ps = patch.result, patch.result_count, patch.results
-  end
+local function p_result_merge(target, base, patch)
+  local bs = base.results
+  local ps = patch.results
   if ps then
-    local rs = p_merge_item_lists(bs or { { name = b, type = "item", amount = bc or 1 } }, ps)
+    local rs = p_merge_item_lists(bs, ps)
     if not next(rs) then
       rs[1] = { "angels-void", 1 }
     end
     target.results = rs
-  elseif p then
-    target.result = p
-    target.result_count = prioritize(pc, bc)
   elseif bs then
     target.results = bs
-  else
-    target.result = b
-    target.result_count = prioritize(pc, bc)
   end
 end
 
@@ -539,28 +460,15 @@ local function p_copy(patch)
       type = "recipe",
       name = name,
     }
-    local split = false
-    if patch.normal or base.normal or patch.expensive or base.expensive then
-      result.normal = {}
-      result.expensive = {}
-      for k in pairs(p_splittable) do
-        result.normal[k] = p_merge(p_split_key(base, k, false), p_split_key(patch, k, false), k)
-        result.expensive[k] = p_merge(p_split_key(base, k, true), p_split_key(patch, k, true), k)
-      end
-      p_result_merge(result.normal, base, patch, true, false)
-      p_result_merge(result.expensive, base, patch, true, true)
-      split = true
-    else
-      p_result_merge(result, base, patch)
-    end
+    p_result_merge(result, base, patch)
     for k, v in pairs(base) do
-      if not (p_blocked[k] or split and p_splittable[k]) then
+      if not p_blocked[k] then
         result[k] = p_merge(base[k], patch[k], k)
         patch[k] = nil
       end
     end
     for k, v in pairs(patch) do
-      if not (p_blocked[k] or split and p_splittable[k]) then
+      if not p_blocked[k] then
         result[k] = patch[k]
       end
     end

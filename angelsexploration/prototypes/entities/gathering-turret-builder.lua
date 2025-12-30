@@ -56,56 +56,25 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
         {
           filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
           priority = "high",
-          width = 76,
-          height = 60,
-          axially_symmetrical = false,
-          direction_count = 1,
+          width = 150,
+          height = 118,
           frame_count = 1,
-          shift = modify_shift(util.by_pixel(1, -1), inputs.scale, inputs.shift),
-          scale = modify_scale(1, inputs.scale),
-          hr_version = {
-            filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base.png",
-            priority = "high",
-            width = 150,
-            height = 118,
-            axially_symmetrical = false,
-            direction_count = 1,
-            frame_count = 1,
-            shift = modify_shift(util.by_pixel(0.5, -1), inputs.scale, inputs.shift),
-            scale = modify_scale(0.5, inputs.scale),
-          },
+          shift = modify_shift(util.by_pixel(0.5, -1), inputs.scale, inputs.shift),
+          scale = modify_scale(0.5, inputs.scale),
         },
         {
           filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
           flags = { "mask", "low-object" },
           line_length = 1,
-          width = 62,
-          height = 52,
-          axially_symmetrical = false,
-          direction_count = 1,
+          width = 122,
+          height = 102,
           frame_count = 1,
-          shift = modify_shift(util.by_pixel(0, -4), inputs.scale, inputs.shift),
+          shift = modify_shift(util.by_pixel(0, -4.5), inputs.scale, inputs.shift),
           apply_runtime_tint = inputs.apply_runtime_tint or false,
           tint = inputs.fixed_tint
             or (not inputs.apply_runtime_tint and { r = 0.87, g = 0.5, b = 0.13, a = 0.5 })
             or nil,
-          scale = modify_scale(1, inputs.scale),
-          hr_version = {
-            filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base-mask.png",
-            flags = { "mask", "low-object" },
-            line_length = 1,
-            width = 122,
-            height = 102,
-            axially_symmetrical = false,
-            direction_count = 1,
-            frame_count = 1,
-            shift = modify_shift(util.by_pixel(0, -4.5), inputs.scale, inputs.shift),
-            apply_runtime_tint = inputs.apply_runtime_tint or false,
-            tint = inputs.fixed_tint
-              or (not inputs.apply_runtime_tint and { r = 0.87, g = 0.5, b = 0.13, a = 0.5 })
-              or nil,
-            scale = modify_scale(0.5, inputs.scale),
-          },
+          scale = modify_scale(0.5, inputs.scale),
         },
       },
     }
@@ -117,44 +86,21 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
         {
           filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
           priority = "high",
-          width = 70,
-          height = 52,
-          direction_count = 1,
+          width = 138,
+          height = 104,
           frame_count = 1,
-          shift = modify_shift(util.by_pixel(0, 2), inputs.scale, inputs.shift),
-          scale = modify_scale(1, inputs.scale),
-          hr_version = {
-            filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-base.png",
-            priority = "high",
-            width = 138,
-            height = 104,
-            direction_count = 1,
-            frame_count = 1,
-            shift = modify_shift(util.by_pixel(-0.5, 2), inputs.scale, inputs.shift),
-            scale = modify_scale(0.5, inputs.scale),
-          },
+          shift = modify_shift(util.by_pixel(-0.5, 2), inputs.scale, inputs.shift),
+          scale = modify_scale(0.5, inputs.scale),
         },
         {
           filename = "__base__/graphics/entity/laser-turret/laser-turret-base-shadow.png",
           line_length = 1,
-          width = 66,
-          height = 42,
+          width = 132,
+          height = 82,
           draw_as_shadow = true,
-          direction_count = 1,
           frame_count = 1,
           shift = modify_shift(util.by_pixel(6, 3), inputs.scale, inputs.shift),
-          scale = modify_scale(1, inputs.scale),
-          hr_version = {
-            filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-base-shadow.png",
-            line_length = 1,
-            width = 132,
-            height = 82,
-            draw_as_shadow = true,
-            direction_count = 1,
-            frame_count = 1,
-            shift = modify_shift(util.by_pixel(6, 3), inputs.scale, inputs.shift),
-            scale = modify_scale(0.5, inputs.scale),
-          },
+          scale = modify_scale(0.5, inputs.scale),
         },
       },
     }
@@ -165,9 +111,6 @@ function angelsmods.functions.create_gathering_turret_base(inputs)
     priority = "very-low",
     width = 1,
     height = 1,
-    axially_symmetrical = true,
-    direction_count = 1,
-    frame_count = 1,
   }
 end
 
@@ -176,28 +119,14 @@ local function create_gathering_turret_extension(inputs)
   return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising.png",
     priority = "medium",
-    width = 66,
-    height = 64,
+    width = 130,
+    height = 126,
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     direction_count = 4,
-    shift = modify_shift(util.by_pixel(0, -32), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-raising.png",
-      priority = "medium",
-      width = 130,
-      height = 126,
-      frame_count = inputs.frame_count or 15,
-      line_length = inputs.line_length or 0,
-      run_mode = inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      direction_count = 4,
-      shift = modify_shift(util.by_pixel(0, -32.5), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    shift = modify_shift(util.by_pixel(0, -32.5), inputs.scale, inputs.shift),
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -205,29 +134,15 @@ local function create_gathering_turret_extension_shadow(inputs)
   inputs = inputs or {}
   return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising-shadow.png",
-    width = 92,
-    height = 50,
+    width = 182,
+    height = 96,
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     direction_count = 4,
     draw_as_shadow = true,
-    shift = modify_shift(util.by_pixel(47, 3), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-raising-shadow.png",
-      width = 182,
-      height = 96,
-      frame_count = inputs.frame_count or 15,
-      line_length = inputs.line_length or 0,
-      run_mode = inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      direction_count = 4,
-      draw_as_shadow = true,
-      shift = modify_shift(util.by_pixel(47, 2.5), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    shift = modify_shift(util.by_pixel(47, 2.5), inputs.scale, inputs.shift),
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -236,30 +151,15 @@ local function create_gathering_turret_extension_mask(inputs)
   return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-raising-mask.png",
     flags = { "mask" },
-    width = 44,
-    height = 40,
+    width = 86,
+    height = 80,
     frame_count = inputs.frame_count or 15,
     line_length = inputs.line_length or 0,
     run_mode = inputs.run_mode or "forward",
-    axially_symmetrical = false,
     apply_runtime_tint = true,
     direction_count = 4,
     shift = modify_shift(util.by_pixel(0, -43), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-raising-mask.png",
-      flags = { "mask" },
-      width = 86,
-      height = 80,
-      frame_count = inputs.frame_count or 15,
-      line_length = inputs.line_length or 0,
-      run_mode = inputs.run_mode or "forward",
-      axially_symmetrical = false,
-      apply_runtime_tint = true,
-      direction_count = 4,
-      shift = modify_shift(util.by_pixel(0, -43), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -278,22 +178,12 @@ local function create_gathering_turret_shooting(inputs)
   return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting.png",
     line_length = 8,
-    width = 64,
-    height = 60,
+    width = 126,
+    height = 120,
     frame_count = 1,
     direction_count = 64,
     shift = modify_shift(util.by_pixel(0, -35), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-shooting.png",
-      line_length = 8,
-      width = 126,
-      height = 120,
-      frame_count = 1,
-      direction_count = 64,
-      shift = modify_shift(util.by_pixel(0, -35), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -302,24 +192,13 @@ local function create_gathering_turret_shooting_shadow(inputs)
   return {
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting-shadow.png",
     line_length = 8,
-    width = 86,
-    height = 46,
+    width = 170,
+    height = 92,
     frame_count = 1,
     direction_count = 64,
     draw_as_shadow = true,
-    shift = modify_shift(util.by_pixel(51, 2), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-shooting-shadow.png",
-      line_length = 8,
-      width = 170,
-      height = 92,
-      frame_count = 1,
-      direction_count = 64,
-      draw_as_shadow = true,
-      shift = modify_shift(util.by_pixel(50.5, 2.5), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    shift = modify_shift(util.by_pixel(50.5, 2.5), inputs.scale, inputs.shift),
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -329,25 +208,13 @@ local function create_gathering_turret_shooting_mask(inputs)
     filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting-mask.png",
     flags = { "mask" },
     line_length = 8,
-    width = 46,
-    height = 42,
+    width = 92,
+    height = 80,
     frame_count = 1,
     apply_runtime_tint = true,
     direction_count = 64,
-    shift = modify_shift(util.by_pixel(0, -43), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__base__/graphics/entity/laser-turret/hr-laser-turret-shooting-mask.png",
-      flags = { "mask" },
-      line_length = 8,
-      width = 92,
-      height = 80,
-      frame_count = 1,
-      apply_runtime_tint = true,
-      direction_count = 64,
-      shift = modify_shift(util.by_pixel(0, -43.5), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    shift = modify_shift(util.by_pixel(0, -43.5), inputs.scale, inputs.shift),
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -364,26 +231,15 @@ end
 function angelsmods.functions.create_gathering_turret_shooting_glow(inputs)
   inputs = inputs or {}
   return {
-    filename = "__angelsexploration__/graphics/entity/gathering-turret/gathering-turret-shooting-light.png",
+    filename = "__angelsexplorationgraphics__/graphics/entity/gathering-turret/gathering-turret-shooting-light.png",
     line_length = 8,
-    width = 62,
-    height = 58,
+    width = 122,
+    height = 116,
     frame_count = 1,
     direction_count = 64,
     blend_mode = "additive",
-    shift = modify_shift(util.by_pixel(0, -35), inputs.scale, inputs.shift),
-    scale = modify_scale(1, inputs.scale),
-    hr_version = {
-      filename = "__angelsexploration__/graphics/entity/gathering-turret/hr-gathering-turret-shooting-light.png",
-      line_length = 8,
-      width = 122,
-      height = 116,
-      frame_count = 1,
-      direction_count = 64,
-      blend_mode = "additive",
-      shift = modify_shift(util.by_pixel(-0.5, -35), inputs.scale, inputs.shift),
-      scale = modify_scale(0.5, inputs.scale),
-    },
+    shift = modify_shift(util.by_pixel(-0.5, -35), inputs.scale, inputs.shift),
+    scale = modify_scale(0.5, inputs.scale),
   }
 end
 
@@ -409,24 +265,12 @@ function angelsmods.functions.create_gathering_turret_beam_start(inputs)
     filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
     flags = inputs.flags,
     line_length = 4,
-    width = 52,
-    height = 40,
+    width = 94,
+    height = 66,
     frame_count = 16,
-    direction_count = 1,
-    shift = { -0.03125, 0 },
+    shift = { 0.53125, 0 },
     tint = inputs.tint,
-    hr_version = {
-      filename = "__base__/graphics/entity/beam/hr-tileable-beam-START.png",
-      flags = inputs.flags,
-      line_length = 4,
-      width = 94,
-      height = 66,
-      frame_count = 16,
-      direction_count = 1,
-      shift = { 0.53125, 0 },
-      tint = inputs.tint,
-      scale = 0.5,
-    },
+    scale = 0.5,
   }
 end
 
@@ -435,24 +279,12 @@ function angelsmods.functions.create_gathering_turret_beam_end(inputs)
     filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
     flags = inputs.flags,
     line_length = 4,
-    width = 49,
-    height = 54,
+    width = 91,
+    height = 93,
     frame_count = 16,
-    direction_count = 1,
-    shift = { -0.046875, 0 },
+    shift = { -0.078125, -0.046875 },
     tint = inputs.tint,
-    hr_version = {
-      filename = "__base__/graphics/entity/beam/hr-tileable-beam-END.png",
-      flags = inputs.flags,
-      line_length = 4,
-      width = 91,
-      height = 93,
-      frame_count = 16,
-      direction_count = 1,
-      shift = { -0.078125, -0.046875 },
-      tint = inputs.tint,
-      scale = 0.5,
-    },
+    scale = 0.5,
   }
 end
 
@@ -543,6 +375,7 @@ function angelsmods.functions.create_gathering_turret_beam_body(inputs)
   }
 end
 
+-- TODO: Remove this? Currently unused
 function angelsmods.functions.create_gathering_turret_beam_light(inputs)
   return {
     start = angelsmods.functions.create_gathering_turret_beam_start(inputs),
@@ -553,6 +386,7 @@ function angelsmods.functions.create_gathering_turret_beam_light(inputs)
   }
 end
 
+-- TODO: Remove this? Currently unused
 function angelsmods.functions.create_gathering_turret_beam_ground_light(inputs)
   return {
     head = {
@@ -656,7 +490,7 @@ end
 
 local function create_gathering_turret_target_tech(inputs)
   if type(inputs.require_tech_unlock) == "boolean" then
-    inputs.require_tech_unlock = "angels-gathering-turret-target[" .. inputs.name .. "]"
+    inputs.require_tech_unlock = "angels-gathering-turret-target_" .. inputs.name .. "_"
     return create_gathering_turret_target_tech(inputs)
   end
 
@@ -673,9 +507,8 @@ local function create_gathering_turret_target_tech(inputs)
         type = "technology",
         name = inputs.require_tech_unlock,
         localised_name = { "technology-name.angels-gathering-turret-target", "__ITEM__" .. inputs.name .. "__" },
-        icon = "__angelsexploration__/graphics/technology/gathering-turret-target.png",
+        icon = "__angelsexplorationgraphics__/graphics/technology/gathering-turret-target.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = inputs.additional_tech_prerequisites
             and (type(inputs.additional_tech_prerequisites) == "string" and { inputs.additional_tech_prerequisites } or type(
               inputs.additional_tech_prerequisites
@@ -685,9 +518,9 @@ local function create_gathering_turret_target_tech(inputs)
         unit = {
           count = 150,
           ingredients = {
-            { type = "item", name = "automation-science-pack", amount = 2 },
-            { type = "item", name = "logistic-science-pack", amount = 1 },
-            { type = "item", name = "military-science-pack", amount = 2 },
+            { "automation-science-pack", 2 },
+            { "logistic-science-pack", 1 },
+            { "military-science-pack", 2 },
           },
           time = 30,
         },
@@ -722,8 +555,8 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
     { type = "physical", percent = 100 },
     { type = "poison", percent = 100 },
     -- angels
-    { type = "bio", percent = 100 },
-    { type = "gathering", percent = 100 },
+    { type = "angels-bio", percent = 100 },
+    { type = "angels-gathering", percent = 100 },
   }
   if mods["bobwarfare"] then
     -- bobs
@@ -734,7 +567,7 @@ function angelsmods.functions.create_gathering_turret_target(inputs)
   data:extend({
     {
       type = "land-mine",
-      name = "angels-gathering-turret-target[" .. inputs.name .. "]",
+      name = "angels-gathering-turret-target_" .. inputs.name .. "_",
 
       icons = angelsmods.functions.get_object_icons(inputs.name),
 
@@ -808,9 +641,8 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     type = "technology",
     name = "angels-gathering-speed-" .. inputs.level,
     icon_size = 256,
-    icon_mipmaps = 4,
     icons = util.technology_icon_constant_damage(
-      "__angelsexploration__/graphics/technology/gathering-turret-speed.png"
+      "__angelsexplorationgraphics__/graphics/technology/gathering-turret-speed.png"
     ),
     prerequisites = {
       inputs.level == 1 and "angels-gathering-turret" or ("angels-gathering-speed-" .. (inputs.level - 1)),
@@ -818,18 +650,18 @@ function angelsmods.functions.generate_gathering_turret_speed_upgrade_technology
     effects = {
       inputs.modifier and (inputs.modifier > 0) and {
         type = "ammo-damage",
-        ammo_category = "gathering",
+        ammo_category = "angels-gathering",
         modifier = inputs.modifier,
       },
     },
     unit = {
       count = inputs.cost or 50,
       ingredients = {
-        inputs.level > 0 and { type = "item", name = "automation-science-pack", amount = 1 } or nil,
-        inputs.level > 0 and { type = "item", name = "logistic-science-pack", amount = 2 } or nil,
-        inputs.level > 0 and { type = "item", name = "military-science-pack", amount = 2 } or nil,
-        inputs.level > 3 and { type = "item", name = "chemical-science-pack", amount = 1 } or nil,
-        inputs.level > 5 and { type = "item", name = "utility-science-pack", amount = 1 } or nil,
+        inputs.level > 0 and { "automation-science-pack", 1 } or nil,
+        inputs.level > 0 and { "logistic-science-pack", 2 } or nil,
+        inputs.level > 0 and { "military-science-pack", 2 } or nil,
+        inputs.level > 3 and { "chemical-science-pack", 1 } or nil,
+        inputs.level > 5 and { "utility-science-pack", 1 } or nil,
       },
       time = 30,
     },

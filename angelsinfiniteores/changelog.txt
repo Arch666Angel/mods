@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ???
+  Changes:
+    - Updated for Factorio 2.0 (994)
+  Bugfixes:
+    - Fixed log file spam with Angel's Refining and Bob's Metals, Chemicals and Intermediates mod (996)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 22.12.2023
+  Bugfixes:
+    - Fixed infinite ore not showing for Bob's Ores (914)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.10
 Date: 19.12.2021
   Changes:

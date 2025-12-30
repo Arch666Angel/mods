@@ -3,6 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-cannon-turret",
+    localised_name = { "entity-name.angels-cannon-turret" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -19,6 +20,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-turret",
+    localised_name = { "entity-name.angels-rocket-turret" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -35,6 +37,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-bio-turret",
+    localised_name = { "entity-name.angels-bio-turret" },
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -51,6 +54,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gathering-turret",
+    localised_name = { "entity-name.angels-gathering-turret" },
     energy_required = 10,
     enabled = false,
     ingredients = {

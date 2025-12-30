@@ -5,8 +5,6 @@ end
 -------------------------------------------------------------------------------
 -- ARTILLERY ------------------------------------------------------------------
 -------------------------------------------------------------------------------
-reorder("capsule", "artillery-targeting-remote", "angels-artillery-a", "a[gun]-a[remote]")
-
 reorder("item", "artillery-turret", "angels-artillery-a", "b[turret]-a[artillery]")
 if mods["bobwarfare"] then
   reorder("item", "bob-artillery-turret-2", "angels-artillery-a", "b[turret]-b[artillery]")

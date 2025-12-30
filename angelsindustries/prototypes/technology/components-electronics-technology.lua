@@ -1,17 +1,29 @@
 local OV = angelsmods.functions.OV
 if angelsmods.industries.components then
-  OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
+  OV.add_unlock("angels-bio-paper-1", "circuit-grey-board-alternative")
+  OV.remove_science_pack("angels-bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("angels-bio-paper-1", "logistic-science-pack")
+  OV.remove_prereq("angels-bio-paper-1", "angels-basic-chemistry")
+  OV.patch_recipes({
+    {
+      name = "angels-solid-wood-pulp",
+      category = "crafting",
+      ingredients = {
+        { type = "fluid", name = "water", amount = 0 },
+      },
+    },
+  })
   OV.execute()
 
   data:extend({
     {
       type = "technology",
       name = "tech-red-circuit",
-      icon = "__angelsindustries__/graphics/technology/red-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/red-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-solder-smelting-basic",
-        "bio-paper-1",
+        "angels-bio-paper-1",
       },
       effects = {
         {
@@ -42,7 +54,7 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
         },
         time = 60,
       },
@@ -51,7 +63,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-green-circuit",
-      icon = "__angelsindustries__/graphics/technology/green-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/green-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-red-circuit",
@@ -59,7 +71,7 @@ if angelsmods.industries.components then
         "angels-components-construction-2",
         "angels-components-cabling-2",
         "automation-2",
-        "resins",
+        "angels-resins",
       },
       effects = {
         {
@@ -90,8 +102,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -100,7 +112,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-orange-circuit",
-      icon = "__angelsindustries__/graphics/technology/orange-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/orange-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-circuit",
@@ -138,8 +150,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -148,7 +160,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-blue-circuit",
-      icon = "__angelsindustries__/graphics/technology/blue-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/blue-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-circuit",
@@ -185,9 +197,9 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },
@@ -196,7 +208,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "tech-yellow-circuit",
-      icon = "__angelsindustries__/graphics/technology/yellow-circuit-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/yellow-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-blue-circuit",
@@ -233,11 +245,11 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "production-science-pack", amount = 1 },
-          { type = "item", name = "utility-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 60,
       },

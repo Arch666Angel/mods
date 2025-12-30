@@ -14,7 +14,7 @@ end
 
 angelsmods.trigger.refinery_products["ferrous"] = angelsmods.trigger.ores["manganese"]
   or angelsmods.trigger.ores["chrome"]
-  or angelsmods.trigger.ores["thorium"]
+  or (angelsmods.trigger.ores["thorium"] and not angelsmods.functions.is_special_vanilla())
 if angelsmods.trigger.refinery_products["ferrous"] then
   angelsmods.trigger.refinery_products["saphirite"] = true
   angelsmods.trigger.refinery_products["jivolite"] = true
@@ -26,7 +26,7 @@ end
 
 angelsmods.trigger.refinery_products["cupric"] = angelsmods.trigger.ores["platinum"]
   or angelsmods.trigger.ores["tungsten"]
-  or angelsmods.trigger.ores["thorium"]
+  or (angelsmods.trigger.ores["thorium"] and not angelsmods.functions.is_special_vanilla())
 if angelsmods.trigger.refinery_products["cupric"] then
   angelsmods.trigger.refinery_products["stiratite"] = true
   angelsmods.trigger.refinery_products["crotinnium"] = true
@@ -36,16 +36,16 @@ if angelsmods.trigger.refinery_products["cupric"] then
   end
 end
 
-if angelsmods.petrochem and angelsmods.trigger.enableacids and angelsmods.trigger.refinery_products["rubyte"] then
+if angelsmods.petrochem and angelsmods.trigger.refinery_products["rubyte"] then
   angelsmods.trigger.water_red_waste = true
 end
 
 --Fallbacks for the recipe builder
 require("prototypes.recipe-builder-fallbacks")
---Overrides for refining/angels internal
-require("prototypes.refining-override")
 --Generic recipe generation
 require("prototypes.refining-generate")
+--Overrides for refining/angels internal
+require("prototypes.refining-override")
 --Overrides for resources
 require("prototypes.generation.angels-override")
 
@@ -55,3 +55,6 @@ angelsmods.functions.OV.execute()
 angelsmods.functions.update_autoplace()
 
 --angelsmods.functions.index_check()
+
+-- RECYCLING
+require("prototypes.override.recycling")

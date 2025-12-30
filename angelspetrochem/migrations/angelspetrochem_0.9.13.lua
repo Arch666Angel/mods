@@ -10,7 +10,7 @@ for index, force in pairs(game.forces) do
     "angels-platinum-smelting-3",
   }) do
     if force.technologies[techToCheck] then
-      local proto_data = game.technology_prototypes[techToCheck]
+      local proto_data = prototypes.technology[techToCheck]
       if proto_data and (proto_data.hidden or proto_data.enabled == false) then
         force.technologies[techToCheck].enabled = false
         force.technologies[techToCheck].researched = false

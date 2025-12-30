@@ -12,13 +12,13 @@ data:extend({
     order = "a[ore-refining]",
     indent = 1,
 
-    starting_status = "dependencies-not-met",
+    starting_status = "locked",
     dependencies = nil,
-    trigger = {
-      type = "time-elapsed",
-      ticks = 10 * 60,
-    }, -- unlock together with the dependencies
-
-    --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",
+    trigger =
+    {
+      type = "research",
+      technology = "angels-ore-crushing"
+    },
+    --simulation = require "prototypes.tips-and-tricks.1-1-ore-refining.1-ore-refining-simulation",
   },
 })

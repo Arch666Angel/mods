@@ -1,16 +1,10 @@
 if mods["bobores"] then
   if angelsmods.ores.disable_ore_override or not angelsmods.refining then
-    local active = (
-      settings.startup["bobmods-plates-oreoverride"] and settings.startup["bobmods-plates-oreoverride"].value == true
-    )
-        and true
-      or false
-
-    if active or settings.startup["bobmods-ores-enablebauxite"].value == true then
-      if data.raw.resource["bauxite-ore"] then
+    if bobmods.ores.bauxite.enabled == true then
+      if data.raw.resource["bob-bauxite-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-bauxite-ore",
-          get = "bauxite-ore",
+          get = "bob-bauxite-ore",
           order = "b",
           sheet = 3,
           infinite = true,
@@ -24,14 +18,14 @@ if mods["bobores"] then
           normal = 1500,
           maximum = 6000,
           acid_to_mine = "sulfuric-acid",
-          output_name = "bauxite-ore",
+          output_name = "bob-bauxite-ore",
           output_min = 1,
           output_max = 1,
           output_probability = angelsmods.ores.loweryield,
           -- icon = "__bobores__/graphics/icons/bauxite-ore.png",
           autoplace = {
             starting_area = false,
-            resource_index = "bauxite-ore",
+            resource_index = "bob-bauxite-ore",
             base_density = 5,
             regular_rq_factor_multiplier = 0.3,
             starting_rq_factor_multiplier = 0.5,
@@ -40,11 +34,11 @@ if mods["bobores"] then
       end
     end
 
-    if settings.startup["bobmods-ores-enablecobaltore"].value == true then
-      if data.raw.resource["cobalt-ore"] then
+    if bobmods.ores.cobalt.enabled == true then
+      if data.raw.resource["bob-cobalt-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-cobalt-ore",
-          get = "cobalt-ore",
+          get = "bob-cobalt-ore",
           order = "b",
           sheet = 3,
           infinite = true,
@@ -58,7 +52,7 @@ if mods["bobores"] then
           normal = 1500,
           maximum = 6000,
           acid_to_mine = "sulfuric-acid",
-          output_name = "cobalt-ore",
+          output_name = "bob-cobalt-ore",
           output_min = 1,
           output_max = 1,
           output_probability = angelsmods.ores.loweryield,
@@ -74,7 +68,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablegemsore"].value == true then
+    if bobmods.ores.gems.enabled == true then
       if data.raw.resource["gem-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-gem-ore",
@@ -108,7 +102,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablegoldore"].value == true then
+    if bobmods.ores.gold.enabled == true then
       if data.raw.resource["gold-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-gold-ore",
@@ -142,7 +136,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enableleadore"].value == true then
+    if bobmods.ores.lead.enabled == true then
       if data.raw.resource["lead-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-lead-ore",
@@ -176,7 +170,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablenickelore"].value == true then
+    if bobmods.ores.nickel.enabled == true then
       if data.raw.resource["nickel-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-nickel-ore",
@@ -210,7 +204,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablequartz"].value == true then
+    if bobmods.ores.quartz.enabled == true then
       if data.raw.resource["quartz"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-quartz",
@@ -244,7 +238,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablerutile"].value == true then
+    if bobmods.ores.rutile.enabled == true then
       if data.raw.resource["rutile-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-rutile-ore",
@@ -278,7 +272,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablesilverore"].value == true then
+    if bobmods.ores.silver.enabled == true then
       if data.raw.resource["silver-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-silver-ore",
@@ -312,7 +306,7 @@ if mods["bobores"] then
       end
     end
 
-    if settings.startup["bobmods-ores-enablesulfur"].value == true then
+    if bobmods.ores.sulfur.enabled == true then
       if data.raw.resource["sulfur"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-sulfur",
@@ -346,7 +340,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablethoriumore"].value == true then
+    if bobmods.ores.thorium.enabled == true then
       if data.raw.resource["thorium-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-thorium-ore",
@@ -380,7 +374,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enabletinore"].value == true then
+    if bobmods.ores.tin.enabled == true then
       if data.raw.resource["tin-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-tin-ore",
@@ -414,7 +408,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enabletungstenore"].value == true then
+    if bobmods.ores.tungsten.enabled == true then
       if data.raw.resource["tungsten-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-tungsten-ore",
@@ -448,7 +442,7 @@ if mods["bobores"] then
       end
     end
 
-    if active or settings.startup["bobmods-ores-enablezincore"].value == true then
+    if bobmods.ores.zinc.enabled == true then
       if data.raw.resource["zinc-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-zinc-ore",

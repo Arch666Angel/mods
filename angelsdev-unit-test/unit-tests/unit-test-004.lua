@@ -39,7 +39,7 @@ local suitable_research_lab = function(tech_prototype)
   local entity_filters = {}
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(entity_filters, { filter = "type", type = "lab", mode = "and" })
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for _, entity_prototype in pairs(entity_prototypes) do
     if has_suitable_lab_inputs(entity_prototype) then
@@ -52,7 +52,17 @@ end
 local unit_test_004 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  if game.active_mods["SeaBlock"] then
+  if script.active_mods["angelsbioprocessing"] then
+    tech_unlocked_by_script["angels-alien-artifact"] = true
+    tech_unlocked_by_script["angels-alien-artifact-red"] = true
+    tech_unlocked_by_script["angels-alien-artifact-yellow"] = true
+    tech_unlocked_by_script["angels-alien-artifact-orange"] = true
+    tech_unlocked_by_script["angels-alien-artifact-blue"] = true
+    tech_unlocked_by_script["angels-alien-artifact-purple"] = true
+    tech_unlocked_by_script["angels-alien-artifact-green"] = true
+  end
+
+  if script.active_mods["SeaBlock"] then
     tech_unlocked_by_script["sb-startup1"] = true
     tech_unlocked_by_script["sb-startup2"] = true
     tech_unlocked_by_script["sb-startup3"] = true
@@ -60,7 +70,7 @@ local unit_test_004 = function()
     tech_unlocked_by_script["sct-automation-science-pack"] = true
   end
 
-  local tech_prototypes = game.technology_prototypes
+  local tech_prototypes = prototypes.technology
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     if (not tech_hidden(tech_prototype)) and not tech_unlocked_by_script[tech_name] then
       -- tech visible and must be researched

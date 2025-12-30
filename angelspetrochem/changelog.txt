@@ -1,6 +1,43 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.23
+Version: 2.0.0
 Date: ???
+  Changes:
+    - Moved coke pellets earlier in the tech tree (714)
+    - Allow Explosives 2 & 3 recipes to accept productivity modules (931)
+    - Removed references to normal / expensive recipes (945)
+    - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
+    - Updated for Factorio 2.0 (994)
+    - Restored 1:1 water to steam ratio (1071)
+    - Buffed recipes Resin 3, Catalytic synthesis of phenol, and Epichlorohydrin gas (1095)
+    - Added circuit connectors to all machines (1114)
+    - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
+    - Changed top-up valve threshold from 80% to 50% (1170)
+    - Buffed lime air filtering recipes (1198)
+    - Remove Acids mod setting (1213)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.26
+Date: 21.02.2024
+  Changes:
+    - Removed dependencies that are no longer relevant (975)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.25
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+    - Split tech Sodium processing into Sodium processing 1 and Sodium processing 2 (922)
+    - Combined techs Oil Steam cracking and Gas Steam Cracking (951)
+  Bugfixes:
+    - Fixed recipe order of carbon products to correctly display in helmod
+    - Fixed fertiliser not being craftable in mod configurations (924)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.24
+Date: 23.02.2023
+  Bugfixes:
+    - Fixed Nitroglycerin and explosives 2 and 3 could not be crafted in any machine (888)
+    - Fixed Bob's fertilizer could not be crafted in any machine (bob greenhouses) (888)
+---------------------------------------------------------------------------------------------------
+Version: 0.9.23
+Date: 01.01.2023
   Changes:
     - Changed the ingredient tier of some buildings (674)
       - Advance chemical plant 1
@@ -18,9 +55,42 @@ Date: ???
       - Advanced chemistry 2
       - Flare stack tech
       - Rubber
+    - Removed liquification category from chemplants & adv. chemplants (854)
+    - Removed chemistry category from adv. chemplants (854)
+    - Changed which building some recipes require (802)
+      - Atomic bomb moved from Assembling machine to Advanced chemical plant
+      - Cupric chloride solution moved from Chemical plant to Liquefier
+      - Ferric chloride solution moved from Chemical plant to Liquefier
+      - Hydrochloric acid from salt moved from Chemical plant to Liquefier
+      - Hydrofluoric acid synthesis moved from Chemical plant to Liquefier
+      - Monochloramine gas moved from Chemical plant to Liquefier
+      - Nitric acid from Sodium nitrate moved from Chemical plant to Liquefier
+      - Sodium cyanide moved from Liquefier to Chemical plant
+      - Sodium perchlorate moved from Liquefier to Chemical plant
+      - Solid fuel recipes moved from Liquefier to Chemical plant
+      - Sulfur dioxide gas moved from Chemical plant to Liquefier
     - Split tech Advanced chemistry 3 (805)
+    - Added Air filter 3 (853)
+      - Reduced module slots of Air filter 1 (2 -> 0) and Air filter 2 (2 -> 1)
+      - Reduced speed of Air filter 2 to 1.5
+    - Aligned refining and fractioning inputs, outputs and icons (863)
+      - Oil Refining now only uses a single input pipe, the same pipe used in the advanced refining recipes
+        (Advanced light oil refining, Oil and condensates refining, Advanced heavy oil refining)
+      - Gas fractioning now only uses a single input pipe, the same pipe used in the advanced fractioning recipes
+        (Advanced light gas refining, Advanced heavy gas refining, Advanced medium gas refining)
+      - Gas fractioning now only uses the first three output pipes, the same pipes used in the advanced fractioning recipes
+        (Advanced heavy gas refining, Advanced light gas refining, Advanced medium gas refining)
+      - The oil refining and the gas fractioning recipe icons are slightly altered to reflect the fluid layout of their respective recipe.
+    - Updated sound volume of the following buildings: (482)
+      - Chemical plant, Advanced chemical plant
+      - Air filter
+      - Electric boiler
+      - Electrolyser
+      - Oil refinery
+      - Gas separator, Steam cracker
   Bugfixes:
     - Fixed machine output arrows (839)
+    - Make Oil refineries scale their recipe icons to match vanilla (874)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 06.06.2022
@@ -97,7 +167,7 @@ Date: 16.11.2020
     - Fixed pipe and animation of gasses were showing liquids
     - Revised many inconsistencies in technology dependencies (428)
     - Moved Calcium chloride tech unlock from Basic chemistry 2 to Chlorine Processing 2 (428)
-    - Fixed Cupric chlorid solution did not have a voiding recipe (439)
+    - Fixed Cupric chloride solution did not have a voiding recipe (439)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 29.10.2020

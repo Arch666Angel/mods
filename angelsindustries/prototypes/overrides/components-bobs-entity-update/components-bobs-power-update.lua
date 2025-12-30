@@ -234,8 +234,8 @@ if angelsmods.industries.components then
         },
       })
 
-      OV.remove_prereq("bob-electric-energy-accumulators-2", "advanced-electronics")
-      OV.remove_prereq("bob-electric-energy-accumulators-3", "advanced-electronics-2")
+      OV.remove_prereq("bob-electric-energy-accumulators-2", "advanced-circuit")
+      OV.remove_prereq("bob-electric-energy-accumulators-3", "processing-unit")
       if angelsmods.industries.tech then
         OV.add_prereq("bob-electric-energy-accumulators-2", "tech-specialised-labs-basic-enhance-3")
         OV.add_prereq("bob-electric-energy-accumulators-3", "tech-specialised-labs-advanced-enhance-1")

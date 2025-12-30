@@ -9,7 +9,6 @@ if angelsmods.industries.components then
       name = "angels-components-weapons-basic",
       icon = "__base__/graphics/technology/military.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {},
       effects = {
         {
@@ -32,7 +31,7 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
         },
         time = 60,
       },
@@ -67,7 +66,6 @@ if angelsmods.industries.components then
       name = "angels-components-weapons-advanced",
       icon = "__base__/graphics/technology/military.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "military-science-pack",
         "angels-titanium-smelting-1",
@@ -93,10 +91,10 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "military-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "military-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },

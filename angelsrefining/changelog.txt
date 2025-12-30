@@ -1,6 +1,56 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.12.3
+Version: 2.0.0
 Date: ???
+  Bugfixes:
+    - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)
+    - Fixed crash when upgrading blueprints (978)
+    - Fixed crash when removing 'angelspump' mod (test mod, merged into Angel's Refining) (992)
+    - Fixed crash on startup with error message No icon size defined for icon (997)
+  Changes:
+    - Halved the Sulfuric wase water produced by ore chunk recipes (849)
+    - Removed references to normal / expensive recipes (945)
+    - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
+    - Updated for Factorio 2.0 (994)
+    - Made heavy offshore pump ignore mining productivity research (1045)
+    - Reworked Mineral sludge crystallization recipes. These recipes now produce Angel's ores (1074)
+    - Reworked milling drum recipes so that milling drums can be hand crafted (1105)
+    - Added circuit connectors to all machines (1114)
+    - Increased the size of Thermal water bores. Pipes will need to be reconnected. (1113)
+    - Improved clarity of waste water and muddy water icons (1163)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.7
+Date: 21.02.2024
+  Changes:
+    - Changed library function to handle bad input data (968)
+  Bugfixes:
+    - Added dependencies on more of Bob's mods to fix issue where Bob's techs were not being correctly replaced (975)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.6
+Date: 04.01.2024
+  Bugfixes:
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+    - Fixed compatibility issue with Transport Drones mod (961)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.5
+Date: 22.12.2023
+  Changes:
+    - Moved Electro-refining to purple science. Replaced Crystal catalyst with Hybrid catalyst in Thorium sorting recipe (909)
+    - Compatibility with Bob's changes (911)
+    - Enabled productivity modules for Thorium Ore sorting recipe (929)
+    - Added custom error message for when trying to insert invalid items into a barreling pump (933)
+    - Changed Crystal catalyst recipe to require Crystallizer 2 (943)
+    - Removed Crystal catalyst from Bob's gem ore crystallization recipes (943)
+    - Changed the Recipe Builder to make it easier for other mods to add their own materials (950)
+    - Added a beaconable electric offshore waterpump (952)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.4
+Date: 23.02.2023
+  Bugfixes:
+    - Fixed Fluoric waste water purification recipe icon (897)
+    - Quick fixed the base game tips and tricks "low power" and "entity transfer" (792)
+---------------------------------------------------------------------------------------------------
+Version: 0.12.3
+Date: 01.01.2023
   Changes:
     - Changed the ingredient tier of some buildings (674)
       - Crystallizer 1

@@ -7,7 +7,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-2",
-      icon = "__angelsindustries__/graphics/technology/steel-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/steel-components.png",
       icon_size = 128,
       prerequisites = {
         "steel-processing",
@@ -38,7 +38,7 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
         },
         time = 60,
       },
@@ -47,7 +47,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-3",
-      icon = "__angelsindustries__/graphics/technology/aluminium-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/aluminium-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-2",
@@ -87,8 +87,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -97,7 +97,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-4",
-      icon = "__angelsindustries__/graphics/technology/titanium-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/titanium-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-3",
@@ -130,9 +130,9 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },
@@ -141,7 +141,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-construction-5",
-      icon = "__angelsindustries__/graphics/technology/tungsten-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/tungsten-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-construction-4",
@@ -174,11 +174,11 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "production-science-pack", amount = 1 },
-          { type = "item", name = "utility-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "production-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 60,
       },

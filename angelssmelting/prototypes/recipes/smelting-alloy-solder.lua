@@ -1,5 +1,3 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
@@ -22,118 +20,117 @@ data:extend({
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "angels-solder-smelting-1",
-    category = "induction-smelting",
+    name = "angels-liquid-molten-solder",
+    category = "angels-induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solder-mixture", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-solder", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 120 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       1,
       angelsmods.smelting.number_tint
     ),
     order = "b[liquid-molten-solder]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-2",
-    category = "induction-smelting",
+    name = "angels-liquid-molten-solder-2",
+    localised_name = { "fluid-name.angels-liquid-molten-solder" },
+    category = "angels-induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
-      { type = "item", name = "ingot-tin", amount = 12 },
-      { type = "item", name = "ingot-lead", amount = 12 },
+      { type = "item", name = "angels-ingot-tin", amount = 12 },
+      { type = "item", name = "angels-ingot-lead", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-solder", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "b[liquid-molten-solder]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-3",
-    category = "induction-smelting-2",
+    name = "angels-liquid-molten-solder-3",
+    localised_name = { "fluid-name.angels-liquid-molten-solder" },
+    category = "angels-induction-smelting-2",
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-tin", amount = 12 },
-      { type = "item", name = "ingot-zinc", amount = 12 },
+      { type = "item", name = "angels-ingot-tin", amount = 12 },
+      { type = "item", name = "angels-ingot-zinc", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-solder", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       3,
       angelsmods.smelting.number_tint
     ),
     order = "b[liquid-molten-solder]-c",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "angels-solder-smelting-4",
-    category = "induction-smelting-3",
+    name = "angels-liquid-molten-solder-4",
+    localised_name = { "fluid-name.angels-liquid-molten-solder" },
+    category = "angels-induction-smelting-3",
     subgroup = "angels-solder-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-tin", amount = 12 },
-      { type = "item", name = "ingot-copper", amount = 12 },
-      { type = "item", name = "ingot-silver", amount = 12 },
+      { type = "item", name = "angels-ingot-tin", amount = 12 },
+      { type = "item", name = "angels-ingot-copper", amount = 12 },
+      { type = "item", name = "angels-ingot-silver", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-solder", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       4,
       angelsmods.smelting.number_tint
     ),
     order = "b[liquid-molten-solder]-d",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "roll-solder-casting",
-    category = "strand-casting",
+    name = "angels-roll-solder",
+    category = "angels-strand-casting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 4 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-solder", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-solder"),
@@ -141,72 +138,49 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "c[angels-roll-solder]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "roll-solder-casting-fast",
-    category = "strand-casting-2",
+    name = "angels-roll-solder-2",
+    localised_name = { "item-name.angels-roll-solder" },
+    category = "angels-strand-casting-2",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-solder",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40, maximum_temperature = 50 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-solder", amount = 8 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-solder",
+    results = {
+      { type = "item", name = "angels-roll-solder", amount = 8 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-solder",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-solder"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "c[angels-roll-solder]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-solder"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   -- SOLDER CASTING RESULT
   {
     type = "recipe",
     name = "angels-solder-mixture-smelting",
+    localised_name = { "item-name.angels-solder" },
     category = "smelting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "angels-solder-mixture", amount = 2 },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 2 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "angels-solder-mixture", amount = 3 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-solder", amount = 2 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-solder"),
@@ -219,31 +193,21 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solder",
-    category = "casting",
+    localised_name = { "item-name.angels-solder" },
+    category = "angels-casting",
     subgroup = "angels-solder-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 6 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-solder", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-solder", amount = 6 },
-      },
+    results = {
+      { type = "item", name = "angels-solder", amount = 6 },
     },
     icons = angelsmods.functions.add_icon_layer(
       angelsmods.functions.get_object_icons("angels-solder"),
-      angelsmods.functions.get_object_icons("liquid-molten-solder"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
       { -10, -10 },
       0.4375
     ),
@@ -251,12 +215,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-roll-solder-converting",
+    name = "angels-solder-2",
+    localised_name = { "item-name.angels-solder" },
     category = "advanced-crafting",
     subgroup = "angels-solder-casting",
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-solder", amount = 4 },
     },

@@ -9,7 +9,7 @@ if angelsmods.addons.storage.pressuretank then
   data:extend({
     {
       type = "technology",
-      name = "pressure-tanks",
+      name = "angels-pressure-tanks",
       icon = "__angelsaddons-storage__/graphics/technology/pressure-tank-tech.png",
       icon_size = 128,
       prerequisites = {
@@ -24,8 +24,8 @@ if angelsmods.addons.storage.pressuretank then
       unit = {
         count = 50,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 15,
       },

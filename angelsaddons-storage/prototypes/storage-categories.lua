@@ -4,7 +4,7 @@ if not data.raw["item-subgroup"]["angels-silo"] then
       type = "item-subgroup",
       name = "angels-silo",
       group = "logistics",
-      order = "zc",
+      order = "ac[chests-silo]",
     },
   })
 end
@@ -14,7 +14,7 @@ if not data.raw["item-subgroup"]["angels-ore-silo"] then
       type = "item-subgroup",
       name = "angels-ore-silo",
       group = "logistics",
-      order = "zd",
+      order = "ad[chests-ore-silo]",
     },
   })
 end
@@ -24,7 +24,7 @@ if not data.raw["item-subgroup"]["angels-warehouse"] then
       type = "item-subgroup",
       name = "angels-warehouse",
       group = "logistics",
-      order = "ze",
+      order = "ae[chests-warehouse]",
     },
   })
 end

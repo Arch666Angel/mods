@@ -19,7 +19,7 @@ data:extend({
     indent = 0,
 
     starting_status = "locked",
-    dependencies = { "introduction" },
+    -- TODO huh? dependencies = { "introduction" },
     trigger = {
       type = "or",
       triggers = {

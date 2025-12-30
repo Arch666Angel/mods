@@ -39,6 +39,7 @@ local function initialize_tables()
   }
 
   modify_table = {
+    recipes = {},
     technologies = {},
   }
 
@@ -67,38 +68,6 @@ local function d_c(t)
   end
 end
 
-local splittable_keys = {
-  ingredients = true,
-  enabled = true,
-  energy_required = true,
-  result = true,
-  result_count = true,
-  results = true,
-  main_product = true,
-}
-local function has_splittable_key(recipe)
-  for k in pairs(splittable_keys) do
-    if recipe[k] ~= nil then
-      return true
-    end
-  end
-  return false
-end
-
-local function split_patch_difficulty(patch)
-  if has_splittable_key(patch) then
-    guarantee_subtable(patch, "normal")
-    guarantee_subtable(patch, "expensive")
-    for k in splittable_keys do
-      if patch[k] ~= nil then
-        patch.normal[k] = patch.normal[k] or d_c(patch[k])
-        patch.expensive[k] = patch.expensive[k] or patch[k]
-        patch[k] = nil
-      end
-    end
-  end
-end
-
 local function merge_ops(old, new)
   local i = #old + 1
   for j = 1, #new do
@@ -108,22 +77,10 @@ local function merge_ops(old, new)
 end
 
 local function merge_patches(old, new)
-  if new.normal or new.expensive then
-    split_patch_difficulty(old)
-    split_patch_difficulty(new)
-  elseif old.normal or old.expensive then
-    split_patch_difficulty(new)
-  end
   for k, v in pairs(new) do
     if k == "ingredients" or k == "results" then
       if old[k] then
         merge_ops(old[k], v)
-      else
-        old[k] = v
-      end
-    elseif k == "normal" or k == "expensive" then
-      if old[k] then
-        merge_patches(old[k], v)
       else
         old[k] = v
       end
@@ -143,7 +100,7 @@ local function generate_gas_canister_icons(fluid)
   else
     --something is wrong here but we need to return something
     return {
-      { icon = "__angelsrefining__/graphics/icons/void.png", icon_size = 32 },
+      { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 },
     }
   end
 end
@@ -158,7 +115,7 @@ local function generate_liquid_canister_icons(fluid)
   else
     --something is wrong here but we need to return something
     return {
-      { icon = "__angelsrefining__/graphics/icons/void.png", icon_size = 32 },
+      { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 },
     }
   end
 end
@@ -172,17 +129,15 @@ local function generate_fill_barrel_icons(fluid, style)
     f_icon = generate_liquid_canister_icons(fluid)
   else
     f_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }
@@ -207,17 +162,15 @@ local function generate_barrel_icons(fluid, style)
     f_icon = generate_liquid_canister_icons(fluid)
   else
     f_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-hoop-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }
@@ -234,17 +187,15 @@ local function generate_empty_barrel_icons(fluid, style)
     e_icon = generate_liquid_canister_icons(fluid)
   else
     e_icon = {
-      { icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png", icon_size = 64, icon_mipmaps = 4 },
+      { icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png", icon_size = 64 },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-side-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.base_color,
       },
       {
         icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-top-mask.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = fluid.flow_color,
       },
     }
@@ -285,8 +236,6 @@ ov_functions.add_prereq = function(technology, prereq) --handles tech OR prereq 
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "prereqs")
-    guarantee_subtable(modify_table.technologies, technology)
-    guarantee_subtable(modify_table.technologies[technology], "prereqs")
     if type(prereq) == "table" then
       for pr, req in pairs(prereq) do
         modify_table.technologies[technology].prereqs[req] = true
@@ -321,16 +270,15 @@ ov_functions.global_replace_technology = function(old, new)
   substitution_table.technologies[old] = new
 end
 
-ov_functions.disable_technology =
-  function(technology) -- disable technology (may be a table containing a list of technologies)
-    if type(technology) == "table" then
-      for tk, tech in pairs(technology) do
-        disable_table.technologies[tech] = true
-      end
-    else
-      disable_table.technologies[technology] = true
+ov_functions.disable_technology = function(technology) -- disable technology (may be a table containing a list of technologies)
+  if type(technology) == "table" then
+    for tk, tech in pairs(technology) do
+      disable_table.technologies[tech] = true
     end
+  else
+    disable_table.technologies[technology] = true
   end
+end
 
 ov_functions.set_special_technology_override = function(technology, t)
   if type(technology) == "table" then
@@ -358,93 +306,18 @@ ov_functions.patch_recipes = function(patch_list)
   end
 end
 
-ov_functions.modify_normal_input = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.normal then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "normal")
-  end
-  guarantee_subtable(patch.normal, "ingredients")
-  table.insert(patch.normal.ingredients, i_data)
-end
-
-ov_functions.modify_hard_input = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.expensive then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "expensive")
-  end
-  guarantee_subtable(patch.expensive, "ingredients")
-  table.insert(patch.expensive.ingredients, i_data)
-end
-
 ov_functions.modify_input = function(recipe, i_data)
   guarantee_subtable(patch_table, recipe)
   local patch = patch_table[recipe]
-  if patch.normal or patch.expensive then
-    set_normal_input(recipe, d_c(i_data))
-    set_hard_input(recipe, i_data)
-  else
-    guarantee_subtable(patch, "ingredients")
-    table.insert(patch.ingredients, i_data)
-  end
-end
-
-ov_functions.modify_normal_output = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.normal then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "normal")
-  end
-  guarantee_subtable(patch.normal, "results")
-  table.insert(patch.normal.results, i_data)
-end
-
-ov_functions.modify_hard_output = function(recipe, i_data)
-  guarantee_subtable(patch_table, recipe)
-  local patch = patch_table[recipe]
-  if not patch.expensive then
-    split_patch_difficulty(patch)
-    guarantee_subtable(patch, "expensive")
-  end
-  guarantee_subtable(patch.expensive, "results")
-  table.insert(patch.expensive.results, i_data)
+  guarantee_subtable(patch, "ingredients")
+  table.insert(patch.ingredients, i_data)
 end
 
 ov_functions.modify_output = function(recipe, i_data)
   guarantee_subtable(patch_table, recipe)
   local patch = patch_table[recipe]
-  if patch.normal or patch.expensive then
-    ov_functions.modify_normal_output(recipe, d_c(i_data))
-    ov_functions.modify_hard_output(recipe, i_data)
-  else
-    guarantee_subtable(patch, "results")
-    table.insert(patch.results, i_data)
-  end
-end
-
-ov_functions.remove_normal_input =
-  function(recipe, item) -- remove item from input of recipe (item may be a table containing a list of items to remove)
-    if type(item) == "table" then
-      for _, it in pairs(item) do
-        ov_functions.modify_normal_input(recipe, { it, 0 })
-      end
-    else
-      ov_functions.modify_normal_input(recipe, { item, 0 })
-    end
-  end
-
-ov_functions.remove_hard_input = function(recipe, item)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_hard_input(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_hard_input(recipe, { item, 0 })
-  end
+  guarantee_subtable(patch, "results")
+  table.insert(patch.results, i_data)
 end
 
 ov_functions.remove_input = function(recipe, item)
@@ -454,27 +327,6 @@ ov_functions.remove_input = function(recipe, item)
     end
   else
     ov_functions.modify_input(recipe, { item, 0 })
-  end
-end
-
-ov_functions.remove_normal_output =
-  function(recipe, item) -- remove item from output of recipe (item may be a table containing a list of items to remove)
-    if type(item) == "table" then
-      for _, it in pairs(item) do
-        ov_functions.modify_normal_output(recipe, { it, 0 })
-      end
-    else
-      ov_functions.modify_normal_output(recipe, { item, 0 })
-    end
-  end
-
-ov_functions.remove_hard_output = function(recipe, item)
-  if type(item) == "table" then
-    for _, it in pairs(item) do
-      ov_functions.modify_hard_output(recipe, { it, 0 })
-    end
-  else
-    ov_functions.modify_hard_output(recipe, { item, 0 })
   end
 end
 
@@ -488,25 +340,36 @@ ov_functions.remove_output = function(recipe, item)
   end
 end
 
-ov_functions.global_replace_item =
-  function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
-    if type(old) == "table" then
-      for ik, item in pairs(old) do
-        substitution_table.recipe_items[item] = new
-      end
-    else
-      substitution_table.recipe_items[old] = new
-      for _, type in pairs(building_types) do
-        for name, entity in pairs(data.raw[type]) do
-          if entity and entity.next_upgrade then
-            if entity.next_upgrade == old then
-              angelsmods.functions.set_next_upgrade(type, name, new)
-            end
+ov_functions.global_replace_item = function(old, new) -- replace all occurrences of old in recipes with new (old may be a table containing a list of items)
+  if type(old) == "table" then
+    for ik, item in pairs(old) do
+      substitution_table.recipe_items[item] = new
+    end
+  else
+    substitution_table.recipe_items[old] = new
+    for _, type in pairs(building_types) do
+      for name, entity in pairs(data.raw[type]) do
+        if entity and entity.next_upgrade then
+          if entity.next_upgrade == old then
+            angelsmods.functions.set_next_upgrade(type, name, new)
           end
         end
       end
     end
   end
+end
+
+ov_functions.copy_item_properties = function(from, to)
+  local from_item = data.raw.item[from]
+  local to_item = data.raw.item[to]
+  to_item.localised_name = { "item-name."..from_item.name }
+  to_item.icon = from_item.icon
+  to_item.icon_size = from_item.icon_size
+  to_item.icons = from_item.icons
+  to_item.pictures = from_item.pictures
+  to_item.subgroup = from_item.subgroup
+  to_item.order = from_item.order
+end
 
 ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   local new_fluid = data.raw.fluid[new_fluid_name]
@@ -516,30 +379,8 @@ ov_functions.converter_fluid = function(old_fluid_name, new_fluid_name)
   end
 
   ov_functions.global_replace_item(old_fluid_name, new_fluid_name)
-
-  if angelsmods.trigger.enableconverter then
-    local converter_subgroup_name = "angels-fluid-converter-" .. (new_fluid.subgroup or "unknown")
-
-    if not data.raw["item-subgroup"][converter_subgroup_name] then
-      local fluid_subgroup_data = data.raw["item-subgroup"][new_fluid.subgroup or "unknown"]
-      local fluid_group_data =
-        data.raw["item-group"][fluid_subgroup_data and fluid_subgroup_data.group or "angels-unused-stuffs"]
-      data:extend({
-        {
-          type = "item-subgroup",
-          name = converter_subgroup_name,
-          group = "angels-fluid-converter",
-          order = (fluid_group_data and fluid_group_data.order or "z")
-            .. "-"
-            .. (fluid_subgroup_data and fluid_subgroup_data.order or "z"),
-        },
-      })
-    end
-
-    angelsmods.functions.move_item(old_fluid_name, converter_subgroup_name, new_fluid.order, "fluid")
-  else
-    angelsmods.functions.add_flag(old_fluid_name, "hidden")
-  end
+  angelsmods.functions.hide(old_fluid_name)
+  angelsmods.functions.disable_barreling_recipes(old_fluid_name)
 end
 
 ov_functions.global_replace_icon = function(old, new)
@@ -551,10 +392,12 @@ ov_functions.hide_recipe = function(recipe) -- hides recipe (may be a table cont
     for _, rec in pairs(recipe) do
       guarantee_subtable(patch_table, rec)
       patch_table[rec].hidden = true
+      patch_table[rec].localised_name = { "item-name.angels-void" }
     end
   else
     guarantee_subtable(patch_table, recipe)
     patch_table[recipe].hidden = true
+    patch_table[recipe].localised_name = { "item-name.angels-void" }
   end
 end
 
@@ -563,26 +406,42 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
     for _, rec in pairs(recipe) do
       guarantee_subtable(patch_table, rec)
       local patch = patch_table[rec]
-      if patch.normal or patch.expensive then
-        disable_normal_recipe(rec)
-        disable_hard_recipe(rec)
-      else
-        patch.enabled = false
-      end
+      patch.enabled = false
       disable_table.recipes[rec] = true
       ov_functions.hide_recipe(rec)
     end
   else
     guarantee_subtable(patch_table, recipe)
     local patch = patch_table[recipe]
-    if patch.normal or patch.expensive then
-      disable_normal_recipe(recipe)
-      disable_hard_recipe(recipe)
-    else
-      patch.enabled = false
-    end
+    patch.enabled = false
     disable_table.recipes[recipe] = true
     ov_functions.hide_recipe(recipe)
+  end
+end
+
+ov_functions.add_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      add_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = true
+  end
+end
+
+ov_functions.remove_additional_category = function(recipe, category)
+  if type(recipe) == "table" then
+    for _, rec in pairs(recipe) do
+      remove_additional_category(rec, category)
+    end
+  else
+    guarantee_subtable(modify_table, recipe)
+    local modify = modify_table[recipe]
+    guarantee_subtable(modify, "additional_categories")
+    modify.additional_categories[category] = false
   end
 end
 
@@ -604,7 +463,7 @@ end
 ov_functions.set_science_pack = function(technology, pack, amount)
   -- adds science packs of type pack to technology (both may be tables), may optionally take an amount of science packs (or a table if packs is a table) to set to (default 1)
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do
+    for _, tech in pairs(technology) do
       ov_functions.set_science_pack(tech, pack, amount)
     end
   elseif type(pack) == "table" then
@@ -627,18 +486,83 @@ ov_functions.remove_science_pack = function(technology, pack)
   ov_functions.set_science_pack(technology, pack, 0)
 end
 
-ov_functions.set_research_difficulty = function(technology, unit_time, unit_amount)
+ov_functions.set_research_difficulty = function(technology, unit_time, unit_amount, trigger)
+  -- technology is the technology name, or a table of names
+  -- unit_time is either time for pack technologies or entity_name used in the trigger format
+  -- trigger is unit for default technologies, or the type of trigger:
+  --[[
+  mine-entity
+  craft-item
+  craft-fluid
+  send-item-to-orbit
+  capture-spawner
+  build-entity
+  create-space-platform
+  ]]
+  local tab_form = { -- allow for triggered technologies
+    ["unit"]={
+      time = unit_time,
+      amount = unit_amount,
+    },
+    ["craft-item"]=
+    {
+      count = unit_amount,
+      item = unit_time,
+      type = trigger
+    },
+    ["craft-fluid"]=
+    {
+      count = unit_amount,
+      fluid = unit_time,
+      type = "craft-fluid"
+    },
+    ["mine-entity"]=
+    {
+      entity = unit_time,
+      type = "mine-entity"
+    },
+    ["send-item-to-orbit"]=
+    {
+      item = unit_time,
+      type = "send-item-to-orbit"
+    },
+    ["capture-spawner"]=
+    {
+      item = unit_time,
+      type = "capture-spawner"
+    },
+    ["build-entity"]=
+    {
+      entity = unit_time,
+      type = "build-entity"
+    },
+    ["create-space-platform"]=
+    {
+      type="create-space-platform"
+    },
+  }
   if type(technology) == "table" then
-    for k, tech in pairs(technology) do
-      ov_functions.set_research_difficulty(tech, unit_time, unit_amount)
+    for _, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
+      ov_functions.set_research_difficulty(tech, unit_time, unit_amount,trigger)
     end
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "difficulty")
-    modify_table.technologies[technology].difficulty = {
-      time = unit_time,
-      amount = unit_amount,
-    }
+    if trigger == nil then
+      local tech = data.raw.technology[technology]
+      if tech and type(tech.research_trigger)=="table" then
+        trigger = tech.research_trigger.type
+      elseif tech and type(tech.unit)=="table" then
+        trigger = "unit"
+      else
+        log("technology ".. technology.." does not have an unlock condition")
+      end
+    end
+    if trigger == "unit" or nil then
+      modify_table.technologies[technology].difficulty = tab_form["unit"]
+    else
+      modify_table.technologies[technology].difficulty = tab_form[trigger]
+    end
   end
 end
 
@@ -648,7 +572,7 @@ ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_tem
   max_temp = max_temp or nil
   if data.raw.fluid[fluid] then
     local fluid = data.raw.fluid[fluid]
-    local fill_barrel = data.raw.recipe["fill-" .. fluid.name .. "-barrel"]
+    local fill_barrel = data.raw.recipe[fluid.name .. "-barrel"]
     local empty_barrel = data.raw.recipe["empty-" .. fluid.name .. "-barrel"]
     if fill_barrel then
       for _, ingredient in pairs(fill_barrel.ingredients) do
@@ -673,123 +597,117 @@ ov_functions.set_temperature_barreling = function(fluid, temp, min_temp, max_tem
           end
         end
       end
-      if temp then
-        fill_barrel.temperature = temp
-      else
-        fill_barrel.minimum_temperature = min_temp
-        fill_barrel.maximum_temperature = max_temp
-      end
     end
   end
 end
 
-ov_functions.barrel_overrides =
-  function(fluid, style) --Bottling override functions for icons, localisation and tech unlocks
-    if data.raw.fluid[fluid] then
-      --declare variables moving forward
-      local fluid_s = data.raw.fluid[fluid]
-      local fluid_i
-      local F_Fill
-      local F_Empty
-      --check that the barrel actually exists
-      if data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] then
-        --define local function variables
-        F_Fill = data.raw.recipe["fill-" .. fluid_s.name .. "-barrel"] --define F_Fill
-        F_Empty = data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
-        fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
-        --set common properties
-        F_Fill.icons = generate_fill_barrel_icons(fluid_s, style)
-        F_Empty.icons = generate_empty_barrel_icons(fluid_s, style)
-        fluid_i.icons = generate_barrel_icons(fluid_s, style)
-        --results are generic for filled barrels
-        F_Fill.results = {
-          { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
-        }
-        --ingredients are common for emptying recipes
-        F_Empty.ingredients = {
-          { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
-        }
+ov_functions.barrel_overrides = function(fluid, style) --Bottling override functions for icons, localisation and tech unlocks
+  if data.raw.fluid[fluid] then
+    --declare variables moving forward
+    local fluid_s = data.raw.fluid[fluid]
+    local fluid_i
+    local F_Fill
+    local F_Empty
+    --check that the barrel actually exists
+    if data.raw.recipe[fluid_s.name .. "-barrel"] then
+      --define local function variables
+      F_Fill = data.raw.recipe[fluid_s.name .. "-barrel"] --define F_Fill
+      F_Empty = data.raw.recipe["empty-" .. fluid_s.name .. "-barrel"] --define F_Empty
+      fluid_i = data.raw.item[fluid .. "-barrel"] --define barrel name
+      --set common properties
+      F_Fill.icons = generate_fill_barrel_icons(fluid_s, style)
+      F_Empty.icons = generate_empty_barrel_icons(fluid_s, style)
+      fluid_i.icons = generate_barrel_icons(fluid_s, style)
+      --results are generic for filled barrels
+      F_Fill.results = {
+        { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
+      }
+      --ingredients are common for emptying recipes
+      F_Empty.ingredients = {
+        { type = "item", name = fluid_s.name .. "-barrel", amount = 1 },
+      }
 
-        if style == "gas" then -- Gas Bottles
-          F_Fill.localised_name = {
-            "recipe-name.fill-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "gas-canister", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "gas-canister", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-gas-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("gas-canisters", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
-        elseif style == "acid" then -- Liquid Fuel Canisters
-          F_Fill.localised_name = {
-            "recipe-name.fill-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-canister", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-canister", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-canister",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          ov_functions.remove_unlock("fluid-barrel-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("fluid-canister-processing", "fill-" .. fluid_s.name .. "-barrel")
-          ov_functions.remove_unlock("fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
-          ov_functions.add_unlock("fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
-        else -- Vanilla Barrel
-          F_Fill.localised_name = {
-            "recipe-name.fill-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          F_Fill.ingredients = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-barrel", amount = 1 },
-          }
-          F_Empty.results = {
-            { type = "fluid", name = fluid_s.name, amount = 50 },
-            { type = "item", name = "empty-barrel", amount = 1 },
-          }
-          F_Empty.localised_name = {
-            "recipe-name.empty-filled-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-          fluid_i.localised_name = {
-            "item-name.filled-barrel",
-            fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
-          }
-        end
+      if style == "gas" then -- Gas Bottles
+        F_Fill.localised_name = {
+          "recipe-name.fill-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "bob-gas-canister", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "bob-gas-canister", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-gas-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-gas-canisters", fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-gas-canisters", "empty-" .. fluid_s.name .. "-barrel")
+      elseif style == "acid" then -- Liquid Fuel Canisters
+        F_Fill.localised_name = {
+          "recipe-name.fill-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "bob-empty-canister", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "bob-empty-canister", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-canister",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-fluid-canister-processing", fluid_s.name .. "-barrel")
+        ov_functions.remove_unlock("bob-fluid-barrel-processing", "empty-" .. fluid_s.name .. "-barrel")
+        ov_functions.add_unlock("bob-fluid-canister-processing", "empty-" .. fluid_s.name .. "-barrel")
+      else -- Vanilla Barrel
+        F_Fill.localised_name = {
+          "recipe-name.fill-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        F_Fill.ingredients = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "barrel", amount = 1 },
+        }
+        F_Empty.results = {
+          { type = "fluid", name = fluid_s.name, amount = 50 },
+          { type = "item", name = "barrel", amount = 1 },
+        }
+        F_Empty.localised_name = {
+          "recipe-name.empty-filled-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
+        fluid_i.localised_name = {
+          "item-name.filled-barrel",
+          fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
+        }
       end
+      angelsmods.functions.patch_recycling_recipes({F_Fill.name})
     end
   end
+end
 
 -------------------------------------------------------------------------------
 -- OVERRIDE EXECUTION FUNCTIONS -----------------------------------------------
 -------------------------------------------------------------------------------
-local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments based on tables and make any necessary changes
+local function adjust_recipe(recipe) -- check a recipe for basic adjustments based on tables and make any necessary changes
   local function adjust_member(parent, member, substitution_type)
     local old = parent[member]
     if old then
@@ -810,6 +728,7 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
           item.amount = item[2]
           item[1] = nil
           item[2] = nil
+          log("recipe "..parent.name.." "..subtable.." is still using the old format")
         end
         local new = substitution_table[substitution_type][item.name]
         if new then
@@ -839,23 +758,44 @@ local function adjust_recipe(recipe, k) -- check a recipe for basic adjustments 
   end
   local function adjust_difficulty(path)
     adjust_subtable(path, "ingredients", "recipe_items")
-    adjust_member(path, "result", "recipe_items")
     adjust_subtable(path, "results", "recipe_items")
     adjust_member(path, "main_product", "recipe_items")
   end
-  if recipe.category ~= "angels-converter" then -- leave converter recipes alone so we can still use them if necessary
-    if recipe.normal or recipe.expensive then
-      if recipe.normal then
-        adjust_difficulty(recipe.normal)
+  local function safe_insert(array, new_item)
+    local addit = true
+    for i, item in pairs(array) do
+      if item == new_item then
+        addit = false
+        break
       end
-      if recipe.expensive then
-        adjust_difficulty(recipe.expensive)
-      end
-    else
-      adjust_difficulty(recipe)
     end
-    adjust_member(recipe, "icon", "recipe_icons")
+    if addit then
+      table.insert(array, new_item)
+    end
   end
+  local function adjust_additional_categories()
+    local modifications = modify_table[recipe.name]
+    if modifications then
+      for category_name, flag in pairs(modifications.additional_categories) do
+        if flag then
+          local category = data.raw["recipe-category"][category_name]
+          if category then
+            guarantee_subtable(recipe, "additional_categories")
+            safe_insert(recipe.additional_categories, category_name)
+          end
+        elseif recipe.additional_categories then
+          for i, category in pairs(recipe.additional_categories) do
+            table.remove(recipe.additional_categories, i)
+            break
+          end
+        end
+      end
+    end
+  end
+
+  adjust_difficulty(recipe)
+  adjust_member(recipe, "icon", "recipe_icons")
+  adjust_additional_categories()
 end
 
 local function adjust_technology(tech, k) -- check a tech for basic adjustments based on tables and make any necessary changes
@@ -960,59 +900,66 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   if modify_table.technologies[k] then
     modifications = modify_table.technologies[k].difficulty
     if modifications then
-      tech.unit.time = modifications.time
-      tech.unit.count = modifications.amount
-    end
-  end
-  --adjust ingredient list
-  dup_table = {}
-  modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
-  to_remove = {}
-  tech.unit = tech.unit or {}
-  tech.unit.ingredients = tech.unit.ingredients or {}
-  for pk, pack in pairs(tech.unit.ingredients) do
-    local nk = pack.name and "name" or 1
-    if substitution_table.science_packs[pack[nk]] and substitution_table.science_packs[pack[nk]].remove then
-      for k, rem in pairs(substitution_table.science_packs[pack[nk]].remove) do
-        to_remove[rem] = true
-      end
-    end
-  end
-  for i = #tech.unit.ingredients, 1, -1 do
-    local pack = tech.unit.ingredients[i]
-    local nk = pack.name and "name" or 1
-    local ak = pack.name and "amount" or 2
-    if to_remove[pack[nk]] then
-      table.remove(tech.unit.ingredients, i)
-    else
-      if substitution_table.science_packs[pack[nk]] then
-        pack[ak] = substitution_table.science_packs[pack[nk]].amount
-        pack[nk] = substitution_table.science_packs[pack[nk]].add
-      end
-      if modifications and modifications[pack[nk]] then
-        if modifications[pack[nk]] > 0 then
-          dup_table[pack[nk]] = true
-          pack[ak] = modifications[pack[nk]]
-        else
-          table.remove(tech.unit.ingredients, i)
-        end
+      if modifications.type then -- not a unit based technology
+        tech.unit = nil
+        tech.research_trigger = modifications
       else
-        dup_table[pack[nk]] = true
+        tech.unit = tech.unit or {}
+        tech.unit.time = modifications.time
+        tech.unit.count = modifications.amount
       end
     end
   end
-  if modifications then
-    for name, add in pairs(modifications) do
-      if add > 0 and not dup_table[name] then
-        table.insert(tech.unit.ingredients, { type = "item", name = name, amount = add })
+  --adjust ingredient list only if unit based tech
+  if tech.unit then
+    dup_table = {}
+    modifications = modify_table.technologies[k] and modify_table.technologies[k].packs or nil
+    to_remove = {}
+    tech.unit = tech.unit or {}
+    tech.unit.ingredients = tech.unit.ingredients or {}
+    for pk, pack in pairs(tech.unit.ingredients) do
+      if substitution_table.science_packs[pack[1]] and substitution_table.science_packs[pack[1]].remove then
+        for k, rem in pairs(substitution_table.science_packs[pack[1]].remove) do
+          to_remove[rem] = true
+        end
+      end
+    end
+    for i = #tech.unit.ingredients, 1, -1 do
+      local pack = tech.unit.ingredients[i]
+      if pack then
+        if to_remove[pack[1]] then
+          table.remove(tech.unit.ingredients, i)
+        else
+          if substitution_table.science_packs[pack[1]] then
+            pack[2] = substitution_table.science_packs[pack[1]].amount
+            pack[1] = substitution_table.science_packs[pack[1]].add
+          end
+          if modifications and modifications[pack[1]] then
+            if modifications[pack[1]] > 0 then
+              dup_table[pack[1]] = true
+              pack[2] = modifications[pack[1]]
+            else
+              table.remove(tech.unit.ingredients, i)
+            end
+          else
+            dup_table[pack[1]] = true
+          end
+        end
+      end
+    end
+    if modifications then
+      for name, add in pairs(modifications) do
+        if add > 0 and not dup_table[name] then
+          table.insert(tech.unit.ingredients, { name, add })
+        end
       end
     end
   end
 end
 
 ov_functions.execute = function()
-  for k, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
-    adjust_recipe(recipe, k)
+  for _, recipe in pairs(data.raw.recipe) do -- run through all recipes to perform substitutions/overrides
+    adjust_recipe(recipe)
   end
   for name, patch in pairs(patch_table) do
     patch.name = name

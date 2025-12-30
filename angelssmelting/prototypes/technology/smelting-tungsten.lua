@@ -2,36 +2,31 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-1",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-refining",
-      "powder-metallurgy-4",
+      "angels-ore-refining",
+      "angels-powder-metallurgy-4",
       "angels-cobalt-smelting-2",
-      "chlorine-processing-2",
+      "angels-chlorine-processing-2",
       "angels-sulfur-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-ore-smelting",
+        recipe = "angels-solid-tungsten-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquid-tungstic-acid-smelting",
+        recipe = "angels-gas-tungsten-hexafluoride",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-tungsten-oxide-smelting",
+        recipe = "angels-powder-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "gas-tungsten-hexafluoride-smelting",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "casting-powder-tungsten-1",
+        recipe = "angels-casting-powder-tungsten",
       },
       {
         type = "unlock-recipe",
@@ -41,10 +36,10 @@ data:extend({
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -53,12 +48,11 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-processing-4",
-      "powder-metallurgy-5",
+      "angels-ore-processing-4",
+      "angels-powder-metallurgy-5",
       "angels-tungsten-smelting-1",
       "angels-nickel-smelting-2",
       "angels-nitrogen-processing-2",
@@ -66,29 +60,29 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-ore-processing",
+        recipe = "angels-processed-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-tungsten-smelting",
+        recipe = "angels-solid-ammonium-paratungstate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-ammonium-paratungstate-smelting",
+        recipe = "angels-solid-tungsten-oxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-powder-tungsten-2",
+        recipe = "angels-casting-powder-tungsten-2",
       },
     },
     unit = {
       count = 300,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -97,31 +91,35 @@ data:extend({
   {
     type = "technology",
     name = "angels-tungsten-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-tungsten-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-tungsten-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-processing-5",
+      "angels-ore-processing-5",
       "angels-tungsten-smelting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "tungsten-processed-processing",
+        recipe = "angels-pellet-tungsten",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-tungsten-smelting",
+        recipe = "angels-liquid-tungstic-acid",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-ammonium-paratungstate-2",
       },
     },
     unit = {
       count = 350,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 30,
     },

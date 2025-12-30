@@ -2,7 +2,7 @@ if angelsmods.industries.components then
   local OV = angelsmods.functions.OV
   -- CUSTOM FIXES FOR BASE GAME ENTITIES THAT DO NOT FIT IN OTHER CATEGORIES (+ ANGELS)
 
-  OV.remove_prereq("water-treatment", "angels-fluid-control")
+  OV.remove_prereq("angels-water-treatment", "angels-fluid-control")
 
   OV.patch_recipes({
     {
@@ -94,14 +94,13 @@ if angelsmods.industries.components then
   -------------------------------------------------------------------------------
   local rocket = data.raw.item["rocket-part"]
   if rocket then
-    rocket.icon = "__angelsindustries__/graphics/icons/rocket.png"
+    rocket.icon = "__angelsindustriesgraphics__/graphics/icons/rocket.png"
     rocket.icon_size = 64
-    rocket.icon_mipmaps = 1
     rocket.icons = nil
     rocket.subgroup = "angels-rocket"
     rocket.order = "b[rocket]"
   end
-  angelsmods.functions.remove_flag(rocket.name, "hidden")
+  angelsmods.functions.unhide(rocket.name)
 
   OV.patch_recipes({
     {

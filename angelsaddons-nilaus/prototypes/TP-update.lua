@@ -1,33 +1,33 @@
-if mods["angelsbioprocessing"] and data.raw.item["solid-paper"] then
+if mods["angelsbioprocessing"] and data.raw.item["angels-solid-paper"] then
   -- replace paper with nilaus TP
-  data.raw.item["solid-paper"].icon = "__angelsaddons-nilaus__/graphics/icons/nilaus-paper.png"
-  data.raw.item["solid-paper"].icon_size = 256
-  data.raw.item["solid-paper"].icons = nil
-  data.raw.item["solid-paper"].localised_name =
-    { "item-name.nilaus-paper", data.raw.item["solid-paper"].localised_name or { "item-name.solid-paper" } }
-  data.raw.item["solid-paper"].localised_description = { "item-description.nilaus-paper" }
+  data.raw.item["angels-solid-paper"].icon = "__angelsaddons-nilaus__/graphics/icons/nilaus-paper.png"
+  data.raw.item["angels-solid-paper"].icon_size = 256
+  data.raw.item["angels-solid-paper"].icons = nil
+  data.raw.item["angels-solid-paper"].localised_name =
+    { "item-name.nilaus-paper", data.raw.item["angels-solid-paper"].localised_name or { "item-name.angels-solid-paper" } }
+  data.raw.item["angels-solid-paper"].localised_description = { "item-description.nilaus-paper" }
 
   -- replace recipe icons
-  data.raw.recipe["paper-bleaching-1"].icons[1].icon = data.raw.item["solid-paper"].icon
-  data.raw.recipe["paper-bleaching-1"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.recipe["paper-bleaching-1"].icons[1].scale = 32 / data.raw.item["solid-paper"].icon_size
-  data.raw.recipe["paper-bleaching-2"].icons[1].icon = data.raw.item["solid-paper"].icon
-  data.raw.recipe["paper-bleaching-2"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.recipe["paper-bleaching-2"].icons[1].scale = 32 / data.raw.item["solid-paper"].icon_size
-  data.raw.recipe["paper-bleaching-3"].icons[1].icon = data.raw.item["solid-paper"].icon
-  data.raw.recipe["paper-bleaching-3"].icons[1].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.recipe["paper-bleaching-3"].icons[1].scale = 32 / data.raw.item["solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper"].icons[1].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.recipe["angels-solid-paper"].icons[1].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper"].icons[1].scale = 32 / data.raw.item["angels-solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper-2"].icons[1].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.recipe["angels-solid-paper-2"].icons[1].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper-2"].icons[1].scale = 32 / data.raw.item["angels-solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper-3"].icons[1].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.recipe["angels-solid-paper-3"].icons[1].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.recipe["angels-solid-paper-3"].icons[1].scale = 32 / data.raw.item["angels-solid-paper"].icon_size
 
   -- replace technology icons
-  data.raw.technology["bio-paper-1"].icon = data.raw.item["solid-paper"].icon
-  data.raw.technology["bio-paper-1"].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.technology["bio-paper-1"].icons = data.raw.item["solid-paper"].icons
-  data.raw.technology["bio-paper-2"].icon = data.raw.item["solid-paper"].icon
-  data.raw.technology["bio-paper-2"].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.technology["bio-paper-2"].icons = data.raw.item["solid-paper"].icons
-  data.raw.technology["bio-paper-3"].icon = data.raw.item["solid-paper"].icon
-  data.raw.technology["bio-paper-3"].icon_size = data.raw.item["solid-paper"].icon_size
-  data.raw.technology["bio-paper-3"].icons = data.raw.item["solid-paper"].icons
+  data.raw.technology["angels-bio-paper-1"].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.technology["angels-bio-paper-1"].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.technology["angels-bio-paper-1"].icons = data.raw.item["angels-solid-paper"].icons
+  data.raw.technology["angels-bio-paper-2"].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.technology["angels-bio-paper-2"].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.technology["angels-bio-paper-2"].icons = data.raw.item["angels-solid-paper"].icons
+  data.raw.technology["angels-bio-paper-3"].icon = data.raw.item["angels-solid-paper"].icon
+  data.raw.technology["angels-bio-paper-3"].icon_size = data.raw.item["angels-solid-paper"].icon_size
+  data.raw.technology["angels-bio-paper-3"].icons = data.raw.item["angels-solid-paper"].icons
 
   -- create a new compilatron
   local compilatron = util.table.deepcopy(data.raw.unit["compilatron"])
@@ -54,7 +54,6 @@ if mods["angelsbioprocessing"] and data.raw.item["solid-paper"] then
         },
         type = "direct",
       },
-      category = "melee",
       target_type = "entity",
     },
     animation = compilatron.attack_parameters.animation,

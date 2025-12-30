@@ -1,7 +1,8 @@
 local cargo_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].minimap_representation
 local cargo_selected_minimap_representation = data.raw["cargo-wagon"]["cargo-wagon"].selected_minimap_representation
 
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
@@ -15,27 +16,28 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "crawler-bot-wagon",
+  name = "angels-crawler-bot-wagon",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-bot-wagon-ico.png",
   icon_size = 32,
   subgroup = "angels-vehicle-train-crawler",
   order = "d[bot-wagon]",
-  place_result = "crawler-bot-wagon",
+  place_result = "angels-crawler-bot-wagon",
   stack_size = 5,
 })
 
 funcs.generate_train_entities({
   type = "cargo-wagon",
-  name = "crawler-bot-wagon",
+  name = "angels-crawler-bot-wagon",
   icon = "__angelsaddons-mobility__/graphics/icons/crawler-bot-wagon-ico.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
   inventory_size = 60,
-  minable = { mining_time = 1, result = "crawler-bot-wagon" },
+  minable = { mining_time = 1, result = "angels-crawler-bot-wagon" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 1000,
   corpse = "medium-remnants",
   dying_explosion = "medium-explosion",
+  factoriopedia_simulation = simulations.factoriopedia_crawler_bot_wagon,
   collision_box = { { -0.6, -2.4 }, { 0.6, 2.4 } },
   selection_box = { { -1, -2.703125 }, { 1, 3.296875 } },
   color = { r = 0.43, g = 0.23, b = 0, a = 0.5 },
@@ -81,23 +83,62 @@ funcs.generate_train_entities({
       percent = 20,
     },
   },
-  back_light = rolling_stock_back_light(),
-  stand_by_light = rolling_stock_stand_by_light(),
-  pictures = {
-    priority = "very-low",
-    width = 256,
-    height = 256,
-    --back_equals_front = true,
-    direction_count = 64,
-    filenames = {
-      "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-bot-wagon.png",
+  back_light = {
+    {
+      minimum_darkness = 0.3,
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { -0.6, 3.5 },
+      size = 2,
+      intensity = 0.6,
+      add_perspective = true,
     },
-    line_length = 8,
-    lines_per_file = 8,
-    shift = { 0, -0.75 },
+    {
+      minimum_darkness = 0.3,
+      color = { 1, 0.1, 0.05, 0 },
+      shift = { 0.6, 3.5 },
+      size = 2,
+      intensity = 0.6,
+      add_perspective = true,
+    },
   },
-  wheels = standard_train_wheels,
-  drive_over_tie_trigger = drive_over_tie(),
+  stand_by_light = {
+    {
+      minimum_darkness = 0.3,
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { -0.6, -3.5 },
+      size = 2,
+      intensity = 0.5,
+      add_perspective = true,
+    },
+    {
+      minimum_darkness = 0.3,
+      color = { 0.05, 0.2, 1, 0 },
+      shift = { 0.6, -3.5 },
+      size = 2,
+      intensity = 0.5,
+      add_perspective = true,
+    },
+  },
+  pictures = {
+    rotated = {
+      priority = "very-low",
+      width = 256,
+      height = 256,
+      --back_equals_front = true,
+      direction_count = 64,
+      filenames = {
+        "__angelsaddons-mobility__/graphics/entity/crawler-train/crawler-bot-wagon.png",
+      },
+      line_length = 8,
+      lines_per_file = 8,
+      shift = { 0, -0.75 },
+    },
+  },
+  wheels = funcs.standard_train_wheels,
+  drive_over_tie_trigger = {
+    type = "play-sound",
+    sound = sound_variations("__base__/sound/train-tie", 6, 0.4, { volume_multiplier("main-menu", 2.4), volume_multiplier("driving", 1.3) }),
+  },
   tie_distance = 50,
   working_sound = {
     sound = {
@@ -109,6 +150,5 @@ funcs.generate_train_entities({
   crash_trigger = crash_trigger(),
   open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
   close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-  sound_minimum_speed = 0.5,
-  vehicle_impact_sound = { filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0 },
+  impact_category = "wood",
 })

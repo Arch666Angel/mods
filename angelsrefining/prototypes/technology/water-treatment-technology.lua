@@ -6,21 +6,20 @@ data:extend({
   --  localised_description = {"technology-description.fluid-handling"},
   --  icon = "__base__/graphics/technology/fluid-handling.png",
   --  icon_size = 256,
-  --  icon_mipmaps = 4,
   --  prerequisites = {
   --    "automation-2"
   --  },
   --  effects = {
   --    {
   --      type = "unlock-recipe",
-  --      recipe = "ground-water-pump"
+  --      recipe = "angels-ground-water-pump"
   --    }
   --  },
   --  unit = {
   --    count = 50,
   --    ingredients = {
-  --      {type = "item", name = "automation-science-pack", amount = 1},
-  --      {type = "item", name = "logistic-science-pack", amount = 1}
+  --      { "automation-science-pack", 1 },
+  --      { "logistic-science-pack", 1 }
   --    },
   --    time = 15
   --  },
@@ -28,39 +27,38 @@ data:extend({
   --},
   {
     type = "technology",
-    name = "water-treatment",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    name = "angels-water-treatment",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      mods["angelspetrochem"] and "angels-fluid-control" or "electronics",
+      mods["angelspetrochem"] and "angels-fluid-control" or "automation-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant",
+        recipe = "angels-ground-water-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "clarifier",
+        recipe = "angels-hydro-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "ground-water-pump",
+        recipe = "angels-liquifier",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-purification",
+        recipe = "angels-water-purified",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-mineralized",
+        recipe = "angels-water-mineralized",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 15,
     },
@@ -68,41 +66,40 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-2",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    name = "angels-water-treatment-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-treatment",
-      "ore-floatation",
+      "angels-slag-processing-1",
+      "angels-water-treatment",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant-2",
+        recipe = "angels-hydro-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "yellow-waste-water-purification",
+        recipe = "angels-yellow-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "greenyellow-waste-water-purification",
+        recipe = "angels-greenyellow-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "green-waste-water-purification",
+        recipe = "angels-green-waste-water-purification",
       },
       {
         type = "unlock-recipe",
-        recipe = "red-waste-water-purification",
+        recipe = "angels-red-waste-water-purification",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -110,47 +107,50 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-3",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    name = "angels-water-treatment-3",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-treatment-2",
-      "advanced-electronics",
+      "angels-water-treatment-2",
+      "advanced-circuit",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "hydro-plant-3",
+        recipe = "angels-sea-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "salination-plant",
+        recipe = "angels-hydro-plant-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-saline",
+        recipe = "angels-salination-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt-dissolving",
+        recipe = "angels-water-saline-from-water",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-lithium",
+        recipe = "angels-solid-salt-dissolving",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt",
+        recipe = "angels-solid-lithium",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-salt",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -158,32 +158,32 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-treatment-4",
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    name = "angels-water-treatment-4",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "water-treatment-3",
-      "thermal-water-processing",
+      "angels-water-treatment-3",
+      "angels-thermal-water-processing",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "salination-plant-2",
+        recipe = "angels-salination-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-salt-from-saline",
+        recipe = "angels-solid-salt-from-saline",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 15,
     },
@@ -191,96 +191,89 @@ data:extend({
   },
   {
     type = "technology",
-    name = "water-washing-1",
-    icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
+    name = "angels-water-washing-1",
+    icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "water-treatment",
+      "automation",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "seafloor-pump",
+        recipe = "angels-seafloor-pump",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-plant",
+        recipe = "angels-washing-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "water-viscous-mud",
+        recipe = "angels-clarifier",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-1",
+        recipe = "angels-water-heavy-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-2",
+        recipe = "angels-water-concentrated-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-3",
+        recipe = "angels-water-light-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-4",
+        recipe = "angels-water-thin-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "washing-5",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-clay",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-limestone",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-sand",
+        recipe = "angels-water-saline",
       },
     },
     unit = {
-      count = 30,
+      count = 10,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 15,
     },
+    ignore_tech_cost_multiplier = true,
     order = "c-a",
   },
   {
     type = "technology",
-    name = "water-washing-2",
-    icon = "__angelsrefining__/graphics/technology/washing-plant-tech.png",
+    name = "angels-water-washing-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/washing-plant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "water-washing-1",
-      "water-treatment",
+      "angels-water-washing-1",
+      "angels-water-treatment",
       "landfill",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "washing-plant-2",
+        recipe = "angels-washing-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-geodes",
+        recipe = "angels-water-viscous-mud",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-mud-landfill",
+        recipe = "angels-solid-geodes",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solid-mud-landfill",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },

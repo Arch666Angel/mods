@@ -2,37 +2,37 @@ data:extend({
   --AMMO
   {
     type = "ammo-category",
-    name = "cannon-turret",
+    name = "angels-cannon-turret",
   },
   {
     type = "ammo-category",
-    name = "heavy-cannon-shell",
+    name = "angels-heavy-cannon-shell",
   },
   {
     type = "ammo-category",
-    name = "bio",
+    name = "angels-bio",
     bonus_gui_order = "m-b",
   },
   {
     type = "ammo-category",
-    name = "electric",
+    name = "angels-electric",
   },
   {
     type = "ammo-category",
-    name = "gathering",
+    name = "angels-gathering",
   },
   --DAMAGE TYPE
   {
     type = "damage-type",
-    name = "plasma",
+    name = "angels-plasma",
   },
   {
     type = "damage-type",
-    name = "bio",
+    name = "angels-bio",
   },
   {
     type = "damage-type",
-    name = "gathering",
+    name = "angels-gathering",
   },
   --SUBGROUPS
   ---------------------------------------------------------------------------
@@ -46,14 +46,14 @@ data:extend({
     order = "la[angels]-f[exploration]-a", -- order la[angels]-f[exploration]-b reserved for warfare
     icons = {
       {
-        icon = "__angelsexploration__/graphics/technology/heavy-tank-tech.png",
+        icon = "__angelsexplorationgraphics__/graphics/technology/heavy-tank-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsexploration__/graphics/icons/void.png",
-        icon_size = 32,
-        scale = 64 / 32 * 0.35,
+        icon = "__angelsexplorationgraphics__/graphics/icons/void.png",
+        icon_size = 64,
+        scale = 0.35,
         shift = { 20, -20 },
       },
     },

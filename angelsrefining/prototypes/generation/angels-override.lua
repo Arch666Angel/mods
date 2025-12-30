@@ -7,29 +7,28 @@ if not angelsmods.refining.disable_ore_override then
 
   --ANGELS
   if angelsmods.functions.is_special_vanilla() then
-    --if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
   end
 
   --BOBMODS
   if bobmods and bobmods.ores then
-    angelsmods.functions.remove_resource("bauxite-ore")
-    angelsmods.functions.remove_resource("cobalt-ore")
-    angelsmods.functions.remove_resource("gem-ore")
-    angelsmods.functions.remove_resource("gold-ore")
-    angelsmods.functions.remove_resource("lead-ore")
-    angelsmods.functions.remove_resource("nickel-ore")
-    angelsmods.functions.remove_resource("quartz")
-    angelsmods.functions.remove_resource("rutile-ore")
-    angelsmods.functions.remove_resource("silver-ore")
-    angelsmods.functions.remove_resource("sulfur")
-    angelsmods.functions.remove_resource("tin-ore")
-    angelsmods.functions.remove_resource("tungsten-ore")
-    angelsmods.functions.remove_resource("zinc-ore")
-    angelsmods.functions.remove_resource("lithia-water")
-    angelsmods.functions.remove_resource("ground-water")
-    angelsmods.functions.remove_resource("thorium-ore")
+    angelsmods.functions.remove_resource("bob-bauxite-ore")
+    angelsmods.functions.remove_resource("bob-cobalt-ore")
+    angelsmods.functions.remove_resource("bob-gem-ore")
+    angelsmods.functions.remove_resource("bob-gold-ore")
+    angelsmods.functions.remove_resource("bob-lead-ore")
+    angelsmods.functions.remove_resource("bob-nickel-ore")
+    angelsmods.functions.remove_resource("bob-quartz")
+    angelsmods.functions.remove_resource("bob-rutile-ore")
+    angelsmods.functions.remove_resource("bob-silver-ore")
+    angelsmods.functions.remove_resource("bob-sulfur")
+    angelsmods.functions.remove_resource("bob-tin-ore")
+    angelsmods.functions.remove_resource("bob-tungsten-ore")
+    angelsmods.functions.remove_resource("bob-zinc-ore")
+    angelsmods.functions.remove_resource("bob-lithia-water")
+    angelsmods.functions.remove_resource("bob-ground-water")
+    angelsmods.functions.remove_resource("bob-thorium-ore")
   end
 
   --YUOKI

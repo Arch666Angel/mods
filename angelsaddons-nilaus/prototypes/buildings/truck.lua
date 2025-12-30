@@ -24,7 +24,7 @@ data:extend({
     },
     icon_size = 64,
     subgroup = "transport",
-    order = "b[nilaus-truck]",
+    order = "b[nilaus-truck]-a",
     place_result = "nilaus-truck",
     stack_size = 1,
   },
@@ -342,8 +342,7 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__angelsaddons-nilaus__/sound/truck-run.ogg",
@@ -384,7 +383,7 @@ data:extend({
     },
     icon_size = 64,
     subgroup = "transport",
-    order = "b[nilaus-truck-mk2]",
+    order = "b[nilaus-truck]-b",
     place_result = "nilaus-truck-2",
     stack_size = 1,
   },
@@ -795,8 +794,7 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__angelsaddons-nilaus__/sound/truck-run.ogg",

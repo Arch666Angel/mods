@@ -6,8 +6,8 @@ local tech_archive = {}
 -------------------------------------------------------------------------------
 -- Initiation of the class
 -------------------------------------------------------------------------------
-global.crash_site_created = false
-global.is_lab_given = false
+storage.crash_site_created = false
+storage.is_lab_given = false
 
 tech_archive.main_lab = {
   [0] = "angels-main-lab-0", -- crash site, equivalent to next tier
@@ -34,11 +34,11 @@ end
 
 function tech_archive:remove_lab_from_inv(inventory)
   if inventory then
-    local items = game.item_prototypes
+    local items = prototypes.item
     for key, lab in pairs(tech_archive.main_lab) do
       if items[lab] and inventory.get_item_count(lab) > 0 then
         inventory.remove({ name = lab })
-        global.is_lab_given = false
+        storage.is_lab_given = false
         return true
       end
     end
@@ -46,7 +46,7 @@ function tech_archive:remove_lab_from_inv(inventory)
 end
 
 function tech_archive:initialize_crash_site()
-  if game.entity_prototypes[tech_archive.main_lab[1]] and not global.is_lab_given then
+  if prototypes.entity[tech_archive.main_lab[1]] and not storage.is_lab_given then
     -- angels science mode
     local surface = game.surfaces["nauvis"]
     if surface and surface.valid then
@@ -75,8 +75,8 @@ function tech_archive:initialize_crash_site()
           create_build_effect_smoke = false,
         })
         if created_entity and created_entity.valid then
-          created_entity.energy = game.item_prototypes["coal"].fuel_value
-          global.is_lab_given = true
+          created_entity.energy = prototypes.item["coal"].fuel_value
+          storage.is_lab_given = true
 
           -- create explosions
           for k = 1, 3 do
@@ -123,14 +123,14 @@ function tech_archive:initialize_crash_site()
       end
     end
   end
-  global.crash_site_created = true
+  storage.crash_site_created = true
 end
 
 -------------------------------------------------------------------------------
 -- Event handlers
 -------------------------------------------------------------------------------
 function tech_archive:on_player_created()
-  if not global.crash_site_created then
+  if not storage.crash_site_created then
     self:initialize_crash_site()
   end
 end
@@ -139,28 +139,17 @@ function tech_archive:on_player_respawned(player_index)
   local player = game.players[player_index]
 
   if player and player.valid then
-    if not global.is_lab_given and game.entity_prototypes[tech_archive.main_lab[1]] then
-      global.is_lab_given = player.insert({ name = tech_archive.main_lab[0], count = 1 }) > 0
-    end
-  end
-
-  local force = player and player.force
-  if force then
-    local available = force.technologies["angels-hidden-ghosting"]
-        and force.technologies["angels-hidden-ghosting"].researched
-      or false
-    player.set_shortcut_available("toggle-ghosting", available)
-    if available then
-      player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
+    if not storage.is_lab_given and prototypes.entity[tech_archive.main_lab[1]] then
+      storage.is_lab_given = player.insert({ name = tech_archive.main_lab[0], count = 1 }) > 0
     end
   end
 end
 
 function tech_archive:on_entity_died(entity)
-  if game.entity_prototypes[tech_archive.main_lab[1]] then
+  if prototypes.entity[tech_archive.main_lab[1]] then
     local etype = entity.type
     if table_contains(tech_archive.main_lab, entity.name) then
-      global.is_lab_given = false
+      storage.is_lab_given = false
     elseif etype == "container" or etype == "logistic-container" then
       self:remove_lab_from_inv(entity.get_inventory(defines.inventory.chest))
     elseif etype == "construction-robot" or etype == "logistic-robot" then
@@ -170,7 +159,7 @@ function tech_archive:on_entity_died(entity)
 end
 
 function tech_archive:on_pre_player_died(player_index)
-  if game.entity_prototypes[tech_archive.main_lab[1]] then
+  if prototypes.entity[tech_archive.main_lab[1]] then
     self:remove_lab_from_inv(game.players[player_index].get_main_inventory())
   end
 end

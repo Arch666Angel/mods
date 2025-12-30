@@ -23,6 +23,9 @@ end
 -------------------------------------------------------------------------------
 data.raw["item-subgroup"]["transport"].group = "angels-vehicles"
 data.raw["item-subgroup"]["transport"].order = "ba[railway]-a[vanilla]"
+data.raw["item-subgroup"]["train-transport"].group = "angels-vehicles"
+data.raw["item-subgroup"]["train-transport"].order = "ba[railway]-b[signals]"
+
 
 if mods["boblogistics"] then
   data.raw["item-subgroup"]["bob-locomotive"].group = "angels-vehicles"
@@ -41,6 +44,7 @@ if mods["boblogistics"] then
     },
   })
   move_item("artillery-wagon", "angels-artillery", "a", "item-with-entity-data")
+  data.raw["item-subgroup"]["train-transport"].order = "ba[railway]-e[signals]"
 else
   move_item("locomotive", "angels-vehicle-train-vanilla", false, "item-with-entity-data")
   move_item("cargo-wagon", "angels-vehicle-train-vanilla", false, "item-with-entity-data")
@@ -71,18 +75,17 @@ end
 -------------------------------------------------------------------------------
 -- SPIDERTRON -----------------------------------------------------------------
 -------------------------------------------------------------------------------
-move_item("spidertron-remote", "angels-vehicle-spidertron", "a[remote]", "spidertron-remote")
 move_item("spidertron", "angels-vehicle-spidertron", "b[spidertron]", "item-with-entity-data")
 
 if mods["bobwarfare"] then
-  data.raw["item-subgroup"]["mech-parts"].group = "angels-vehicles"
-  data.raw["item-subgroup"]["mech-parts"].order = "cbb"
+  data.raw["item-subgroup"]["bob-mech-parts"].group = "angels-vehicles"
+  data.raw["item-subgroup"]["bob-mech-parts"].order = "cbb"
 
-  move_item("antron", "angels-vehicle-spidertron", "b[spidertron]-a", "item-with-entity-data")
-  move_item("tankotron", "angels-vehicle-spidertron", "b[spidertron]-b", "item-with-entity-data")
+  move_item("bob-antron", "angels-vehicle-spidertron", "b[spidertron]-a", "item-with-entity-data")
+  move_item("bob-tankotron", "angels-vehicle-spidertron", "b[spidertron]-b", "item-with-entity-data")
   move_item("spidertron", "angels-vehicle-spidertron", "b[spidertron]-c", "item-with-entity-data")
-  move_item("heavy-spidertron", "angels-vehicle-spidertron", "b[spidertron]-d", "item-with-entity-data")
-  move_item("logistic-spidertron", "angels-vehicle-spidertron", "b[spidertron]-e", "item-with-entity-data")
+  move_item("bob-heavy-spidertron", "angels-vehicle-spidertron", "b[spidertron]-d", "item-with-entity-data")
+  move_item("bob-logistic-spidertron", "angels-vehicle-spidertron", "b[spidertron]-e", "item-with-entity-data")
 
-  move_item("spidertron-cannon", "mech-parts", "s[mech]-c")
+  move_item("bob-spidertron-cannon", "bob-mech-parts", "s[mech]-c")
 end

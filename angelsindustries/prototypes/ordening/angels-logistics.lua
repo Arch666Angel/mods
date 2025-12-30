@@ -1,89 +1,56 @@
-local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
-local reorder = function(type, item, subgroup, order)
-  move_item(item, subgroup, order, type)
-end
 
 -------------------------------------------------------------------------------
--- BOB LOGISTIC TAB -----------------------------------------------------------
--------------------------------------------------------------------------------
-if mods["boblogistics"] then
-  data.raw["item-group"]["bob-logistics"].order = "lb[bobs]-a[logistics]"
-  data.raw["item-group"]["bob-logistics"].icon = nil
-  data.raw["item-group"]["bob-logistics"].icon_size = nil
-  data.raw["item-group"]["bob-logistics"].icons = {
-    {
-      icon = "__boblogistics__/graphics/icons/technology/logistics.png",
-      icon_size = 64,
-    },
-    {
-      icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
-      icon_size = 1080,
-      scale = 64 / 1080 * 0.35,
-      shift = { 20, -20 },
-    },
-  }
-end
-
--------------------------------------------------------------------------------
--- LOGISTIC CHESTS + REPAIR PACKS ---------------------------------------------
+-- LOGISTIC CHESTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
 data:extend({
-  { type = "item-subgroup", name = "angels-chests-small-a", group = "angels-logistics", order = "aa[chests-small]-a" },
-  { type = "item-subgroup", name = "angels-chests-small-b", group = "angels-logistics", order = "aa[chests-small]-b" },
+  { type = "item-subgroup", name = "angels-chests-small-a", group = "logistics", order = "aa[chests-small]-a" },
+  { type = "item-subgroup", name = "angels-chests-small-b", group = "logistics", order = "aa[chests-small]-b" },
 })
--- pre-logistics chests (+ repair packs)
+-- pre-logistics chests
 move_item("wooden-chest", "angels-chests-small-a", "a[chest]-a[wood]")
 move_item("iron-chest", "angels-chests-small-a", "a[chest]-b[iron]")
 move_item("steel-chest", "angels-chests-small-b", "a")
-move_item("repair-pack", "angels-chests-small-a", "b[repair-pack]-a", "repair-tool")
 -- steel chests
-move_item("logistic-chest-active-provider", "angels-chests-small-b", "b")
-move_item("logistic-chest-passive-provider", "angels-chests-small-b", "c")
-move_item("logistic-chest-storage", "angels-chests-small-b", "d")
-move_item("logistic-chest-buffer", "angels-chests-small-b", "e")
-move_item("logistic-chest-requester", "angels-chests-small-b", "f")
+move_item("active-provider-chest", "angels-chests-small-b", "b")
+move_item("passive-provider-chest", "angels-chests-small-b", "c")
+move_item("storage-chest", "angels-chests-small-b", "d")
+move_item("buffer-chest", "angels-chests-small-b", "e")
+move_item("requester-chest", "angels-chests-small-b", "f")
 
 if mods["boblogistics"] then
   data:extend({
     {
       type = "item-subgroup",
       name = "angels-chests-small-c",
-      group = "angels-logistics",
+      group = "logistics",
       order = "aa[chests-small]-b",
     },
     {
       type = "item-subgroup",
       name = "angels-chests-small-d",
-      group = "angels-logistics",
+      group = "logistics",
       order = "aa[chests-small]-c",
     },
   })
-  -- repair packs
-  move_item("repair-pack-2", "angels-chests-small-a", "b[repair-pack]-b", "repair-tool")
-  move_item("repair-pack-3", "angels-chests-small-a", "b[repair-pack]-c", "repair-tool")
-  move_item("repair-pack-4", "angels-chests-small-a", "b[repair-pack]-d", "repair-tool")
-  move_item("repair-pack-5", "angels-chests-small-a", "b[repair-pack]-e", "repair-tool")
-  -- steel chests
-  if mods["bobplates"] then
-    move_item("steel-chest", "angels-chests-small-b", "a")
-  end
   -- brass chests
   if mods["bobplates"] then
-    move_item("brass-chest", "angels-chests-small-c", "a")
+    move_item("bob-brass-chest", "angels-chests-small-c", "a")
   end
-  move_item("logistic-chest-active-provider-2", "angels-chests-small-c", "b")
-  move_item("logistic-chest-passive-provider-2", "angels-chests-small-c", "c")
-  move_item("logistic-chest-storage-2", "angels-chests-small-c", "d")
-  move_item("logistic-chest-buffer-2", "angels-chests-small-c", "e")
-  move_item("logistic-chest-requester-2", "angels-chests-small-c", "f")
+  move_item("bob-active-provider-chest-2", "angels-chests-small-c", "b")
+  move_item("bob-passive-provider-chest-2", "angels-chests-small-c", "c")
+  move_item("bob-storage-chest-2", "angels-chests-small-c", "d")
+  move_item("bob-buffer-chest-2", "angels-chests-small-c", "e")
+  move_item("bob-requester-chest-2", "angels-chests-small-c", "f")
   -- titanium chests
-  move_item("titanium-chest", "angels-chests-small-d", "a")
-  move_item("logistic-chest-active-provider-3", "angels-chests-small-d", "b")
-  move_item("logistic-chest-passive-provider-3", "angels-chests-small-d", "c")
-  move_item("logistic-chest-storage-3", "angels-chests-small-d", "d")
-  move_item("logistic-chest-buffer-3", "angels-chests-small-d", "e")
-  move_item("logistic-chest-requester-3", "angels-chests-small-d", "f")
+  if mods["bobplates"] then
+    move_item("bob-titanium-chest", "angels-chests-small-d", "a")
+  end
+  move_item("bob-active-provider-chest-3", "angels-chests-small-d", "b")
+  move_item("bob-passive-provider-chest-3", "angels-chests-small-d", "c")
+  move_item("bob-storage-chest-3", "angels-chests-small-d", "d")
+  move_item("bob-buffer-chest-3", "angels-chests-small-d", "e")
+  move_item("bob-requester-chest-3", "angels-chests-small-d", "f")
 end
 
 -------------------------------------------------------------------------------
@@ -99,20 +66,20 @@ if mods["boblogistics"] then
     { type = "item-subgroup", name = "angels-roboport-d", group = "angels-logistics", order = "ba[roboport]-d" },
   })
   -- roboport antenna
-  move_item("roboport-antenna-1", "angels-roboport-a", "a[parts]-a[roboport-antenna]")
-  move_item("roboport-antenna-2", "angels-roboport-b", "a[parts]-a[roboport-antenna]")
-  move_item("roboport-antenna-3", "angels-roboport-c", "a[parts]-a[roboport-antenna]")
-  move_item("roboport-antenna-4", "angels-roboport-d", "a[parts]-a[roboport-antenna]")
+  move_item("bob-roboport-antenna-1", "angels-roboport-a", "a[parts]-a[roboport-antenna]")
+  move_item("bob-roboport-antenna-2", "angels-roboport-b", "a[parts]-a[roboport-antenna]")
+  move_item("bob-roboport-antenna-3", "angels-roboport-c", "a[parts]-a[roboport-antenna]")
+  move_item("bob-roboport-antenna-4", "angels-roboport-d", "a[parts]-a[roboport-antenna]")
   -- roboport door
-  move_item("roboport-door-1", "angels-roboport-a", "a[parts]-b[roboport-door]")
-  move_item("roboport-door-2", "angels-roboport-b", "a[parts]-b[roboport-door]")
-  move_item("roboport-door-3", "angels-roboport-c", "a[parts]-b[roboport-door]")
-  move_item("roboport-door-4", "angels-roboport-d", "a[parts]-b[roboport-door]")
+  move_item("bob-roboport-door-1", "angels-roboport-a", "a[parts]-b[roboport-door]")
+  move_item("bob-roboport-door-2", "angels-roboport-b", "a[parts]-b[roboport-door]")
+  move_item("bob-roboport-door-3", "angels-roboport-c", "a[parts]-b[roboport-door]")
+  move_item("bob-roboport-door-4", "angels-roboport-d", "a[parts]-b[roboport-door]")
   -- roboport chargepad
-  move_item("roboport-chargepad-1", "angels-roboport-a", "a[parts]-c[roboport-chargepad]")
-  move_item("roboport-chargepad-2", "angels-roboport-b", "a[parts]-c[roboport-chargepad]")
-  move_item("roboport-chargepad-3", "angels-roboport-c", "a[parts]-c[roboport-chargepad]")
-  move_item("roboport-chargepad-4", "angels-roboport-d", "a[parts]-c[roboport-chargepad]")
+  move_item("bob-roboport-chargepad-1", "angels-roboport-a", "a[parts]-c[roboport-chargepad]")
+  move_item("bob-roboport-chargepad-2", "angels-roboport-b", "a[parts]-c[roboport-chargepad]")
+  move_item("bob-roboport-chargepad-3", "angels-roboport-c", "a[parts]-c[roboport-chargepad]")
+  move_item("bob-roboport-chargepad-4", "angels-roboport-d", "a[parts]-c[roboport-chargepad]")
   -- roboport full
   if settings.startup["bobmods-logistics-disableroboports"].value == false then
     move_item("roboport", "angels-roboport-a", "b[port]-a[roboport]")
@@ -160,37 +127,33 @@ if mods["boblogistics"] then
   -- robot frames
   if settings.startup["bobmods-logistics-flyingrobotframes"].value then
     move_item("flying-robot-frame", "angels-robot-a", "a[frame]")
-    move_item("flying-robot-frame-2", "angels-robot-b", "a[frame]")
-    move_item("flying-robot-frame-3", "angels-robot-c", "a[frame]")
-    move_item("flying-robot-frame-4", "angels-robot-d", "a[frame]")
+    move_item("bob-flying-robot-frame-2", "angels-robot-b", "a[frame]")
+    move_item("bob-flying-robot-frame-3", "angels-robot-c", "a[frame]")
+    move_item("bob-flying-robot-frame-4", "angels-robot-d", "a[frame]")
   end
   -- robot brains
   if settings.startup["bobmods-logistics-robotparts"].value == true then
-    move_item("robot-brain-construction", "angels-robot-a", "b[construction]-a[brain]")
-    move_item("robot-brain-construction-2", "angels-robot-b", "b[construction]-a[brain]")
-    move_item("robot-brain-construction-3", "angels-robot-c", "b[construction]-a[brain]")
-    move_item("robot-brain-construction-4", "angels-robot-d", "b[construction]-a[brain]")
-    move_item("robot-tool-construction", "angels-robot-a", "b[construction]-b[tool]")
-    move_item("robot-tool-construction-2", "angels-robot-b", "b[construction]-b[tool]")
-    move_item("robot-tool-construction-3", "angels-robot-c", "b[construction]-b[tool]")
-    move_item("robot-tool-construction-4", "angels-robot-d", "b[construction]-b[tool]")
-    move_item("robot-brain-logistic", "angels-robot-a", "c[logistic]-a[brain]")
-    move_item("robot-brain-logistic-2", "angels-robot-b", "c[logistic]-a[brain]")
-    move_item("robot-brain-logistic-3", "angels-robot-c", "c[logistic]-a[brain]")
-    move_item("robot-brain-logistic-4", "angels-robot-d", "c[logistic]-a[brain]")
-    move_item("robot-tool-logistic", "angels-robot-a", "c[logistic]-b[tool]")
-    move_item("robot-tool-logistic-2", "angels-robot-b", "c[logistic]-b[tool]")
-    move_item("robot-tool-logistic-3", "angels-robot-c", "c[logistic]-b[tool]")
-    move_item("robot-tool-logistic-4", "angels-robot-d", "c[logistic]-b[tool]")
+    move_item("bob-robot-brain", "angels-robot-a", "b[robot]-a[brain]")
+    move_item("bob-robot-brain-2", "angels-robot-b", "b[robot]-a[brain]")
+    move_item("bob-robot-brain-3", "angels-robot-c", "b[robot]-a[brain]")
+    move_item("bob-robot-brain-4", "angels-robot-d", "b[robot]-a[brain]")
+    move_item("bob-robot-tool-construction", "angels-robot-a", "b[construction]-b[tool]")
+    move_item("bob-robot-tool-construction-2", "angels-robot-b", "b[construction]-b[tool]")
+    move_item("bob-robot-tool-construction-3", "angels-robot-c", "b[construction]-b[tool]")
+    move_item("bob-robot-tool-construction-4", "angels-robot-d", "b[construction]-b[tool]")
+    move_item("bob-robot-tool-logistic", "angels-robot-a", "c[logistic]-b[tool]")
+    move_item("bob-robot-tool-logistic-2", "angels-robot-b", "c[logistic]-b[tool]")
+    move_item("bob-robot-tool-logistic-3", "angels-robot-c", "c[logistic]-b[tool]")
+    move_item("bob-robot-tool-logistic-4", "angels-robot-d", "c[logistic]-b[tool]")
     if mods["bobwarfare"] and settings.startup["bobmods-warfare-robotupdate"].value then
-      move_item("robot-brain-combat", "angels-robot-a", "d[combat]-a[brain]")
-      move_item("robot-brain-combat-2", "angels-robot-b", "d[combat]-a[brain]")
-      move_item("robot-brain-combat-3", "angels-robot-c", "d[combat]-a[brain]")
-      move_item("robot-brain-combat-4", "angels-robot-d", "d[combat]-a[brain]")
-      move_item("robot-tool-combat", "angels-robot-a", "d[combat]-b[tool]")
-      move_item("robot-tool-combat-2", "angels-robot-b", "d[combat]-b[tool]")
-      move_item("robot-tool-combat-3", "angels-robot-c", "d[combat]-b[tool]")
-      move_item("robot-tool-combat-4", "angels-robot-d", "d[combat]-b[tool]")
+      move_item("bob-robot-brain-combat", "angels-robot-a", "d[combat]-a[brain]")
+      move_item("bob-robot-brain-combat-2", "angels-robot-b", "d[combat]-a[brain]")
+      move_item("bob-robot-brain-combat-3", "angels-robot-c", "d[combat]-a[brain]")
+      move_item("bob-robot-brain-combat-4", "angels-robot-d", "d[combat]-a[brain]")
+      move_item("bob-robot-tool-combat", "angels-robot-a", "d[combat]-b[tool]")
+      move_item("bob-robot-tool-combat-2", "angels-robot-b", "d[combat]-b[tool]")
+      move_item("bob-robot-tool-combat-3", "angels-robot-c", "d[combat]-b[tool]")
+      move_item("bob-robot-tool-combat-4", "angels-robot-d", "d[combat]-b[tool]")
     end
   end
   -- flying robots
@@ -205,9 +168,9 @@ if mods["boblogistics"] then
   move_item("bob-logistic-robot-4", "angels-robot-d", "c[logistic]-c[robot]")
   move_item("bob-logistic-robot-5", "angels-cargo-bots", "c[bob-fusion]-b[logistic]")
   if mods["bobwarfare"] and settings.startup["bobmods-warfare-robotupdate"].value then
-    move_item("defender-robot", "angels-robot-a", "d[combat]-c[robot]")
-    move_item("distractor-robot", "angels-robot-b", "d[combat]-c[robot]")
-    move_item("destroyer-robot", "angels-robot-c", "d[combat]-c[robot]")
+    move_item("bob-defender-robot", "angels-robot-a", "d[combat]-c[robot]")
+    move_item("bob-distractor-robot", "angels-robot-b", "d[combat]-c[robot]")
+    move_item("bob-destroyer-robot", "angels-robot-c", "d[combat]-c[robot]")
     move_item("bob-laser-robot", "angels-robot-d", "d[combat]-c[robot]")
   end
 else
@@ -236,3 +199,8 @@ else
     move_item("bob-laser-robot", "angels-cargo-bots", "c[drone]-d[plasma]")
   end
 end
+
+-------------------------------------------------------------------------------
+-- CIRCUIT NETWORK ------------------------------------------------------------
+-------------------------------------------------------------------------------
+data.raw["item-subgroup"]["circuit-network"].group = "logistics"

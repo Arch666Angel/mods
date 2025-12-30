@@ -1,3 +1,7 @@
+circuit_connector_definitions["angels-silo"] = circuit_connector_definitions.create_single(universal_connector_template,
+  { variation =  3, main_offset = util.by_pixel(-43, -21.125), shadow_offset = util.by_pixel(-43, -21.125), show_shadow = true }
+)
+
 if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
   -----------------------------------------------------------------------------
   -- REGULAR SILO -------------------------------------------------------------
@@ -5,21 +9,22 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
   data:extend({
     {
       type = "item",
-      name = "silo",
+      name = "angels-silo",
       icon = "__angelsaddons-storage__/graphics/icons/silo.png",
       icon_size = 32,
       subgroup = "angels-silo",
       order = "a",
-      place_result = "silo",
+      place_result = "angels-silo",
       stack_size = 10,
     },
     {
       type = "container",
-      name = "silo",
+      name = "angels-silo",
       icon = "__angelsaddons-storage__/graphics/icons/silo.png",
       icon_size = 32,
       flags = { "placeable-neutral", "player-creation" },
-      minable = { mining_time = 1, result = "silo" },
+      collision_mask = angelsmods.functions.set_building_collision_mask("container", { "elevated_rail" }),
+      minable = { mining_time = 1, result = "angels-silo" },
       max_health = 300,
       corpse = "small-remnants",
       open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
@@ -32,9 +37,9 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
       },
       collision_box = { { -1.9, -1.9 }, { 1.9, 1.9 } },
       selection_box = { { -2, -2 }, { 2, 2 } },
-      fast_replaceable_group = "silo",
+      fast_replaceable_group = "angels-silo",
       inventory_size = 256,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      impact_category = "metal",
       picture = {
         filename = "__angelsaddons-storage__/graphics/entity/silo.png",
         priority = "extra-high",
@@ -42,8 +47,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
         height = 192,
         shift = { 0, 0 },
       },
-      circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-      circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+      circuit_connector = circuit_connector_definitions["angels-silo"],
       circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
   })
@@ -56,18 +60,17 @@ if angelsmods.addons.storage.oresilos then
   local ore_silo = { "ore1", "ore2", "ore3", "ore4", "ore5", "ore6", "coal" }
   local silo_add = {}
   for order, name in pairs(ore_silo) do
-    local cont_add, item_add = {}, { nil }
-    cont_add = table.deepcopy(data.raw.container.silo)
-    cont_add.name = "silo-" .. name
+    local cont_add = table.deepcopy(data.raw.container["angels-silo"])
+    cont_add.name = "angels-silo-" .. name
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-" .. name .. ".png"
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-" .. name .. ".png"
-    --cont_add.minable.result = "silo-"..name --want to actually return the silo
+    --cont_add.minable.result = "angels-silo-"..name --want to actually return the silo
 
-    item_add = table.deepcopy(data.raw.item.silo)
-    item_add.name = "silo-" .. name
+    local item_add = table.deepcopy(data.raw.item["angels-silo"])
+    item_add.name = "angels-silo-" .. name
     item_add.icon = "__angelsaddons-storage__/graphics/icons/silo-" .. name .. ".png"
     item_add.order = "a[ore]-" .. order .. "[" .. name .. "]"
-    item_add.place_result = "silo-" .. name
+    item_add.place_result = "angels-silo-" .. name
     item_add.subgroup = "angels-ore-silo"
 
     silo_add[#silo_add + 1] = cont_add
@@ -81,32 +84,30 @@ if angelsmods.addons.storage.silos then
   -- LOGISTIC SILOS -----------------------------------------------------------
   -----------------------------------------------------------------------------
   local log_names = {
-    ["aprovider"] = { order = "i", stacks = 384, mode = "active-provider" },
-    ["pprovider"] = { order = "j", stacks = 256, mode = "passive-provider" },
-    ["storage"] = { order = "k", stacks = 384, mode = "storage", slots = 1 },
-    ["buffer"] = { order = "l", stacks = 256, mode = "buffer" },
-    ["requester"] = { order = "m", stacks = 209, mode = "requester" },
+    ["aprovider"] = { order = "i", mode = "active-provider" },
+    ["pprovider"] = { order = "j", mode = "passive-provider" },
+    ["storage"] = { order = "k", mode = "storage", slots = 1 },
+    ["buffer"] = { order = "l", mode = "buffer" },
+    ["requester"] = { order = "m", mode = "requester" },
   }
   local silo_add = {}
   for name, stat in pairs(log_names) do
-    local cont_add, item_add = nil, nil
-    cont_add = table.deepcopy(data.raw.container.silo)
-    cont_add.name = "silo-" .. stat.mode
+    local cont_add = table.deepcopy(data.raw.container["angels-silo"])
+    cont_add.name = "angels-silo-" .. stat.mode
     cont_add.type = "logistic-container"
     cont_add.icon = "__angelsaddons-storage__/graphics/icons/silo-log-" .. name .. ".png"
     cont_add.picture.filename = "__angelsaddons-storage__/graphics/entity/silo-log-" .. name .. ".png"
-    cont_add.minable.result = "silo-" .. stat.mode
+    cont_add.minable.result = "angels-silo-" .. stat.mode
     cont_add.logistic_mode = stat.mode
-    cont_add.inventory_size = stat.stacks
     if stat.slots then
       cont_add.max_logistic_slots = stat.slots
     end
 
-    item_add = table.deepcopy(data.raw.item.silo)
-    item_add.name = "silo-" .. stat.mode
+    local item_add = table.deepcopy(data.raw.item["angels-silo"])
+    item_add.name = "angels-silo-" .. stat.mode
     item_add.icon = "__angelsaddons-storage__/graphics/icons/silo-log-" .. name .. ".png"
     item_add.order = "a[silo]-" .. stat.order .. "[" .. stat.mode .. "]"
-    item_add.place_result = "silo-" .. stat.mode
+    item_add.place_result = "angels-silo-" .. stat.mode
 
     silo_add[#silo_add + 1] = cont_add
     silo_add[#silo_add + 1] = item_add

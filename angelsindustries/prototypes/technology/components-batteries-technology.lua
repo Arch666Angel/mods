@@ -9,11 +9,10 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-1",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         --"angels-lead-smelting-1",
         "angels-sulfur-processing-1",
-        "bio-paper-1",
+        "angels-bio-paper-1",
       },
       effects = {
         {
@@ -44,7 +43,7 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
         },
         time = 60,
       },
@@ -55,14 +54,13 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-2",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-tin-smelting-1",
         "angels-glass-smelting-1",
         "angels-zinc-smelting-1",
         "angels-nickel-smelting-1",
         "angels-components-batteries-1",
-        --"ore-floatation"
+        --"angels-ore-floatation"
       },
       effects = {
         {
@@ -93,8 +91,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -105,15 +103,14 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-3", --unlocks for basic blocks 3 which is a military tier (but does not have the packs)
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-aluminium-smelting-1",
         "angels-cobalt-smelting-1",
         "angels-silver-smelting-1",
-        "thermal-water-extraction",
-        "bio-processing-green",
+        "angels-thermal-water-extraction",
+        "angels-bio-processing-green",
         "angels-components-batteries-2",
-        "gas-steam-cracking-1",
+        "angels-steam-cracking-1",
       },
       effects = {
         {
@@ -144,9 +141,9 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },
@@ -157,11 +154,10 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-4",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-gold-smelting-1",
-        --"plastic-1",
-        "rubber",
+        --"angels-plastic-1",
+        "angels-rubber",
         "angels-manganese-smelting-2",
         "angels-components-batteries-3",
       },
@@ -194,9 +190,9 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },
@@ -207,7 +203,6 @@ if angelsmods.industries.components then
       name = "angels-components-batteries-5",
       icon = "__base__/graphics/technology/battery.png",
       icon_size = 256,
-      icon_mipmaps = 4,
       prerequisites = {
         "angels-platinum-smelting-1",
         "angels-components-batteries-4",
@@ -242,10 +237,10 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "utility-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 60,
       },
@@ -259,13 +254,12 @@ if angelsmods.industries.components then
         name = "angels-components-batteries-6",
         icon = "__base__/graphics/technology/battery.png",
         icon_size = 256,
-        icon_mipmaps = 4,
         prerequisites = {
-          "sodium-processing",
+          "angels-sodium-processing-2",
           "angels-tungsten-smelting-1",
           "angels-silver-smelting-2",
           "angels-components-batteries-5",
-          "powder-metallurgy-5",
+          "angels-powder-metallurgy-5",
         },
         effects = {
           {
@@ -296,11 +290,11 @@ if angelsmods.industries.components then
         unit = {
           count = 64,
           ingredients = {
-            { type = "item", name = "automation-science-pack", amount = 1 },
-            { type = "item", name = "logistic-science-pack", amount = 1 },
-            { type = "item", name = "chemical-science-pack", amount = 1 },
-            { type = "item", name = "production-science-pack", amount = 1 },
-            { type = "item", name = "utility-science-pack", amount = 1 },
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack", 1 },
+            { "chemical-science-pack", 1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack", 1 },
           },
           time = 60,
         },

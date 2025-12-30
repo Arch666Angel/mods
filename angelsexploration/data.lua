@@ -4,6 +4,23 @@ angelsmods.exploration = angelsmods.exploration or {}
 angelsmods.functions = angelsmods.functions or {}
 
 --TRIGGER CHECKS
+angelsmods.trigger.artifacts["red"] = true
+angelsmods.trigger.artifacts["yellow"] = true
+angelsmods.trigger.artifacts["orange"] = true
+angelsmods.trigger.artifacts["blue"] = true
+angelsmods.trigger.artifacts["purple"] = true
+angelsmods.trigger.artifacts["green"] = true
+angelsmods.trigger.artifacts["base"] = true -- pink
+
+--angelsmods.trigger.bio_pastes["copper"] = true
+--angelsmods.trigger.bio_pastes["gold"] = true
+--angelsmods.trigger.bio_pastes["tungsten"] = true
+--angelsmods.trigger.bio_pastes["cobalt"] = true
+--angelsmods.trigger.bio_pastes["titanium"] = true
+--angelsmods.trigger.bio_pastes["zinc"] = true
+--angelsmods.trigger.bio_pastes["iron"] = true
+
+--angelsmods.trigger.smelting_products["iron"].powder = true
 
 --LOAD PROTOTYPES
 require("prototypes.exploration-category")

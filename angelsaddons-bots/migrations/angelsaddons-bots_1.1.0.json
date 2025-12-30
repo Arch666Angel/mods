@@ -1,0 +1,32 @@
+{
+  "entity":
+  [
+    ["cargo-box", "angels-cargo-box"],
+    ["cargo-hub", "angels-cargo-hub"],
+    ["cargo-roboport", "angels-cargo-roboport"],
+    ["cargo-robot", "angels-cargo-robot"],
+    ["cargo-robot-2", "angels-cargo-robot-2"]
+  ],
+  "item":
+  [
+    ["cargo-box", "angels-cargo-box"],
+    ["cargo-hub", "angels-cargo-hub"],
+    ["cargo-roboport", "angels-cargo-roboport"],
+    ["cargo-robot", "angels-cargo-robot"],
+    ["cargo-robot-2", "angels-cargo-robot-2"]
+  ],
+  "recipe":
+  [
+    ["cargo-box", "angels-cargo-box"],
+    ["cargo-hub", "angels-cargo-hub"],
+    ["cargo-roboport", "angels-cargo-roboport"],
+    ["cargo-robot", "angels-cargo-robot"],
+    ["cargo-robot-2", "angels-cargo-robot-2"]
+  ],
+  "technology":
+  [
+    ["cargo-robots", "angels-cargo-robots"],
+    ["cargo-robots-2", "angels-cargo-robots-2"],
+    ["cargo-robots-3", "angels-cargo-robots-3"]
+  ]
+}

@@ -2,24 +2,23 @@ data:extend({
   --SOLIDS
   {
     type = "technology",
-    name = "plastic-1",
-    icon = "__angelspetrochem__/graphics/technology/plastic-1-tech.png",
+    name = "angels-plastic-1",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-1-tech.png",
     icon_size = 128,
     prerequisites = {
-      "gas-steam-cracking-1",
-      "oil-steam-cracking-1",
+      "angels-steam-cracking-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-1",
+        recipe = "angels-liquid-plastic",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -27,25 +26,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "plastic-2",
-    icon = "__angelspetrochem__/graphics/technology/plastic-2-tech.png",
+    name = "angels-plastic-2",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-2-tech.png",
     icon_size = 128,
     prerequisites = {
-      "plastic-1",
+      "angels-plastic-1",
       "angels-advanced-chemistry-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-2",
+        recipe = "angels-liquid-plastic-2",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -53,27 +52,27 @@ data:extend({
   },
   {
     type = "technology",
-    name = "plastic-3",
-    icon = "__angelspetrochem__/graphics/technology/plastic-3-tech.png",
+    name = "angels-plastic-3",
+    icon = "__angelspetrochemgraphics__/graphics/technology/plastic-3-tech.png",
     icon_size = 128,
     prerequisites = {
-      "plastic-2",
+      "angels-plastic-2",
       "angels-advanced-chemistry-5",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-plastic-3",
+        recipe = "angels-liquid-plastic-3",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 15,
     },
@@ -81,23 +80,23 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resins",
-    icon = "__angelspetrochem__/graphics/technology/resins-tech.png",
+    name = "angels-resins",
+    icon = "__angelspetrochemgraphics__/graphics/technology/resins-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-1",
+      "angels-resin-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-resin",
+        recipe = "angels-solid-resin",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -105,8 +104,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-1",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    name = "angels-resin-1",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
       "angels-advanced-chemistry-1",
@@ -115,14 +114,14 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-1",
+        recipe = "angels-liquid-resin",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -130,25 +129,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-2",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    name = "angels-resin-2",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-1",
+      "angels-resin-1",
       "angels-nitrogen-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-2",
+        recipe = "angels-liquid-resin-2",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -156,28 +155,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "resin-3",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    name = "angels-resin-3",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      "resin-2",
+      "angels-resin-2",
       "angels-advanced-chemistry-5",
-      "chlorine-processing-3",
+      "angels-chlorine-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-resin-3",
+        recipe = "angels-liquid-resin-3",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 15,
     },
@@ -185,24 +184,24 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rubbers",
-    icon = "__angelspetrochem__/graphics/technology/rubbers-tech.png",
+    name = "angels-rubbers",
+    icon = "__angelspetrochemgraphics__/graphics/technology/rubbers-tech.png",
     icon_size = 128,
     prerequisites = {
-      "rubber",
+      "angels-rubber",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "solid-rubber",
+        recipe = "angels-solid-rubber",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -210,25 +209,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "rubber",
-    icon = "__angelspetrochem__/graphics/technology/separator-tech.png",
+    name = "angels-rubber",
+    icon = "__angelspetrochemgraphics__/graphics/technology/separator-tech.png",
     icon_size = 128,
     prerequisites = {
-      --"oil-steam-cracking-1",
+      --"angels-steam-cracking-1",
       "angels-advanced-chemistry-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "liquid-rubber-1",
+        recipe = "angels-liquid-rubber",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -239,11 +238,10 @@ data:extend({
   {
     type = "technology",
     name = "angels-nuclear-fuel",
-    icon = "__angelspetrochem__/graphics/technology/nuclear-fuel.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/nuclear-fuel.png",
     icon_size = 128,
-    icon_mipmaps = 1,
     prerequisites = {
-      "kovarex-enrichment-process",
+      "uranium-processing",
       "utility-science-pack",
       "rocket-fuel",
     },
@@ -252,15 +250,23 @@ data:extend({
         type = "unlock-recipe",
         recipe = "nuclear-fuel",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nuclear-fuel",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-nuclear-fuel-2",
+      },
     },
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },

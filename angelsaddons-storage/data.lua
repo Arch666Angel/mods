@@ -17,6 +17,11 @@ angelsmods.addons.storage.silos = angelsmods.addons.storage.silos or settings.st
 angelsmods.addons.storage.oresilos = angelsmods.addons.storage.oresilos
   or settings.startup["angels-enable-oresilos"].value
 
+--LOAD FUNCTIONS
+angelsmods.functions = angelsmods.functions or {}
+
+-- Helper functions
+require("prototypes.angels-functions")
 --categories
 require("prototypes.storage-categories")
 --buildings

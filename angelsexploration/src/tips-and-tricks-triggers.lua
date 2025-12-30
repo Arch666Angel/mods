@@ -7,14 +7,14 @@ local tips_and_tricks_triggers = {}
 -- Initiation of the class
 -------------------------------------------------------------------------------
 function tips_and_tricks_triggers:on_init()
-  if not global.TNT_data then
-    global.TNT_data = self:init_global_data()
+  if not storage.TNT_data then
+    storage.TNT_data = self:init_storage_data()
   end
 end
 
-function tips_and_tricks_triggers:init_global_data()
+function tips_and_tricks_triggers:init_storage_data()
   local TNT_data = {
-    ["version"] = 1, -- version of the global data
+    ["version"] = 1, -- version of the storage data
 
     ["prototype_data"] = {
       ["trigger_data"] = self:init_trigger_data(), -- data storing info about the trigger prototypes
@@ -27,11 +27,11 @@ end
 function tips_and_tricks_triggers:init_trigger_data()
   -- init trigger data
   local trigger_data = {}
-  local alien_data = game.get_filtered_entity_prototypes({
+  local alien_data = prototypes.get_entity_filtered({
     { mode = "or", filter = "type", type = "unit" },
     { mode = "or", filter = "type", type = "unit-spawner" },
   })
-  local technology_data = game.technology_prototypes
+  local technology_data = prototypes.technology
   for alien_name, alien_prototype_data in pairs(alien_data) do
     local technology_name = "tips-and-tricks-trigger[angels-native-inhabitants-"
       .. (alien_prototype_data.type == "unit" and "unit" or "spawner")
@@ -58,7 +58,7 @@ function tips_and_tricks_triggers:init_force_data(force_name)
   end
 
   -- store all force data
-  global.TNT_data.force_data[force_name] = {
+  storage.TNT_data.force_data[force_name] = {
     ["trigger_data"] = force_trigger_data,
   }
 end
@@ -67,8 +67,8 @@ end
 -- Setter functions to alter data into the data structure
 -------------------------------------------------------------------------------
 function tips_and_tricks_triggers:remove_trigger(force_name, trigger_name)
-  if force_name and global.TNT_data and global.TNT_data.force_data[force_name] then
-    local force_triggers = global.TNT_data.force_data[force_name]["trigger_data"]
+  if force_name and storage.TNT_data and storage.TNT_data.force_data[force_name] then
+    local force_triggers = storage.TNT_data.force_data[force_name]["trigger_data"]
     local triggers_to_remove = {}
     for trigger_key, trigger_value in pairs(force_triggers) do
       if trigger_value == trigger_name then
@@ -86,12 +86,12 @@ end
 -------------------------------------------------------------------------------
 function tips_and_tricks_triggers:get_trigger_data(force_name)
   if force_name then
-    if not global.TNT_data.force_data[force_name] then
+    if not storage.TNT_data.force_data[force_name] then
       self:init_force_data(force_name)
     end
-    return global.TNT_data.force_data[force_name]["trigger_data"]
+    return storage.TNT_data.force_data[force_name]["trigger_data"]
   else
-    return global.TNT_data.prototype_data["trigger_data"]
+    return storage.TNT_data.prototype_data["trigger_data"]
   end
 end
 
@@ -114,7 +114,7 @@ function tips_and_tricks_triggers:on_tech_research_finished(force_name, technolo
 end
 
 function tips_and_tricks_triggers:on_tech_research_reset(force_name)
-  if global.TNT_data and global.TNT_data.force_data[force_name] then
+  if storage.TNT_data and storage.TNT_data.force_data[force_name] then
     self:init_force_data(force_name) -- re-init all force data to reapply settings
   end
 end

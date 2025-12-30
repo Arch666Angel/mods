@@ -4,21 +4,20 @@ data:extend({
     name = "angels-nickel-smelting-1",
     localised_name = { "technology-name.angels-nickel-metallurgy" },
     localised_description = { "technology-description.angels-nickel-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-nickel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-2",
-      "basic-chemistry-2",
+      "angels-basic-chemistry-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-ore-smelting",
+        recipe = "angels-ingot-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-nickel-smelting",
+        recipe = "angels-liquid-molten-nickel",
       },
       {
         type = "unlock-recipe",
@@ -28,8 +27,8 @@ data:extend({
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -38,39 +37,38 @@ data:extend({
   {
     type = "technology",
     name = "angels-nickel-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-nickel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-nickel-smelting-1",
       "angels-sulfur-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-ore-processing",
+        recipe = "angels-processed-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-nickel-smelting",
+        recipe = "angels-cathode-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-nickel-smelting",
+        recipe = "angels-ingot-nickel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-nickel",
+        recipe = "angels-powder-nickel",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -79,30 +77,29 @@ data:extend({
   {
     type = "technology",
     name = "angels-nickel-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-nickel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-nickel-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-nickel-casting",
+        recipe = "angels-roll-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-nickel-converting",
+        recipe = "angels-plate-nickel-2",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -111,36 +108,35 @@ data:extend({
   {
     type = "technology",
     name = "angels-nickel-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-nickel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-nickel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-nickel-smelting-2",
       "angels-sulfur-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nickel-processed-processing",
+        recipe = "angels-pellet-nickel",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-nickel-smelting",
+        recipe = "angels-solid-nickel-carbonyl",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-nickel-carbonyl-smelting",
+        recipe = "angels-ingot-nickel-3",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -149,27 +145,26 @@ data:extend({
   {
     type = "technology",
     name = "angels-nickel-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-nickel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-nickel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-nickel-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "roll-nickel-casting-fast",
+        recipe = "angels-roll-nickel-2",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },

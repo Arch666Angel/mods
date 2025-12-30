@@ -8,17 +8,17 @@ debug_info.debug_enabled = false -- disable before release!
 -- Initiation of the class
 -------------------------------------------------------------------------------
 function debug_info:on_init()
-  if not global.debug_data then
-    global.debug_data = self:init_global_data()
+  if not storage.debug_data then
+    storage.debug_data = self:init_storage_data()
   end
 end
 
-function debug_info:init_global_data()
+function debug_info:init_storage_data()
   if not debug_info.debug_enabled then
     return {}
   end
   local debug_data = {
-    ["version"] = 1, -- version of the global data
+    ["version"] = 1, -- version of the storage data
 
     ["prototype_data"] = self:init_prototype_data(), -- data storing info about the prototypes
   }
@@ -34,7 +34,7 @@ end
 function debug_info:init_enemy_data(resolution)
   -- STEP 1 get a list of all biter spawners and spawning units
   local enemy_units = {}
-  local entity_prototypes = game.entity_prototypes
+  local entity_prototypes = prototypes.entity
   for entity_name, entity_prototype in pairs(entity_prototypes) do
     if entity_prototype.type == "unit-spawner" then
       enemy_units[entity_name] = {}
@@ -239,7 +239,7 @@ end
 -- Getter functions to extract data from the data structure
 -------------------------------------------------------------------------------
 function debug_info:get_enemy_statistics()
-  return global.debug_data.prototype_data.enemy_statistics
+  return storage.debug_data.prototype_data.enemy_statistics
 end
 
 -------------------------------------------------------------------------------

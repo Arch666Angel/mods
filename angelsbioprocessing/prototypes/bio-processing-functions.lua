@@ -4,7 +4,7 @@ function angelsmods.functions.make_seed(plant)
       {
         type = "recipe",
         name = plant .. "-seed",
-        category = "seed-extractor",
+        category = "angels-seed-extractor",
         enabled = true,
         energy_required = 0.5,
         ingredients = {

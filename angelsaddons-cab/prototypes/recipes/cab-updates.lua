@@ -13,7 +13,7 @@ if angelsmods.industries and angelsmods.industries.components then
         { type = "item", name = "circuit-orange-loaded", amount = 2 },
         { type = "item", name = "angels-crawler", amount = 1 },
       },
-      result = "angels-cab",
+      results = {{ type = "item", name = "angels-cab", amount = 1 }},
     },
   })
 end

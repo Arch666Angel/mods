@@ -1,204 +1,220 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
-  --CHROME
+  --TUNGSTEN
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "tungsten-ore-processing",
-    category = "ore-processing-4",
+    name = "angels-processed-tungsten",
+    category = "angels-ore-processing-4",
     subgroup = "angels-tungsten",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "tungsten-ore", amount = 4 },
+      { type = "item", name = "angels-tungsten-ore", amount = 4 },
     },
     results = {
-      { type = "item", name = "processed-tungsten", amount = 2 },
+      { type = "item", name = "angels-processed-tungsten", amount = 2 },
     },
     order = "b[processed-tungsten]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-tungsten"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-tungsten"),
   },
   {
     type = "recipe",
-    name = "tungsten-processed-processing",
-    category = "pellet-pressing-4",
+    name = "angels-pellet-tungsten",
+    category = "angels-pellet-pressing-4",
     subgroup = "angels-tungsten",
     energy_required = 2,
     enabled = false,
-    ingredients = { { type = "item", name = "processed-tungsten", amount = 3 } },
+    auto_recycle = false,
+    ingredients = { { type = "item", name = "angels-processed-tungsten", amount = 3 } },
     results = {
-      { type = "item", name = "pellet-tungsten", amount = 4 },
+      { type = "item", name = "angels-pellet-tungsten", amount = 4 },
     },
     order = "c[pellet-tungsten]",
   },
   {
     type = "recipe",
-    name = "tungsten-ore-smelting",
-    category = "liquifying",
+    name = "angels-solid-tungsten-oxide",
+    localised_name = { "item-name.angels-solid-tungsten-oxide" },
+    category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "tungsten-ore", amount = 12 },
-      { type = "fluid", name = "gas-hydrogen-chloride", amount = 30 },
+      { type = "item", name = "angels-tungsten-ore", amount = 12 },
+      { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "liquid-tungstic-acid", amount = 60 },
-      { type = "item", name = "solid-calcium-chloride", amount = 2 },
+      { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
     },
-    main_product = "liquid-tungstic-acid",
     always_show_products = true,
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-solid-tungsten-oxide"),
+      1,
+      angelsmods.smelting.number_tint
+    ),
+    order = "d[solid-tungsten-oxide]-a",
+  },
+  {
+    type = "recipe",
+    name = "angels-solid-ammonium-paratungstate-2",
+    localised_name = { "item-name.angels-solid-ammonium-paratungstate" },
+    category = "angels-chemical-smelting-4",
+    subgroup = "angels-tungsten",
+    energy_required = 4,
+    enabled = false,
+    auto_recycle = false,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-tungstic-acid", amount = 120 },
+      { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
+    },
+    results = {
+      { type = "item", name = "angels-solid-ammonium-paratungstate", amount = 24 },
+      { type = "fluid", name = "angels-water-purified", amount = 60 },
+    },
+    main_product = "angels-solid-ammonium-paratungstate",
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-solid-ammonium-paratungstate"),
+      2,
+      angelsmods.smelting.number_tint
+    ),
+    order = "e[solid-ammonium-paratungstate]-b",
+  },
+  {
+    type = "recipe",
+    name = "angels-liquid-tungstic-acid",
+    category = "angels-liquifying",
+    subgroup = "angels-tungsten",
+    energy_required = 4,
+    enabled = false,
+    auto_recycle = false,
+    ingredients = {
+      { type = "item", name = "angels-pellet-tungsten", amount = 4 },
+      { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 30 },
+    },
+    results = {
+      { type = "fluid", name = "angels-liquid-tungstic-acid", amount = 60 },
+      { type = "item", name = "angels-solid-calcium-chloride", amount = 2 },
+    },
+    main_product = "angels-liquid-tungstic-acid",
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 135, 090, 023 }, { 170, 170, 180 }, { 170, 170, 180 } }
     ),
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-tungstic-acid"),
-    order = "d[liquid-tungstic-acid]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-tungstic-acid"),
+    order = "f[liquid-tungstic-acid]",
   },
   {
     type = "recipe",
-    name = "liquid-tungstic-acid-smelting",
-    category = "chemical-smelting-3",
-    subgroup = "angels-tungsten",
-    energy_required = 4,
-    enabled = false,
-    ingredients = {
-      { type = "fluid", name = "liquid-tungstic-acid", amount = 120 },
-    },
-    results = {
-      { type = "item", name = "solid-tungsten-oxide", amount = 24 },
-      { type = "fluid", name = "water-purified", amount = 60 },
-    },
-    main_product = "solid-tungsten-oxide",
-    icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-tungsten-oxide"),
-      1,
-      angelsmods.smelting.number_tint
-    ),
-    order = "e[solid-tungsten-oxide]-a",
-  },
-  {
-    type = "recipe",
-    name = "pellet-tungsten-smelting",
-    category = "chemical-smelting-4",
-    subgroup = "angels-tungsten",
-    energy_required = 4,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "pellet-tungsten", amount = 4 },
-      { type = "fluid", name = "gas-ammonia", amount = 60 },
-    },
-    results = {
-      { type = "item", name = "solid-tungsten-oxide", amount = 12 },
-    },
-    icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("solid-tungsten-oxide"),
-      2,
-      angelsmods.smelting.number_tint
-    ),
-    order = "e[solid-tungsten-oxide]-b",
-  },
-  {
-    type = "recipe",
-    name = "solid-tungsten-oxide-smelting",
-    category = "liquifying",
+    name = "angels-gas-tungsten-hexafluoride",
+    category = "angels-liquifying",
     subgroup = "angels-tungsten",
     energy_required = 6,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
-      { type = "item", name = "solid-tungsten-oxide", amount = 12 },
-      { type = "fluid", name = "gas-hydrogen-fluoride", amount = 30 },
+      { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
+      { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 30 },
     },
     results = {
-      { type = "fluid", name = "gas-tungsten-hexafluoride", amount = 60 },
+      { type = "fluid", name = "angels-gas-tungsten-hexafluoride", amount = 60 },
     },
-    main_product = "gas-tungsten-hexafluoride",
+    main_product = "angels-gas-tungsten-hexafluoride",
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
-      { { "__angelssmelting__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 } },
+      { { "__angelssmeltinggraphics__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 } },
       "WFF"
     ),
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("gas-tungsten-hexafluoride"),
-    order = "f[gas-tungsten-hexafluoride]",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-tungsten-hexafluoride"),
+    order = "g[gas-tungsten-hexafluoride]",
   },
   {
     type = "recipe",
-    name = "processed-tungsten-smelting",
-    category = "chemical-smelting-4",
+    name = "angels-solid-ammonium-paratungstate",
+    category = "angels-chemical-smelting-4",
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "processed-tungsten", amount = 8 },
-      { type = "fluid", name = "gas-ammonia", amount = 60 },
+      { type = "item", name = "angels-processed-tungsten", amount = 8 },
+      { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-ammonium-paratungstate", amount = 24 },
+      { type = "item", name = "angels-solid-ammonium-paratungstate", amount = 24 },
     },
-    order = "g[solid-ammonium-paratungstate]",
+    always_show_products = true,
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-solid-ammonium-paratungstate"),
+      1,
+      angelsmods.smelting.number_tint
+    ),
+    order = "e[solid-ammonium-paratungstate]-a",
   },
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "gas-tungsten-hexafluoride-smelting",
-    category = "blast-smelting-4",
+    name = "angels-powder-tungsten",
+    localised_name = { "item-name.angels-powder-tungsten" },
+    category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "fluid", name = "gas-tungsten-hexafluoride", amount = 120 },
+      { type = "fluid", name = "angels-gas-tungsten-hexafluoride", amount = 120 },
     },
     results = {
-      { type = "item", name = "powder-tungsten", amount = 24 },
-      { type = "item", name = "fluorite-ore", amount = 3 },
+      { type = "item", name = "angels-powder-tungsten", amount = 24 },
+      { type = "item", name = "angels-fluorite-ore", amount = 3 },
     },
-    main_product = "powder-tungsten",
-    icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("powder-tungsten"),
-      1,
-      angelsmods.smelting.number_tint
-    ),
+    main_product = "angels-powder-tungsten",
     order = "h[powder-tungsten]-a",
   },
   {
     type = "recipe",
-    name = "solid-ammonium-paratungstate-smelting",
-    category = "blast-smelting-4",
+    name = "angels-solid-tungsten-oxide-2",
+    localised_name = { "item-name.angels-solid-tungsten-oxide" },
+    category = "angels-blast-smelting-4",
     subgroup = "angels-tungsten",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "solid-ammonium-paratungstate", amount = 24 },
-      { type = "fluid", name = "gas-hydrogen", amount = 60 },
+      { type = "item", name = "angels-solid-ammonium-paratungstate", amount = 12 },
+      { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
     },
     results = {
-      { type = "item", name = "powder-tungsten", amount = 24 },
+      { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
     },
+    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("powder-tungsten"),
+      angelsmods.functions.get_object_icons("angels-solid-tungsten-oxide"),
       2,
       angelsmods.smelting.number_tint
     ),
-    order = "h[powder-tungsten]-b",
+    order = "d[solid-tungsten-oxide]-b",
   },
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "casting-powder-tungsten-1",
-    category = "powder-mixing-3",
+    name = "angels-casting-powder-tungsten",
+    category = "angels-powder-mixing-3",
     subgroup = "angels-tungsten-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "powder-tungsten", amount = 12 },
-      { type = "item", name = "powder-cobalt", amount = 12 },
+      { type = "item", name = "angels-powder-tungsten", amount = 12 },
+      { type = "item", name = "angels-powder-cobalt", amount = 12 },
     },
     results = {
-      { type = "item", name = "casting-powder-tungsten", amount = 24 },
+      { type = "item", name = "angels-casting-powder-tungsten", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("casting-powder-tungsten"),
+      angelsmods.functions.get_object_icons("angels-casting-powder-tungsten"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -206,20 +222,22 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "casting-powder-tungsten-2",
-    category = "powder-mixing-4",
+    name = "angels-casting-powder-tungsten-2",
+    localised_name = { "item-name.angels-casting-powder-tungsten" },
+    category = "angels-powder-mixing-4",
     subgroup = "angels-tungsten-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "powder-tungsten", amount = 12 },
-      { type = "item", name = "powder-nickel", amount = 12 },
+      { type = "item", name = "angels-powder-tungsten", amount = 12 },
+      { type = "item", name = "angels-powder-nickel", amount = 12 },
     },
     results = {
-      { type = "item", name = "casting-powder-tungsten", amount = 24 },
+      { type = "item", name = "angels-casting-powder-tungsten", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("casting-powder-tungsten"),
+      angelsmods.functions.get_object_icons("angels-casting-powder-tungsten"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -229,27 +247,17 @@ data:extend({
   {
     type = "recipe",
     name = "angels-plate-tungsten",
-    category = "sintering-4",
+    localised_name = { "item-name.angels-plate-tungsten" },
+    category = "angels-sintering-4",
     subgroup = "angels-tungsten-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 12 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tungsten", amount = 12 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "angels-casting-powder-tungsten", amount = 12 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "item", name = "casting-powder-tungsten", amount = 15 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-tungsten", amount = 12 },
-      },
+    results = {
+      { type = "item", name = "angels-plate-tungsten", amount = 12 },
     },
     order = "j[angels-plate-tungsten]",
   },

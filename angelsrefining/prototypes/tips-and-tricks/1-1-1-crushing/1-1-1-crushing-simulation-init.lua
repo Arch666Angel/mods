@@ -1,13 +1,14 @@
-game.camera_position = { -2.5, 1 }
-game.camera_zoom = 2
-game.camera_alt_info = true
+game.simulation.camera_position = { -2.5, 1 }
+game.simulation.camera_zoom = 2
+game.simulation.camera_alt_info = true
 
+game.forces.neutral.recipes["angels-ore1-crushed"].enabled = true
 -- ore crusher
 game.surfaces[1].create_entity({
-  name = "ore-crusher",
+  name = "angels-ore-crusher",
   position = { 0, 0 },
   force = "neutral",
-  recipe = "angelsore1-crushed",
+  recipe = "angels-ore1-crushed",
 })
 -- inserters (input)
 game.surfaces[1].create_entity({
@@ -44,7 +45,7 @@ game.surfaces[1].create_entity({
   type = "output",
 })
 -- infinity chest (source)
-global.sink = game.surfaces[1]
+storage.sink = game.surfaces[1]
   .create_entity({
     name = "infinity-chest",
     position = { -14, -3 },

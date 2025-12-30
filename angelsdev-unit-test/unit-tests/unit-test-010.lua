@@ -2,7 +2,7 @@
 -- either unlocked at the same time or unlocked by a prerequisite technology
 local unit_test_functions = require("unit-test-functions")
 
-local starting_unlocks = { items = {}, fluids = {} }
+local starting_unlocks = { items = {}, fluids = {}, categories = {} }
 local processed_techs = {}
 local unit_test_result = unit_test_functions.test_successful
 local ignored_unlocks = {}
@@ -11,25 +11,31 @@ local skip_test = false
 
 local function process_tech(tech)
   -- Build lists of items and fluids unlocked by this tech
-  local result = { name = tech.name, items = {}, fluids = {} }
+  local result = { name = tech.name, items = {}, fluids = {}, categories = {} }
   local recipes = {}
 
-  for _, modifier in pairs(tech.effects) do
-    if modifier.type == "unlock-recipe" then
-      local recipe = game.recipe_prototypes[modifier.recipe]
+  for _, effect in pairs(tech.effects) do
+    if effect.type == "unlock-recipe" then
+      local recipe = prototypes.recipe[effect.recipe]
       recipes[recipe.name] = {
         processed = false,
         ingredients = { items = {}, fluids = {} },
         products = { items = {}, fluids = {} },
+        category = recipe.category,
+        categories = {},
       }
       local skip = false
 
       -- Skip unbarelling recipes
-      if
-        recipe.name ~= "empty-barrel"
-        and string.sub(recipe.name, 1, 6) == "empty-"
-        and string.sub(recipe.name, -7, -1) == "-barrel"
-      then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif recipe.subgroup.name == "empty-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-empty-canister" then
+        skip = true
+      elseif string.sub(recipe.name, 1, 6) == "empty-" and string.sub(recipe.name, -7, -1) == "-barrel" then
         skip = true
       end
 
@@ -37,6 +43,22 @@ local function process_tech(tech)
         for _, product in pairs(recipe.products) do
           if product.type == "item" then
             recipes[recipe.name].products.items[product.name] = true
+
+            -- Check for rocket_launch_products
+            local item = prototypes.item[product.name]
+            for _, launch_product in pairs(item.rocket_launch_products) do
+              recipes[recipe.name].products.items[launch_product.name] = true
+            end
+
+            -- Check for entity. Add crafting categories
+            local entity = item.place_result
+            if entity then
+              if entity.crafting_categories then
+                for category_name, _ in pairs(entity.crafting_categories) do
+                  recipes[recipe.name].categories[category_name] = true
+                end
+              end
+            end
           else
             recipes[recipe.name].products.fluids[product.name] = true
           end
@@ -46,13 +68,23 @@ local function process_tech(tech)
       skip = false
 
       -- Skip barelling recipes
-      if string.sub(recipe.name, 1, 5) == "fill-" and string.sub(recipe.name, -7, -1) == "-barrel" then
+      if recipe.name == "empty-barrel" then
+        -- Do nothing
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "fill-barrel" then
+        skip = true
+      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-gas-bottle" then
+        skip = true
+      elseif recipe.subgroup.name == "bob-canister" then
         skip = true
       end
 
       -- Skip building recipes
       if (ignore_building_recipes == true) and (#recipe.products == 1) and (recipe.products[1].type == "item") then
-        local item = game.item_prototypes[recipe.products[1].name]
+        local item = prototypes.item[recipe.products[1].name]
         if item.place_result then
           skip = true
         end
@@ -78,7 +110,7 @@ local function process_tech(tech)
       local item_filters = {}
       table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
       table.insert(item_filters, { filter = "burnt-result", mode = "and" })
-      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_prototypes = prototypes.get_item_filtered(item_filters)
 
       for _, item in pairs(item_prototypes) do
         recipes[recipe.name].products.items[item.burnt_result.name] = true
@@ -90,7 +122,7 @@ local function process_tech(tech)
       local item_filters = {}
       table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
       table.insert(item_filters, { filter = "place-result", mode = "and" })
-      local item_prototypes = game.get_filtered_item_prototypes(item_filters)
+      local item_prototypes = prototypes.get_item_filtered(item_filters)
 
       for _, item in pairs(item_prototypes) do
         local entity = item.place_result
@@ -101,7 +133,54 @@ local function process_tech(tech)
             end
           end
         elseif entity.type == "offshore-pump" then
-          recipes[recipe.name].products.fluids[entity.fluid.name] = true
+          local filter = entity.fluidbox_prototypes[1].filter
+          if filter then
+            recipes[recipe.name].products.fluids[filter.name] = true
+          end
+        end
+      end
+    elseif effect.type == "unlock-space-location" then
+      local planet = game.planets[effect.space_location]
+      if planet then
+        for _, tile in pairs(planet.prototype.map_gen_settings.autoplace_settings["tile"].settings) do
+          if tile.fluid then
+            result.fluids[tile.fluid.name] = true
+          end
+        end
+      end
+    end
+  end
+
+  -- Add trigger tech prerequisites
+  if tech.research_trigger and (tech.research_trigger.type == "craft-item" or tech.research_trigger.type == "craft-fluid") then
+    if prototypes.item[tech.research_trigger.item] or prototypes.fluid[tech.research_trigger.fluid] then
+      recipes["__TECH__"..tech.name] = {
+        processed = false,
+        ingredients = { items = {}, fluids = {} },
+        products = { items = {}, fluids = {} },
+        category = "parameters",
+        categories = {},
+      }
+      local resources = prototypes.get_entity_filtered({
+        { filter = "name", mode = "and", name = tech.research_trigger.item or tech.research_trigger.fluid },
+        { filter = "minable", mode = "and" },
+        { filter = "autoplace", mode = "and" },
+      })
+      local drills = prototypes.get_entity_filtered({
+        { filter = "type", mode = "and", type = "mining-drill" }
+      })
+      for _, resource in pairs(resources) do
+        for _, drill in pairs(drills) do
+          for category, _ in pairs(drill.resource_categories) do
+            if resource.resource_category == category then
+              recipes["__TECH__"..tech.name].ingredients.items[drill.name] = true
+
+              -- If the entity requires a fluid to mine, make sure this is a prerequisite too
+              if resource.mineable_properties.required_fluid then
+                recipes["__TECH__"..tech.name].ingredients.fluids[resource.mineable_properties.required_fluid] = true
+              end
+            end
+          end
         end
       end
     end
@@ -118,16 +197,23 @@ local function process_tech(tech)
       for fluid_name, _ in pairs(prereq.fluids) do
         result.fluids[fluid_name] = true
       end
+
+      for category_name, _ in pairs(prereq.categories) do
+        result.categories[category_name] = true
+      end
     end
   end
 
   -- Get ignored unlocks
   if ignored_unlocks[tech.name] then
-    for _, item_name in pairs(ignored_unlocks[tech.name].items) do
+    for item_name, _ in pairs(ignored_unlocks[tech.name].items or {}) do
       result.items[item_name] = true
     end
-    for _, fluid_name in pairs(ignored_unlocks[tech.name].fluids) do
+    for fluid_name, _ in pairs(ignored_unlocks[tech.name].fluids or {}) do
       result.fluids[fluid_name] = true
+    end
+    for category_name, _ in pairs(ignored_unlocks[tech.name].categories or {}) do
+      result.categories[category_name] = true
     end
   end
 
@@ -138,6 +224,10 @@ local function process_tech(tech)
 
     for fluid_name, _ in pairs(starting_unlocks.fluids) do
       result.fluids[fluid_name] = true
+    end
+
+    for category_name, _ in pairs(starting_unlocks.categories) do
+      result.categories[category_name] = true
     end
   end
 
@@ -169,6 +259,16 @@ local function process_tech(tech)
             found_all_prerequisites = false
           end
         end
+        if not result.categories[recipe.category] then
+          -- Ignore parameter recipes
+          if recipe.category == "parameters" then
+            recipe.missing_category = false
+          else do
+            recipe.missing_category = true
+            found_all_prerequisites = false
+            end
+          end
+        end
 
         if found_all_prerequisites then
           recipe.processed = true
@@ -179,6 +279,9 @@ local function process_tech(tech)
           end
           for fluid_name, _ in pairs(recipe.products.fluids) do
             result.fluids[fluid_name] = true
+          end
+          for category_name, _ in pairs(recipe.categories) do
+            result.categories[category_name] = true
           end
         end
       end
@@ -213,6 +316,16 @@ local function process_tech(tech)
           unit_test_result = unit_test_functions.test_failed
         end
       end
+      if recipe.missing_category == true then
+        unit_test_functions.print_msg(
+          string.format(
+            "Recipe %q uses crafting category %q and is unlocked by Tech %q. None of the tech's prerequisites unlock a machine with this crafting category",
+            recipe_name,
+            recipe.category,
+            tech.name
+          )
+        )
+      end
 
       -- Add recipe results to products anyway else all following techs will fail
       for item_name, _ in pairs(recipe.products.items) do
@@ -220,6 +333,9 @@ local function process_tech(tech)
       end
       for fluid_name, _ in pairs(recipe.products.fluids) do
         result.fluids[fluid_name] = true
+      end
+      for category_name, _ in pairs(recipe.categories) do
+        result.categories[category_name] = true
       end
     end
   end
@@ -232,7 +348,7 @@ local function make_starting_unlocks()
   local entity_filters = {}
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     local loot = entity.loot
@@ -252,7 +368,7 @@ local function make_starting_unlocks()
   table.insert(entity_filters, { filter = "minable", invert = false, mode = "and" })
   table.insert(entity_filters, { filter = "autoplace", invert = false, mode = "and" })
 
-  local entity_prototypes = game.get_filtered_entity_prototypes(entity_filters)
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
     if entity.mineable_properties.products then
@@ -266,12 +382,19 @@ local function make_starting_unlocks()
     end
   end
 
+  -- Include fluid mining results from tiles (fluid mining results are no longer tracked by offshore pumps in 2.0)
+  for tile_name, tile in pairs(prototypes.tile) do
+    if tile.fluid then
+      starting_unlocks.fluids[tile.fluid.name] = true
+    end
+  end
+
   local starting_tech = { name = "starting", prerequisites = {}, effects = {} }
 
   local recipe_filters = {}
   table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(recipe_filters, { filter = "enabled", invert = false, mode = "and" })
-  local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
+  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
   for _, recipe in pairs(recipe_prototypes) do
     if recipe.hidden_from_player_crafting then
@@ -287,13 +410,17 @@ local function make_starting_unlocks()
     end
   end
 
+  -- Add "crafting" and "smelting" to starting_unlocks.categories
+  starting_unlocks.categories["crafting"] = true
+  starting_unlocks.categories["smelting"] = true
+
   starting_unlocks = process_tech(starting_tech)
 end
 
 local function add_ignores()
   -- TODO: Remove this. Currently components has so many missing prerequisites that this test is not worth having
   if
-    game.active_mods["angelsindustries"]
+    script.active_mods["angelsindustries"]
     and (
       (settings.startup["angels-enable-components"].value == true)
       or (settings.startup["angels-enable-tech"].value == true)
@@ -302,69 +429,182 @@ local function add_ignores()
     skip_test = true
   end
 
-  -- base game exception
-  ignored_unlocks["artillery"] = { items = { "concrete" }, fluids = {} }
+  -- base game exception (base game engine units don't actually have assembling machines as a prereq, but require them to be crafted)
+  ignored_unlocks["engine"] = {
+    items = {
+      ["engine-unit"] = true,
+    },
+    categories = {
+      ["advanced-crafting"] = true,
+    },
+  }
 
-  if game.active_mods["angelsrefining"] then
-    ignore_building_recipes = true
-    ignored_unlocks["ore-powderizer"] = { items = { "milling-drum-used" }, fluids = {} }
-  end
-
-  if game.active_mods["angelssmelting"] then
-    ignored_unlocks["angels-coolant-1"] = { items = {}, fluids = { "liquid-coolant-used" } }
-  end
-
-  if game.active_mods["angelsbioprocessing"] then
-    ignored_unlocks["plastics"] = { items = {}, fluids = { "liquid-plastic" } }
-    ignored_unlocks["rubbers"] = { items = {}, fluids = { "liquid-rubber" } }
-    ignored_unlocks["resins"] = { items = {}, fluids = { "liquid-resin" } }
-    ignored_unlocks["bio-processing-paste"] = {
-      items = {
-        "powder-cobalt",
-        "powder-copper",
-        "powder-gold",
-        "powder-iron",
-        "powder-titanium",
-        "powdered-tungsten",
-        "powder-zinc",
+  if script.active_mods["angelsrefining"] then
+    ignored_unlocks["angels-water-treatment-2"] = {
+      items = {},
+      fluids = {
+        ["angels-water-greenyellow-waste"] = true,
+        ["angels-water-green-waste"] = true,
+        ["angels-water-red-waste"] = true,
       },
-      fluids = {},
+    }
+  end
+
+  if script.active_mods["angelssmelting"] then
+    ignored_unlocks["angels-coolant-1"] = {
+      fluids = {
+        ["angels-liquid-coolant-used"] = true,
+      },
+    }
+  end
+
+  if script.active_mods["angelsbioprocessing"] then
+    ignored_unlocks["plastics"] = {
+      fluids = {
+        ["angels-liquid-plastic"] = true,
+      },
+    }
+    ignored_unlocks["angels-rubbers"] = {
+      fluids = {
+        ["angels-liquid-rubber"] = true,
+      },
+    }
+    ignored_unlocks["angels-resins"] = {
+      fluids = {
+        ["angels-liquid-resin"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-processing-paste"] = {
+      items = {
+        ["angels-powder-cobalt"] = true,
+        ["angels-powder-copper"] = true,
+        ["angels-powder-gold"] = true,
+        ["angels-powder-iron"] = true,
+        ["angels-powder-titanium"] = true,
+        ["angels-powder-tungsten"] = true,
+        ["bob-powdered-tungsten"] = true,
+        ["angels-powder-zinc"] = true,
+      },
     }
     -- TODO: Tidy up puffer / crop prerequisites
-    ignored_unlocks["bio-refugium-hatchery"] =
-      { items = { "bio-puffer-egg-2", "bio-puffer-egg-3", "bio-puffer-egg-4", "bio-puffer-egg-5" }, fluids = {} }
-    ignored_unlocks["bio-fermentation"] = { items = { "solid-corn", "solid-fruit" }, fluids = {} }
-    ignored_unlocks["bio-nutrient-paste"] =
-      { items = { "solid-beans", "solid-corn", "solid-leafs", "solid-nuts", "solid-pips", "solid-fruit" }, fluids = {} }
-    ignored_unlocks["bio-pressing-1"] = { items = { "solid-nuts", "solid-pips", "solid-beans" }, fluids = {} }
+    ignored_unlocks["angels-bio-refugium-hatchery"] = {
+      items = {
+        ["angels-bio-puffer-egg-2"] = true,
+        ["angels-bio-puffer-egg-3"] = true,
+        ["angels-bio-puffer-egg-4"] = true,
+        ["angels-bio-puffer-egg-5"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-fermentation"] = {
+      items = {
+        ["angels-solid-corn"] = true,
+        ["angels-solid-fruit"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-nutrient-paste"] = {
+      items = {
+        ["angels-solid-beans"] = true,
+        ["angels-solid-corn"] = true,
+        ["angels-solid-leafs"] = true,
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-fruit"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-pressing-1"] = {
+      items = {
+        ["angels-solid-nuts"] = true,
+        ["angels-solid-pips"] = true,
+        ["angels-solid-beans"] = true,
+      },
+    }
     -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
-    ignored_unlocks["angels-bio-yield-module"] = { items = { "crystal-splinter-green" }, fluids = { "" } }
-    ignored_unlocks["angels-bio-yield-module-2"] = { items = { "crystal-shard-green" }, fluids = { "" } }
-    ignored_unlocks["angels-bio-yield-module-3"] = { items = { "crystal-full-green" }, fluids = { "" } }
+    ignored_unlocks["angels-bio-yield-module"] = {
+      items = {
+        ["angels-crystal-splinter-green"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-yield-module-2"] = {
+      items = {
+        ["angels-crystal-shard-green"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-yield-module-3"] = {
+      items = {
+        ["angels-crystal-full-green"] = true,
+      },
+    }
+
+    ignored_unlocks["angels-bio-desert-farm"] = {
+      items = {
+        ["angels-clay-brick"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-swamp-farm"] = {
+      items = {
+        ["bob-bronze-pipe"] = true,
+      },
+    }
+    ignored_unlocks["angels-bio-temperate-farm"] = {
+      items = {
+        ["bob-bronze-pipe"] = true,
+        ["angels-clay-brick"] = true,
+      },
+    }
   end
 
-  if game.active_mods["angelsindustries"] then
-    ignored_unlocks["angels-nuclear-fuel"] =
-      { items = { "plutonium-239", "plutonium-240", "thorium-232" }, fluids = {} }
-    ignored_unlocks["atomic-bomb"] =
-      { items = { "plutonium-239", "plutonium-240", "angels-muon-fusion-catalyst" }, fluids = { "gas-deuterium" } }
+  if script.active_mods["angelspetrochem"] then
+    ignored_unlocks["angels-nuclear-fuel"] = {
+      items = {
+        ["bob-plutonium-239"] = true,
+        ["angels-plutonium-240"] = true,
+        ["bob-thorium-232"] = true,
+        ["angels-thorium-232"] = true,
+      },
+      categories = {
+        ["angels-centrifuging-2"] = true,
+        ["angels-centrifuging-3"] = true,
+      },
+    }
+    ignored_unlocks["atomic-bomb"] = {
+      items = {
+        ["bob-plutonium-239"] = true,
+        ["angels-plutonium-240"] = true,
+        ["angels-muon-fusion-catalyst"] = true,
+      },
+      fluids = {
+        ["angels-gas-deuterium"] = true,
+      },
+    }
   end
 
-  if game.active_mods["SeaBlock"] then
-    ignore_building_recipes = false
+  if script.active_mods["SeaBlock"] then
     ignored_unlocks["starting"] = {
       items = {
-        "iron-plate",
-        "iron-stick",
-        "basic-circuit-board",
-        "pipe",
-        "pipe-to-ground",
-        "copper-pipe",
-        "iron-gear-wheel",
-        "wooden-board",
+        ["bob-basic-circuit-board"] = true,
+        ["copper-pipe"] = true,
+        ["iron-gear-wheel"] = true,
+        ["iron-plate"] = true,
+        ["iron-stick"] = true,
+        ["pipe"] = true,
+        ["pipe-to-ground"] = true,
+        ["wooden-board"] = true,
       },
-      fluids = { "water" },
+      fluids = {
+        ["water"] = true,
+      },
     }
+  end
+
+  for _, player in pairs(game.players) do
+    if player.character and player.character.prototype and player.character.prototype.crafting_categories then
+      local crafting_categories = player.character.prototype.crafting_categories
+      for category_name, _ in pairs(crafting_categories) do
+        ignored_unlocks["starting"] = ignored_unlocks["starting"] or {}
+        ignored_unlocks["starting"].categories = ignored_unlocks["starting"].categories or {}
+        ignored_unlocks["starting"].categories[category_name] = true
+      end
+    end
   end
 end
 
@@ -383,7 +623,7 @@ local unit_test_010 = function()
   local tech_filters = {}
   table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(tech_filters, { filter = "enabled", invert = false, mode = "and" })
-  local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
+  local tech_prototypes = prototypes.get_technology_filtered(tech_filters)
 
   local I = 0
   local escape = false
@@ -410,8 +650,13 @@ local unit_test_010 = function()
   end
 
   if escape == true then
-    unit_test_functions.print_msg("Not all techs were checked. Possibly due to hidden prerequisites")
+    unit_test_functions.print_msg("The following techs were not checked. Possibly due to hidden prerequisites")
     unit_test_result = unit_test_functions.test_failed
+    for tech_name, tech in pairs(tech_prototypes) do
+      if not processed_techs[tech_name] then
+        unit_test_functions.print_msg(tech_name)
+      end
+    end
   end
 
   return unit_test_result

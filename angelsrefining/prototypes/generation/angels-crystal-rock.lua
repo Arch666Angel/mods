@@ -1,22 +1,41 @@
 data:extend({
   {
+    type = "noise-function",
+    name = "angels_elevation_level",
+    parameters = {"optimal", "range", "max_range"},
+    expression = "angels_value_optimal_with_range(elevation, optimal, range, max_range)",
+  },
+  {
     type = "simple-entity",
     name = "angels-crystal-rock",
     flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
-    icon = "__base__/graphics/icons/rock-huge.png",
-    icon_size = 32,
+    icon = "__base__/graphics/icons/huge-rock.png",
+    icon_size = 64,
     subgroup = "grass",
     order = "b[decorative]-k[stone-rock]-c[crystal]",
     collision_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },
     selection_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
     minable = {
       mining_particle = "stone-particle",
-      mining_time = 8,
-      result = "stone",
-      count = 20,
+      mining_time = 2,
+      results = {
+        {
+          type = "item",
+          name = "stone",
+          amount_min = 15,
+          amount_max = 25,
+        },
+        {
+          type = "item",
+          name = "coal",
+          amount_min = 15,
+          amount_max = 25,
+        },
+      }
     },
     loot = {
       { item = "stone", probability = 1, count_min = 5, count_max = 10 },
+      { item = "coal", probability = 1, count_min = 5, count_max = 10 },
     },
     count_as_rock_for_filtered_deconstruction = true,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
@@ -30,41 +49,30 @@ data:extend({
     },
     autoplace = {
       order = "a[doodad]-c[angels-crystal-rock]",
-      max_probability = 0.05,
-      peaks = {
-        {
-          influence = 0.0002,
-        },
-        {
-          influence = 0.002,
-          min_influence = 0,
-          elevation_optimal = 45000,
-          elevation_range = 37000,
-          elevation_max_range = 45000,
-        },
-      },
+      control = "rocks",
+      probability_expression = "0.0002 + 0.002 * angels_elevation_level(45000, 37000, 45000)",
     },
     pictures = {
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-1.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-1.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-2.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-2.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-3.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-3.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
       },
       {
-        filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-4.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-4.png",
         width = 192,
         height = 160,
         shift = { 0.5, 0 },
@@ -122,7 +130,7 @@ data:extend({
   -- pictures =
   -- {
   -- {
-  -- filename = "__angelsrefining__/graphics/entity/rock/crystal-rock-big-1.png",
+  -- filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-big-1.png",
   -- width = 320,
   -- height = 256,
   -- shift = {3, -1.2}

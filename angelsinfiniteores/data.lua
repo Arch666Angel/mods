@@ -14,6 +14,7 @@ angelsmods.ores.disable_ore_override = angelsmods.refining and angelsmods.refini
 
 --LOAD RESOURCE GENERATOR
 require("prototypes.generation.resource-builder")
+require("prototypes.generation.overlapping-resources-patch")
 
 --GENERATE PROTOTYPES
 require("prototypes.generation.vanilla-ore-inf")
@@ -30,3 +31,7 @@ require("prototypes.generation.dm-tenemut")
 
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
+patch_overlapping_resources()
+
+-- UPDATE URANIUM MINING TECH
+require("prototypes.overrides.infiniteores-override-base")

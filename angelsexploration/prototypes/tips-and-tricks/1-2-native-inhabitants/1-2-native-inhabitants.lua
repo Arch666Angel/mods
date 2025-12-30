@@ -15,11 +15,11 @@ data:extend({
     indent = 1,
 
     starting_status = "dependencies-not-met", -- no additional trigger
-    dependencies = { "angels-native-inhabitants" },
+    dependencies = { "shoot-targeting" },
     --trigger =
     --{
     --  type = "research",
-    --  technology = "ore-crushing"
+    --  technology = "angels-ore-crushing"
     --},
 
     --simulation = require "prototypes.tips-and-tricks.1-ore-refining.1-ore-refining-simulation",

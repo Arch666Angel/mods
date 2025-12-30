@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["zinc"].ingot = true
@@ -11,22 +10,44 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["zinc"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["angels-zinc-ore"]
+    local bob_ore = data.raw.item["bob-zinc-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
-  angelsmods.functions.add_flag("zinc-ore", "hidden")
+  angelsmods.functions.hide("angels-zinc-ore")
 end
 
 -------------------------------------------------------------------------------
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["zinc"].ingot then
+  if not angelsmods.trigger.smelting_products["lead"].ingot then
+    OV.patch_recipes({
+      {
+        name = "angels-ingot-zinc",
+        ingredients = {
+          { type = "fluid", name = "angels-liquid-molten-lead", amount = 0 }
+        },
+        results = {
+          { type = "item", name = "angels-ingot-lead", amount = 0 }
+        }
+      }
+    })
+    OV.remove_prereq("angels-zinc-smelting-1", "angels-lead-smelting-1")
+  end
+
   if angelsmods.trigger.smelting_products["zinc"].plate then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
-    OV.disable_recipe({ "molten-zinc-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-zinc")
+    OV.disable_recipe({ "angels-liquid-molten-zinc" })
     OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
     -- swap tech tier 1 to ingots
-    for _, property in pairs({ "icon", "icon_size", "icon_mipmaps", "icons", "localised_name" }) do
+    for _, property in pairs({ "icon", "icon_size", "icons", "localised_name" }) do
       data.raw.technology["angels-zinc-smelting-1"][property] =
         util.table.deepcopy(data.raw.technology["angels-zinc-smelting-2"][property])
     end
@@ -34,26 +55,25 @@ if angelsmods.trigger.smelting_products["zinc"].ingot then
 
   if mods["angelsindustries"] and angelsmods.industries.components then
   else
-    OV.disable_recipe({ "zinc-ore-processing-alt" })
+    OV.disable_recipe({ "angels-solid-zinc-oxide" })
     OV.patch_recipes({
       {
-        name = "pellet-zinc-smelting",
-        icons = angelsmods.functions.get_object_icons("solid-zinc-oxide"),
+        name = "angels-solid-zinc-oxide-2",
+        icons = angelsmods.functions.get_object_icons("angels-solid-zinc-oxide"),
       },
     })
   end
 else
-  angelsmods.functions.add_flag("processed-zinc", "hidden")
-  angelsmods.functions.add_flag("pellet-zinc", "hidden")
-  angelsmods.functions.add_flag("solid-zinc-oxide", "hidden")
-  angelsmods.functions.add_flag("cathode-zinc", "hidden")
-  angelsmods.functions.add_flag("ingot-zinc", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-zinc", "hidden")
-  OV.disable_recipe({ "zinc-ore-processing", "zinc-processed-processing", "zinc-ore-processing-alt" })
-  OV.disable_recipe({ "pellet-zinc-smelting", "solid-zinc-oxide-smelting" })
-  OV.disable_recipe({ "zinc-ore-smelting", "processed-zinc-smelting", "cathode-zinc-smelting" })
-  OV.disable_recipe({ "molten-zinc-smelting" })
-  OV.disable_recipe({ "molten-zinc-smelting" })
+  angelsmods.functions.hide("angels-processed-zinc")
+  angelsmods.functions.hide("angels-pellet-zinc")
+  angelsmods.functions.hide("angels-solid-zinc-oxide")
+  angelsmods.functions.hide("angels-cathode-zinc")
+  angelsmods.functions.hide("angels-ingot-zinc")
+  angelsmods.functions.hide("angels-liquid-molten-zinc")
+  OV.disable_recipe({ "angels-processed-zinc", "angels-pellet-zinc", "angels-solid-zinc-oxide" })
+  OV.disable_recipe({ "angels-solid-zinc-oxide-2", "angels-cathode-zinc" })
+  OV.disable_recipe({ "angels-ingot-zinc", "angels-ingot-zinc-2", "angels-ingot-zinc-3" })
+  OV.disable_recipe({ "angels-liquid-molten-zinc" })
   OV.disable_technology({ "angels-zinc-smelting-1", "angels-zinc-smelting-2", "angels-zinc-smelting-3" })
   OV.disable_technology({ "angels-zinc-casting-2", "angels-zinc-casting-3" })
 end
@@ -64,21 +84,18 @@ end
 if angelsmods.trigger.smelting_products["zinc"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-zinc", "zinc-plate")
-    angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
-    angelsmods.functions.move_item("zinc-plate", "angels-zinc-casting", "j")
-    data.raw["item"]["zinc-plate"].icon = "__angelssmelting__/graphics/icons/plate-zinc.png"
-    data.raw["item"]["zinc-plate"].icon_size = 32
-    data.raw["item"]["zinc-plate"].icon_mipmaps = 1
+    OV.global_replace_item("angels-plate-zinc", "bob-zinc-plate")
+    angelsmods.functions.hide("angels-plate-zinc")
+    OV.copy_item_properties("angels-plate-zinc", "bob-zinc-plate")
     OV.disable_recipe({ "bob-zinc-plate" })
-    OV.remove_prereq("battery-3", "zinc-processing")
-    OV.add_prereq("battery-3", "angels-zinc-smelting-1")
+    OV.remove_prereq("bob-battery-3", "bob-zinc-processing")
+    OV.add_prereq("bob-battery-3", "angels-zinc-smelting-1")
   end
 else
-  angelsmods.functions.add_flag("angels-plate-zinc", "hidden")
-  angelsmods.functions.add_flag("angels-roll-zinc", "hidden")
-  OV.disable_recipe({ "roll-zinc-casting", "roll-zinc-casting-fast" })
-  OV.disable_recipe({ "angels-plate-zinc", "angels-roll-zinc-converting" })
+  angelsmods.functions.hide("angels-plate-zinc")
+  angelsmods.functions.hide("angels-roll-zinc")
+  OV.disable_recipe({ "angels-roll-zinc", "angels-roll-zinc-2" })
+  OV.disable_recipe({ "angels-plate-zinc", "angels-plate-zinc-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -86,6 +103,6 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["zinc"].powder then
 else
-  angelsmods.functions.add_flag("powder-zinc", "hidden")
-  OV.disable_recipe({ "powder-zinc" })
+  angelsmods.functions.hide("angels-powder-zinc")
+  OV.disable_recipe({ "angels-powder-zinc" })
 end

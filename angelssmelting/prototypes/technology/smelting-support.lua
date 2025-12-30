@@ -5,30 +5,29 @@ data:extend({
   {
     type = "technology",
     name = "angels-metallurgy-1",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
-      "ore-crushing",
+      "angels-ore-crushing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace",
+        recipe = "angels-blast-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace",
+        recipe = "angels-induction-furnace",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine",
+        recipe = "angels-casting-machine",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 30,
     },
@@ -37,17 +36,17 @@ data:extend({
   {
     type = "technology",
     name = "angels-metallurgy-2",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-1",
+      "angels-stone-smelting-1",
       "advanced-material-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-2",
+        recipe = "angels-blast-furnace-2",
       },
       {
         type = "unlock-recipe",
@@ -55,18 +54,18 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-2",
+        recipe = "angels-induction-furnace-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-2",
+        recipe = "angels-casting-machine-2",
       },
     },
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -75,17 +74,18 @@ data:extend({
   {
     type = "technology",
     name = "angels-metallurgy-3",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
+      "angels-aluminium-smelting-1",
       "angels-metallurgy-2",
+      "angels-stone-smelting-2",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-3",
+        recipe = "angels-blast-furnace-3",
       },
       {
         type = "unlock-recipe",
@@ -93,19 +93,19 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-3",
+        recipe = "angels-induction-furnace-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-3",
+        recipe = "angels-casting-machine-3",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -114,17 +114,19 @@ data:extend({
   {
     type = "technology",
     name = "angels-metallurgy-4",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-3",
+      "angels-stone-smelting-3",
+      "angels-titanium-smelting-1",
       "production-science-pack",
+      "processing-unit",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "blast-furnace-4",
+        recipe = "angels-blast-furnace-4",
       },
       {
         type = "unlock-recipe",
@@ -132,20 +134,20 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "induction-furnace-4",
+        recipe = "angels-induction-furnace-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "casting-machine-4",
+        recipe = "angels-casting-machine-4",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -154,11 +156,11 @@ data:extend({
   {
     type = "technology",
     name = "angels-metallurgy-5",
-    icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/blast-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-4",
+      "angels-tungsten-smelting-1",
       "utility-science-pack",
     },
     effects = {
@@ -170,11 +172,11 @@ data:extend({
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -185,23 +187,22 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "powder-metallurgy-1",
-    icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+    name = "angels-powder-metallurgy-1",
+    icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven",
+        recipe = "angels-sintering-oven",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 30,
     },
@@ -209,29 +210,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-2",
-    icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+    name = "angels-powder-metallurgy-2",
+    icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-2",
-      "powder-metallurgy-1",
+      "angels-powder-metallurgy-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-2",
+        recipe = "angels-sintering-oven-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer",
+        recipe = "angels-powder-mixer",
       },
     },
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -239,30 +239,29 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-3",
-    icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+    name = "angels-powder-metallurgy-3",
+    icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-3",
-      "powder-metallurgy-2",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-3",
+        recipe = "angels-sintering-oven-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-2",
+        recipe = "angels-powder-mixer-2",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -270,31 +269,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-4",
-    icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+    name = "angels-powder-metallurgy-4",
+    icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-4",
-      "powder-metallurgy-3",
+      "angels-powder-metallurgy-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-4",
+        recipe = "angels-sintering-oven-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-3",
+        recipe = "angels-powder-mixer-3",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -302,32 +300,31 @@ data:extend({
   },
   {
     type = "technology",
-    name = "powder-metallurgy-5",
-    icon = "__angelssmelting__/graphics/technology/sintering-oven-tech.png",
+    name = "angels-powder-metallurgy-5",
+    icon = "__angelssmeltinggraphics__/graphics/technology/sintering-oven-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-5",
-      "powder-metallurgy-4",
+      "angels-powder-metallurgy-4",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "sintering-oven-5",
+        recipe = "angels-sintering-oven-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-mixer-4",
+        recipe = "angels-powder-mixer-4",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -338,25 +335,23 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "strand-casting-1",
-    icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
+    name = "angels-strand-casting-1",
+    icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-2",
-      "angels-cooling",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine",
+        recipe = "angels-strand-casting-machine",
       },
     },
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -364,27 +359,26 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-2",
-    icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
+    name = "angels-strand-casting-2",
+    icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-3",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-coolant-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-2",
+        recipe = "angels-strand-casting-machine-2",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -392,27 +386,26 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-3",
-    icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
+    name = "angels-strand-casting-3",
+    icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-4",
-      "strand-casting-2",
+      "angels-strand-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-3",
+        recipe = "angels-strand-casting-machine-3",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -420,28 +413,27 @@ data:extend({
   },
   {
     type = "technology",
-    name = "strand-casting-4",
-    icon = "__angelssmelting__/graphics/technology/strand-casting-machine-tech.png",
+    name = "angels-strand-casting-4",
+    icon = "__angelssmeltinggraphics__/graphics/technology/strand-casting-machine-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-5",
-      "strand-casting-3",
+      "angels-strand-casting-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "strand-casting-machine-4",
+        recipe = "angels-strand-casting-machine-4",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -452,24 +444,23 @@ data:extend({
   ---------------------------------------------------------------------------
   {
     type = "technology",
-    name = "ore-processing-1",
-    icon = "__angelssmelting__/graphics/technology/processing-machine-tech.png",
+    name = "angels-ore-processing-1",
+    icon = "__angelssmeltinggraphics__/graphics/technology/processing-machine-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine",
+        recipe = "angels-ore-processing-machine",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -477,30 +468,29 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-2",
-    icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
+    name = "angels-ore-processing-2",
+    icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-3",
-      "ore-processing-1",
+      "angels-ore-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-2",
+        recipe = "angels-ore-processing-machine-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press",
+        recipe = "angels-pellet-press",
       },
     },
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -508,31 +498,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-3",
-    icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
+    name = "angels-ore-processing-3",
+    icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-4",
-      "ore-processing-2",
+      "angels-ore-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-3",
+        recipe = "angels-ore-processing-machine-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-2",
+        recipe = "angels-pellet-press-2",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -540,32 +529,31 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-4",
-    icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
+    name = "angels-ore-processing-4",
+    icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
       "angels-metallurgy-5",
-      "ore-processing-3",
+      "angels-ore-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-processing-machine-4",
+        recipe = "angels-ore-processing-machine-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-3",
+        recipe = "angels-pellet-press-3",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 30,
     },
@@ -573,27 +561,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-processing-5",
-    icon = "__angelssmelting__/graphics/technology/pellet-press-tech.png",
+    name = "angels-ore-processing-5",
+    icon = "__angelssmeltinggraphics__/graphics/technology/pellet-press-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
-      "ore-processing-4",
+      "angels-ore-processing-4",
+      "space-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "pellet-press-4",
+        recipe = "angels-pellet-press-4",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 30,
     },
@@ -605,27 +594,28 @@ data:extend({
   {
     type = "technology",
     name = "angels-cooling",
-    icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/coolant-tech.png",
     icon_size = 128,
     prerequisites = {
       "advanced-material-processing",
-      "water-treatment",
+      "angels-stone-smelting-1",
+      "angels-water-treatment",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "cooling-tower",
+        recipe = "angels-cooling-tower",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-steam",
+        recipe = "angels-coolant-cool-steam",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -634,42 +624,41 @@ data:extend({
   {
     type = "technology",
     name = "angels-coolant-1",
-    icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/coolant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "angels-metallurgy-3",
       "angels-cooling",
       "angels-oil-processing",
-      "slag-processing-1",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coolant",
+        recipe = "angels-liquid-coolant",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-used-filtration-1",
+        recipe = "angels-coolant-used-filtration-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-100",
+        recipe = "angels-coolant-cool-100",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-200",
+        recipe = "angels-coolant-cool-200",
       },
       {
         type = "unlock-recipe",
-        recipe = "coolant-cool-300",
+        recipe = "angels-coolant-cool-300",
       },
     },
     unit = {
       count = 500,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -678,26 +667,25 @@ data:extend({
   {
     type = "technology",
     name = "angels-coolant-2",
-    icon = "__angelssmelting__/graphics/technology/coolant-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/coolant-tech.png",
     icon_size = 128,
     prerequisites = {
-      "angels-metallurgy-4",
       "angels-coolant-1",
-      "slag-processing-2",
+      "angels-slag-processing-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "coolant-used-filtration-2",
+        recipe = "angels-coolant-used-filtration-2",
       },
     },
     unit = {
       count = 1000,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },

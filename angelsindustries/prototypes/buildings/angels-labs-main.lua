@@ -7,9 +7,8 @@ if angelsmods.industries.tech then
     name = "angels-main-lab",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/icons/main-lab.png",
+        icon = "__angelsindustriesgraphics__/graphics/icons/main-lab.png",
         icon_size = 64,
-        icon_mipmaps = 1,
         scale = 0.5,
       },
     },
@@ -35,7 +34,7 @@ if angelsmods.industries.tech then
 
     collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
-    drawing_box = { { -3.5, -4.5 }, { 3.5, 3.5 } },
+    drawing_box_vertical_extension = 1,
 
     light = { intensity = 0.75, size = 8 },
 
@@ -59,7 +58,7 @@ if angelsmods.industries.tech then
     },
 
     on_animation = {
-      filename = "__angelsindustries__/graphics/entity/main-lab/main-lab.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/main-lab/main-lab.png",
       width = 288,
       height = 352,
       frame_count = 42,
@@ -68,7 +67,7 @@ if angelsmods.industries.tech then
       shift = { 0.5, -1 },
     },
     off_animation = {
-      filename = "__angelsindustries__/graphics/entity/main-lab/main-lab-off.png",
+      filename = "__angelsindustriesgraphics__/graphics/entity/main-lab/main-lab-off.png",
       width = 288,
       height = 352,
       frame_count = 1,
@@ -80,9 +79,8 @@ if angelsmods.industries.tech then
         filename = "__base__/sound/lab.ogg",
         volume = 0.7,
       },
-      apparent_volume = 1,
     },
-    vehicle_impact_sound = sounds.generic_impact,
+    impact_category = "default",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
 
@@ -95,11 +93,14 @@ if angelsmods.industries.tech then
     researching_speed = 1,
     inputs = {},
 
-    module_specification = {
-      module_slots = 2,
-      module_info_max_icons_per_row = 3,
-      module_info_max_icon_rows = 1,
-      module_info_icon_shift = { 0, 0.9 },
+    module_slots = 2,
+    icons_positioning = {
+      {
+        inventory_index = defines.inventory.lab_modules,
+        max_icons_per_row = 3,
+        max_icon_rows = 1,
+        shift = { 0, 0.9 },
+      },
     },
   }
 
@@ -159,8 +160,7 @@ if angelsmods.industries.tech then
       end
       lab_entity.max_health = lab_entity.max_health + (tier_props.health_inc or 0)
       lab_entity.researching_speed = lab_entity.researching_speed * (tier_props.speed_multiplier or 1)
-      lab_entity.module_specification.module_slots = lab_entity.module_specification.module_slots
-        + (tier_props.modules or 0)
+      lab_entity.module_slots = lab_entity.module_slots + (tier_props.modules or 0)
     end
 
     -- item
@@ -174,7 +174,7 @@ if angelsmods.industries.tech then
     -- entity
     local lab_entity_tier = util.table.deepcopy(lab_entity)
     lab_entity_tier.name = lab_item_tier.place_result
-    lab_entity_tier.localised_name = { "entity-name.angels-main-lab", tier_index }
+    lab_entity_tier.localised_name = { "entity-name.angels-main-lab", tostring(tier_index) }
     lab_entity_tier.localised_description = {
       "",
       { "entity-description.angels-main-lab" },
@@ -192,12 +192,12 @@ if angelsmods.industries.tech then
       lab_entity_tier,
     })
 
-    angelsmods.triggers.lab_ignore_token[lab_entity_tier.name] = true
+    angelsmods.trigger.lab_ignore_token[lab_entity_tier.name] = true
   end
 
   -- disable base game lab as it is obsolete
   OV.disable_recipe("lab")
-  angelsmods.functions.add_flag("lab", "hidden")
+  angelsmods.functions.hide("lab")
 
   -- duplicate the first main lab to be part of the crash site
   data:extend({
@@ -218,9 +218,8 @@ if angelsmods.industries.tech then
         --
       },
 
-      icon = "__angelsindustries__/graphics/icons/crash-site-lab-repaired.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/crash-site-lab-repaired.png",
       icon_size = 64,
-      icon_mipmaps = 4,
 
       subgroup = lab_item.subgroup,
       order = lab_item.order .. string.format("-%i", 0),
@@ -244,11 +243,11 @@ if angelsmods.industries.tech then
         },
       },
 
-      icon = "__angelsindustries__/graphics/icons/crash-site-lab-repaired.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/crash-site-lab-repaired.png",
       icon_size = 64,
-      icon_mipmaps = 4,
 
-      flags = { "not-deconstructable", "placeable-player", "player-creation", "hidden" },
+      flags = { "not-deconstructable", "placeable-player", "player-creation" },
+      hidden = true,
       --map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
       minable = {
         mining_time = 1,
@@ -267,23 +266,14 @@ if angelsmods.industries.tech then
 
       integration_patch_render_layer = "decals",
       integration_patch = {
-        filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-ground.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-ground.png",
         priority = "very-low",
-        width = 352,
-        height = 170,
-        shift = util.by_pixel(-48 - 16, 12 - 8),
+        width = 700,
+        height = 344,
+        shift = util.by_pixel(-49 - 16, 11 - 8),
         frame_count = 1,
         line_length = 1,
-        hr_version = {
-          filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-ground.png",
-          priority = "very-low",
-          width = 700,
-          height = 344,
-          shift = util.by_pixel(-49 - 16, 11 - 8),
-          frame_count = 1,
-          line_length = 1,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
 
       resistances = {
@@ -296,127 +286,70 @@ if angelsmods.industries.tech then
       on_animation = {
         layers = {
           {
-            filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
             priority = "very-low",
-            width = 244,
-            height = 126,
+            width = 488,
+            height = 252,
             frame_count = 1,
             line_length = 1,
             repeat_count = 24,
             animation_speed = 1 / 3,
             shift = util.by_pixel(-18 - 16, 14 - 8),
-            hr_version = {
-              filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
-              priority = "very-low",
-              width = 488,
-              height = 252,
-              frame_count = 1,
-              line_length = 1,
-              repeat_count = 24,
-              animation_speed = 1 / 3,
-              shift = util.by_pixel(-18 - 16, 14 - 8),
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           {
-            filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-beams.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-repaired-beams.png",
             priority = "very-low",
-            width = 68,
-            height = 50,
+            width = 130,
+            height = 100,
             frame_count = 24,
             line_length = 6,
             animation_speed = 1 / 3,
-            shift = util.by_pixel(36 - 16, -20 - 8),
+            shift = util.by_pixel(37 - 16, -20 - 8),
             blend_mode = "additive",
-            hr_version = {
-              filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-beams.png",
-              priority = "very-low",
-              width = 130,
-              height = 100,
-              frame_count = 24,
-              line_length = 6,
-              animation_speed = 1 / 3,
-              shift = util.by_pixel(37 - 16, -20 - 8),
-              blend_mode = "additive",
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           {
-            filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
             priority = "very-low",
-            width = 350,
-            height = 148,
+            width = 696,
+            height = 302,
             frame_count = 1,
             line_length = 1,
             repeat_count = 24,
             animation_speed = 1 / 3,
-            shift = util.by_pixel(-12 - 16, 12 - 8),
+            shift = util.by_pixel(-11 - 16, 12 - 8),
+            scale = 0.5,
             draw_as_shadow = true,
-            hr_version = {
-              filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
-              priority = "very-low",
-              width = 696,
-              height = 302,
-              frame_count = 1,
-              line_length = 1,
-              repeat_count = 24,
-              animation_speed = 1 / 3,
-              shift = util.by_pixel(-11 - 16, 12 - 8),
-              scale = 0.5,
-              draw_as_shadow = true,
-            },
           },
         },
       },
       off_animation = {
         layers = {
           {
-            filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-repaired.png",
             priority = "very-low",
-            width = 244,
-            height = 126,
+            width = 488,
+            height = 252,
             frame_count = 1,
             line_length = 1,
             repeat_count = 24,
             animation_speed = 1 / 3,
             shift = util.by_pixel(-18 - 16, 14 - 8),
-            hr_version = {
-              filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired.png",
-              priority = "very-low",
-              width = 488,
-              height = 252,
-              frame_count = 1,
-              line_length = 1,
-              repeat_count = 24,
-              animation_speed = 1 / 3,
-              shift = util.by_pixel(-18 - 16, 14 - 8),
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           {
-            filename = "__angelsindustries__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
+            filename = "__angelsindustriesgraphics__/graphics/entity/crash-site-lab/crash-site-lab-repaired-shadow.png",
             priority = "very-low",
-            width = 350,
-            height = 148,
+            width = 696,
+            height = 302,
             frame_count = 1,
             line_length = 1,
             repeat_count = 24,
             animation_speed = 1 / 3,
-            shift = util.by_pixel(-12 - 16, 12 - 8),
+            shift = util.by_pixel(-11 - 16, 12 - 8),
+            scale = 0.5,
             draw_as_shadow = true,
-            hr_version = {
-              filename = "__angelsindustries__/graphics/entity/crash-site-lab/hr-crash-site-lab-repaired-shadow.png",
-              priority = "very-low",
-              width = 696,
-              height = 302,
-              frame_count = 1,
-              line_length = 1,
-              repeat_count = 24,
-              animation_speed = 1 / 3,
-              shift = util.by_pixel(-11 - 16, 12 - 8),
-              scale = 0.5,
-              draw_as_shadow = true,
-            },
           },
         },
       },
@@ -426,21 +359,20 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        audible_distance_modifier = 0.7,
         fade_in_ticks = 4,
         fade_out_ticks = 20,
       },
 
-      vehicle_impact_sound = sounds.generic_impact,
+      impact_category = "default",
       open_sound = sounds.machine_open,
       close_sound = sounds.machine_close,
 
       energy_source = {
         type = "burner",
-        fuel_category = "chemical",
+        fuel_categories = { "chemical" },
         effectivity = 1,
         fuel_inventory_size = 1,
-        emissions_per_minute = 12,
+        emissions_per_minute = { pollution = 12 },
         smoke = {
           {
             name = "smoke",
@@ -458,15 +390,18 @@ if angelsmods.industries.tech then
       inputs = data.raw["lab"][lab_item.name .. string.format("-%i", 1)].inputs,
 
       --[[
-        module_specification = {
-          module_slots = 2,
-          module_info_max_icons_per_row = 3,
-          module_info_max_icon_rows = 1,
-          module_info_icon_shift = {0, 0.9}
+        module_slots = 2,
+        icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1,
+          shift = { 0, 0.9 },
         }
+      },
         ]]
     },
   })
 
-  angelsmods.triggers.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
+  angelsmods.trigger.lab_ignore_token[lab_item.name .. string.format("-%i", 0)] = true
 end

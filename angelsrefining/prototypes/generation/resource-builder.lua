@@ -1,5 +1,3 @@
-local noise = require("noise")
-local tne = noise.to_noise_expression
 local resource_autoplace = require("resource-autoplace")
 
 --Create autoplace
@@ -18,7 +16,7 @@ end
 
 --Create particles
 local function make_particle(input)
-  if not data.raw.particle[input.name .. "-particle"] then
+  if not data.raw["optimized-particle"][input.name .. "-particle"] then
     data:extend({
       {
         type = "optimized-particle",
@@ -27,7 +25,7 @@ local function make_particle(input)
         life_time = 180,
         pictures = {
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-1.png",
             priority = "extra-high",
             tint = input.tint,
             width = 5,
@@ -35,7 +33,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-2.png",
             priority = "extra-high",
             tint = input.tint,
             width = 7,
@@ -43,7 +41,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-3.png",
             priority = "extra-high",
             tint = input.tint,
             width = 6,
@@ -51,7 +49,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-4.png",
             priority = "extra-high",
             tint = input.tint,
             width = 9,
@@ -59,7 +57,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-5.png",
             priority = "extra-high",
             tint = input.tint,
             width = 5,
@@ -67,7 +65,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-6.png",
             priority = "extra-high",
             tint = input.tint,
             width = 6,
@@ -75,7 +73,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-7.png",
             priority = "extra-high",
             tint = input.tint,
             width = 7,
@@ -83,7 +81,7 @@ local function make_particle(input)
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-8.png",
             priority = "extra-high",
             tint = input.tint,
             width = 6,
@@ -93,56 +91,56 @@ local function make_particle(input)
         },
         shadows = {
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
             priority = "extra-high",
             width = 5,
             height = 5,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
             priority = "extra-high",
             width = 7,
             height = 5,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
             priority = "extra-high",
             width = 6,
             height = 7,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
             priority = "extra-high",
             width = 9,
             height = 8,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
             priority = "extra-high",
             width = 5,
             height = 5,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
             priority = "extra-high",
             width = 6,
             height = 4,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
             priority = "extra-high",
             width = 7,
             height = 8,
             frame_count = 1,
           },
           {
-            filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
             priority = "extra-high",
             width = 6,
             height = 5,
@@ -173,25 +171,15 @@ local function make_resgfx(input)
       if input.sheet == 1 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-11-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-11.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-11-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -199,25 +187,15 @@ local function make_resgfx(input)
       if input.sheet == 2 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-12-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-12.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-12-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -225,25 +203,15 @@ local function make_resgfx(input)
       if input.sheet == 3 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-13-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-13.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-13-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -251,25 +219,15 @@ local function make_resgfx(input)
       if input.sheet == 4 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-14-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-14.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-14-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -277,25 +235,15 @@ local function make_resgfx(input)
       if input.sheet == 5 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-15-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-15.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-15-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -303,25 +251,15 @@ local function make_resgfx(input)
       if input.sheet == 6 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-16-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-16.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-16-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -329,25 +267,15 @@ local function make_resgfx(input)
       if input.sheet == 7 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-17-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-17.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-17-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -355,25 +283,15 @@ local function make_resgfx(input)
       if input.sheet == 8 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-18-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-18.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-18-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -386,100 +304,60 @@ local function make_resgfx(input)
         end
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-" .. sheet_id .. "-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-" .. sheet_id .. ".png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-" .. sheet_id .. "-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
       if input.sheet == 10 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-20-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-20.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-20-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
       if input.sheet == 11 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-21-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-21.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-21-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
       if input.sheet == 12 then
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-22-lr.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-22.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-22-hr.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         }
       end
@@ -492,7 +370,7 @@ local function make_resgfx(input)
     if input.sheet == 1 then
       return {
         sheet = {
-          filename = "__angelsrefining__/graphics/entity/patches/fissure.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure.png",
           tint = input.tint,
           priority = "extra-high",
           width = 256,
@@ -505,7 +383,7 @@ local function make_resgfx(input)
     if input.sheet == 2 then
       return {
         sheet = {
-          filename = "__angelsrefining__/graphics/entity/patches/gas.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/patches/gas.png",
           tint = input.tint,
           priority = "extra-high",
           width = 64,
@@ -518,7 +396,7 @@ local function make_resgfx(input)
     if input.sheet == 3 then
       return {
         sheet = {
-          filename = "__angelsrefining__/graphics/entity/patches/liquid.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/patches/liquid.png",
           tint = input.tint,
           priority = "extra-high",
           width = 75,
@@ -569,29 +447,17 @@ local function make_resglow(input)
         end
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-11-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-11-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-11-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -603,29 +469,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.4
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-12-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-12-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-12-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -637,29 +491,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.8
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-13-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-13-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-13-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -671,29 +513,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.3
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-14-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-14-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-14-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -705,29 +535,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.3
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-15-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-15-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-15-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -739,29 +557,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.3
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-16-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-16-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-16-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -773,29 +579,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.3
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-17-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-17-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-17-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -807,29 +601,17 @@ local function make_resglow(input)
         input.gfx_alpha_max = 0.3
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/ores/ore-18-lr-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-18-hr-glow.png",
             priority = "extra-high",
             tint = input.tint,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             line_length = 8,
             frame_count = input.frame_count,
             variation_count = input.variation_count,
+            scale = 0.5,
             blend_mode = "additive",
             flags = { "light" },
-            hr_version = {
-              filename = "__angelsrefining__/graphics/entity/ores/ore-18-hr-glow.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 128,
-              height = 128,
-              line_length = 8,
-              frame_count = input.frame_count,
-              variation_count = input.variation_count,
-              scale = 0.5,
-              blend_mode = "additive",
-              flags = { "light" },
-            },
           },
         }
       end
@@ -851,7 +633,7 @@ local function make_resglow(input)
         end
         return {
           sheet = {
-            filename = "__angelsrefining__/graphics/entity/patches/fissure-glow.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure-glow.png",
             tint = input.tint,
             priority = "extra-high",
             width = 256,
@@ -928,7 +710,6 @@ function angelsmods.functions.make_resource()
       order = input.order,
       base_density = input.autoplace.base_density,
       has_starting_area_placement = input.autoplace.starting_area,
-      resource_index = input.autoplace.resource_index,
       regular_rq_factor_multiplier = input.autoplace.regular_rq_factor_multiplier,
       starting_rq_factor_multiplier = input.autoplace.starting_rq_factor_multiplier,
       base_spots_per_km2 = input.autoplace.base_spots_per_km2,
@@ -945,9 +726,13 @@ function angelsmods.functions.make_resource()
       --Create Autopace for the resource
       make_resautoplace(input)
       generate_presets(input.name)
+      for _, planet_name in pairs(input.planets or { "nauvis" }) do
+        data.raw.planet[planet_name].map_gen_settings.autoplace_controls[input.name] = {}
+        data.raw.planet[planet_name].map_gen_settings.autoplace_settings.entity.settings[input.name] = {}
+      end
       --Create Particle if resource yields items
       if input.type == "item" then
-        if input.get and data.raw.particle[input.get .. "-particle"] then
+        if input.get and data.raw["optimized-particle"] and data.raw["optimized-particle"][input.get .. "-particle"] then
           input.particle = input.get .. "-particle"
         else
           make_particle(input)
@@ -1022,7 +807,6 @@ function angelsmods.functions.make_resource()
       --Get map_color and icon from the regular resource
       if input.get then
         input.map_color = data.raw.resource[input.get].map_color
-        autoplace_ret_table.patch_set_name = input.get
         if data.raw.resource[input.get] then
           if data.raw.resource[input.get].icon_size then
             input.icon_size = data.raw.resource[input.get].icon_size
@@ -1047,6 +831,7 @@ function angelsmods.functions.make_resource()
         ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
       end
       ret_table.name = input.name
+      ret_table.subgroup = input.subgroup
       ret_table.icon_size = input.icon_size
       ret_table.category = input.category
       ret_table.order = input.order
@@ -1124,6 +909,57 @@ function angelsmods.functions.remove_resource(resource)
     end
   end
 
+  -- Remove from planets
+  for planet_name, planet in pairs(data.raw.planet) do
+    -- Remove the planet-specific generation setting
+    local planet_resource = planet_name .. "_" .. resource
+    if data.raw["autoplace-control"][planet_resource]
+    then
+      data.raw["autoplace-control"][planet_resource] = nil
+    end
+
+    -- Remove the generic resource entry
+    if
+      planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_controls
+      and planet.map_gen_settings.autoplace_controls[resource]
+    then
+      planet.map_gen_settings.autoplace_controls[resource] = nil
+    end
+    if
+      planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_settings
+      and planet.map_gen_settings.autoplace_settings.entity
+      and planet.map_gen_settings.autoplace_settings.entity.settings
+      and planet.map_gen_settings.autoplace_settings.entity.settings[resource]
+    then
+      planet.map_gen_settings.autoplace_settings.entity.settings[resource] = nil
+    end
+
+    -- Remove the planet-specific resource entry (e.g. "gleba_stone")
+    if
+      planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_controls
+      and planet.map_gen_settings.autoplace_controls[planet_resource]
+    then
+      planet.map_gen_settings.autoplace_controls[planet_resource] = nil
+    end
+
+    if
+      infinite_resource
+      and planet
+      and planet.map_gen_settings
+      and planet.map_gen_settings.autoplace_controls
+      and planet.map_gen_settings.autoplace_controls[infinite_resource]
+    then
+      planet.map_gen_settings.autoplace_controls[infinite_resource] = nil
+      planet.map_gen_settings.autoplace_settings.entity.settings[infinite_resource] = nil
+    end
+  end
+
   for r, subdir in pairs(angelsmods.functions.store) do
     for r, input in pairs(subdir) do
       if input == resource then
@@ -1172,11 +1008,7 @@ function angelsmods.functions.update_autoplace()
               and settings.startup["angels-keepuranacid"].value
           then
             if angelsmods.petrochem then
-              if angelsmods.trigger.enableacids then
-                input.acid_req = input.acid_to_mine
-              else
-                input.acid_req = "liquid-sulfuric-acid"
-              end
+              input.acid_req = input.acid_to_mine
             else
               if data.raw.fluid[input.acid_to_mine] then
                 input.acid_req = input.acid_to_mine

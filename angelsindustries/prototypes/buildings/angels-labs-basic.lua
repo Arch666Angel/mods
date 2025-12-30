@@ -14,9 +14,8 @@ if angelsmods.industries.tech then
       name = "angels-basic-lab",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       subgroup = "angels-labs-1",
@@ -41,9 +40,8 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 1, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },
@@ -55,7 +53,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -64,7 +62,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,
@@ -75,7 +73,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",
@@ -87,11 +84,14 @@ if angelsmods.industries.tech then
         "angels-science-pack-grey",
         "datacore-basic",
       },
-      module_specification = {
-        module_slots = 2,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1,
+          shift = { 0, 0.9 },
+        }
       },
     },
     {
@@ -99,9 +99,8 @@ if angelsmods.industries.tech then
       name = "angels-basic-lab-2",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       subgroup = "angels-labs-2",
@@ -130,9 +129,8 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 2, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },
@@ -144,7 +142,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -153,7 +151,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,
@@ -164,7 +162,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",
@@ -180,11 +177,14 @@ if angelsmods.industries.tech then
         "angels-science-pack-yellow",
         "datacore-basic",
       },
-      module_specification = {
-        module_slots = 2,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 2,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1,
+          shift = { 0, 0.9 },
+        }
       },
     },
     {
@@ -192,9 +192,8 @@ if angelsmods.industries.tech then
       name = "angels-basic-lab-3",
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       subgroup = "angels-labs-3",
@@ -219,9 +218,8 @@ if angelsmods.industries.tech then
       },
       icons = angelsmods.functions.add_number_icon_layer({
         {
-          icon = "__angelsindustries__/graphics/icons/basic-lab-ico.png",
+          icon = "__angelsindustriesgraphics__/graphics/icons/basic-lab-ico.png",
           icon_size = 32,
-          icon_mipmaps = 1,
         },
       }, 3, angelsmods.industries.number_tint),
       flags = { "placeable-player", "player-creation" },
@@ -233,7 +231,7 @@ if angelsmods.industries.tech then
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
       light = { intensity = 0.75, size = 8 },
       on_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab.png",
         width = 160,
         height = 160,
         frame_count = 36,
@@ -242,7 +240,7 @@ if angelsmods.industries.tech then
         shift = { 0, 0 },
       },
       off_animation = {
-        filename = "__angelsindustries__/graphics/entity/basic-lab/basic-lab-off.png",
+        filename = "__angelsindustriesgraphics__/graphics/entity/basic-lab/basic-lab-off.png",
         width = 160,
         height = 160,
         frame_count = 1,
@@ -253,7 +251,6 @@ if angelsmods.industries.tech then
           filename = "__base__/sound/lab.ogg",
           volume = 0.7,
         },
-        apparent_volume = 1,
       },
       energy_source = {
         type = "electric",
@@ -265,16 +262,19 @@ if angelsmods.industries.tech then
         "angels-science-pack-white",
         "datacore-basic",
       },
-      module_specification = {
-        module_slots = 3,
-        module_info_max_icons_per_row = 3,
-        module_info_max_icon_rows = 1,
-        module_info_icon_shift = { 0, 0.9 },
+      module_slots = 3,
+      icons_positioning = {
+        {
+          inventory_index = defines.inventory.lab_modules,
+          max_icons_per_row = 3,
+          max_icon_rows = 1,
+          shift = { 0, 0.9 },
+        }
       },
     },
   })
 
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab"] = true
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab-2"] = true
-  angelsmods.triggers.lab_ignore_token["angels-basic-lab-3"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab-2"] = true
+  angelsmods.trigger.lab_ignore_token["angels-basic-lab-3"] = true
 end

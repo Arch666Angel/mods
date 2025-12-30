@@ -13,10 +13,10 @@ data:extend({
       "angels-void",
       "angels-cab",
       "angels-energy",
-      --"angels-repair",
-      --"angels-heavy-defense",
-      --"angels-construction",
-      --"angels-movement"
+      "angels-repair",
+      "angels-heavy-defense",
+      "angels-construction",
+      "angels-movement"
     },
   },
   {
@@ -34,7 +34,7 @@ data:extend({
     name = "angels-cab-deploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z",
     attack_parameters = {
@@ -48,7 +48,7 @@ data:extend({
       -- sound =
       -- {
       -- {
-      -- filename = "__angelsexploration__/sound/tank-cannon.ogg",
+      -- filename = "__angelsexplorationgraphics__/sound/tank-cannon.ogg",
       -- volume = 1.0
       -- }
       -- },
@@ -60,7 +60,7 @@ data:extend({
     name = "angels-cab-undeploy",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z",
     attack_parameters = {
@@ -74,7 +74,7 @@ data:extend({
       -- sound =
       -- {
       -- {
-      -- filename = "__angelsexploration__/sound/tank-cannon.ogg",
+      -- filename = "__angelsexplorationgraphics__/sound/tank-cannon.ogg",
       -- volume = 1.0
       -- }
       -- },
@@ -92,6 +92,7 @@ data:extend({
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
     immune_to_tree_impacts = true,
+    trash_inventory_size = 20,
     energy_per_hit_point = 0.1,
     rotation_speed = 0.0035,
     tank_driving = false,
@@ -130,28 +131,29 @@ data:extend({
     selection_box = { { -2.5, -4 }, { 2.5, 4 } },
     effectivity = 0.7,
     braking_power = "1000kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       effectivity = 0.75,
       fuel_inventory_size = 3,
-      -- smoke =
-      -- {
-      -- {
-      -- name = "tank-smoke",
-      -- deviation = {0.25, 0.25},
-      -- frequency = 50,
-      -- position = {0.5, 2},
-      -- starting_frame = 0,
-      -- starting_frame_deviation = 60
-      -- },
-      -- {
-      -- name = "tank-smoke",
-      -- deviation = {0.25, 0.25},
-      -- frequency = 50,
-      -- position = {-0.5, 2},
-      -- starting_frame = 0,
-      -- starting_frame_deviation = 60
-      -- }
-      --}
+    --  smoke =
+    -- {
+    -- {
+    -- name = "tank-smoke",
+    -- deviation = {0.25, 0.25},
+    -- frequency = 50,
+    -- position = {0.5, 2},
+    -- starting_frame = 0,
+    -- starting_frame_deviation = 60
+    -- },
+    -- {
+    -- name = "tank-smoke",
+    -- deviation = {0.25, 0.25},
+    -- frequency = 50,
+    -- position = {-0.5, 2},
+    -- starting_frame = 0,
+    -- starting_frame_deviation = 60
+    -- }
+    --}
     },
     consumption = "1400kW",
     terrain_friction_modifier = 0.2,
@@ -393,8 +395,7 @@ data:extend({
         },
       },
     },
-    sound_minimum_speed = 0.1,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         filename = "__angelsaddons-cab__/sound/cab-run.ogg",
@@ -418,8 +419,8 @@ data:extend({
     name = "angels-cab-deploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-deploy.png",
     icon_size = 32,
+    ammo_category = "angels-cab-deploy",
     ammo_type = {
-      category = "angels-cab-deploy",
       target_type = "direction",
       action = {
         type = "direct",
@@ -451,8 +452,8 @@ data:extend({
     name = "angels-cab-undeploy-charge",
     icon = "__angelsaddons-cab__/graphics/icons/cab-undeploy.png",
     icon_size = 32,
+    ammo_category = "angels-cab-undeploy",
     ammo_type = {
-      category = "angels-cab-undeploy",
       target_type = "direction",
       action = {
         type = "direct",
@@ -486,6 +487,7 @@ data:extend({
     collision_box = { { -0.3, -1.1 }, { 0.3, 1.1 } },
     acceleration = 0,
     direction_only = true,
+    hidden = true,
     --piercing_damage = 0,
     --[[
     action =
@@ -521,7 +523,6 @@ data:extend({
           {
             type = "create-entity",
             entity_name = "angels-cab-deploy-trigger",
-            check_buildability = true,
             trigger_created_entity = true,
           },
         },
@@ -542,6 +543,7 @@ data:extend({
     collision_box = { { -0.3, -1.1 }, { 0.3, 1.1 } },
     acceleration = 0,
     direction_only = true,
+    hidden = true,
     --piercing_damage = 0,
     --[[
     action =
@@ -577,7 +579,6 @@ data:extend({
           {
             type = "create-entity",
             entity_name = "angels-cab-undeploy-trigger",
-            check_buildability = true,
             trigger_created_entity = true,
           },
         },
@@ -596,6 +597,7 @@ data:extend({
     name = "angels-cab-deploy-trigger",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
+    hidden = true,
     flags = { "not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info" },
     picture = {
       filename = "__core__/graphics/empty.png",
@@ -609,6 +611,7 @@ data:extend({
     name = "angels-cab-undeploy-trigger",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
+    hidden = true,
     flags = { "not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info" },
     picture = {
       filename = "__core__/graphics/empty.png",
@@ -622,11 +625,11 @@ data:extend({
     name = "angels-cab-electric-pole",
     icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
     icon_size = 32,
+    hidden = true,
     flags = { "not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info" },
     --minable = {mining_time = 0.5, result = "medium-electric-pole"},
     max_health = 200,
     corpse = "small-remnants",
-    track_coverage_during_build_by_moving = false,
     --fast_replaceable_group = "electric-pole",
     resistances = {
       {
@@ -635,12 +638,12 @@ data:extend({
       },
     },
     collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
-    collision_mask = {},
+    collision_mask = { layers = {} },
     --selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    drawing_box = { { -0.5, -2.8 }, { 0.5, 0.5 } },
+    drawing_box_vertical_extension = 2.3,
     maximum_wire_distance = 0.25,
     supply_area_distance = settings.equipment["energy-interface"].supplyArea / 2,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     pictures = {
       filename = "__core__/graphics/empty.png",
       priority = "low",

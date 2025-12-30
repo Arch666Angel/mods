@@ -1,18 +1,4 @@
 data:extend({
-  --RECIPE CATEGORY
-  {
-    type = "recipe-category",
-    name = "bob-logistics",
-  },
-  -- centrifuging category part of base game
-  {
-    type = "recipe-category",
-    name = "centrifuging-2",
-  },
-  {
-    type = "recipe-category",
-    name = "centrifuging-3",
-  },
   --EQUIPMENT CATEGORY
   {
     type = "equipment-category",
@@ -58,13 +44,13 @@ data:extend({
       {
         icon = "__base__/graphics/item-group/intermediate-products.png",
         icon_size = 128,
-        icon_mipmaps = 2,
+        scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
-        scale = 128 / 32 * 0.35,
-        shift = { 40, -40 },
+        scale = 64 / 32 * 0.35,
+        shift = { 20, -20 },
       },
     },
   },
@@ -179,8 +165,8 @@ data:extend({
   {
     type = "item-subgroup",
     name = "angels-tool",
-    group = "angels-components",
-    order = "h[tools]",
+    group = "combat",
+    order = "a[repair-tool]",
   },
   {
     type = "item-subgroup",
@@ -226,66 +212,66 @@ data:extend({
     name = "angels-blocks",
     order = "la[angels]-e[industries]-ab",
     icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/components-tech.png",
+    icon = "__angelsindustriesgraphics__/graphics/item-group/components-tech.png",
   },
 
   {
     type = "item-subgroup",
-    name = "blocks-frames",
+    name = "angels-blocks-frames",
     group = "angels-blocks",
     order = "u[blocks]-aa[frame]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-electronics",
+    name = "angels-blocks-electronics",
     group = "angels-blocks",
     order = "u[blocks]-ab[electronics]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-basic",
+    name = "angels-blocks-basic",
     group = "angels-blocks",
     order = "u[blocks]-ac[basic]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-enhancement",
+    name = "angels-blocks-enhancement",
     group = "angels-blocks",
     order = "u[blocks]-ba[enhancement]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-energy",
+    name = "angels-blocks-energy",
     group = "angels-blocks",
     order = "u[blocks]-bb[energy]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-exploration",
+    name = "angels-blocks-exploration",
     group = "angels-blocks",
     order = "u[blocks]-bc[exploration]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-logistic",
+    name = "angels-blocks-logistic",
     group = "angels-blocks",
     order = "u[blocks]-bd[logistic]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-production",
+    name = "angels-blocks-production",
     group = "angels-blocks",
     order = "u[blocks]-be[production]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-processing",
+    name = "angels-blocks-processing",
     group = "angels-blocks",
     order = "u[blocks]-bf[processing]",
   },
   {
     type = "item-subgroup",
-    name = "blocks-warfare",
+    name = "angels-blocks-warfare",
     group = "angels-blocks",
     order = "u[blocks]-bg[warfare]",
   },
@@ -316,7 +302,7 @@ data:extend({
     name = "angels-tech",
     order = "la[angels]-e[industries]-b",
     icon_size = 64,
-    icon = "__angelsindustries__/graphics/item-group/science-group.png",
+    icon = "__angelsindustriesgraphics__/graphics/item-group/science-group.png",
   },
   {
     type = "item-subgroup",
@@ -367,58 +353,6 @@ data:extend({
     order = "z[labs]-b[archive]",
   },
   ---------------------------------------------------------------------------
-  -- ANGELS EQUIPMENT -------------------------------------------------------
-  ---------------------------------------------------------------------------
-  --{
-  --  type = "item-group",
-  --  name = "angels-enhancement",
-  --  order = "la[angels]-e[industries]-c",
-  --  icon_size = 64,
-  --  icon = "__angelsindustries__/graphics/item-group/vequip.png",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-energy",
-  --  group = "angels-enhancement",
-  --  order = "a",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-movement",
-  --  group = "angels-enhancement",
-  --  order = "b",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-robo",
-  --  group = "angels-enhancement",
-  --  order = "c",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-ldef",
-  --  group = "angels-enhancement",
-  --  order = "d",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-hdef",
-  --  group = "angels-enhancement",
-  --  order = "e",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-lat",
-  --  group = "angels-enhancement",
-  --  order = "f",
-  --},
-  --{
-  --  type = "item-subgroup",
-  --  name = "angels-equipment-hat",
-  --  group = "angels-enhancement",
-  --  order = "g",
-  --},
-  ---------------------------------------------------------------------------
   -- ANGELS POWER -----------------------------------------------------------
   ---------------------------------------------------------------------------
   {
@@ -427,12 +361,12 @@ data:extend({
     order = "la[angels]-e[industries]-c",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/vequip.png",
-        icon_size = 128,
-        scale = 0.5,
+        icon = "__base__/graphics/technology/steam-power.png",
+        icon_size = 256,
+        scale = 0.25,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -484,12 +418,12 @@ data:extend({
     order = "la[angels]-e[industries]-d",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/cargo-roboport-tech.png",
+        icon = "__angelsindustriesgraphics__/graphics/technology/cargo-roboport-tech.png",
         icon_size = 128,
         scale = 0.5,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -499,7 +433,7 @@ data:extend({
   {
     type = "item-subgroup",
     name = "angels-chests-big",
-    group = "angels-logistics",
+    group = "logistics",
     order = "ab[chests-big]",
   },
   {
@@ -569,12 +503,12 @@ data:extend({
     order = "la[angels]-e[industries]-e",
     icons = {
       {
-        icon = "__angelsindustries__/graphics/technology/crawler-tech.png",
-        icon_size = 128,
-        scale = 0.5,
+        icon = "__base__/graphics/technology/automobilism.png",
+        icon_size = 256,
+        scale = 0.25,
       },
       {
-        icon = "__angelsrefining__/graphics/icons/void.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
         shift = { 20, -20 },
@@ -627,7 +561,7 @@ data:extend({
   --      icon_size = 64
   --    },
   --    {
-  --      icon = "__angelsrefining__/graphics/icons/void.png",
+  --      icon = "__angelsrefininggraphics__/graphics/icons/void.png",
   --      icon_size = 32,
   --      scale = 64 / 32 * 0.35,
   --      shift = {20, -20}

@@ -1,16 +1,83 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.17
-Date: ##.##.2022
+Version: 2.0.0
+Date: ???
   Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Added item description to Gravitational analyzer (984)
+    - Adjusted the recipes and science packs for Bob's Assembling Machines when Components or Technology Overhauls are enabled (985)
+    - Tech Overhaul: Hid Steam science pack from Bob's Technology mod (986)
+    - Adjust ingredients and tech prerequisites for Power armor and equipment when using Bob's mods (989)
+    - Updated for Factorio 2.0 (994)
+    - Regular mode:
+      - Adjust ingredients and tech prerequisites for Power armor and equipment when using Bob's mods (989)
+    - Component mode:
+      - Adjusted the recipes for Bob's Assembling Machines when Components Overhaul is enabled (985)
+      - Added new settings to ease component mode progression
+      - Condensed recipes in component crafting menu to reduce scrolling
+      - Added item description to Gravitational analyzer (984)
+    - Science mode:
+      - Adjusted the science packs for Bob's Assembling Machines when Technology Overhauls is enabled (985)
+      - Hid Steam science pack from Bob's Technology mod (986)
+    - Enabled logistics tab for Crawler construction vehicle (1111)
+    - Added circuit connectors to all machines (1114)
+  Bugfixes:
+    - Fixed potential softlock with Tech Overhaul and Bob's Technology mod (986)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.21
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+  Bugfixes:
+    - Science mode:
+      - Sodium Processing 1 tech now uses green analyzers rather than blue so Paper making 2 can be used (966)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.20
+Date: 04.01.2024
+  Changes:
+    - Compatibility changes for YAFC when Components or Technology Overhauls are enabled (962)
+    - Science mode:
+      - Added AAI Loaders compatibility #963
+  Bugfixes:
+    - Fixed soft lock when using Components Overhaul (955)
+    - Fixed compatibility issue with AAI Industry and Bob's Assembling Machines (960)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.19
+Date: 22.12.2023
+  Changes:
+    - Compatibility with Bob's changes (911)
+  Bugfixes:
+    - Component mode:
+      - Fixed the regular recipe for fiber board was still available when playing with bobs mods
+---------------------------------------------------------------------------------------------------
+Version: 0.4.18
+Date: 23.02.2023
+  Bugfixes:
+    - Regular mode:
+      - Fixed Item Subgroup of Heat Exchanger 4 from Bob's Power (887)
+    - Component mode:
+      - Fixed splitter circuit board tiers (636)
+      - Fixed the silver-zinc battery did not require a battery casing (886)
+      - Fixed ingredients and tech prerequisites of radar from Bob's Warfare (889)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.17
+Date: 01.01.2023
+  Changes:
+    - Changed which building some recipes require (802)
+      - Atomic bomb 1 & 2 moved from Assembling machine to Advanced chemical plant
+      - Deuterium fuel cell moved from Chemical plant to Centrifuge
     - Science mode:
       - Changed technologies that are researched in tech Tech archive to ignore tech cost modifier (820)
       - Removed Alien plant-life sample from technologies Fermentation processes and Temperate arboretum 1 (820)
       - Added Miniloader support (820)
       - Made Nanobots available sooner (820)
-      - When Bob's Assemling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation  (820)
+      - When Bob's Assembling machines mod is enabled, Stone filtering furnace is unlocked by technology Basic automation (820)
+      - Added support for Bob's steam power phase (864)
+    - Changed Atomic artillery shells from Bob's Warfare to take Plutonium instead of Uranium (881)
+    - Plutonium and Deuterium recipes require higher tiers of centrifuge when they are available from Bob's Assembling Machines mod (881)
   Bugfixes:
     - Fixed error with modded centrifuges (836)
     - Fixed machine output arrows (839)
+    - Fixed science overhaul lab input descriptions (843)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.16
 Date: 06.06.2022

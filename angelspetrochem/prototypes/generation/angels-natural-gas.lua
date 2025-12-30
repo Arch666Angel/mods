@@ -1,5 +1,6 @@
 angelsmods.functions.add_resource("make", {
   name = "angels-natural-gas",
+  subgroup = "mineable-fluids",
   order = "c-b-b",
   sheet = 2,
   infinite = true,
@@ -12,12 +13,11 @@ angelsmods.functions.add_resource("make", {
   category = "basic-fluid",
   -- normal = 10000,
   -- maximum = 50000,
-  output_name = "gas-natural-1",
+  output_name = "angels-gas-natural-1",
   output_min = 20,
   output_max = 20,
-  icon = "__angelspetrochem__/graphics/icons/gas.png",
+  icon = "__angelspetrochemgraphics__/graphics/icons/gas.png",
   icon_size = 64,
-  icon_mipmaps = 1,
   stage_counts = { 0 },
   autoplace = {
     starting_area = false,
@@ -70,7 +70,7 @@ angelsmods.functions.add_resource("make", {
 -- {
 -- {
 -- type = "fluid",
--- name = "gas-natural-1",
+-- name = "angels-gas-natural-1",
 -- amount_min = 20,
 -- amount_max = 20,
 -- probability = 1
@@ -103,7 +103,7 @@ angelsmods.functions.add_resource("make", {
 -- {
 -- sheet =
 -- {
--- filename = "__angelspetrochem__/graphics/entity/patches/gas.png",
+-- filename = "__angelspetrochemgraphics__/graphics/entity/patches/gas.png",
 -- tint = {r = 0.70, g = 0.90, b = 0.60},
 -- priority = "extra-high",
 -- width = 64,

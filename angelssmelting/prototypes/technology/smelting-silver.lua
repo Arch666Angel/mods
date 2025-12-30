@@ -4,21 +4,20 @@ data:extend({
     name = "angels-silver-smelting-1",
     localised_name = { "technology-name.angels-silver-metallurgy" },
     localised_description = { "technology-description.angels-silver-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-silver-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       "angels-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-smelting",
+        recipe = "angels-ingot-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-silver-smelting",
+        recipe = "angels-liquid-molten-silver",
       },
       {
         type = "unlock-recipe",
@@ -26,14 +25,14 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-silvered-copper-wire",
+        recipe = "angels-wire-silver",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -42,39 +41,38 @@ data:extend({
   {
     type = "technology",
     name = "angels-silver-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-silver-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-silver-smelting-1",
       "angels-nitrogen-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-ore-processing",
+        recipe = "angels-processed-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-silver-smelting",
+        recipe = "angels-solid-silver-nitrate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-silver-nitrate-smelting",
+        recipe = "angels-ingot-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-silver",
+        recipe = "angels-powder-silver",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -83,39 +81,38 @@ data:extend({
   {
     type = "technology",
     name = "angels-silver-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-silver-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-silver-smelting-1",
       "angels-copper-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting",
+        recipe = "angels-wire-coil-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-converting",
+        recipe = "angels-wire-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting",
+        recipe = "angels-roll-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-silver-converting",
+        recipe = "angels-plate-silver-2",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -124,40 +121,39 @@ data:extend({
   {
     type = "technology",
     name = "angels-silver-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-silver-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-silver-smelting-2",
-      "sodium-processing",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "silver-processed-processing",
+        recipe = "angels-pellet-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-silver-smelting",
+        recipe = "angels-solid-sodium-silver-cyanide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-silver-cyanide-smelting",
+        recipe = "angels-cathode-silver",
       },
       {
         type = "unlock-recipe",
-        recipe = "cathode-silver-smelting",
+        recipe = "angels-ingot-silver-3",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -166,31 +162,30 @@ data:extend({
   {
     type = "technology",
     name = "angels-silver-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-silver-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-silver-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-silver-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-silver-casting-fast",
+        recipe = "angels-wire-coil-silver-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-silver-casting-fast",
+        recipe = "angels-roll-silver-2",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },

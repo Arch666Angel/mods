@@ -2,21 +2,22 @@ data:extend({
   --TEMPERATE
   {
     type = "recipe",
-    name = "sorting-temperate-1",
-    localised_name = { "recipe-name.sorting-temperate-1" },
+    name = "angels-sorting-temperate-1",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-temperate",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-1", amount = 20 },
+      { type = "item", name = "angels-temperate-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 10 },
+      { type = "item", name = "angels-solid-corn", amount = 10 },
     },
     always_show_products = true,
-    main_product = "solid-corn",
+    main_product = "angels-solid-corn",
     order = "ba",
     crafting_machine_tint = {
       primary = { r = 222 / 255, g = 209 / 255, b = 95 / 255, a = 1 }, -- Wheathon
@@ -24,31 +25,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-1.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-1.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-temperate-2",
-    localised_name = { "recipe-name.sorting-temperate-2" },
+    name = "angels-sorting-temperate-2",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-temperate",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-2", amount = 20 },
+      { type = "item", name = "angels-temperate-2", amount = 20 },
     },
     results = {
-      { type = "item", name = "cellulose-fiber", amount = 22 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 22 },
     },
     always_show_products = true,
     order = "bb",
@@ -59,31 +62,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-2.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-2.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-temperate-3",
-    localised_name = { "recipe-name.sorting-temperate-3" },
-    category = "bio-processor",
-    subgroup = "farming-temperate",
+    name = "angels-sorting-temperate-3",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-3", amount = 20 },
+      { type = "item", name = "angels-temperate-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 32 },
-      { type = "item", name = "cellulose-fiber", amount = 10 },
+      { type = "item", name = "angels-solid-leafs", amount = 32 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 10 },
     },
     order = "bc",
     crafting_machine_tint = {
@@ -92,31 +97,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-3.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-3.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-temperate-4",
-    localised_name = { "recipe-name.sorting-temperate-4" },
-    category = "bio-processor",
-    subgroup = "farming-temperate",
+    name = "angels-sorting-temperate-4",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-4", amount = 20 },
+      { type = "item", name = "angels-temperate-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 10 },
-      { type = "item", name = "solid-pips", amount = 28 },
+      { type = "item", name = "angels-solid-fruit", amount = 10 },
+      { type = "item", name = "angels-solid-pips", amount = 28 },
     },
     order = "bd",
     crafting_machine_tint = {
@@ -125,32 +132,34 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32,
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-4.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-4.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-temperate-5",
-    localised_name = { "recipe-name.sorting-temperate-5" },
-    category = "bio-processor",
-    subgroup = "farming-temperate",
+    name = "angels-sorting-temperate-5",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-temperate",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "temperate-5", amount = 20 },
+      { type = "item", name = "angels-temperate-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 10 },
-      { type = "item", name = "cellulose-fiber", amount = 8 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-solid-corn", amount = 10 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 8 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "be",
     crafting_machine_tint = {
@@ -159,32 +168,34 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/temperate-5.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-5.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   --DESERT
   {
     type = "recipe",
-    name = "sorting-desert-1",
-    localised_name = { "recipe-name.sorting-desert-1" },
+    name = "angels-sorting-desert-1",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-desert",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-1", amount = 20 },
+      { type = "item", name = "angels-desert-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-beans", amount = 12 },
+      { type = "item", name = "angels-solid-beans", amount = 12 },
     },
     always_show_products = true,
     order = "ba",
@@ -195,31 +206,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-1.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-1.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-desert-2",
-    localised_name = { "recipe-name.sorting-desert-2" },
+    name = "angels-sorting-desert-2",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-desert",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-2", amount = 20 },
+      { type = "item", name = "angels-desert-2", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-corn", amount = 12 },
+      { type = "item", name = "angels-solid-corn", amount = 12 },
     },
     always_show_products = true,
     order = "bb",
@@ -230,31 +243,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-2.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-2.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-desert-3",
-    localised_name = { "recipe-name.sorting-desert-3" },
-    category = "bio-processor",
-    subgroup = "farming-desert",
+    name = "angels-sorting-desert-3",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-3", amount = 20 },
+      { type = "item", name = "angels-desert-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-pips", amount = 24 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-solid-pips", amount = 24 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "bc",
     crafting_machine_tint = {
@@ -264,31 +279,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-3.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-3.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-desert-4",
-    localised_name = { "recipe-name.sorting-desert-4" },
-    category = "bio-processor",
-    subgroup = "farming-desert",
+    name = "angels-sorting-desert-4",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-4", amount = 20 },
+      { type = "item", name = "angels-desert-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 12 },
-      { type = "item", name = "cellulose-fiber", amount = 14 },
+      { type = "item", name = "angels-solid-fruit", amount = 12 },
+      { type = "item", name = "angels-cellulose-fiber", amount = 14 },
     },
     order = "bd",
     crafting_machine_tint = {
@@ -298,32 +315,34 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-4.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-4.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-desert-5",
-    localised_name = { "recipe-name.sorting-desert-5" },
-    category = "bio-processor",
-    subgroup = "farming-desert",
+    name = "angels-sorting-desert-5",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-desert",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "desert-5", amount = 20 },
+      { type = "item", name = "angels-desert-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-nuts", amount = 4 },
-      { type = "item", name = "solid-corn", amount = 12 },
-      { type = "item", name = "crystal-dust", amount = 4 },
+      { type = "item", name = "angels-solid-nuts", amount = 4 },
+      { type = "item", name = "angels-solid-corn", amount = 12 },
+      { type = "item", name = "angels-crystal-dust", amount = 4 },
     },
     order = "be",
     crafting_machine_tint = {
@@ -332,32 +351,34 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/desert-5.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-5.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   --SWAMP
   {
     type = "recipe",
-    name = "sorting-swamp-1",
-    localised_name = { "recipe-name.sorting-swamp-1" },
+    name = "angels-sorting-swamp-1",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-swamp",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-1", amount = 20 },
+      { type = "item", name = "angels-swamp-1", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-nuts", amount = 16 },
+      { type = "item", name = "angels-solid-nuts", amount = 16 },
     },
     always_show_products = true,
     order = "ba",
@@ -367,31 +388,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-1.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-1.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-swamp-2",
-    localised_name = { "recipe-name.sorting-swamp-2" },
+    name = "angels-sorting-swamp-2",
     show_amount_in_title = false,
-    category = "bio-processor",
-    subgroup = "farming-swamp",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-2", amount = 20 },
+      { type = "item", name = "angels-swamp-2", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-beans", amount = 14 },
+      { type = "item", name = "angels-solid-beans", amount = 14 },
     },
     always_show_products = true,
     order = "bb",
@@ -402,31 +425,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-2.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-2.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-swamp-3",
-    localised_name = { "recipe-name.sorting-swamp-3" },
-    category = "bio-processor",
-    subgroup = "farming-swamp",
+    name = "angels-sorting-swamp-3",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-3", amount = 20 },
+      { type = "item", name = "angels-swamp-3", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 36 },
-      { type = "item", name = "solid-nuts", amount = 6 },
+      { type = "item", name = "angels-solid-leafs", amount = 36 },
+      { type = "item", name = "angels-solid-nuts", amount = 6 },
     },
     order = "bc",
     crafting_machine_tint = {
@@ -435,31 +460,33 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-3.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-3.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-swamp-4",
-    localised_name = { "recipe-name.sorting-swamp-4" },
-    category = "bio-processor",
-    subgroup = "farming-swamp",
+    name = "angels-sorting-swamp-4",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-4", amount = 20 },
+      { type = "item", name = "angels-swamp-4", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-leafs", amount = 24 },
-      { type = "item", name = "crystal-dust", amount = 6 },
+      { type = "item", name = "angels-solid-leafs", amount = 24 },
+      { type = "item", name = "angels-crystal-dust", amount = 6 },
     },
     order = "bd",
     crafting_machine_tint = {
@@ -469,32 +496,34 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-4.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-4.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
   {
     type = "recipe",
-    name = "sorting-swamp-5",
-    localised_name = { "recipe-name.sorting-swamp-5" },
-    category = "bio-processor",
-    subgroup = "farming-swamp",
+    name = "angels-sorting-swamp-5",
+    category = "angels-bio-processor",
+    subgroup = "angels-farming-swamp",
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 4,
     ingredients = {
-      { type = "item", name = "swamp-5", amount = 20 },
+      { type = "item", name = "angels-swamp-5", amount = 20 },
     },
     results = {
-      { type = "item", name = "solid-fruit", amount = 16 },
-      { type = "item", name = "solid-pips", amount = 12 },
-      { type = "item", name = "alien-bacteria", amount = 4 },
+      { type = "item", name = "angels-solid-fruit", amount = 16 },
+      { type = "item", name = "angels-solid-pips", amount = 12 },
+      { type = "item", name = "angels-alien-bacteria", amount = 4 },
     },
     order = "be",
     crafting_machine_tint = {
@@ -503,15 +532,16 @@ data:extend({
     },
     icons = {
       {
-        icon = "__angelsbioprocessing__/graphics/icons/processor-recipe.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/processor-recipe.png",
+        icon_size = 32
       },
       {
-        icon = "__angelsbioprocessing__/graphics/icons/swamp-5.png",
+        icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-5.png",
+        icon_size = 32,
         scale = 0.4375,
         shift = { -10, 10 },
         tint = { r = 1, g = 1, b = 1, a = 1 },
       },
     },
-    icon_size = 32,
   },
 })

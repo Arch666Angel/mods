@@ -1,28 +1,29 @@
 data:extend({
   {
     type = "tips-and-tricks-item-category",
-    name = "angelsbioprocessing",
+    name = "angels-bioprocessing",
     order = "c-d[bioprocessing]",
   },
 
   {
     type = "tips-and-tricks-item",
-    name = "angelsbioprocessing",
+    name = "angels-bioprocessing",
 
     is_title = true,
-    tag = "[item=token-bio]",
-    localised_name = { "tips-and-tricks-name.angelsbioprocessing" },
+    tag = "[item=angels-token-bio]",
+    localised_name = { "tips-and-tricks-name.angels-bioprocessing" },
     localised_description = require("prototypes.tips-and-tricks.1-bio-processing.1-bio-processing-description"),
 
-    category = "angelsbioprocessing",
+    category = "angels-bioprocessing",
     order = "a-[bioprocessing]",
     indent = 0,
 
     starting_status = "locked",
     dependencies = nil,
-    trigger = {
-      type = "time-elapsed",
-      ticks = 10 * 60,
+    trigger =
+    {
+      type = "research",
+      technology = "angels-bio-processing-brown"
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-bio-processing.1-bio-processing-simulation",

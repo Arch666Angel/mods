@@ -198,7 +198,7 @@ if angelsmods.industries.components then
   OV.add_prereq("cargo-robots", "angels-components-mechanical-2")
 
   OV.add_prereq("cargo-robots-2", "tech-orange-circuit")
-  OV.remove_prereq("cargo-robots-2", "advanced-electronics")
+  OV.remove_prereq("cargo-robots-2", "advanced-circuit")
   OV.remove_unlock("cargo-robots-3", "cargo-robot-2")
   OV.add_unlock("cargo-robots-2", "cargo-robot-2")
   OV.add_prereq("cargo-robots-2", "angels-components-mechanical-3")

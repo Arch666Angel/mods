@@ -1,16 +1,16 @@
 data:extend({
   {
     type = "tips-and-tricks-item",
-    name = "bio-vegetables-1a",
+    name = "angels-bio-vegetables-1a",
 
     is_title = false,
-    tag = "[item=crop-farm]",
-    localised_name = { "tips-and-tricks-name.bio-vegetables-1a" },
+    tag = "[item=angels-crop-farm]",
+    localised_name = { "tips-and-tricks-name.angels-bio-vegetables-1a" },
     localised_description = require(
       "prototypes.tips-and-tricks.1-2-1-bio-vegetables-farming.1-2-1-bio-vegetables-farming-description"
     ),
 
-    category = "angelsbioprocessing",
+    category = "angels-bioprocessing",
     order = "a-b[vegetables]-a[farming]",
     indent = 2,
 
@@ -18,7 +18,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "bio-farm-1",
+      technology = "angels-bio-farm-1",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-2-1-bio-vegetables-farming.1-2-1-bio-vegetables-farming-simulation",

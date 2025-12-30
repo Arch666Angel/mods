@@ -7,12 +7,12 @@ local recipes_to_ignore = {
 
 local unit_test_011 = function()
   local unit_test_result = unit_test_functions.test_successful
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
 
   local tech_filters = {}
   table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
   table.insert(tech_filters, { filter = "enabled", invert = false, mode = "and" })
-  local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
+  local tech_prototypes = prototypes.get_technology_filtered(tech_filters)
 
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     for _, tech_effect in pairs(tech_prototype.effects) do

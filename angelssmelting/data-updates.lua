@@ -53,14 +53,6 @@ if angelsmods.trigger.smelting_products["steel"].rod then
 end
 if angelsmods.trigger.smelting_products["steel"].plate then
   angelsmods.trigger.smelting_products["steel"].ingot = true
-  if not angelsmods.functions.is_special_vanilla() then
-    angelsmods.trigger.smelting_products["silicon"].ingot = true
-    angelsmods.trigger.smelting_products["manganese"].ingot = true
-    angelsmods.trigger.smelting_products["cobalt"].ingot = true
-    angelsmods.trigger.smelting_products["nickel"].ingot = true
-    angelsmods.trigger.smelting_products["chrome"].ingot = true
-    angelsmods.trigger.smelting_products["tungsten"].powder = true
-  end
 end
 if angelsmods.trigger.smelting_products["steel"].powder then
   angelsmods.trigger.smelting_products["steel"].ingot = true
@@ -76,7 +68,6 @@ if angelsmods.trigger.smelting_products["aluminium"].plate then
   angelsmods.trigger.smelting_products["aluminium"].ingot = true
   angelsmods.trigger.smelting_products["manganese"].ingot = true
   angelsmods.trigger.smelting_products["copper"].ingot = true
-  angelsmods.trigger.smelting_products["silicon"].ingot = true
 end
 --chrome
 if angelsmods.trigger.smelting_products["chrome"].powder then
@@ -142,13 +133,6 @@ if angelsmods.trigger.smelting_products["iron"].rod then
 end
 if angelsmods.trigger.smelting_products["iron"].plate then
   angelsmods.trigger.smelting_products["iron"].ingot = true
-  if not angelsmods.functions.is_special_vanilla() then
-    angelsmods.trigger.smelting_products["manganese"].ingot = true
-    angelsmods.trigger.smelting_products["silicon"].ingot = true
-    angelsmods.trigger.smelting_products["cobalt"].ingot = true
-    angelsmods.trigger.smelting_products["nickel"].ingot = true
-    angelsmods.trigger.smelting_products["chrome"].ingot = true
-  end
 end
 --lead
 if angelsmods.trigger.smelting_products["lead"].powder then
@@ -212,8 +196,6 @@ if angelsmods.trigger.smelting_products["titanium"].plate then
   angelsmods.trigger.smelting_products["titanium"].ingot = true
   angelsmods.trigger.smelting_products["manganese"].ingot = true
   angelsmods.trigger.smelting_products["nickel"].ingot = true
-  angelsmods.trigger.smelting_products["tin"].ingot = true
-  angelsmods.trigger.smelting_products["aluminium"].ingot = true
   angelsmods.trigger.smelting_products["cobalt"].ingot = true
   angelsmods.trigger.smelting_products["chrome"].ingot = true
 end

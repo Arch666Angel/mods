@@ -1,5 +1,3 @@
-local rawmulti = angelsmods.marathon.rawmulti
-
 require("prototypes/recipes/refining-dynamic/slag-stone")
 require("prototypes/recipes/refining-dynamic/crushed-smelting")
 require("prototypes/recipes/refining-dynamic/crushed-processing")

@@ -35,8 +35,8 @@ if has_vehicle_equipment() then
 
   if angelsmods and angelsmods.industries then
     data.raw["item-with-entity-data"]["nilaus-truck"].subgroup = "angels-vehicle-car"
-    data.raw["item-with-entity-data"]["nilaus-truck"].order = "a[car]-b[nilaus-truck]"
+    data.raw["item-with-entity-data"]["nilaus-truck"].order = "a[car]-b[nilaus-truck]-a"
     data.raw["item-with-entity-data"]["nilaus-truck-2"].subgroup = "angels-vehicle-car"
-    data.raw["item-with-entity-data"]["nilaus-truck-2"].order = "a[car]-b[nilaus-truck-mk2]"
+    data.raw["item-with-entity-data"]["nilaus-truck-2"].order = "a[car]-b[nilaus-truck]-b"
   end
 end

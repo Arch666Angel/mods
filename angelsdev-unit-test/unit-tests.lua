@@ -10,6 +10,9 @@ local unit_tests = {
   require("unit-tests.unit-test-009"),
   require("unit-tests.unit-test-010"),
   require("unit-tests.unit-test-011"),
+  require("unit-tests.unit-test-012"),
+  require("unit-tests.unit-test-013"),
+  require("unit-tests.unit-test-014"),
 }
 
 local unit_test_functions = require("unit-test-functions")

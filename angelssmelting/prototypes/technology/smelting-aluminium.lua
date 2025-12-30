@@ -4,32 +4,31 @@ data:extend({
     name = "angels-aluminium-smelting-1",
     localised_name = { "technology-name.angels-aluminium-metallurgy" },
     localised_description = { "technology-description.angels-aluminium-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-floatation",
+      "angels-ore-floatation",
       --"angels-metallurgy-2",
-      "powder-metallurgy-2",
-      "chlorine-processing-1",
+      "angels-powder-metallurgy-2",
+      "angels-chlorine-processing-1",
       --"angels-coal-processing"
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bauxite-ore-smelting",
+        recipe = "angels-solid-aluminium-hydroxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-aluminium-hydroxide-smelting",
+        recipe = "angels-solid-aluminium-oxide",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-aluminium-oxide-smelting",
+        recipe = "angels-ingot-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-1",
+        recipe = "angels-liquid-molten-aluminium",
       },
       {
         type = "unlock-recipe",
@@ -39,8 +38,8 @@ data:extend({
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -49,35 +48,34 @@ data:extend({
   {
     type = "technology",
     name = "angels-aluminium-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
-      "powder-metallurgy-3",
+      "angels-ore-processing-2",
+      "angels-powder-metallurgy-3",
       "angels-aluminium-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "bauxite-ore-processing",
+        recipe = "angels-processed-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-aluminium-smelting",
+        recipe = "angels-solid-aluminium-hydroxide-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-aluminium",
+        recipe = "angels-powder-aluminium",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -86,35 +84,34 @@ data:extend({
   {
     type = "technology",
     name = "angels-aluminium-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-aluminium-smelting-1",
       "angels-manganese-smelting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-2",
+        recipe = "angels-liquid-molten-aluminium-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-aluminium-casting",
+        recipe = "angels-roll-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-aluminium-converting",
+        recipe = "angels-plate-aluminium-2",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -123,36 +120,35 @@ data:extend({
   {
     type = "technology",
     name = "angels-aluminium-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "ore-processing-3",
+      "angels-ore-processing-3",
       "angels-aluminium-smelting-2",
-      "sodium-processing",
+      "angels-sodium-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "aluminium-processed-processing",
+        recipe = "angels-pellet-aluminium",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-aluminium-smelting",
+        recipe = "angels-solid-sodium-aluminate",
       },
       {
         type = "unlock-recipe",
-        recipe = "solid-sodium-aluminate-smelting",
+        recipe = "angels-solid-aluminium-oxide-2",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -161,12 +157,11 @@ data:extend({
   {
     type = "technology",
     name = "angels-aluminium-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-4",
-      "strand-casting-3",
+      "angels-strand-casting-3",
       "angels-aluminium-casting-2",
       "angels-copper-smelting-3",
       "angels-silicon-smelting-2",
@@ -174,20 +169,20 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-aluminium-smelting-3",
+        recipe = "angels-liquid-molten-aluminium-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-aluminium-casting-fast",
+        recipe = "angels-roll-aluminium-2",
       },
     },
     unit = {
       count = 250,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },

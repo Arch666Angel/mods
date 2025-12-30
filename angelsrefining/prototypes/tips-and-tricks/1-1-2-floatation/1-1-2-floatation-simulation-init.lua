@@ -1,14 +1,16 @@
-game.camera_position = { -2.5, 1 }
-game.camera_zoom = 1.7
-game.camera_alt_info = true
+game.simulation.camera_position = { -2.5, 1 }
+game.simulation.camera_zoom = 1.7
+game.simulation.camera_alt_info = true
 
+game.forces.neutral.recipes["angels-ore1-chunk"].enabled = true
 -- floatation cell
 game.surfaces[1].create_entity({
-  name = "ore-floatation-cell",
+  name = "angels-ore-floatation-cell",
   position = { 0, 0 },
   direction = defines.direction.east,
   force = "neutral",
-  recipe = "angelsore1-chunk",
+  raise_built = true,
+  recipe = "angels-ore1-chunk",
 })
 -- inserters (input)
 game.surfaces[1].create_entity({
@@ -77,7 +79,7 @@ game.surfaces[1]
     force = "neutral",
   })
   .set_infinity_pipe_filter({
-    name = "water-purified",
+    name = "angels-water-purified",
     percentage = 1,
   })
 -- inserters (output)
@@ -155,7 +157,7 @@ game.surfaces[1]
     force = "neutral",
   })
   .set_infinity_pipe_filter({
-    name = "water-yellow-waste",
+    name = "angels-water-yellow-waste",
     percentage = 0.5,
     mode = "at-most",
   })

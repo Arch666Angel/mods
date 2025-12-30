@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["glass"].mixture = true
@@ -19,14 +18,14 @@ if angelsmods.trigger.smelting_products["glass"].mixture then
   then
   else
     -- no need for molten recipe
-    angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
-    OV.disable_recipe({ "molten-glass-smelting" })
+    angelsmods.functions.hide("angels-liquid-molten-glass")
+    OV.disable_recipe({ "angels-liquid-molten-glass" })
   end
 else
-  angelsmods.functions.add_flag("solid-glass-mixture", "hidden")
-  angelsmods.functions.add_flag("liquid-molten-glass", "hidden")
-  OV.disable_recipe({ "glass-mixture-1", "glass-mixture-2", "glass-mixture-3", "glass-mixture-4" })
-  OV.disable_recipe({ "molten-glass-smelting" })
+  angelsmods.functions.hide("angels-solid-glass-mixture")
+  angelsmods.functions.hide("angels-liquid-molten-glass")
+  OV.disable_recipe({ "angels-solid-glass-mixture", "angels-solid-glass-mixture-2", "angels-solid-glass-mixture-3", "angels-solid-glass-mixture-4" })
+  OV.disable_recipe({ "angels-liquid-molten-glass" })
   OV.disable_technology({ "angels-glass-smelting-1", "angels-glass-smelting-2", "angels-glass-smelting-3" })
 end
 
@@ -36,81 +35,37 @@ end
 if angelsmods.trigger.smelting_products["glass"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("angels-plate-glass", "glass")
-    angelsmods.functions.add_flag("angels-plate-glass", "hidden")
-    angelsmods.functions.move_item("glass", "angels-glass-casting", "d")
-    data.raw["item"]["glass"].icon = "__angelssmelting__/graphics/icons/plate-glass.png"
-    data.raw["item"]["glass"].icon_size = 32
-    data.raw["item"]["glass"].icon_mipmaps = 1
+    OV.global_replace_item("angels-plate-glass", "bob-glass")
+    angelsmods.functions.hide("angels-plate-glass")
+    OV.copy_item_properties("angels-plate-glass", "bob-glass")
 
-    data.raw["recipe"]["angels-plate-glass-2"].normal.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-2"].expensive.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-3"].normal.main_product = "glass"
-    data.raw["recipe"]["angels-plate-glass-3"].expensive.main_product = "glass"
+    data.raw["recipe"]["angels-plate-glass-2"].main_product = "bob-glass"
+    data.raw["recipe"]["angels-plate-glass-3"].main_product = "bob-glass"
 
-    OV.patch_recipes({
-      {
-        name = "quartz-glass",
-        energy_required = 10.5,
-        normal = {
-          ingredients = {
-            { name = "quartz", type = "item", amount = "+3" },
-          },
-          results = {
-            { name = "glass", type = "item", amount = "+2" },
-          },
-        },
-        expensive = {
-          ingredients = {
-            { "!!" },
-            { name = "quartz", type = "item", amount = 5 * intermediatemulti },
-          },
-          results = {
-            { name = "glass", type = "item", amount = "+2" },
-          },
-        },
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-glass.png",
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/ore-silica.png",
-            scale = 0.4375,
-            shift = { -10, -10 },
-          },
-        },
-        icon_size = 32,
-        subgroup = "angels-glass-casting",
-        order = "d[angels-plate-glass]-a",
-      },
-    })
+    OV.disable_recipe("bob-glass")
+    OV.add_prereq("solar-energy", "angels-glass-smelting-1")
+    
+    if mods["bobwarfare"] then
+      OV.add_prereq({
+        "military-3", -- Sniper rifle
+        "bob-laser-rifle",
+      }, "angels-glass-smelting-1")
+    end
   end
 else
-  angelsmods.functions.add_flag("angels-plate-glass", "hidden")
-  OV.disable_recipe({ "angels-plate-glass-1", "angels-plate-glass-2", "angels-plate-glass-3" })
+  angelsmods.functions.hide("angels-plate-glass")
+  OV.disable_recipe({ "angels-plate-glass", "angels-plate-glass-2", "angels-plate-glass-3" })
+  OV.remove_prereq("angels-glass-smelting-3", "angels-tin-casting-3")
 end
 
 -------------------------------------------------------------------------------
 -- FIBREGLASS -----------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["glass"].fibre then
-  if mods["bobelectronics"] then
-  else
-    --[[OV.patch_recipes(
-      {
-        {
-          name = "angels-glass-fiber-board",
-          results = {
-            {"!!"},
-            {name = "angels-glass-fiber-board", type = "item", amount = 4}
-          },
-        }
-      }
-    )]]
-  end
 else
-  angelsmods.functions.add_flag("angels-coil-glass-fiber", "hidden")
+  angelsmods.functions.hide("angels-coil-glass-fiber")
   OV.disable_recipe({ "angels-coil-glass-fiber" })
+  OV.disable_recipe({ "angels-coil-glass-fiber-2" })
 end
 
 -------------------------------------------------------------------------------
@@ -121,34 +76,40 @@ if angelsmods.trigger.smelting_products["glass"].board then
     OV.patch_recipes({
       {
         name = "angels-glass-fiber-board",
+        localised_name = { "item-name.bob-fibreglass-board" },
         results = {
           { "!!" },
-          { name = "fibreglass-board", type = "item", amount = 4 },
+          { name = "bob-fibreglass-board", type = "item", amount = 4 },
         },
         icons = {
           {
             icon = "__bobelectronics__/graphics/icons/fibreglass-board.png",
-            icon_size = 128,
-            scale = 32 / 128,
+            icon_size = 64,
+            scale = 32 / 64,
           },
           {
-            icon = "__angelssmelting__/graphics/icons/wire-coil-glass.png",
+            icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-glass.png",
             icon_size = 64,
-            icon_mipmaps = 4,
             scale = 0.4375 * 0.5,
             shift = { -10, -10 },
           },
         },
         icon_size = 32,
+        subgroup = "bob-boards",
+        order = "c-a3[fibreglass-board]",
       },
     })
     OV.add_unlock("angels-glass-smelting-2", "angels-glass-fiber-board")
-    OV.add_prereq("advanced-electronics-2", "angels-glass-smelting-2")
-    OV.add_prereq("angels-glass-smelting-2", "resin-1")
+    OV.add_prereq("processing-unit", "angels-glass-smelting-2")
+    OV.add_prereq("angels-glass-smelting-2", "angels-resin-1")
 
     -- disable bob variant
-    OV.remove_unlock("advanced-electronics-2", "fibreglass-board")
-    OV.disable_recipe({ "fibreglass-board" })
+    OV.remove_unlock("processing-unit", "bob-fibreglass-board")
+    OV.disable_recipe({ "bob-fibreglass-board" })
+  end
+
+  if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
+    OV.add_additional_category("angels-glass-fiber-board", "electronics-with-fluid")
   end
 else
   OV.disable_recipe({ "angels-glass-fiber-board" })

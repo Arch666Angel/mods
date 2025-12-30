@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ???
+  Changes:
+    - Extract Angel's bots, roboports, and logistics chests from Angel's Industries into a separate new mod (1132)

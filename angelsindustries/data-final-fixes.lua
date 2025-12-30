@@ -2,11 +2,6 @@ local OV = angelsmods.functions.OV
 require("prototypes.overrides.industries-override-functions")
 require("prototypes.overrides.global-components-recipe")
 
---hide the unused advanced defences
-OV.hide_recipe("angels-rocket-defense-equipment-vequip")
-angelsmods.functions.add_flag("angels-rocket-defense-equipment-vequip", "hidden")
-OV.execute()
-
 if angelsmods.industries.components then
   --hide the unused advanced tech blocks
   OV.global_replace_item({
@@ -15,10 +10,10 @@ if angelsmods.industries.components then
     "block-cprocessing-3",
     "block-bprocessing-3",
   }, "block-production-3")
-  angelsmods.functions.add_flag("block-extraction-3", "hidden")
-  angelsmods.functions.add_flag("block-mprocessing-3", "hidden")
-  angelsmods.functions.add_flag("block-cprocessing-3", "hidden")
-  angelsmods.functions.add_flag("block-bprocessing-3", "hidden")
+  angelsmods.functions.hide("block-extraction-3")
+  angelsmods.functions.hide("block-mprocessing-3")
+  angelsmods.functions.hide("block-cprocessing-3")
+  angelsmods.functions.hide("block-bprocessing-3")
   OV.hide_recipe({
     "block-extraction-3",
     "block-mprocessing-3",
@@ -32,10 +27,10 @@ if angelsmods.industries.components then
     "block-cprocessing-4",
     "block-bprocessing-4",
   }, "block-production-4")
-  angelsmods.functions.add_flag("block-extraction-4", "hidden")
-  angelsmods.functions.add_flag("block-mprocessing-4", "hidden")
-  angelsmods.functions.add_flag("block-cprocessing-4", "hidden")
-  angelsmods.functions.add_flag("block-bprocessing-4", "hidden")
+  angelsmods.functions.hide("block-extraction-4")
+  angelsmods.functions.hide("block-mprocessing-4")
+  angelsmods.functions.hide("block-cprocessing-4")
+  angelsmods.functions.hide("block-bprocessing-4")
   OV.hide_recipe({
     "block-extraction-4",
     "block-mprocessing-4",
@@ -49,10 +44,10 @@ if angelsmods.industries.components then
     "block-cprocessing-5",
     "block-bprocessing-5",
   }, "block-production-5")
-  angelsmods.functions.add_flag("block-extraction-5", "hidden")
-  angelsmods.functions.add_flag("block-mprocessing-5", "hidden")
-  angelsmods.functions.add_flag("block-cprocessing-5", "hidden")
-  angelsmods.functions.add_flag("block-bprocessing-5", "hidden")
+  angelsmods.functions.hide("block-extraction-5")
+  angelsmods.functions.hide("block-mprocessing-5")
+  angelsmods.functions.hide("block-cprocessing-5")
+  angelsmods.functions.hide("block-bprocessing-5")
   OV.hide_recipe({
     "block-extraction-5",
     "block-mprocessing-5",
@@ -70,10 +65,10 @@ if angelsmods.industries.tech then
     "datacore-processing-5",
     "datacore-processing-6",
   }, "datacore-processing-2")
-  angelsmods.functions.add_flag("datacore-processing-3", "hidden")
-  angelsmods.functions.add_flag("datacore-processing-4", "hidden")
-  angelsmods.functions.add_flag("datacore-processing-5", "hidden")
-  angelsmods.functions.add_flag("datacore-processing-6", "hidden")
+  angelsmods.functions.hide("datacore-processing-3")
+  angelsmods.functions.hide("datacore-processing-4")
+  angelsmods.functions.hide("datacore-processing-5")
+  angelsmods.functions.hide("datacore-processing-6")
   OV.hide_recipe({
     "datacore-processing-3",
     "datacore-processing-4",
@@ -81,6 +76,12 @@ if angelsmods.industries.tech then
     "datacore-processing-6",
   })
   OV.execute()
+
+  -- Populate table of starting items for YAFC to read
+  if data.data_crawler then
+    data.script_enabled = data.script_enabled or {}
+    table.insert(data.script_enabled, { type = "item", name = "angels-main-lab-0" })
+  end
 end
 
 --tech updates part 1
@@ -99,7 +100,29 @@ if angelsmods.industries.components then
     angelsmods.functions.AI.add_minable_results()
   end
   OV.execute()
+
+  -- Populate table of starting items for YAFC to read
+  if data.data_crawler then
+    data.script_enabled = data.script_enabled or {}
+    table.insert(data.script_enabled, { type = "item", name = "stone-furnace" })
+  end
 end
 
---OTHER OVERRIDES
---require("prototypes.overrides.global-loaders")
+--TODO: actully fix techs with triggers
+for t, tech in pairs(data.raw.technology) do
+  if tech.research_trigger == nil then --exclude triggered techs from giving a time
+    if tech.unit then
+      if tech.unit.time == nil then
+        tech.unit.time = 666
+      end
+      if tech.unit.count == nil and tech.unit.count_formula == nil then
+        tech.unit.count = 666
+      end
+    else
+      log('tech '.. tech.name .. " is not trigger or unit")
+      log(serpent.block(data.raw.technology[tech.name]))
+      OV.set_research_difficulty(tech.name, "copper-wire", 1, "craft-item")
+      OV.execute()
+      end
+  end
+end
