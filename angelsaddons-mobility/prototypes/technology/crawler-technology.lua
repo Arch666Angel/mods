@@ -82,7 +82,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
     type = "technology",
     name = "angels-crawler-train",
     icon = "__angelsaddons-mobility-graphics-crawler__/graphics/technology/crawler-trains.png",
-    icon_size = 128,
+    icon_size = 256,
     prerequisites = prerequisites,
     order = "c-a",
   }, tiers)

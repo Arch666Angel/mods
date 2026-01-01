@@ -73,7 +73,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
     type = "technology",
     name = "angels-petro-train",
     icon = "__angelsaddons-mobility-graphics-petro__/graphics/technology/petro-trains.png",
-    icon_size = 128,
+    icon_size = 256,
     prerequisites = {
       "fluid-wagon",
     },

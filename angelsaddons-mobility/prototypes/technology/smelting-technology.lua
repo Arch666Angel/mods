@@ -73,7 +73,7 @@ if angelsmods.addons.mobility.smeltingtrain.enabled then
     type = "technology",
     name = "angels-smelting-train",
     icon = "__angelsaddons-mobility-graphics-smelting__/graphics/technology/smelting-trains.png",
-    icon_size = 128,
+    icon_size = 256,
     prerequisites = {
       "railway",
     },
