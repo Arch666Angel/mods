@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: ???
+  Features:
+    - Initial release (1183)
+    - Contains sprites required for the smelting theme train set

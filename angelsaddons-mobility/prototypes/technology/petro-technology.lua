@@ -72,7 +72,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
   funcs.generate_train_technology({
     type = "technology",
     name = "angels-petro-train",
-    icon = "__angelsaddons-mobility__/graphics/technology/petro-loco-1-tech.png",
+    icon = "__angelsaddons-mobility-graphics-petro__/graphics/technology/petro-trains.png",
     icon_size = 128,
     prerequisites = {
       "fluid-wagon",

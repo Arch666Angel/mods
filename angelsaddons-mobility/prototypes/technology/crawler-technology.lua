@@ -81,7 +81,7 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
   funcs.generate_train_technology({
     type = "technology",
     name = "angels-crawler-train",
-    icon = "__angelsaddons-mobility__/graphics/technology/crawlertrain.png",
+    icon = "__angelsaddons-mobility-graphics-crawler__/graphics/technology/crawler-trains.png",
     icon_size = 128,
     prerequisites = prerequisites,
     order = "c-a",

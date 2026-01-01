@@ -17,7 +17,7 @@ data:extend({
 funcs.generate_train_items({
   type = "item-with-entity-data",
   name = "angels-petro-gas-wagon",
-  icon = "__angelsaddons-mobility__/graphics/icons/petro-tank1-ico.png",
+  icon = "__angelsaddons-mobility-graphics-petro__/graphics/icons/petro-gas-wagon.png",
   icon_size = 32,
   subgroup = "angels-petrotrain",
   order = "z[angel-train]-c[petro]-b[gas-wagon]",
@@ -30,7 +30,7 @@ funcs.generate_train_items({
 funcs.generate_train_entities({
   type = "fluid-wagon",
   name = "angels-petro-gas-wagon",
-  icon = "__angelsaddons-mobility__/graphics/icons/petro-tank1-ico.png",
+  icon = "__angelsaddons-mobility-graphics-petro__/graphics/icons/petro-gas-wagon.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
   minable = { mining_time = 1, result = "angels-petro-gas-wagon" },
@@ -123,7 +123,7 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon", {
           dice = 4,
           priority = "very-low",
           allow_low_quality_rotation = true,
@@ -132,7 +132,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon-mask", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon-mask", {
           dice = 4,
           priority = "very-low",
           apply_runtime_tint = true,
@@ -144,7 +144,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon-shadow", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -161,14 +161,14 @@ funcs.generate_train_entities({
     slope_back_equals_front = true,
     sloped = funcs.use_sloped_train_features and {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped", {
           dice = 4,
           priority = "very-low",
           direction_count = 80,
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped-mask", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped-mask", {
           dice = 4,
           priority = "very-low",
           apply_runtime_tint = true,
@@ -178,7 +178,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped-shadow", {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-gas-wagon/petro-gas-wagon-sloped-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },

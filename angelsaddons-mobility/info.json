@@ -9,6 +9,9 @@
   "description": "A combination mod of the various themed trains.",
   "dependencies": [
     "base >= 2.0.0",
+    "angelsaddons-mobility-graphics-crawler >= 1.0.0",
+    "angelsaddons-mobility-graphics-petro >= 1.0.0",
+    "angelsaddons-mobility-graphics-smelting >= 1.0.0",
     "(?) angelsrefining >= 1.1.0",
     "? angelsindustries >= 1.1.0"
   ]

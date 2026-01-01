@@ -17,7 +17,7 @@ data:extend({
 funcs.generate_train_items({
   type = "item-with-entity-data",
   name = "angels-smelting-locomotive",
-  icon = "__angelsaddons-mobility__/graphics/icons/smelting-loco-1.png",
+  icon = "__angelsaddons-mobility-graphics-smelting__/graphics/icons/smelting-locomotive.png",
   icon_size = 32,
   subgroup = "angels-smeltingtrain",
   order = "z[angel-train]-b[smelting]-a[locomotive]",
@@ -30,7 +30,7 @@ funcs.generate_train_items({
 funcs.generate_train_entities({
   type = "locomotive",
   name = "angels-smelting-locomotive",
-  icon = "__angelsaddons-mobility__/graphics/icons/smelting-loco-1.png",
+  icon = "__angelsaddons-mobility-graphics-smelting__/graphics/icons/smelting-locomotive.png",
   icon_size = 32,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
   minable = { mining_time = 1, result = "angels-smelting-locomotive" },
@@ -212,7 +212,7 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive", {
           dice = 4,
           priority = "very-low",
           allow_low_quality_rotation = true,
@@ -220,7 +220,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-mask", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-mask", {
           dice = 4,
           priority = "very-low",
           apply_runtime_tint = true,
@@ -231,7 +231,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-shadow", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -246,14 +246,14 @@ funcs.generate_train_entities({
     slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped", {
           dice = 4,
           priority = "very-low",
           direction_count = 160,
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-mask", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-mask", {
           dice = 4,
           priority = "very-low",
           apply_runtime_tint = true,
@@ -263,7 +263,7 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train",
         }),
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-shadow", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-shadow", {
           dice = 4,
           priority = "very-low",
           flags = { "shadow" },
@@ -278,7 +278,7 @@ funcs.generate_train_entities({
   front_light_pictures = {
     rotated = {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-lights", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-lights", {
           dice = 4,
           priority = "very-low",
           blend_mode = "additive",
@@ -293,7 +293,7 @@ funcs.generate_train_entities({
     slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
-        util.sprite_load("__angelsaddons-mobility__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-lights", {
+        util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-lights", {
           dice = 4,
           priority = "very-low",
           blend_mode = "additive",

@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: ???
+  Features:
+    - Supports Elevated Rails and includes HQ train graphics with updated geometry and materials (1183)
+    - Crawler-themed trains are now colorable (1183)
   Changes:
     - Updated for Factorio 2.0 (994)
     - Added "angels-" prefix to all prototypes (1159), and revised train item, entity and recipe prototype names:
@@ -12,6 +15,10 @@ Date: ???
       - crawler-locomotive-wagon(-#) -> angels-crawler-locomotive-tender(-#)
       - crawler-wagon(-#) -> angels-crawler-cargo-wagon(-#)
       - crawler-bot-wagon(-#) -> angels-crawler-robot-wagon(-#)
+    - Graphics have been moved into separate mods (1183):
+      - Angel's Addons - Mass Transit - Crawler Graphics
+      - Angel's Addons - Mass Transit - Petro Graphics
+      - Angel's Addons - Mass Transit - Smelting Graphics
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 01.01.2023
