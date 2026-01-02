@@ -37,6 +37,7 @@ for _, prototype_type in pairs({
   "train-stop",
   "locomotive",
   "cargo-wagon",
+  "fluid-wagon",
 }) do
   -- add wagon to other prototypes
   for _, prototype in pairs(data.raw[prototype_type]) do
