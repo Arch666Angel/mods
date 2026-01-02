@@ -252,7 +252,7 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
         util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped", {
@@ -290,7 +290,7 @@ funcs.generate_train_entities({
           usage = "train",
         }),
       },
-    },
+    } or nil,
   },
   front_light_pictures = {
     rotated = {
@@ -307,7 +307,7 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
         util.sprite_load("__angelsaddons-mobility-graphics-smelting__/graphics/entity/smelting-locomotive/smelting-locomotive-sloped-lights", {
@@ -319,8 +319,8 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train"
         }),
-      }
-    }
+      },
+    } or nil,
   },
   wheels = funcs.standard_train_wheels,
   stop_trigger = {

@@ -157,7 +157,7 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     slope_back_equals_front = true,
     sloped = funcs.use_sloped_train_features and {
       layers = {
@@ -188,7 +188,7 @@ funcs.generate_train_entities({
           usage = "train",
         }),
       },
-    },
+    } or nil,
   },
   wheels = funcs.standard_train_wheels,
   drive_over_tie_trigger = {

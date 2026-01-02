@@ -168,9 +168,9 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     slope_back_equals_front = true,
-    sloped = funcs.use_sloped_train_features and {
+    sloped = {
       layers = {
         util.sprite_load("__angelsaddons-mobility-graphics-crawler__/graphics/entity/crawler-robot-wagon/crawler-robot-wagon-sloped", {
           dice = 4,
