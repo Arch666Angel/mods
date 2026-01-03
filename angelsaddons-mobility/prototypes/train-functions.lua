@@ -303,7 +303,7 @@ end
 
 local add_tier_number = mods["angelsrefining"] and angelsmods.functions.add_number_icon_layer
   or function(icon_layers, number_tier, number_tint)
-    local icon_size_scale = ((icon_layers[1] or {}).icon_size or 32) * ((icon_layers[1] or {}).scale or 1) / 32
+    local icon_size_scale = ((icon_layers[1] or {}).icon_size or 64) * ((icon_layers[1] or {}).scale or 1) / 64
     local new_icon_layers = table.deepcopy(icon_layers)
     table.insert(new_icon_layers, {
       icon = "__angelsaddons-mobility__/graphics/icons/numerals/num-" .. number_tier .. "-outline.png",
