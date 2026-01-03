@@ -63,9 +63,9 @@ if mods["Portable_power"] then
 end
 
 if angelsmods.petrochem then
-  local updated_recipes = {}
-  local OV = angelsmods.functions.OV
   if angelsmods.addons.mobility.petrotrain.tier_amount > 1 then
+    local updated_recipes = {}
+    local OV = angelsmods.functions.OV
     for i = 1, angelsmods.addons.mobility.petrotrain.tier_amount, 1 do
       local gas_wagon = i == 1 and "angels-petro-gas-wagon" or "angels-petro-gas-wagon-" .. i
       OV.modify_input(gas_wagon, { type = "item", name = "angels-storage-tank-1", amount = "storage-tank" })
@@ -75,9 +75,11 @@ if angelsmods.petrochem then
       OV.modify_input(oil_wagon, { type = "item", name = "angels-storage-tank-2", amount = "storage-tank" })
       table.insert(updated_recipes, oil_wagon)
     end
+    OV.add_prereq("angels-petro-train-2", "angels-gas-processing")
+    OV.add_prereq("angels-petro-train-2", "angels-oil-processing")
+    OV.execute()
+    angelsmods.functions.patch_recycling_recipes(updated_recipes)
   end
-  OV.execute()
-  angelsmods.functions.patch_recycling_recipes(updated_recipes)
 end
 
 ---Angel's default equipment category.
