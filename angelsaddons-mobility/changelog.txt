@@ -6,18 +6,9 @@ Date: ???
     - Crawler-themed trains are now colorable (1183)
   Changes:
     - Updated for Factorio 2.0 (994)
-    - Added "angels-" prefix to all prototypes (1159), and revised train item, entity and recipe prototype names:
-      - smelting-locomotive-1(-#) -> angels-smelting-locomotive(-#)
-      - smelting-wagon-1(-#) -> angels-smelting-cargo-wagon(-#)
-      - petro-locomotive-1(-#) -> angels-petro-locomotive(-#)
-      - petro-tank1(-#) -> angels-petro-gas-wagon(-#)
-      - petro-tank2(-#) -> angels-petro-oil-wagon(-#)
-      - crawler-locomotive-wagon(-#) -> angels-crawler-locomotive-tender(-#)
-      - crawler-wagon(-#) -> angels-crawler-cargo-wagon(-#)
-      - crawler-bot-wagon(-#) -> angels-crawler-robot-wagon(-#)
     - Graphics have been moved into separate mods (1183):
       - Angel's Addons - Mass Transit - Crawler Graphics
-      - Angel's Addons - Mass Transit - Petro Graphics
+      - Angel's Addons - Mass Transit - Petrochemical Graphics
       - Angel's Addons - Mass Transit - Smelting Graphics
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.11
