@@ -188,3 +188,13 @@ end
 if mods["angelsindustries"] then
   funcs.update_equipment_grid("angels-crawler-robot-wagon", "angels-construction")
 end
+
+if mods["boblogistics"] then
+  for _, subgroup in pairs({
+    "angels-petrotrain",
+    "angels-smeltingtrain",
+    "angels-vehicle-train-crawler",
+  }) do
+    data.raw["item-subgroup"][subgroup].group = "bob-logistics"
+  end
+end
