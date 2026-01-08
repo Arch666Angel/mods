@@ -1,3 +1,5 @@
+require("remote")
+
 local tech_archive = require("src.tech-archive")
 
 script.on_event(defines.events.on_player_created, function(event)
