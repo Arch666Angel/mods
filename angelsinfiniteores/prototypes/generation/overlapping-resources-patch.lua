@@ -33,7 +33,9 @@ should be expressed as:
 max((spot_noise(density_expression * a, 1_000_000 * random_value_between, 10, -inf, <rest>) + b) * c, basement_value)
 
 The 1_000_000 and the 10 are kinda arbitrary, but I thought it might be good to use somewhat realistic values. The (noise+b)*c is just the variant that leads to nicer formulas.
-Basic math (or SymPy, if doing basic math without making two stupid mistakes in each step is too frickin hard -.-) tells us the formulas for a, b, c (called density_expression_scale, spot_noise_offset and spot_noise_scale below). Our slope based estimate for the used random_value_between is called random_penalty_at_center.
+Basic math (or SymPy, if doing basic math without making two stupid mistakes in each step is too frickin hard -.-) tells us the formulas for a, b, c (called density_expression_scale, spot_noise_offset and spot_noise_scale below). Our slope based estimate for the used random_value_between is called random_value_at_center.
+
+At a distance of maximum_spot_basement_radius, the spot_noise switches to the basement_value. We set -inf there, to be ready for any settings one might encounter in the wild. Turns out that getting rid of infinity values later on isn't as easy as I thought though. So we use the slope_without_infinity expression to detect infinity, and replace it with 0 to avoid artifacts at the maximum_spot_basement_radius radius.
 
 There are probably some corner cases where this won't work (spot_noise has a LOT of other parameters), but I think it should be fine for our normal blob-y resource patches? Probably? Maybe?
 ]]
@@ -65,10 +67,11 @@ There are probably some corner cases where this won't work (spot_noise has a LOT
       slope_x = "base_noise(x+1, y) - base_noise(x,y)",
       slope_y = "base_noise(x, y+1) - base_noise(x,y)",
       slope = "(slope_x^2 + slope_y^2)^(1/2)",
-      random_penalty_at_center = "clamp(slope * pi / 3000, random_spot_size_minimum, random_spot_size_maximum)",
+      slope_without_infinity = "if(abs(clamp(slope,-10e30,10e30))>10e29, 0, slope)", -- checking for infinity is hard for some reason
+      random_value_at_center = "clamp(slope_without_infinity * pi / 3000, random_spot_size_minimum, random_spot_size_maximum)",
       density_expression_scale = "1000000 / base_spot_quantity_expression * random_penalty_expression * random_penalty_expression",
-      spot_radius_expression = "min(32, base_spot_radius_expression * random_penalty_at_center^(1/3))",
-      spot_noise_offset = "3000 * random_penalty_at_center * (spot_radius_expression - 10) / pi",
+      spot_radius_expression = "min(32, base_spot_radius_expression * random_value_at_center^(1/3))",
+      spot_noise_offset = "3000 * random_value_at_center * (spot_radius_expression - 10) / pi",
       spot_noise_scale = "base_spot_quantity_expression / (1000 * spot_radius_expression ^ 3)",
     },
     local_functions = {
