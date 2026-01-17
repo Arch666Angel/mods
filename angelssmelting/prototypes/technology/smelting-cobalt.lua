@@ -160,8 +160,8 @@ data:extend({
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-cobalt-tech.png",
     icon_size = 256,
     prerequisites = {
-      "angels-metallurgy-5",
-      "angels-strand-casting-4",
+      --"angels-metallurgy-5",
+      "angels-strand-casting-3",
       "angels-cobalt-casting-2",
     },
     effects = {
