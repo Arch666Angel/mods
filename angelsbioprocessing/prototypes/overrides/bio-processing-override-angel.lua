@@ -80,6 +80,16 @@ for _, type in pairs({ "speed", "efficiency", "productivity" }) do
   end
 end
 
+for _, recipe_name in pairs({
+  "angels-bio-yield-module",
+  "angels-bio-yield-module-2",
+  "angels-bio-yield-module-3",
+  "angels-bio-yield-module-4",
+  "angels-bio-yield-module-5",
+}) do
+  OV.add_additional_category(recipe_name, "electronics")
+end
+
 -- BEACON
 OV.modify_input("beacon", { type = "item", name = "angels-crystal-full-harmonic", amount = 1 })
 OV.add_prereq("effect-transmission", "angels-bio-processing-crystal-full")

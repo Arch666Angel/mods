@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Changes:
+    - Allow Agriculture modules to be crafted in Electronics assembly machines (from Bob's Assembling machines mod) (1243)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 15.01.26
   Bugfixes:

@@ -12,6 +12,7 @@ data:extend({
     energy_required = 1,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore1", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore1-crushed", amount = 2 },
@@ -35,6 +36,7 @@ data:extend({
     energy_required = 4,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore1", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore1-crushed", amount = 2 },
@@ -54,6 +56,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore2", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore2-crushed", amount = 2 },
@@ -77,6 +80,7 @@ data:extend({
     energy_required = 1,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore3", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
@@ -100,6 +104,7 @@ data:extend({
     energy_required = 4,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore3", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
@@ -119,6 +124,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore4", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore4-crushed", amount = 2 },
@@ -142,6 +148,7 @@ data:extend({
     energy_required = 1,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore5", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore5-crushed", amount = 2 },
@@ -165,6 +172,7 @@ data:extend({
     energy_required = 1,
     enabled = true,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = { { type = "item", name = "angels-ore6", amount = 2 } },
     results = {
       { type = "item", name = "angels-ore6-crushed", amount = 2 },
@@ -191,6 +199,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ore1-crushed", amount = 2 },
       { type = "item", name = "angels-ore2-crushed", amount = 2 },
@@ -218,6 +227,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ore8-crushed", amount = 3 },
       { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
@@ -237,6 +247,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ore3-crushed", amount = 2 },
       { type = "item", name = "angels-ore4-crushed", amount = 2 },
@@ -264,6 +275,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ore9-crushed", amount = 3 },
       { type = "item", name = "angels-milling-drum-lubricated", amount = 1 },
