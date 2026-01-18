@@ -105,4 +105,5 @@ if angelsmods.trigger.smelting_products["tin"].powder then
 else
   angelsmods.functions.hide("angels-powder-tin")
   OV.disable_recipe({ "angels-powder-tin" })
+  OV.remove_prereq("angels-tin-smelting-2", "angels-powder-metallurgy-2")
 end

@@ -79,4 +79,5 @@ if angelsmods.trigger.smelting_products["manganese"].powder then
 else
   angelsmods.functions.hide("angels-powder-manganese")
   OV.disable_recipe({ "angels-powder-manganese" })
+  OV.remove_prereq("angels-manganese-smelting-2", "angels-powder-metallurgy-2")
 end

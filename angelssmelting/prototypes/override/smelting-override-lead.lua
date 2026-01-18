@@ -92,4 +92,5 @@ if angelsmods.trigger.smelting_products["lead"].powder then
 else
   angelsmods.functions.hide("angels-powder-lead")
   OV.disable_recipe({ "angels-powder-lead" })
+  OV.remove_prereq("angels-lead-smelting-2", "angels-powder-metallurgy-2")
 end
