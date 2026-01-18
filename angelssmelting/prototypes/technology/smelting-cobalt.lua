@@ -161,7 +161,7 @@ data:extend({
     icon_size = 256,
     prerequisites = {
       "angels-metallurgy-5",
-      "angels-strand-casting-3",
+      "angels-strand-casting-4",
       "angels-cobalt-casting-2",
     },
     effects = {

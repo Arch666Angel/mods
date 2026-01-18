@@ -46,6 +46,7 @@ data:extend({
       "angels-ore-processing-1",
       "angels-tin-smelting-1",
       "angels-coal-processing",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {
