@@ -160,7 +160,7 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
-      order = "yaa",
+      order = "yab",
       probability_expression = 0.000025,
       tile_restriction = { "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7" },
     },
