@@ -25,6 +25,7 @@ if angelsmods.industries.components then
         },
         {
           icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+          icon_size = 32,
           scale = 0.4375,
           shift = { -10, -10 },
         },
