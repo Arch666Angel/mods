@@ -270,5 +270,7 @@ if angelsmods.industries.tech then
     AI.pack_replace("apm_air_cleaner_machine_1", "green", "grey")
   end
 
+  AI.pack_replace("lamp", "red", "grey")
+
   OV.execute()
 end

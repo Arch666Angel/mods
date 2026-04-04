@@ -295,5 +295,7 @@ if angelsmods.industries.tech then
 	OV.remove_science_pack("military", "datacore-war-1")
 	OV.remove_science_pack("gun-turret", "datacore-war-1")
 
+  AI.core_replace("lamp", "enhance", "basic")
+
   OV.execute()
 end
