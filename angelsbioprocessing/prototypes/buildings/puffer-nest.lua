@@ -28,7 +28,7 @@ data:extend({
     impact_category = "wood",
     autoplace = {
       order = "za",
-      probability_expression = 0.00003,
+      probability_expression = 0.00001,
     },
     pictures = {
       {
