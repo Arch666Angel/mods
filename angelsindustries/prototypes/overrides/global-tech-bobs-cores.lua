@@ -293,6 +293,7 @@ if angelsmods.industries.tech then
   end
 
 	OV.remove_science_pack("military", "datacore-war-1")
+	OV.remove_science_pack("gun-turret", "datacore-war-1")
 
   OV.execute()
 end
