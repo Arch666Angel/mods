@@ -285,5 +285,7 @@ if angelsmods.industries.tech then
     end
   end
 
+	OV.remove_science_pack("military", "datacore-war-1")
+
   OV.execute()
 end
