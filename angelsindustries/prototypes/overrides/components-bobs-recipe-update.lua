@@ -6,44 +6,44 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then -- electronic assemblers
     OV.patch_recipes({
-      { name = "circuit-grey-board", category = "bob-electronics" },
-      { name = "circuit-grey-board-alternative", category = "bob-electronics" },
-      { name = "circuit-red-board", category = "bob-electronics" },
-      { name = "circuit-green-board", category = "bob-electronics-with-fluid" },
-      { name = "circuit-orange-board", category = "bob-electronics-with-fluid" },
-      { name = "circuit-blue-board", category = "bob-electronics-with-fluid" },
-      --{ name = "circuit-yellow-board", category = "bob-electronics-with-fluid" }, --crafted with 2 fluids
+      { name = "circuit-grey-board", category = "crafting" },
+      { name = "circuit-grey-board-alternative", category = "crafting" },
+      { name = "circuit-red-board", category = "crafting" },
+      { name = "circuit-green-board", category = "electronics-with-fluid" },
+      { name = "circuit-orange-board", category = "electronics-with-fluid" },
+      { name = "circuit-blue-board", category = "electronics-with-fluid" },
+      --{ name = "circuit-yellow-board", category = "electronics-with-fluid" }, --crafted with 2 fluids
 
-      { name = "circuit-grey", category = "bob-electronics" },
-      { name = "circuit-red", category = "bob-electronics" },
-      { name = "circuit-green", category = "bob-electronics-machine" },
-      { name = "circuit-orange", category = "bob-electronics-with-fluid" },
-      { name = "circuit-blue", category = "bob-electronics-with-fluid" },
-      { name = "circuit-yellow", category = "bob-electronics-with-fluid" },
+      { name = "circuit-grey", category = "crafting" },
+      { name = "circuit-red", category = "crafting" },
+      { name = "circuit-green", category = "electronics" },
+      { name = "circuit-orange", category = "electronics-with-fluid" },
+      { name = "circuit-blue", category = "electronics-with-fluid" },
+      { name = "circuit-yellow", category = "electronics-with-fluid" },
 
-      { name = "circuit-red-loaded", category = "bob-electronics" },
-      { name = "circuit-green-loaded", category = "bob-electronics-machine" },
-      { name = "circuit-orange-loaded", category = "bob-electronics-machine" },
-      { name = "circuit-blue-loaded", category = "bob-electronics-machine" },
-      { name = "circuit-yellow-loaded", category = "bob-electronics-machine" },
+      { name = "circuit-red-loaded", category = "crafting" },
+      { name = "circuit-green-loaded", category = "electronics" },
+      { name = "circuit-orange-loaded", category = "electronics" },
+      { name = "circuit-blue-loaded", category = "electronics" },
+      { name = "circuit-yellow-loaded", category = "electronics" },
 
-      { name = "circuit-resistor", category = "bob-electronics" },
-      { name = "circuit-transistor", category = "bob-electronics-machine" },
-      { name = "circuit-microchip", category = "bob-electronics-with-fluid" },
-      { name = "circuit-transformer", category = "bob-electronics-machine" },
-      { name = "circuit-cpu", category = "bob-electronics-with-fluid" },
-      { name = "electronic-parts-resistor", category = "bob-electronics-machine" },
-      { name = "electronic-parts-transistor", category = "bob-electronics-machine" },
-      { name = "electronic-parts-microchip", category = "bob-electronics-machine" },
-      { name = "electronic-parts-transformer", category = "bob-electronics-machine" },
-      { name = "electronic-parts-cpu", category = "bob-electronics-machine" },
+      { name = "circuit-resistor", category = "crafting" },
+      { name = "circuit-transistor", category = "electronics" },
+      { name = "circuit-microchip", category = "electronics-with-fluid" },
+      { name = "circuit-transformer", category = "electronics" },
+      { name = "circuit-cpu", category = "electronics-with-fluid" },
+      { name = "electronic-parts-resistor", category = "electronics" },
+      { name = "electronic-parts-transistor", category = "electronics" },
+      { name = "electronic-parts-microchip", category = "electronics" },
+      { name = "electronic-parts-transformer", category = "electronics" },
+      { name = "electronic-parts-cpu", category = "electronics" },
 
-      { name = "block-electronics-0", category = "bob-electronics" },
-      { name = "block-electronics-1", category = "bob-electronics" },
-      { name = "block-electronics-2", category = "bob-electronics-machine" },
-      { name = "block-electronics-3", category = "bob-electronics-machine" },
-      { name = "block-electronics-4", category = "bob-electronics-machine" },
-      { name = "block-electronics-5", category = "bob-electronics-machine" },
+      { name = "block-electronics-0", category = "crafting" },
+      { name = "block-electronics-1", category = "crafting" },
+      { name = "block-electronics-2", category = "electronics" },
+      { name = "block-electronics-3", category = "electronics" },
+      { name = "block-electronics-4", category = "electronics" },
+      { name = "block-electronics-5", category = "electronics" },
     })
   end
 
@@ -151,24 +151,24 @@ if angelsmods.industries.components then
       {
         name = "angels-rocket-ion-thruster",
         ingredients = {
-          { type = "item", name = "heat-shield-tile", amount = 20 },
+          { type = "item", name = "bob-heat-shield-tile", amount = 20 },
         },
       },
       {
         name = "angels-rocket-ion-booster",
         ingredients = {
-          { type = "item", name = "heat-shield-tile", amount = 50 },
+          { type = "item", name = "bob-heat-shield-tile", amount = 50 },
         },
       },
       {
         name = "angels-rocket-hull",
         ingredients = {
-          { type = "item", name = "heat-shield-tile", amount = 25 },
+          { type = "item", name = "bob-heat-shield-tile", amount = 25 },
         },
       },
     })
-    OV.add_prereq("angels-rocket-ion-thruster", "heat-shield")
-    OV.add_prereq("angels-rocket-hull", "heat-shield")
+    OV.add_prereq("angels-rocket-ion-thruster", "bob-heat-shield")
+    OV.add_prereq("angels-rocket-hull", "bob-heat-shield")
   end
 
   -----------------------------------------------------------------------------

@@ -69,7 +69,6 @@ if angelsmods.industries.components then
         "angels-components-batteries-1",
         "angels-components-construction-2",
         "angels-components-cabling-2",
-        "automation-2",
         "angels-resins",
       },
       effects = {
