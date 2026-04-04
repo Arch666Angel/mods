@@ -15,7 +15,6 @@ if angelsmods.industries then
       name = "submachine-gun",
       ingredients = {
         { "!!" },
-        { type = "item", name = "pistol", amount = 1 },
         { type = "item", name = "iron-plate", amount = 5 },
         { type = "item", name = "iron-gear-wheel", amount = 10 },
       },
@@ -74,7 +73,6 @@ if angelsmods.industries then
       name = "shotgun",
       ingredients = {
         { "!!" },
-        { type = "item", name = "pistol", amount = 2 },
         { type = "item", name = "iron-gear-wheel", amount = 5 },
         { type = "item", name = "iron-plate", amount = 5 },
         { type = "item", name = "wood", amount = 5 },
