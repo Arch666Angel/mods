@@ -25,6 +25,7 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   AI.core_replace("angels-basic-chemistry", "processing", "basic")
   -- SMELTING
+  AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
   AI.core_replace("angels-bio-processing-brown", "processing", "basic")
   AI.core_replace("angels-bio-paper-1", "processing", "basic")

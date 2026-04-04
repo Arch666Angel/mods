@@ -1,11 +1,37 @@
 data:extend({
   {
     type = "technology",
+    name = "angels-solder-smelting-basic",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
+    icon_size = 256,
+    prerequisites = {},
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture-smelting",
+      },
+    },
+    unit = {
+      count = 25,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
     name = "angels-solder-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
     prerequisites = {
       --"angels-metallurgy-1"
+      "angels-solder-smelting-basic",
       "angels-tin-smelting-1",
       "angels-lead-smelting-1",
     },
@@ -13,6 +39,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-liquid-molten-solder",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-liquid-molten-solder-2",
       },
       {
         type = "unlock-recipe",
@@ -42,7 +72,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-molten-solder-2",
+        recipe = "angels-liquid-molten-solder-3",
       },
       {
         type = "unlock-recipe",
@@ -78,7 +108,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-liquid-molten-solder-3",
+        recipe = "angels-liquid-molten-solder-4",
       },
       {
         type = "unlock-recipe",

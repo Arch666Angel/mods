@@ -18,6 +18,7 @@ if angelsmods.industries.tech then
     -- PETROCHEM
     "angels-basic-chemistry",
     -- SMELTING
+    "angels-solder-smelting-basic",
     -- BIO PROCESSING
     "angels-bio-processing-brown",
     "angels-bio-paper-1",

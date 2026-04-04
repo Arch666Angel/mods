@@ -133,6 +133,14 @@ if mods["bobplates"] then
       name = "copper-plate",
       subgroup = "bob-material-smelting",
     },
+    {
+      name = "tin-plate",
+      subgroup = "bob-material-smelting",
+    },
+    {
+      name = "lead-plate",
+      subgroup = "bob-material-smelting",
+    },
   })
 
   OV.add_unlock("angels-ore-crushing", "bob-tin-plate")

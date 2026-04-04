@@ -22,6 +22,7 @@ if angelsmods.industries.components then
       icon = "__angelsindustriesgraphics__/graphics/technology/red-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
+        "angels-solder-smelting-basic",
         "angels-bio-paper-1",
       },
       effects = {

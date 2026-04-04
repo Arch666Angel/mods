@@ -1,6 +1,15 @@
 data:extend({
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
+  {
+    type = "item",
+    name = "angels-solder-mixture",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solder-mixture.png",
+    icon_size = 32,
+    subgroup = "angels-alloys",
+    order = "a[solder]-a",
+    stack_size = 200,
+  },
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "fluid",

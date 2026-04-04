@@ -1,10 +1,50 @@
 data:extend({
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
+  {
+    type = "recipe",
+    name = "angels-solder-mixture",
+    category = "crafting",
+    subgroup = "angels-alloys",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "item", name = "angels-plate-tin", amount = 2 },
+      { type = "item", name = "angels-plate-lead", amount = 2 },
+    },
+    results = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
+    },
+    order = "a[solder]-a[angels-solder-mixture]-a",
+  },
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
     name = "angels-liquid-molten-solder",
+    category = "angels-induction-smelting",
+    subgroup = "angels-solder-casting",
+    energy_required = 4,
+    enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = true,
+    ingredients = {
+      { type = "item", name = "angels-solder-mixture", amount = 12 },
+    },
+    results = {
+      { type = "fluid", name = "angels-liquid-molten-solder", amount = 120 },
+    },
+    icons = angelsmods.functions.add_number_icon_layer(
+      angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
+      1,
+      angelsmods.smelting.number_tint
+    ),
+    order = "b[liquid-molten-solder]-a",
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
+  },
+  {
+    type = "recipe",
+    name = "angels-liquid-molten-solder-2",
+    localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting",
     subgroup = "angels-solder-casting",
     energy_required = 4,
@@ -20,15 +60,15 @@ data:extend({
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
-      1,
+      2,
       angelsmods.smelting.number_tint
     ),
-    order = "b[liquid-molten-solder]-a",
+    order = "b[liquid-molten-solder]-b",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "angels-liquid-molten-solder-2",
+    name = "angels-liquid-molten-solder-3",
     localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting-2",
     subgroup = "angels-solder-casting",
@@ -45,15 +85,15 @@ data:extend({
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
-      2,
+      3,
       angelsmods.smelting.number_tint
     ),
-    order = "b[liquid-molten-solder]-b",
+    order = "b[liquid-molten-solder]-c",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
     type = "recipe",
-    name = "angels-liquid-molten-solder-3",
+    name = "angels-liquid-molten-solder-4",
     localised_name = { "fluid-name.angels-liquid-molten-solder" },
     category = "angels-induction-smelting-3",
     subgroup = "angels-solder-casting",
@@ -71,10 +111,10 @@ data:extend({
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-liquid-molten-solder"),
-      3,
+      4,
       angelsmods.smelting.number_tint
     ),
-    order = "b[liquid-molten-solder]-c",
+    order = "b[liquid-molten-solder]-d",
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   {
@@ -127,6 +167,29 @@ data:extend({
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   -- SOLDER CASTING RESULT
+  {
+    type = "recipe",
+    name = "angels-solder-mixture-smelting",
+    localised_name = { "item-name.angels-solder" },
+    category = "smelting",
+    subgroup = "angels-solder-casting",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
+    },
+    results = {
+      { type = "item", name = "angels-solder", amount = 2 },
+    },
+    icons = angelsmods.functions.add_icon_layer(
+      angelsmods.functions.get_object_icons("angels-solder"),
+      angelsmods.functions.get_object_icons("angels-solder-mixture"),
+      { -10, -10 },
+      0.4375
+    ),
+    order = "d[angels-solder]-a",
+  },
   {
     type = "recipe",
     name = "angels-solder",
