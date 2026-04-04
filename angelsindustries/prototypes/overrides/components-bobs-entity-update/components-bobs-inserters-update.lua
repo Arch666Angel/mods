@@ -18,7 +18,7 @@ if angelsmods.industries.components then
           },
         },
         {
-          name = "red-bulk-inserter", -- fast stack inserter
+          name = "bob-red-bulk-inserter", -- fast stack inserter
           ingredients = {
             { "!!" },
             { type = "item", name = "long-handed-inserter", amount = 1 },
@@ -43,7 +43,7 @@ if angelsmods.industries.components then
           name = "bulk-inserter", -- express stack inserter
           ingredients = {
             { "!!" },
-            { type = "item", name = "red-bulk-inserter", amount = 1 },
+            { type = "item", name = "bob-red-bulk-inserter", amount = 1 },
             { type = "item", name = "circuit-orange-loaded", amount = 2 },
             { type = "item", name = "angels-servo-motor-3", amount = 3 },
             { type = "item", name = "angels-bracket", amount = 8 },
