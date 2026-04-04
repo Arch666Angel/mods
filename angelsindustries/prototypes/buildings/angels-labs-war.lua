@@ -125,6 +125,7 @@ if angelsmods.industries.tech then
             "angels-science-pack-blue",
             "angels-science-pack-yellow",
             "datacore-war-2",
+            "apm_nuclear_science_pack"
           }),
         },
       },
@@ -168,6 +169,7 @@ if angelsmods.industries.tech then
         "angels-science-pack-blue",
         "angels-science-pack-yellow",
         "datacore-war-2",
+        "apm_nuclear_science_pack"
       },
       module_slots = 2,
       icons_positioning = {

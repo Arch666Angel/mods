@@ -37,6 +37,8 @@ if angelsmods.industries.tech then
             "angels-science-pack-green",
             "angels-science-pack-orange",
             "datacore-logistic-1",
+            "apm_industrial_science_pack",
+            "apm_steam_science_pack"
           }),
         },
       },
@@ -87,6 +89,8 @@ if angelsmods.industries.tech then
         "angels-science-pack-green",
         "angels-science-pack-orange",
         "datacore-logistic-1",
+        "apm_industrial_science_pack",
+        "apm_steam_science_pack"
       },
       module_slots = 2,
       icons_positioning = {

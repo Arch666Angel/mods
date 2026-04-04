@@ -35,6 +35,8 @@ if angelsmods.industries.tech then
           create_rich_text_icons({
             "angels-science-pack-grey",
             "datacore-basic",
+            "apm_industrial_science_pack",
+		        "apm_steam_science_pack"
           }),
         },
       },
@@ -83,6 +85,8 @@ if angelsmods.industries.tech then
       inputs = {
         "angels-science-pack-grey",
         "datacore-basic",
+        "apm_industrial_science_pack",
+        "apm_steam_science_pack"
       },
       module_slots = 2,
       icons_positioning = {
