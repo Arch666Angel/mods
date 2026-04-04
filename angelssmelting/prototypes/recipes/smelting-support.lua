@@ -179,7 +179,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-casing-resin-mold",
-    localised_name = { "item-name.motor-casing-0" },
+    localised_name = { "item-name.angels-motor-casing-0" },
     category = "crafting",
     subgroup = "angels-mold-casting",
     energy_required = 4,
@@ -208,7 +208,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mold-expendable",
-    localised_name = { "item-name.mold-expendable" },
+    localised_name = { "item-name.angels-mold-expendable" },
     category = "angels-sintering",
     subgroup = "angels-mold-casting",
     energy_required = 4,
@@ -240,7 +240,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mold-non-expendable",
-    localised_name = { "item-name.mold-non-expendable" },
+    localised_name = { "item-name.angels-mold-non-expendable" },
     category = "angels-sintering-3",
     subgroup = "angels-mold-casting",
     energy_required = 4,

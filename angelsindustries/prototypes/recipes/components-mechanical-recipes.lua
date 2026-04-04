@@ -6,7 +6,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-casing-iron-plate",
-      localised_name = { "item-name.motor-casing-1" },
+      localised_name = { "item-name.angels-motor-casing-1" },
       category = "crafting",
       subgroup = "angels-iron-casting",
       energy_required = 0.5,
@@ -150,7 +150,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-casing-tungsten-1",
-      localised_name = { "item-name.motor-casing-5" },
+      localised_name = { "item-name.angels-motor-casing-5" },
       category = "angels-sintering-4",
       subgroup = "angels-tungsten-casting",
       enabled = false,
@@ -182,7 +182,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-casing-tungsten-green",
-      localised_name = { "item-name.motor-casing-5-green" },
+      localised_name = { "item-name.angels-motor-casing-5-green" },
       category = "crafting",
       subgroup = "angels-tungsten-casting",
       enabled = false,
@@ -215,7 +215,7 @@ if angelsmods.industries.components then
     {
       type = "recipe",
       name = "angels-casing-tungsten-2",
-      localised_name = { "item-name.motor-casing-5" },
+      localised_name = { "item-name.angels-motor-casing-5" },
       category = "angels-sintering-5",
       subgroup = "angels-tungsten-casting",
       enabled = false,
