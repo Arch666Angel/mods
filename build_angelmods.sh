@@ -23,7 +23,9 @@ function process() {
   fi
   $(eval $cmd)
   cd "${dirname}/../"
-  zip -q -r "${release}.zip" "${release}/"
+  rm -f "${release}.zip"
+  7za -bso0 -mx1 -mmt16 a "${release}.zip" "${release}"
+#  zip -q -r "${release}.zip" "${release}/"
   rm -rf "${release}/"
   echo "Released ${release}"
 }
