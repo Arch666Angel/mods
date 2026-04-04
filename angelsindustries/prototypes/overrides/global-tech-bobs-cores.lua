@@ -149,7 +149,7 @@ if angelsmods.industries.tech then
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
-    AI.core_replace("bob-repair-pack-4", "basic", "enhance")
+    AI.core_replace("bob-repair-pack-4", "processing", "enhance")
     AI.core_replace("bob-repair-pack-5", "processing", "enhance")
   end
 
@@ -282,7 +282,14 @@ if angelsmods.industries.tech then
         data.raw.recipe["science-pack-gold"].ingredients,
         { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
-    end
+    else
+      OV.remove_science_pack("bob-alien-research-blue", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-orange", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-yellow", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-purple", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-red", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-green", "datacore-processing-1")
+		end
   end
 
   OV.execute()

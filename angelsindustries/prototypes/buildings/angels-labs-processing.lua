@@ -88,6 +88,7 @@ if angelsmods.industries.tech then
         "angels-science-pack-green",
         "angels-science-pack-orange",
         "datacore-processing-1",
+        "angels-token-bio",
       },
       module_slots = 2,
       icons_positioning = {
@@ -127,6 +128,7 @@ if angelsmods.industries.tech then
             "angels-science-pack-yellow",
             "datacore-processing-2",
             "angels-token-bio",
+            "apm_nuclear_science_pack",
           }),
         },
       },
@@ -173,6 +175,8 @@ if angelsmods.industries.tech then
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"
+        "angels-token-bio",
+        "apm_nuclear_science_pack",
       },
       module_slots = 2,
       icons_positioning = {
@@ -210,6 +214,8 @@ if angelsmods.industries.tech then
           create_rich_text_icons({
             "angels-science-pack-white",
             "datacore-processing-2",
+            "angels-token-bio",
+            "apm_nuclear_science_pack",
           }),
         },
       },
@@ -252,6 +258,8 @@ if angelsmods.industries.tech then
       inputs = {
         "angels-science-pack-white",
         "datacore-processing-2",
+        "angels-token-bio",
+        "apm_nuclear_science_pack",
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"

@@ -261,5 +261,13 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   -- none
 
+  AI.pack_replace("angels-bio-processing-alien-3", "blue", "orange")
+  AI.pack_replace("angels-construction-robots-2", "blue", "orange")
+  AI.pack_replace("bob-robot-plasma-drones", "blue", "orange")
+
+  if (mods["apm_power_ldinc"]) then
+    AI.pack_replace("apm_air_cleaner_machine_1", "green", "grey")
+  end
+
   OV.execute()
 end
