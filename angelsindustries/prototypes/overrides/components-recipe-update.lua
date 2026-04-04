@@ -31,7 +31,7 @@ if angelsmods.industries.components then
   angelsmods.functions.hide("engine-unit")
   OV.disable_recipe({ "engine-unit" })
 
-  OV.global_replace_item("electric-engine-unit", "motor-4")
+  OV.global_replace_item("electric-engine-unit", "motor-3")
   angelsmods.functions.hide("electric-engine-unit")
   OV.disable_recipe({ "electric-engine-unit" })
 

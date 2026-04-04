@@ -32,7 +32,7 @@ if angelsmods.industries.components then
       { name = "circuit-microchip", category = "electronics-with-fluid" },
       { name = "circuit-transformer", category = "electronics" },
       { name = "circuit-cpu", category = "electronics-with-fluid" },
-      { name = "electronic-parts-resistor", category = "crafting" },
+      { name = "electronic-parts-resistor", category = "electronics" },
       { name = "electronic-parts-transistor", category = "electronics" },
       { name = "electronic-parts-microchip", category = "electronics" },
       { name = "electronic-parts-transformer", category = "electronics" },

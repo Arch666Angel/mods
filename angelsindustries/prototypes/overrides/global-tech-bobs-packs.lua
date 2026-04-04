@@ -443,5 +443,10 @@ if angelsmods.industries.tech then
     end
   end
 
+  if mods["bobassembly"] then
+    AI.pack_replace("bob-electronics-machine-1", "green", "red")
+    AI.pre_req_replace("bob-electronics-machine-1", "automation-2", "automation")
+  end
+
   OV.execute()
 end
