@@ -28,12 +28,10 @@ if angelsmods.industries.components then
           recipe = "weapon-parts-trigger",
         },
       },
-      unit = {
-        count = 64,
-        ingredients = {
-          { "automation-science-pack", 1 },
-        },
-        time = 60,
+			research_trigger = {
+			  type = "craft-item",
+        item = "firearm-magazine",
+        count = 10,
       },
       order = "a-5",
     },
