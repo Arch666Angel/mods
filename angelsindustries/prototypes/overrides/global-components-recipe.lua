@@ -15,7 +15,7 @@ if angelsmods.industries.components then
   OV.global_replace_item("iron-gear-wheel", "angels-gear")
   OV.global_replace_item("engine-unit", "motor-2")
   OV.global_replace_technology("engine", "angels-components-mechanical-2")
-  OV.global_replace_item("electric-engine-unit", "motor-4")
+  OV.global_replace_item("electric-engine-unit", "motor-3")
   if angelsmods.functions.tech_uses_science_pack("electric-engine", "chemical-science-pack") then
     OV.global_replace_technology("electric-engine", "angels-components-mechanical-4")
   else

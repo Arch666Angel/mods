@@ -125,3 +125,14 @@ else
   OV.add_prereq("angels-gardens-3", "angels-bio-processing-paste")
   OV.remove_unlock("angels-bio-processing-brown", "angels-solid-alginic-acid")
 end
+
+if mods["apm_power_ldinc"] then
+  OV.add_unlock("apm_crusher_machine_1", "angels-cellulose-fiber-raw-wood")
+  OV.remove_unlock("angels-bio-arboretum-1", "angels-cellulose-fiber-raw-wood")
+  OV.patch_recipes({
+    {
+      name = "angels-cellulose-fiber-raw-wood",
+      category = "apm_crusher",
+    },
+  })
+end

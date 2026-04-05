@@ -152,6 +152,7 @@ if angelsmods.industries.tech then
             "bob-alien-science-pack-purple",
             "bob-alien-science-pack-red",
             "bob-alien-science-pack-yellow",            
+            "apm_nuclear_science_pack",
           }),
         },
       },
@@ -207,6 +208,7 @@ if angelsmods.industries.tech then
         "bob-alien-science-pack-purple",
         "bob-alien-science-pack-red",
         "bob-alien-science-pack-yellow",            
+        "apm_nuclear_science_pack",
       },
       module_slots = 2,
       icons_positioning = {
@@ -244,6 +246,7 @@ if angelsmods.industries.tech then
           create_rich_text_icons({
             "angels-science-pack-white",
             "datacore-processing-2",
+            "angels-token-bio",
             "bob-science-pack-gold",
             "bob-alien-science-pack",
             "bob-alien-science-pack-blue",
@@ -252,6 +255,7 @@ if angelsmods.industries.tech then
             "bob-alien-science-pack-purple",
             "bob-alien-science-pack-red",
             "bob-alien-science-pack-yellow",            
+            "apm_nuclear_science_pack",
           }),
         },
       },
@@ -294,6 +298,7 @@ if angelsmods.industries.tech then
       inputs = {
         "angels-science-pack-white",
         "datacore-processing-2",
+        "angels-token-bio",
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"
@@ -306,6 +311,7 @@ if angelsmods.industries.tech then
         "bob-alien-science-pack-purple",
         "bob-alien-science-pack-red",
         "bob-alien-science-pack-yellow",            
+        "apm_nuclear_science_pack",
       },
       module_slots = 3,
       icons_positioning = {

@@ -18,6 +18,7 @@ if angelsmods.industries.tech then
     -- PETROCHEM
     "angels-basic-chemistry",
     -- SMELTING
+    "angels-solder-smelting-basic",
     -- BIO PROCESSING
     "angels-bio-processing-brown",
     "angels-bio-paper-1",
@@ -262,6 +263,16 @@ if angelsmods.industries.tech then
   -- WHITE SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
   -- none
+
+  AI.pack_replace("angels-bio-processing-alien-3", "blue", "orange")
+  AI.pack_replace("angels-construction-robots-2", "blue", "orange")
+  AI.pack_replace("bob-robot-plasma-drones", "blue", "orange")
+
+  if (mods["apm_power_ldinc"]) then
+    AI.pack_replace("apm_air_cleaner_machine_1", "green", "grey")
+  end
+
+  AI.pack_replace("lamp", "red", "grey")
 
   OV.execute()
 end

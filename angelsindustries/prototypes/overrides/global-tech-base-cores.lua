@@ -25,6 +25,7 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   AI.core_replace("angels-basic-chemistry", "processing", "basic")
   -- SMELTING
+  AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
   AI.core_replace("angels-bio-processing-brown", "processing", "basic")
   AI.core_replace("angels-bio-paper-1", "processing", "basic")
@@ -204,5 +205,19 @@ if angelsmods.industries.tech then
 
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   AI.tech_unlock_reset()
+  
+  if (mods["apm_power_ldinc"]) then
+    OV.remove_science_pack("apm_power_electricity", "datacore-energy-1")
+    OV.remove_science_pack("apm_water_supply-1", "datacore-processing-1")
+    OV.remove_science_pack("apm_steam_mining_drill", "datacore-processing-1")
+  end
+
+  if (mods["apm_nuclear_ldinc"]) then
+    AI.core_replace("apm_nuclear_fuel", "basic", "energy")
+    AI.core_replace("apm_nuclear_rtg", "basic", "energy")
+    AI.core_replace("apm_nuclear_thorium_fuel", "basic", "energy")
+    AI.core_replace("apm_nuclear_neptunium_fuel", "basic", "energy")
+  end
+
   OV.execute()
 end

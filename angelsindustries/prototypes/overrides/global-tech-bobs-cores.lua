@@ -282,10 +282,20 @@ if angelsmods.industries.tech then
         data.raw.recipe["science-pack-gold"].ingredients,
         { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
-    end
+    else
+      OV.remove_science_pack("bob-alien-research-blue", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-orange", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-yellow", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-purple", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-red", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-green", "datacore-processing-1")
+		end
   end
 
 	OV.remove_science_pack("military", "datacore-war-1")
+	OV.remove_science_pack("gun-turret", "datacore-war-1")
+
+  AI.core_replace("lamp", "enhance", "basic")
 
   OV.execute()
 end

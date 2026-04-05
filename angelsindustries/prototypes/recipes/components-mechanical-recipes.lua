@@ -101,6 +101,7 @@ if angelsmods.industries.components then
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
+            icon_size = 32,
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -135,6 +136,7 @@ if angelsmods.industries.components then
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
+            icon_size = 32,
             scale = 0.4375,
             shift = { -10, -10 },
           },
@@ -169,6 +171,7 @@ if angelsmods.industries.components then
         },
         {
           icon = "__angelssmeltinggraphics__/graphics/icons/expendable-mold.png",
+          icon_size = 32,
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -201,6 +204,7 @@ if angelsmods.industries.components then
         },
         {
           icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
+          icon_size = 32,
           scale = 0.4375,
           shift = { -10, -10 },
         },
@@ -230,6 +234,7 @@ if angelsmods.industries.components then
         },
         {
           icon = "__angelssmeltinggraphics__/graphics/icons/non-expendable-mold.png",
+          icon_size = 32,
           scale = 0.4375,
           shift = { -10, -10 },
         },
