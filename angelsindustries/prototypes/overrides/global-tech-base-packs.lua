@@ -171,8 +171,7 @@ if angelsmods.industries.tech then
   --BIOPROCESSING
   AI.pack_replace("angels-bio-yield-module", "green", "orange")
   AI.pack_replace("angels-bio-wood-processing-3", "green", "orange")
-  AI.pack_replace("angels-bio-processing-alien-2", "green", "orange")
-  AI.pack_replace("angels-bio-processing-alien-3", "green", "orange")
+  AI.pack_replace("angels-bio-processing-alien-3", "blue", "orange")
   AI.pack_replace("angels-geode-crystallization-1", "green", "orange")
   AI.pack_replace("angels-bio-processing-crystal-splinter-1", "green", "orange")
   AI.pack_replace("angels-bio-processing-crystal-splinter-2", "green", "orange")
@@ -194,8 +193,9 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-components-weapons-advanced", "blue", "orange")
   AI.pack_replace("angels-components-cabling-4", "blue", "orange")
   AI.pack_replace("cargo-robots-2", "green", "orange")
-  AI.pack_replace("angels-construction-robots-2", "green", "orange")
+  AI.pack_replace("angels-construction-robots-2", "blue", "orange")
   AI.pack_replace("angels-components-batteries-3", "blue", "orange")
+  AI.pack_replace("angels-bio-yield-module-2", "blue", "orange")
 
   -------------------------------------------------------------------------------
   -- BLUE SCIENCE PACKS ---------------------------------------------------------
@@ -236,6 +236,8 @@ if angelsmods.industries.tech then
   AI.pack_replace("efficiency-module-3", "blue", "yellow")
   AI.pack_replace("effect-transmission", "blue", "yellow")
   AI.pack_replace("inserter-capacity-bonus-6", "blue", "yellow")
+  AI.pack_replace("angels-bio-yield-module-5", "white", "yellow")
+
   OV.set_science_pack("rocket-silo", "angels-science-pack-grey")
   OV.set_science_pack("rocket-silo", "angels-science-pack-red")
   OV.set_science_pack("rocket-silo", "angels-science-pack-green")
