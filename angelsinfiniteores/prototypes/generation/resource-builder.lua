@@ -304,7 +304,7 @@ if not angelsmods.functions.make_resource then
           end
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-" ..sheet_id .. ".png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-" .. sheet_id .. ".png",
               priority = "extra-high",
               tint = input.tint,
               width = 128,
