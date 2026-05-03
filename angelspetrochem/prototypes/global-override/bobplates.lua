@@ -33,7 +33,7 @@ if mods["bobplates"] then
     "bob-air-pump-3",
     "bob-air-pump-4",
     "bob-void-pump",
-    "void-bob-ammonia",
+    "void-ammonia",
     "void-bob-carbon-dioxide",
     "void-bob-chlorine",
     "void-bob-deuterium",
@@ -176,7 +176,7 @@ if mods["bobplates"] then
     "sulfur",
     "bob-sulfur-2",
     "bob-sulfur-3",
-    "bob-carbon",
+    "carbon",
     "bob-resin-oil",
   })
   -- plastics -----------------------------------------------------------------
@@ -226,7 +226,7 @@ if mods["bobplates"] then
       category = "angels-petrochem-electrolyser",
     },
     {
-      name = "bob-lithium",
+      name = "lithium-plate",
       category = "angels-petrochem-electrolyser",
     },
     {

@@ -156,7 +156,7 @@ if bobmods and bobmods.ores then
 
     if bobmods.ores.tungsten.enabled then
       angelsmods.functions.add_resource("update", {
-        name = "bob-tungsten-ore",
+        name = "tungsten-ore",
         order = "b-cl",
         autoplace = {
           starting_area = false,

@@ -81,8 +81,8 @@ end
 move_item("battery", "angels-basic-intermediate", "c[battery]-a")
 
 if mods["bobplates"] then
-  move_item("bob-lithium-ion-battery", "angels-basic-intermediate", "c[battery]-b")
-  move_item("bob-silver-zinc-battery", "angels-basic-intermediate", "c[battery]-c")
+  move_item("bob-battery-2", "angels-basic-intermediate", "c[battery]-b")
+  move_item("bob-battery-3", "angels-basic-intermediate", "c[battery]-c")
 end
 
 -------------------------------------------------------------------------------

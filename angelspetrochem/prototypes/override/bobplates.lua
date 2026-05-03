@@ -274,9 +274,9 @@ end
 -- CARBON PROCESSING ----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  OV.global_replace_item("bob-carbon", "angels-solid-carbon")
-  angelsmods.functions.hide("bob-carbon")
-  OV.remove_unlock("bob-chemical-processing-1", "bob-carbon")
+  OV.global_replace_item("carbon", "angels-solid-carbon")
+  angelsmods.functions.hide("carbon")
+  OV.remove_unlock("bob-chemical-processing-1", "carbon")
   OV.remove_unlock("bob-chemical-processing-1", "bob-carbon-from-wood")
   OV.hide_recipe("bob-carbon-from-wood")
   OV.add_prereq("bob-lead-processing", "angels-coal-processing")

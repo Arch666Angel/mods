@@ -24,8 +24,8 @@ if mods["bobrevamp"] then
 
   angelsmods.functions.hide("bob-sour-gas")
 
-  OV.hide_recipe("bob-ammonia")
-  OV.converter_fluid("bob-ammonia", "angels-gas-ammonia")
+  OV.hide_recipe("ammonia")
+  OV.converter_fluid("ammonia", "angels-gas-ammonia")
 
   if angelsmods.trigger.disable_bobs_chemical_plants then
     OV.global_replace_technology("chemical-plant", "angels-basic-chemistry-2")

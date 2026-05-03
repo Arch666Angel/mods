@@ -121,6 +121,6 @@ if mods["bobelectronics"] then
     { new = "circuit-orange-loaded", amt_multi = 1, unlock_by = "advanced-circuit" }
 end
 if mods["bobplates"] then
-  angelsmods.industries.general_replace["bob-lithium-ion-battery"] = { new = "battery-3", amt_multi = 1 }
-  angelsmods.industries.general_replace["bob-silver-zinc-battery"] = { new = "battery-6", amt_multi = 1 }
+  angelsmods.industries.general_replace["bob-battery-2"] = { new = "battery-3", amt_multi = 1 }
+  angelsmods.industries.general_replace["bob-battery-3"] = { new = "battery-6", amt_multi = 1 }
 end
