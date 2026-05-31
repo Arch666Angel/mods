@@ -21,16 +21,22 @@ if mods["bobwarfare"] then
   -----------------------------------------------------------------------------
   -- NITROGLYCERIN ------------------------------------------------------------
   -----------------------------------------------------------------------------
-  data.raw["fluid"]["nitroglycerin"].icon = nil
-  data.raw["fluid"]["nitroglycerin"].icons =
-    angelsmods.functions.create_liquid_fluid_icon({ "__bobwarfare__/graphics/icons/nitroglycerin.png", 64 }, "CNO")
+  local nitroglycerin_name = data.raw.fluid["nitroglycerin"] and "nitroglycerin"
+    or data.raw.fluid["bob-nitroglycerin"] and "bob-nitroglycerin"
+  if nitroglycerin_name then
+    data.raw.fluid[nitroglycerin_name].icon = nil
+    data.raw.fluid[nitroglycerin_name].icons =
+      angelsmods.functions.create_liquid_fluid_icon({ "__bobwarfare__/graphics/icons/nitroglycerin.png", 64 }, "CNO")
 
-  data.raw["recipe"]["nitroglycerin"].icon = nil
-  data.raw["recipe"]["nitroglycerin"].icons =
-    angelsmods.functions.create_liquid_recipe_icon({ { "__bobwarfare__/graphics/icons/nitroglycerin.png", 64 } }, "CNO")
-  -- move_item needs to be called before barrel_overrides
-  angelsmods.functions.move_item("nitroglycerin", "petrochem-nitrogen-fluids", "ob", "fluid")
-  OV.barrel_overrides("nitroglycerin", "vanilla")
+    if data.raw.recipe[nitroglycerin_name] then
+      data.raw.recipe[nitroglycerin_name].icon = nil
+      data.raw.recipe[nitroglycerin_name].icons =
+        angelsmods.functions.create_liquid_recipe_icon({ { "__bobwarfare__/graphics/icons/nitroglycerin.png", 64 } }, "CNO")
+    end
+    -- move_item needs to be called before barrel_overrides
+    angelsmods.functions.move_item(nitroglycerin_name, "petrochem-nitrogen-fluids", "ob", "fluid")
+    OV.barrel_overrides(nitroglycerin_name, "vanilla")
+  end
 
   -----------------------------------------------------------------------------
   -- RUBBER -------------------------------------------------------------------

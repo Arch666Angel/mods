@@ -78,12 +78,31 @@ end
 --GEM PROCESSING ------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.recipe["bob-ruby-3"].result_count = 1
-  data.raw.recipe["bob-sapphire-3"].result_count = 1
-  data.raw.recipe["bob-emerald-3"].result_count = 1
-  data.raw.recipe["bob-amethyst-3"].result_count = 1
-  data.raw.recipe["bob-topaz-3"].result_count = 1
-  data.raw.recipe["bob-diamond-3"].result_count = 1
+  -- Bob's 2.0 recipes are already in the new `results` shape.  Angel's old
+  -- override used `result_count`; normalize both possible shapes here so the
+  -- gem amount adjustment remains independent of the Bob branch being loaded.
+  local function set_result_amount(recipe_name, amount)
+    local recipe = data.raw.recipe[recipe_name]
+    if not recipe then
+      return
+    end
+    if recipe.results and recipe.results[1] then
+      recipe.results[1].amount = amount
+      return
+    end
+    if recipe.result then
+      recipe.results = { { type = "item", name = recipe.result, amount = amount } }
+      recipe.result = nil
+      recipe.result_count = nil
+    end
+  end
+
+  set_result_amount("bob-ruby-3", 1)
+  set_result_amount("bob-sapphire-3", 1)
+  set_result_amount("bob-emerald-3", 1)
+  set_result_amount("bob-amethyst-3", 1)
+  set_result_amount("bob-topaz-3", 1)
+  set_result_amount("bob-diamond-3", 1)
 end
 
 -------------------------------------------------------------------------------

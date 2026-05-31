@@ -1,5 +1,10 @@
 local sea_pump = require("src.sea-pump")
 
+-- Keep Angel's existing migration code readable while using the Factorio 2.0
+-- persistent-state table.  This function only upgrades the sea-pump storage
+-- schema, so a local compatibility alias is enough.
+local global = storage
+
 return function(configuration_data)
   local mod_changes = configuration_data.mod_changes["angelspump"]
   if mod_changes and mod_changes.new_version ~= (mod_changes.old_version or "") then

@@ -2,6 +2,15 @@ local OV = angelsmods.functions.OV
 local move_item = angelsmods.functions.move_item
 
 if mods["bobmodules"] then
+  local function module_technology(name)
+    return data.raw.technology[name] or data.raw.technology[name:gsub("^effectivity", "efficiency")]
+  end
+
+  local function module_name(name)
+    local prototype = data.raw.module[name] or data.raw.module[name:gsub("^effectivity", "efficiency")]
+    return prototype and prototype.name or name
+  end
+
   -----------------------------------------------------------------------------
   -- EXISTING MODULES CATEGORY ------------------------------------------------
   -----------------------------------------------------------------------------
@@ -435,10 +444,13 @@ if mods["bobmodules"] then
       i > 1 and "productivity-module-" .. i or "productivity-module",
       i > 1 and "effectivity-module-" .. i or "effectivity-module",
     }) do
-      for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
-          table.insert(ingredients, util.table.deepcopy(ingredient))
+      local tech = module_technology(tech_name)
+      if tech and tech.unit then
+        for _, ingredient in pairs(tech.unit.ingredients) do
+          if not ingredients_added[ingredient.name or ingredient[1]] then
+            ingredients_added[ingredient.name or ingredient[1]] = true
+            table.insert(ingredients, util.table.deepcopy(ingredient))
+          end
         end
       end
     end
@@ -457,10 +469,13 @@ if mods["bobmodules"] then
       "productivity-module-" .. (i < 6 and 4 or 6),
       "effectivity-module-" .. (i < 6 and 4 or 6),
     }) do
-      for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
-          table.insert(ingredients, util.table.deepcopy(ingredient))
+      local tech = module_technology(tech_name)
+      if tech and tech.unit then
+        for _, ingredient in pairs(tech.unit.ingredients) do
+          if not ingredients_added[ingredient.name or ingredient[1]] then
+            ingredients_added[ingredient.name or ingredient[1]] = true
+            table.insert(ingredients, util.table.deepcopy(ingredient))
+          end
         end
       end
     end
@@ -471,6 +486,10 @@ if mods["bobmodules"] then
         solder_amount = solder_amount + 1
       end
     end
+    local productivity_module_name = module_name("productivity-module-" .. i)
+    local efficiency_module_name = module_name("effectivity-module-" .. i)
+    local productivity_technology =
+      module_technology("productivity-module-" .. (i < 6 and 4 or 6)) or data.raw.technology["modules"]
     data:extend({
       {
         type = "module",
@@ -497,8 +516,8 @@ if mods["bobmodules"] then
         enabled = false,
         ingredients = {
           --{type = "item", name = "solder", amount = solder_amount},
-          { type = "item", name = "productivity-module-" .. i, amount = 1 },
-          { type = "item", name = "effectivity-module-" .. i, amount = 1 },
+          { type = "item", name = productivity_module_name, amount = 1 },
+          { type = "item", name = efficiency_module_name, amount = 1 },
           { type = "item", name = "token-bio", amount = 1 },
         },
         energy_required = 15,
@@ -513,8 +532,8 @@ if mods["bobmodules"] then
         order = "c-a",
         prerequisites = {
           "angels-bio-yield-module-" .. i - 1,
-          "productivity-module-" .. i,
-          "effectivity-module-" .. i,
+          productivity_module_name,
+          efficiency_module_name,
         },
         effects = {
           {
@@ -525,7 +544,7 @@ if mods["bobmodules"] then
         unit = {
           count = i < 6 and ((i - 1) * 50) or ((i - 3) * 100),
           ingredients = ingredients,
-          time = data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit.time,
+          time = productivity_technology and productivity_technology.unit and productivity_technology.unit.time or 60,
         },
       },
     })

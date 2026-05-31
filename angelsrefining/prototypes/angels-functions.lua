@@ -1000,21 +1000,29 @@ function angelsmods.functions.create_solid_recipe_icon(bot_molecules_icon, solid
   return recipe_icons
 end
 
+-- Factorio 2.0 base/Bob fluids are not completely consistent about color
+-- tables while this mixed 1.1/2.0 pack is loading: some use keyed RGBA fields
+-- and some older Angel helpers pass positional arrays.  Accept both so tint
+-- generation does not crash while still preserving the original color values.
+local function color_component(color, key, index)
+  return color and (color[key] or color[index]) or nil
+end
+
 function angelsmods.functions.get_fluid_recipe_tint(fluid_name)
   -- returns a crafting_machine_tint depending on the fluid color
   local fluid = data.raw.fluid[fluid_name]
   return fluid
       and {
         primary = {
-          r = fluid.base_color.r or 0,
-          g = fluid.base_color.g or 0,
-          b = fluid.base_color.b or 0,
+          r = color_component(fluid.base_color, "r", 1) or 0,
+          g = color_component(fluid.base_color, "g", 2) or 0,
+          b = color_component(fluid.base_color, "b", 3) or 0,
           a = 185 / 255,
         },
         secondary = {
-          r = fluid.flow_color.r or 0,
-          g = fluid.flow_color.g or 0,
-          b = fluid.flow_color.b or 0,
+          r = color_component(fluid.flow_color, "r", 1) or 0,
+          g = color_component(fluid.flow_color, "g", 2) or 0,
+          b = color_component(fluid.flow_color, "b", 3) or 0,
           a = 185 / 255,
         },
       }
@@ -1044,12 +1052,16 @@ function angelsmods.functions.get_recipe_tints(layers, opacity)
       }) do
         if data.raw[type][name] then
           local base = data.raw[type][name]
+          local base_color = base.base_color or {}
+          local r = color_component(base_color, "r", 1) or 0
+          local g = color_component(base_color, "g", 2) or 0
+          local b = color_component(base_color, "b", 3) or 0
           tints[index] = {
-            r = base.base_color.r or 0,
-            g = base.base_color.g or 0,
-            b = base.base_color.b or 0,
-            a = base.base_color.a --if alpha, maintain
-              or ((base.base_color.r < 1 and base.base_color.g < 1) and alpha or alpha * 255),
+            r = r,
+            g = g,
+            b = b,
+            a = color_component(base_color, "a", 4) --if alpha, maintain
+              or ((r < 1 and g < 1) and alpha or alpha * 255),
           }
           break
         end
@@ -1427,7 +1439,13 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
   for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
-      if type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
+      if flag == "hidden" and (type == "item" or type == "tool" or type == "item-with-entity-data") then
+        -- 2.0 validates item flags more strictly: `hidden` is now a boolean
+        -- field on item-like prototypes, not a value in the flags array.
+        to_add.hidden = true
+      elseif type == "fluid" and flag == "hidden" then --also remove barrel if a fluid
+        -- Fluids also use the boolean field, and Angel's old hide helper is
+        -- responsible for removing the associated barreling/void recipes.
         to_add.hidden = true
         angelsmods.functions.disable_barreling_recipes(entity)
         for _, void_category in pairs({ "water", "chemical" }) do

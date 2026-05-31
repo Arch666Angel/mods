@@ -1,4 +1,11 @@
-local pollution_absorption_per_second = data.raw["tile"]["out-of-map"].pollution_absorption_per_second
+-- Factorio 2.0 renamed tile pollution absorption from
+-- `pollution_absorption_per_second` to `absorptions_per_second.pollution`.
+-- Read either shape here because this file may run after base 2.0 prototypes
+-- but before all compatibility shims have normalized Angel's generated tiles.
+local pollution_absorption_per_second = (
+  data.raw["tile"]["out-of-map"].pollution_absorption_per_second
+  or data.raw["tile"]["out-of-map"].absorptions_per_second.pollution
+)
   * (2 ^ (settings.startup["angels-bio-tile-pollution-absorbtion-multiplier"].value - 1))
 data:extend({
   {
@@ -26,7 +33,10 @@ data:extend({
     walking_speed_modifier = 1.3,
     layer = 80,
     decorative_removal_probability = 1,
-    pollution_absorption_per_second = pollution_absorption_per_second,
+    -- 2.0 tile absorption shape.  Keep the local variable name above because
+    -- the setting/locale text still describes this as pollution absorbed per
+    -- second from the player's point of view.
+    absorptions_per_second = { pollution = pollution_absorption_per_second },
     variants = {
       main = {
         {

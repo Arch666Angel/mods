@@ -92,7 +92,7 @@ local turret_params = data.raw["fluid-turret"]["flamethrower-turret"].attack_par
 
 if mods["bobplates"] then
   for fluid, vals in pairs(Energy_table) do
-    if vals.fv then
+    if vals.fv and data.raw.fluid[fluid] then
       data.raw.fluid[fluid].fuel_value = (math.floor(vals.fv / 5 + 0.5)) * 5 .. "kJ"
       data.raw.fluid[fluid].emissions_multiplier = vals.em or data.raw.fluid[fluid].emissions_multiplier or 1
       if vals.turr ~= false then
@@ -104,8 +104,10 @@ if mods["bobplates"] then
     end
   end
   --fuel oil balancing
-  data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients =
-    { { type = "fluid", name = "liquid-fuel", amount = 100 } } --up from 20
+  if data.raw.recipe["enriched-fuel-from-liquid-fuel"] then
+    data.raw.recipe["enriched-fuel-from-liquid-fuel"].ingredients =
+      { { type = "fluid", name = "liquid-fuel", amount = 100 } } --up from 20
+  end
 end
 
 -------------------------------------------------------------------------------
@@ -123,27 +125,35 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- liquid fuel --------------------------------------------------------------
-  move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
-  data.raw["fluid"]["liquid-fuel"].icon = nil
-  data.raw["fluid"]["liquid-fuel"].icons =
-    angelsmods.functions.create_liquid_fluid_icon(nil, { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } })
-  OV.barrel_overrides("liquid-fuel", "acid")
+  if data.raw.fluid["liquid-fuel"] then
+    move_item("liquid-fuel", "petrochem-carbon-fluids", "dac", "fluid")
+    data.raw["fluid"]["liquid-fuel"].icon = nil
+    data.raw["fluid"]["liquid-fuel"].icons =
+      angelsmods.functions.create_liquid_fluid_icon(nil, { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } })
+    OV.barrel_overrides("liquid-fuel", "acid")
+  end
 
-  data.raw["recipe"]["liquid-fuel"].always_show_products = true
-  data.raw["recipe"]["liquid-fuel"].icon = nil
-  data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
-    { "liquid-fuel" },
-    { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } }
-  )
+  if data.raw.recipe["liquid-fuel"] then
+    data.raw["recipe"]["liquid-fuel"].always_show_products = true
+    data.raw["recipe"]["liquid-fuel"].icon = nil
+    data.raw["recipe"]["liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
+      { "liquid-fuel" },
+      { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } }
+    )
+  end
   --update bobs tungstic acid to use new icon
-  data.raw.fluid["tungstic-acid"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
-    nil,
-    { { 235, 235, 240 }, { 235, 235, 240 }, { 135, 090, 023, 0.75 }, { 135, 090, 023, 0.75 } }
-  )
-  data.raw.fluid["tungstic-acid"].icon = nil
-  data.raw.fluid["tungstic-acid"].icon_size = nil
-  data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
-  data.raw.recipe["tungstic-acid"].icon = nil
+  if data.raw.fluid["tungstic-acid"] then
+    data.raw.fluid["tungstic-acid"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
+      nil,
+      { { 235, 235, 240 }, { 235, 235, 240 }, { 135, 090, 023, 0.75 }, { 135, 090, 023, 0.75 } }
+    )
+    data.raw.fluid["tungstic-acid"].icon = nil
+    data.raw.fluid["tungstic-acid"].icon_size = nil
+    data.raw.fluid["tungstic-acid"].icon_mipmaps = nil
+  end
+  if data.raw.recipe["tungstic-acid"] then
+    data.raw.recipe["tungstic-acid"].icon = nil
+  end
   OV.patch_recipes({
     {
       name = "liquid-fuel",

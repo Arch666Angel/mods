@@ -42,7 +42,10 @@ data:extend({
   },
 })
 
-if mods["boblibrary"] then
+-- Bob's 2.0 dev branch can be present without the old module helper library
+-- layout used by Angel's 1.1 code.  Excluding these modules from productivity
+-- effects is nice-to-have; guard it so missing helper tables do not block load.
+if bobmods and bobmods.lib and bobmods.lib.module then
   for _, module_name in pairs({
     "angels-bio-yield-module",
     "angels-bio-yield-module-2",

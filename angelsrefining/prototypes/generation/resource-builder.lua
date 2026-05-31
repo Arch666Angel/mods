@@ -1,6 +1,10 @@
-local noise = require("noise")
-local tne = noise.to_noise_expression
 local resource_autoplace = require("resource-autoplace")
+
+-- Factorio 2.0 removed the old `particle` prototype type used by Angel's
+-- 1.1 resource generator.  Ore particles are now `optimized-particle`
+-- prototypes, so keep a local reference to that table and generate/look up the
+-- new type everywhere this builder handles resource mining particles.
+local particles = data.raw["optimized-particle"] or {}
 
 --Create autoplace
 local function make_resautoplace(input)
@@ -18,7 +22,7 @@ end
 
 --Create particles
 local function make_particle(input)
-  if not data.raw.particle[input.name .. "-particle"] then
+  if not particles[input.name .. "-particle"] then
     data:extend({
       {
         type = "optimized-particle",
@@ -947,7 +951,7 @@ function angelsmods.functions.make_resource()
       generate_presets(input.name)
       --Create Particle if resource yields items
       if input.type == "item" then
-        if input.get and data.raw.particle[input.get .. "-particle"] then
+        if input.get and particles[input.get .. "-particle"] then
           input.particle = input.get .. "-particle"
         else
           make_particle(input)

@@ -1,5 +1,10 @@
 require("util")
 
+-- Factorio 2.0 removed the old `global` table.  The sea-pump control code has
+-- a small, stable state shape (`SP_data`), so alias it to `storage` instead of
+-- rewriting every getter/setter and risking a migration bug.
+local global = storage
+
 -- Create class ---------------------------------------------------------------
 local sea_pump = {}
 

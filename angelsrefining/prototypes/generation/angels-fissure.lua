@@ -1,9 +1,5 @@
 data:extend({
   {
-    type = "noise-layer",
-    name = "angels-fissure",
-  },
-  {
     type = "autoplace-control",
     name = "angels-fissure",
     localised_name = { "", "[entity=angels-fissure] ", { "entity-name.angels-fissure" } },

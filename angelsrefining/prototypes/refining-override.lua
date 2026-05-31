@@ -48,7 +48,7 @@ if mods["bobplates"] then
     OV.disable_recipe("brine")
   end
   --OVERRIDE BARRELING
-  if data.raw["item-subgroup"]["bob-gas-bottle"] then
+  if data.raw["item-subgroup"]["bob-gas-bottle"] and data.raw.item["empty-canister"] and data.raw.item["gas-canister"] then
     data.raw.item["empty-canister"].subgroup = "angels-fluid-control"
     data.raw.item["empty-canister"].order = "i"
     data.raw.item["gas-canister"].subgroup = "angels-fluid-control"

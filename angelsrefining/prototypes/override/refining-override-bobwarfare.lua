@@ -59,20 +59,22 @@ end
 -------------------------------------------------------------------------------
 if mods["bobwarfare"] then
   if mods["bobplates"] then
-    OV.patch_recipes({
-      {
-        name = "heavy-armor-2",
-        ingredients = {
-          { name = "gunmetal-alloy", amount = "cobalt-steel-alloy" },
+    if data.raw.armor["heavy-armor-2"] then
+      OV.patch_recipes({
+        {
+          name = "heavy-armor-2",
+          ingredients = {
+            { name = "gunmetal-alloy", amount = "cobalt-steel-alloy" },
+          },
         },
-      },
-    })
-    data.raw.armor["heavy-armor-2"].localised_name = { "item-name.AB-heavy-armour-2" }
-    OV.remove_prereq("bob-armor-making-3", "cobalt-processing")
-    if mods["angelssmelting"] then
-      OV.add_prereq("bob-armor-making-3", "angels-gunmetal-smelting-1")
-    else
-      OV.add_prereq("bob-armor-making-3", "zinc-processing")
+      })
+      data.raw.armor["heavy-armor-2"].localised_name = { "item-name.AB-heavy-armour-2" }
+      OV.remove_prereq("bob-armor-making-3", "cobalt-processing")
+      if mods["angelssmelting"] then
+        OV.add_prereq("bob-armor-making-3", "angels-gunmetal-smelting-1")
+      else
+        OV.add_prereq("bob-armor-making-3", "zinc-processing")
+      end
     end
   else
     OV.add_prereq("bob-armor-making-3", "logistic-science-pack")

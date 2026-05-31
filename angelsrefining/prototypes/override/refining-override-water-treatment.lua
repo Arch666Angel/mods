@@ -249,16 +249,17 @@ end
 -- LITHIA WATER ---------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  data.raw.fluid["lithia-water"].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
+  local lithia_water = data.raw.fluid["lithia-water"] and "lithia-water" or "bob-lithia-water"
+  data.raw.fluid[lithia_water].icons = angelsmods.functions.create_viscous_liquid_fluid_icon(
     nil,
     { { 032, 118, 206 }, { 248, 083, 099 }, { 038, 137, 237, 0.8 }, { 255, 073, 072, 0.8 } }
   )
-  data.raw.fluid["lithia-water"].icon = nil
-  data.raw.fluid["lithia-water"].icon_size = nil
-  data.raw.fluid["lithia-water"].icon_mipmaps = nil
-  data.raw.fluid["lithia-water"].base_color = angelsmods.functions.fluid_color("Ws4Tw")
-  data.raw.fluid["lithia-water"].flow_color = angelsmods.functions.flow_color("Ws4Tw")
-  angelsmods.functions.move_item("lithia-water", "water-treatment-fluid", "ea", "fluid")
+  data.raw.fluid[lithia_water].icon = nil
+  data.raw.fluid[lithia_water].icon_size = nil
+  data.raw.fluid[lithia_water].icon_mipmaps = nil
+  data.raw.fluid[lithia_water].base_color = angelsmods.functions.fluid_color("Ws4Tw")
+  data.raw.fluid[lithia_water].flow_color = angelsmods.functions.flow_color("Ws4Tw")
+  angelsmods.functions.move_item(lithia_water, "water-treatment-fluid", "ea", "fluid")
 
   data:extend({
     {
@@ -272,13 +273,13 @@ if mods["bobplates"] then
         { type = "fluid", name = "thermal-water", amount = 100 },
       },
       results = {
-        { type = "fluid", name = "lithia-water", amount = 40 },
+        { type = "fluid", name = lithia_water, amount = 40 },
         { type = "fluid", name = "water-purified", amount = 60 },
       },
       --icon = "__angelsrefining__/graphics/icons/water-thermal-lithia.png",
       --icon_size = 32,
       icons = angelsmods.functions.create_liquid_recipe_icon({
-        "lithia-water",
+        lithia_water,
         "water-purified",
       }, {
         { 243, 135, 000 },
@@ -287,7 +288,7 @@ if mods["bobplates"] then
       }),
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "thermal-water",
-        "lithia-water",
+        lithia_water,
         "water-purified",
       }),
       order = "g[water-thermal-lithia]",

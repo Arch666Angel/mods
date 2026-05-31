@@ -22,15 +22,19 @@ end
 
 function starting_items:configure_starting_items()
   -- configuration settings
-  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
+  -- Factorio 2.0 exposes active mods to control scripts as `script.active_mods`
+  -- instead of `game.active_mods`.  Cache it locally so the following Angel's
+  -- Industries/Bob Classes feature gates keep their original shape.
+  local active_mods = script.active_mods
+  local technology_overhaul = active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
     or false
   local components_overhaul = technology_overhaul
-    or (game.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value)
+    or (active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value)
     or false
 
   self:increment_freeplay_starting_item("burner-ore-crusher", 1)
 
-  if game.active_mods["bobclasses"] then -- fix character classes starting point
+  if active_mods["bobclasses"] then -- fix character classes starting point
     if components_overhaul then
       self:increment_freeplay_starting_item("iron-plate", 2)
     end
