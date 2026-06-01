@@ -878,89 +878,142 @@ function angelsmods.functions.make_resource()
   end
 end
 
---REMOVE RESOURCE
-function angelsmods.functions.remove_resource(resource)
-  if data.raw.resource[resource] then
-    data.raw.resource[resource] = nil
-    data.raw["autoplace-control"][resource] = nil
+local function get_resource_control_names(resource)
+  -- Space Age uses underscore-separated autoplace controls for some resources
+  -- whose prototype names contain dashes, such as tungsten-ore -> tungsten_ore.
+  -- Check both forms so resource removal follows the planet map-gen settings
+  -- instead of assuming the control name always matches the prototype name.
+  local control_names = { resource }
+  local normalized_resource = resource:gsub("-", "_")
+  if normalized_resource ~= resource then
+    table.insert(control_names, normalized_resource)
+  end
+  return control_names
+end
+
+local function planet_has_resource_autoplace(planet, resource)
+  if not (planet and planet.map_gen_settings) then
+    return false
   end
 
+  local entity_settings = planet.map_gen_settings.autoplace_settings
+    and planet.map_gen_settings.autoplace_settings.entity
+    and planet.map_gen_settings.autoplace_settings.entity.settings
+  if entity_settings and entity_settings[resource] then
+    return true
+  end
+
+  local autoplace_controls = planet.map_gen_settings.autoplace_controls
+  if autoplace_controls then
+    for _, control_name in pairs(get_resource_control_names(resource)) do
+      if autoplace_controls[control_name] then
+        return true
+      end
+    end
+  end
+
+  return false
+end
+
+local function resource_is_used_off_nauvis(resource)
+  for planet_name, planet in pairs(data.raw.planet or {}) do
+    if planet_name ~= "nauvis" and planet_has_resource_autoplace(planet, resource) then
+      return true
+    end
+  end
+  return false
+end
+
+local function remove_resource_from_planet(planet, resource)
+  if not (planet and planet.map_gen_settings) then
+    return
+  end
+
+  local autoplace_controls = planet.map_gen_settings.autoplace_controls
+  if autoplace_controls then
+    for _, control_name in pairs(get_resource_control_names(resource)) do
+      autoplace_controls[control_name] = nil
+    end
+  end
+
+  local entity_settings = planet.map_gen_settings.autoplace_settings
+    and planet.map_gen_settings.autoplace_settings.entity
+    and planet.map_gen_settings.autoplace_settings.entity.settings
+  if entity_settings then
+    entity_settings[resource] = nil
+  end
+end
+
+local function remove_autoplace_control_prototypes(resource)
+  for _, control_name in pairs(get_resource_control_names(resource)) do
+    data.raw["autoplace-control"][control_name] = nil
+  end
+end
+
+local function remove_resource_prototype_if_unused_off_nauvis(resource)
+  local keep_resource_prototype = resource_is_used_off_nauvis(resource)
+  if data.raw.resource[resource] and not keep_resource_prototype then
+    data.raw.resource[resource] = nil
+    remove_autoplace_control_prototypes(resource)
+  end
+  return keep_resource_prototype
+end
+
+local function remove_resource_from_presets(resource)
+  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
+    local autoplace_controls = preset
+      and preset.basic_settings
+      and preset.basic_settings.autoplace_controls
+    if autoplace_controls then
+      for _, control_name in pairs(get_resource_control_names(resource)) do
+        autoplace_controls[control_name] = nil
+      end
+    end
+  end
+end
+
+local function remove_legacy_planet_control_prototypes(resource)
+  for planet_name in pairs(data.raw.planet or {}) do
+    for _, control_name in pairs(get_resource_control_names(resource)) do
+      data.raw["autoplace-control"][planet_name .. "_" .. control_name] = nil
+    end
+  end
+end
+
+--REMOVE RESOURCE
+function angelsmods.functions.remove_resource(resource)
+  local keep_resource_prototype = remove_resource_prototype_if_unused_off_nauvis(resource)
+
   local infinite_resource = nil
+  local keep_infinite_resource_prototype = false
   if data.raw.resource["infinite-" .. resource] then
     infinite_resource = "infinite-" .. resource
-    data.raw.resource["infinite-" .. resource] = nil
-    data.raw["autoplace-control"]["infinite-" .. resource] = nil
+    keep_infinite_resource_prototype = remove_resource_prototype_if_unused_off_nauvis(infinite_resource)
   end
 
   -- Remove from presets
-  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-    if
-      preset
-      and preset.basic_settings
-      and preset.basic_settings.autoplace_controls
-      and preset.basic_settings.autoplace_controls[resource]
-    then
-      preset.basic_settings.autoplace_controls[resource] = nil
-    end
-    if
-      infinite_resource
-      and preset
-      and preset.basic_settings
-      and preset.basic_settings.autoplace_controls
-      and preset.basic_settings.autoplace_controls[infinite_resource]
-    then
-      preset.basic_settings.autoplace_controls[infinite_resource] = nil
-    end
+  remove_resource_from_presets(resource)
+  if infinite_resource then
+    remove_resource_from_presets(infinite_resource)
   end
 
-  -- Remove from planets
-  for planet_name, planet in pairs(data.raw.planet) do
-    -- Remove the planet-specific generation setting
-    local planet_resource = planet_name .. "_" .. resource
-    if data.raw["autoplace-control"][planet_resource] then
-      data.raw["autoplace-control"][planet_resource] = nil
-    end
+  -- Angel ores replace the Nauvis starting/resource generation. Factorio 2.0
+  -- can reuse the same resource prototype on other planets, so keep those
+  -- planet entries intact when the resource is used away from Nauvis.
+  remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, resource)
+  if infinite_resource then
+    remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, infinite_resource)
+  end
 
-    -- Remove the generic resource entry
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[resource]
-    then
-      planet.map_gen_settings.autoplace_controls[resource] = nil
-    end
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_settings
-      and planet.map_gen_settings.autoplace_settings.entity
-      and planet.map_gen_settings.autoplace_settings.entity.settings
-      and planet.map_gen_settings.autoplace_settings.entity.settings[resource]
-    then
-      planet.map_gen_settings.autoplace_settings.entity.settings[resource] = nil
-    end
-
-    -- Remove the planet-specific resource entry (e.g. "gleba_stone")
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[planet_resource]
-    then
-      planet.map_gen_settings.autoplace_controls[planet_resource] = nil
-    end
-
-    if
-      infinite_resource
-      and planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[infinite_resource]
-    then
-      planet.map_gen_settings.autoplace_controls[infinite_resource] = nil
-      planet.map_gen_settings.autoplace_settings.entity.settings[infinite_resource] = nil
-    end
+  -- If the resource is not used off Nauvis, remove any legacy planet-specific
+  -- autoplace controls that may have been generated by older compatibility
+  -- code. Off-Nauvis resources keep these controls so Gleba stone, Vulcanus
+  -- tungsten, and similar Space Age resources still generate correctly.
+  if not keep_resource_prototype then
+    remove_legacy_planet_control_prototypes(resource)
+  end
+  if infinite_resource and not keep_infinite_resource_prototype then
+    remove_legacy_planet_control_prototypes(infinite_resource)
   end
 
   for r, subdir in pairs(angelsmods.functions.store) do
