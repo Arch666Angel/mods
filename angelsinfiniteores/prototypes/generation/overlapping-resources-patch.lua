@@ -12,7 +12,7 @@ spot_noise produces a bunch of cones. The distribution and size of those is prim
 
 There's also basement_value, which controls the minimum value (i.e. most of the area outside of cones will have that value).
 
-Due to bad caching in the engine (there might be a good reason for it, I wouldn't know), multiple spot_noise expressions with the same seed0, seed1, region_size, suggested_minimum_candidate_point_spacing, skip_span and skip_offset (which is required if you want overlapping spots) influence each other, and you can't set the above cone parameters for just one. 
+Due to bad caching in the engine (there might be a good reason for it, I wouldn't know), multiple spot_noise expressions with the same seed0, seed1, region_size, suggested_minimum_candidate_point_spacing, skip_span and skip_offset (which is required if you want overlapping spots) influence each other, and you can't set the above cone parameters for just one.
 
 So the idea is to rewrite the spot_noise functions as a call to a base-spot_noise that is the same for all expressions, with some math to shape the cones how we want them to be shaped.
 
@@ -84,8 +84,8 @@ There are probably some corner cases where this won't work (spot_noise has a LOT
   }
 
   --[[
-So far, we could create overlapping resources, but only if their frequencies are identical. 
-If we want those to to differ, we can split the more common resource into some common patches (that will also be occupied by the other resource) 
+So far, we could create overlapping resources, but only if their frequencies are identical.
+If we want those to to differ, we can split the more common resource into some common patches (that will also be occupied by the other resource)
 plus some additional patches for the more frequent resource.
 Frequency works like this:
 - spot-noise only cares about the ratio of density_expression to spot_quantity_expression
@@ -180,6 +180,16 @@ local function patch_resource_pair(name1, name2)
   local resource2_regular_index = autoplace_set.regular.patch_set_indexes[name2]
   local resource1_starting_index = autoplace_set.starting.patch_set_indexes[name1] or 0
   local resource2_starting_index = autoplace_set.starting.patch_set_indexes[name2] or 0
+  local resource1_exp = data.raw["noise-expression"]["default-" .. name1 .. "-patches"]
+  local resource2_exp = data.raw["noise-expression"]["default-" .. name2 .. "-patches"]
+
+  if not (resource1_regular_index and resource2_regular_index and resource1_exp and resource2_exp) then
+    -- Space Age can leave some ores, such as tungsten, with planet-specific
+    -- autoplace but no Nauvis/default patch set. The overlap workaround rewrites
+    -- the shared default noise expression, so if either side of the pair does
+    -- not have that expression/index, there is no safe common patch to rewrite.
+    return
+  end
 
   local new_expression_format =
     "paired_resource_autoplace_all_patches{ other_frequency = var('control:%s:frequency'), other_skip_offset = %i, other_starting_skip_offset = %i, "
@@ -194,9 +204,6 @@ local function patch_resource_pair(name1, name2)
     new_expression_format:format(name2, resource2_regular_index, resource1_other_starting_index)
   local resource2_parameters =
     new_expression_format:format(name1, resource1_regular_index, resource2_other_starting_index)
-
-  local resource1_exp = data.raw["noise-expression"]["default-" .. name1 .. "-patches"]
-  local resource2_exp = data.raw["noise-expression"]["default-" .. name2 .. "-patches"]
 
   resource1_exp.expression = resource1_exp.expression:gsub("resource_autoplace_all_patches{", resource1_parameters)
   resource2_exp.expression = resource2_exp.expression:gsub("resource_autoplace_all_patches{", resource2_parameters)
