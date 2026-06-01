@@ -1,10 +1,24 @@
 local OV = angelsmods.functions.OV
 
+local function add_bio_material_trigger(technology_name, item_name)
+  local technology = data.raw.technology[technology_name]
+  if technology then
+    -- Factorio 2.0 trigger technologies let the bio route complete the shared
+    -- material tech by actually making the bio precursor, while the existing
+    -- science unit remains available for the petrochem route.
+    technology.research_trigger = {
+      type = "craft-item",
+      item = item_name,
+    }
+  end
+end
+
 if angelsmods.trigger.bio_rubber then
   OV.remove_prereq("angels-rubbers", "angels-rubber")
   OV.add_prereq("angels-rubbers", "automation-2")
-  OV.add_prereq("angels-rubber", "angels-rubbers")
+  OV.remove_prereq("angels-bio-arboretum-desert-1", "angels-rubbers")
   OV.remove_science_pack("angels-rubbers", "chemical-science-pack")
+  add_bio_material_trigger("angels-rubbers", "angels-bio-rubber")
 else
   OV.disable_recipe({
     "angels-tree-desert-seed",
@@ -28,7 +42,8 @@ end
 if angelsmods.trigger.bio_resin then
   OV.remove_prereq("angels-resins", "angels-resin-1")
   OV.add_prereq("angels-resins", "angels-basic-chemistry-3")
-  OV.add_prereq("angels-resin-1", "angels-resins")
+  OV.remove_prereq("angels-bio-arboretum-temperate-1", "angels-resins")
+  add_bio_material_trigger("angels-resins", "angels-bio-resin")
 else
   OV.disable_recipe({
     "angels-tree-temperate-seed",
@@ -55,7 +70,8 @@ end
 if angelsmods.trigger.bio_plastic then
   OV.remove_prereq("plastics", "angels-plastic-1")
   OV.add_prereq("plastics", "angels-advanced-chemistry-1")
-  OV.add_prereq("angels-plastic-1", "plastics")
+  OV.remove_prereq("angels-bio-arboretum-swamp-1", "plastics")
+  add_bio_material_trigger("plastics", "angels-bio-plastic")
 else
   OV.hide_recipe({
     "angels-tree-swamp-seed",
