@@ -169,7 +169,11 @@ for _, centrifuge_name in pairs({
   end
 end
 
--- add pipe input to the centrifuge
+-- Add unfiltered fluid input/output boxes to centrifuges so Petrochem can use
+-- them for fluid-based nuclear processing recipes. Centrifuges are 3x3
+-- entities, so their north/south pipe connections need to sit on the tile grid
+-- at y = -1 and y = 1. Fractional offsets can still load, but in Factorio 2.0
+-- they make the pipe pictures render off-center from the visible connection.
 for _, centrifuge_name in pairs({
   "centrifuge",
   "bob-centrifuge-2",
@@ -192,27 +196,25 @@ for _, centrifuge_name in pairs({
       centrifuge.fluid_boxes = {}
     end
 
-    if has_fluid_input_box then
-    else
+    if not has_fluid_input_box then
       table.insert(centrifuge.fluid_boxes, {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { 0, -1.19 }, direction = defines.direction.north },
-        }, -- assume 3x3 entity collision box
+          { flow_direction = "input", position = { 0, -1 }, direction = defines.direction.north },
+        },
       })
     end
 
-    if has_fluid_output_box then
-    else
+    if not has_fluid_output_box then
       table.insert(centrifuge.fluid_boxes, {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.19 }, direction = defines.direction.south },
-        }, -- assume 3x3 entity collision box
+          { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
+        },
       })
     end
   end
@@ -237,8 +239,7 @@ for centrifuge_name, centrifuge_categegories in pairs({
           centrifuge_category_present = true
         end
       end
-      if centrifuge_category_present then
-      else
+      if not centrifuge_category_present then
         table.insert(centrifuge.crafting_categories, centrifuge_category)
       end
     end
