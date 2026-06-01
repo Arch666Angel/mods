@@ -1,5 +1,11 @@
 local fluid_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].minimap_representation
 local fluid_selected_minimap_representation = data.raw["fluid-wagon"]["fluid-wagon"].selected_minimap_representation
+local base_fluid_wagon_capacity = data.raw["fluid-wagon"]["fluid-wagon"].capacity
+-- Factorio 2.0 doubled the base fluid wagon from 25k to 50k. Keep the
+-- non-Petrochem petro wagon aligned with base capacity, and keep the Petrochem
+-- version at its historical 1.6x advantage so it scales to 80k.
+local petro_oil_wagon_capacity = mods["angelspetrochem"] and base_fluid_wagon_capacity * 1.6
+  or base_fluid_wagon_capacity
 
 local funcs = require("prototypes.train-functions")
 local simulations = require("prototypes.factoriopedia-simulations")
@@ -33,7 +39,7 @@ funcs.generate_train_entities({
   icon = "__angelsaddons-mobility-graphics-petro__/graphics/icons/petro-oil-wagon.png",
   icon_size = 64,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  capacity = mods["angelspetrochem"] and 40000 or 25000,
+  capacity = petro_oil_wagon_capacity,
   minable = { mining_time = 1, result = "angels-petro-oil-wagon" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 600,
