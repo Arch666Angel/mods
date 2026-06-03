@@ -13,15 +13,36 @@ local unit_tests = {
   require("unit-tests.unit-test-012"),
   require("unit-tests.unit-test-013"),
   require("unit-tests.unit-test-014"),
+  require("unit-tests.unit-test-015"),
 }
 
 local unit_test_functions = require("unit-test-functions")
 
 local unit_tests_result = unit_test_functions.test_successful
 
+local function get_requested_tests()
+  local setting = settings.global["angelsdev-unit-test-filter"]
+  local value = setting and setting.value or ""
+  if value == "" then
+    return nil
+  end
+
+  local requested_tests = {}
+  for test_index in string.gmatch(value, "%d+") do
+    requested_tests[tonumber(test_index)] = true
+  end
+  return requested_tests
+end
+
 local execute_unit_tests = function()
+  local requested_tests = get_requested_tests()
   unit_test_functions.print_msg("Starting " .. #unit_tests .. " unit tests...", 0)
   for unit_test_index, unit_test_func in pairs(unit_tests) do
+    if requested_tests and not requested_tests[unit_test_index] then
+      unit_test_functions.print_msg(string.format("Skipping unit test %03d.", unit_test_index), 0)
+      goto continue
+    end
+
     unit_test_functions.print_msg(string.format("Starting unit test %03d.", unit_test_index), 0)
     local unit_test_result = unit_test_func()
     if unit_test_result == unit_test_functions.test_successful then
@@ -42,6 +63,7 @@ local execute_unit_tests = function()
       unit_test_functions.print_msg(string.format("Unexpected result for unit test %03d!", unit_test_index), 0)
       break
     end
+    ::continue::
   end
   if unit_tests_result == unit_test_functions.test_successful then
     unit_test_functions.print_msg("Finished testing! All unit tests passed!", 0)

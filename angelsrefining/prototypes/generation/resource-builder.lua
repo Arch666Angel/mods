@@ -878,90 +878,137 @@ function angelsmods.functions.make_resource()
   end
 end
 
---REMOVE RESOURCE
-function angelsmods.functions.remove_resource(resource)
-  if data.raw.resource[resource] then
-    data.raw.resource[resource] = nil
+local function get_resource_control_names(resource)
+  local control_names = { resource }
+  local normalized_resource = resource:gsub("-", "_")
+  if normalized_resource ~= resource then
+    table.insert(control_names, normalized_resource)
+  end
+  return control_names
+end
+
+local function planet_has_resource_autoplace(planet, resource)
+  if not (planet and planet.map_gen_settings) then
+    return false
+  end
+
+  local entity_settings = planet.map_gen_settings.autoplace_settings
+    and planet.map_gen_settings.autoplace_settings.entity
+    and planet.map_gen_settings.autoplace_settings.entity.settings
+  if entity_settings and entity_settings[resource] then
+    return true
+  end
+
+  local autoplace_controls = planet.map_gen_settings.autoplace_controls
+  if autoplace_controls then
+    for _, control_name in pairs(get_resource_control_names(resource)) do
+      if autoplace_controls[control_name] then
+        return true
+      end
+    end
+  end
+
+  return false
+end
+
+local function resource_is_used_off_nauvis(resource)
+  for planet_name, planet in pairs(data.raw.planet or {}) do
+    if planet_name ~= "nauvis" and planet_has_resource_autoplace(planet, resource) then
+      return true
+    end
+  end
+  return false
+end
+
+local function remove_resource_from_planet(planet, resource)
+  if not (resource and planet and planet.map_gen_settings) then
+    return
+  end
+
+  local autoplace_controls = planet.map_gen_settings.autoplace_controls
+  if autoplace_controls then
+    autoplace_controls[resource] = nil
+  end
+
+  local entity_settings = planet.map_gen_settings.autoplace_settings
+    and planet.map_gen_settings.autoplace_settings.entity
+    and planet.map_gen_settings.autoplace_settings.entity.settings
+  if entity_settings then
+    entity_settings[resource] = nil
+  end
+end
+
+local function remove_autoplace_control_prototypes(resource)
+  if resource then
     data.raw["autoplace-control"][resource] = nil
   end
+end
 
-  local infinite_resource = nil
-  if data.raw.resource["infinite-" .. resource] then
-    infinite_resource = "infinite-" .. resource
-    data.raw.resource["infinite-" .. resource] = nil
-    data.raw["autoplace-control"]["infinite-" .. resource] = nil
+local function remove_resource_prototype_if_unused_off_nauvis(resource)
+  local keep_resource_prototype = resource_is_used_off_nauvis(resource)
+  if data.raw.resource[resource] and not keep_resource_prototype then
+    data.raw.resource[resource] = nil
   end
+  remove_autoplace_control_prototypes(resource)
+  return keep_resource_prototype
+end
+
+local function remove_resource_from_presets(resource)
+  if not resource then
+    return
+  end
+
+  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
+    local autoplace_controls = preset
+      and preset.basic_settings
+      and preset.basic_settings.autoplace_controls
+    if autoplace_controls then
+      autoplace_controls[resource] = nil
+    end
+  end
+end
+
+local function remove_legacy_planet_control_prototypes(resource)
+  if not resource then
+    return
+  end
+
+  for planet_name in pairs(data.raw.planet or {}) do
+    for _, control_name in pairs(get_resource_control_names(resource)) do
+      data.raw["autoplace-control"][planet_name .. "_" .. control_name] = nil
+    end
+  end
+end
+
+local function remove_legacy_planet_control_prototypes_if_unused(resource, keep_resource_prototype)
+  if not keep_resource_prototype then
+    remove_legacy_planet_control_prototypes(resource)
+  end
+end
+
+local function get_infinite_resource(resource)
+  local infinite_resource = "infinite-" .. resource
+  if data.raw.resource[infinite_resource] then
+    return infinite_resource
+  end
+end
+
+--REMOVE RESOURCE
+function angelsmods.functions.remove_resource(resource)
+  local keep_resource_prototype = remove_resource_prototype_if_unused_off_nauvis(resource)
+  local infinite_resource = get_infinite_resource(resource)
+  local keep_infinite_resource_prototype = infinite_resource
+    and remove_resource_prototype_if_unused_off_nauvis(infinite_resource)
 
   -- Remove from presets
-  for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-    if
-      preset
-      and preset.basic_settings
-      and preset.basic_settings.autoplace_controls
-      and preset.basic_settings.autoplace_controls[resource]
-    then
-      preset.basic_settings.autoplace_controls[resource] = nil
-    end
-    if
-      infinite_resource
-      and preset
-      and preset.basic_settings
-      and preset.basic_settings.autoplace_controls
-      and preset.basic_settings.autoplace_controls[infinite_resource]
-    then
-      preset.basic_settings.autoplace_controls[infinite_resource] = nil
-    end
-  end
+  remove_resource_from_presets(resource)
+  remove_resource_from_presets(infinite_resource)
 
-  -- Remove from planets
-  for planet_name, planet in pairs(data.raw.planet) do
-    -- Remove the planet-specific generation setting
-    local planet_resource = planet_name .. "_" .. resource
-    if data.raw["autoplace-control"][planet_resource] then
-      data.raw["autoplace-control"][planet_resource] = nil
-    end
+  remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, resource)
+  remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, infinite_resource)
 
-    -- Remove the generic resource entry
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[resource]
-    then
-      planet.map_gen_settings.autoplace_controls[resource] = nil
-    end
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_settings
-      and planet.map_gen_settings.autoplace_settings.entity
-      and planet.map_gen_settings.autoplace_settings.entity.settings
-      and planet.map_gen_settings.autoplace_settings.entity.settings[resource]
-    then
-      planet.map_gen_settings.autoplace_settings.entity.settings[resource] = nil
-    end
-
-    -- Remove the planet-specific resource entry (e.g. "gleba_stone")
-    if
-      planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[planet_resource]
-    then
-      planet.map_gen_settings.autoplace_controls[planet_resource] = nil
-    end
-
-    if
-      infinite_resource
-      and planet
-      and planet.map_gen_settings
-      and planet.map_gen_settings.autoplace_controls
-      and planet.map_gen_settings.autoplace_controls[infinite_resource]
-    then
-      planet.map_gen_settings.autoplace_controls[infinite_resource] = nil
-      planet.map_gen_settings.autoplace_settings.entity.settings[infinite_resource] = nil
-    end
-  end
+  remove_legacy_planet_control_prototypes_if_unused(resource, keep_resource_prototype)
+  remove_legacy_planet_control_prototypes_if_unused(infinite_resource, keep_infinite_resource_prototype)
 
   for r, subdir in pairs(angelsmods.functions.store) do
     for r, input in pairs(subdir) do
