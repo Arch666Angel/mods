@@ -11,7 +11,10 @@ class FactorioController:
     if factorioInstallDir is None:
       self.factorioExe:str = os.path.abspath(f"{self.__retrieveSteamGameInstallLocation(427520)}/bin/x64/factorio.exe")
     else:
-      self.factorioExe:str = os.path.abspath(f"{factorioInstallDir}/bin/x64/factorio.exe")
+      factorioExe = f"{factorioInstallDir}/bin/x64/factorio"
+      if not os.path.exists(factorioExe):
+        factorioExe = f"{factorioInstallDir}/bin/x64/factorio.exe"
+      self.factorioExe:str = os.path.abspath(factorioExe)
     if log is None:
       self.log:Callable[[str], None] = lambda msg : print(f"angelsdev-unit-test: {msg}")
     else:
@@ -23,7 +26,14 @@ class FactorioController:
     # https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29
     self.log(f"Launching {os.path.basename(self.factorioExe)}")
     try:
-      self.factorioProcess = subprocess.Popen(executable=self.factorioExe, args=self.factorioArgs, cwd=os.path.dirname(self.factorioExe), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+      self.factorioProcess = subprocess.Popen(
+        executable=self.factorioExe,
+        args=self.factorioArgs,
+        cwd=os.path.dirname(self.factorioExe),
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+      )
     except FileNotFoundError as fnfe:
       print(f"The system could not find {self.factorioExe}.")
       raise fnfe
@@ -38,7 +48,7 @@ class FactorioController:
     self.factorioProcess = None
 
   def getGameOutput(self) -> Union[str, bool]:
-    for stdoutLine in iter(self.factorioProcess.stdout.readline, ""):
+    for stdoutLine in iter(self.factorioProcess.stdout.readline, b""):
       lineData = stdoutLine.strip().decode('utf-8')
       if lineData == '':
         yield self.factorioProcess.poll() is None
@@ -58,6 +68,9 @@ class FactorioController:
           self.log(line[21:])
           if re.fullmatch(r"angelsdev\-unit\-test: Finished testing!.*", line):
             return True if re.fullmatch(r".* All unit tests passed!", line) else False
+        elif re.fullmatch(r" *[0-9]+\.[0-9]{3} Error .*", line):
+          self.log(line)
+          return False
         elif re.fullmatch(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\:.*", line):
           self.log(line[re.match(r" *[0-9]+\.[0-9]{3} Error ModManager\.cpp\:[0-9]+\: *", line).regs[0][1]:])
           return False # Error during launch launch
@@ -144,7 +157,15 @@ class FactorioController:
     args = [] # https://wiki.factorio.com/Command_line_parameters
     args.append(self.factorioExe) # because factorio expects the exe as first arg...
     #args.extend(convert_to_arglist("--verbose"))
-    args.extend(convert_to_arglist(f"--load-scenario base/freeplay"))
+    if self.factorioExe.endswith(".exe"):
+      args.extend(convert_to_arglist("--load-scenario base/freeplay"))
+    else:
+      args.extend(convert_to_arglist("--start-server-load-scenario base/freeplay"))
+      args.extend(convert_to_arglist("--until-tick 70"))
+      serverSettings = os.getenv("ANGELS_UNIT_TEST_SERVER_SETTINGS")
+      if serverSettings:
+        args.append("--server-settings")
+        args.append(serverSettings)
     if factorioModDir != None:
       args.append("--mod-directory")
       args.append(factorioModDir)

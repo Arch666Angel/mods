@@ -43,9 +43,12 @@ class UnitTestController:
     self.currentModlistController.writeConfigurationFile()
     self.currentSettingsController.writeSettingsFile()
 
-  def TestConfiguations(self:UnitTestController, testConfigurations:UnitTestConfiguration, logSummary:bool=True) -> None:
+  def TestConfiguations(self:UnitTestController, testConfigurations:UnitTestConfiguration, logSummary:bool=True) -> bool:
     testResults:dict[str, bool] = dict()
+    configFilter = os.getenv("ANGELS_UNIT_TEST_CONFIG_FILTER")
     for configName, modList, settingCustomisation in testConfigurations:
+      if configFilter and configFilter not in configName:
+        continue
       self.__logTestConfiguration(configName)
       self.__setupTestConfiguration(modList, settingCustomisation)
       testResults[configName] = self.__executeUnitTests()
@@ -53,6 +56,7 @@ class UnitTestController:
       self.logger("Summary:", leading_newline=True)
       for testName, testResult in testResults.items():
         self.logger(f"[{'PASSED' if testResult else 'FAILED'}] {testName}")
+    return len(testResults) > 0 and all(testResults.values())
 
   def __buildAngelsMods(self) -> None:
     ModBuilder(self.factorioFolderDir).createAllMods()
@@ -129,4 +133,11 @@ if __name__ == "__main__":
     if opt in ('-m', '--mod-directory'):
       factorioModDir = os.path.realpath(arg.strip())
 
-  UnitTestController(updateMods=False, factorioInstallDir=factorioInstallDir, factorioFolderDir=factorioFolderDir, logToFile=logToFile, factorioModDir=factorioModDir).TestConfiguations(UnitTestConfiguration())
+  success = UnitTestController(
+    updateMods=False,
+    factorioInstallDir=factorioInstallDir,
+    factorioFolderDir=factorioFolderDir,
+    logToFile=logToFile,
+    factorioModDir=factorioModDir,
+  ).TestConfiguations(UnitTestConfiguration())
+  sys.exit(0 if success else 1)

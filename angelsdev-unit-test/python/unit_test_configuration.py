@@ -4,10 +4,10 @@ from typing import Iterable
 class UnitTestConfiguration:
   """An iterable object containing all test configurations."""
   default_settings:dict[str, dict[str, bool]] = {}
-  configurations:list[tuple[str, list[str], dict[str, bool]]] = []
+  configurations:list[tuple[str, list[str], dict[str, dict[str, object]]]] = []
 
   @classmethod
-  def __iter__(cls:UnitTestConfiguration) -> Iterable[tuple[str, list[str], dict[str, bool]]]:
+  def __iter__(cls:UnitTestConfiguration) -> Iterable[tuple[str, list[str], dict[str, dict[str, object]]]]:
     return iter(cls.configurations)
 
   @classmethod
@@ -17,7 +17,7 @@ class UnitTestConfiguration:
     cls.default_settings[settingStage][settingName] = settingDefaultValue
 
   @classmethod
-  def addConfiguration(cls:UnitTestConfiguration, configName:str, modList:list[str], settingCustomisation:dict[str, dict[str, bool]]) -> None:
+  def addConfiguration(cls:UnitTestConfiguration, configName:str, modList:list[str], settingCustomisation:dict[str, dict[str, object]]) -> None:
     for settingStage, stageSettings in cls.default_settings.items():
       if settingStage not in settingCustomisation.keys():
         settingCustomisation[settingStage] = {}
@@ -575,6 +575,77 @@ UnitTestConfiguration.addConfiguration("BA (BobPower non-default)",
 #    }
 #  }
 #)
+
+###############################################################################
+### AUTOPLACE CONTROLS                                                      ###
+###############################################################################
+UnitTestConfiguration.addConfiguration("Autoplace controls: Angel's Refining + Bob's Ores + Bob's MCI",
+  [
+    "angelsrefining",
+    "angelsrefininggraphics",
+    "boblibrary",
+    "bobores",
+    "bobplates",
+  ],
+  {
+    "runtime-global":
+    {
+      "angelsdev-unit-test-filter": "15",
+    }
+  }
+)
+
+UnitTestConfiguration.addConfiguration("Autoplace controls: Angel's Refining + Bob's Ores + Bob's MCI + Angel's Infinite Ores",
+  [
+    "angelsrefining",
+    "angelsrefininggraphics",
+    "angelsinfiniteores",
+    "boblibrary",
+    "bobores",
+    "bobplates",
+  ],
+  {
+    "runtime-global":
+    {
+      "angelsdev-unit-test-filter": "15",
+    }
+  }
+)
+
+UnitTestConfiguration.addConfiguration("Autoplace controls: Angel's Refining + Space Age",
+  [
+    "elevated-rails",
+    "quality",
+    "space-age",
+    "angelsrefining",
+    "angelsrefininggraphics",
+  ],
+  {
+    "runtime-global":
+    {
+      "angelsdev-unit-test-filter": "15",
+    }
+  }
+)
+
+UnitTestConfiguration.addConfiguration("Autoplace controls: Angel's Refining + Space Age + Bob's Ores + Bob's MCI",
+  [
+    "elevated-rails",
+    "quality",
+    "space-age",
+    "angelsrefining",
+    "angelsrefininggraphics",
+    "boblibrary",
+    "bobores",
+    "bobplates",
+  ],
+  {
+    "runtime-global":
+    {
+      "angelsdev-unit-test-filter": "15",
+    }
+  }
+)
 
 #UnitTestConfiguration.addConfiguration("BA (BobPower non-default + technology)",
 #  [
