@@ -145,6 +145,8 @@ class FactorioController:
     args.append(self.factorioExe) # because factorio expects the exe as first arg...
     #args.extend(convert_to_arglist("--verbose"))
     args.extend(convert_to_arglist(f"--load-scenario base/freeplay"))
+    #args.extend(convert_to_arglist(f"--start-server-load-scenario base/freeplay"))
+    #args.extend(convert_to_arglist(f"--server-settings D:\server-settings.json"))
     if factorioModDir != None:
       args.append("--mod-directory")
       args.append(factorioModDir)
