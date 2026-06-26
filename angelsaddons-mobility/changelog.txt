@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ???
+  Bugfixes:
+    - Fixed air resistance of Petrochemical gas wagon and Petrochemical fluid wagon (1310)
+  Changes:
+    - Increased the capacity of Petrochemical gas wagon and Petrochemical fluid wagon (1287)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 04.01.26
   Bugfixes:
-    - Fixed crash on startup when Angel's Petrochem mod was not enabled #1219
+    - Fixed crash on startup when Angel's Petrochem mod was not enabled (1219)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 04.01.26
