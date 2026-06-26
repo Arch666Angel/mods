@@ -72,15 +72,6 @@ data:extend({
     order = "caf",
   },
   {
-    type = "double-setting",
-    name = "angels-starting-resource-base",
-    setting_type = "startup",
-    default_value = 40000,
-    minimum_value = 10000,
-    maximum_value = 1000000,
-    order = "cb",
-  },
-  {
     type = "int-setting",
     name = "angels-pavement-stack-size",
     setting_type = "startup",
