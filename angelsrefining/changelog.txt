@@ -1,4 +1,53 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 04.06.2026
+  Bugfixes:
+    - Removed references to Bob's Sulfur resource (1304)
+    - Fixed migration function to check if a logistics slot is manual before attempting to migrate it (1306)
+  Changes:
+    - Prevented resources being removed from planets other than Nauvis (1289)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 01.06.2026
+  Bugfixes:
+    - Fixed some catalyst sorting recipes showing the wrong name (1245)
+    - Improved migration functions (1248)
+    - Fixed error in angelsmods.functions.make_void when fluid icon has no scale set (1256)
+    - Fixed duplicate ore description in Factoriopedia (1258)
+    - Fixed missing basic iron and copper ore smelting recipes in Special Vanilla mode (1283)
+  Changes:
+    - Allow recipe Crystal slurry from Crystal dust to be selected as a signal (1262)
+    - Renamed Uranium mining tech to Advanced mining and removed it as a prerequisite for Uranium processing (1276)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 18.01.26
+  Bugfixes:
+    - Fixed ore crushing recipe signal (1226)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Bugfixes:
+    - Fixed ores item group order (1226)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Bugfixes:
+    - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)
+    - Fixed crash when upgrading blueprints (978)
+    - Fixed crash when removing 'angelspump' mod (test mod, merged into Angel's Refining) (992)
+    - Fixed crash on startup with error message No icon size defined for icon (997)
+  Changes:
+    - Halved the Sulfuric wase water produced by ore chunk recipes (849)
+    - Removed references to normal / expensive recipes (945)
+    - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
+    - Updated for Factorio 2.0 (994)
+    - Made heavy offshore pump ignore mining productivity research (1045)
+    - Reworked Mineral sludge crystallization recipes. These recipes now produce Angel's ores (1074)
+    - Reworked milling drum recipes so that milling drums can be hand crafted (1105)
+    - Added circuit connectors to all machines (1114)
+    - Increased the size of Thermal water bores. Pipes will need to be reconnected. (1113)
+    - Improved clarity of waste water and muddy water icons (1163)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.7
 Date: 21.02.2024
   Changes:

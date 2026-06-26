@@ -10,10 +10,10 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore1",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore1.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore1/angels-ore1.png",
+  icon_size = 32,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore1"].value,
-    --resource_index = 21,
     base_density = 10,
     regular_rq_factor_multiplier = 1.0,
     starting_rq_factor_multiplier = 1.5,
@@ -32,10 +32,10 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore2",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore2.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore2/angels-ore2.png",
+  icon_size = 32,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore2"].value,
-    --resource_index = 22,
     base_density = 7,
     regular_rq_factor_multiplier = 0.9,
     starting_rq_factor_multiplier = 1.1,
@@ -45,10 +45,10 @@ angelsmods.functions.add_resource("make", {
 local ore_3_icon
 local ore_3_icon_size
 if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
-  ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3.png"
+  ore_3_icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3.png"
   ore_3_icon_size = 32
 else
-  ore_3_icon = "__angelsrefining__/graphics/icons/angels-ore3-HR.png"
+  ore_3_icon = "__angelsrefininggraphics__/graphics/icons/angels-ore3/angels-ore3-HR.png"
   ore_3_icon_size = 64
 end
 angelsmods.functions.add_resource("make", {
@@ -67,7 +67,6 @@ angelsmods.functions.add_resource("make", {
   icon_size = ore_3_icon_size,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore3"].value,
-    --resource_index = 23,
     base_density = 10,
     regular_rq_factor_multiplier = 1.0,
     starting_rq_factor_multiplier = 1.5,
@@ -86,10 +85,10 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore4",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore4.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore4/angels-ore4.png",
+  icon_size = 32,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore4"].value,
-    --resource_index = 24,
     base_density = 7,
     regular_rq_factor_multiplier = 0.9,
     starting_rq_factor_multiplier = 1.1,
@@ -108,10 +107,10 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore5",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore5.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore5/angels-ore5.png",
+  icon_size = 32,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore5"].value,
-    --resource_index = 25,
     base_density = 8,
     regular_rq_factor_multiplier = 1.0,
     starting_rq_factor_multiplier = 1.2,
@@ -130,10 +129,10 @@ angelsmods.functions.add_resource("make", {
   output_name = "angels-ore6",
   output_min = 1,
   output_max = 1,
-  icon = "__angelsrefining__/graphics/icons/angels-ore6.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6.png",
+  icon_size = 32,
   autoplace = {
     starting_area = settings.startup["angels-starting-resource-ore6"].value,
-    --resource_index = 26,
     base_density = 8,
     regular_rq_factor_multiplier = 1.0,
     starting_rq_factor_multiplier = 1.2,
@@ -142,6 +141,7 @@ angelsmods.functions.add_resource("make", {
 
 angelsmods.functions.add_resource("make", {
   name = "angels-fissure",
+  subgroup = "mineable-fluids",
   order = "c",
   sheet = 1,
   infinite = true,
@@ -154,15 +154,13 @@ angelsmods.functions.add_resource("make", {
   category = "angels-fissure",
   -- normal = 10000,
   -- maximum = 50000,
-  output_name = "thermal-water",
+  output_name = "angels-thermal-water",
   output_min = 20,
   output_max = 20,
-  icon = "__angelsrefining__/graphics/icons/fissure.png",
+  icon = "__angelsrefininggraphics__/graphics/icons/fissure.png",
   icon_size = 64,
-  icon_mipmaps = 4,
   autoplace = {
     starting_area = false,
-    --resource_index = 27,
     base_density = 3,
     regular_rq_factor_multiplier = 1,
     starting_rq_factor_multiplier = 1,
@@ -179,7 +177,6 @@ angelsmods.functions.add_resource("update", {
   order = "b-aa",
   autoplace = {
     starting_area = true,
-    --resource_index = 0,
     base_density = 8,
     regular_rq_factor_multiplier = 1.0,
     starting_rq_factor_multiplier = 1.1,
@@ -191,7 +188,6 @@ angelsmods.functions.add_resource("update", {
   order = "c",
   autoplace = {
     starting_area = false,
-    --resource_index = 5,
     base_density = 8,
     regular_rq_factor_multiplier = 1,
     starting_rq_factor_multiplier = 1,

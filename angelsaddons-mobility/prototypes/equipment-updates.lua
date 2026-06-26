@@ -1,4 +1,4 @@
-local funcs = require("prototypes/train-functions")
+local funcs = require("prototypes.train-functions")
 
 -- base game
 funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
@@ -7,7 +7,7 @@ funcs.update_equipment("energy-shield-equipment", "energy-shield-mk2-equipment",
 funcs.update_equipment("battery-equipment", "battery-equipment", "angels-basegame-energy")
 funcs.update_equipment("battery-equipment", "battery-mk2-equipment", "angels-basegame-energy")
 funcs.update_equipment("solar-panel-equipment", "solar-panel-equipment", "angels-basegame-energy")
-funcs.update_equipment("generator-equipment", "fusion-reactor-equipment", "angels-basegame-energy")
+funcs.update_equipment("generator-equipment", "fission-reactor-equipment", "angels-basegame-energy")
 
 funcs.update_equipment("active-defense-equipment", "personal-laser-defense-equipment", "angels-basegame-attack")
 funcs.update_equipment("active-defense-equipment", "discharge-defense-equipment", "angels-basegame-attack")
@@ -63,102 +63,140 @@ if mods["Portable_power"] then
 end
 
 if angelsmods.petrochem then
-  local OV = angelsmods.functions.OV
   if angelsmods.addons.mobility.petrotrain.tier_amount > 1 then
+    local updated_recipes = {}
+    local OV = angelsmods.functions.OV
     for i = 1, angelsmods.addons.mobility.petrotrain.tier_amount, 1 do
-      local tank1 = i == 1 and "petro-tank1" or "petro-tank1-" .. i
-      local tank2 = i == 1 and "petro-tank2" or "petro-tank2-" .. i
-      OV.modify_input(tank1, { "angels-storage-tank-1", "storage-tank" })
-      OV.modify_input(tank2, { "angels-storage-tank-2", "storage-tank" })
+      local gas_wagon = i == 1 and "angels-petro-gas-wagon" or "angels-petro-gas-wagon-" .. i
+      OV.modify_input(gas_wagon, { type = "item", name = "angels-storage-tank-1", amount = "storage-tank" })
+      table.insert(updated_recipes, gas_wagon)
+
+      local oil_wagon = i == 1 and "angels-petro-oil-wagon" or "angels-petro-oil-wagon-" .. i
+      OV.modify_input(oil_wagon, { type = "item", name = "angels-storage-tank-2", amount = "storage-tank" })
+      table.insert(updated_recipes, oil_wagon)
     end
+    OV.add_prereq("angels-petro-train-2", "angels-gas-processing")
+    OV.add_prereq("angels-petro-train-2", "angels-oil-processing")
+    OV.execute()
+    angelsmods.functions.patch_recycling_recipes(updated_recipes)
   end
-  OV.execute()
 end
 
---equipment grid groupings
-local default = "angels-void" --remove with vanilla adds
-local vanilla = { --vanilla adds/gets removed with bobs
-  loco = {
+---Angel's default equipment category.
+---
+---To be removed when used with Angel's base equipment categories.
+local default = "angels-void"
+
+---Angel's base equipment categories.
+---
+---To be removed when used with Bob's equipment categories.
+---@type Angels.Addons.Mobility.EquipmentCategories
+local vanilla_categories = {
+  locomotives = {
     "angels-basegame-energy",
     "angels-basegame-defense",
     "angels-basegame-attack",
     "angels-basegame-movement",
   },
-  wagon = { --vanilla adds/gets removed with bobs
+  wagons = {
     "angels-basegame-energy",
     "angels-basegame-defense",
     "angels-basegame-attack",
   },
 }
-local industries = {
-  loco = {
+
+---Angel's Industries equipment categories.
+---@type Angels.Addons.Mobility.EquipmentCategories
+local industries_categories = {
+  locomotives = {
     "angels-energy",
     "angels-heavy-defense",
     "angels-movement",
   },
-  wagon = {
+  wagons = {
     "angels-energy",
     "angels-heavy-defense",
     "angels-movement",
     "angels-repair",
   },
 }
-local bobs = {
-  loco = {
+
+---Bob's equipment categories.
+---@type Angels.Addons.Mobility.EquipmentCategories
+local bobs_categories = {
+  locomotives = {
     "train",
     "vehicle",
     "locomotive",
   },
-  wagon = {
+  wagons = {
     "train",
     "vehicle",
   },
 }
 
-local trains = {
-  locos = {
+---The prototype names of Angel's locomotives and wagons.
+---@type Angels.Addons.Mobility.EquipmentGrids
+local train_equipment_grids = {
+  locomotives = {
     "angels-petro-locomotive",
     "angels-smelting-locomotive",
     "angels-smelting-locomotive-tender",
     "angels-crawler-locomotive",
-    "angels-crawler-loco-wagon",
+    "angels-crawler-locomotive-tender",
   },
-  wagon = {
-    "angels-petro-tank1",
-    "angels-petro-tank2",
-    "angels-smelting-wagon",
-    "angels-crawler-wagon",
-    "angels-crawler-bot-wagon",
+  wagons = {
+    "angels-petro-gas-wagon",
+    "angels-petro-oil-wagon",
+    "angels-smelting-cargo-wagon",
+    "angels-crawler-cargo-wagon",
+    "angels-crawler-robot-wagon",
   },
 }
---NOTE "angels-crawler-bot-wagon" also needs the construction categories added (can be done at the end i guess...)
 
 --update loco grids
-for _, train in pairs(trains.locos) do
-  funcs.update_equipment_grid(train, vanilla.loco, default)
+for _, equipment_grid_name in pairs(train_equipment_grids.locomotives) do
+  funcs.update_equipment_grid(equipment_grid_name, vanilla_categories.locomotives, default)
+
   if mods["angelsindustries"] then
-    funcs.update_equipment_grid(train, industries.loco)
+    funcs.update_equipment_grid(equipment_grid_name, industries_categories.locomotives)
   end
+
   if mods["bobvehicleequipment"] then
-    funcs.update_equipment_grid(train, bobs.loco, vanilla.loco)
+    funcs.update_equipment_grid(equipment_grid_name, bobs_categories.locomotives, vanilla_categories.locomotives)
   end
 end
+
 --update wagon grids
-for _, train in pairs(trains.wagon) do
-  funcs.update_equipment_grid(train, vanilla.wagon, default)
+for _, equipment_grid_name in pairs(train_equipment_grids.wagons) do
+  funcs.update_equipment_grid(equipment_grid_name, vanilla_categories.wagons, default)
+
   if mods["angelsindustries"] then
-    funcs.update_equipment_grid(train, industries.wagon)
+    funcs.update_equipment_grid(equipment_grid_name, industries_categories.wagons)
   end
+
   if mods["bobvehicleequipment"] then
-    funcs.update_equipment_grid(train, bobs.wagon, vanilla.wagon)
+    funcs.update_equipment_grid(equipment_grid_name, bobs_categories.wagons, vanilla_categories.wagons)
   end
 end
---construction crawler updates
+
+--NOTE "angels-crawler-robot-wagon" also needs the construction categories.
 if mods["bobvehicleequipment"] then
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "cargo-wagon")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "cargo-wagon")
 else
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-basegame-construction")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "angels-basegame-construction")
 end
+
 if mods["angelsindustries"] then
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-construction")
+  funcs.update_equipment_grid("angels-crawler-robot-wagon", "angels-construction")
+end
+
+if mods["boblogistics"] then
+  for _, subgroup in pairs({
+    "angels-petrotrain",
+    "angels-smeltingtrain",
+    "angels-vehicle-train-crawler",
+  }) do
+    data.raw["item-subgroup"][subgroup].group = "bob-logistics"
+  end
 end

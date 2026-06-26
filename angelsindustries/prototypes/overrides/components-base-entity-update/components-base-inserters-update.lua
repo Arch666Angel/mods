@@ -31,15 +31,7 @@ if angelsmods.industries.components then
       },
     },
     {
-      name = "filter-inserter",
-      ingredients = {
-        { "!!" },
-        { type = "item", name = "fast-inserter", amount = 1 },
-        { type = "item", name = "circuit-red-loaded", amount = 3 },
-      },
-    },
-    {
-      name = "stack-inserter",
+      name = "bulk-inserter",
       ingredients = {
         { "!!" },
         { type = "item", name = "fast-inserter", amount = 1 },
@@ -48,16 +40,7 @@ if angelsmods.industries.components then
         { type = "item", name = "angels-servo-motor-2", amount = 2 },
       },
     },
-    {
-      name = "stack-filter-inserter",
-      ingredients = {
-        { "!!" },
-        { type = "item", name = "fast-inserter", amount = 1 },
-        { type = "item", name = "circuit-orange-loaded", amount = 3 },
-        { type = "item", name = "angels-servo-motor-3", amount = 1 },
-      },
-    },
   })
   OV.add_prereq("fast-inserter", "tech-red-circuit")
-  OV.add_prereq("stack-inserter", "tech-orange-circuit")
+  OV.add_prereq("bulk-inserter", "tech-orange-circuit")
 end

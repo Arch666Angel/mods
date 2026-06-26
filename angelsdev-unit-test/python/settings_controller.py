@@ -31,11 +31,17 @@ class SettingsFileReader:
       return ""
     return self.file.read(self.readUnsignedInteger(spaceOptimised=True)).decode('utf-8')
 
+  def readInteger(self) -> int:
+    return int.from_bytes(self.file.read(8), byteorder='little', signed=True)
+
+  def readUInteger(self) -> int:
+    return int.from_bytes(self.file.read(8), byteorder='little', signed=False)
+
   def readDictionary(self, dictName:str="") -> Union[bool, float, str, dict]:
     treeType = self.readByte()
     treeBool = self.readBool()
     if treeType == 0: # None
-      raise NotImplementedError
+      return None
     elif treeType == 1: # Bool
       return self.readBool()
     elif treeType == 2: # Number
@@ -43,7 +49,11 @@ class SettingsFileReader:
     elif treeType == 3: # String
       return self.readString()
     elif treeType == 4: # List
-      raise NotImplementedError
+      treeVal = dict()
+      listSize = self.readUnsignedInteger()
+      for listIndex in range(listSize):
+        treeVal[listIndex] = ["", self.readDictionary()]
+      return treeVal
     elif treeType == 5: # Dictionary
       treeVal = dict()
       dictSize = self.readUnsignedInteger()
@@ -51,6 +61,10 @@ class SettingsFileReader:
         dictKey = self.readString()
         treeVal[dictIndex] = [dictKey, self.readDictionary()]
       return treeVal
+    elif treeType == 6: # Signed Integer
+        return self.readInteger()
+    elif treeType == 7: # Unigned Integer
+        return self.readUInteger()
     else:
       raise ValueError(f"Type '{treeType}' is invalid for dict {dictName}.")
 
@@ -61,7 +75,9 @@ class SettingsFileWriter:
     'number' : 2,
     'string' : 3,
     'list' : 4,
-    'dictionary' : 5
+    'dictionary' : 5,
+    'signed-integer'   : 6,
+    'unsigned-integer' : 7,
   }
   def __init__(self, file):
     self.file = file
@@ -89,10 +105,34 @@ class SettingsFileWriter:
 
   def writeString(self, value:str) -> None:
     empty = value == ""
-    self.writeBool(False) # not refering to nullptr
-    self.writeUnsignedInteger(len(value), spaceOptimised=True)
+    self.writeBool(empty)
     if not empty:
+      self.writeUnsignedInteger(len(value), spaceOptimised=True)
       self.file.write(value.encode('utf-8'))
+
+  def writeValue(self, dictValue) -> None:
+    if dictValue is None:
+      self.writePropertyType('none')
+    elif type(dictValue) is bool:
+      self.writePropertyType('bool')
+      self.writeBool(dictValue)
+    elif type(dictValue) is float:
+      self.writePropertyType('number')
+      self.writeNumber(dictValue)
+    elif type(dictValue) is str:
+      self.writePropertyType('string')
+      self.writeString(dictValue)
+    elif type(dictValue) is list:
+      self.writeList(dictValue)
+    elif type(dictValue) is dict:
+      self.writeDictionary(dictValue)
+    elif type(dictValue) is int:
+      if dictValue < 0:
+        self.writePropertyType('signed-integer')
+        self.file.write(dictValue.to_bytes(8, 'little', signed=True))
+      else:
+        self.writePropertyType('unsigned-integer')
+        self.file.write(dictValue.to_bytes(8, 'little', signed=False))
 
   def writeDictionary(self, value:dict) -> None:
     self.writePropertyType('dictionary')
@@ -101,21 +141,14 @@ class SettingsFileWriter:
     for dictIndex in range(dictSize):
       dictKey, dictValue = value.get(dictIndex)
       self.writeString(dictKey)
-      if type(dictValue) is None:
-        raise NotImplementedError
-      elif type(dictValue) is bool:
-        self.writePropertyType('bool')
-        self.writeBool(dictValue)
-      elif type(dictValue) is float:
-        self.writePropertyType('number')
-        self.writeNumber(dictValue)
-      elif type(dictValue) is str:
-        self.writePropertyType('string')
-        self.writeString(dictValue)
-      elif type(dictValue) is list:
-        raise NotImplementedError
-      elif type(dictValue) is dict:
-        raise NotImplementedError
+      self.writeValue(dictValue)
+
+  def writeList(self, value:dict) -> None:
+    self.writePropertyType('list')
+    self.writeUnsignedInteger(len(value.keys()))
+    for dictIndex in range(len(value.keys())):
+      _, dictValue = value.get(dictIndex)
+      self.writeValue(dictValue)
 
   def writeVersion(self, version:list) -> None:
     for v in range(4):

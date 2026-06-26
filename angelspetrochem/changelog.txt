@@ -1,4 +1,44 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 04.06.2026
+  Bugfixes:
+    - Fixed Centrifuge pipe graphics (1293)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 01.06.2026
+  Bugfixes:
+    - Fixed production graph for electrodes (1251)
+    - Fixed Thorium-plutonium-based power systems tech being impossible to research when Nuclear Fuel mod is enabled. Angel's Petrochem does basically the same thing as Nuclear Fuel mod (plus a whole lot more!) so there is not point in having it enabled. But if you really do want it, it should now work (1270)
+    - Fixed mod compatibility issue where research trigger fluid was not being replaced by Angel's fluid (1275)
+  Changes:
+    - Angel's mods will now use the base game fluid "sulfuric-acid" rather than replacing this with our own version. This should help mod compatibility. (1275)
+    - Removed Carbon 2 recipe (1264)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Changes:
+    - Adjusted Gas refinery sound (867)
+    - If Bob's Tech mod is enabled, make Production science pack use Chemical plant 3 rather than Chemical plant (1229)
+  Bugfixes:
+    - Fixed crafting categories added chemical plants by other mods being overwritten (1232)
+    - Fixed Oil refinery 2 recipe (1233)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Changes:
+    - Moved coke pellets earlier in the tech tree (714)
+    - Allow Explosives 2 & 3 recipes to accept productivity modules (931)
+    - Removed references to normal / expensive recipes (945)
+    - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
+    - Updated for Factorio 2.0 (994)
+    - Restored 1:1 water to steam ratio (1071)
+    - Buffed recipes Resin 3, Catalytic synthesis of phenol, and Epichlorohydrin gas (1095)
+    - Added circuit connectors to all machines (1114)
+    - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
+    - Changed top-up valve threshold from 80% to 50% (1170)
+    - Buffed lime air filtering recipes (1198)
+    - Remove Acids mod setting (1213)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.26
 Date: 21.02.2024
   Changes:

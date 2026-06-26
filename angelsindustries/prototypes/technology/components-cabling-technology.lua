@@ -7,7 +7,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-2",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-tin-smelting-1",
@@ -34,8 +34,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -44,12 +44,12 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-3",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-2",
         "angels-silver-smelting-1",
-        "rubbers",
+        "angels-rubbers",
       },
       effects = {
         {
@@ -72,8 +72,8 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 60,
       },
@@ -82,7 +82,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-4",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-3",
@@ -111,9 +111,9 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
         },
         time = 60,
       },
@@ -122,7 +122,7 @@ if angelsmods.industries.components then
     {
       type = "technology",
       name = "angels-components-cabling-5",
-      icon = "__angelsindustries__/graphics/technology/cable-components.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-cabling-4",
@@ -150,10 +150,10 @@ if angelsmods.industries.components then
       unit = {
         count = 64,
         ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "utility-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 60,
       },

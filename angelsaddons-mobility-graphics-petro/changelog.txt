@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Features:
+    - Initial release (1183)
+    - Contains sprites required for the petro theme train set

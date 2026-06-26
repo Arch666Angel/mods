@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["tungsten"].powder = true
@@ -10,8 +9,15 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["tungsten"] then
+  if mods["bobores"] then
+    local angel_ore = data.raw.item["angels-tungsten-ore"]
+    local bob_ore = data.raw.item["tungsten-ore"]
+    OV.global_replace_item(angel_ore.name, bob_ore.name)
+    OV.copy_item_properties(angel_ore.name, bob_ore.name)
+    angelsmods.functions.hide(angel_ore.name)
+  end
 else
-  angelsmods.functions.add_flag("tungsten-ore", "hidden")
+  angelsmods.functions.hide("angels-tungsten-ore")
 end
 
 -------------------------------------------------------------------------------
@@ -20,41 +26,32 @@ end
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods["bobplates"] then
-    OV.converter_fluid("tungstic-acid", "liquid-tungstic-acid")
-    angelsmods.functions.disable_barreling_recipes("tungstic-acid")
-    OV.disable_recipe({ "tungstic-acid" })
+    OV.converter_fluid("bob-tungstic-acid", "angels-liquid-tungstic-acid")
+    OV.disable_recipe({ "bob-tungstic-acid" })
   end
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-tungsten-oxide", "tungsten-oxide")
-    angelsmods.functions.add_flag("solid-tungsten-oxide", "hidden")
-    angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "e")
-    data.raw["item"]["tungsten-oxide"].icon = "__angelssmelting__/graphics/icons/solid-tungsten-oxide.png"
-    data.raw["item"]["tungsten-oxide"].icon_size = 32
-    data.raw["item"]["tungsten-oxide"].icon_mipmaps = 1
-    data.raw["item"]["tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
-    OV.disable_recipe({ "tungsten-oxide" })
+    OV.global_replace_item("angels-solid-tungsten-oxide", "bob-tungsten-oxide")
+    angelsmods.functions.hide("angels-solid-tungsten-oxide")
+    OV.copy_item_properties("angels-solid-tungsten-oxide", "bob-tungsten-oxide")
+    OV.disable_recipe({ "bob-tungsten-oxide" })
   end
 
   if mods["bobplates"] then
-    OV.global_replace_item("powder-tungsten", "powdered-tungsten")
-    angelsmods.functions.add_flag("powder-tungsten", "hidden")
-    angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
-    data.raw["item"]["powdered-tungsten"].icon = "__angelssmelting__/graphics/icons/powder-tungsten.png"
-    data.raw["item"]["powdered-tungsten"].icon_size = 64
-    data.raw["item"]["powdered-tungsten"].icon_mipmaps = 4
-    data.raw["item"]["powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
-    OV.disable_recipe({ "powdered-tungsten" })
+    OV.global_replace_item("angels-powder-tungsten", "bob-powdered-tungsten")
+    angelsmods.functions.hide("angels-powder-tungsten")
+    OV.copy_item_properties("angels-powder-tungsten", "bob-powdered-tungsten")
+    OV.disable_recipe({ "bob-powdered-tungsten" })
   end
 else
-  angelsmods.functions.add_flag("processed-tungsten", "hidden")
-  angelsmods.functions.add_flag("pellet-tungsten", "hidden")
-  angelsmods.functions.add_flag("liquid-tungstic-acid", "hidden")
-  angelsmods.functions.add_flag("solid-tungsten-oxide", "hidden")
-  angelsmods.functions.add_flag("gas-tungsten-hexafluoride", "hidden")
-  angelsmods.functions.add_flag("solid-ammonium-paratungstate", "hidden")
-  angelsmods.functions.add_flag("powder-tungsten", "hidden")
+  angelsmods.functions.hide("angels-processed-tungsten")
+  angelsmods.functions.hide("angels-pellet-tungsten")
+  angelsmods.functions.hide("angels-liquid-tungstic-acid")
+  angelsmods.functions.hide("angels-solid-tungsten-oxide")
+  angelsmods.functions.hide("angels-gas-tungsten-hexafluoride")
+  angelsmods.functions.hide("angels-solid-ammonium-paratungstate")
+  angelsmods.functions.hide("angels-powder-tungsten")
   OV.disable_technology({ "angels-tungsten-smelting-1", "angels-tungsten-smelting-2", "angels-tungsten-smelting-3" })
 end
 
@@ -65,60 +62,36 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-tungsten", "tungsten-plate")
-    angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")
-    angelsmods.functions.move_item("tungsten-plate", "angels-tungsten-casting", "j")
-    data.raw["item"]["tungsten-plate"].icon = "__angelssmelting__/graphics/icons/plate-tungsten.png"
-    data.raw["item"]["tungsten-plate"].icon_size = 32
-    data.raw["item"]["tungsten-plate"].icon_mipmaps = 1
-    OV.disable_recipe({ "bob-tungsten-plate" })
-    OV.add_prereq("tungsten-processing", "angels-tungsten-smelting-1")
-  end
+    angelsmods.functions.hide("angels-plate-tungsten")
+    OV.copy_item_properties("angels-plate-tungsten", "tungsten-plate")
+    OV.disable_recipe({ "tungsten-plate" })
+    OV.add_prereq("bob-tungsten-processing", "angels-tungsten-smelting-1")
+    OV.set_research_difficulty("bob-tungsten-processing", "tungsten-plate", 10, "craft-item")
 
-  if mods["bobplates"] then
+    angelsmods.functions.move_item("bob-copper-tungsten-alloy", "angels-tungsten-casting", "l")
     angelsmods.functions.move_item("tungsten-carbide", "angels-tungsten-casting", "k")
     OV.patch_recipes({
       {
         name = "tungsten-carbide",
         subgroup = "angels-tungsten-casting",
-        order = "k[tungsten-carbide]-a",
-        icons = angelsmods.functions.add_number_icon_layer({
-          {
-            icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
-            icon_size = 64,
-            icon_mipmaps = 1,
-            scale = 0.5,
-          },
-        }, 1, angelsmods.smelting.number_tint),
-      },
-      {
-        name = "tungsten-carbide-2",
-        subgroup = "angels-tungsten-casting",
-        order = "k[tungsten-carbide]-b",
-        icons = angelsmods.functions.add_number_icon_layer({
-          {
-            icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png",
-            icon_size = 64,
-            icon_mipmaps = 1,
-            scale = 0.5,
-          },
-        }, 2, angelsmods.smelting.number_tint),
+        energy_required = 6,
+        ingredients = {
+          { type = "item", name = "bob-powdered-tungsten", amount = 10 },
+          { type = "item", name = "angels-solid-carbon", amount = 10 },
+        },
+        results = {
+          { type = "item", name = "tungsten-carbide", amount = 20 },
+        },
+        order = "k[tungsten-carbide]",
       },
     })
-  end
 
-  if mods["bobplates"] then
-    angelsmods.functions.move_item("copper-tungsten-alloy", "angels-tungsten-casting", "l")
-  end
-
-  if mods["angelsindustries"] and angelsmods.industries.tech then
-  else -- not angels industry tech mode
-    OV.remove_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-2")
-    OV.add_prereq("angels-tungsten-smelting-1", "angels-cobalt-smelting-1")
+    OV.remove_prereq("bob-tungsten-processing", "bob-nickel-processing")
   end
 else
-  angelsmods.functions.add_flag("casting-powder-tungsten", "hidden")
-  angelsmods.functions.add_flag("angels-plate-tungsten", "hidden")
-  OV.disable_recipe({ "casting-powder-tungsten-1", "casting-powder-tungsten-2" })
+  angelsmods.functions.hide("angels-casting-powder-tungsten")
+  angelsmods.functions.hide("angels-plate-tungsten")
+  OV.disable_recipe({ "angels-casting-powder-tungsten", "angels-casting-powder-tungsten-2" })
   OV.disable_recipe({ "angels-plate-tungsten" })
 end
 --hide all if not used
@@ -127,15 +100,15 @@ if
   and not angelsmods.trigger.smelting_products["tungsten"].powder
 then
   OV.hide_recipe({
-    "tungsten-ore-processing",
-    "tungsten-processed-processing",
-    "tungsten-ore-smelting",
-    "liquid-tungstic-acid-smelting",
-    "pellet-tungsten-smelting",
-    "solid-tungsten-oxide-smelting",
-    "processed-tungsten-smelting",
-    "gas-tungsten-hexafluoride-smelting",
-    "solid-ammonium-paratungstate-smelting",
+    "angels-processed-tungsten",
+    "angels-pellet-tungsten",
+    "angels-solid-tungsten-oxide",
+    "angels-solid-ammonium-paratungstate",
+    "angels-liquid-tungstic-acid",
+    "angels-gas-tungsten-hexafluoride",
+    "angels-solid-ammonium-paratungstate-2",
+    "angels-powder-tungsten",
+    "angels-solid-tungsten-oxide-2",
   })
 end
 -------------------------------------------------------------------------------
@@ -144,13 +117,30 @@ end
 if mods["bobplates"] then
   local alloy_recipes = {
     "tungsten-carbide",
-    "tungsten-carbide-2",
-    "copper-tungsten-alloy",
+    "bob-copper-tungsten-alloy",
   }
 
   for _, name in pairs(alloy_recipes) do
     if data.raw.recipe[name] then
-      data.raw.recipe[name].category = "sintering-4"
+      data.raw.recipe[name].category = "angels-sintering-4"
+      OV.remove_unlock("bob-tungsten-processing", name)
+      OV.add_unlock("angels-tungsten-smelting-1", name)
     end
   end
+
+  OV.patch_recipes({
+    {
+      name = "bob-copper-tungsten-alloy",
+      energy_required = 8,
+      ingredients = {
+        { type = "item", name = "bob-powdered-tungsten", amount = 15 },
+        { type = "item", name = "copper-plate", amount = 0 },
+        { type = "item", name = "angels-powder-copper", amount = 10 },
+      },
+      results = {
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 25 },
+      },
+    },
+  })
+  OV.add_prereq("angels-tungsten-smelting-1", "angels-copper-smelting-2")
 end

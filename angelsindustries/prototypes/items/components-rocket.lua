@@ -3,7 +3,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-hull",
-      icon = "__angelsindustries__/graphics/icons/rocket-hull.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-hull.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-a",
@@ -12,7 +12,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-ion-thruster",
-      icon = "__angelsindustries__/graphics/icons/rocket-ion-thruster.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-ion-thruster.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-b",
@@ -21,7 +21,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-ion-booster",
-      icon = "__angelsindustries__/graphics/icons/rocket-ion-booster.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-ion-booster.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-c",
@@ -30,7 +30,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-fusion-reactor",
-      icon = "__angelsindustries__/graphics/icons/rocket-fusion-reactor.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-fusion-reactor.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-d",
@@ -39,7 +39,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-shield-array",
-      icon = "__angelsindustries__/graphics/icons/rocket-shield-array.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-shield-array.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-e",
@@ -48,7 +48,7 @@ if angelsmods.industries.components then
     {
       type = "item",
       name = "angels-rocket-laser-array",
-      icon = "__angelsindustries__/graphics/icons/rocket-laser-array.png",
+      icon = "__angelsindustriesgraphics__/graphics/icons/rocket-laser-array.png",
       icon_size = 32,
       subgroup = "angels-rocket",
       order = "a[parts]-f",

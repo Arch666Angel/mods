@@ -1,5 +1,3 @@
-local noise = require("noise")
-local tne = noise.to_noise_expression
 local resource_autoplace = require("resource-autoplace")
 
 if not angelsmods.functions.make_resource then
@@ -19,7 +17,7 @@ if not angelsmods.functions.make_resource then
 
   --Create particles
   local function make_particle(input)
-    if not data.raw.particle[input.name .. "-particle"] then
+    if not data.raw["optimized-particle"][input.name .. "-particle"] then
       data:extend({
         {
           type = "optimized-particle",
@@ -173,25 +171,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 1 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -199,25 +187,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 2 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -225,25 +203,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 3 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -251,25 +219,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 4 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -277,25 +235,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 5 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -303,25 +251,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 6 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -329,25 +267,15 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 7 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -355,29 +283,20 @@ if not angelsmods.functions.make_resource then
         if input.sheet == 8 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
         if input.sheet == 9 then
+          local sheet_id
           if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
             sheet_id = 11
           else
@@ -385,100 +304,60 @@ if not angelsmods.functions.make_resource then
           end
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-19-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-" .. sheet_id .. ".png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-19-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
         if input.sheet == 10 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-20-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-20.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-20-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
         if input.sheet == 11 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-21-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-21.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-21-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
         if input.sheet == 12 then
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-22-lr.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-22.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-22-hr.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-              },
+              scale = 0.5,
             },
           }
         end
@@ -538,7 +417,7 @@ if not angelsmods.functions.make_resource then
     if input.glow == true then
       if input.type == "item" then
         if input.get and data.raw.resource[input.get] then
-          stages_input = data.raw.resource[input.get].stages
+          local stages_input = data.raw.resource[input.get].stages
           input.frame_count = stages_input.sheet.frame_count
           input.variation_count = stages_input.sheet.variation_count
         else
@@ -566,29 +445,17 @@ if not angelsmods.functions.make_resource then
           end
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-11-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -600,29 +467,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.4
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-12-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -634,29 +489,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.8
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-13-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -668,29 +511,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.3
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-14-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -702,29 +533,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.3
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-15-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -736,29 +555,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.3
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-16-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -770,29 +577,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.3
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-17-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -804,29 +599,17 @@ if not angelsmods.functions.make_resource then
           input.gfx_alpha_max = 0.3
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-lr-glow.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-hr-glow.png",
               priority = "extra-high",
               tint = input.tint,
-              width = 64,
-              height = 64,
+              width = 128,
+              height = 128,
               line_length = 8,
               frame_count = input.frame_count,
               variation_count = input.variation_count,
+              scale = 0.5,
               blend_mode = "additive",
               flags = { "light" },
-              hr_version = {
-                filename = "__angelsinfiniteores__/graphics/entity/ores/ore-18-hr-glow.png",
-                priority = "extra-high",
-                tint = input.tint,
-                width = 128,
-                height = 128,
-                line_length = 8,
-                frame_count = input.frame_count,
-                variation_count = input.variation_count,
-                scale = 0.5,
-                blend_mode = "additive",
-                flags = { "light" },
-              },
             },
           }
         end
@@ -912,7 +695,7 @@ if not angelsmods.functions.make_resource then
   --CREATE RESOURCE FROM STORE
   function angelsmods.functions.make_resource()
     for r, input in pairs(angelsmods.functions.store.make) do
-      ret_table = {
+      local ret_table = {
         type = "resource",
         flags = { "placeable-neutral" },
         tree_removal_probability = 0.8,
@@ -920,12 +703,11 @@ if not angelsmods.functions.make_resource then
         infinite_depletion_amount = 10,
         resource_patch_search_radius = 12,
       }
-      autoplace_ret_table = {
+      local autoplace_ret_table = {
         name = input.name,
         order = input.order,
         base_density = input.autoplace.base_density,
         has_starting_area_placement = input.autoplace.starting_area,
-        resource_index = input.autoplace.resource_index,
         regular_rq_factor_multiplier = input.autoplace.regular_rq_factor_multiplier,
         starting_rq_factor_multiplier = input.autoplace.starting_rq_factor_multiplier,
         base_spots_per_km2 = input.autoplace.base_spots_per_km2,
@@ -942,9 +724,17 @@ if not angelsmods.functions.make_resource then
         --Create Autopace for the resource
         make_resautoplace(input)
         generate_presets(input.name)
+        for _, planet_name in pairs(input.planets or { "nauvis" }) do
+          data.raw.planet[planet_name].map_gen_settings.autoplace_controls[input.name] = {}
+          data.raw.planet[planet_name].map_gen_settings.autoplace_settings.entity.settings[input.name] = {}
+        end
         --Create Particle if resource yields items
         if input.type == "item" then
-          if input.get and data.raw.particle[input.get .. "-particle"] then
+          if
+            input.get
+            and data.raw["optimized-particle"]
+            and data.raw["optimized-particle"][input.get .. "-particle"]
+          then
             input.particle = input.get .. "-particle"
           else
             make_particle(input)
@@ -971,6 +761,7 @@ if not angelsmods.functions.make_resource then
           input.hardness = 0.9
         end]]
         --Set stages count according to resource type
+        local stages_count
         if input.type == "item" then
           if input.infinite == true then
             stages_count = { 1 }
@@ -1018,12 +809,11 @@ if not angelsmods.functions.make_resource then
         --Get map_color and icon from the regular resource
         if input.get then
           input.map_color = data.raw.resource[input.get].map_color
-          autoplace_ret_table.patch_set_name = input.get
           if data.raw.resource[input.get] then
             if data.raw.resource[input.get].icon_size then
               input.icon_size = data.raw.resource[input.get].icon_size
             else
-              input.icon_size = 32
+              input.icon_size = 64
             end
             if data.raw.resource[input.get].icon then
               ret_table.icon = data.raw.resource[input.get].icon
@@ -1033,12 +823,12 @@ if not angelsmods.functions.make_resource then
             end
           end
         elseif not input.icon_size then
-          input.icon_size = 32
+          input.icon_size = 64
         end
 
         if input.icon then
           if not input.icon_size then
-            input.icon_size = 32
+            input.icon_size = 64
           end
           ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
         end
@@ -1085,40 +875,135 @@ if not angelsmods.functions.make_resource then
     end
   end
 
-  --REMOVE RESOURCE
-  function angelsmods.functions.remove_resource(resource)
-    if data.raw.resource[resource] then
-      data.raw.resource[resource] = nil
+  local function get_resource_control_names(resource)
+    local control_names = { resource }
+    local normalized_resource = resource:gsub("-", "_")
+    if normalized_resource ~= resource then
+      table.insert(control_names, normalized_resource)
+    end
+    return control_names
+  end
+
+  local function planet_has_resource_autoplace(planet, resource)
+    if not (planet and planet.map_gen_settings) then
+      return false
+    end
+
+    local entity_settings = planet.map_gen_settings.autoplace_settings
+      and planet.map_gen_settings.autoplace_settings.entity
+      and planet.map_gen_settings.autoplace_settings.entity.settings
+    if entity_settings and entity_settings[resource] then
+      return true
+    end
+
+    local autoplace_controls = planet.map_gen_settings.autoplace_controls
+    if autoplace_controls then
+      for _, control_name in pairs(get_resource_control_names(resource)) do
+        if autoplace_controls[control_name] then
+          return true
+        end
+      end
+    end
+
+    return false
+  end
+
+  local function resource_is_used_off_nauvis(resource)
+    for planet_name, planet in pairs(data.raw.planet or {}) do
+      if planet_name ~= "nauvis" and planet_has_resource_autoplace(planet, resource) then
+        return true
+      end
+    end
+    return false
+  end
+
+  local function remove_resource_from_planet(planet, resource)
+    if not (resource and planet and planet.map_gen_settings) then
+      return
+    end
+
+    local autoplace_controls = planet.map_gen_settings.autoplace_controls
+    if autoplace_controls then
+      autoplace_controls[resource] = nil
+    end
+
+    local entity_settings = planet.map_gen_settings.autoplace_settings
+      and planet.map_gen_settings.autoplace_settings.entity
+      and planet.map_gen_settings.autoplace_settings.entity.settings
+    if entity_settings then
+      entity_settings[resource] = nil
+    end
+  end
+
+  local function remove_autoplace_control_prototypes(resource)
+    if resource then
       data.raw["autoplace-control"][resource] = nil
     end
+  end
 
-    local infinite_resource = nil
-    if data.raw.resource["infinite-" .. resource] then
-      infinite_resource = "infinite-" .. resource
-      data.raw.resource["infinite-" .. resource] = nil
-      data.raw["autoplace-control"]["infinite-" .. resource] = nil
+  local function remove_resource_prototype_if_unused_off_nauvis(resource)
+    local keep_resource_prototype = resource_is_used_off_nauvis(resource)
+    if data.raw.resource[resource] and not keep_resource_prototype then
+      data.raw.resource[resource] = nil
     end
+    remove_autoplace_control_prototypes(resource)
+    return keep_resource_prototype
+  end
+
+  local function remove_resource_from_presets(resource)
+    if not resource then
+      return
+    end
+
+    for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
+      local autoplace_controls = preset and preset.basic_settings and preset.basic_settings.autoplace_controls
+      if autoplace_controls then
+        autoplace_controls[resource] = nil
+      end
+    end
+  end
+
+  local function remove_legacy_planet_control_prototypes(resource)
+    if not resource then
+      return
+    end
+
+    for planet_name in pairs(data.raw.planet or {}) do
+      for _, control_name in pairs(get_resource_control_names(resource)) do
+        data.raw["autoplace-control"][planet_name .. "_" .. control_name] = nil
+      end
+    end
+  end
+
+  local function remove_legacy_planet_control_prototypes_if_unused(resource, keep_resource_prototype)
+    if not keep_resource_prototype then
+      remove_legacy_planet_control_prototypes(resource)
+    end
+  end
+
+  local function get_infinite_resource(resource)
+    local infinite_resource = "infinite-" .. resource
+    if data.raw.resource[infinite_resource] then
+      return infinite_resource
+    end
+  end
+
+  --REMOVE RESOURCE
+  function angelsmods.functions.remove_resource(resource)
+    local keep_resource_prototype = remove_resource_prototype_if_unused_off_nauvis(resource)
+    local infinite_resource = get_infinite_resource(resource)
+    local keep_infinite_resource_prototype = infinite_resource
+      and remove_resource_prototype_if_unused_off_nauvis(infinite_resource)
 
     -- Remove from presets
-    for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-      if
-        preset
-        and preset.basic_settings
-        and preset.basic_settings.autoplace_controls
-        and preset.basic_settings.autoplace_controls[resource]
-      then
-        preset.basic_settings.autoplace_controls[resource] = nil
-      end
-      if
-        infinite_resource
-        and preset
-        and preset.basic_settings
-        and preset.basic_settings.autoplace_controls
-        and preset.basic_settings.autoplace_controls[infinite_resource]
-      then
-        preset.basic_settings.autoplace_controls[infinite_resource] = nil
-      end
-    end
+    remove_resource_from_presets(resource)
+    remove_resource_from_presets(infinite_resource)
+
+    remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, resource)
+    remove_resource_from_planet(data.raw.planet and data.raw.planet.nauvis, infinite_resource)
+
+    remove_legacy_planet_control_prototypes_if_unused(resource, keep_resource_prototype)
+    remove_legacy_planet_control_prototypes_if_unused(infinite_resource, keep_infinite_resource_prototype)
 
     for r, subdir in pairs(angelsmods.functions.store) do
       for r, input in pairs(subdir) do
@@ -1168,11 +1053,7 @@ if not angelsmods.functions.make_resource then
                 and settings.startup["angels-keepuranacid"].value
             then
               if angelsmods.petrochem then
-                if angelsmods.trigger.enableacids then
-                  input.acid_req = input.acid_to_mine
-                else
-                  input.acid_req = "liquid-sulfuric-acid"
-                end
+                input.acid_req = input.acid_to_mine
               else
                 if data.raw.fluid[input.acid_to_mine] then
                   input.acid_req = input.acid_to_mine

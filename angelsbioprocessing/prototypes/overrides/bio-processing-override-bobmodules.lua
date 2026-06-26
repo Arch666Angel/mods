@@ -5,575 +5,321 @@ if mods["bobmodules"] then
   -----------------------------------------------------------------------------
   -- EXISTING MODULES CATEGORY ------------------------------------------------
   -----------------------------------------------------------------------------
-  if angelsmods.industries and angelsmods.industries.overhaul then
-    -- modules group
-    data.raw["item-group"]["bobmodules"].icon = nil
-    data.raw["item-group"]["bobmodules"].icon_size = nil
-    data.raw["item-group"]["bobmodules"].icons = {
-      {
-        icon = "__base__/graphics/technology/module.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-        scale = 0.25,
-      },
-      {
-        icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
-        icon_size = 1080,
-        icon_mipmaps = 1,
-        scale = 64 / 1080 * 0.35,
-        shift = { 20, -20 },
-      },
-    }
-    data.raw["item-group"]["bobmodules"].order = "lb[bobs]-d[modules]"
-
-    -- modules subgroups
-    data.raw["item-subgroup"]["module-intermediates"].order = "f-0-a"
-    data:extend({
-      {
-        type = "item-subgroup",
-        name = "module-intermediates-2",
-        group = "bobmodules",
-        order = "f-0-b",
-      },
-      {
-        type = "item-subgroup",
-        name = "module-intermediates-3",
-        group = "bobmodules",
-        order = "f-0-c",
-      },
-    })
-    if bobmods.modules.ModulesLab then
-      data.raw["tool"]["module-circuit-board"].subgroup = "module-intermediates-3"
-    else
-      data.raw["item"]["module-circuit-board"].subgroup = "module-intermediates-3"
-    end
-    data.raw["item"]["module-contact"].subgroup = "module-intermediates-2"
-    data.raw["item"]["module-processor-board-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["module-processor-board-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["speed-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["speed-processor-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["effectivity-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["effectivity-processor-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["productivity-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["productivity-processor-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["pollution-clean-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["pollution-clean-processor-3"].subgroup = "module-intermediates-3"
-    data.raw["item"]["pollution-create-processor-2"].subgroup = "module-intermediates-2"
-    data.raw["item"]["pollution-create-processor-3"].subgroup = "module-intermediates-3"
-  end
+  -- modules group
+  data.raw["item-group"]["bobmodules"].order = "lb[bobs]-d[modules]"
 
   -----------------------------------------------------------------------------
   -- EXISTING MODULES RECIPES -------------------------------------------------
   -----------------------------------------------------------------------------
-  if angelsmods.industries and angelsmods.industries.overhaul then
-    OV.patch_recipes({
-      { name = "speed-module", ingredients = { { type = "item", name = "crystal-splinter-blue", amount = 0 } } },
-      { name = "speed-module-2", ingredients = { { type = "item", name = "crystal-shard-blue", amount = 0 } } },
-      { name = "speed-module-3", ingredients = { { type = "item", name = "crystal-full-blue", amount = 0 } } },
-      { name = "productivity-module", ingredients = { { type = "item", name = "crystal-splinter-red", amount = 0 } } },
-      { name = "productivity-module-2", ingredients = { { type = "item", name = "crystal-shard-red", amount = 0 } } },
-      { name = "productivity-module-3", ingredients = { { type = "item", name = "crystal-full-red", amount = 0 } } },
-      { name = "effectivity-module", ingredients = { { type = "item", name = "crystal-splinter-green", amount = 0 } } },
-      { name = "effectivity-module-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 0 } } },
-      { name = "effectivity-module-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 0 } } },
-    })
-    OV.remove_prereq("speed-module", "bio-processing-crystal-splinter-1")
-    OV.remove_prereq("productivity-module", "bio-processing-crystal-splinter-1")
-    OV.remove_prereq("effectivity-module", "bio-processing-crystal-splinter-1")
-    OV.remove_prereq("speed-module-2", "bio-processing-crystal-shard-1")
-    OV.remove_prereq("productivity-module-2", "bio-processing-crystal-shard-1")
-    OV.remove_prereq("effectivity-module-2", "bio-processing-crystal-shard-1")
-    OV.remove_prereq("speed-module-3", "bio-processing-crystal-full")
-    OV.remove_prereq("productivity-module-3", "bio-processing-crystal-full")
-    OV.remove_prereq("effectivity-module-3", "bio-processing-crystal-full")
-  end
-
   OV.patch_recipes({
-    { name = "speed-processor", ingredients = { { type = "item", name = "crystal-splinter-blue", amount = 1 } } },
-    { name = "speed-processor-2", ingredients = { { type = "item", name = "crystal-shard-blue", amount = 1 } } },
-    { name = "speed-processor-3", ingredients = { { type = "item", name = "crystal-full-blue", amount = 1 } } },
-    { name = "productivity-processor", ingredients = { { type = "item", name = "crystal-splinter-red", amount = 1 } } },
-    { name = "productivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-red", amount = 1 } } },
-    { name = "productivity-processor-3", ingredients = { { type = "item", name = "crystal-full-red", amount = 1 } } },
+    { name = "speed-module", ingredients = { { type = "item", name = "angels-crystal-splinter-blue", amount = 0 } } },
+    { name = "speed-module-2", ingredients = { { type = "item", name = "angels-crystal-shard-blue", amount = 0 } } },
+    { name = "speed-module-3", ingredients = { { type = "item", name = "angels-crystal-full-blue", amount = 0 } } },
     {
-      name = "effectivity-processor",
-      ingredients = { { type = "item", name = "crystal-splinter-green", amount = 1 } },
-    },
-    { name = "effectivity-processor-2", ingredients = { { type = "item", name = "crystal-shard-green", amount = 1 } } },
-    { name = "effectivity-processor-3", ingredients = { { type = "item", name = "crystal-full-green", amount = 1 } } },
-    {
-      name = "pollution-clean-processor",
-      ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } },
+      name = "productivity-module",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-red", amount = 0 } },
     },
     {
-      name = "pollution-clean-processor-2",
-      ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } },
+      name = "productivity-module-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-red", amount = 0 } },
     },
     {
-      name = "pollution-clean-processor-3",
-      ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } },
+      name = "productivity-module-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-red", amount = 0 } },
     },
     {
-      name = "pollution-create-processor",
-      ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } },
+      name = "efficiency-module",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-green", amount = 0 } },
     },
     {
-      name = "pollution-create-processor-2",
-      ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } },
+      name = "efficiency-module-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-green", amount = 0 } },
     },
     {
-      name = "pollution-create-processor-3",
-      ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } },
+      name = "efficiency-module-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-green", amount = 0 } },
     },
   })
+  OV.set_research_difficulty("modules", 30, 25)
+  OV.remove_prereq("modules", "angels-bio-processing-crystal-splinter-1")
+  OV.remove_prereq("speed-module-2", "angels-bio-processing-crystal-shard-1")
+  OV.remove_prereq("productivity-module-2", "angels-bio-processing-crystal-shard-1")
+  OV.remove_prereq("efficiency-module-2", "angels-bio-processing-crystal-shard-1")
+  OV.remove_prereq("speed-module-3", "angels-bio-processing-crystal-full")
+  OV.remove_prereq("productivity-module-3", "angels-bio-processing-crystal-full")
+  OV.remove_prereq("efficiency-module-3", "angels-bio-processing-crystal-full")
+
+  OV.patch_recipes({
+    {
+      name = "bob-speed-processor",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-blue", amount = 1 } },
+    },
+    {
+      name = "bob-speed-processor-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-blue", amount = 1 } },
+    },
+    {
+      name = "bob-speed-processor-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-blue", amount = 1 } },
+    },
+    {
+      name = "bob-productivity-processor",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-red", amount = 1 } },
+    },
+    {
+      name = "bob-productivity-processor-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-red", amount = 1 } },
+    },
+    {
+      name = "bob-productivity-processor-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-red", amount = 1 } },
+    },
+    {
+      name = "bob-efficiency-processor",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-green", amount = 1 } },
+    },
+    {
+      name = "bob-efficiency-processor-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-green", amount = 1 } },
+    },
+    {
+      name = "bob-efficiency-processor-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-green", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-clean-processor",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-clean-processor-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-clean-processor-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-create-processor",
+      ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-create-processor-2",
+      ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 } },
+    },
+    {
+      name = "bob-pollution-create-processor-3",
+      ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } },
+    },
+  })
+  if mods["quality"] then
+    OV.patch_recipes({
+      {
+        name = "quality-module",
+        ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-2",
+        ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-3",
+        ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 0 } },
+      },
+    })
+
+    OV.remove_prereq("quality-module", "angels-bio-processing-crystal-splinter-2")
+    OV.remove_prereq("quality-module-2", "angels-bio-processing-crystal-shard-2")
+    OV.remove_prereq("quality-module-3", "angels-bio-processing-crystal-full")
+
+    OV.patch_recipes({
+      {
+        name = "bob-quality-processor",
+        ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 } },
+      },
+      {
+        name = "bob-quality-processor-2",
+        ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 } },
+      },
+      {
+        name = "bob-quality-processor-3",
+        ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } },
+      },
+    })
+  end
 
   -----------------------------------------------------------------------------
   -- EXISTING MODULES TECHNOLOGY ----------------------------------------------
   -----------------------------------------------------------------------------
-  -- tier 1 modules
-  OV.add_prereq("modules", "bio-processing-crystal-splinter-2")
-  for _, type in pairs({ "speed", "effectivity", "productivity" }) do
-    -- remove the marked as upgrade from base game
-    local tech = data.raw.technology[type .. "-module-2"]
-    if tech then
-      tech.upgrade = "false"
-    end
-  end
-  if bobmods.modules.ModulesLab then
-    OV.remove_science_pack("module-merging", {
-      "module-case",
-      "module-circuit-board",
-    })
-  end
+
   -- tier 2 modules
-  data:extend({
-    {
-      type = "technology",
-      name = "modules-2",
-      icon = "__base__/graphics/technology/module.png",
-      icon_size = 256,
-      icon_mipmaps = 4,
-      prerequisites = {
-        "modules",
-        "advanced-electronics-2",
-        "bio-processing-crystal-shard-2",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "module-processor-board-2",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "speed-processor-2",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "effectivity-processor-2",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "productivity-processor-2",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pollution-clean-processor-2",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pollution-create-processor-2",
-        },
-      },
-      unit = {
-        count = 100,
-        ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-        },
-        time = 30,
-      },
-      order = "i-a",
-    },
-  })
-  OV.remove_unlock("advanced-electronics-2", "module-processor-board-2")
-  for _, type in pairs({ "speed", "effectivity", "productivity" }) do
-    -- remove the marked as upgrade from base game
-    local tech = data.raw.technology[type .. "-module-3"]
-    if tech then
-      tech.upgrade = "false"
-    end
+  OV.add_prereq("bob-modules-2", "angels-bio-processing-crystal-splinter-1")
+  OV.add_prereq("bob-pollution-clean-module-2", "angels-bio-processing-crystal-splinter-2")
+  OV.add_prereq("bob-pollution-create-module-2", "angels-bio-processing-crystal-splinter-2")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-2", "angels-bio-processing-crystal-splinter-2")
   end
-  for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
-    OV.remove_unlock(type .. "-module-3", type .. "-processor-2")
-    OV.add_prereq(type .. "-module-3", "modules-2")
-    OV.set_research_difficulty(type .. "-module-3", 60, 100)
-    OV.set_research_difficulty(type .. "-module-4", 60, 150)
-    OV.set_research_difficulty(type .. "-module-5", 60, 200)
-    if bobmods.modules.ModulesLab then
-      OV.set_science_pack({
-        type .. "-module-5",
-      }, {
-        "module-case",
-        "module-circuit-board",
-        type .. "-processor",
-      }, {
-        0, --module case
-        1, --module-circuit-board
-        2, --processor circuit board
-      })
-    end
-  end
-  for _, type in pairs({ "raw-speed", "green", "raw-productivity" }) do
-    OV.set_research_difficulty(type .. "-module-3", 60, 100)
-    OV.set_research_difficulty(type .. "-module-4", 60, 150)
-    OV.set_research_difficulty(type .. "-module-5", 60, 200)
-    if bobmods.modules.ModulesLab then
-      OV.set_science_pack({
-        type .. "-module-5",
-      }, {
-        "module-case",
-        "module-circuit-board",
-      }, {
-        0, --module case
-        1, --module-circuit-board
-      })
-    end
-  end
-  if bobmods.modules.ModulesLab then
-    OV.set_science_pack("raw-speed-module-5", {
-      "speed-processor",
-      "effectivity-processor",
-    }, 2)
-    OV.set_science_pack("green-module-5", {
-      "pollution-clean-processor",
-      "effectivity-processor",
-    }, 2)
-    OV.set_science_pack("raw-productivity-module-5", {
-      "pollution-clean-processor",
-      "effectivity-processor",
-      "productivity-processor",
-    }, 2)
+
+  if mods["bobplates"] then
+    OV.add_prereq("bob-modules-2", "bob-gem-processing-3")
   end
 
   -- tier 3 modules
-  data:extend({
-    {
-      type = "technology",
-      name = "modules-3",
-      icon = "__base__/graphics/technology/module.png",
-      icon_size = 256,
-      icon_mipmaps = 4,
-      prerequisites = {
-        "modules-2",
-        "bio-processing-crystal-full",
-      },
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "module-processor-board-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "speed-processor-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "effectivity-processor-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "productivity-processor-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pollution-clean-processor-3",
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "pollution-create-processor-3",
-        },
-      },
-      unit = {
-        count = 100,
-        ingredients = {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
-          { type = "item", name = "chemical-science-pack", amount = 1 },
-          { type = "item", name = "production-science-pack", amount = 1 },
-        },
-        time = 30,
-      },
-      order = "i-a",
-    },
-  })
-  for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
-    OV.remove_unlock(type .. "-module-6", type .. "-processor-3")
-    OV.add_prereq(type .. "-module-6", "modules-3")
-    OV.set_research_difficulty(type .. "-module-6", 120, 300)
-    OV.set_research_difficulty(type .. "-module-7", 120, 400)
-    OV.set_research_difficulty(type .. "-module-8", 120, 500)
+  OV.add_prereq("bob-modules-3", "angels-bio-processing-crystal-shard-1")
+  OV.add_prereq("bob-pollution-clean-module-3", "angels-bio-processing-crystal-shard-2")
+  OV.add_prereq("bob-pollution-create-module-3", "angels-bio-processing-crystal-shard-2")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-3", "angels-bio-processing-crystal-shard-2")
   end
-  for _, type in pairs({ "raw-speed", "green", "raw-productivity" }) do
-    OV.set_research_difficulty(type .. "-module-6", 120, 300)
-    OV.set_research_difficulty(type .. "-module-7", 120, 400)
-    OV.set_research_difficulty(type .. "-module-8", 120, 500)
-  end
-  if data.raw.technology["advanced-electronics-3"] then
-    OV.remove_unlock("advanced-electronics-3", "module-processor-board-3")
-    OV.add_prereq("modules-3", "advanced-electronics-3")
-    OV.remove_prereq("speed-module-6", "advanced-electronics-3")
-    OV.remove_prereq("productivity-module-6", "advanced-electronics-3")
-    OV.remove_prereq("effectivity-module-6", "advanced-electronics-3")
-    OV.remove_prereq("pollution-clean-module-6", "advanced-electronics-3")
-    OV.remove_prereq("pollution-create-module-6", "advanced-electronics-3")
-  else
-    OV.remove_unlock("advanced-electronics-2", "module-processor-board-3")
-  end
+
+  -- tier 4 modules
+  OV.add_prereq("bob-modules-4", "angels-bio-processing-crystal-full")
+
+  -- tier 5 modules
 
   -----------------------------------------------------------------------------
   -- BIO YIELD MODULES --------------------------------------------------------
   -----------------------------------------------------------------------------
-  -- existing tiers 1.1 - 1.3
-  data:extend({
-    {
-      type = "item-subgroup",
-      name = "bio-yield-module",
-      group = "bobmodules",
-      order = "f-9",
-    },
-  })
+  -- existing tiers 1 - 3
   data.raw.module["angels-bio-yield-module"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-1.png"
-  data.raw.module["angels-bio-yield-module"].icon_size = 32
-  data.raw.module["angels-bio-yield-module"].icon_mipmaps = 1
-  move_item("angels-bio-yield-module", "bio-yield-module", "b-y-1", "module")
+    "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/module-bio-productivity-bobs-1.png"
+  data.raw.module["angels-bio-yield-module"].icon_size =
+    64, move_item("angels-bio-yield-module", "angels-bio-yield-module", "b-y-1", "module")
   data.raw.module["angels-bio-yield-module-2"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-2.png"
-  data.raw.module["angels-bio-yield-module-2"].icon_size = 32
-  data.raw.module["angels-bio-yield-module-2"].icon_mipmaps = 1
-  move_item("angels-bio-yield-module-2", "bio-yield-module", "b-y-2", "module")
+    "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/module-bio-productivity-bobs-2.png"
+  data.raw.module["angels-bio-yield-module-2"].icon_size = 64
+  move_item("angels-bio-yield-module-2", "angels-bio-yield-module", "b-y-2", "module")
   data.raw.module["angels-bio-yield-module-3"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
-  data.raw.module["angels-bio-yield-module-3"].icon_size = 32
-  data.raw.module["angels-bio-yield-module-3"].icon_mipmaps = 1
-  move_item("angels-bio-yield-module-3", "bio-yield-module", "b-y-3", "module")
+    "__angelsbioprocessinggraphics__/graphics/icons/bobmodules/module-bio-productivity-bobs-3.png"
+  data.raw.module["angels-bio-yield-module-3"].icon_size = 64
+  move_item("angels-bio-yield-module-3", "angels-bio-yield-module", "b-y-3", "module")
   OV.patch_recipes({
     {
       name = "angels-bio-yield-module",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 1},
         { type = "item", name = "productivity-module", amount = 1 },
-        { type = "item", name = "effectivity-module", amount = 1 },
-        { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "bob-pollution-create-module-1", amount = 1 },
+        { type = "item", name = "angels-token-bio", amount = 1 },
       },
     },
     {
       name = "angels-bio-yield-module-2",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 2},
+        { type = "item", name = "angels-bio-yield-module", amount = 1 },
         { type = "item", name = "productivity-module-2", amount = 1 },
-        { type = "item", name = "effectivity-module-2", amount = 1 },
-        { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "bob-pollution-create-module-2", amount = 1 },
+        { type = "item", name = "angels-token-bio", amount = 1 },
       },
     },
     {
       name = "angels-bio-yield-module-3",
       ingredients = {
         { "!!" },
-        --{type = "item", name = "solder", amount = 3},
+        { type = "item", name = "angels-bio-yield-module-2", amount = 1 },
         { type = "item", name = "productivity-module-3", amount = 1 },
-        { type = "item", name = "effectivity-module-3", amount = 1 },
-        { type = "item", name = "token-bio", amount = 1 },
+        { type = "item", name = "bob-pollution-create-module-3", amount = 1 },
+        { type = "item", name = "angels-token-bio", amount = 1 },
       },
     },
   })
+  OV.remove_prereq("angels-bio-yield-module", "efficiency-module")
+  OV.add_prereq("angels-bio-yield-module", "bob-pollution-create-module-1")
+  OV.remove_prereq("angels-bio-yield-module-2", "efficiency-module-2")
+  OV.add_prereq("angels-bio-yield-module-2", "bob-pollution-create-module-2")
+  OV.remove_prereq("angels-bio-yield-module-3", "efficiency-module-3")
+  OV.add_prereq("angels-bio-yield-module-3", "bob-pollution-create-module-3")
+
   --adding solder when bobplates is active
-  if mods["bobplates"] then
+  if data.raw.item["bob-solder"] then
     OV.patch_recipes({
       {
         name = "angels-bio-yield-module",
         ingredients = {
-          { type = "item", name = "solder", amount = 1 },
+          { type = "item", name = "bob-solder", amount = 1 },
         },
       },
       {
         name = "angels-bio-yield-module-2",
         ingredients = {
-          { type = "item", name = "solder", amount = 2 },
+          { type = "item", name = "bob-solder", amount = 2 },
         },
       },
       {
         name = "angels-bio-yield-module-3",
         ingredients = {
-          { type = "item", name = "solder", amount = 3 },
+          { type = "item", name = "bob-solder", amount = 3 },
         },
       },
     })
   end
+
   data.raw.technology["angels-bio-yield-module"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-1.png"
-  data.raw.technology["angels-bio-yield-module"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module"].icon_mipmaps = 1
+    "__angelsbioprocessinggraphics__/graphics/technology/bobmodules/module-bio-productivity-bobs-1.png"
+  data.raw.technology["angels-bio-yield-module"].icon_size = 256
   data.raw.technology["angels-bio-yield-module-2"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-2.png"
-  data.raw.technology["angels-bio-yield-module-2"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module-2"].icon_mipmaps = 1
+    "__angelsbioprocessinggraphics__/graphics/technology/bobmodules/module-bio-productivity-bobs-2.png"
+  data.raw.technology["angels-bio-yield-module-2"].icon_size = 256
   data.raw.technology["angels-bio-yield-module-3"].icon =
-    "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-3.png"
-  data.raw.technology["angels-bio-yield-module-3"].icon_size = 32
-  data.raw.technology["angels-bio-yield-module-3"].icon_mipmaps = 1
-  if data.raw.technology["module-merging"] ~= nil then
-    OV.add_prereq("angels-bio-yield-module", "module-merging")
-  end
-  for i = 1, 3 do
-    local ingredients = { { "token-bio", 1 } }
-    local ingredients_added = { ["token-bio"] = true }
-    for _, tech_name in pairs({
-      i > 1 and "productivity-module-" .. i or "productivity-module",
-      i > 1 and "effectivity-module-" .. i or "effectivity-module",
-    }) do
-      for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
-          table.insert(ingredients, util.table.deepcopy(ingredient))
-        end
-      end
-    end
-    data.raw.technology[i > 1 and "angels-bio-yield-module-" .. i or "angels-bio-yield-module"].unit = {
-      count = i < 3 and (25 * i) or ((i - 2) * 100),
-      ingredients = ingredients,
-      time = i < 3 and 30 or 60,
-    }
-  end
+    "__angelsbioprocessinggraphics__/graphics/technology/bobmodules/module-bio-productivity-bobs-3.png"
+  data.raw.technology["angels-bio-yield-module-3"].icon_size = 256
 
-  -- addtional tiers 2.1 - 3.2
-  for i = 4, 8 do
-    local ingredients = { { "token-bio", 1 } }
-    local ingredients_added = { ["token-bio"] = true }
-    for _, tech_name in pairs({
-      "productivity-module-" .. (i < 6 and 4 or 6),
-      "effectivity-module-" .. (i < 6 and 4 or 6),
-    }) do
-      for _, ingredient in pairs(data.raw.technology[tech_name].unit.ingredients) do
-        if not ingredients_added[ingredient.name or ingredient[1]] then
-          ingredients_added[ingredient.name or ingredient[1]] = true
-          table.insert(ingredients, util.table.deepcopy(ingredient))
-        end
-      end
-    end
-    local solder_amount = i
-    if i > 4 then
-      solder_amount = solder_amount + 1
-      if i == 8 then
-        solder_amount = solder_amount + 1
-      end
-    end
-    data:extend({
+  data.raw.module["angels-bio-yield-module"].effect = {
+    productivity = 0.1,
+    pollution = 0.5, -- extra pollution absorption
+  }
+  data.raw.module["angels-bio-yield-module-2"].effect = {
+    productivity = 0.2,
+    pollution = 1.0, -- extra pollution absorption
+  }
+  data.raw.module["angels-bio-yield-module-3"].effect = {
+    productivity = 0.3,
+    pollution = 1.5, -- extra pollution absorption
+  }
+
+  -- adding solder when available
+  -- addtional tiers 4 & 5
+  if data.raw.item["bob-solder"] then
+    OV.patch_recipes({
       {
-        type = "module",
-        name = "angels-bio-yield-module-" .. i,
-        localised_description = { "item-description.angels-bio-yield-module-" .. i },
-        icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-        subgroup = "bio-yield-module",
-        category = "productivity",
-        tier = i,
-        order = "b-y-" .. i,
-        stack_size = 50,
-        effect = {
-          productivity = { bonus = 0.15 },
-          pollution = { bonus = 0.15 }, -- extra pollution absorption
-        },
-        limitation = {},
-        limitation_message_key = "angels-yield-module-usable-only-on-agriculture",
-      },
-      {
-        type = "recipe",
-        name = "angels-bio-yield-module-" .. i,
-        enabled = false,
+        name = "angels-bio-yield-module-4",
         ingredients = {
-          --{type = "item", name = "solder", amount = solder_amount},
-          { type = "item", name = "productivity-module-" .. i, amount = 1 },
-          { type = "item", name = "effectivity-module-" .. i, amount = 1 },
-          { type = "item", name = "token-bio", amount = 1 },
+          { type = "item", name = "bob-solder", amount = 4 },
         },
-        energy_required = 15,
-        result = "angels-bio-yield-module-" .. i,
       },
       {
-        type = "technology",
-        name = "angels-bio-yield-module-" .. i,
-        icon = "__angelsbioprocessing__/graphics/icons/bobmodules/orange-module-" .. i .. ".png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-        order = "c-a",
-        prerequisites = {
-          "angels-bio-yield-module-" .. i - 1,
-          "productivity-module-" .. i,
-          "effectivity-module-" .. i,
-        },
-        effects = {
-          {
-            type = "unlock-recipe",
-            recipe = "angels-bio-yield-module-" .. i,
-          },
-        },
-        unit = {
-          count = i < 6 and ((i - 1) * 50) or ((i - 3) * 100),
-          ingredients = ingredients,
-          time = data.raw.technology["productivity-module-" .. (i < 6 and 4 or 6)].unit.time,
+        name = "angels-bio-yield-module-5",
+        ingredients = {
+          { type = "item", name = "bob-solder", amount = 6 },
         },
       },
     })
-    angelsmods.functions.add_bio_productivity_module("angels-bio-yield-module-" .. i)
-    --adding solder when bobplates is active
-    if mods["bobplates"] then
-      OV.patch_recipes({
-        {
-          name = "angels-bio-yield-module-" .. i,
-          ingredients = {
-            { type = "item", name = "solder", amount = solder_amount },
-          },
-        },
-      })
-    end
-  end
-  for i = 1, 8 do
-    local name = "angels-bio-yield-module"
-    if i > 1 then
-      name = name .. "-" .. i
-    end
-    data.raw.module[name].effect = {
-      productivity = { bonus = 0.075 * i },
-      pollution = { bonus = 0.075 * i }, -- extra pollution absorption
-    }
-  end
-
-  if bobmods.modules.ModulesLab then
-    table.insert(data.raw.lab["lab-module"].inputs, "token-bio")
   end
 
   -----------------------------------------------------------------------------
   -- BEACONS ------------------------------------------------------------------
   -----------------------------------------------------------------------------
-  if angelsmods.industries and angelsmods.industries.overhaul then
-    OV.patch_recipes({
-      { name = "beacon", ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 0 } } },
-    })
-    OV.remove_prereq("effect-transmission", "bio-processing-crystal-full")
-  end
-
   OV.patch_recipes({
-    { name = "beacon", ingredients = { { type = "item", name = "crystal-splinter-harmonic", amount = 1 } } },
-    { name = "beacon-2", ingredients = { { type = "item", name = "crystal-shard-harmonic", amount = 1 } } },
-    { name = "beacon-3", ingredients = { { type = "item", name = "crystal-full-harmonic", amount = 1 } } },
+    { name = "beacon", ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 0 } } },
+  })
+  OV.remove_prereq("effect-transmission", "angels-bio-processing-crystal-full")
+  OV.patch_recipes({
+    { name = "beacon", ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 } } },
+    { name = "bob-beacon-2", ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 } } },
+    { name = "bob-beacon-3", ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } } },
   })
 
   OV.add_prereq("effect-transmission", "modules")
-  OV.add_prereq("effect-transmission-2", "modules-2")
-  OV.add_prereq("effect-transmission-3", "modules-3")
+  OV.add_prereq("effect-transmission-2", "bob-modules-2")
+  OV.add_prereq("effect-transmission-3", "bob-modules-3")
+  OV.add_prereq("effect-transmission", "angels-bio-processing-crystal-splinter-2")
+  OV.add_prereq("effect-transmission-2", "angels-bio-processing-crystal-shard-2")
+  OV.add_prereq("effect-transmission-3", "angels-bio-processing-crystal-full")
+elseif mods["bobelectronics"] or mods["bobplates"] then
+  OV.patch_recipes({
+    {
+      name = "angels-bio-yield-module-3",
+      ingredients = { { type = "item", name = "bob-advanced-processing-unit", amount = "advanced-circuit" } },
+    },
+  })
 end

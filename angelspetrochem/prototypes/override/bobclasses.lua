@@ -5,6 +5,6 @@ if mods["bobclasses"] then
   -- RUBBER -------------------------------------------------------------------
   -----------------------------------------------------------------------------
   if angelsmods.trigger.rubber then
-    OV.add_prereq("bodies", "rubbers")
+    OV.add_prereq("bob-bodies", "angels-rubbers")
   end
 end

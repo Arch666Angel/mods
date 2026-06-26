@@ -8,10 +8,11 @@ local technologies_to_ignore = {}
 
 -- a list with all bonus upgrade technologies (this list is extended dynamically)
 local bonus_upgrade_technologies = {}
-
 local science_pack_level = {}
+local processed_techs = {}
+
 local function calculate_science_pack_level()
-  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
+  local technology_overhaul = script.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
     or false
 
   if technology_overhaul then
@@ -50,6 +51,23 @@ local function calculate_science_pack_level()
     }) do
       science_pack_level[pack_name] = pack_level
     end
+  elseif script.active_mods["space-age"] then
+    for pack_name, pack_level in pairs({
+      ["automation-science-pack"] = 100,
+      ["logistic-science-pack"] = 200,
+      ["military-science-pack"] = 300,
+      ["chemical-science-pack"] = 400,
+      ["space-science-pack"] = 700,
+      ["agricultural-science-pack"] = 800,
+      ["electromagnetic-science-pack"] = 800,
+      ["metallurgic-science-pack"] = 800,
+      ["production-science-pack"] = 800,
+      ["utility-science-pack"] = 800,
+      ["cryogenic-science-pack"] = 900,
+      ["promethium-science-pack"] = 1000,
+    }) do
+      science_pack_level[pack_name] = pack_level
+    end
   else
     for pack_name, pack_level in pairs({
       -- vanilla science packs
@@ -65,88 +83,48 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["angelsbioprocessing"] then
-    science_pack_level["token-bio"] = science_pack_level["angels-science-pack-red"]
-      or science_pack_level["automation-science-pack"]
-
-    science_pack_level["alien-artifact-tool"] = 0
-    science_pack_level["alien-artifact-red-tool"] = 0
-    science_pack_level["alien-artifact-yellow-tool"] = 0
-    science_pack_level["alien-artifact-orange-tool"] = 0
-    science_pack_level["alien-artifact-blue-tool"] = 0
-    science_pack_level["alien-artifact-purple-tool"] = 0
-    science_pack_level["alien-artifact-green-tool"] = 0
+  if script.active_mods["angelsbioprocessing"] then
+    science_pack_level["angels-token-bio"] = science_pack_level["angels-science-pack-green"]
+      or science_pack_level["logistic-science-pack"]
   end
 
-  if game.active_mods["bobtech"] then
+  if script.active_mods["bobtech"] then
     -- bobs regular science packs
     for pack_name, pack_level in pairs({
-      ["steam-science-pack"] = 30,
-      ["advanced-logistic-science-pack"] = 50
+      ["bob-advanced-logistic-science-pack"] = 50
         + (science_pack_level["angels-science-pack-blue"] or science_pack_level["chemical-science-pack"]),
     }) do
       science_pack_level[pack_name] = pack_level
     end
 
-    if game.active_mods["bobenemies"] then
+    if script.active_mods["bobenemies"] then
       -- bobs alien science packs
       for pack_name, pack_level in pairs({
-        ["science-pack-gold"] = 50
+        ["bob-science-pack-gold"] = 50
+          + (science_pack_level["angels-science-pack-orange"] or science_pack_level["chemical-science-pack"]),
+        ["bob-alien-science-pack"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack"] = 50
+        ["bob-alien-science-pack-blue"] = 50
+          + (science_pack_level["angels-science-pack-orange"] or science_pack_level["chemical-science-pack"]),
+        ["bob-alien-science-pack-orange"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-blue"] = 50
+        ["bob-alien-science-pack-purple"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-orange"] = 50
+        ["bob-alien-science-pack-yellow"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-purple"] = 50
+        ["bob-alien-science-pack-green"] = 50
           + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-yellow"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-green"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
-        ["alien-science-pack-red"] = 50
-          + (science_pack_level["angels-science-pack-yellow"] or science_pack_level["utility-science-pack"]),
+        ["bob-alien-science-pack-red"] = 50
+          + (science_pack_level["angels-science-pack-blue"] or science_pack_level["production-science-pack"]),
       }) do
         science_pack_level[pack_name] = pack_level
       end
     end
   end
 
-  if game.active_mods["bobmodules"] and settings.startup["bobmods-modules-enable-modules-lab"].value then
+  if script.active_mods["SeaBlock"] then
     for pack_name, pack_level in pairs({
-      -- bobs module science packs
-      ["speed-processor"] = 50
-        + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["effectivity-processor"] = 50
-        + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["productivity-processor"] = 50
-        + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["pollution-clean-processor"] = 50
-        + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["pollution-create-processor"] = 50
-        + (science_pack_level["angels-science-pack-orange"] or science_pack_level["logistic-science-pack"]),
-      ["module-circuit-board"] = science_pack_level["angels-science-pack-blue"]
-        or science_pack_level["chemical-science-pack"],
-      ["module-case"] = science_pack_level["angels-science-pack-yellow"]
-        or science_pack_level["production-science-pack"],
-    }) do
-      science_pack_level[pack_name] = pack_level
-    end
-    technologies_to_ignore["effectivity-module-5"] = true
-    technologies_to_ignore["green-module-1"] = true
-    technologies_to_ignore["god-module-1"] = true
-    technologies_to_ignore["pollution-clean-module-5"] = true
-    technologies_to_ignore["pollution-create-module-5"] = true
-    technologies_to_ignore["productivity-module-5"] = true
-    technologies_to_ignore["raw-productivity-module-1"] = true
-    technologies_to_ignore["raw-speed-module-1"] = true
-    technologies_to_ignore["speed-module-5"] = true
-  end
-
-  if game.active_mods["SeaBlock"] then
-    for pack_name, pack_level in pairs({
-      ["sb-angelsore3-tool"] = 0,
+      ["sb-angels-ore3-tool"] = 0,
       ["sb-algae-brown-tool"] = 0,
       ["sb-lab-tool"] = 0,
       ["sb-basic-circuit-board-tool"] = 0,
@@ -155,14 +133,15 @@ local function calculate_science_pack_level()
     end
   end
 
-  if game.active_mods["ScienceCostTweakerM"] then
-    science_pack_level["sct-bio-science-pack"] = science_pack_level["token-bio"]
+  if script.active_mods["ScienceCostTweakerM"] then
+    science_pack_level["sct-science-pack-0"] = 10
+    science_pack_level["sct-bio-science-pack"] = science_pack_level["angels-token-bio"]
   end
 
-  if game.active_mods["SpaceMod"] then
+  if script.active_mods["SpaceMod"] then
     technologies_to_ignore["space-assembly"] = true
     technologies_to_ignore["protection-fields"] = true
-    technologies_to_ignore["fusion-reactor"] = true
+    technologies_to_ignore["fission-reactor"] = true
     technologies_to_ignore["fuel-cells"] = true
     technologies_to_ignore["habitation"] = true
     technologies_to_ignore["life-support-systems"] = true
@@ -171,6 +150,10 @@ local function calculate_science_pack_level()
     technologies_to_ignore["ftl-theory-A"] = true
     technologies_to_ignore["ftl-propulsion"] = true
   end
+
+  if script.active_mods["space-age"] then
+    technologies_to_ignore["railgun-damage-1"] = true
+  end
 end
 
 local tech_bonus_effects = {}
@@ -178,7 +161,7 @@ local function calculate_tech_bonus_effects()
   tech_bonus_effects = {
     -- inserter bonus
     ["inserter-stack-size-bonus"] = true,
-    ["stack-inserter-capacity-bonus"] = true,
+    ["bulk-inserter-capacity-bonus"] = true,
     -- lab bonus
     ["laboratory-speed"] = true,
     ["laboratory-productivity"] = true,
@@ -236,18 +219,53 @@ local function tech_hidden(tech_prototype)
 end
 
 local function tech_unlocks_only_bonus_upgrades(technology_prototype)
+  local result = false
   for _, tech_effect in pairs(technology_prototype.effects) do
     if tech_bonus_effects[tech_effect.type] then
       -- continue
+      result = true
     else
       return false
     end
   end
-  return true
+  return result
 end
 
+local function calculate_tech_unlock_level(technology_prototype, effect_level_from_start)
+  local tech_effect_level = effect_level_from_start or 0
+  local item_prototypes = prototypes.item
+  local recipe_prototypes = prototypes.recipe
+
+  for _, tech_effect in pairs(technology_prototype.effects) do
+    if tech_effect.type == "unlock-recipe" then
+      local recipe_prototype = recipe_prototypes[tech_effect.recipe]
+      for _, recipe_product in pairs(recipe_prototype.products) do
+        local recipe_product_level = science_pack_level[recipe_product.name]
+        if recipe_product_level then
+          tech_effect_level = math.max(tech_effect_level, recipe_product_level)
+        end
+        if recipe_product.type == "item" then
+          local item = item_prototypes[recipe_product.name]
+          for _, rocket_launch_product in pairs(item.rocket_launch_products) do
+            local rocket_launch_product_level = science_pack_level[rocket_launch_product.name]
+            if rocket_launch_product_level then
+              tech_effect_level = math.max(tech_effect_level, rocket_launch_product_level)
+            end
+          end
+        end
+      end
+    end
+  end
+  return tech_effect_level
+end
+
+-- Computes the tech level of the science packs (ingredients) used to unlock a tech, or if the tech is unlocked by crafting
+-- or mining an item this function will return the tech level of the technology that unlocks that item
 local function calculate_tech_ingredient_level(technology_prototype)
   local tech_ingredient_level = 0
+
+  -- If this technology is unlocked by a trigger condition then use the max level of it's prerequisite techs
+  -- If this technology is unlocked using research packs then check their tech levels
   for _, tech_ingredient in pairs(technology_prototype.research_unit_ingredients) do
     local ingredient_level = science_pack_level[tech_ingredient.name]
     if ingredient_level then
@@ -257,12 +275,13 @@ local function calculate_tech_ingredient_level(technology_prototype)
       return -1 -- invalid tech_ingredient_level
     end
   end
+
   return tech_ingredient_level
 end
 
 local function calculate_unlock_level_from_start()
   local effect_level_from_start = 0
-  local recipe_prototypes = game.recipe_prototypes
+  local recipe_prototypes = prototypes.recipe
   for _, recipe_prototype in pairs(recipe_prototypes) do
     if not recipe_prototype.hidden and recipe_prototype.enabled then
       for _, recipe_product in pairs(recipe_prototype.products) do
@@ -276,30 +295,77 @@ local function calculate_unlock_level_from_start()
   return effect_level_from_start
 end
 
-local function calculate_tech_unlock_level(technology_prototype, effect_level_from_start)
-  local tech_effect_level = effect_level_from_start or 0
-  local item_prototypes = game.item_prototypes
-  local recipe_prototypes = game.recipe_prototypes
-  for _, tech_effect in pairs(technology_prototype.effects) do
-    if tech_effect.type == "unlock-recipe" then
-      local recipe_prototype = recipe_prototypes[tech_effect.recipe]
-      for _, recipe_product in pairs(recipe_prototype.products) do
-        local recipe_product_level = science_pack_level[recipe_product.name]
-        if recipe_product_level then
-          tech_effect_level = math.max(tech_effect_level, recipe_product_level)
-        end
-        if recipe_product.type == "item" then
-          for _, rocket_launch_product in pairs(item_prototypes[recipe_product.name].rocket_launch_products) do
-            local rocket_launch_product_level = science_pack_level[rocket_launch_product.name]
-            if rocket_launch_product_level then
-              tech_effect_level = math.max(tech_effect_level, rocket_launch_product_level)
-            end
-          end
-        end
+local function process_tech(technology_prototype)
+  -- first calculate if this technology is a bonus technology
+  if tech_unlocks_only_bonus_upgrades(technology_prototype) then
+    local is_first_bonus_upgrade = true
+    for tech_prereq_name, tech_prereq_prototype in pairs(technology_prototype.prerequisites) do
+      if tech_unlocks_only_bonus_upgrades(tech_prereq_prototype) then
+        is_first_bonus_upgrade = false
       end
     end
+
+    if is_first_bonus_upgrade then
+      -- still has to depend on the correct prerequisites, this case we ignore
+    else
+      -- these technologies can depend on lower tier science packs
+      bonus_upgrade_technologies[technology_prototype.name] = true
+    end
   end
-  return tech_effect_level
+
+  local levels = {
+    ingredient_level = 0,
+    tech_level = 0,
+    trigger_tech = false,
+    prerequisite_level = 0,
+    prerequisite_unlock_level = 0,
+    unlock_level = 0,
+  }
+  if technologies_to_ignore[technology_prototype.name] and true or tech_hidden(technology_prototype) then
+    processed_techs[technology_prototype.name] = levels
+    return unit_test_functions.test_successful
+  end
+
+  -- Calculate ingredient level
+  levels.ingredient_level = calculate_tech_ingredient_level(technology_prototype)
+  if levels.ingredient_level < 0 then
+    unit_test_functions.print_msg(
+      string.format("Failed to determine technology ingredient level for %q.", technology_prototype.name)
+    )
+    return unit_test_functions.test_invalid
+  end
+
+  levels.trigger_tech = technology_prototype.research_trigger and true or false
+
+  -- Calculate prereq level
+  for prereq_name, prereq_tech_prototype in pairs(technology_prototype.prerequisites) do
+    if not processed_techs[prereq_name] then
+      local result = process_tech(prereq_tech_prototype)
+      if result ~= unit_test_functions.test_successful then
+        return result
+      end
+    end
+
+    levels.prerequisite_level = math.max(levels.prerequisite_level, processed_techs[prereq_name].tech_level)
+    levels.prerequisite_unlock_level = math.max(
+      levels.prerequisite_unlock_level,
+      math.max(levels.prerequisite_level, processed_techs[prereq_name].unlock_level)
+    )
+  end
+
+  -- Calculate unlock level
+  levels.unlock_level = calculate_tech_unlock_level(technology_prototype)
+
+  -- Calculate technology level
+  levels.tech_level = math.max(levels.prerequisite_level, levels.ingredient_level)
+
+  if technology_prototype.name == "space-science-pack" then
+    levels.tech_level = science_pack_level["space-science-pack"]
+  end
+
+  processed_techs[technology_prototype.name] = levels
+
+  return unit_test_functions.test_successful
 end
 
 local unit_test_006 = function()
@@ -307,98 +373,44 @@ local unit_test_006 = function()
   calculate_tech_bonus_effects()
   calculate_science_pack_level()
 
-  local tech_prototypes = game.technology_prototypes
-  local tech_ingredient_levels = {} -- the technology level defined by the research ingredients
-  local tech_unlock_levels = {} -- the technology level defined by the research effects
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
-
-  for tech_name, tech_prototype in pairs(tech_prototypes) do
-    -- first calculate if this technology is a bonus technology
-    if tech_unlocks_only_bonus_upgrades(tech_prototype) then
-      local is_first_bonus_upgrade = true
-      for tech_prereq_name, tech_prereq_prototype in pairs(tech_prototype.prerequisites) do
-        if tech_unlocks_only_bonus_upgrades(tech_prereq_prototype) then
-          is_first_bonus_upgrade = false
-        end
-      end
-
-      if is_first_bonus_upgrade then
-        -- still has to depend on the correct prerequisites, this case we ignore
-      else
-        -- these technologies can depend on lower tier science packs
-        bonus_upgrade_technologies[tech_name] = true
+  for tech_name, technology_prototype in pairs(prototypes.technology) do
+    if not processed_techs[tech_name] then
+      unit_test_result = process_tech(technology_prototype)
+      if unit_test_result ~= unit_test_functions.test_successful then
+        break
       end
     end
+  end
 
-    if not (technologies_to_ignore[tech_name] and true or tech_hidden(tech_prototype)) then
-      -- calculate tech_ingredient_level for this technology if not calculated yet
-      if not tech_ingredient_levels[tech_name] then
-        local tech_ingredient_level = calculate_tech_ingredient_level(tech_prototype)
-        if tech_ingredient_level < 0 then
-          unit_test_functions.print_msg(
-            string.format("Failed to determine technology ingredient level for %q.", tech_name)
-          )
-          return unit_test_functions.test_invalid
-        else
-          tech_ingredient_levels[tech_name] = tech_ingredient_level
-        end
-      end
+  for tech_name, tech in pairs(processed_techs) do
+    -- Calculate test result for this technology
+    -- Check 1:
+    -- If the ingredients to unlock this tech are of lower level than than those of its prereqs, then the test fails
+    -- (for example, if a tech requires green science but its prereqs require blue science)
+    if tech.trigger_tech then
+      -- Do nothing
+    elseif tech.ingredient_level < tech.prerequisite_level then
+      unit_test_functions.print_msg(
+        string.format("Technology %q requires prerequisites with higher science packs.", tech_name)
+      )
+      unit_test_result = unit_test_functions.test_failed
 
-      -- calculate prereq_level, which is equal to the maximum of
-      -- a) the highest tech_ingredient_level of all prereq technologies
-      -- b) the highest tech_ingredient of all prereq recipe unlocks
-      local prereq_ingredient_level = 0
-      local prereq_unlock_level = effect_level_from_start
-      for prereq_name, prereq_tech_prototype in pairs(tech_prototype.prerequisites) do
-        -- a) calculate tech_ingredient_level for prereq if not calculated yet
-        if not tech_ingredient_levels[prereq_name] then
-          local prereq_tech_ingredient_level = calculate_tech_ingredient_level(prereq_tech_prototype)
-          if prereq_tech_ingredient_level < 0 then
-            unit_test_functions.print_msg(
-              string.format("Failed to determine technology ingredient level for %q.", prereq_name)
-            )
-            return unit_test_functions.test_invalid
-          else
-            tech_ingredient_levels[prereq_name] = prereq_tech_ingredient_level
-          end
-        end
-        prereq_ingredient_level = math.max(prereq_ingredient_level, tech_ingredient_levels[prereq_name])
-
-        -- b) calculate tech_unlock_level for prereq if not calculated yet
-        if not tech_unlock_levels[prereq_name] then
-          local prereq_tech_unlock_level = calculate_tech_unlock_level(prereq_tech_prototype, effect_level_from_start)
-          if prereq_tech_unlock_level < 0 then
-            unit_test_functions.print_msg(
-              string.format("Failed to determine technology effect level for %q.", prereq_name)
-            )
-            return unit_test_functions.test_invalid
-          else
-            tech_unlock_levels[prereq_name] = prereq_tech_unlock_level
-          end
-        end
-        prereq_unlock_level = math.max(prereq_unlock_level, tech_unlock_levels[prereq_name])
-      end
-
-      -- calculate test result for this technology
-      if tech_ingredient_levels[tech_name] < prereq_ingredient_level then
-        unit_test_functions.print_msg(
-          string.format("Technology %q requires prerequisites with higher science packs.", tech_name)
-        )
-        unit_test_result = unit_test_functions.test_failed
-      elseif
-        (bonus_upgrade_technologies[tech_name] ~= true)
-        and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)
-      then
-        unit_test_functions.print_msg(
-          string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name)
-        )
-        unit_test_result = unit_test_functions.test_failed
-      elseif
-        (bonus_upgrade_technologies[tech_name] ~= true)
-        and tech_ingredient_levels[tech_name] > math.max(prereq_ingredient_level, prereq_unlock_level)
-      then
-        unit_test_result = unit_test_functions.test_failed
-      end
+    -- Check 2:
+    -- If the tech is not a bonus upgrade, and the max of:
+    --    the level of the ingredients to unlock this tech's prereqs
+    --    AND
+    --    the tech level unlocked by this tech's prereqs
+    -- Is less than the level of this tech's ingredients, then this tech does not depend on at least one tech of the same level
+    -- or on the tech that unlocks this tech's level, which is not allowed. This would create a tech that, for example, requires blue
+    -- science to unlock but doesn't list blue science or another blue-level tech as prereqs
+    elseif bonus_upgrade_technologies[tech_name] == true then
+      -- Do nothing
+    elseif tech.ingredient_level > tech.prerequisite_unlock_level then
+      unit_test_functions.print_msg(
+        string.format("Technology %q requires higher science packs than its prerequisites provide.", tech_name)
+      )
+      unit_test_result = unit_test_functions.test_failed
     end
   end
 

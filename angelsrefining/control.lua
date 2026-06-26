@@ -1,5 +1,4 @@
 local starting_items = require("src.starting_items")
-local welcome_dialog = require("src.welcome_dialog")
 local ground_water_pump = require("src.ground_water_pump")
 local sea_pump = require("src.sea-pump")
 
@@ -11,13 +10,9 @@ script.on_init(function()
   sea_pump:on_init()
 end)
 
-script.on_event(defines.events.on_cutscene_cancelled, function(event)
-  welcome_dialog:on_cutscene_cancelled(event.player_index)
-end)
-
 -- built events
 script.on_event(defines.events.on_built_entity, function(event)
-  sea_pump:on_build_entity(event.created_entity, {})
+  sea_pump:on_build_entity(event.entity, event.tags or {})
 end)
 script.on_event(defines.events.on_robot_built_entity, function(event)
   sea_pump:on_build_entity(event.created_entity, event.tags or {})
@@ -56,9 +51,4 @@ script.on_event(defines.events.on_player_setup_blueprint, function(event)
 end)
 script.on_event(defines.events.on_player_configured_blueprint, function(event)
   sea_pump:on_blueprint_setup(event.player_index)
-end)
-
--- gui events
-script.on_event(defines.events.on_gui_click, function(event)
-  welcome_dialog:on_gui_click(event.element.name, event.player_index)
 end)

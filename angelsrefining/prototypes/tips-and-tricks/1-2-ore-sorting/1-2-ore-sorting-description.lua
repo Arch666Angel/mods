@@ -1,9 +1,11 @@
 local description = { "", { "tips-and-tricks-description.angels-ore-sorting" } }
 
-if angelsmods.functions.is_special_vanilla() then
-  table.insert(description, { "tips-and-tricks-description.angels-ore-sorting-vanilla" })
-else -- overhaul mode
+if mods["angelssmelting"] then
   table.insert(description, { "tips-and-tricks-description.angels-ore-sorting-overhaul" })
+elseif mods["bobplates"] then
+  table.insert(description, { "tips-and-tricks-description.angels-ore-sorting-bobs" })
+else
+  table.insert(description, { "tips-and-tricks-description.angels-ore-sorting-vanilla" })
 end
 
 return description

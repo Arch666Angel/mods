@@ -1,0 +1,56 @@
+{
+  "entity":
+  [
+    ["silo", "angels-silo"],
+    ["silo-active-provider", "angels-silo-active-provider"],
+    ["silo-buffer", "angels-silo-buffer"],
+    ["silo-coal", "angels-silo-coal"],
+    ["silo-ore1", "angels-silo-ore1"],
+    ["silo-ore2", "angels-silo-ore2"],
+    ["silo-ore3", "angels-silo-ore3"],
+    ["silo-ore4", "angels-silo-ore4"],
+    ["silo-ore5", "angels-silo-ore5"],
+    ["silo-ore6", "angels-silo-ore6"],
+    ["silo-passive-provider", "angels-silo-passive-provider"],
+    ["silo-requester", "angels-silo-requester"],
+    ["silo-storage", "angels-silo-storage"]
+  ],
+  "item":
+  [
+    ["silo", "angels-silo"],
+    ["silo-active-provider", "angels-silo-active-provider"],
+    ["silo-buffer", "angels-silo-buffer"],
+    ["silo-coal", "angels-silo-coal"],
+    ["silo-ore1", "angels-silo-ore1"],
+    ["silo-ore2", "angels-silo-ore2"],
+    ["silo-ore3", "angels-silo-ore3"],
+    ["silo-ore4", "angels-silo-ore4"],
+    ["silo-ore5", "angels-silo-ore5"],
+    ["silo-ore6", "angels-silo-ore6"],
+    ["silo-passive-provider", "angels-silo-passive-provider"],
+    ["silo-requester", "angels-silo-requester"],
+    ["silo-storage", "angels-silo-storage"]
+  ],
+  "recipe":
+  [
+    ["silo", "angels-silo"],
+    ["silo-active-provider", "angels-silo-active-provider"],
+    ["silo-buffer", "angels-silo-buffer"],
+    ["silo-coal", "angels-silo-coal"],
+    ["silo-ore1", "angels-silo-ore1"],
+    ["silo-ore2", "angels-silo-ore2"],
+    ["silo-ore3", "angels-silo-ore3"],
+    ["silo-ore4", "angels-silo-ore4"],
+    ["silo-ore5", "angels-silo-ore5"],
+    ["silo-ore6", "angels-silo-ore6"],
+    ["silo-passive-provider", "angels-silo-passive-provider"],
+    ["silo-requester", "angels-silo-requester"],
+    ["silo-storage", "angels-silo-storage"]
+  ],
+  "technology":
+  [
+    ["logistic-silos", "angels-logistic-silos"],
+    ["ore-silos", "angels-ore-silos"],
+    ["pressure-tanks", "angels-pressure-tanks"]
+  ]
+}

@@ -23,17 +23,18 @@ if angelsmods.smelting then
   then
   else
     OV.disable_recipe({
-      "solid-sodium-cyanide",
+      "angels-solid-sodium-cyanide",
     })
-    angelsmods.functions.add_flag("solid-sodium-cyanide", "hidden")
+    angelsmods.functions.hide("angels-solid-sodium-cyanide")
   end
 else
   OV.disable_recipe({
-    "solid-sodium-cyanide",
-    "solid-sodium-carbonate",
-    "solid-sodium-hydroxide-solid-sodium-sulfate",
+    "angels-solid-sodium-cyanide",
+    "angels-solid-sodium-carbonate",
+    "angels-solid-sodium-sulfate",
+    "angels-solid-sodium-carbonate-electrolysis",
   })
-  angelsmods.functions.add_flag("solid-sodium-cyanide", "hidden")
-  OV.remove_prereq("sodium-processing-1", "chlorine-processing-1")
-  OV.add_prereq("sodium-processing-1", "chlorine-processing-3")
+  angelsmods.functions.hide({ "angels-solid-sodium-cyanide", "angels-solid-sodium-carbonate" })
+  OV.remove_prereq("angels-sodium-processing-1", "angels-chlorine-processing-1")
+  OV.add_prereq("angels-sodium-processing-1", "angels-chlorine-processing-3")
 end

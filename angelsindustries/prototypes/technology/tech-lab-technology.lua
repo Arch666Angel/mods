@@ -8,7 +8,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-exploration-1",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "angels-components-weapons-basic",
@@ -31,8 +31,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -42,7 +42,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-exploration-2",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -58,9 +58,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -70,7 +70,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-exploration-3",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -86,10 +86,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -99,7 +99,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-exploration-1",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-blue-packs",
@@ -123,11 +123,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -137,7 +137,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-exploration-2",
-      icon = "__angelsindustries__/graphics/technology/exploration-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/exploration-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -152,12 +152,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -170,7 +170,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-energy-1",
-      icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
@@ -192,8 +192,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -203,7 +203,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-energy-2",
-      icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -219,9 +219,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -231,7 +231,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-energy-3",
-      icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -247,10 +247,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -260,7 +260,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-energy-1",
-      icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
@@ -284,11 +284,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -298,7 +298,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-energy-2",
-      icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -313,12 +313,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -331,7 +331,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-logistic-1",
-      icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
@@ -353,8 +353,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -364,7 +364,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-logistic-2",
-      icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -380,9 +380,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -392,7 +392,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-logistic-3",
-      icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -408,10 +408,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -421,7 +421,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-logistic-1",
-      icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
@@ -445,11 +445,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -459,7 +459,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-logistic-2",
-      icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -474,12 +474,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -492,7 +492,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-enhance-1",
-      icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
@@ -514,8 +514,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -525,7 +525,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-enhance-2",
-      icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -541,9 +541,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -553,7 +553,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-enhance-3",
-      icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -569,10 +569,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -582,7 +582,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-enhance-1",
-      icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
@@ -606,11 +606,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -620,7 +620,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-enhance-2",
-      icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -635,12 +635,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -653,7 +653,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-processing-1",
-      icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/processing-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
@@ -676,8 +676,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -687,7 +687,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-processing-2",
-      icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/processing-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -703,9 +703,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -715,7 +715,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-processing-3",
-      icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/processing-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -732,10 +732,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -745,7 +745,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-processing-1",
-      icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/processing-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
@@ -770,11 +770,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -784,7 +784,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-processing-2",
-      icon = "__angelsindustries__/graphics/technology/processing-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/processing-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -800,12 +800,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -818,7 +818,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-war-1",
-      icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/war-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
@@ -841,8 +841,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -852,7 +852,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-war-2",
-      icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/war-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-green-packs",
@@ -869,9 +869,9 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
         },
         time = pack_time_base,
       },
@@ -881,7 +881,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic-war-3",
-      icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/war-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-orange-packs",
@@ -898,10 +898,10 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
         },
         time = pack_time_base,
       },
@@ -911,7 +911,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-war-1",
-      icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/war-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
@@ -936,11 +936,11 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
         },
         time = pack_time_base,
       },
@@ -950,7 +950,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced-war-2",
-      icon = "__angelsindustries__/graphics/technology/war-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/war-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
@@ -966,12 +966,12 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
         },
         time = pack_time_base,
       },
@@ -984,7 +984,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs",
-      icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
       prerequisites = {},
       effects = {
@@ -1000,7 +1000,7 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { "angels-science-pack-grey", 1 },
         },
         time = pack_time_base,
       },
@@ -1010,7 +1010,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-basic",
-      icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         --"tech-specialised-labs-basic-exploration-1",
@@ -1029,8 +1029,8 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
         },
         time = pack_time_base,
       },
@@ -1043,7 +1043,7 @@ if angelsmods.industries.tech then
     {
       type = "technology",
       name = "tech-specialised-labs-advanced",
-      icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
+      icon = "__angelsindustriesgraphics__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
         "space-science-pack",
@@ -1081,13 +1081,13 @@ if angelsmods.industries.tech then
       unit = {
         count = pack_amount_base * 32,
         ingredients = {
-          { type = "item", name = "angels-science-pack-grey", amount = 1 },
-          { type = "item", name = "angels-science-pack-red", amount = 1 },
-          { type = "item", name = "angels-science-pack-green", amount = 1 },
-          { type = "item", name = "angels-science-pack-orange", amount = 1 },
-          { type = "item", name = "angels-science-pack-blue", amount = 1 },
-          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
-          { type = "item", name = "angels-science-pack-white", amount = 1 },
+          { "angels-science-pack-grey", 1 },
+          { "angels-science-pack-red", 1 },
+          { "angels-science-pack-green", 1 },
+          { "angels-science-pack-orange", 1 },
+          { "angels-science-pack-blue", 1 },
+          { "angels-science-pack-yellow", 1 },
+          { "angels-science-pack-white", 1 },
         },
         time = pack_time_base,
         --pack_time_base,

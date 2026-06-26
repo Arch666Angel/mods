@@ -7,14 +7,14 @@ local gathering_turret = {}
 -- Initiation of the class
 -------------------------------------------------------------------------------
 function gathering_turret:on_init()
-  if not global.GT_data then
-    global.GT_data = self:init_global_data()
+  if not storage.GT_data then
+    storage.GT_data = self:init_storage_data()
   end
 end
 
-function gathering_turret:init_global_data()
+function gathering_turret:init_storage_data()
   local GT_data = {
-    ["version"] = 1, -- version of the global data
+    ["version"] = 1, -- version of the storage data
 
     ["prototype_data"] = self:init_prototype_data(), -- data storing info about the prototypes
     ["force_data"] = {}, -- data storing info about the modifiers (tech unlocks)
@@ -44,13 +44,20 @@ function gathering_turret:init_prototype_data()
     ["gathering_turret_chest"] = "angels-gathering-turret-base", -- the chest storing the loot
     -- a complete list of possible items to loot and the technology name to unlock it
     ["gathering_items"] = { -- technology "angels-void" unlocks the technology from the start
-      ["small-alien-artifact"] = "angels-gathering-turret",
-      ["small-alien-artifact-green"] = "angels-gathering-turret-target[small-alien-artifact-green]",
-      ["small-alien-artifact-purple"] = "angels-gathering-turret-target[small-alien-artifact-purple]",
-      ["small-alien-artifact-blue"] = "angels-gathering-turret-target[small-alien-artifact-blue]",
-      ["small-alien-artifact-orange"] = "angels-gathering-turret-target[small-alien-artifact-orange]",
-      ["small-alien-artifact-yellow"] = "angels-gathering-turret-target[small-alien-artifact-yellow]",
-      ["small-alien-artifact-red"] = "angels-gathering-turret-target[small-alien-artifact-red]",
+      ["angels-small-alien-artifact"] = "angels-gathering-turret",
+      ["angels-small-alien-artifact-green"] = "angels-gathering-turret-target_small-alien-artifact-green_",
+      ["angels-small-alien-artifact-purple"] = "angels-gathering-turret-target_small-alien-artifact-purple_",
+      ["angels-small-alien-artifact-blue"] = "angels-gathering-turret-target_small-alien-artifact-blue_",
+      ["angels-small-alien-artifact-orange"] = "angels-gathering-turret-target_small-alien-artifact-orange_",
+      ["angels-small-alien-artifact-yellow"] = "angels-gathering-turret-target_small-alien-artifact-yellow_",
+      ["angels-small-alien-artifact-red"] = "angels-gathering-turret-target_small-alien-artifact-red_",
+      ["angels-small-alien-artifact"] = "angels-gathering-turret",
+      ["angels-small-alien-artifact-green"] = "angels-gathering-turret-target_small-alien-artifact-green_",
+      ["angels-small-alien-artifact-purple"] = "angels-gathering-turret-target_small-alien-artifact-purple_",
+      ["angels-small-alien-artifact-blue"] = "angels-gathering-turret-target_small-alien-artifact-blue_",
+      ["angels-small-alien-artifact-orange"] = "angels-gathering-turret-target_small-alien-artifact-orange_",
+      ["angels-small-alien-artifact-yellow"] = "angels-gathering-turret-target_small-alien-artifact-yellow_",
+      ["angels-small-alien-artifact-red"] = "angels-gathering-turret-target_small-alien-artifact-red_",
     },
   }
 end
@@ -68,8 +75,8 @@ function gathering_turret:init_force_data(force_name)
     return force_whitelist
   end
 
-  if global.GT_data and global.GT_data.force_data then
-    global.GT_data.force_data[force_name] = {
+  if storage.GT_data and storage.GT_data.force_data then
+    storage.GT_data.force_data[force_name] = {
       ["turret_range"] = self:get_gathering_radius(), -- the actual gathering range of the turret
       ["turret_speed"] = self:get_gathering_speed(), -- the actual gathering speed (tiles/s) of this turret
       ["turret_whitelist"] = create_whitelist_for_force(), -- the list of items whitelisted to be collected
@@ -88,21 +95,21 @@ function gathering_turret:save_new_turret(turret_entity)
   --         the y-position, if not, we make one.
   local turret_surface = turret_entity.surface
   local turret_position = turret_entity.position
-  if not global.GT_data["turrets"][turret_surface.index] then
-    global.GT_data["turrets"][turret_surface.index] = {}
+  if not storage.GT_data["turrets"][turret_surface.index] then
+    storage.GT_data["turrets"][turret_surface.index] = {}
   end
-  if not global.GT_data["turrets"][turret_surface.index][turret_position.y] then
-    global.GT_data["turrets"][turret_surface.index][turret_position.y] = {}
+  if not storage.GT_data["turrets"][turret_surface.index][turret_position.y] then
+    storage.GT_data["turrets"][turret_surface.index][turret_position.y] = {}
   end
 
   -- STEP 1b:Now we know we can index (without crashing) to the position as:
   --         dataStructure[surfaceIndex][positionY][positionX]
   --         Now we can store our wanted data at this position
-  global.GT_data["turrets"][turret_surface.index][turret_position.y][turret_position.x] = {
+  storage.GT_data["turrets"][turret_surface.index][turret_position.y][turret_position.x] = {
     ["entity"] = turret_entity, -- the turret entity
     ["entity-hidden"] = {}, -- the additional entities
 
-    ["status"] = global.GT_data["turret_states"]["initial_state"], -- status of this turret
+    ["status"] = storage.GT_data["turret_states"]["initial_state"], -- status of this turret
 
     ["cached_targets"] = {}, -- cached targets to shoot
     ["target_data"] = { -- the active target of the turret
@@ -121,7 +128,7 @@ function gathering_turret:save_new_turret(turret_entity)
 
   -- STEP 2b: Create the hidden entities
   local hidden_entities =
-    global.GT_data["turrets"][turret_surface.index][turret_position.y][turret_position.x]["entity-hidden"]
+    storage.GT_data["turrets"][turret_surface.index][turret_position.y][turret_position.x]["entity-hidden"]
   for hidden_entity_index, hidden_entity_data in pairs(self:get_hidden_entity_data(turret_position)) do
     hidden_entities[hidden_entity_index] = turret_surface.create_entity({
       name = hidden_entity_data.name,
@@ -140,20 +147,20 @@ function gathering_turret:remove_saved_turret(turret_entity)
   local turret_surface_index = turret_entity.surface.index
   local turret_position = turret_entity.position
 
-  if not global.GT_data["turrets"][turret_surface_index] then
+  if not storage.GT_data["turrets"][turret_surface_index] then
     return
   end
-  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then
+  if not storage.GT_data["turrets"][turret_surface_index][turret_position.y] then
     return
   end
 
-  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  local turret_data = storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
   if not turret_data then
     return
   end
 
   -- STEP 2: Make sure the turret is inactive
-  if turret_data["status"] ~= global.GT_data["turret_states"]["inactive"] then
+  if turret_data["status"] ~= storage.GT_data["turret_states"]["inactive"] then
     self:deactivate_turret(turret_surface_index, turret_position)
   end
 
@@ -164,13 +171,13 @@ function gathering_turret:remove_saved_turret(turret_entity)
   end
 
   -- STEP 4: Remove the entity from the data structure
-  global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x] = nil
+  storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x] = nil
 
-  if not next(global.GT_data["turrets"][turret_surface_index][turret_position.y]) then
-    global.GT_data["turrets"][turret_surface_index][turret_position.y] = nil
+  if not next(storage.GT_data["turrets"][turret_surface_index][turret_position.y]) then
+    storage.GT_data["turrets"][turret_surface_index][turret_position.y] = nil
 
-    if not next(global.GT_data["turrets"][turret_surface_index]) then
-      global.GT_data["turrets"][turret_surface_index] = nil
+    if not next(storage.GT_data["turrets"][turret_surface_index]) then
+      storage.GT_data["turrets"][turret_surface_index] = nil
     end
   end
 end
@@ -179,14 +186,14 @@ function gathering_turret:activate_turret(turret_surface_index, turret_position)
   -- Activating a turret will put it into the active turret list.
 
   -- STEP 1: Make sure it is safe to index the data structure
-  if not global.GT_data["turrets"][turret_surface_index] then
+  if not storage.GT_data["turrets"][turret_surface_index] then
     return
   end
-  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then
+  if not storage.GT_data["turrets"][turret_surface_index][turret_position.y] then
     return
   end
 
-  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  local turret_data = storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
   if not turret_data then
     return
   end
@@ -194,23 +201,23 @@ function gathering_turret:activate_turret(turret_surface_index, turret_position)
   -- STEP 2: Set the status to searching (for loot), if no loot is found, the turret
   --         will become inactive on its own again
   -- STEP 2a: Make sure we do not make an active turret active again...
-  if turret_data["status"] ~= global.GT_data["turret_states"]["inactive"] then
+  if turret_data["status"] ~= storage.GT_data["turret_states"]["inactive"] then
     return
   end
 
   -- STEP 2b: Set the status
-  turret_data["status"] = global.GT_data["turret_states"]["searching"]
+  turret_data["status"] = storage.GT_data["turret_states"]["searching"]
 
   -- STEP 3: Add the turret to the active turret list. The best place to insert
   --         the turret is after the turret that is being updated at this point.
   -- STEP 3a: Check if there is an active turret already
-  if global.GT_data["active_turret_count"] > 0 then
+  if storage.GT_data["active_turret_count"] > 0 then
     -- STEP 3a OPTION 1: there is already an active turret
     -- STEP 3a OPTION 1a: configure the prev_active_turret of this turret
-    turret_data["prev_active_turret"] = util.table.deepcopy(global.GT_data["next_active_turret"])
+    turret_data["prev_active_turret"] = util.table.deepcopy(storage.GT_data["next_active_turret"])
     -- STEP 3a OPTION 1b: configure the next_active_turret of this turret
     local active_turret_data =
-      global.GT_data["turrets"][turret_data["prev_active_turret"].surface_index][turret_data["prev_active_turret"].position.y][turret_data["prev_active_turret"].position.x]
+      storage.GT_data["turrets"][turret_data["prev_active_turret"].surface_index][turret_data["prev_active_turret"].position.y][turret_data["prev_active_turret"].position.x]
     turret_data["next_active_turret"] = util.table.deepcopy(active_turret_data["next_active_turret"])
     -- STEP 3a OPTION 1c: configure the this turret as the next_active_turret of current active turret
     active_turret_data["next_active_turret"] = {
@@ -218,7 +225,7 @@ function gathering_turret:activate_turret(turret_surface_index, turret_position)
       surface_index = turret_surface_index,
     }
     -- STEP 3a OPTION 1d: configure the this turret as the prev_active_turret of next active turret
-    global.GT_data["turrets"][turret_data["next_active_turret"].surface_index][turret_data["next_active_turret"].position.y][turret_data["next_active_turret"].position.x]["prev_active_turret"] =
+    storage.GT_data["turrets"][turret_data["next_active_turret"].surface_index][turret_data["next_active_turret"].position.y][turret_data["next_active_turret"].position.x]["prev_active_turret"] =
       {
         position = turret_position,
         surface_index = turret_surface_index,
@@ -226,7 +233,7 @@ function gathering_turret:activate_turret(turret_surface_index, turret_position)
   else
     -- STEP 3a OPTION 2: this is the first active turret
     -- STEP 3a OPTION 2a: set the next_active_turret to this turret
-    global.GT_data["next_active_turret"] = {
+    storage.GT_data["next_active_turret"] = {
       position = turret_position,
       surface_index = turret_surface_index,
     }
@@ -242,62 +249,62 @@ function gathering_turret:activate_turret(turret_surface_index, turret_position)
     }
   end
   -- STEP 3b: Update the active turret count
-  global.GT_data["active_turret_count"] = global.GT_data["active_turret_count"] + 1
+  storage.GT_data["active_turret_count"] = storage.GT_data["active_turret_count"] + 1
 end
 
 function gathering_turret:deactivate_turret(turret_surface_index, turret_position)
   -- Deactivating a turret will put it into the active turret list.
 
   -- STEP 1: Make sure it is safe to index the data structure
-  if not global.GT_data["turrets"][turret_surface_index] then
+  if not storage.GT_data["turrets"][turret_surface_index] then
     return
   end
-  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then
+  if not storage.GT_data["turrets"][turret_surface_index][turret_position.y] then
     return
   end
 
-  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  local turret_data = storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
   if not turret_data then
     return
   end
 
   -- STEP 2: Set the status to inactive
   -- STEP 2a: Make sure we do not make an inactive turret inactive again...
-  if turret_data["status"] == global.GT_data["turret_states"]["inactive"] then
+  if turret_data["status"] == storage.GT_data["turret_states"]["inactive"] then
     return
   end
 
   -- STEP 2b: Set the status
-  turret_data["status"] = global.GT_data["turret_states"]["inactive"]
+  turret_data["status"] = storage.GT_data["turret_states"]["inactive"]
 
   -- STEP 3: Remove the turret to the active turret list.
   -- STEP 3a: Check if there is are multiple active turret left
-  if global.GT_data["active_turret_count"] > 1 then
+  if storage.GT_data["active_turret_count"] > 1 then
     -- STEP 3a OPTION 1: this is not the last active turret
     -- STEP 3a OPTION 1a: set the prev his next turret
-    global.GT_data["turrets"][turret_data["prev_active_turret"].surface_index][turret_data["prev_active_turret"].position.y][turret_data["prev_active_turret"].position.x]["next_active_turret"] =
+    storage.GT_data["turrets"][turret_data["prev_active_turret"].surface_index][turret_data["prev_active_turret"].position.y][turret_data["prev_active_turret"].position.x]["next_active_turret"] =
       util.table.deepcopy(turret_data["next_active_turret"])
     -- STEP 3a OPTION 1b: set the next his prev turret
-    global.GT_data["turrets"][turret_data["next_active_turret"].surface_index][turret_data["next_active_turret"].position.y][turret_data["next_active_turret"].position.x]["prev_active_turret"] =
+    storage.GT_data["turrets"][turret_data["next_active_turret"].surface_index][turret_data["next_active_turret"].position.y][turret_data["next_active_turret"].position.x]["prev_active_turret"] =
       util.table.deepcopy(turret_data["prev_active_turret"])
     -- STEP 3a OPTION 1c: update the next_active turret if this is the currently active turret
-    local active_turret_data = global.GT_data["next_active_turret"]
+    local active_turret_data = storage.GT_data["next_active_turret"]
     if
       turret_surface_index == active_turret_data.surface_index
       and turret_position.x == active_turret_data.position.x
       and turret_position.y == active_turret_data.position.y
     then
-      global.GT_data["next_active_turret"] = util.table.deepcopy(turret_data["next_active_turret"])
+      storage.GT_data["next_active_turret"] = util.table.deepcopy(turret_data["next_active_turret"])
     end
   else
     -- STEP 3a OPTION 2: this is the last active turret
-    global.GT_data["next_active_turret"] = nil
+    storage.GT_data["next_active_turret"] = nil
   end
   -- STEP 3b: update the deactivated turret active data
   turret_data["prev_active_turret"] = nil
   turret_data["next_active_turret"] = nil
   -- STEP 3c: Update the active turret count
-  global.GT_data["active_turret_count"] = global.GT_data["active_turret_count"] - 1
+  storage.GT_data["active_turret_count"] = storage.GT_data["active_turret_count"] - 1
 end
 
 function gathering_turret:update_next_turret()
@@ -305,7 +312,7 @@ function gathering_turret:update_next_turret()
   -- this function is called sufficient times to have smooth behaviour of the GT.
 
   -- STEP 1: make sure there is a turret to be updated
-  local update_turret_ref = global.GT_data["next_active_turret"]
+  local update_turret_ref = storage.GT_data["next_active_turret"]
   if not update_turret_ref then
     return
   end
@@ -314,35 +321,35 @@ function gathering_turret:update_next_turret()
   local turret_position = update_turret_ref.position
 
   -- STEP 2: make sure this turret is still valid
-  if not global.GT_data["turrets"][turret_surface_index] then
+  if not storage.GT_data["turrets"][turret_surface_index] then
     return
   end
-  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then
+  if not storage.GT_data["turrets"][turret_surface_index][turret_position.y] then
     return
   end
 
-  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  local turret_data = storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
   if not turret_data then
     return
   end
 
   -- STEP 3: update the turret
-  if turret_data["status"] == global.GT_data["turret_states"]["searching"] then
+  if turret_data["status"] == storage.GT_data["turret_states"]["searching"] then
     self:update_searching_turret(turret_data)
   end
 
-  if turret_data["status"] == global.GT_data["turret_states"]["gathering"] then
+  if turret_data["status"] == storage.GT_data["turret_states"]["gathering"] then
     self:update_gathering_turret(turret_data)
   end
 
-  if turret_data["status"] == global.GT_data["turret_states"]["collecting"] then
+  if turret_data["status"] == storage.GT_data["turret_states"]["collecting"] then
     self:update_collecting_turret(turret_data)
   end
 
   -- STEP 4: if this turret is not inactive, we have to set the next_active_turret...
   --         if it was inactivated, the next_active_turret is already moved.
-  if turret_data["status"] ~= global.GT_data["turret_states"]["inactive"] then
-    global.GT_data["next_active_turret"] = util.table.deepcopy(turret_data["next_active_turret"])
+  if turret_data["status"] ~= storage.GT_data["turret_states"]["inactive"] then
+    storage.GT_data["next_active_turret"] = util.table.deepcopy(turret_data["next_active_turret"])
   end
 end
 
@@ -364,7 +371,7 @@ function gathering_turret:update_searching_turret(turret_data)
     gathering_distance_remaining = self:calculate_distance(turret_target.position, turret_entity.position),
   }
   local target_info = {
-    name = "angels-gathering-turret-target[" .. turret_data["target_data"].item_name .. "]",
+    name = "angels-gathering-turret-target_" .. turret_data["target_data"].item_name .. "_",
     position = turret_target.position,
     force = "enemy",
     create_build_effect_smoke = false,
@@ -376,7 +383,7 @@ function gathering_turret:update_searching_turret(turret_data)
   if turret_data["target_data"]["target_entity"] then
     turret_entity.active = true
     turret_entity.shooting_target = turret_data["target_data"]["target_entity"]
-    turret_data["status"] = global.GT_data["turret_states"]["gathering"]
+    turret_data["status"] = storage.GT_data["turret_states"]["gathering"]
   end
 end
 
@@ -385,7 +392,7 @@ function gathering_turret:update_gathering_turret(turret_data)
 
   -- make sure it is still shooting
   if not turret_entity.shooting_target then
-    turret_data["status"] = global.GT_data["turret_states"]["searching"]
+    turret_data["status"] = storage.GT_data["turret_states"]["searching"]
     turret_entity.active = false
     turret_data["target_data"] = nil -- TODO: delete this target??
     return
@@ -393,7 +400,7 @@ function gathering_turret:update_gathering_turret(turret_data)
 
   -- make sure it is not overdue for the collecting of the loot
   if turret_data["target_data"].gathering_distance_remaining == 0 then
-    turret_data["status"] = global.GT_data["turret_states"]["collecting"]
+    turret_data["status"] = storage.GT_data["turret_states"]["collecting"]
   end
 end
 
@@ -421,7 +428,7 @@ function gathering_turret:update_collecting_turret(turret_data)
   then
     -- finish the collection process
     turret_data["target_data"] = nil
-    turret_data["status"] = global.GT_data["turret_states"]["searching"]
+    turret_data["status"] = storage.GT_data["turret_states"]["searching"]
     return
   end
 
@@ -440,18 +447,18 @@ function gathering_turret:update_gathering_target(turret_surface_index, turret_p
   -- this function is called only when a gathering cycle has passed.
 
   -- STEP 1: make sure this turret is still valid for gathering
-  if not global.GT_data["turrets"][turret_surface_index] then
+  if not storage.GT_data["turrets"][turret_surface_index] then
     return
   end
-  if not global.GT_data["turrets"][turret_surface_index][turret_position.y] then
+  if not storage.GT_data["turrets"][turret_surface_index][turret_position.y] then
     return
   end
 
-  local turret_data = global.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
+  local turret_data = storage.GT_data["turrets"][turret_surface_index][turret_position.y][turret_position.x]
   if not turret_data then
     return
   end
-  if turret_data["status"] ~= global.GT_data["turret_states"]["gathering"] then
+  if turret_data["status"] ~= storage.GT_data["turret_states"]["gathering"] then
     return
   end
 
@@ -467,7 +474,7 @@ end
 
 function gathering_turret:update_gathering_target_whitelist(force_name, technology_name, allow_gathering)
   -- This function updates the gathering whitelist depending on which items are researched
-  local force_data = global.GT_data and global.GT_data.force_data and global.GT_data.force_data[force_name]
+  local force_data = storage.GT_data and storage.GT_data.force_data and storage.GT_data.force_data[force_name]
   if force_data then
     local gathering_items = self:get_whitelisted_gathering_items()
     local force_whitelist = force_data["turret_whitelist"]
@@ -488,16 +495,16 @@ end
 -- Getter functions to extract data from the data structure
 -------------------------------------------------------------------------------
 function gathering_turret:get_turret_name()
-  if global.GT_data then
-    return global.GT_data.prototype_data.gathering_turret_name
+  if storage.GT_data then
+    return storage.GT_data.prototype_data.gathering_turret_name
   else
     return "angels-void"
   end
 end
 
 function gathering_turret:get_turret_chest_name()
-  if global.GT_data then
-    return global.GT_data.prototype_data.gathering_turret_chest
+  if storage.GT_data then
+    return storage.GT_data.prototype_data.gathering_turret_chest
   else
     return "angels-void"
   end
@@ -520,38 +527,38 @@ end
 
 function gathering_turret:get_whitelisted_gathering_items(force_name)
   if force_name then
-    if not global.GT_data.force_data[force_name] then
+    if not storage.GT_data.force_data[force_name] then
       self:init_force_data(force_name)
     end
-    return global.GT_data.force_data[force_name]["turret_whitelist"]
+    return storage.GT_data.force_data[force_name]["turret_whitelist"]
   else -- if no force name is provided, return all possible items
-    return global.GT_data.prototype_data.gathering_items
+    return storage.GT_data.prototype_data.gathering_items
   end
 end
 
 function gathering_turret:is_gathering_target(target_name)
-  return string.match(target_name, "angels%-gathering%-turret%-target%[.+%]") == target_name
+  return string.match(target_name, "angels%-gathering%-turret%-target%_.+%_") == target_name
 end
 
 function gathering_turret:get_gathering_radius(force_name)
   if force_name then
-    if not global.GT_data.force_data[force_name] then
+    if not storage.GT_data.force_data[force_name] then
       self:init_force_data(force_name)
     end
-    return global.GT_data.force_data[force_name]["turret_range"]
+    return storage.GT_data.force_data[force_name]["turret_range"]
   else -- if no force name is provided, return the max possible range
-    return global.GT_data.prototype_data.gathering_turret_range
+    return storage.GT_data.prototype_data.gathering_turret_range
   end
 end
 
 function gathering_turret:get_gathering_speed(force_name)
   if force_name then
-    if not global.GT_data.force_data[force_name] then
+    if not storage.GT_data.force_data[force_name] then
       self:init_force_data(force_name)
     end
-    return global.GT_data.force_data[force_name]["turret_speed"]
+    return storage.GT_data.force_data[force_name]["turret_speed"]
   else -- if no force name is provided, return the base speed
-    return global.GT_data.prototype_data.gathering_turret_base_speed
+    return storage.GT_data.prototype_data.gathering_turret_base_speed
   end
 end
 
@@ -622,7 +629,7 @@ function gathering_turret:on_remove_entity(removed_entity)
   end
 end
 
-function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealth)
+function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw_damage_dealt)
   -- Event filter 1: damage to (inactive) gathering turret with 0 health remaining
   if damaged_entity.name == self:get_turret_name() and damaged_entity.active == false then
     damaged_entity.active = true
@@ -633,7 +640,7 @@ function gathering_turret:on_damaged_entity(damaged_entity, damaging_entity, raw
     and damaging_entity
     and damaging_entity.name == self:get_turret_name()
   then
-    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position, raw_damage_dealth)
+    self:update_gathering_target(damaging_entity.surface.index, damaging_entity.position, raw_damage_dealt)
   end
 end
 
@@ -647,8 +654,8 @@ end
 function gathering_turret:on_tick_update()
   -- TODO: for now we call this once every tick, this can be a runtime setting
   -- faster update times result in higher ups but smoother behaviour
-  if global.GT_data and global.GT_data["active_turret_count"] > 0 then
-    for i = 0, global.GT_data["active_turret_count"], 60 do
+  if storage.GT_data and storage.GT_data["active_turret_count"] > 0 then
+    for i = 0, storage.GT_data["active_turret_count"], 60 do
       self:update_next_turret()
     end
   end
@@ -663,7 +670,7 @@ function gathering_turret:on_tech_research_reversed(force_name, technology_name)
 end
 
 function gathering_turret:on_tech_research_reset(force_name)
-  if global.GT_data and global.GT_data.force_data[force_name] then
+  if storage.GT_data and storage.GT_data.force_data[force_name] then
     self:init_force_data(force_name) -- re-init all force data to reapply settings
   end
 end

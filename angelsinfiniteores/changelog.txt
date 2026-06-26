@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 04.06.2026
+  Changes:
+    - Added additional error checking (1250, 1290)
+    - Prevented resources being removed from planets other than Nauvis (1289)
+  Bugfixes:
+    - Fixed crash with Bob's Ores and without Angel's Refining (1304)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 01.06.2026
+  Bugfixes:
+    - Fixed infinite ore entity icon scaling (1284)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Bugfixes:
+    - Fixed message when attempting to place drill on infinite ore before researching Advanced Mining (1222)
+    - Fixed ore circle sometimes generating around ore patches (1238)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Changes:
+    - Updated for Factorio 2.0 (994)
+  Bugfixes:
+    - Fixed log file spam with Angel's Refining and Bob's Metals, Chemicals and Intermediates mod (996)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 22.12.2023
   Bugfixes:

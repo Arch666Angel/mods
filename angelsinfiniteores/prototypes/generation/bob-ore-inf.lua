@@ -1,10 +1,10 @@
 if mods["bobores"] then
   if angelsmods.ores.disable_ore_override or not angelsmods.refining then
     if bobmods.ores.bauxite.enabled == true then
-      if data.raw.resource["bauxite-ore"] then
+      if data.raw.resource["bob-bauxite-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-bauxite-ore",
-          get = "bauxite-ore",
+          get = "bob-bauxite-ore",
           order = "b",
           sheet = 3,
           infinite = true,
@@ -18,14 +18,14 @@ if mods["bobores"] then
           normal = 1500,
           maximum = 6000,
           acid_to_mine = "sulfuric-acid",
-          output_name = "bauxite-ore",
+          output_name = "bob-bauxite-ore",
           output_min = 1,
           output_max = 1,
           output_probability = angelsmods.ores.loweryield,
           -- icon = "__bobores__/graphics/icons/bauxite-ore.png",
           autoplace = {
             starting_area = false,
-            resource_index = "bauxite-ore",
+            resource_index = "bob-bauxite-ore",
             base_density = 5,
             regular_rq_factor_multiplier = 0.3,
             starting_rq_factor_multiplier = 0.5,
@@ -35,10 +35,10 @@ if mods["bobores"] then
     end
 
     if bobmods.ores.cobalt.enabled == true then
-      if data.raw.resource["cobalt-ore"] then
+      if data.raw.resource["bob-cobalt-ore"] then
         angelsmods.functions.add_resource("make", {
           name = "infinite-cobalt-ore",
-          get = "cobalt-ore",
+          get = "bob-cobalt-ore",
           order = "b",
           sheet = 3,
           infinite = true,
@@ -52,7 +52,7 @@ if mods["bobores"] then
           normal = 1500,
           maximum = 6000,
           acid_to_mine = "sulfuric-acid",
-          output_name = "cobalt-ore",
+          output_name = "bob-cobalt-ore",
           output_min = 1,
           output_max = 1,
           output_probability = angelsmods.ores.loweryield,
@@ -298,40 +298,6 @@ if mods["bobores"] then
           autoplace = {
             starting_area = false,
             -- resource_index = 38,
-            base_density = 5,
-            regular_rq_factor_multiplier = 0.3,
-            starting_rq_factor_multiplier = 0.5,
-          },
-        })
-      end
-    end
-
-    if bobmods.ores.sulfur.enabled == true then
-      if data.raw.resource["sulfur"] then
-        angelsmods.functions.add_resource("make", {
-          name = "infinite-sulfur",
-          get = "sulfur",
-          order = "b",
-          sheet = 3,
-          infinite = true,
-          glow = true,
-          var = 3,
-          map_color = { r = 0.8, g = 0.75, b = 0.1 },
-          tint = { r = 0.8, g = 0.75, b = 0.1 },
-          mining_time = 1,
-          type = "item",
-          minimum = angelsmods.ores.yield,
-          normal = 1500,
-          maximum = 6000,
-          acid_to_mine = "water",
-          output_name = "sulfur",
-          output_min = 1,
-          output_max = 1,
-          output_probability = angelsmods.ores.loweryield,
-          -- icon = "__bobores__/graphics/icons/sulfur.png",
-          autoplace = {
-            starting_area = false,
-            -- resource_index = 39,
             base_density = 5,
             regular_rq_factor_multiplier = 0.3,
             starting_rq_factor_multiplier = 0.5,

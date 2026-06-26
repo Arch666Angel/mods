@@ -7,7 +7,7 @@ if settings.startup["deco-shred-create-tech"].value then
       icon_size = data.raw["lamp"]["shred-start"].picture_on.width,
 
       prerequisites = {
-        "optics",
+        "lamp",
         "steel-processing",
       },
 

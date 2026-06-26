@@ -28,7 +28,7 @@ end
 local unit_test_002 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  if not game.active_mods["angelsindustries"] then
+  if not script.active_mods["angelsindustries"] then
     return true
   end -- skip test
   local industries_tech_setting = settings.startup["angels-enable-tech"]
@@ -36,7 +36,7 @@ local unit_test_002 = function()
     return true
   end -- skip test
 
-  local tech_prototypes = game.technology_prototypes
+  local tech_prototypes = prototypes.technology
   for tech_name, tech_prototype in pairs(tech_prototypes) do
     if tech_prototype.hidden == false then
       local tech_ingredients = tech_prototype.research_unit_ingredients

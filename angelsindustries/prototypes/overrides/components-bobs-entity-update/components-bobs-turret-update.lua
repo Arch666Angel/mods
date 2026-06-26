@@ -34,13 +34,13 @@ if angelsmods.industries.components then
         },
       },
     })
-    OV.remove_prereq("bob-laser-turrets-2", "advanced-electronics")
+    OV.remove_prereq("bob-laser-turrets-2", "advanced-circuit")
     OV.add_prereq("bob-laser-turrets-2", "angels-components-batteries-2")
     --OV.add_prereq("bob-laser-turrets-2", "tech-green-circuit") -- indirect depends on it through batteries 2
     OV.set_science_pack("bob-laser-turrets-3", "military-science-pack", 1)
     --OV.add_prereq("bob-laser-turrets-3", "angels-components-batteries-3")
     --OV.add_prereq("bob-laser-turrets-3", "tech-orange-circuit") -- indirect depends on it through batteries 3
-    OV.remove_prereq("bob-laser-turrets-4", "advanced-electronics-2")
+    OV.remove_prereq("bob-laser-turrets-4", "processing-unit")
     OV.add_prereq("bob-laser-turrets-4", "tech-blue-circuit")
     OV.add_prereq("bob-laser-turrets-4", "angels-components-batteries-4")
     OV.add_prereq("bob-laser-turrets-5", "tech-yellow-circuit")
@@ -86,13 +86,13 @@ if angelsmods.industries.components then
         },
       },
     })
-    OV.remove_prereq("bob-plasma-turrets-2", "advanced-electronics")
+    OV.remove_prereq("bob-plasma-turrets-2", "advanced-circuit")
     OV.add_prereq("bob-plasma-turrets-2", "angels-components-batteries-2")
     --OV.add_prereq("bob-plasma-turrets-2", "tech-green-circuit") -- indirect depends on it through batteries 2
     OV.set_science_pack("bob-plasma-turrets-3", "military-science-pack", 1)
     --OV.add_prereq("bob-plasma-turrets-3", "angels-components-batteries-3")
     --OV.add_prereq("bob-plasma-turrets-3", "tech-orange-circuit") -- indirect depends on it through batteries 3
-    OV.remove_prereq("bob-plasma-turrets-4", "advanced-electronics-2")
+    OV.remove_prereq("bob-plasma-turrets-4", "processing-unit")
     OV.add_prereq("bob-plasma-turrets-4", "tech-blue-circuit")
     OV.add_prereq("bob-plasma-turrets-4", "angels-components-batteries-4")
     OV.add_prereq("bob-plasma-turrets-5", "tech-yellow-circuit")

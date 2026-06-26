@@ -1,9 +1,9 @@
 game.reload_script()
 
 local change_tech = {
-  "ore-powderizer",
-  "ore-advanced-floatation",
-  "ore-electro-whinning-cell",
+  "angels-ore-powderizer",
+  "angels-ore-advanced-floatation",
+  "angels-ore-electro-whinning-cell",
 }
 --Enable recipes
 for index, force in pairs(game.forces) do
@@ -13,8 +13,8 @@ for index, force in pairs(game.forces) do
       tech.enabled = tech.prototype.enabled
     end
   end
-  if force.technologies["bio-processing-alien-2"].researched then
-    force.technologies["bio-processing-alien-2"].researched = false
+  if force.technologies["angels-bio-processing-alien-2"].researched then
+    force.technologies["angels-bio-processing-alien-2"].researched = false
   end
 
   force.reset_recipes()

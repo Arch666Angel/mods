@@ -5,13 +5,13 @@ add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "small-bi
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "medium-biter" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "big-biter" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "behemoth-biter" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "colossal-biter" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-colossal-biter" })
 
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "small-spitter" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "medium-spitter" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "big-spitter" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "behemoth-spitter" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "colossal-spitter" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-colossal-spitter" })
 if mods["bobenemies"] then
   add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "bob-big-electric-spitter" })
   add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "bob-huge-explosive-spitter" })
@@ -23,22 +23,22 @@ if mods["bobenemies"] then
   add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "bob-leviathan-spitter" })
 end
 
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "small-scarab" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "medium-scarab" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "big-scarab" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "behemoth-scarab" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "colossal-scarab" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-small-scarab" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-medium-scarab" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-big-scarab" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-behemoth-scarab" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-colossal-scarab" })
 
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "small-psyker" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "medium-psyker" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "big-psyker" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "behemoth-psyker" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "colossal-psyker" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-small-psyker" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-medium-psyker" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-big-psyker" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-behemoth-psyker" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit", name = "angels-colossal-psyker" })
 
 add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "biter-spawner" })
 add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "spitter-spawner" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "scarab-spawner" })
-add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "psyker-spawner" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "angels-scarab-spawner" })
+add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "angels-psyker-spawner" })
 if mods["bobenemies"] then
   add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "bob-biter-spawner" })
   add_gathering_turret_start_trigger({ range = 60, type = "unit-spawner", name = "bob-spitter-spawner" })
@@ -60,13 +60,13 @@ end
 -- GATHERING TARGETS (can be added by other mods, this list can be extended)
 if angelsmods.trigger.artifacts["base"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact",
+    name = "angels-small-alien-artifact",
     require_tech_unlock = "angels-gathering-turret",
   })
 end
 if angelsmods.trigger.artifacts["red"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-red",
+    name = "angels-small-alien-artifact-red",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -76,7 +76,7 @@ if angelsmods.trigger.artifacts["red"] then
 end
 if angelsmods.trigger.artifacts["yellow"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-yellow",
+    name = "angels-small-alien-artifact-yellow",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -86,7 +86,7 @@ if angelsmods.trigger.artifacts["yellow"] then
 end
 if angelsmods.trigger.artifacts["orange"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-orange",
+    name = "angels-small-alien-artifact-orange",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -96,7 +96,7 @@ if angelsmods.trigger.artifacts["orange"] then
 end
 if angelsmods.trigger.artifacts["blue"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-blue",
+    name = "angels-small-alien-artifact-blue",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -106,7 +106,7 @@ if angelsmods.trigger.artifacts["blue"] then
 end
 if angelsmods.trigger.artifacts["purple"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-purple",
+    name = "angels-small-alien-artifact-purple",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",
@@ -116,7 +116,7 @@ if angelsmods.trigger.artifacts["purple"] then
 end
 if angelsmods.trigger.artifacts["green"] then
   angelsmods.functions.create_gathering_turret_target({
-    name = "small-alien-artifact-green",
+    name = "angels-small-alien-artifact-green",
     require_tech_unlock = true,
     additional_tech_prerequisites = {
       "angels-gathering-turret",

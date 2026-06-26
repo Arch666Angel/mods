@@ -1,4 +1,39 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 01.06.2026
+  Bugfixes:
+    - Fixed Agriculture module recipe speed (with Bob's Modules mod) (1255)
+    - Fixed crystals not being added to Quality module recipes (1271)
+  Changes:
+    - Allowed Crystal powder recipes to be selected as signals (1262)
+    - Moved Sodium carbonate from Brown alge recipe later in the tech tree (1264)
+    - Adjusted which tiles each type of tree and garden can swawn on (1265)
+    - Changed Agriculture module 3 ingredients (with Bob's MCI / Bob's Electronics but without Bob's Modules) (1273)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 18.01.2026
+  Changes:
+    - Allow Agriculture modules to be crafted in Electronics assembly machines (from Bob's Assembling machines mod) (1243)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.2026
+  Bugfixes:
+    - Fixed Agriculture modules being usable on non-agricultural recipes (1235)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.2026
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Removed angelsmods.triggers table. Use angelsmods.trigger instead (970)
+    - Limited animation speed of fish, puffer, and biter refugiums (987)
+    - Tech tree changes: (991)
+      - Moved Garden Processing and Farming 1 techs from Red Science to Green Science
+      - Reduced the tier of Algae farm 2's ingredients
+      - Made Biters require Purple Science
+    - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
+    - Added soft incompatibility with Bob's Greenhouse mod (1140)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.27
 Date: 21.02.2024
   Changes:

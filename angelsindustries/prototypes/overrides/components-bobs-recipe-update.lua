@@ -6,44 +6,44 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then -- electronic assemblers
     OV.patch_recipes({
-      { name = "circuit-grey-board", category = "electronics" },
-      { name = "circuit-grey-board-alternative", category = "electronics" },
-      { name = "circuit-red-board", category = "electronics" },
-      { name = "circuit-green-board", category = "electronics-with-fluid" },
-      { name = "circuit-orange-board", category = "electronics-with-fluid" },
-      { name = "circuit-blue-board", category = "electronics-with-fluid" },
-      --{ name = "circuit-yellow-board", category = "electronics-with-fluid" }, --crafted with 2 fluids
+      { name = "circuit-grey-board", category = "bob-electronics" },
+      { name = "circuit-grey-board-alternative", category = "bob-electronics" },
+      { name = "circuit-red-board", category = "bob-electronics" },
+      { name = "circuit-green-board", category = "bob-electronics-with-fluid" },
+      { name = "circuit-orange-board", category = "bob-electronics-with-fluid" },
+      { name = "circuit-blue-board", category = "bob-electronics-with-fluid" },
+      --{ name = "circuit-yellow-board", category = "bob-electronics-with-fluid" }, --crafted with 2 fluids
 
-      { name = "circuit-grey", category = "electronics" },
-      { name = "circuit-red", category = "electronics" },
-      { name = "circuit-green", category = "electronics-machine" },
-      { name = "circuit-orange", category = "electronics-with-fluid" },
-      { name = "circuit-blue", category = "electronics-with-fluid" },
-      { name = "circuit-yellow", category = "electronics-with-fluid" },
+      { name = "circuit-grey", category = "bob-electronics" },
+      { name = "circuit-red", category = "bob-electronics" },
+      { name = "circuit-green", category = "bob-electronics-machine" },
+      { name = "circuit-orange", category = "bob-electronics-with-fluid" },
+      { name = "circuit-blue", category = "bob-electronics-with-fluid" },
+      { name = "circuit-yellow", category = "bob-electronics-with-fluid" },
 
-      { name = "circuit-red-loaded", category = "electronics" },
-      { name = "circuit-green-loaded", category = "electronics-machine" },
-      { name = "circuit-orange-loaded", category = "electronics-machine" },
-      { name = "circuit-blue-loaded", category = "electronics-machine" },
-      { name = "circuit-yellow-loaded", category = "electronics-machine" },
+      { name = "circuit-red-loaded", category = "bob-electronics" },
+      { name = "circuit-green-loaded", category = "bob-electronics-machine" },
+      { name = "circuit-orange-loaded", category = "bob-electronics-machine" },
+      { name = "circuit-blue-loaded", category = "bob-electronics-machine" },
+      { name = "circuit-yellow-loaded", category = "bob-electronics-machine" },
 
-      { name = "circuit-resistor", category = "electronics" },
-      { name = "circuit-transistor", category = "electronics-machine" },
-      { name = "circuit-microchip", category = "electronics-with-fluid" },
-      { name = "circuit-transformer", category = "electronics-machine" },
-      { name = "circuit-cpu", category = "electronics-with-fluid" },
-      { name = "electronic-parts-resistor", category = "electronics-machine" },
-      { name = "electronic-parts-transistor", category = "electronics-machine" },
-      { name = "electronic-parts-microchip", category = "electronics-machine" },
-      { name = "electronic-parts-transformer", category = "electronics-machine" },
-      { name = "electronic-parts-cpu", category = "electronics-machine" },
+      { name = "circuit-resistor", category = "bob-electronics" },
+      { name = "circuit-transistor", category = "bob-electronics-machine" },
+      { name = "circuit-microchip", category = "bob-electronics-with-fluid" },
+      { name = "circuit-transformer", category = "bob-electronics-machine" },
+      { name = "circuit-cpu", category = "bob-electronics-with-fluid" },
+      { name = "electronic-parts-resistor", category = "bob-electronics-machine" },
+      { name = "electronic-parts-transistor", category = "bob-electronics-machine" },
+      { name = "electronic-parts-microchip", category = "bob-electronics-machine" },
+      { name = "electronic-parts-transformer", category = "bob-electronics-machine" },
+      { name = "electronic-parts-cpu", category = "bob-electronics-machine" },
 
-      { name = "block-electronics-0", category = "electronics" },
-      { name = "block-electronics-1", category = "electronics" },
-      { name = "block-electronics-2", category = "electronics-machine" },
-      { name = "block-electronics-3", category = "electronics-machine" },
-      { name = "block-electronics-4", category = "electronics-machine" },
-      { name = "block-electronics-5", category = "electronics-machine" },
+      { name = "block-electronics-0", category = "bob-electronics" },
+      { name = "block-electronics-1", category = "bob-electronics" },
+      { name = "block-electronics-2", category = "bob-electronics-machine" },
+      { name = "block-electronics-3", category = "bob-electronics-machine" },
+      { name = "block-electronics-4", category = "bob-electronics-machine" },
+      { name = "block-electronics-5", category = "bob-electronics-machine" },
     })
   end
 
@@ -108,7 +108,7 @@ if angelsmods.industries.components then
     })
     OV.remove_prereq("exoskeleton-equipment", "electric-engine")
     OV.add_prereq("exoskeleton-equipment", "angels-components-mechanical-3")
-    OV.add_prereq("exoskeleton-equipment", "tech-orange-circuit")
+    OV.remove_science_pack("exoskeleton-equipment", "chemical-science-pack")
   end
 
   -----------------------------------------------------------------------------
@@ -177,7 +177,7 @@ if angelsmods.industries.components then
   if mods["bobmodules"] then
     --replace green with orange boards on logic step
     local module_recs = {}
-    for _, type in pairs({ "speed", "effectivity", "productivity", "pollution-clean", "pollution-create" }) do
+    for _, type in pairs({ "speed", "efficiency", "productivity", "pollution-clean", "pollution-create" }) do
       table.insert(module_recs, {
         name = type .. "-processor-2",
         ingredients = {
@@ -195,7 +195,7 @@ if angelsmods.industries.components then
     OV.global_replace_technology("battery-2", "angels-components-batteries-3")
     OV.disable_technology("battery-2")
     OV.disable_recipe("lithium-cobalt-oxide")
-    angelsmods.functions.add_flag("lithium-cobalt-oxide", "hidden")
+    angelsmods.functions.hide("lithium-cobalt-oxide")
 
     OV.global_replace_technology("battery-3", "angels-components-batteries-4")
     OV.disable_technology("battery-3")
@@ -204,11 +204,9 @@ if angelsmods.industries.components then
     OV.disable_recipe("lithium")
     OV.disable_recipe("lithium-water-electrolysis")
     OV.disable_recipe("lithium-chloride")
-    OV.disable_recipe("water-thermal-lithia")
-    angelsmods.functions.add_flag("silver-oxide", "hidden")
-    angelsmods.functions.add_flag("lithium", "hidden")
-    angelsmods.functions.add_flag("lithium-perchlorate", "hidden")
-    angelsmods.functions.add_flag("lithia-water", "hidden")
+    angelsmods.functions.hide("silver-oxide")
+    angelsmods.functions.hide("lithium")
+    angelsmods.functions.hide("lithium-perchlorate")
     OV.disable_technology("lithium-processing")
   end
 
@@ -217,6 +215,24 @@ if angelsmods.industries.components then
   -----------------------------------------------------------------------------
   if mods["bobpower"] then
     OV.add_prereq("bob-boiler-2", "angels-components-construction-2")
+  end
+
+  -----------------------------------------------------------------------------
+  -- BOB WARFARE --------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  if mods["bobwarfare"] then
+    OV.patch_recipes({
+      {
+        name = "power-armor",
+        ingredients = {
+          { type = "item", name = "circuit-green-loaded", amount = "circuit-orange-loaded" },
+        },
+      },
+    })
+    if angelsmods.industries.tech then
+      OV.remove_prereq("power-armor-mk2", "low-density-structure")
+      OV.remove_input("power-armor-mk2", "low-density-structure")
+    end
   end
 
   OV.execute()

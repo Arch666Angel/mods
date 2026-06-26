@@ -10,7 +10,7 @@ script.on_event(defines.events.on_player_joined_game, function(event)
       player.insert("angels-cab-deploy-charge")
       player.insert("angels-cab-undeploy-charge")
       player.insert("angels-cab-energy-interface-mk1")
-      player.insert("fusion-reactor-equipment")
+      player.insert("fission-reactor-equipment")
 
       player.insert("medium-electric-pole")
       player.insert("rocket-fuel")
@@ -28,21 +28,21 @@ script.on_configuration_changed(onConfigChanged)
 
 function setOnTickState(status)
   if status == true then -- activate onTick
-    if global.vehicleData.deployedCabs and next(global.vehicleData.deployedCabs) then
+    if storage.vehicleData.deployedCabs and next(storage.vehicleData.deployedCabs) then
       script.on_event(defines.events.on_tick, cab.tick)
-      global.vehicleData.onTickActive = true
+      storage.vehicleData.onTickActive = true
     end
   else -- status == false -- deactivate onTick
-    if not global.vehicleData.deployedCabs or (not next(global.vehicleData.deployedCabs)) then
+    if not storage.vehicleData.deployedCabs or (not next(storage.vehicleData.deployedCabs)) then
       script.on_event(defines.events.on_tick, nil)
-      global.vehicleData.onTickActive = false
+      storage.vehicleData.onTickActive = false
     end
   end
 end
 
 script.on_load(function()
   -- sync mod status when player joins map
-  setOnTickState(global.vehicleData.onTickActive)
+  setOnTickState(storage.vehicleData.onTickActive)
 end)
 
 script.on_event(defines.events.on_trigger_created_entity, function(event)
@@ -76,7 +76,7 @@ end)
 script.on_event(defines.events.on_built_entity, function(event)
   if event.created_entity and
      event.created_entity.valid and
-     event.created_entity.name == global.vehicleData.entityName then
+     event.created_entity.name == storage.vehicleData.entityName then
   end
 end)
 ]]
@@ -121,19 +121,19 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
   end
 
   if event.equipment.name == "angels-cab-energy-interface-mk1" then
-    if event.grid.get_contents()[event.equipment.name] > 1 then
+    if event.grid.count(event.equipment.name) > 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
         event.equipment.prototype.localised_name,
       })
     end
   elseif event.equipment.name == "angels-cab-energy-interface-mk2" then
-    if event.grid.get_contents()[event.equipment.name] > 1 then
+    if event.grid.count(event.equipment.name) > 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noSecondEnergyInterfaceInsertion",
         event.equipment.prototype.localised_name,
       })
-    elseif event.grid.get_contents()["angels-cab-energy-interface-mk1"] < 1 then
+    elseif event.grid.count("angels-cab-energy-interface-mk1") < 1 then
       return invalidPlacement({
         "angels-cab-messages.grid-noPreviousEnergyInterfacePresent",
         event.equipment.prototype.localised_name,

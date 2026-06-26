@@ -10,7 +10,7 @@ return function(configurationData)
       )
     )
 
-    if not global.vehicleData then
+    if not storage.vehicleData then
       return
     end -- not initialized yet
 
@@ -18,36 +18,36 @@ return function(configurationData)
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
 
-    if global.vehicleData.version == 1.0 then
+    if storage.vehicleData.version == 1.0 then
       -- updating from mod version 0.1.3 (or lower)
-      local oldVersion = global.vehicleData.version
+      local oldVersion = storage.vehicleData.version
       local newVersion = 1.1
       log(string.format("    Updating vehicleData from version '%.1f' to version '%.1f'.", oldVersion, newVersion))
 
-      for deployedCabIndex, deployedCabData in pairs(global.vehicleData.deployedCabs or {}) do
+      for deployedCabIndex, deployedCabData in pairs(storage.vehicleData.deployedCabs or {}) do
         -- Migration of "angels-cab-energy-interface" -> "angels-cab-energy-interface-mk1"
         deployedCabData["angels-cab-energy-interface-mk1"] = deployedCabData["angels-cab-energy-interface"]
         deployedCabData["angels-cab-energy-interface"] = nil
       end
 
       log(string.format("    Finished updating vehicleData to version '%.1f'.", newVersion))
-      global.vehicleData.version = newVersion
+      storage.vehicleData.version = newVersion
     end
 
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
 
-    if global.vehicleData.version == 1.1 then
+    if storage.vehicleData.version == 1.1 then
       -- updating from mod version 0.1.4 (or lower)
-      local oldVersion = global.vehicleData.version
+      local oldVersion = storage.vehicleData.version
       local newVersion = 1.2
       log(string.format("    Updating vehicleData from version '%.1f' to version '%.1f'.", oldVersion, newVersion))
 
-      global.vehicleData.openedCabs = {}
+      storage.vehicleData.openedCabs = {}
 
       log(string.format("    Finished updating vehicleData to version '%.1f'.", newVersion))
-      global.vehicleData.version = newVersion
+      storage.vehicleData.version = newVersion
     end
 
     -------------------------------------------------------------------------------

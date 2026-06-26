@@ -1,5 +1,4 @@
 local OV = angelsmods.functions.OV
-local intermediatemulti = angelsmods.marathon.intermediatemulti
 
 -------------------------------------------------------------------------------
 -- BASE OVERRIDES -------------------------------------------------------------
@@ -11,15 +10,15 @@ angelsmods.functions.override_item_conditions({
   },
 })
 
-angelsmods.functions.move_item("stone", "slag-processing-1", "c")
+angelsmods.functions.move_item("stone", "angels-slag-processing-1", "c")
 angelsmods.functions.move_item("stone-brick", "angels-stone", "f")
 angelsmods.functions.move_item("concrete", "angels-stone-casting", "ha")
 angelsmods.functions.move_item("hazard-concrete", "angels-stone-casting", "hb")
 angelsmods.functions.move_item("refined-concrete", "angels-stone-casting", "hc")
 angelsmods.functions.move_item("refined-hazard-concrete", "angels-stone-casting", "hd")
 
-angelsmods.functions.move_item("landfill", "slag-processing-1", "d")
-angelsmods.functions.move_item("landfill", "processing-crafting", "e[landfill]", "recipe")
+angelsmods.functions.move_item("landfill", "angels-slag-processing-1", "d")
+angelsmods.functions.move_item("landfill", "angels-processing-crafting", "e[landfill]", "recipe")
 OV.patch_recipes({
   { name = "stone-brick", subgroup = "angels-stone", order = "f[stone-brick]" },
   {
@@ -28,7 +27,6 @@ OV.patch_recipes({
       {
         icon = "__base__/graphics/icons/concrete.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         scale = 0.5,
       },
     }, 1, angelsmods.smelting.number_tint),
@@ -37,7 +35,7 @@ OV.patch_recipes({
   },
   { name = "hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-c" },
   { name = "refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-d" },
-  { name = "hazard-refined-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
+  { name = "refined-hazard-concrete", subgroup = "angels-stone-casting", order = "h[concrete]-e" },
 })
 
 -------------------------------------------------------------------------------
@@ -46,28 +44,9 @@ OV.patch_recipes({
 if angelsmods.refining then
   OV.patch_recipes({
     {
-      name = "angelsore3-crushed-smelting",
+      name = "copper-plate",
       subgroup = "angels-copper-casting",
       order = "j[angels-plate-copper]-a",
-    },
-  })
-end
-
-if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
-  -- special vanilla
-  OV.patch_recipes({
-    {
-      name = "cement-mixture-1",
-      ingredients = {
-        { name = "stone-crushed", type = "item", amount = "quartz" },
-      },
-    },
-    {
-      name = "cement-mixture-2",
-      ingredients = {
-        { name = "stone-crushed", type = "item", amount = "quartz" },
-        { name = "stone-crushed", type = "item", amount = "solid-aluminium-oxide" },
-      },
     },
   })
 end

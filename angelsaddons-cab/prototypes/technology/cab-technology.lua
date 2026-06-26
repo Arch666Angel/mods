@@ -7,7 +7,7 @@ data:extend({
     icon = "__angelsaddons-cab__/graphics/technology/cab-tech.png",
     icon_size = 128,
     prerequisites = {
-      "automobilism",
+      "angels-crawler",
       "electric-energy-distribution-1",
       "circuit-network",
       "chemical-science-pack",
@@ -33,9 +33,9 @@ data:extend({
     unit = {
       count = 60,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -62,9 +62,9 @@ data:extend({
     {
       count = 60,
       ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15
     },

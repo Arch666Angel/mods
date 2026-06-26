@@ -4,20 +4,19 @@ data:extend({
     name = "angels-copper-smelting-1",
     localised_name = { "technology-name.angels-copper-metallurgy" },
     localised_description = { "technology-description.angels-copper-metallurgy" },
-    icon = "__angelssmelting__/graphics/technology/casting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-metallurgy-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-ore-smelting",
+        recipe = "angels-ingot-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-copper-smelting",
+        recipe = "angels-liquid-molten-copper",
       },
       {
         type = "unlock-recipe",
@@ -27,7 +26,7 @@ data:extend({
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 30,
     },
@@ -36,34 +35,34 @@ data:extend({
   {
     type = "technology",
     name = "angels-copper-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/smelting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
-      "ore-processing-1",
+      "angels-ore-processing-1",
       "angels-copper-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
+      "angels-powder-metallurgy-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-ore-processing",
+        recipe = "angels-processed-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "processed-copper-smelting",
+        recipe = "angels-ingot-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-copper",
+        recipe = "angels-powder-copper",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -72,37 +71,36 @@ data:extend({
   {
     type = "technology",
     name = "angels-copper-casting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-copper-smelting-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting",
+        recipe = "angels-wire-coil-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-converting",
+        recipe = "angels-wire-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-copper-casting",
+        recipe = "angels-roll-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-copper-converting",
+        recipe = "angels-plate-copper-2",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -111,35 +109,34 @@ data:extend({
   {
     type = "technology",
     name = "angels-copper-smelting-3",
-    icon = "__angelssmelting__/graphics/technology/smelting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "ore-processing-2",
+      "angels-ore-processing-2",
       "angels-copper-smelting-2",
       "angels-sulfur-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "copper-processed-processing",
+        recipe = "angels-pellet-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "pellet-copper-smelting",
+        recipe = "angels-anode-copper",
       },
       {
         type = "unlock-recipe",
-        recipe = "anode-copper-smelting",
+        recipe = "angels-ingot-copper-3",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -148,30 +145,29 @@ data:extend({
   {
     type = "technology",
     name = "angels-copper-casting-3",
-    icon = "__angelssmelting__/graphics/technology/casting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-3",
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-copper-casting-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wire-coil-copper-casting-fast",
+        recipe = "angels-wire-coil-copper-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "roll-copper-casting-fast",
+        recipe = "angels-roll-copper-2",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },

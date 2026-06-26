@@ -4,11 +4,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-1",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -21,9 +21,9 @@ data:extend({
     unit = {
       count = 100 * 1,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
       },
       time = 30,
     },
@@ -34,11 +34,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-2",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -51,9 +51,9 @@ data:extend({
     unit = {
       count = 100 * 2,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
       },
       time = 30,
     },
@@ -64,11 +64,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-3",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -84,10 +84,10 @@ data:extend({
     unit = {
       count = 100 * 3,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 60,
     },
@@ -98,11 +98,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-4",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.3,
       },
       {
@@ -118,11 +118,11 @@ data:extend({
     unit = {
       count = 100 * 4,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 60,
     },
@@ -133,11 +133,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-5",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.3,
       },
       {
@@ -150,11 +150,11 @@ data:extend({
     unit = {
       count = 100 * 5,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 60,
     },
@@ -165,11 +165,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-6",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.4,
       },
       {
@@ -182,11 +182,11 @@ data:extend({
     unit = {
       count = 100 * 6,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 60,
     },
@@ -197,11 +197,11 @@ data:extend({
     type = "technology",
     name = "angels-refined-biological-7",
     icon_size = 128,
-    icon = "__angelsexploration__/graphics/technology/refined-biological.png",
+    icon = "__angelsexplorationgraphics__/graphics/technology/refined-biological.png",
     effects = {
       {
         type = "ammo-damage",
-        ammo_category = "bio",
+        ammo_category = "angels-bio",
         modifier = 0.2,
       },
       {
@@ -214,12 +214,12 @@ data:extend({
     unit = {
       count_formula = "2^(L-7)*1000",
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "military-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
-        { type = "item", name = "space-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "military-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60,
     },

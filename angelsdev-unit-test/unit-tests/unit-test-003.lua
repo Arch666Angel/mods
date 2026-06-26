@@ -4,25 +4,26 @@ local unit_test_functions = require("unit-test-functions")
 
 local recipes_to_ignore = {
   ["electric-energy-interface"] = true, -- base game
+  ["rocket-part"] = true, -- base game. Recipe is hidden from player crafting but item is hidden
 }
 local products_to_ignore = {
-  ["chemical-void"] = true,
-  ["water-void"] = true,
+  ["angels-chemical-void"] = true,
+  ["angels-water-void"] = true,
   ["void"] = true, -- Bob's void
 }
 
 local unit_test_003 = function()
   local unit_test_result = unit_test_functions.test_successful
 
-  local recipe_prototypes = game.recipe_prototypes
-  local item_prototypes = game.item_prototypes
-  local fluid_prototypes = game.fluid_prototypes
+  local recipe_prototypes = prototypes.recipe
+  local item_prototypes = prototypes.item
+  local fluid_prototypes = prototypes.fluid
   for recipe_name, recipe_data in pairs(recipe_prototypes) do
     if not recipe_data.hidden and not recipes_to_ignore[recipe_name] then -- only test recipes that are not hidden or ignored
       local recipe_ingredients = recipe_data.ingredients
       for _, recipe_ingredient in pairs(recipe_ingredients) do
         if recipe_ingredient.type == "item" then
-          if item_prototypes[recipe_ingredient.name].has_flag("hidden") then
+          if item_prototypes[recipe_ingredient.name].hidden then
             unit_test_functions.print_msg(
               string.format("Recipe %q requires %q (item), which is hidden.", recipe_name, recipe_ingredient.name)
             )
@@ -48,7 +49,7 @@ local unit_test_003 = function()
         --add exception list for results (void results)
         if not products_to_ignore[recipe_product.name] then
           if recipe_product.type == "item" then
-            if item_prototypes[recipe_product.name].has_flag("hidden") then
+            if item_prototypes[recipe_product.name].hidden then
               unit_test_functions.print_msg(
                 string.format("Recipe %q makes %q (item), which is hidden.", recipe_name, recipe_product.name)
               )

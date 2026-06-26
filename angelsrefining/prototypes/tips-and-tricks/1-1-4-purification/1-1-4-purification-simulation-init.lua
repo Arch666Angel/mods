@@ -1,14 +1,15 @@
-game.camera_position = { -4.5, 1 }
-game.camera_zoom = 1.45
-game.camera_alt_info = true
+game.simulation.camera_position = { -4.5, 1 }
+game.simulation.camera_zoom = 1.45
+game.simulation.camera_alt_info = true
 
+game.forces.neutral.recipes["angels-ore1-pure"].enabled = true
 -- leaching plant
 game.surfaces[1].create_entity({
-  name = "ore-refinery",
+  name = "angels-ore-refinery",
   position = { 0, 0 },
   direction = defines.direction.east,
   force = "neutral",
-  recipe = "angelsore1-pure",
+  recipe = "angels-ore1-pure",
 })
 -- inserters (input)
 game.surfaces[1].create_entity({

@@ -44,7 +44,7 @@ end, {
   { mode = "and", filter = "final-health", comparison = "=", value = 0 },
   -- Event raise filter 2: gathering damage to a potential gathering target
   { mode = "or", filter = "type", type = "land-mine" },
-  { mode = "and", filter = "damage-type", type = "gathering" },
+  { mode = "and", filter = "damage-type", type = "angels-gathering" },
   -- Event raise filter 3: turbo-bike taking damamge
   { mode = "or", filter = "type", type = "car" },
   { mode = "and", filter = "name", name = "angels-turbo-bike" },

@@ -2,71 +2,62 @@ data:extend({
   --TIER 1
   {
     type = "technology",
-    name = "ore-crushing",
-    icon = "__angelsrefining__/graphics/technology/mechanical-refining.png",
+    name = "angels-ore-crushing",
+    icon = "__angelsrefininggraphics__/graphics/technology/mechanical-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "automation",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-crusher",
+        recipe = "angels-ore-crusher",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-sorting-facility",
+        recipe = "angels-ore-sorting-facility",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crushed",
+        recipe = "angels-ore2-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crushed",
-      },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "angelsore5-crushed"
-      -- },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "angelsore6-crushed"
-      -- },
-      {
-        type = "unlock-recipe",
-        recipe = "angelsore1-crushed-processing",
+        recipe = "angels-ore4-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crushed-processing",
+        recipe = "angels-ore1-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crushed-processing",
+        recipe = "angels-ore2-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crushed-processing",
+        recipe = "angels-ore3-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crushed-processing",
+        recipe = "angels-ore4-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crushed-processing",
+        recipe = "angels-ore5-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-stone",
+        recipe = "angels-ore6-crushed-processing",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-stone-crushed",
       },
     },
     unit = {
       count = 20,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 15,
     },
@@ -74,45 +65,44 @@ data:extend({
   },
   {
     type = "technology",
-    name = "advanced-ore-refining-1",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    name = "angels-advanced-ore-refining-1",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      --"ore-crushing",
-      "slag-processing-1",
+      --"angels-ore-crushing",
+      "angels-slag-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-crusher-2",
+        recipe = "angels-ore-crusher-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-sorting-facility-2",
+        recipe = "angels-ore-sorting-facility-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix1-processing",
+        recipe = "angels-ore-crushed-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix2-processing",
+        recipe = "angels-ore-crushed-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix3-processing",
+        recipe = "angels-ore-crushed-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crushed-mix4-processing",
+        recipe = "angels-ore-crushed-mix4-processing",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -120,55 +110,54 @@ data:extend({
   },
   {
     type = "technology",
-    name = "geode-processing-1",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-red.png",
+    name = "angels-geode-processing-1",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-red.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
-      --"ore-crushing",
-      "ore-floatation",
-      "slag-processing-1",
-      "water-washing-2",
+      --"angels-ore-crushing",
+      "angels-ore-floatation",
+      "angels-slag-processing-1",
+      "angels-water-washing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "geode-blue-processing",
+        recipe = "angels-geode-blue-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-cyan-processing",
+        recipe = "angels-geode-cyan-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-lightgreen-processing",
+        recipe = "angels-geode-lightgreen-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-purple-processing",
+        recipe = "angels-geode-purple-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-red-processing",
+        recipe = "angels-geode-red-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-yellow-processing",
+        recipe = "angels-geode-yellow-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-dust-liquify",
+        recipe = "angels-crystal-dust-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-conversion-1",
+        recipe = "angels-crystal-slurry-filtering-conversion-1",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -176,69 +165,69 @@ data:extend({
   },
   {
     type = "technology",
-    name = "slag-processing-1",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    name = "angels-slag-processing-1",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "ore-crushing",
-      "water-treatment",
+      "angels-ore-crushing",
+      "angels-water-treatment",
       "sulfur-processing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "filtration-unit",
+        recipe = "angels-filtration-unit",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystallizer",
+        recipe = "angels-crystallizer",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquifier-2",
+        recipe = "angels-liquifier-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "catalysator-brown",
+        recipe = "angels-catalysator-brown",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-1",
+        recipe = "angels-slag-processing-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-2",
+        recipe = "angels-slag-processing-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-3",
+        recipe = "angels-slag-processing-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "filter-frame",
+        recipe = "angels-filter-frame",
       },
       {
         type = "unlock-recipe",
-        recipe = "filter-coal",
+        recipe = "angels-filter-coal",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-dissolution",
+        recipe = "angels-slag-processing-dissolution",
       },
       {
         type = "unlock-recipe",
-        recipe = "stone-crushed-dissolution",
+        recipe = "angels-stone-crushed-dissolution",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-filtering-1",
+        recipe = "angels-slag-processing-filtering-1",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -247,74 +236,74 @@ data:extend({
   --TIER 2
   {
     type = "technology",
-    name = "ore-floatation",
-    icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+    name = "angels-ore-floatation",
+    icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-crushing",
-      "water-treatment",
+      "angels-advanced-ore-refining-1",
+      "angels-ore-crushing",
+      "angels-water-treatment",
       "automation-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-floatation-cell",
+        recipe = "angels-ore-floatation-cell",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-chunk",
+        recipe = "angels-ore1-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-chunk",
+        recipe = "angels-ore2-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-chunk",
+        recipe = "angels-ore3-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-chunk",
+        recipe = "angels-ore4-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-chunk",
+        recipe = "angels-ore5-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-chunk",
+        recipe = "angels-ore6-chunk",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-chunk-processing",
+        recipe = "angels-ore1-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-chunk-processing",
+        recipe = "angels-ore2-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-chunk-processing",
+        recipe = "angels-ore3-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-chunk-processing",
+        recipe = "angels-ore4-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-chunk-processing",
+        recipe = "angels-ore5-chunk-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-chunk-processing",
+        recipe = "angels-ore6-chunk-processing",
       },
     },
     unit = {
       count = 80,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -322,65 +311,64 @@ data:extend({
   },
   {
     type = "technology",
-    name = "advanced-ore-refining-2",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    name = "angels-advanced-ore-refining-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      --"ore-floatation",
-      "advanced-ore-refining-1",
+      --"angels-ore-floatation",
+      "angels-advanced-ore-refining-1",
       "chemical-science-pack",
-      "ore-powderizer",
-      "slag-processing-2",
+      "angels-ore-powderizer",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-crusher-3",
+        recipe = "angels-ore-crusher-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-floatation-cell-2",
+        recipe = "angels-ore-floatation-cell-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-sorting-facility-3",
+        recipe = "angels-ore-sorting-facility-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix1-processing",
+        recipe = "angels-ore-chunk-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix2-processing",
+        recipe = "angels-ore-chunk-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix3-processing",
+        recipe = "angels-ore-chunk-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix4-processing",
+        recipe = "angels-ore-chunk-mix4-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix5-processing",
+        recipe = "angels-ore-chunk-mix5-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix6-processing",
+        recipe = "angels-ore-chunk-mix6-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-chunk-mix7-processing",
+        recipe = "angels-ore-chunk-mix7-processing",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -388,48 +376,47 @@ data:extend({
   },
   {
     type = "technology",
-    name = "geode-processing-2",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-green.png",
+    name = "angels-geode-processing-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-green.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
-      "geode-processing-1",
+      "angels-geode-processing-1",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "geode-blue-liquify",
+        recipe = "angels-geode-blue-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-cyan-liquify",
+        recipe = "angels-geode-cyan-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-lightgreen-liquify",
+        recipe = "angels-geode-lightgreen-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-purple-liquify",
+        recipe = "angels-geode-purple-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-red-liquify",
+        recipe = "angels-geode-red-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "geode-yellow-liquify",
+        recipe = "angels-geode-yellow-liquify",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-1",
+        recipe = "angels-crystal-slurry-filtering-1",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -437,66 +424,50 @@ data:extend({
   },
   {
     type = "technology",
-    name = "slag-processing-2",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    name = "angels-slag-processing-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "slag-processing-1",
+      "angels-slag-processing-1",
       "chemical-science-pack",
-      "geode-processing-2",
+      "angels-geode-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "filtration-unit-2",
+        recipe = "angels-filtration-unit-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystallizer-2",
+        recipe = "angels-crystallizer-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquifier-3",
+        recipe = "angels-liquifier-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "catalysator-green",
+        recipe = "angels-catalysator-green",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-4",
+        recipe = "angels-filter-ceramic",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-5",
+        recipe = "angels-filter-ceramic-refurbish",
       },
       {
         type = "unlock-recipe",
-        recipe = "slag-processing-6",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-7",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "filter-ceramic",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "filter-ceramic-refurbish",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-filtering-2",
+        recipe = "angels-slag-processing-filtering-2",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -504,47 +475,39 @@ data:extend({
   },
   {
     type = "technology",
-    name = "slag-processing-3",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    name = "angels-slag-processing-3",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "production-science-pack",
-      "slag-processing-2",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "filtration-unit-3",
+        recipe = "angels-filtration-unit-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystallizer-3",
+        recipe = "angels-crystallizer-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "liquifier-4",
+        recipe = "angels-liquifier-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "catalysator-orange",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-8",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "slag-processing-9",
+        recipe = "angels-catalysator-orange",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -552,23 +515,23 @@ data:extend({
   },
   {
     type = "technology",
-    name = "thermal-water-extraction",
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    name = "angels-thermal-water-extraction",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
-      "water-treatment-2",
+      "angels-water-treatment-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "thermal-bore",
+        recipe = "angels-thermal-bore",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 15,
     },
@@ -576,25 +539,25 @@ data:extend({
   },
   {
     type = "technology",
-    name = "thermal-water-extraction-2",
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    name = "angels-thermal-water-extraction-2",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     icon_size = 128,
     prerequisites = {
-      "thermal-water-extraction",
-      "advanced-ore-refining-2",
+      "angels-thermal-water-extraction",
+      "angels-advanced-ore-refining-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "thermal-extractor",
+        recipe = "angels-thermal-extractor",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -602,29 +565,29 @@ data:extend({
   },
   {
     type = "technology",
-    name = "thermal-water-processing",
-    icon = "__angelsrefining__/graphics/technology/slag-processing.png",
+    name = "angels-thermal-water-processing",
+    icon = "__angelsrefininggraphics__/graphics/technology/slag-processing.png",
     icon_size = 64,
     prerequisites = {
-      "thermal-water-extraction",
-      "slag-processing-2",
+      "angels-thermal-water-extraction",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "thermal-water-filtering-1",
+        recipe = "angels-thermal-water-filtering-1",
       },
       {
         type = "unlock-recipe",
-        recipe = "thermal-water-filtering-2",
+        recipe = "angels-thermal-water-filtering-2",
       },
     },
     unit = {
       count = 30,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -633,75 +596,75 @@ data:extend({
   --TIER 3
   {
     type = "technology",
-    name = "ore-leaching",
-    icon = "__angelsrefining__/graphics/technology/chemical-refining.png",
+    name = "angels-ore-leaching",
+    icon = "__angelsrefininggraphics__/graphics/technology/chemical-refining.png",
     icon_size = 128,
     prerequisites = {
-      "ore-floatation",
-      "advanced-ore-refining-1",
-      "advanced-electronics",
+      "angels-ore-floatation",
+      "angels-advanced-ore-refining-2",
+      "advanced-circuit",
       "chemical-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-leaching-plant",
+        recipe = "angels-ore-leaching-plant",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-crystal",
+        recipe = "angels-ore1-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crystal",
+        recipe = "angels-ore2-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crystal",
+        recipe = "angels-ore3-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crystal",
+        recipe = "angels-ore4-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crystal",
+        recipe = "angels-ore5-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crystal",
+        recipe = "angels-ore6-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-crystal-processing",
+        recipe = "angels-ore1-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-crystal-processing",
+        recipe = "angels-ore2-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-crystal-processing",
+        recipe = "angels-ore3-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-crystal-processing",
+        recipe = "angels-ore4-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-crystal-processing",
+        recipe = "angels-ore5-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-crystal-processing",
+        recipe = "angels-ore6-crystal-processing",
       },
     },
     unit = {
       count = 80,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -709,61 +672,60 @@ data:extend({
   },
   {
     type = "technology",
-    name = "advanced-ore-refining-3",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    name = "angels-advanced-ore-refining-3",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-leaching",
-      "advanced-ore-refining-2",
-      "slag-processing-3",
-      "ore-advanced-floatation",
+      "angels-ore-leaching",
+      "angels-advanced-ore-refining-2",
+      "angels-slag-processing-3",
+      "angels-ore-advanced-floatation",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-floatation-cell-3",
+        recipe = "angels-ore-floatation-cell-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-leaching-plant-2",
+        recipe = "angels-ore-leaching-plant-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-sorting-facility-4",
+        recipe = "angels-ore-sorting-facility-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-powderizer-3",
+        recipe = "angels-powderizer-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix1-processing",
+        recipe = "angels-ore-crystal-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix2-processing",
+        recipe = "angels-ore-crystal-mix2-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix3-processing",
+        recipe = "angels-ore-crystal-mix3-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix4-processing",
+        recipe = "angels-ore-crystal-mix4-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix5-processing",
+        recipe = "angels-ore-crystal-mix5-processing",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 15,
     },
@@ -771,30 +733,29 @@ data:extend({
   },
   {
     type = "technology",
-    name = "geode-processing-3",
-    icon = "__angelsrefining__/graphics/technology/geode-processing-yellow.png",
+    name = "angels-geode-processing-3",
+    icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-yellow.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     prerequisites = {
-      "geode-processing-2",
-      "slag-processing-2",
+      "angels-geode-processing-2",
+      "angels-slag-processing-2",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-2",
+        recipe = "angels-crystal-slurry-filtering-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "crystal-slurry-filtering-conversion-2",
+        recipe = "angels-crystal-slurry-filtering-conversion-2",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -803,77 +764,76 @@ data:extend({
   --TIER 4
   {
     type = "technology",
-    name = "ore-refining",
-    icon = "__angelsrefining__/graphics/technology/thermal-refining.png",
+    name = "angels-ore-refining",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-refining.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-leaching",
-      "advanced-ore-refining-2",
-      "advanced-electronics-2",
+      "angels-ore-leaching",
+      "angels-advanced-ore-refining-3",
+      "processing-unit",
       "production-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-refinery",
+        recipe = "angels-ore-refinery",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-pure",
+        recipe = "angels-ore1-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-pure",
+        recipe = "angels-ore2-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-pure",
+        recipe = "angels-ore3-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-pure",
+        recipe = "angels-ore4-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-pure",
+        recipe = "angels-ore5-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-pure",
+        recipe = "angels-ore6-pure",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore1-pure-processing",
+        recipe = "angels-ore1-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore2-pure-processing",
+        recipe = "angels-ore2-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore3-pure-processing",
+        recipe = "angels-ore3-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore4-pure-processing",
+        recipe = "angels-ore4-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore5-pure-processing",
+        recipe = "angels-ore5-pure-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore6-pure-processing",
+        recipe = "angels-ore6-pure-processing",
       },
     },
     unit = {
       count = 80,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
@@ -881,50 +841,53 @@ data:extend({
   },
   {
     type = "technology",
-    name = "advanced-ore-refining-4",
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    name = "angels-advanced-ore-refining-4",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "ore-refining",
-      "advanced-ore-refining-3",
-      "ore-electro-whinning-cell",
+      "angels-ore-refining",
+      "angels-advanced-ore-refining-3",
+      "angels-ore-electro-whinning-cell",
       "utility-science-pack",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-leaching-plant-3",
+        recipe = "angels-ore-leaching-plant-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "ore-refinery-2",
+        recipe = "angels-ore-refinery-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "electro-whinning-cell-2",
+        recipe = "angels-ore-sorting-facility-5",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix1-processing",
+        recipe = "angels-electro-whinning-cell-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix2-processing",
+        recipe = "angels-ore-pure-mix1-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-pure-mix3-processing",
+        recipe = "angels-ore-pure-mix2-processing",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-ore-pure-mix3-processing",
       },
     },
     unit = {
       count = 50,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
-        { type = "item", name = "utility-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
       },
       time = 15,
     },
@@ -933,34 +896,34 @@ data:extend({
   --TIER -.5
   {
     type = "technology",
-    name = "ore-advanced-crushing",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    name = "angels-ore-advanced-crushing",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-crushing",
+      "angels-ore-crushing",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crushed",
+        recipe = "angels-ore8-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crushed",
+        recipe = "angels-ore9-crushed",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crushed-processing",
+        recipe = "angels-ore8-crushed-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crushed-processing",
+        recipe = "angels-ore9-crushed-processing",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 15,
     },
@@ -968,50 +931,50 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-powderizer",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    name = "angels-ore-powderizer",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-advanced-crushing",
-      "advanced-ore-refining-1",
+      "angels-ore-advanced-crushing",
+      "angels-advanced-ore-refining-1",
       "lubricant",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-powderizer",
+        recipe = "angels-powderizer",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-powder",
+        recipe = "angels-ore8-powder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-powder",
+        recipe = "angels-ore9-powder",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-powder-processing",
+        recipe = "angels-ore8-powder-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-powder-processing",
+        recipe = "angels-ore9-powder-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "milling-drum",
+        recipe = "angels-milling-drum",
       },
       {
         type = "unlock-recipe",
-        recipe = "milling-drum-used",
+        recipe = "angels-milling-drum-lubricated",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -1019,49 +982,50 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-advanced-floatation",
-    icon = "__angelsrefining__/graphics/technology/powderizer-tech.png",
+    name = "angels-ore-advanced-floatation",
+    icon = "__angelsrefininggraphics__/graphics/technology/powderizer-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-powderizer",
-      "thermal-water-extraction-2",
+      "angels-ore-powderizer",
+      "angels-thermal-water-extraction-2",
+      "angels-ore-leaching",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ore-powderizer-2",
+        recipe = "angels-powderizer-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-sludge",
+        recipe = "angels-ore8-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-dust",
+        recipe = "angels-ore8-dust",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-sludge",
+        recipe = "angels-ore9-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-dust",
+        recipe = "angels-ore9-dust",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-dust-processing",
+        recipe = "angels-ore8-dust-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-dust-processing",
+        recipe = "angels-ore9-dust-processing",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 15,
     },
@@ -1069,73 +1033,125 @@ data:extend({
   },
   {
     type = "technology",
-    name = "ore-electro-whinning-cell",
-    icon = "__angelsrefining__/graphics/technology/electro-whinning-cell-tech.png",
+    name = "angels-ore-electro-whinning-cell",
+    icon = "__angelsrefininggraphics__/graphics/technology/electro-whinning-cell-tech.png",
     icon_size = 128,
     prerequisites = {
-      "ore-leaching",
-      "advanced-ore-refining-3",
+      "angels-ore-leaching",
+      "angels-advanced-ore-refining-3",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "electro-whinning-cell",
+        recipe = "angels-electro-whinning-cell",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-solution",
+        recipe = "angels-ore8-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-anode-sludge-filtering",
+        recipe = "angels-ore8-slime",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-anode-sludge",
+        recipe = "angels-ore8-anode-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crystal",
+        recipe = "angels-ore8-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-solution",
+        recipe = "angels-ore9-solution",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-anode-sludge-filtering",
+        recipe = "angels-ore9-slime",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-anode-sludge",
+        recipe = "angels-ore9-anode-sludge",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crystal",
+        recipe = "angels-ore9-crystal",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore8-crystal-processing",
+        recipe = "angels-ore8-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore9-crystal-processing",
+        recipe = "angels-ore9-crystal-processing",
       },
       {
         type = "unlock-recipe",
-        recipe = "angelsore-crystal-mix6-processing",
+        recipe = "angels-ore-crystal-mix6-processing",
       },
     },
     unit = {
       count = 75,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 15,
     },
     order = "a-a-a1",
   },
 })
+
+-------------------------------------------------------------------------------
+-- GEMSTONES ------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  data:extend({
+    {
+      type = "technology",
+      name = "angels-geode-crystallization-1",
+      icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-cyan.png",
+      icon_size = 256,
+      prerequisites = {
+        "angels-geode-processing-2",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-2",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-3",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-4",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-5",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-6",
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+        },
+        time = 30,
+      },
+      order = "a-a-a1",
+    },
+  })
+end

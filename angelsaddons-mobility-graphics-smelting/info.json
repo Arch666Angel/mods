@@ -1,0 +1,11 @@
+{
+  "name": "angelsaddons-mobility-graphics-smelting",
+  "version": "2.0.0",
+  "factorio_version": "2.0",
+  "title": "Angel's Addons - Mass Transit - Smelting Graphics",
+  "author": "Arch666Angel",
+  "contact": "https://discord.gg/ff5p6KE",
+  "homepage": "https://forums.factorio.com/viewforum.php?f=185",
+  "description": "Smelting-themed train sprites for Mass Transit.",
+  "dependencies": []
+}

@@ -1,4 +1,53 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 04.06.2026
+  Changes:
+    - Removed Metallurgic science pack as a prerequisite for Bob's Tungsten Processing technology (1303)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 01.06.2026
+  Changes:
+    - Added migration for Cobalt steel gears, bearings, and bearing balls (1294)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 01.06.2026
+  Changes:
+    - Removed solder mixture. You may need to reset your molten solder induction furnace recipes, sorry! (1241)
+  Bugfixes:
+    - Fixed Bob's Module Boards Ingredients (1253)
+    - Fixed Used coolant being affected by productivity in Glass fiber 2 recipe (1281)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 18.01.26
+  Bugfixes:
+    - Fixed missing prerequisites (1242)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Bugfixes:
+    - Enabled early glass for Bob's Greenhouse (1224)
+    - Fixed handcrafting trying to use the wrong recipe for wires (1225)
+    - Allowed Bronze and Brass smelting recipes to be selected as signals (with Bob's MCI mod) (1234)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Changes:
+    - Moved ingot powder receipes to powderizer machines (852)
+    - Added minimum machine tier to powderizer recipes (852)
+    - Removed references to normal / expensive recipes (945)
+    - Rebalance Tungsten Smelting Recipes (980)
+    - Adjusted the recipes for Bob's Assembling Machines (985)
+    - Moved Cement Processing techs up a science pack tier so Clay Bricks are not available so early in the game (991)
+    - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
+    - Added some trigger techs to divide up the research tree (1165)
+    - Update recipes for components from Bob's Electronics mod to use Angel's wires (1197)
+    - Rebalance recipes: Glass mixture, Cement mixture (1198)
+    - Rebalance Bob's recipes: Silicon nitride, Silicon carbide, Tungsten carbide, Copper tungsted (1198)
+  Bugfixes:
+    - Fixed coolant production graphs (1000)
+    - Moved Cobalt Oxide 1 recipe from Ore processor to Chemical furnace (1006)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.23
 Date: 21.02.2024
   Changes:

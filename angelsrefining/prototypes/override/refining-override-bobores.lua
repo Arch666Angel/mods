@@ -6,10 +6,7 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 if mods["bobores"] then
   OV.disable_recipe({
-    "lithia-water", -- lithia water
+    "bob-lithia-water", -- lithia water
   })
-  if mods["bobplates"] then
-  else
-    angelsmods.functions.add_flag("lithia-water", "hidden")
-  end
+  angelsmods.functions.hide("bob-lithia-water")
 end

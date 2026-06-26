@@ -21,8 +21,8 @@ data:extend({
     starting_status = "locked",
     dependencies = nil,
     trigger = {
-      type = "time-elapsed",
-      ticks = 10 * 60,
+      type = "research",
+      technology = "angels-basic-chemistry",
     },
 
     --simulation = require "prototypes.tips-and-tricks.1-petrochem.1-petrochem-simulation",

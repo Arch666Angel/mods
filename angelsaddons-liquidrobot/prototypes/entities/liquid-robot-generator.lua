@@ -6,7 +6,7 @@ function make_fluid_robot()
     local fluid_per_bot = 5000
 
     if angelsmods and angelsmods.industry then
-      bot_category = "barreling-pump"
+      bot_category = "angels-barreling-pump"
     else
       bot_category = "crafting-with-fluid"
     end
@@ -223,7 +223,7 @@ function make_fluid_robot()
 
     local fill_recipe = {
       type = "recipe",
-      name = "fill-" .. bot_name,
+      name = bot_name,
       localised_name = { "recipe-name.fill-barrel", { "fluid-name." .. fluid.name } },
       category = bot_category,
       energy_required = 1,
@@ -243,7 +243,7 @@ function make_fluid_robot()
       allow_decomposition = false,
     }
     table.insert(result, fill_recipe)
-    table.insert(data.raw.technology["liquid-robots"].effects, { type = "unlock-recipe", recipe = "fill-" .. bot_name })
+    table.insert(data.raw.technology["liquid-robots"].effects, { type = "unlock-recipe", recipe = bot_name })
 
     local empty_recipe = {
       type = "recipe",

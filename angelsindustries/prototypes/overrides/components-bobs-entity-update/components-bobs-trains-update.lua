@@ -72,7 +72,7 @@ if angelsmods.industries.components then
         { "angels-servo-motor-2", 15 },
         { "circuit-green-loaded", 5 },
         { "mechanical-parts", 5 },
-        { "storage-tank-2", 1 },
+        { "bob-storage-tank-2", 1 },
         { "fluid-wagon", 1 },
       }),
       swap_ingredients("bob-fluid-wagon-3", {
@@ -81,7 +81,7 @@ if angelsmods.industries.components then
         { "angels-servo-motor-4", 15 },
         { "circuit-blue-loaded", 5 },
         { "mechanical-parts", 5 },
-        { "storage-tank-4", 1 },
+        { "bob-storage-tank-4", 1 },
         { "bob-fluid-wagon-2", 1 },
       }),
       swap_ingredients("bob-armoured-fluid-wagon", {
@@ -90,7 +90,7 @@ if angelsmods.industries.components then
         { "angels-servo-motor-3", 15 },
         { "circuit-orange-loaded", 5 },
         { "mechanical-parts", 5 },
-        { "storage-tank-3", 1 },
+        { "bob-storage-tank-3", 1 },
         { "fluid-wagon", 1 },
       }),
       swap_ingredients("bob-armoured-fluid-wagon-2", {
@@ -105,12 +105,12 @@ if angelsmods.industries.components then
     })
     if angelsmods.industries.tech then
     else
-      OV.remove_prereq("bob-railway-2", "advanced-electronics")
+      OV.remove_prereq("bob-railway-2", "advanced-circuit")
       OV.add_prereq("bob-railway-2", "angels-components-mechanical-2")
       OV.add_prereq("bob-railway-2", "tech-green-circuit")
       OV.add_prereq("bob-railway-3", "angels-components-mechanical-4")
       OV.add_prereq("bob-railway-3", "tech-blue-circuit")
-      OV.remove_prereq("bob-armoured-railway-2", "advanced-logistic-science-pack")
+      OV.remove_prereq("bob-armoured-railway-2", "bob-advanced-logistic-science-pack")
       OV.add_prereq("bob-armoured-railway", "angels-components-mechanical-3")
       OV.add_prereq("bob-armoured-railway", "tech-orange-circuit")
       OV.add_prereq("bob-armoured-railway-2", "angels-components-mechanical-5")

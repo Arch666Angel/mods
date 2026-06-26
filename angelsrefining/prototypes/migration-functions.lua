@@ -18,10 +18,32 @@ function angelsmods.migration.replace_recipes(entities_to_check, recipe_replacem
   end
 end
 
-function angelsmods.migration.replace_signals(entities_to_check, signals_to_replace, signal_type)
+local function find_and_replace(init_table, replacement_table)
+  for name, value in pairs(init_table) do
+    if type(value) == "table" then
+      find_and_replace(init_table[name], replacement_table)
+    else
+      if replacement_table[value] then
+        init_table[name] = replacement_table[value]
+      end
+    end
+  end
+end
+
+local function replace_control_behavior(name, controlBehavior, signals_to_replace)
+  local to_change = controlBehavior[name]
+
+  if not to_change then
+    return
+  end
+
+  find_and_replace(to_change, signals_to_replace)
+  controlBehavior[name] = to_change
+end
+
+function angelsmods.migration.replace_signals(entities_to_check, signals_to_replace)
   -- signals_to_replace is a table where the keys are the old signals, and
-  -- the values are the new signals. signal_type is optional, defaults to item
-  signal_type = signal_type or "item"
+  -- the values are the new signals.
   signals_to_replace = signals_to_replace or {}
 
   for _, entity in pairs(entities_to_check or {}) do
@@ -38,28 +60,11 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.wall
         or controlBehavior.type == defines.control_behavior.type.mining_drill
         or controlBehavior.type == defines.control_behavior.type.programmable_speaker
+        or controlBehavior.type == defines.control_behavior.type.loader
+        or controlBehavior.type == defines.control_behavior.type.pump
+        or controlBehavior.type == defines.control_behavior.type.turret
       then
-        local oldCondition = controlBehavior.circuit_condition.condition
-        controlBehavior.circuit_condition = oldCondition
-            and {
-              condition = {
-                comparator = oldCondition.comparator,
-                first_signal = oldCondition.first_signal and {
-                  type = oldCondition.first_signal.type,
-                  name = oldCondition.first_signal.type == signal_type
-                      and signals_to_replace[oldCondition.first_signal.name or "none"]
-                    or oldCondition.first_signal.name,
-                } or nil,
-                second_signal = oldCondition.second_signal and {
-                  type = oldCondition.second_signal.type,
-                  name = oldCondition.second_signal.type == signal_type
-                      and signals_to_replace[oldCondition.second_signal.name or "none"]
-                    or oldCondition.second_signal.name,
-                } or nil,
-                constant = oldCondition.constant,
-              },
-            }
-          or nil
+        replace_control_behavior("circuit_condition", controlBehavior, signals_to_replace)
       end
 
       -- logistic condition
@@ -70,176 +75,51 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.train_stop
         or controlBehavior.type == defines.control_behavior.type.transport_belt
         or controlBehavior.type == defines.control_behavior.type.mining_drill
+        or controlBehavior.type == defines.control_behavior.type.loader
+        or controlBehavior.type == defines.control_behavior.type.pump
+        or controlBehavior.type == defines.control_behavior.type.turret
       then
-        local oldCondition = controlBehavior.logistic_condition.condition
-        controlBehavior.logistic_condition = oldCondition
-            and {
-              condition = {
-                comparator = oldCondition.comparator,
-                first_signal = oldCondition.first_signal and {
-                  type = oldCondition.first_signal.type,
-                  name = oldCondition.first_signal.type == signal_type
-                      and signals_to_replace[oldCondition.first_signal.name or "none"]
-                    or oldCondition.first_signal.name,
-                } or nil,
-                second_signal = oldCondition.second_signal and {
-                  type = oldCondition.second_signal.type,
-                  name = oldCondition.second_signal.type == signal_type
-                      and signals_to_replace[oldCondition.second_signal.name or "none"]
-                    or oldCondition.second_signal.name,
-                } or nil,
-                constant = oldCondition.constant,
-              },
-            }
-          or nil
+        replace_control_behavior("logistic_condition", controlBehavior, signals_to_replace)
       end
 
       -- stack control signal
       if controlBehavior.type == defines.control_behavior.type.inserter then
-        local oldSignalID = controlBehavior.circuit_stack_control_signal
-        controlBehavior.circuit_stack_control_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("circuit_stack_control_signal", controlBehavior, signals_to_replace)
       end
 
       -- roboport stuffs
       if controlBehavior.type == defines.control_behavior.type.roboport then
-        local oldSignalID = controlBehavior.available_logistic_output_signal
-        controlBehavior.available_logistic_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
-
-        oldSignalID = controlBehavior.total_logistic_output_signal
-        controlBehavior.total_logistic_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
-
-        oldSignalID = controlBehavior.available_construction_output_signal
-        controlBehavior.available_construction_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
-
-        oldSignalID = controlBehavior.total_construction_output_signal
-        controlBehavior.total_construction_output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("available_logistic_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("total_logistic_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("available_construction_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("total_construction_output_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("roboport_count_output_signal", controlBehavior, signals_to_replace)
       end
 
-      -- stopped train signal
+      -- train stop signal
       if controlBehavior.type == defines.control_behavior.type.train_stop then
-        local oldSignalID = controlBehavior.stopped_train_signal
-        controlBehavior.stopped_train_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("stopped_train_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("trains_count_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("trains_limit_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("priority_signal", controlBehavior, signals_to_replace)
       end
 
-      -- decider combinator parameters
-      if controlBehavior.type == defines.control_behavior.type.decider_combinator then
-        local oldParams = controlBehavior.parameters.parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
-        local newParams = oldParams
-            and {
-              first_signal = oldParams.first_signal and {
-                type = oldParams.first_signal.type,
-                name = oldParams.first_signal.type == signal_type
-                    and signals_to_replace[oldParams.first_signal.name or "none"]
-                  or oldParams.first_signal.name,
-              } or nil,
-              second_signal = oldParams.second_signal and {
-                type = oldParams.second_signal.type,
-                name = oldParams.second_signal.type == signal_type
-                    and signals_to_replace[oldParams.second_signal.name or "none"]
-                  or oldParams.second_signal.name,
-              } or nil,
-              constant = oldParams.constant,
-              comparator = oldParams.comparator,
-              output_signal = oldParams.output_signal and {
-                type = oldParams.output_signal.type,
-                name = oldParams.output_signal.type == signal_type
-                    and signals_to_replace[oldParams.output_signal.name or "none"]
-                  or oldParams.output_signal.name,
-              } or nil,
-              copy_count_from_input = oldParams.copy_count_from_input,
-            }
-          or nil
-        controlBehavior.parameters = controlBehavior.parameters.parameters and { parameters = newParams } or newParams
-      end
-
-      -- arithmetic combinator parameters
-      if controlBehavior.type == defines.control_behavior.type.arithmetic_combinator then
-        local oldParams = controlBehavior.parameters.parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
-        local newParams = oldParams
-            and {
-              first_signal = oldParams.first_signal and {
-                type = oldParams.first_signal.type,
-                name = oldParams.first_signal.type == signal_type
-                    and signals_to_replace[oldParams.first_signal.name or "none"]
-                  or oldParams.first_signal.name,
-              } or nil,
-              second_signal = oldParams.second_signal and {
-                type = oldParams.second_signal.type,
-                name = oldParams.second_signal.type == signal_type
-                    and signals_to_replace[oldParams.second_signal.name or "none"]
-                  or oldParams.second_signal.name,
-              } or nil,
-              first_constant = oldParams.first_constant,
-              second_constant = oldParams.second_constant,
-              operation = oldParams.operation,
-              output_signal = oldParams.output_signal and {
-                type = oldParams.output_signal.type,
-                name = oldParams.output_signal.type == signal_type
-                    and signals_to_replace[oldParams.output_signal.name or "none"]
-                  or oldParams.output_signal.name,
-              } or { type = signal_type },
-            }
-          or nil
-        controlBehavior.parameters = controlBehavior.parameters.parameters and { parameters = newParams } or newParams
+      -- combinator parameters
+      if
+        controlBehavior.type == defines.control_behavior.type.decider_combinator
+        or controlBehavior.type == defines.control_behavior.type.arithmetic_combinator
+        or controlBehavior.type == defines.control_behavior.type.selector_combinator
+      then
+        replace_control_behavior("parameters", controlBehavior, signals_to_replace)
       end
 
       -- constant combinator parameters
       if controlBehavior.type == defines.control_behavior.type.constant_combinator then
-        local oldParams = (controlBehavior.parameters or {}).parameters or controlBehavior.parameters -- the double parameters seems like a bug in the game, or in the api
-        local newParams = {}
-        for signalIndex, oldSignal in pairs(oldParams or {}) do
-          newParams[signalIndex] = {
-            signal = oldSignal.signal
-                and {
-                  type = oldSignal.signal.type,
-                  name = oldSignal.signal.type == signal_type and signals_to_replace[oldSignal.signal.name or "none"]
-                    or oldSignal.signal.name,
-                }
-              or { type = signal_type },
-            count = oldSignal.count,
-            index = oldSignal.index,
-          }
+        for idx, _ in ipairs(controlBehavior.sections) do
+          local filters = controlBehavior.sections[idx].filters
+          find_and_replace(filters, signals_to_replace)
+          controlBehavior.sections[idx].filters = filters
         end
-        controlBehavior.parameters = controlBehavior.parameters
-            and controlBehavior.parameters.parameters
-            and { parameters = newParams }
-          or newParams
       end
 
       -- output signal
@@ -247,14 +127,7 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         controlBehavior.type == defines.control_behavior.type.accumulator
         or controlBehavior.type == defines.control_behavior.type.wall
       then
-        local oldSignalID = controlBehavior.output_signal
-        controlBehavior.output_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("output_signal", controlBehavior, signals_to_replace)
       end
 
       -- rail signal colors
@@ -262,44 +135,32 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         controlBehavior.type == defines.control_behavior.type.rail_signal
         or controlBehavior.type == defines.control_behavior.type.rail_chain_signal
       then
-        local oldSignalID = controlBehavior.red_signal
-        controlBehavior.red_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
-
-        oldSignalID = controlBehavior.orange_signal
-        controlBehavior.orange_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
-
-        oldSignalID = controlBehavior.green_signal
-        controlBehavior.green_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("red_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("green_signal", controlBehavior, signals_to_replace)
+        replace_control_behavior("orange_signal", controlBehavior, signals_to_replace)
       end
 
       -- chain signal
       if controlBehavior.type == defines.control_behavior.type.rail_chain_signal then
-        local oldSignalID = controlBehavior.blue_signal
-        controlBehavior.blue_signal = oldSignalID
-            and {
-              type = oldSignalID.type,
-              name = oldSignalID.type == signal_type and signals_to_replace[oldSignalID.name or "none"]
-                or oldSignalID.name,
-            }
-          or { type = signal_type }
+        replace_control_behavior("blue_signal", controlBehavior, signals_to_replace)
+      end
+
+      -- reactor
+      if controlBehavior.type == defines.control_behavior.type.reactor then
+        replace_control_behavior("temperature_signal", controlBehavior, signals_to_replace)
+      end
+
+      -- splitter
+      if controlBehavior.type == defines.control_behavior.type.splitter then
+        replace_control_behavior("input_left_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("input_right_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("output_left_condition", controlBehavior, signals_to_replace)
+        replace_control_behavior("output_right_condition", controlBehavior, signals_to_replace)
+      end
+
+      -- turret
+      if controlBehavior.type == defines.control_behavior.type.turret then
+        replace_control_behavior("ignore_unlisted_targets_condition", controlBehavior, signals_to_replace)
       end
     end
   end
@@ -318,12 +179,12 @@ function angelsmods.migration.replace_inventory_content(entities_to_check, items
   end
 
   for _, entity in pairs(entities_to_check) do
-    for inventoryType = 1, maxInventoryType do
+    for _, inventoryType in pairs(defines.inventory) do
       local inventory = entity.get_inventory(inventoryType)
       if inventory and inventory.valid then
         for oldItemName, newItemName in pairs(items_to_replace) do
-          local itemCount = game.item_prototypes[oldItemName]
-              and game.item_prototypes[newItemName]
+          local itemCount = prototypes.item[oldItemName]
+              and prototypes.item[newItemName]
               and inventory.get_item_count(oldItemName)
             or 0
           if itemCount > 0 then
@@ -352,7 +213,7 @@ function angelsmods.migration.replace_inserter_content(entities_to_check, items_
         if
           inserterStack.count > 0
           and items_to_replace[inserterStack.name or "none"]
-          and game.item_prototypes[items_to_replace[inserterStack.name]]
+          and prototypes.item[items_to_replace[inserterStack.name]]
         then
           inserterStack.set_stack({
             name = items_to_replace[inserterStack.name],
@@ -376,8 +237,8 @@ function angelsmods.migration.replace_belt_content(entities_to_check, items_to_r
         local transportLine = entity.get_transport_line(lineIndex)
         if transportLine and transportLine.valid then
           for oldItem, newItem in pairs(items_to_replace) do
-            local itemCount = game.item_prototypes[oldItem]
-                and game.item_prototypes[newItem]
+            local itemCount = prototypes.item[oldItem]
+                and prototypes.item[newItem]
                 and transportLine.get_item_count(oldItem)
               or 0
             if itemCount > 0 then
@@ -404,9 +265,9 @@ function angelsmods.migration.replace_entity(entities_to_check, items_to_replace
 
   for _, entity in pairs(entities_to_check) do
     for oldItem, newItem in pairs(items_to_replace) do
-      local oldItemPrototype = game.item_prototypes[oldItem]
+      local oldItemPrototype = prototypes.item[oldItem]
       local oldEntityPrototype = oldItemPrototype and oldItemPrototype.place_result or nil
-      local newItemPrototype = game.item_prototypes[newItem]
+      local newItemPrototype = prototypes.item[newItem]
       local newEntityPrototype = newItemPrototype and newItemPrototype.place_result or nil
       if
         oldEntityPrototype
@@ -427,6 +288,23 @@ function angelsmods.migration.replace_entity(entities_to_check, items_to_replace
   end
 end
 
+function angelsmods.migration.replace_currently_burning(entities_to_check, items_to_replace)
+  -- items_to_replace is a table where the keys are the old item, and
+  -- the values are the new item.
+  items_to_replace = items_to_replace or {}
+
+  for _, entity in pairs(entities_to_check) do
+    if entity.burner and entity.burner.currently_burning then
+      local burner = entity.burner
+      for oldItemName, newItemName in pairs(items_to_replace) do
+        if burner.currently_burning.name.name == oldItemName then
+          burner.currently_burning = newItemName
+        end
+      end
+    end
+  end
+end
+
 function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   -- items_to_replace is a table where the keys are the old item, and
   -- the values are the new item.
@@ -435,6 +313,9 @@ function angelsmods.migration.replace_item(entities_to_check, items_to_replace)
   angelsmods.migration.replace_inserter_content(entities_to_check, items_to_replace)
   angelsmods.migration.replace_signals(entities_to_check, items_to_replace)
   angelsmods.migration.replace_entity(entities_to_check, items_to_replace)
+  angelsmods.migration.replace_currently_burning(entities_to_check, items_to_replace)
+  angelsmods.migration.replace_logistics_slot(entities_to_check, items_to_replace)
+  angelsmods.migration.replace_filter(entities_to_check, items_to_replace)
 end
 
 function angelsmods.migration.replace_quick_bar_slot(items_to_replace)
@@ -456,29 +337,98 @@ function angelsmods.migration.replace_quick_bar_slot(items_to_replace)
   end
 end
 
-function angelsmods.migration.clear_logistics_slot(items_to_clear)
-  -- items_to_clear is a table of item names
-
-  items_to_clear = items_to_clear or {}
-
-  for _, player in pairs(game.players) do
-    if player.character ~= nil then
-      -- find used slots
-      local slots = {}
-      for i = 1, player.character.request_slot_count do
-        local slot = player.get_personal_logistic_slot(i)
-        if slot and slot.name then
-          slots[slot.name] = slots[slot.name] or {}
-          table.insert(slots[slot.name], i)
+function angelsmods.migration.replace_logistics_slot(entities_to_check, items_to_replace)
+  -- items_to_replace is a table where the keys are the old item, and
+  -- the values are the new item.
+  items_to_replace = items_to_replace or {}
+  for _, entity in pairs(entities_to_check) do
+    -- find used slots
+    local point = entity.get_requester_point()
+    if point then
+      for old_item, new_item in pairs(items_to_replace) do
+        for _, section in pairs(point.sections) do
+          if section.is_manual then
+            for i = 1, 100 do
+              local slot = section.get_slot(i)
+              if slot.value then
+                if slot.value.name == old_item then
+                  slot.value.name = new_item
+                  local filter_index = section.set_slot(i, slot)
+                end
+              end
+            end
+          end
         end
       end
+    end
+  end
+end
 
-      -- clear old slots
-      for _, item_name in pairs(items_to_clear) do
-        local oldSlots = slots[item_name]
-        if oldSlots then
-          for name, i in pairs(oldSlots) do
-            player.clear_personal_logistic_slot(i)
+function angelsmods.migration.replace_filter(entities_to_check, items_to_replace)
+  -- items_to_replace is a table where the keys are the old item, and
+  -- the values are the new item.
+
+  local types_to_check = {
+    ["asteroid-collector"] = true,
+    ["inserter"] = true,
+    ["loader"] = true,
+    ["loader-1x1"] = true,
+    ["mining-drill"] = true,
+  }
+
+  items_to_replace = items_to_replace or {}
+  for _, entity in pairs(entities_to_check) do
+    if types_to_check[entity.type] then
+      -- find used slots
+      for i = 1, entity.filter_slot_count do
+        local filter = entity.get_filter(i)
+        if filter then
+          for old_item, new_item in pairs(items_to_replace) do
+            if filter.name == old_item then
+              entity.set_filter(i, new_item)
+            end
+          end
+        end
+      end
+    elseif entity.type == "splitter" then
+      local filter = entity.splitter_filter
+      if filter then
+        for old_item, new_item in pairs(items_to_replace) do
+          if filter.name == old_item then
+            entity.splitter_filter = new_item
+          end
+        end
+      end
+    elseif entity.type == "logistic-container" and entity.prototype.logistic_mode == "storage" then
+      local filter = entity.storage_filter
+      if filter then
+        for old_item, new_item in pairs(items_to_replace) do
+          if filter.name.name == old_item then
+            entity.storage_filter = new_item
+          end
+        end
+      end
+    end
+
+    -- inventory slot filter
+    for _, inventory_index in pairs({
+      defines.inventory.car_trunk,
+      defines.inventory.cargo_wagon,
+      defines.inventory.character_main,
+      defines.inventory.editor_main,
+      defines.inventory.god_main,
+      defines.inventory.spider_trunk,
+    }) do
+      local inventory = entity.get_inventory(inventory_index)
+      if inventory and inventory.is_filtered() then
+        for i = 1, #inventory do
+          local filter = inventory.get_filter(i)
+          if filter then
+            for old_item, new_item in pairs(items_to_replace) do
+              if filter.name == old_item then
+                inventory.set_filter(i, new_item)
+              end
+            end
           end
         end
       end

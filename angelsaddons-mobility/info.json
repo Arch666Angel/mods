@@ -1,15 +1,17 @@
 {
   "name": "angelsaddons-mobility",
-  "version": "0.0.11",
-  "factorio_version": "1.1",
+  "version": "2.0.1",
+  "factorio_version": "2.0",
   "title": "Angel's Addons - Mass Transit",
-  "author": "Arch666Angel, lovely_santa",
+  "author": "Arch666Angel, lovely_santa, Kirazy",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
-  "description": "A combination mod of the various themed trains.",
+  "description": "Add multiple tiers of trains across three different themes.",
   "dependencies": [
-    "base >= 1.1.33",
-    "(?) angelsrefining >= 0.11.20",
-    "? angelsindustries >= 0.4.9"
+    "base >= 2.0.0",
+    "angelsaddons-mobility-graphics-crawler >= 2.0.0",
+    "angelsaddons-mobility-graphics-petro >= 2.0.0",
+    "angelsaddons-mobility-graphics-smelting >= 2.0.0",
+    "(?) angelsrefining >= 2.0.0"
   ]
 }

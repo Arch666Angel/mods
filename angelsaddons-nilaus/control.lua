@@ -53,9 +53,9 @@ function execute_event_part1()
     and player.connected
     and player.character
     and player.character.valid -- nilaus is ingame and alive!
-    and game.item_prototypes["solid-paper"] -- TP enabled
-    and player.get_item_count("solid-paper") < 1000 -- running low
-    and player.can_insert({ name = "solid-paper" }) -- can insert TP as he is running low
+    and game.item_prototypes["angels-solid-paper"] -- TP enabled
+    and player.get_item_count("angels-solid-paper") < 1000 -- running low
+    and player.can_insert({ name = "angels-solid-paper" }) -- can insert TP as he is running low
     and global.event_unit == -1
     and global.event_part < 1
   then -- event not in progress
@@ -105,7 +105,7 @@ function execute_event_part2()
       text = { "compilatron-message.nilaus-paper" },
       lifetime = 60 * 9,
     })
-    player.insert({ name = "solid-paper", amount = 1 })
+    player.insert({ name = "angels-solid-paper", amount = 1 })
   else
     global.event_entity.set_command({
       type = defines.command.stop,

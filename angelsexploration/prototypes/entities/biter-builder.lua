@@ -1,69 +1,39 @@
 require("util")
 
-local noise = require("noise")
-
-local tne = noise.to_noise_expression
-local litexp = noise.literal_expression
-
-local onehalf_exp = tne(1) / 2
-local onethird_exp = tne(1) / 3
-
-local enemy_random_seed = 1
-local function new_random_seed()
-  enemy_random_seed = enemy_random_seed + 1
-  return enemy_random_seed
-end
-
 local control_name = "enemy-base"
 
 -- autoplace
 local function enemy_autoplace(params)
-  local distance_factor = params.distance_factor or 1
-  local order = params.order or "b[enemy]-misc"
-  local is_turret = params.is_turret or false
-
-  local distance_unit = 312
-  local distance_outside_starting_area = noise.var("distance") - noise.var("starting_area_radius")
-
-  -- Units with a higher distance_factor will appear farther out by one
-  -- distance_unit per distance_factor
-  local distance_height_multiplier =
-    noise.max(0, 1 + (distance_outside_starting_area - distance_unit * distance_factor) * 0.002 * distance_factor)
-
-  local probability_expression = noise.var("enemy_base_probability") * distance_height_multiplier
-  -- limit probability so that it never quite reaches 1,
-  -- because that would result in stupid-looking squares of biter bases:
-  probability_expression = noise.min(probability_expression, 0.25 + distance_factor * 0.05)
-  -- Add randomness to the probability so that there's a little bit of a gradient
-  -- between different units:
-  probability_expression = noise.random_penalty(probability_expression, 0.1, {
-    x = noise.var("x") + new_random_seed(), -- Include distance_factor in random seed!
-  })
-  -- log("Probability expression for " .. params.order .. "#" .. distance_factor .. ":")
-  -- log(tostring(expression_to_ascii_math(probability_expression)))
-  local richness_expression = tne(1)
-
   return {
-    control = control_name,
-    order = order,
+    control = params.control or control_name,
+    order = params.order or "b[enemy]-misc",
     force = "enemy",
-    probability_expression = probability_expression,
-    richness_expression = richness_expression,
+    probability_expression = params.probability_expression,
+    richness_expression = 1,
   }
 end
-local function enemy_spawner_autoplace(distance)
+
+local function enemy_spawner_autoplace(probability_expression)
   return enemy_autoplace({
-    distance_factor = distance,
+    probability_expression = probability_expression,
     order = "b[enemy]-a[spawner]",
   })
 end
-local function enemy_worm_autoplace(distance)
+
+local function enemy_worm_autoplace(probability_expression)
   return enemy_autoplace({
-    distance_factor = distance,
+    probability_expression = probability_expression,
     order = "b[enemy]-b[worm]",
-    is_turret = true,
   })
 end
+
+-- return
+-- {
+--   control_name = control_name,
+--   enemy_autoplace = enemy_autoplace,
+--   enemy_spawner_autoplace = enemy_spawner_autoplace,
+--   enemy_worm_autoplace = enemy_worm_autoplace
+-- }
 
 -- animation
 local function make_die_animation(data_die)
@@ -80,22 +50,22 @@ local function make_die_animation(data_die)
           scale = data_die.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -113,12 +83,12 @@ local function make_die_animation(data_die)
           tint = data_die.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -136,12 +106,12 @@ local function make_die_animation(data_die)
           tint = data_die.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -173,22 +143,22 @@ local function make_run_animation(data_run)
           scale = data_run.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -206,12 +176,12 @@ local function make_run_animation(data_run)
           tint = data_run.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -229,12 +199,12 @@ local function make_run_animation(data_run)
           tint = data_run.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -266,22 +236,22 @@ local function make_attack_animation(data_attack)
           scale = data_attack.scale,
           stripes = {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-1.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-2.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-3.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-3.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-run-4.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-run-4.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -299,12 +269,12 @@ local function make_attack_animation(data_attack)
           tint = data_attack.tint1,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-mask-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-mask-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -322,12 +292,12 @@ local function make_attack_animation(data_attack)
           tint = data_attack.tint2,
           stripes = util.multiplystripes(16, {
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-1.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-1.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
             {
-              filename = "__angelsexploration__/graphics/entity/scarab/scarab-fur-2.png",
+              filename = "__angelsexplorationgraphics__/graphics/entity/scarab/scarab-fur-2.png",
               width_in_frames = 1,
               height_in_frames = 8,
             },
@@ -540,10 +510,10 @@ end
 local function make_icon(ico_app)
   return {
     {
-      icon = "__angelsexploration__/graphics/icons/" .. ico_app.type .. "-base.png",
+      icon = "__angelsexplorationgraphics__/graphics/icons/" .. ico_app.type .. "-base.png",
     },
     {
-      icon = "__angelsexploration__/graphics/icons/" .. ico_app.type .. "-overlay.png",
+      icon = "__angelsexplorationgraphics__/graphics/icons/" .. ico_app.type .. "-overlay.png",
       tint = ico_app.tint1,
     },
   }
@@ -664,113 +634,93 @@ local function make_projectile_beam(pro_app, pro_dmg)
         },
       },
     },
-    start = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
-      line_length = 4,
-      width = 52,
-      height = 40,
-      frame_count = 16,
-      axially_symmetrical = false,
-      direction_count = 1,
-      shift = { -0.03125, 0 },
-      hr_version = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-START.png",
-        line_length = 4,
-        width = 94,
-        height = 66,
-        frame_count = 16,
-        axially_symmetrical = false,
-        direction_count = 1,
-        shift = { 0.53125, 0 },
-        scale = 0.5,
-      },
-    },
-    ending = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
-      line_length = 4,
-      width = 49,
-      height = 54,
-      frame_count = 16,
-      axially_symmetrical = false,
-      direction_count = 1,
-      shift = { -0.046875, 0 },
-      hr_version = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-END.png",
-        line_length = 4,
-        width = 91,
-        height = 93,
-        frame_count = 16,
-        axially_symmetrical = false,
-        direction_count = 1,
-        shift = { -0.078125, -0.046875 },
-        scale = 0.5,
-      },
-    },
-    head = {
-      filename = "__base__/graphics/entity/beam/beam-head.png",
-      line_length = 16,
-      width = 45,
-      height = 39,
-      frame_count = 16,
-      animation_speed = 0.5,
-      blend_mode = "additive-soft",
-    },
-    tail = {
-      filename = "__base__/graphics/entity/beam/beam-tail.png",
-      line_length = 16,
-      width = 45,
-      height = 39,
-      frame_count = 16,
-      blend_mode = "additive-soft",
-    },
-    body = {
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-1.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-2.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-3.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-4.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-5.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-6.png",
-        line_length = 16,
-        width = 45,
-        height = 39,
-        frame_count = 16,
-        blend_mode = "additive-soft",
+    graphics_set = {
+      beam = {
+        start = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
+          line_length = 4,
+          width = 94,
+          height = 66,
+          frame_count = 16,
+          shift = { 0.53125, 0 },
+          scale = 0.5,
+        },
+        ending = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
+          line_length = 4,
+          width = 91,
+          height = 93,
+          frame_count = 16,
+          shift = { -0.078125, -0.046875 },
+          scale = 0.5,
+        },
+        head = {
+          filename = "__base__/graphics/entity/beam/beam-head.png",
+          line_length = 16,
+          width = 45,
+          height = 39,
+          frame_count = 16,
+          animation_speed = 0.5,
+          blend_mode = "additive-soft",
+        },
+        tail = {
+          filename = "__base__/graphics/entity/beam/beam-tail.png",
+          line_length = 16,
+          width = 45,
+          height = 39,
+          frame_count = 16,
+          blend_mode = "additive-soft",
+        },
+        body = {
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-1.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-2.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-3.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-4.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-5.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-6.png",
+            line_length = 16,
+            width = 45,
+            height = 39,
+            frame_count = 16,
+            blend_mode = "additive-soft",
+          },
+        },
       },
     },
     working_sound = {
@@ -822,26 +772,14 @@ local function make_projectile_stream(pro_app, pro_dmg)
     animation = {
       filename = "__base__/graphics/entity/acid-sticker/acid-sticker.png",
       draw_as_glow = true,
-      priority = "extra-high",
       line_length = 5,
-      width = 16,
-      height = 18,
+      width = 30,
+      height = 34,
       frame_count = 50,
       animation_speed = 0.5,
       tint = pro_dmg.tint3,
-      shift = util.by_pixel(2, 0),
-      hr_version = {
-        filename = "__base__/graphics/entity/acid-sticker/hr-acid-sticker.png",
-        draw_as_glow = true,
-        line_length = 5,
-        width = 30,
-        height = 34,
-        frame_count = 50,
-        animation_speed = 0.5,
-        tint = pro_dmg.tint3,
-        shift = util.by_pixel(1.5, 0),
-        scale = 0.5,
-      },
+      shift = util.by_pixel(1.5, 0),
+      scale = 0.5,
     },
     duration_in_ticks = pro_dmg.slow_seconds * 60,
     target_movement_modifier_from = get_slow_down(pro_app),
@@ -860,7 +798,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
   local splash_fire_ground_patch_scale = 0.65
   local splash_fire = {
     type = "fire",
-    name = "acid-splash-fire-" .. pro_app.type .. "-" .. pro_app.name,
+    name = "angels-acid-splash-fire-" .. pro_app.type .. "-" .. pro_app.name,
     localised_name = { "entity-name.acid-splash" },
     flags = { "placeable-off-grid", "not-on-map" },
     damage_per_tick = { amount = 0 / 60, type = "acid" },
@@ -886,7 +824,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
     --flame_alpha = 0.35,
     --flame_alpha_deviation = 0.05,
 
-    emissions_per_second = 0,
+    emissions_per_second = { pollution = 0.001 },
 
     add_fuel_cooldown = 10,
     fade_in_duration = 1,
@@ -930,47 +868,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 106,
-            height = 116,
+            width = 210,
+            height = 224,
             frame_count = 26,
-            shift = util.mul_shift(util.by_pixel(-12, -10), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(-12, -8), pro_app.scale),
             tint = pro_dmg.tint2,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-1.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 210,
-              height = 224,
-              frame_count = 26,
-              shift = util.mul_shift(util.by_pixel(-12, -8), pro_app.scale),
-              tint = pro_dmg.tint2,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 134,
-            height = 98,
+            width = 266,
+            height = 188,
             frame_count = 26,
-            shift = util.mul_shift(util.by_pixel(2, 0), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(2, 2), pro_app.scale),
             draw_as_shadow = true,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-1-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 266,
-              height = 188,
-              frame_count = 26,
-              shift = util.mul_shift(util.by_pixel(2, 2), pro_app.scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
         },
       },
@@ -980,47 +893,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 88,
-            height = 76,
+            width = 174,
+            height = 150,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(-10, -18), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(-9, -17), pro_app.scale),
             tint = pro_dmg.tint2,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-2.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 174,
-              height = 150,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(-9, -17), pro_app.scale),
-              tint = pro_dmg.tint2,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 120,
-            height = 136,
+            width = 238,
+            height = 266,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(6, 28), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(6, 29), pro_app.scale),
             draw_as_shadow = true,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-2-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 238,
-              height = 266,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(6, 29), pro_app.scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
         },
       },
@@ -1030,47 +918,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 118,
-            height = 104,
+            width = 236,
+            height = 208,
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), pro_app.scale),
             tint = pro_dmg.tint2,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-3.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 236,
-              height = 208,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(22, -16), pro_app.scale),
-              tint = pro_dmg.tint2,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 110,
-            height = 70,
+            width = 214,
+            height = 140,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(16, 2), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(17, 2), pro_app.scale),
             draw_as_shadow = true,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-3-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 214,
-              height = 140,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(17, 2), pro_app.scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
         },
       },
@@ -1080,47 +943,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 128,
-            height = 80,
+            width = 252,
+            height = 154,
             frame_count = 24,
-            shift = util.mul_shift(util.by_pixel(16, -20), pro_app.scale),
+            shift = util.mul_shift(util.by_pixel(17, -19), pro_app.scale),
             tint = pro_dmg.tint2,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-4.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 252,
-              height = 154,
-              frame_count = 24,
-              shift = util.mul_shift(util.by_pixel(17, -19), pro_app.scale),
-              tint = pro_dmg.tint2,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 124,
-            height = 80,
+            width = 248,
+            height = 160,
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(18, -16), pro_app.scale),
             draw_as_shadow = true,
-            scale = pro_app.scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-4-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 248,
-              height = 160,
-              frame_count = 24,
-              shift = util.mul_shift(util.by_pixel(18, -16), pro_app.scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale,
-            },
+            scale = 0.5 * pro_app.scale,
           },
         },
       },
@@ -1133,47 +971,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 106,
-            height = 116,
+            width = 210,
+            height = 224,
             frame_count = 26,
-            shift = util.mul_shift(util.by_pixel(-12, -10), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(-12, -8), pro_app.scale * splash_fire_ground_patch_scale),
             tint = util.multiply_color(pro_dmg.tint2, 0.7),
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-1.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 210,
-              height = 224,
-              frame_count = 26,
-              shift = util.mul_shift(util.by_pixel(-12, -8), pro_app.scale * splash_fire_ground_patch_scale),
-              tint = util.multiply_color(pro_dmg.tint2, 0.7),
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-1-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 134,
-            height = 98,
+            width = 266,
+            height = 188,
             frame_count = 26,
-            shift = util.mul_shift(util.by_pixel(2, 0), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(2, 2), pro_app.scale * splash_fire_ground_patch_scale),
             draw_as_shadow = true,
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-1-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 266,
-              height = 188,
-              frame_count = 26,
-              shift = util.mul_shift(util.by_pixel(2, 2), pro_app.scale * splash_fire_ground_patch_scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
         },
       },
@@ -1183,47 +996,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 88,
-            height = 76,
+            width = 174,
+            height = 150,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(-10, -18), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(-9, -17), pro_app.scale * splash_fire_ground_patch_scale),
             tint = util.multiply_color(pro_dmg.tint2, 0.7),
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-2.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 174,
-              height = 150,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(-9, -17), pro_app.scale * splash_fire_ground_patch_scale),
-              tint = util.multiply_color(pro_dmg.tint2, 0.7),
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-2-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 120,
-            height = 136,
+            width = 238,
+            height = 266,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(6, 28), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(6, 29), pro_app.scale * splash_fire_ground_patch_scale),
             draw_as_shadow = true,
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-2-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 238,
-              height = 266,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(6, 29), pro_app.scale * splash_fire_ground_patch_scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
         },
       },
@@ -1233,47 +1021,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 118,
-            height = 104,
+            width = 236,
+            height = 208,
             frame_count = 29,
             shift = util.mul_shift(util.by_pixel(22, -16), pro_app.scale * splash_fire_ground_patch_scale),
             tint = util.multiply_color(pro_dmg.tint2, 0.7),
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-3.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 236,
-              height = 208,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(22, -16), pro_app.scale * splash_fire_ground_patch_scale),
-              tint = util.multiply_color(pro_dmg.tint2, 0.7),
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-3-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 110,
-            height = 70,
+            width = 214,
+            height = 140,
             frame_count = 29,
-            shift = util.mul_shift(util.by_pixel(16, 2), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(17, 2), pro_app.scale * splash_fire_ground_patch_scale),
             draw_as_shadow = true,
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-3-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 214,
-              height = 140,
-              frame_count = 29,
-              shift = util.mul_shift(util.by_pixel(17, 2), pro_app.scale * splash_fire_ground_patch_scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
         },
       },
@@ -1283,47 +1046,22 @@ local function make_projectile_stream(pro_app, pro_dmg)
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4.png",
             draw_as_glow = true,
             line_length = 8,
-            direction_count = 1,
-            width = 128,
-            height = 80,
+            width = 252,
+            height = 154,
             frame_count = 24,
-            shift = util.mul_shift(util.by_pixel(16, -20), pro_app.scale * splash_fire_ground_patch_scale),
+            shift = util.mul_shift(util.by_pixel(17, -19), pro_app.scale * splash_fire_ground_patch_scale),
             tint = util.multiply_color(pro_dmg.tint2, 0.7),
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-4.png",
-              draw_as_glow = true,
-              line_length = 8,
-              direction_count = 1,
-              width = 252,
-              height = 154,
-              frame_count = 24,
-              shift = util.mul_shift(util.by_pixel(17, -19), pro_app.scale * splash_fire_ground_patch_scale),
-              tint = util.multiply_color(pro_dmg.tint2, 0.7),
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
           {
             filename = "__base__/graphics/entity/acid-splash/acid-splash-4-shadow.png",
             line_length = 8,
-            direction_count = 1,
-            width = 124,
-            height = 80,
+            width = 248,
+            height = 160,
             frame_count = 24,
             shift = util.mul_shift(util.by_pixel(18, -16), pro_app.scale * splash_fire_ground_patch_scale),
             draw_as_shadow = true,
-            scale = pro_app.scale * splash_fire_ground_patch_scale,
-            hr_version = {
-              filename = "__base__/graphics/entity/acid-splash/hr-acid-splash-4-shadow.png",
-              line_length = 8,
-              direction_count = 1,
-              width = 248,
-              height = 160,
-              frame_count = 24,
-              shift = util.mul_shift(util.by_pixel(18, -16), pro_app.scale * splash_fire_ground_patch_scale),
-              draw_as_shadow = true,
-              scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
-            },
+            scale = 0.5 * pro_app.scale * splash_fire_ground_patch_scale,
           },
         },
       },
@@ -1392,13 +1130,17 @@ local function make_projectile_stream(pro_app, pro_dmg)
             {
               type = "create-fire",
               entity_name = splash_fire.name,
-              tile_collision_mask = { "water-tile" },
+              tile_collision_mask = { layers = {
+                water_tile = true,
+              } },
               show_in_tooltip = true,
             },
             {
               type = "create-entity",
               entity_name = "water-splash",
-              tile_collision_mask = { "ground-tile" },
+              tile_collision_mask = { layers = {
+                ground_tile = true,
+              } },
             },
           },
         },
@@ -1427,77 +1169,39 @@ local function make_projectile_stream(pro_app, pro_dmg)
       filename = "__base__/graphics/entity/acid-projectile/acid-projectile-head.png",
       draw_as_glow = true,
       line_length = 5,
-      width = 22,
-      height = 84,
+      width = 42,
+      height = 164,
       frame_count = 15,
-      shift = util.mul_shift(util.by_pixel(-2, 30), pro_app.scale),
+      shift = util.mul_shift(util.by_pixel(-2, 31), pro_app.scale),
       tint = pro_dmg.tint1,
       priority = "high",
-      scale = pro_app.scale,
+      scale = 0.5 * pro_app.scale,
       animation_speed = 1,
-      hr_version = {
-        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-head.png",
-        draw_as_glow = true,
-        line_length = 5,
-        width = 42,
-        height = 164,
-        frame_count = 15,
-        shift = util.mul_shift(util.by_pixel(-2, 31), pro_app.scale),
-        tint = pro_dmg.tint1,
-        priority = "high",
-        scale = 0.5 * pro_app.scale,
-        animation_speed = 1,
-      },
     },
     spine_animation = {
       filename = "__base__/graphics/entity/acid-projectile/acid-projectile-tail.png",
       draw_as_glow = true,
       line_length = 5,
-      width = 66,
-      height = 12,
+      width = 132,
+      height = 20,
       frame_count = 15,
-      shift = util.mul_shift(util.by_pixel(0, -2), pro_app.scale),
+      shift = util.mul_shift(util.by_pixel(0, -1), pro_app.scale),
       tint = pro_dmg.tint1,
       priority = "high",
-      scale = pro_app.scale,
+      scale = 0.5 * pro_app.scale,
       animation_speed = 1,
-      hr_version = {
-        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-tail.png",
-        draw_as_glow = true,
-        line_length = 5,
-        width = 132,
-        height = 20,
-        frame_count = 15,
-        shift = util.mul_shift(util.by_pixel(0, -1), pro_app.scale),
-        tint = pro_dmg.tint1,
-        priority = "high",
-        scale = 0.5 * pro_app.scale,
-        animation_speed = 1,
-      },
     },
     shadow = {
       filename = "__base__/graphics/entity/acid-projectile/acid-projectile-shadow.png",
       line_length = 15,
-      width = 22,
-      height = 84,
+      width = 42,
+      height = 164,
       frame_count = 15,
-      priority = "high",
-      shift = util.mul_shift(util.by_pixel(-2, 30), pro_app.scale),
+      shift = util.mul_shift(util.by_pixel(-2, 31), pro_app.scale),
       draw_as_shadow = true,
-      scale = pro_app.scale,
+      priority = "high",
+      scale = 0.5 * pro_app.scale,
       animation_speed = 1,
-      hr_version = {
-        filename = "__base__/graphics/entity/acid-projectile/hr-acid-projectile-shadow.png",
-        line_length = 15,
-        width = 42,
-        height = 164,
-        frame_count = 15,
-        shift = util.mul_shift(util.by_pixel(-2, 31), pro_app.scale),
-        draw_as_shadow = true,
-        priority = "high",
-        scale = 0.5 * pro_app.scale,
-        animation_speed = 1,
-      },
     },
 
     oriented_particle = true,
@@ -1525,7 +1229,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.damage_modifier = nil
     data_dmg.warmup = nil
     data_dmg.ammo = {
-      category = "melee",
       target_type = "entity",
       action = {
         type = "direct",
@@ -1555,7 +1258,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.damage_modifier = nil
     data_dmg.warmup = nil
     data_dmg.ammo = {
-      category = "melee",
       target_type = "entity",
       action = {
         type = "direct",
@@ -1577,7 +1279,7 @@ local function make_attack_parameter(data_app, data_dmg)
   end
   if data_app.type == "spitter" then
     data_dmg.type = "stream"
-    data_dmg.ammo_category = "biological"
+    data_dmg.category = "biological"
     data_dmg.cooldown_deviation = 0.15
     data_dmg.min_attack_distance = 10 -- TODO: adapt with range parameter?
     data_dmg.projectile_creation_parameters = make_shoot_shiftings(data_app.scale, data_app.scale * 20)
@@ -1587,7 +1289,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.slow_seconds = 2
     data_dmg.vehicle_friction_modifier = 1.5
     data_dmg.ammo = {
-      category = "biological",
       action = {
         type = "direct",
         action_delivery = {
@@ -1603,7 +1304,6 @@ local function make_attack_parameter(data_app, data_dmg)
     data_dmg.type = "beam"
     data_dmg.category = "electric"
     data_dmg.ammo = {
-      category = "electric",
       action = {
         type = "direct",
         action_delivery = {
@@ -1639,7 +1339,7 @@ local function make_loot(loot_data)
     return nil
   end
 
-  loot_proto = {}
+  local loot_proto = {}
   for _, loot_item in pairs(loot_data) do
     local item_found = false
     if loot_item.item then
@@ -1686,7 +1386,6 @@ function angelsmods.functions.make_alien(def_data)
       {
         icon = "__base__/graphics/icons/big-biter-corpse.png",
         icon_size = 64,
-        icon_mipmaps = 4,
         tint = def_data.appearance.tint1,
       },
     },
@@ -1740,7 +1439,7 @@ function angelsmods.functions.make_alien(def_data)
       vision_distance = 30,
       movement_speed = def_data.appearance.speed,
       distance_per_frame = 0.1,
-      pollution_to_join_attack = 200,
+      absorptions_to_join_attack = { pollution = 200 },
       distraction_cooldown = 300,
       min_pursue_time = 10 * 60,
       max_pursue_distance = 50,
@@ -1761,7 +1460,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
   data:extend({
     {
       type = "unit-spawner",
-      name = spawn_data.appearance.type .. "-spawner",
+      name = "angels-" .. spawn_data.appearance.type .. "-spawner",
       icon = "__base__/graphics/icons/biter-spawner.png",
       icon_size = 64,
       flags = { "placeable-player", "placeable-enemy", "not-repairable" },
@@ -1776,7 +1475,6 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
             volume = 1.0,
           },
         },
-        apparent_volume = 2,
       },
       dying_sound = {
         {
@@ -1792,19 +1490,20 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
       collision_box = { { -3.2, -2.2 }, { 2.2, 2.2 } },
       selection_box = { { -3.5, -2.5 }, { 2.5, 2.5 } },
       -- in ticks per 1 pu
-      pollution_absorption_absolute = 20,
-      pollution_absorption_proportional = 0.01,
+      absorptions_per_second = { pollution = { absolute = 20, proportional = 0.01 } },
       loot = {},
       corpse = "biter-spawner-corpse",
       loot = make_loot(spawn_data.loot),
       dying_explosion = "blood-explosion-huge",
       max_count_of_owned_units = 7,
       max_friends_around_to_spawn = 5,
-      animations = {
-        spawner_idle_animation(0, spawn_data.appearance.tint),
-        spawner_idle_animation(1, spawn_data.appearance.tint),
-        spawner_idle_animation(2, spawn_data.appearance.tint),
-        spawner_idle_animation(3, spawn_data.appearance.tint),
+      graphics_set = {
+        animations = {
+          spawner_idle_animation(0, spawn_data.appearance.tint),
+          spawner_idle_animation(1, spawn_data.appearance.tint),
+          spawner_idle_animation(2, spawn_data.appearance.tint),
+          spawner_idle_animation(3, spawn_data.appearance.tint),
+        },
       },
       result_units = spawn_data.results,
       spawning_cooldown = spawn_data.appearance.spawn_cooldown,
@@ -1812,12 +1511,12 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
       spawning_spacing = 3,
       max_spawn_shift = 0,
       max_richness_for_spawn_shift = 100,
-      autoplace = enemy_spawner_autoplace(1),
+      autoplace = enemy_spawner_autoplace("enemy_autoplace_base(0, 6)"),
       call_for_help_radius = 50,
     },
     {
       type = "corpse",
-      name = spawn_data.appearance.type .. "-spawner-corpse",
+      name = "angels-" .. spawn_data.appearance.type .. "-spawner-corpse",
       flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
       icon = "__base__/graphics/icons/biter-spawner-corpse.png",
       icon_size = 32,
@@ -1858,7 +1557,8 @@ function angelsmods.functions.update_spawner(us_data)
   if us_data == nil then
     return
   end
-  local spawner = data.raw["unit-spawner"][us_data.appearance.full_name or (us_data.appearance.type .. "-spawner")]
+  local spawner =
+    data.raw["unit-spawner"][us_data.appearance.full_name or ("angels-" .. us_data.appearance.type .. "-spawner")]
   if spawner then
     spawner.resistances = spawner.resistances or {}
     for _, new_resistance_data in pairs(us_data.resistance or {}) do

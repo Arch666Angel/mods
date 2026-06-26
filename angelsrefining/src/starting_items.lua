@@ -22,15 +22,15 @@ end
 
 function starting_items:configure_starting_items()
   -- configuration settings
-  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
+  local technology_overhaul = script.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value
     or false
   local components_overhaul = technology_overhaul
-    or (game.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value)
+    or (script.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value)
     or false
 
-  self:increment_freeplay_starting_item("burner-ore-crusher", 1)
+  self:increment_freeplay_starting_item("angels-burner-ore-crusher", 1)
 
-  if game.active_mods["bobclasses"] then -- fix character classes starting point
+  if script.active_mods["bobclasses"] then -- fix character classes starting point
     if components_overhaul then
       self:increment_freeplay_starting_item("iron-plate", 2)
     end

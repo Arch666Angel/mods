@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ???
+  Changes:
+    - Removed references to normal / expensive recipes (945)
+    - Added item description to Gravitational analyzer (984)
+    - Adjusted the recipes and science packs for Bob's Assembling Machines when Components or Technology Overhauls are enabled (985)
+    - Tech Overhaul: Hid Steam science pack from Bob's Technology mod (986)
+    - Adjust ingredients and tech prerequisites for Power armor and equipment when using Bob's mods (989)
+    - Updated for Factorio 2.0 (994)
+    - Regular mode:
+      - Adjust ingredients and tech prerequisites for Power armor and equipment when using Bob's mods (989)
+    - Component mode:
+      - Adjusted the recipes for Bob's Assembling Machines when Components Overhaul is enabled (985)
+      - Added new settings to ease component mode progression
+      - Condensed recipes in component crafting menu to reduce scrolling
+      - Added item description to Gravitational analyzer (984)
+    - Science mode:
+      - Adjusted the science packs for Bob's Assembling Machines when Technology Overhauls is enabled (985)
+      - Hid Steam science pack from Bob's Technology mod (986)
+    - Enabled logistics tab for Crawler construction vehicle (1111)
+    - Added circuit connectors to all machines (1114)
+  Bugfixes:
+    - Fixed potential softlock with Tech Overhaul and Bob's Technology mod (986)
+---------------------------------------------------------------------------------------------------
 Version: 0.4.21
 Date: 21.02.2024
   Changes:

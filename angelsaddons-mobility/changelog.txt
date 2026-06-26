@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 04.01.26
+  Bugfixes:
+    - Fixed crash on startup when Angel's Petrochem mod was not enabled #1219
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Features:
+    - Supports Elevated Rails and includes HQ train graphics with updated geometry and materials (1183)
+    - Crawler-themed trains are now colorable (1183)
+  Changes:
+    - Updated for Factorio 2.0 (994)
+    - Graphics have been moved into separate mods (1183):
+      - Angel's Addons - Mass Transit - Crawler Graphics
+      - Angel's Addons - Mass Transit - Petrochemical Graphics
+      - Angel's Addons - Mass Transit - Smelting Graphics
+---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 01.01.2023
   Changes:

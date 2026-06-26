@@ -6,7 +6,7 @@ data:extend({
     name = "angels-purification",
 
     is_title = false,
-    tag = "[item=ore-refinery]",
+    tag = "[item=angels-ore-refinery]",
     localised_name = { "tips-and-tricks-name.angels-purification" },
     localised_description = require("prototypes.tips-and-tricks.1-1-4-purification.1-1-4-purification-description"),
 
@@ -18,7 +18,7 @@ data:extend({
     dependencies = nil,
     trigger = {
       type = "research",
-      technology = "ore-refining",
+      technology = "angels-ore-refining",
     },
 
     simulation = {

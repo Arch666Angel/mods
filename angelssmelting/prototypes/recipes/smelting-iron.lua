@@ -1,36 +1,36 @@
-local intermediatemulti = angelsmods.marathon.intermediatemulti
-
 data:extend({
   --IRON
   -- SMELTING INTERMEDIATE
   {
     type = "recipe",
-    name = "iron-ore-processing",
-    category = "ore-processing",
+    name = "angels-processed-iron",
+    category = "angels-ore-processing",
     subgroup = "angels-iron",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 4 },
     },
     results = {
-      { type = "item", name = "processed-iron", amount = 2 },
+      { type = "item", name = "angels-processed-iron", amount = 2 },
     },
     order = "b[processed-iron]",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "iron-processed-processing",
-    category = "pellet-pressing",
+    name = "angels-pellet-iron",
+    category = "angels-pellet-pressing",
     subgroup = "angels-iron",
     energy_required = 2,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "processed-iron", amount = 3 },
+      { type = "item", name = "angels-processed-iron", amount = 3 },
     },
     results = {
-      { type = "item", name = "pellet-iron", amount = 4 },
+      { type = "item", name = "angels-pellet-iron", amount = 4 },
     },
     order = "c[pellet-iron]",
   },
@@ -38,19 +38,20 @@ data:extend({
   -- SMELTING RESULTS
   {
     type = "recipe",
-    name = "iron-ore-smelting",
-    category = "blast-smelting",
+    name = "angels-ingot-iron",
+    category = "angels-blast-smelting",
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "iron-ore", amount = 24 },
     },
     results = {
-      { type = "item", name = "ingot-iron", amount = 24 },
+      { type = "item", name = "angels-ingot-iron", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-iron"),
+      angelsmods.functions.get_object_icons("angels-ingot-iron"),
       1,
       angelsmods.smelting.number_tint
     ),
@@ -58,20 +59,22 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "processed-iron-smelting",
-    category = "blast-smelting-2",
+    name = "angels-ingot-iron-2",
+    localised_name = { "item-name.angels-ingot-iron" },
+    category = "angels-blast-smelting-2",
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "processed-iron", amount = 8 },
-      { type = "item", name = "solid-coke", amount = 2 },
+      { type = "item", name = "angels-processed-iron", amount = 8 },
+      { type = "item", name = "angels-solid-coke", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-iron", amount = 24 },
+      { type = "item", name = "angels-ingot-iron", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-iron"),
+      angelsmods.functions.get_object_icons("angels-ingot-iron"),
       2,
       angelsmods.smelting.number_tint
     ),
@@ -79,21 +82,23 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "pellet-iron-smelting",
-    category = "blast-smelting-3",
+    name = "angels-ingot-iron-3",
+    localised_name = { "item-name.angels-ingot-iron" },
+    category = "angels-blast-smelting-3",
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "pellet-iron", amount = 8 },
-      { type = "item", name = "solid-coke", amount = 2 },
-      { type = "item", name = "solid-limestone", amount = 2 },
+      { type = "item", name = "angels-pellet-iron", amount = 8 },
+      { type = "item", name = "angels-solid-coke", amount = 2 },
+      { type = "item", name = "angels-solid-limestone", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-iron", amount = 24 },
+      { type = "item", name = "angels-ingot-iron", amount = 24 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-iron"),
+      angelsmods.functions.get_object_icons("angels-ingot-iron"),
       3,
       angelsmods.smelting.number_tint
     ),
@@ -101,29 +106,24 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "solid-iron-hydroxide-smelting",
-    localised_name = { "recipe-name.solid-iron-hydroxide-smelting" },
-    category = "chemical-smelting-2",
+    name = "angels-solid-iron-hydroxide-smelting",
+    category = "angels-chemical-smelting-2",
     subgroup = "angels-iron",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "solid-iron-hydroxide", amount = 6 },
-      { type = "item", name = "solid-coke", amount = 2 },
+      { type = "item", name = "angels-solid-iron-hydroxide", amount = 6 },
+      { type = "item", name = "angels-solid-coke", amount = 2 },
     },
     results = {
-      { type = "item", name = "ingot-iron", amount = 6 },
-      { type = "fluid", name = "gas-carbon-dioxide", amount = 20 },
+      { type = "item", name = "angels-ingot-iron", amount = 6, ignored_by_productivity = 6, ignored_by_stats = 6 },
+      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 20 },
     },
-    main_product = "ingot-iron",
-    --icons = angelsmods.functions.add_number_icon_layer(
-    --  angelsmods.functions.get_object_icons("ingot-iron"),
-    --  4,
-    --  angelsmods.smelting.number_tint
-    --),
+    main_product = "angels-ingot-iron",
     icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("ingot-iron"),
-      angelsmods.functions.get_object_icons("solid-iron-hydroxide"),
+      angelsmods.functions.get_object_icons("angels-ingot-iron"),
+      angelsmods.functions.get_object_icons("angels-solid-iron-hydroxide"),
       { -11.5, -12 },
       10.24 / 32
     ),
@@ -132,16 +132,17 @@ data:extend({
   -- order f reserved for ingot-steel (see alloys)
   {
     type = "recipe",
-    name = "powder-iron",
-    category = "advanced-crafting",
+    name = "angels-powder-iron",
+    category = "angels-powderizing-1",
     subgroup = "angels-iron",
     energy_required = 0.5,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 1 },
+      { type = "item", name = "angels-ingot-iron", amount = 1 },
     },
     results = {
-      { type = "item", name = "powder-iron", amount = 1 },
+      { type = "item", name = "angels-powder-iron", amount = 1 },
     },
     order = "g[powder-iron]",
   },
@@ -149,141 +150,143 @@ data:extend({
   -- CASTING INTERMEDIATE
   {
     type = "recipe",
-    name = "molten-iron-smelting-1",
-    category = "induction-smelting",
+    name = "angels-liquid-molten-iron",
+    localised_name = { "fluid-name.angels-liquid-molten-iron" },
+    category = "angels-induction-smelting",
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 12 },
+      { type = "item", name = "angels-ingot-iron", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-iron", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 120 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       1,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-iron]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "molten-iron-smelting-2",
-    category = "induction-smelting",
+    name = "angels-liquid-molten-iron-2",
+    localised_name = { "fluid-name.angels-liquid-molten-iron" },
+    category = "angels-induction-smelting",
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 12 },
-      { type = "item", name = "ingot-manganese", amount = 12 },
+      { type = "item", name = "angels-ingot-iron", amount = 12 },
+      { type = "item", name = "angels-ingot-manganese", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-iron", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-iron]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "molten-iron-smelting-3",
-    category = "induction-smelting-2",
+    name = "angels-liquid-molten-iron-3",
+    localised_name = { "fluid-name.angels-liquid-molten-iron" },
+    category = "angels-induction-smelting-2",
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 12 },
-      { type = "item", name = "ingot-silicon", amount = 12 },
+      { type = "item", name = "angels-ingot-iron", amount = 12 },
+      { type = "item", name = "angels-ingot-silicon", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-iron", amount = 240 },
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 240 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       3,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-iron]-c",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "molten-iron-smelting-4",
-    category = "induction-smelting-3",
+    name = "angels-liquid-molten-iron-4",
+    localised_name = { "fluid-name.angels-liquid-molten-iron" },
+    category = "angels-induction-smelting-3",
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 12 },
-      { type = "item", name = "ingot-nickel", amount = 12 },
-      { type = "item", name = "ingot-cobalt", amount = 12 },
+      { type = "item", name = "angels-ingot-iron", amount = 12 },
+      { type = "item", name = "angels-ingot-nickel", amount = 12 },
+      { type = "item", name = "angels-ingot-cobalt", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-iron", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       4,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-iron]-d",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "molten-iron-smelting-5",
-    category = "induction-smelting-4",
+    name = "angels-liquid-molten-iron-5",
+    localised_name = { "fluid-name.angels-liquid-molten-iron" },
+    category = "angels-induction-smelting-4",
     subgroup = "angels-iron-casting",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
-      { type = "item", name = "ingot-iron", amount = 12 },
-      { type = "item", name = "ingot-nickel", amount = 12 },
-      { type = "item", name = "ingot-chrome", amount = 12 },
+      { type = "item", name = "angels-ingot-iron", amount = 12 },
+      { type = "item", name = "angels-ingot-nickel", amount = 12 },
+      { type = "item", name = "angels-ingot-chrome", amount = 12 },
     },
     results = {
-      { type = "fluid", name = "liquid-molten-iron", amount = 360 },
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 360 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
+      angelsmods.functions.get_object_icons("angels-liquid-molten-iron"),
       5,
       angelsmods.smelting.number_tint
     ),
     order = "i[liquid-molten-iron]-e",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "roll-iron-casting",
-    category = "strand-casting",
+    name = "angels-roll-iron",
+    category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 80 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 2 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 80 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 100 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 2 },
-      },
+    results = {
+      { type = "item", name = "angels-roll-iron", amount = 2 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-iron"),
@@ -291,73 +294,48 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-iron]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "roll-iron-casting-fast",
-    category = "strand-casting-2",
+    name = "angels-roll-iron-2",
+    localised_name = { "item-name.angels-roll-iron" },
+    category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 140 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-iron",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 140 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 180 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-roll-iron", amount = 4 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-roll-iron",
+    results = {
+      { type = "item", name = "angels-roll-iron", amount = 4 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-roll-iron",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-roll-iron"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "j[angels-roll-iron]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "rod-stack-iron-casting",
-    category = "strand-casting",
+    name = "angels-rod-stack-iron",
+    category = "angels-strand-casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 60 },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 1 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 60 },
+      { type = "fluid", name = "water", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 80 * intermediatemulti },
-        { type = "fluid", name = "water", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 1 },
-      },
+    results = {
+      { type = "item", name = "angels-rod-stack-iron", amount = 1 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
@@ -365,134 +343,112 @@ data:extend({
       angelsmods.smelting.number_tint
     ),
     order = "k[angels-rod-stack-iron]-a",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   {
     type = "recipe",
-    name = "rod-stack-iron-casting-fast",
-    category = "strand-casting-2",
+    name = "angels-rod-stack-iron-2",
+    localised_name = { "item-name.angels-rod-stack-iron" },
+    category = "angels-strand-casting-2",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 110 },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 2 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-rod-stack-iron",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 110 },
+      { type = "fluid", name = "angels-liquid-coolant", amount = 40, ignored_by_stats = 32 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 150 * intermediatemulti },
-        { type = "fluid", name = "liquid-coolant", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-rod-stack-iron", amount = 2 },
-        { type = "fluid", name = "liquid-coolant-used", amount = 40, temperature = 300 },
-      },
-      main_product = "angels-rod-stack-iron",
+    results = {
+      { type = "item", name = "angels-rod-stack-iron", amount = 2 },
+      { type = "fluid", name = "angels-liquid-coolant-used", amount = 40, temperature = 300 },
     },
+    main_product = "angels-rod-stack-iron",
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-rod-stack-iron"),
       2,
       angelsmods.smelting.number_tint
     ),
     order = "k[angels-rod-stack-iron]-b",
-    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("liquid-molten-iron"),
+    crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-iron"),
   },
   -- CASTING RESULT
   {
     type = "recipe",
     name = "angels-plate-iron",
-    category = "casting",
+    localised_name = { "item-name.iron-plate" },
+    category = "angels-casting",
     subgroup = "angels-iron-casting",
-    normal = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 40 },
-      },
-      results = {
-        { type = "item", name = "angels-plate-iron", amount = 4 },
-      },
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-iron", amount = 40 },
     },
-    expensive = {
-      enabled = false,
-      energy_required = 4,
-      ingredients = {
-        { type = "fluid", name = "liquid-molten-iron", amount = 50 * intermediatemulti },
-      },
-      results = {
-        { type = "item", name = "angels-plate-iron", amount = 4 },
-      },
+    results = {
+      { type = "item", name = "iron-plate", amount = 4 },
     },
-    icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
-      angelsmods.functions.get_object_icons("liquid-molten-iron"),
-      { -10, -10 },
-      0.4375
-    ),
+    icons = angelsmods.functions.add_icon_layer({
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+        icon_size = 32,
+      },
+    }, angelsmods.functions.get_object_icons("angels-liquid-molten-iron"), { -10, -10 }, 0.4375),
     order = "l[angels-plate-iron]-c", -- l[angels-plate-iron]-a reserved for crushed saphirite smelting (see global overrides)
   }, -- l[angels-plate-iron]-b reserved for base game smelting recipe (see global overrides)
   {
     type = "recipe",
-    name = "angels-roll-iron-converting",
+    name = "angels-plate-iron-2",
+    localised_name = { "item-name.iron-plate" },
     category = "advanced-crafting",
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-roll-iron", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-plate-iron", amount = 4 },
+      { type = "item", name = "iron-plate", amount = 4 },
     },
-    icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
-      angelsmods.functions.get_object_icons("angels-roll-iron"),
-      { -10, -10 },
-      0.4375
-    ),
+    icons = angelsmods.functions.add_icon_layer({
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+        icon_size = 32,
+      },
+    }, angelsmods.functions.get_object_icons("angels-roll-iron"), { -10, -10 }, 0.4375),
     order = "l[angels-plate-iron]-d",
   },
   {
     type = "recipe",
-    name = "angels-rod-iron-plate",
+    name = "angels-rod-iron",
+    localised_name = { "item-name.iron-stick" },
     category = "crafting",
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
     enabled = true,
-    allow_decomposition = true,
     ingredients = {
-      { type = "item", name = "angels-plate-iron", amount = 2 },
+      { type = "item", name = "iron-plate", amount = 2 },
     },
     results = {
       { type = "item", name = "iron-stick", amount = 1 },
     },
-    allow_decomposition = false,
-    icons = angelsmods.functions.add_icon_layer(
-      angelsmods.functions.get_object_icons("iron-stick"),
-      angelsmods.functions.get_object_icons("angels-plate-iron"),
-      { -10, -10 },
-      0.4375
-    ),
+    icons = angelsmods.functions.add_icon_layer(angelsmods.functions.get_object_icons("iron-stick"), {
+      icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
+      icon_size = 32,
+    }, { -10, -10 }, 0.4375),
     order = "m[angels-rod-iron]-a",
   },
   {
     type = "recipe",
-    name = "angels-rod-stack-iron-converting",
+    name = "angels-rod-iron-2",
+    localised_name = { "item-name.iron-stick" },
     category = "advanced-crafting",
     subgroup = "angels-iron-casting",
     energy_required = 0.5,
     enabled = false,
     allow_decomposition = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-rod-stack-iron", amount = 1 },
     },

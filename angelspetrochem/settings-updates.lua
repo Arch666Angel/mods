@@ -1,9 +1,18 @@
 if mods["bobplates"] then
-  angelsmods.settings.hide_setting("bool-setting", "angels-disable-vanilla-chemical-plants", true)
-else
-  angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-electrolysers", true)
-  angelsmods.settings.hide_setting("bool-setting", "angels-disable-bobs-chemical-plants", true)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-bluedeuterium")
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-expensive-electrolysis")
 end
 if mods["bobassembly"] then
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-oilrefineries", true) -- angel does add the refineries anyway...
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-centrifuge", true)
+  -- To avoid duplication
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-chemicalplants", false)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-electrolysers", false)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-oilrefineries", false)
+end
+if mods["bobrevamp"] then
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-revamp-old-oil", false)
+  angelsmods.settings.hide_setting("bool-setting", "bobmods-revamp-oil", false)
+end
+if mods["Nuclear Fuel"] then
+  angelsmods.settings.hide_setting("bool-setting", "nuclear-fuel-kovarex-enabled", true)
 end

@@ -1,169 +1,194 @@
+local function angels_chemical_plant_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -1, -1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 1, -1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { -1, 1 } } },
+      volume = 1000,
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 1, 1 } } },
+      volume = 1000,
+    },
+  }
+end
+
+circuit_connector_definitions["chemical-plant"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+  })
+
 data:extend({
   {
     type = "item",
-    name = "angels-chemical-plant",
+    name = "chemical-plant",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 1, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-a",
-    place_result = "angels-chemical-plant",
+    place_result = "chemical-plant",
     stack_size = 10,
   },
+})
+
+local chemical_plant = data.raw["assembling-machine"]["chemical-plant"]
+chemical_plant.icon = nil
+chemical_plant.icons = angelsmods.functions.add_number_icon_layer({
   {
-    type = "assembling-machine",
-    name = "angels-chemical-plant",
-    icons = angelsmods.functions.add_number_icon_layer({
-      {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
-        icon_size = 32,
-        icon_mipmaps = 1,
-      },
-    }, 1, angelsmods.petrochem.number_tint),
-    flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 0.5, result = "angels-chemical-plant" },
-    max_health = 300,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
-    next_upgrade = "angels-chemical-plant-2",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
-    selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    crafting_speed = 1.75,
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      emissions_per_minute = 0.03 * 60,
-    },
-    energy_usage = "250kW",
-    ingredient_count = 4,
-    crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 1,
-    },
-    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-      width = 160,
-      height = 160,
-      frame_count = 1,
-      line_length = 1,
-      shift = { 0, 0 },
-    },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "primary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        apply_recipe_tint = "secondary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
+    icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
+    icon_size = 32,
+  },
+}, 1, angelsmods.petrochem.number_tint)
+chemical_plant.minable = { mining_time = 0.5, result = "chemical-plant" }
+chemical_plant.max_health = 300
+chemical_plant.corpse = "big-remnants"
+chemical_plant.dying_explosion = "medium-explosion"
+chemical_plant.fast_replaceable_group = "chemical-plant"
+chemical_plant.next_upgrade = "angels-chemical-plant-2"
+chemical_plant.collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } }
+chemical_plant.selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } }
+chemical_plant.crafting_speed = 1.75
+chemical_plant.energy_source = {
+  type = "electric",
+  usage_priority = "secondary-input",
+  emissions_per_minute = { pollution = 1.8 },
+}
+chemical_plant.energy_usage = "250kW"
+chemical_plant.module_slots = 1
+chemical_plant.allowed_effects = { "consumption", "speed", "productivity", "pollution" }
+chemical_plant.graphics_set = {
+  animation = {
+    filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
+    width = 160,
+    height = 160,
+    frame_count = 1,
+    line_length = 1,
+    shift = { 0, 0 },
+  },
+  working_visualisations = {
+    {
+      apply_recipe_tint = "primary",
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
+        line_length = 6,
+        frame_count = 36,
+        width = 160,
+        height = 160,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
       },
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = {
-      sound = {
-        {
-          filename = "__base__/sound/chemical-plant-1.ogg",
-          volume = 0.5,
-        },
-        {
-          filename = "__base__/sound/chemical-plant-2.ogg",
-          volume = 0.5,
-        },
-        {
-          filename = "__base__/sound/chemical-plant-3.ogg",
-          volume = 0.5,
-        },
+    {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
+        line_length = 6,
+        frame_count = 36,
+        width = 160,
+        height = 160,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
       },
-      --max_sounds_per_type = 3,
-      --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
+    {
+      apply_recipe_tint = "secondary",
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
+        line_length = 6,
+        frame_count = 36,
+        width = 160,
+        height = 160,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
       },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
+    },
+    {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
+        line_length = 6,
+        frame_count = 36,
+        width = 160,
+        height = 160,
+        shift = { 0, 0 },
+        animation_speed = 0.5,
       },
     },
   },
+}
+chemical_plant.impact_category = "metal"
+chemical_plant.working_sound = {
+  sound = {
+    {
+      filename = "__base__/sound/chemical-plant-1.ogg",
+      volume = 0.5,
+    },
+    {
+      filename = "__base__/sound/chemical-plant-2.ogg",
+      volume = 0.5,
+    },
+    {
+      filename = "__base__/sound/chemical-plant-3.ogg",
+      volume = 0.5,
+    },
+  },
+  fade_in_ticks = 4,
+  fade_out_ticks = 20,
+}
+chemical_plant.fluid_boxes = angels_chemical_plant_fluid_boxes()
+chemical_plant.icon_draw_specification = nil
+chemical_plant.water_reflection = nil
+
+data:extend({
   {
     type = "item",
     name = "angels-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-b",
     place_result = "angels-chemical-plant-2",
     stack_size = 10,
@@ -173,9 +198,8 @@ data:extend({
     name = "angels-chemical-plant-2",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 2, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -183,80 +207,82 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     next_upgrade = "angels-chemical-plant-3",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.4,
     crafting_speed = 2.25,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.04 * 60,
+      emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "300kW",
-    ingredient_count = 4,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-      width = 160,
-      height = 160,
-      frame_count = 1,
-      line_length = 1,
-      shift = { 0, 0 },
+    graphics_set = {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
+        width = 160,
+        height = 160,
+        frame_count = 1,
+        line_length = 1,
+        shift = { 0, 0 },
+      },
+      working_visualisations = {
+        {
+          apply_recipe_tint = "primary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          apply_recipe_tint = "secondary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+      },
     },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "primary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        apply_recipe_tint = "secondary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-    },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -272,52 +298,23 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
   {
     type = "item",
     name = "angels-chemical-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-c",
     place_result = "angels-chemical-plant-3",
     stack_size = 10,
@@ -327,9 +324,8 @@ data:extend({
     name = "angels-chemical-plant-3",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 3, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -337,80 +333,82 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
+    fast_replaceable_group = "chemical-plant",
     next_upgrade = "angels-chemical-plant-4",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.4,
     crafting_speed = 2.75,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.05 * 60,
+      emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "350kW",
-    ingredient_count = 4,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 3,
-    },
+    module_slots = 3,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-      width = 160,
-      height = 160,
-      frame_count = 1,
-      line_length = 1,
-      shift = { 0, 0 },
+    graphics_set = {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
+        width = 160,
+        height = 160,
+        frame_count = 1,
+        line_length = 1,
+        shift = { 0, 0 },
+      },
+      working_visualisations = {
+        {
+          apply_recipe_tint = "primary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          apply_recipe_tint = "secondary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+      },
     },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "primary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        apply_recipe_tint = "secondary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-    },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -426,52 +424,23 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
   {
     type = "item",
     name = "angels-chemical-plant-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 4, angelsmods.petrochem.number_tint),
-    subgroup = "petrochem-buildings-chemical-plant",
+    subgroup = "angels-petrochem-buildings-chemical-plant",
     order = "a[regular]-b[angel]-d",
     place_result = "angels-chemical-plant-4",
     stack_size = 10,
@@ -481,9 +450,8 @@ data:extend({
     name = "angels-chemical-plant-4",
     icons = angelsmods.functions.add_number_icon_layer({
       {
-        icon = "__angelspetrochem__/graphics/icons/chemical-plant.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
         icon_size = 32,
-        icon_mipmaps = 1,
       },
     }, 4, angelsmods.petrochem.number_tint),
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -491,79 +459,81 @@ data:extend({
     max_health = 300,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    fast_replaceable_group = "angels-chemical-plant",
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    fast_replaceable_group = "chemical-plant",
+    collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    drawing_box_vertical_extension = 0.4,
     crafting_speed = 3.25,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.06 * 60,
+      emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "400kW",
-    ingredient_count = 4,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     crafting_categories = { "chemistry" },
-    module_specification = {
-      module_slots = 4,
-    },
+    module_slots = 4,
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    animation = {
-      filename = "__angelspetrochem__/graphics/entity/chemical-plant/chemical-plant.png",
-      width = 160,
-      height = 160,
-      frame_count = 1,
-      line_length = 1,
-      shift = { 0, 0 },
+    graphics_set = {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/chemical-plant.png",
+        width = 160,
+        height = 160,
+        frame_count = 1,
+        line_length = 1,
+        shift = { 0, 0 },
+      },
+      working_visualisations = {
+        {
+          apply_recipe_tint = "primary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/mixer-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          apply_recipe_tint = "secondary",
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-tint.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+        {
+          animation = {
+            filename = "__angelspetrochemgraphics__/graphics/entity/chemical-plant/pipe-overlay.png",
+            line_length = 6,
+            frame_count = 36,
+            width = 160,
+            height = 160,
+            shift = { 0, 0 },
+            animation_speed = 0.5,
+          },
+        },
+      },
     },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "primary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/mixer-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        apply_recipe_tint = "secondary",
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-tint.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-      {
-        animation = {
-          filename = "__angelspetrochem__/graphics/entity/chemical-plant/pipe-overlay.png",
-          line_length = 6,
-          frame_count = 36,
-          width = 160,
-          height = 160,
-          shift = { 0, 0 },
-          animation_speed = 0.5,
-        },
-      },
-    },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         {
@@ -579,39 +549,11 @@ data:extend({
           volume = 0.5,
         },
       },
-      --max_sounds_per_type = 3,
+      --max_sounds_per_prototype = 3,
       --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { -1, -2 } } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 1, -2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { -1, 2 } } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 1, 2 } } },
-      },
-    },
+    fluid_boxes = angels_chemical_plant_fluid_boxes(),
   },
 })

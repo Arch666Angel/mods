@@ -2,21 +2,20 @@ data:extend({
   {
     type = "technology",
     name = "angels-steel-smelting-1",
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-iron-smelting-1",
-      "basic-chemistry",
+      "angels-basic-chemistry",
     },
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "ingot-iron-smelting",
+        recipe = "angels-ingot-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-1",
+        recipe = "angels-liquid-molten-steel",
       },
       {
         type = "unlock-recipe",
@@ -26,7 +25,7 @@ data:extend({
     unit = {
       count = 100,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
       },
       time = 30,
     },
@@ -35,12 +34,11 @@ data:extend({
   {
     type = "technology",
     name = "angels-steel-smelting-2",
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       --"angels-metallurgy-2",
-      "strand-casting-1",
+      "angels-strand-casting-1",
       "angels-steel-smelting-1",
       "angels-silicon-smelting-1",
       "angels-manganese-smelting-1",
@@ -48,38 +46,38 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-2",
+        recipe = "angels-liquid-molten-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-3",
+        recipe = "angels-liquid-molten-steel-3",
       },
       {
         type = "unlock-recipe",
-        recipe = "powder-steel",
+        recipe = "angels-powder-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-casting",
+        recipe = "angels-roll-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-converting",
+        recipe = "angels-plate-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-steel-casting",
+        recipe = "angels-rod-stack-steel",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-rod-stack-steel-converting",
+        recipe = "angels-rod-steel-2",
       },
     },
     unit = {
       count = 150,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
       },
       time = 30,
     },
@@ -89,11 +87,10 @@ data:extend({
     type = "technology",
     name = "angels-steel-smelting-3",
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 3" },
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
-      "strand-casting-2",
+      "angels-strand-casting-2",
       "angels-steel-smelting-2",
       "angels-nickel-smelting-1",
       "angels-cobalt-smelting-1",
@@ -101,23 +98,23 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-4",
+        recipe = "angels-liquid-molten-steel-4",
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-roll-steel-casting-fast",
+        recipe = "angels-roll-steel-2",
       },
       {
         type = "unlock-recipe",
-        recipe = "rod-stack-steel-casting-fast",
+        recipe = "angels-rod-stack-steel-2",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
       },
       time = 30,
     },
@@ -127,9 +124,8 @@ data:extend({
     type = "technology",
     name = "angels-steel-smelting-4",
     localised_name = { "", { "technology-name.angels-steel-casting" }, " 4" },
-    icon = "__angelssmelting__/graphics/technology/casting-steel-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-steel-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     prerequisites = {
       "angels-steel-smelting-3",
       "angels-chrome-smelting-1",
@@ -138,16 +134,16 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "molten-steel-smelting-5",
+        recipe = "angels-liquid-molten-steel-5",
       },
     },
     unit = {
       count = 200,
       ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "production-science-pack", amount = 1 },
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
       },
       time = 30,
     },
