@@ -17,125 +17,136 @@ local function process_tech(tech)
   for _, effect in pairs(tech.effects) do
     if effect.type == "unlock-recipe" then
       local recipe = prototypes.recipe[effect.recipe]
-      recipes[recipe.name] = {
-        processed = false,
-        ingredients = { items = {}, fluids = {} },
-        products = { items = {}, fluids = {} },
-        category = recipe.category,
-        categories = {},
-      }
-      local skip = false
 
-      -- Skip unbarelling recipes
-      if recipe.name == "empty-barrel" then
-        -- Do nothing
-      elseif recipe.subgroup.name == "empty-barrel" then
-        skip = true
-      elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
-        skip = true
-      elseif recipe.subgroup.name == "bob-empty-canister" then
-        skip = true
-      elseif string.sub(recipe.name, 1, 6) == "empty-" and string.sub(recipe.name, -7, -1) == "-barrel" then
-        skip = true
-      end
-
-      if not skip then
-        for _, product in pairs(recipe.products) do
-          if product.type == "item" then
-            recipes[recipe.name].products.items[product.name] = true
-
-            -- Check for rocket_launch_products
-            local item = prototypes.item[product.name]
-            for _, launch_product in pairs(item.rocket_launch_products) do
-              recipes[recipe.name].products.items[launch_product.name] = true
-            end
-
-            -- Check for entity. Add crafting categories
-            local entity = item.place_result
-            if entity then
-              if entity.crafting_categories then
-                for category_name, _ in pairs(entity.crafting_categories) do
-                  recipes[recipe.name].categories[category_name] = true
-                end
-              end
-            end
-          else
-            recipes[recipe.name].products.fluids[product.name] = true
-          end
+      -- Exclude recycling recipes from this check
+      local is_recycling_recipe = false
+      for _, category_name in pairs(recipe.categories) do
+        if category_name == "recycling" then
+          is_recycling_recipe = true
         end
       end
 
-      skip = false
+      if not is_recycling_recipe then
+        recipes[recipe.name] = {
+          processed = false,
+          ingredients = { items = {}, fluids = {} },
+          products = { items = {}, fluids = {} },
+          categories = recipe.categories,
+          unlocked_categories = {},
+        }
+        local skip = false
 
-      -- Skip barelling recipes
-      if recipe.name == "empty-barrel" then
-        -- Do nothing
-      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
-        skip = true
-      elseif recipe.subgroup.name == "fill-barrel" then
-        skip = true
-      elseif string.sub(recipe.name, -7, -1) == "-barrel" then
-        skip = true
-      elseif recipe.subgroup.name == "bob-gas-bottle" then
-        skip = true
-      elseif recipe.subgroup.name == "bob-canister" then
-        skip = true
-      end
-
-      -- Skip building recipes
-      if (ignore_building_recipes == true) and (#recipe.products == 1) and (recipe.products[1].type == "item") then
-        local item = prototypes.item[recipe.products[1].name]
-        if item.place_result then
+        -- Skip unbarelling recipes
+        if recipe.name == "empty-barrel" then
+          -- Do nothing
+        elseif recipe.subgroup.name == "empty-barrel" then
+          skip = true
+        elseif recipe.subgroup.name == "bob-empty-gas-bottle" then
+          skip = true
+        elseif recipe.subgroup.name == "bob-empty-canister" then
+          skip = true
+        elseif string.sub(recipe.name, 1, 6) == "empty-" and string.sub(recipe.name, -7, -1) == "-barrel" then
           skip = true
         end
-      end
 
-      if not skip then
-        for _, ingredient in pairs(recipe.ingredients) do
-          if ingredient.type == "item" then
-            recipes[recipe.name].ingredients.items[ingredient.name] = true
-          else
-            recipes[recipe.name].ingredients.fluids[ingredient.name] = true
-          end
-        end
-      end
+        if not skip then
+          for _, product in pairs(recipe.products) do
+            if product.type == "item" then
+              recipes[recipe.name].products.items[product.name] = true
 
-      local item_names = {}
-      for item_name, _ in pairs(recipes[recipe.name].products.items) do
-        table.insert(item_names, item_name)
-      end
+              -- Check for rocket_launch_products
+              local item = prototypes.item[product.name]
+              for _, launch_product in pairs(item.rocket_launch_products) do
+                recipes[recipe.name].products.items[launch_product.name] = true
+              end
 
-      -- Items from Burnt Result
-
-      local item_filters = {}
-      table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
-      table.insert(item_filters, { filter = "burnt-result", mode = "and" })
-      local item_prototypes = prototypes.get_item_filtered(item_filters)
-
-      for _, item in pairs(item_prototypes) do
-        recipes[recipe.name].products.items[item.burnt_result.name] = true
-      end
-
-      -- Fluids from Boilers
-      -- Fluids from Offshore Pumps
-
-      local item_filters = {}
-      table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
-      table.insert(item_filters, { filter = "place-result", mode = "and" })
-      local item_prototypes = prototypes.get_item_filtered(item_filters)
-
-      for _, item in pairs(item_prototypes) do
-        local entity = item.place_result
-        if entity.type == "boiler" then
-          for _, fluidbox in pairs(entity.fluidbox_prototypes) do
-            if fluidbox.filter and fluidbox.production_type == "output" then
-              recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
+              -- Check for entity. Add crafting categories
+              local entity = item.place_result
+              if entity then
+                if entity.crafting_categories then
+                  for category_name, _ in pairs(entity.crafting_categories) do
+                    recipes[recipe.name].unlocked_categories[category_name] = true
+                  end
+                end
+              end
+            else
+              recipes[recipe.name].products.fluids[product.name] = true
             end
           end
-        elseif entity.type == "offshore-pump" then
-          local filter = entity.fluidbox_prototypes[1].filter
-          if filter then
-            recipes[recipe.name].products.fluids[filter.name] = true
+        end
+
+        skip = false
+
+        -- Skip barelling recipes
+        if recipe.name == "empty-barrel" then
+          -- Do nothing
+        elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+          skip = true
+        elseif recipe.subgroup.name == "fill-barrel" then
+          skip = true
+        elseif string.sub(recipe.name, -7, -1) == "-barrel" then
+          skip = true
+        elseif recipe.subgroup.name == "bob-gas-bottle" then
+          skip = true
+        elseif recipe.subgroup.name == "bob-canister" then
+          skip = true
+        end
+
+        -- Skip building recipes
+        if (ignore_building_recipes == true) and (#recipe.products == 1) and (recipe.products[1].type == "item") then
+          local item = prototypes.item[recipe.products[1].name]
+          if item.place_result then
+            skip = true
+          end
+        end
+
+        if not skip then
+          for _, ingredient in pairs(recipe.ingredients) do
+            if ingredient.type == "item" then
+              recipes[recipe.name].ingredients.items[ingredient.name] = true
+            else
+              recipes[recipe.name].ingredients.fluids[ingredient.name] = true
+            end
+          end
+        end
+
+        local item_names = {}
+        for item_name, _ in pairs(recipes[recipe.name].products.items) do
+          table.insert(item_names, item_name)
+        end
+
+        -- Items from Burnt Result
+
+        local item_filters = {}
+        table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
+        table.insert(item_filters, { filter = "burnt-result", mode = "and" })
+        local item_prototypes = prototypes.get_item_filtered(item_filters)
+
+        for _, item in pairs(item_prototypes) do
+          recipes[recipe.name].products.items[item.burnt_result.name] = true
+        end
+
+        -- Fluids from Boilers
+        -- Fluids from Offshore Pumps
+
+        local item_filters = {}
+        table.insert(item_filters, { filter = "name", mode = "and", name = item_names })
+        table.insert(item_filters, { filter = "place-result", mode = "and" })
+        local item_prototypes = prototypes.get_item_filtered(item_filters)
+
+        for _, item in pairs(item_prototypes) do
+          local entity = item.place_result
+          if entity.type == "boiler" then
+            for _, fluidbox in pairs(entity.fluidbox_prototypes) do
+              if fluidbox.filter and fluidbox.production_type == "output" then
+                recipes[recipe.name].products.fluids[fluidbox.filter.name] = true
+              end
+            end
+          elseif entity.type == "offshore-pump" then
+            local filter = entity.fluidbox_prototypes[1].filter
+            if filter then
+              recipes[recipe.name].products.fluids[filter.name] = true
+            end
           end
         end
       end
@@ -161,8 +172,8 @@ local function process_tech(tech)
         processed = false,
         ingredients = { items = {}, fluids = {} },
         products = { items = {}, fluids = {} },
-        category = "parameters",
-        categories = {},
+        categories = { "parameters" },
+        unlocked_categories = {},
       }
       local resources = prototypes.get_entity_filtered({
         { filter = "name", mode = "and", name = tech.research_trigger.item or tech.research_trigger.fluid },
@@ -262,16 +273,29 @@ local function process_tech(tech)
             found_all_prerequisites = false
           end
         end
-        if not result.categories[recipe.category] then
+
+        -- A recipe is craftable once at least one of its crafting categories is unlocked
+        local has_unlocked_category = false
+        local is_parameters_recipe = false
+        for _, category_name in pairs(recipe.categories) do
+          if result.categories[category_name] then
+            has_unlocked_category = true
+          end
+          if category_name == "parameters" then
+            is_parameters_recipe = true
+          end
+        end
+
+        if not has_unlocked_category then
           -- Ignore parameter recipes
-          if recipe.category == "parameters" then
+          if is_parameters_recipe then
             recipe.missing_category = false
           else
-            do
-              recipe.missing_category = true
-              found_all_prerequisites = false
-            end
+            recipe.missing_category = true
+            found_all_prerequisites = false
           end
+        else
+          recipe.missing_category = false
         end
 
         if found_all_prerequisites then
@@ -284,7 +308,7 @@ local function process_tech(tech)
           for fluid_name, _ in pairs(recipe.products.fluids) do
             result.fluids[fluid_name] = true
           end
-          for category_name, _ in pairs(recipe.categories) do
+          for category_name, _ in pairs(recipe.unlocked_categories) do
             result.categories[category_name] = true
           end
         end
@@ -323,9 +347,9 @@ local function process_tech(tech)
       if recipe.missing_category == true then
         unit_test_functions.print_msg(
           string.format(
-            "Recipe %q uses crafting category %q and is unlocked by Tech %q. None of the tech's prerequisites unlock a machine with this crafting category",
+            "Recipe %q uses crafting categories %q and is unlocked by Tech %q. None of the tech's prerequisites unlock a machine with any of these crafting categories",
             recipe_name,
-            recipe.category,
+            table.concat(recipe.categories, ", "),
             tech.name
           )
         )
@@ -338,7 +362,7 @@ local function process_tech(tech)
       for fluid_name, _ in pairs(recipe.products.fluids) do
         result.fluids[fluid_name] = true
       end
-      for category_name, _ in pairs(recipe.categories) do
+      for category_name, _ in pairs(recipe.unlocked_categories) do
         result.categories[category_name] = true
       end
     end
@@ -358,8 +382,13 @@ local function make_starting_unlocks()
     local loot = entity.loot
     if loot then
       for _, loot_item in pairs(loot) do
-        if (loot_item.probability > 0) and (loot_item.count_max > 0) then
-          starting_unlocks.items[loot_item.item] = true
+        if (loot_item.independent_probability > 0) and
+          (
+            (loot_item.amount and (loot_item.amount > 0)) or
+            (loot_item.amount_max and (loot_item.amount_max > 0))
+          ) and
+          ((loot_item.shared_probability.max - loot_item.shared_probability.min) > 0) then
+          starting_unlocks.items[loot_item.name] = true
         end
       end
     end

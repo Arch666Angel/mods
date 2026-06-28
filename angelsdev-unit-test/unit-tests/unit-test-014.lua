@@ -1,6 +1,15 @@
 -- This unit test attempts to validates recycling recipes
 local unit_test_functions = require("unit-test-functions")
 
+local function has_category(recipe, category_name)
+  for _, category in pairs(recipe.categories) do
+    if category == category_name then
+      return true
+    end
+  end
+  return false
+end
+
 local function check_recipe_products(item_name, recycing_recipe)
   if #recycing_recipe.products == 1 and (recycing_recipe.products[1].name == item_name) then
     return unit_test_functions.test_successful
@@ -77,7 +86,7 @@ local function check_recipe_products(item_name, recycing_recipe)
 end
 
 local unit_test_014 = function()
-  if not script.active_mods["quality"] then
+  if not script.active_mods["recycler"] then
     return unit_test_functions.test_successful
   end
 
@@ -91,7 +100,7 @@ local unit_test_014 = function()
   -- Check every item to see if it has a recycling recipe
   for item_name, item in pairs(prototypes.get_item_filtered(filters)) do
     local recipe = prototypes.recipe[item.name .. "-recycling"]
-    if recipe and recipe.category == "recycling" then
+    if recipe and has_category(recipe, "recycling") then
       local result = check_recipe_products(item_name, recipe)
       if result ~= unit_test_functions.test_successful then
         unit_test_result = result

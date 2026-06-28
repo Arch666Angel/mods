@@ -5,6 +5,15 @@ local recipes_to_ignore = {
   ["rocket-part"] = true, -- base game
 }
 
+local function has_category(recipe, category_name)
+  for _, category in pairs(recipe.categories) do
+    if category == category_name then
+      return true
+    end
+  end
+  return false
+end
+
 local unit_test_011 = function()
   local unit_test_result = unit_test_functions.test_successful
   local recipe_prototypes = prototypes.recipe
@@ -28,7 +37,9 @@ local unit_test_011 = function()
           )
           unit_test_result = unit_test_functions.test_failed -- soft failure
         end
-        if recipe_prototype.hidden then
+        if has_category(recipe_prototype, "recycling") then
+          -- Skip
+        elseif recipe_prototype.hidden then
           unit_test_functions.print_msg(
             string.format("Tech %q unlocks recipe %q which is hidden.", tech_name, tech_effect.recipe)
           )

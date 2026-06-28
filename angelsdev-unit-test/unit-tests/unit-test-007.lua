@@ -86,6 +86,19 @@ local unit_test_007 = function()
 
   -- Add vanilla items that are intentionally not used in crafting
   table.insert(items_to_ignore, "satellite")
+  
+  -- Add science packs
+  local entity_filters = {}
+  table.insert(entity_filters, { filter = "type", type = "lab", mode = "and" })
+  table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
+  
+  local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
+
+  for _, entity in pairs(entity_prototypes) do
+    for _, science_pack_name in pairs(entity.lab_inputs) do
+      table.insert(items_to_ignore, science_pack_name)
+    end
+  end
 
   -- Add SpaceMod items that are intentinally not used in crafting
   if script.active_mods["SpaceMod"] then
@@ -136,25 +149,23 @@ local unit_test_007 = function()
   table.insert(item_filters, { filter = "name", invert = true, mode = "and", name = items_to_ignore })
   table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "parameters" })
   table.insert(item_filters, { filter = "subgroup", invert = true, mode = "and", subgroup = "spawnables" })
+  table.insert(item_filters, { filter = "hidden", invert = true, mode = "and" })
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
   for item_name, item in pairs(item_prototypes) do
-    -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
-    if not item.hidden then
-      local recipe_filters = {}
-      table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
-      table.insert(recipe_filters, {
-        filter = "has-ingredient-item",
-        invert = false,
-        mode = "and",
-        elem_filters = { { filter = "name", name = item_name } },
-      })
+    local recipe_filters = {}
+    table.insert(recipe_filters, { filter = "hidden", invert = true, mode = "and" })
+    table.insert(recipe_filters, {
+      filter = "has-ingredient-item",
+      invert = false,
+      mode = "and",
+      elem_filters = { { filter = "name", name = item_name } },
+    })
 
-      if not has_recipe(recipe_filters, item_recipes_to_ignore) then
-        unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
-        unit_test_result = unit_test_functions.test_failed
-      end
+    if not has_recipe(recipe_filters, item_recipes_to_ignore) then
+      unit_test_functions.print_msg(string.format("No (useful) recipe is using item %q as an ingredient.", item_name))
+      unit_test_result = unit_test_functions.test_failed
     end
   end
 

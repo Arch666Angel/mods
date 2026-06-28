@@ -46,9 +46,15 @@ local function try_find_character_for(recipe)
 
   local entities = prototypes.get_entity_filtered(entity_filters)
 
+  -- Build a quick lookup of this recipe's categories
+  local recipe_categories = {}
+  for _, category_name in pairs(recipe.categories) do
+    recipe_categories[category_name] = true
+  end
+
   for entity_name, entity in pairs(entities) do
     for category_name, _ in pairs(entity.crafting_categories) do
-      if recipe.category == category_name then
+      if recipe_categories[category_name] then
         return true
       end
     end
@@ -75,25 +81,36 @@ local function try_find_entity_for(recipe)
     end
   end
 
-  -- Try find an entity that can craft this recipe
+  -- Build a quick lookup of this recipe's categories
+  local recipe_categories = {}
+  for _, category_name in pairs(recipe.categories) do
+    recipe_categories[category_name] = true
+  end
+
+  -- Try find an entity that can craft this recipe.
+  -- Fetch by type only here, since recipes can now have multiple categories;
+  -- the category match itself is checked manually below per-entity.
   local entity_filters = {}
   table.insert(entity_filters, { filter = "type", type = "assembling-machine", mode = "or" })
-  table.insert(entity_filters, { filter = "crafting-category", crafting_category = recipe.category, mode = "and" })
-  table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
-
   table.insert(entity_filters, { filter = "type", type = "furnace", mode = "or" })
-  table.insert(entity_filters, { filter = "crafting-category", crafting_category = recipe.category, mode = "and" })
-  table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
-
   table.insert(entity_filters, { filter = "type", type = "rocket-silo", mode = "or" })
-  table.insert(entity_filters, { filter = "crafting-category", crafting_category = recipe.category, mode = "and" })
   table.insert(entity_filters, { filter = "hidden", invert = true, mode = "and" })
 
   local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
 
   for entity_name, entity in pairs(entity_prototypes) do
+    -- Check whether this entity supports at least one of the recipe's crafting categories
+    local shares_category = false
+    for category_name, _ in pairs(entity.crafting_categories) do
+      if recipe_categories[category_name] then
+        shares_category = true
+        break
+      end
+    end
+
     if
-      (not entity.fixed_recipe or (entity.fixed_recipe == recipe.name))
+      shares_category
+      and (not entity.fixed_recipe or (entity.fixed_recipe.name == recipe.name))
       and (entity.ingredient_count >= item_ingredient_count)
     then
       if (fluid_ingredient_count == 0) and (fluid_product_count == 0) then
@@ -237,9 +254,9 @@ local unit_test_009 = function()
     if not try_find_entity_for(recipe) then
       unit_test_functions.print_msg(
         string.format(
-          "There is no suitable machine or character that can craft recipe %q (crafting category %q).",
+          "There is no suitable machine or character that can craft recipe %q (crafting categories %q).",
           recipe_name,
-          recipe.category
+          table.concat(recipe.categories, ", ")
         )
       )
       unit_test_result = unit_test_functions.test_failed

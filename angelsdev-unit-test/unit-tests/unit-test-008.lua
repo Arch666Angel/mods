@@ -121,8 +121,13 @@ local unit_test_008 = function()
     local loot = entity.loot
     if loot then
       for _, loot_item in pairs(loot) do
-        if (loot_item.probability > 0) and (loot_item.count_max > 0) then
-          items_to_ignore[loot_item.item] = true
+        if (loot_item.independent_probability > 0) and
+        (
+            (loot_item.amount and (loot_item.amount > 0)) or
+            (loot_item.amount_max and (loot_item.amount_max > 0)) or
+            (loot_item.shared_probability and ((loot_item.shared_probability.max - loot_item.shared_probability.min) > 0))
+        ) then
+          items_to_ignore[loot_item.name] = true
         end
       end
     end
