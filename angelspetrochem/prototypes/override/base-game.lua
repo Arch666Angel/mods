@@ -123,7 +123,7 @@ OV.patch_recipes({
       { type = "item", name = "angels-rocket-fuel-capsule", amount = 10 },
       { type = "item", name = "angels-rocket-oxidizer-capsule", amount = 10 },
     },
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-fuel",
     order = "hc",
     crafting_machine_tint = { --default, has no fluids
@@ -157,7 +157,7 @@ OV.patch_recipes({
     ingredients = {
       { type = "item", name = "angels-rocket-booster", amount = 1 },
     },
-    category = "angels-advanced-chemistry",
+    categories = { "angels-advanced-chemistry" },
     crafting_machine_tint = { --default, has no fluids
       primary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
       secondary = { r = 128 / 255, g = 255 / 255, b = 0 / 255, a = 0 / 255 },
@@ -223,34 +223,4 @@ if data.raw["reactor"]["nuclear-reactor"] then
     minimum_light_size = 0,
     light_intensity_to_size_coefficient = 0,
   }
-end
-
--------------------------------------------------------------------------------
--- CRAFTING CATEGORIES --------------------------------------------------------
--------------------------------------------------------------------------------
-if data.raw["recipe-category"]["cryogenics"] then
-  OV.add_additional_category("angels-solid-nitroglycerin", "cryogenics")
-  OV.add_additional_category("angels-solid-trinitrotoluene", "cryogenics")
-end
-
-if data.raw["recipe-category"]["chemistry-or-cryogenics"] then
-  for _, entity_name in pairs({
-    "angels-chemical-plant-2",
-    "angels-chemical-plant-3",
-    "angels-chemical-plant-4",
-  }) do
-    local entity = data.raw["assembling-machine"][entity_name]
-    if entity then
-      local addit = true
-      for _, category in pairs(entity.crafting_categories) do
-        if category == "chemistry-or-cryogenics" then
-          addit = false
-          break
-        end
-      end
-      if addit then
-        table.insert(entity.crafting_categories, "chemistry-or-cryogenics")
-      end
-    end
-  end
 end

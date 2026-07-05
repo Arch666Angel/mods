@@ -122,7 +122,7 @@ if mods["bobplates"] then
 
   for _, name in pairs(alloy_recipes) do
     if data.raw.recipe[name] then
-      data.raw.recipe[name].category = "angels-sintering-4"
+      data.raw.recipe[name].categories = { "angels-sintering-4" }
       OV.remove_unlock("bob-tungsten-processing", name)
       OV.add_unlock("angels-tungsten-smelting-1", name)
     end

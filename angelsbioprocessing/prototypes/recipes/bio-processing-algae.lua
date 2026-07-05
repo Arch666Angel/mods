@@ -12,7 +12,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-algae-brown",
-    category = "angels-bio-processing-2",
+    categories = { "angels-bio-processing-2" },
     subgroup = "angels-bio-processing-brown",
     enabled = false,
     auto_recycle = false,
@@ -32,7 +32,7 @@ data:extend({
     type = "recipe",
     name = "angels-algae-brown-burning",
     localised_name = { "item-name.angels-solid-lithium" },
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "angels-bio-processing-brown",
     enabled = false,
     auto_recycle = false,
@@ -51,7 +51,7 @@ data:extend({
     type = "recipe",
     name = "angels-algae-brown-burning-wash",
     localised_name = { "item-name.angels-solid-sodium-carbonate" },
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-brown",
     enabled = false,
     auto_recycle = false,
@@ -76,7 +76,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-alginic-acid",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-brown",
     enabled = false,
     auto_recycle = false,
@@ -96,7 +96,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-algae-green-simple",
-    category = "angels-bio-processing",
+    categories = { "angels-bio-processing" },
     subgroup = "angels-bio-processing-green",
     enabled = false,
     auto_recycle = false,
@@ -122,7 +122,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-algae-green",
-    category = "angels-bio-processing-2",
+    categories = { "angels-bio-processing-2" },
     subgroup = "angels-bio-processing-green",
     enabled = false,
     auto_recycle = false,
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-cellulose-fiber",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-green",
     enabled = false,
     auto_recycle = false,
@@ -166,7 +166,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-methanol-from-wood",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-green",
     enabled = false,
     auto_recycle = false,
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-algae-blue",
-    category = "angels-bio-processing-4",
+    categories = { "angels-bio-processing-4" },
     subgroup = "angels-bio-processing-blue",
     enabled = false,
     auto_recycle = false,
@@ -210,7 +210,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-blue-cellulose-fiber",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-blue",
     enabled = false,
     auto_recycle = false,
@@ -230,7 +230,7 @@ data:extend({
     type = "recipe",
     name = "angels-gas-ammonia-from-blue-fiber",
     localised_name = { "fluid-name.angels-gas-ammonia" },
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-blue",
     enabled = false,
     auto_recycle = false,
@@ -253,7 +253,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-algae-red",
-    category = "angels-bio-processing-3",
+    categories = { "angels-bio-processing-3" },
     subgroup = "angels-bio-processing-red",
     enabled = false,
     auto_recycle = false,
@@ -274,7 +274,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-red-cellulose-fiber",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-red",
     enabled = false,
     auto_recycle = false,
@@ -293,7 +293,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-calcium-carbonate",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-red",
     enabled = false,
     auto_recycle = false,

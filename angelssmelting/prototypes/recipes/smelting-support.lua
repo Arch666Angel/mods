@@ -4,7 +4,7 @@ data:extend({
     type = "recipe",
     name = "angels-coolant-cool-steam",
     localised_name = { "fluid-name.angels-water-purified" },
-    category = "angels-cooling",
+    categories = { "angels-cooling" },
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-coolant",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-coolant",
     energy_required = 4,
     enabled = false,
@@ -47,7 +47,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-used-filtration-1",
-    category = "angels-filtering-2",
+    categories = { "angels-filtering-2" },
     subgroup = "angels-coolant",
     energy_required = 5, --4
     enabled = false,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-used-filtration-2",
-    category = "angels-filtering-3",
+    categories = { "angels-filtering-3" },
     subgroup = "angels-coolant",
     energy_required = 3.5, --4
     enabled = false,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-300",
-    category = "angels-cooling",
+    categories = { "angels-cooling" },
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-200",
-    category = "angels-cooling",
+    categories = { "angels-cooling" },
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -148,7 +148,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-coolant-cool-100",
-    category = "angels-cooling",
+    categories = { "angels-cooling" },
     subgroup = "angels-coolant",
     energy_required = 2,
     enabled = false,
@@ -180,7 +180,7 @@ data:extend({
     type = "recipe",
     name = "angels-casing-resin-mold",
     localised_name = { "item-name.motor-casing-0" },
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
@@ -209,7 +209,7 @@ data:extend({
     type = "recipe",
     name = "angels-mold-expendable",
     localised_name = { "item-name.mold-expendable" },
-    category = "angels-sintering",
+    categories = { "angels-sintering" },
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
@@ -241,7 +241,7 @@ data:extend({
     type = "recipe",
     name = "angels-mold-non-expendable",
     localised_name = { "item-name.mold-non-expendable" },
-    category = "angels-sintering-3",
+    categories = { "angels-sintering-3" },
     subgroup = "angels-mold-casting",
     energy_required = 4,
     enabled = false,
@@ -272,7 +272,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mold-non-expendable-wash",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "angels-mold-casting",
     energy_required = 3,
     enabled = false,

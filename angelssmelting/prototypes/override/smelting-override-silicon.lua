@@ -135,7 +135,7 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
       {
         name = "bob-silicon-powder",
         subgroup = "angels-silicon",
-        category = "angels-powderizing-1",
+        categories = { "angels-powderizing-1" },
         energy_required = 0.5,
         ingredients = {
           { "!!" },

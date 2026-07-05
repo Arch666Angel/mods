@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-blue-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
@@ -27,7 +27,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-red-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-yellow-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
@@ -75,7 +75,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-purple-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-cyan-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,
@@ -123,7 +123,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-geode-lightgreen-processing",
-    category = "angels-ore-refining-t1",
+    categories = { "angels-ore-refining-t1" },
     subgroup = "angels-geode-processing-2",
     energy_required = 1,
     enabled = false,

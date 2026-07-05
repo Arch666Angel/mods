@@ -5,7 +5,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-garden-cultivating-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-gardens",
     enabled = false,
     auto_recycle = false,
@@ -37,7 +37,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-garden",
-    category = "angels-temperate-farming",
+    categories = { "angels-temperate-farming" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-garden-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -131,7 +131,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-garden-b",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-garden-cultivating-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-gardens",
     enabled = false,
     auto_recycle = false,
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-garden",
-    category = "angels-desert-farming",
+    categories = { "angels-desert-farming" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -245,7 +245,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-garden-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -309,7 +309,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-garden-b",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -367,7 +367,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-garden-cultivating-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-gardens",
     enabled = false,
     auto_recycle = false,
@@ -399,7 +399,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-garden",
-    category = "angels-swamp-farming",
+    categories = { "angels-swamp-farming" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -423,7 +423,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-garden-a",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     energy_required = 300,
@@ -486,7 +486,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-garden-b",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -545,7 +545,7 @@ data:extend({
     type = "recipe",
     name = "angels-solid-soil",
     localised_name = { "item-name.angels-solid-soil" },
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-wood",
     enabled = false,
     auto_recycle = false,
@@ -565,7 +565,7 @@ data:extend({
     type = "recipe",
     name = "angels-solid-soil-alternative",
     localised_name = { "item-name.angels-solid-soil" },
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-wood",
     enabled = false,
     auto_recycle = false,
@@ -584,7 +584,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-fertilizer",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "angels-bio-wood",
     enabled = false,
     auto_recycle = false,
@@ -602,7 +602,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-alienated-fertilizer",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     subgroup = "angels-bio-wood",
     enabled = false,
     auto_recycle = false,
@@ -622,7 +622,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-upgrade",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-blocks",
     enabled = false,
     energy_required = 4,
@@ -639,7 +639,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-upgrade",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-blocks",
     enabled = false,
     energy_required = 4,
@@ -656,7 +656,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-upgrade",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-blocks",
     enabled = false,
     energy_required = 4,
@@ -675,7 +675,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-garden-cultivating",
-    category = "angels-basic-farming",
+    categories = { "angels-basic-farming" },
     subgroup = "angels-farming-gardens",
     enabled = false,
     auto_recycle = false,

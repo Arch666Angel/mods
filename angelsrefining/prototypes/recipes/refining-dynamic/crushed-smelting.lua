@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "iron-plate",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "raw-material",
     energy_required = 7,
     ingredients = { { type = "item", name = "angels-ore1-crushed", amount = 3 } },
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "recipe",
     name = "copper-plate",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "raw-material",
     energy_required = 7,
     ingredients = { { type = "item", name = "angels-ore3-crushed", amount = 3 } },

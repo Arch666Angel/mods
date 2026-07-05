@@ -414,29 +414,38 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
   end
 end
 
-ov_functions.add_additional_category = function(recipe, category)
+ov_functions.add_recipe_category = function(recipe, category)
   if type(recipe) == "table" then
     for _, rec in pairs(recipe) do
-      add_additional_category(rec, category)
+      ov_functions.add_recipe_category(rec, category)
     end
-  else
-    guarantee_subtable(modify_table, recipe)
-    local modify = modify_table[recipe]
-    guarantee_subtable(modify, "additional_categories")
-    modify.additional_categories[category] = true
+  elseif data.raw["recipe-category"][category] then
+    recipe.categories = recipe.categories or { "crafting" }
+    local found = false
+    for _, category_name in pairs(recipe.categories) do
+      if category_name == category then
+        found = true
+        break
+      end
+    end
+    if not found then
+      table.insert(recipe.categories, category)
+    end
   end
 end
 
-ov_functions.remove_additional_category = function(recipe, category)
+ov_functions.remove_recipe_category = function(recipe, category)
   if type(recipe) == "table" then
     for _, rec in pairs(recipe) do
-      remove_additional_category(rec, category)
+      remove_recipe_category(rec, category)
     end
   else
-    guarantee_subtable(modify_table, recipe)
-    local modify = modify_table[recipe]
-    guarantee_subtable(modify, "additional_categories")
-    modify.additional_categories[category] = false
+    recipe.categories = recipe.categories or { "crafting" }
+    for ek = #tech.effects, 1, -1 do
+      if recipe.categories[ek] == category then
+        table.remove(recipe.categories, ek)
+      end
+    end
   end
 end
 
@@ -753,31 +762,16 @@ local function adjust_recipe(recipe) -- check a recipe for basic adjustments bas
       table.insert(array, new_item)
     end
   end
-  local function adjust_additional_categories()
+  local function adjust_categories()
     local modifications = modify_table[recipe.name]
-    if modifications then
-      for category_name, flag in pairs(modifications.additional_categories) do
-        if flag then
-          local category = data.raw["recipe-category"][category_name]
-          if category then
-            guarantee_subtable(recipe, "additional_categories")
-            safe_insert(recipe.additional_categories, category_name)
-          end
-        elseif recipe.additional_categories then
-          for i, category in pairs(recipe.additional_categories) do
-            if category == category_name then
-              table.remove(recipe.additional_categories, i)
-              break
-            end
-          end
-        end
-      end
+    if modifications and modifications.categories then
+      data.raw.recipe[recipe.name] = modifications.categories
     end
   end
 
   adjust_difficulty(recipe)
   adjust_member(recipe, "icon", "recipe_icons")
-  adjust_additional_categories()
+  adjust_categories()
 end
 
 local function adjust_technology(tech, tech_name) -- check a tech for basic adjustments based on tables and make any necessary changes

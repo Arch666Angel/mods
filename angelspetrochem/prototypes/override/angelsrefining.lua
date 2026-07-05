@@ -22,8 +22,8 @@ if angelsmods.refining then
   data.raw["assembling-machine"]["angels-liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
 
   OV.patch_recipes({
-    { name = "angels-gas-carbon-monoxide", category = "angels-liquifying" },
-    { name = "angels-gas-carbon-dioxide", category = "angels-liquifying" },
+    { name = "angels-gas-carbon-monoxide", categories = { "angels-liquifying" } },
+    { name = "angels-gas-carbon-dioxide", categories = { "angels-liquifying" } },
     { name = "angels-liquifier", subgroup = "angels-petrochem-buildings-electrolyser", order = "b[liquifier]-a" },
     { name = "angels-liquifier-2", subgroup = "angels-petrochem-buildings-electrolyser", order = "b[liquifier]-b" },
     { name = "angels-liquifier-3", subgroup = "angels-petrochem-buildings-electrolyser", order = "b[liquifier]-c" },

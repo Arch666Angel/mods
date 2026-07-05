@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-cellulose",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-green",
     enabled = false,
     auto_recycle = false,
@@ -24,7 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-copper",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-gold",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -62,7 +62,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-tungsten",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-cobalt",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-titanium",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-zinc",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -138,7 +138,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-iron",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,
@@ -157,7 +157,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-paste-silver",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-paste",
     enabled = false,
     auto_recycle = false,

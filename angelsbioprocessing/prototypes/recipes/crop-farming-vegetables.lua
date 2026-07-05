@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-1",
-    category = "angels-temperate-farming",
+    categories = { "angels-temperate-farming" },
     subgroup = "angels-farming-temperate",
     enabled = false,
     auto_recycle = false,
@@ -28,7 +28,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-2",
-    category = "angels-temperate-farming",
+    categories = { "angels-temperate-farming" },
     subgroup = "angels-farming-temperate",
     enabled = false,
     auto_recycle = false,
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-3",
-    category = "angels-temperate-farming",
+    categories = { "angels-temperate-farming" },
     subgroup = "angels-farming-temperate",
     enabled = false,
     auto_recycle = false,
@@ -78,7 +78,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-4",
-    category = "angels-advanced-temperate-farming",
+    categories = { "angels-advanced-temperate-farming" },
     subgroup = "angels-farming-temperate",
     enabled = false,
     auto_recycle = false,
@@ -104,7 +104,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-5",
-    category = "angels-advanced-temperate-farming",
+    categories = { "angels-advanced-temperate-farming" },
     subgroup = "angels-farming-temperate",
     enabled = false,
     auto_recycle = false,
@@ -131,7 +131,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-1-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -148,7 +148,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-2-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -165,7 +165,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-3-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -190,7 +190,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-4-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -215,7 +215,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-temperate-5-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-temperate-seed",
     enabled = false,
     auto_recycle = false,
@@ -241,7 +241,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-1",
-    category = "angels-desert-farming",
+    categories = { "angels-desert-farming" },
     subgroup = "angels-farming-desert",
     enabled = false,
     auto_recycle = false,
@@ -266,7 +266,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-2",
-    category = "angels-desert-farming",
+    categories = { "angels-desert-farming" },
     subgroup = "angels-farming-desert",
     enabled = false,
     auto_recycle = false,
@@ -291,7 +291,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-3",
-    category = "angels-desert-farming",
+    categories = { "angels-desert-farming" },
     subgroup = "angels-farming-desert",
     enabled = false,
     auto_recycle = false,
@@ -316,7 +316,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-4",
-    category = "angels-advanced-desert-farming",
+    categories = { "angels-advanced-desert-farming" },
     subgroup = "angels-farming-desert",
     enabled = false,
     auto_recycle = false,
@@ -342,7 +342,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-5",
-    category = "angels-advanced-desert-farming",
+    categories = { "angels-advanced-desert-farming" },
     subgroup = "angels-farming-desert",
     enabled = false,
     auto_recycle = false,
@@ -369,7 +369,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-1-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -386,7 +386,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-2-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -403,7 +403,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-3-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -422,7 +422,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-4-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -441,7 +441,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-desert-5-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-desert-seed",
     enabled = false,
     auto_recycle = false,
@@ -461,7 +461,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-1",
-    category = "angels-swamp-farming",
+    categories = { "angels-swamp-farming" },
     subgroup = "angels-farming-swamp",
     enabled = false,
     auto_recycle = false,
@@ -486,7 +486,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-2",
-    category = "angels-swamp-farming",
+    categories = { "angels-swamp-farming" },
     subgroup = "angels-farming-swamp",
     enabled = false,
     auto_recycle = false,
@@ -511,7 +511,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-3",
-    category = "angels-swamp-farming",
+    categories = { "angels-swamp-farming" },
     subgroup = "angels-farming-swamp",
     enabled = false,
     auto_recycle = false,
@@ -536,7 +536,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-4",
-    category = "angels-advanced-swamp-farming",
+    categories = { "angels-advanced-swamp-farming" },
     subgroup = "angels-farming-swamp",
     enabled = false,
     auto_recycle = false,
@@ -562,7 +562,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-5",
-    category = "angels-advanced-swamp-farming",
+    categories = { "angels-advanced-swamp-farming" },
     subgroup = "angels-farming-swamp",
     enabled = false,
     auto_recycle = false,
@@ -589,7 +589,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-1-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -606,7 +606,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-2-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -623,7 +623,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-3-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -642,7 +642,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-4-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,
@@ -661,7 +661,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-swamp-5-seed",
-    category = "angels-seed-extractor",
+    categories = { "angels-seed-extractor" },
     subgroup = "angels-farming-swamp-seed",
     enabled = false,
     auto_recycle = false,

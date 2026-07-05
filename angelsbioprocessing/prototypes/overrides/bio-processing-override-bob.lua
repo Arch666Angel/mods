@@ -49,8 +49,8 @@ if mods["bobelectronics"] then
       },
     },
   })
-  OV.remove_additional_category("bob-phenolic-board", "electronics")
-  OV.add_additional_category("bob-phenolic-board", "electronics-with-fluid")
+  OV.add_recipe_category("bob-phenolic-board", "electronics")
+  OV.add_recipe_category("bob-phenolic-board", "electronics-with-fluid")
   OV.add_prereq("advanced-circuit", "angels-bio-paper-1")
   OV.add_prereq("advanced-circuit", "angels-resins")
   angelsmods.functions.remove_productivity("bob-phenolic-board")

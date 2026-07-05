@@ -121,8 +121,8 @@ if angelsmods.trigger.smelting_products["gold"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("angels-wire-gold", "electronics")
-    OV.add_additional_category("angels-wire-gold-2", "electronics")
+    OV.add_recipe_category("angels-wire-gold", "electronics")
+    OV.add_recipe_category("angels-wire-gold-2", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-gold")

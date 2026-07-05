@@ -4,7 +4,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix1-processing", --titanium
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -27,7 +27,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix2-processing", --gold
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -50,7 +50,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix3-processing", --cobalt
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -73,7 +73,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix4-processing", --unused
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -96,7 +96,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix5-processing", --uranium
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-crystal-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 1.5,
     allow_decomposition = false,
@@ -146,7 +146,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-crystal-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 1.5,
     allow_decomposition = false,
@@ -175,7 +175,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-crystal-mix6-processing", --thorium
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     allow_decomposition = false,

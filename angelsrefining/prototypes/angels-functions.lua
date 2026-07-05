@@ -1603,11 +1603,11 @@ function angelsmods.functions.modify_barreling_recipes()
       if angelsmods.trigger.enable_auto_barreling then
         if recipes[fn .. "-barrel"] then
           recipes[fn .. "-barrel"].hidden = true
-          recipes[fn .. "-barrel"].category = "angels-barreling-pump"
+          recipes[fn .. "-barrel"].categories = { "angels-barreling-pump" }
         end
         if recipes["empty-" .. fn .. "-barrel"] then
           recipes["empty-" .. fn .. "-barrel"].hidden = true
-          recipes["empty-" .. fn .. "-barrel"].category = "angels-barreling-pump"
+          recipes["empty-" .. fn .. "-barrel"].categories = { "angels-barreling-pump" }
         end
       end
       if
@@ -1744,7 +1744,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.name = "angels-" .. void_category .. "-void-" .. fluid_name
     recipe.localised_name =
       { "recipe-name.angels-" .. void_category .. "-void", { void_input_type .. "-name." .. fluid_name } }
-    recipe.category = "angels-" .. void_category .. "-void"
+    recipe.categories = { "angels-" .. void_category .. "-void" }
     recipe.enabled = true
     recipe.hide_from_signal_gui = true
     recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void
@@ -1935,10 +1935,6 @@ function angelsmods.functions.add_crafting_category(crafting_machine_type, craft
   end
 
   table.insert(crafting_machine_prototype.crafting_categories, crafting_category)
-
-  if crafting_category ~= "angels-unused-machine" then
-    angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, "angels-unused-machine")
-  end
 end
 
 function angelsmods.functions.remove_crafting_category(crafting_machine_type, crafting_machine_name, crafting_category)
@@ -1966,12 +1962,6 @@ function angelsmods.functions.remove_crafting_category(crafting_machine_type, cr
 
       if next(crafting_machine_categories) then
         return
-      else
-        angelsmods.functions.add_crafting_category(
-          crafting_machine_type,
-          crafting_machine_name,
-          "angels-unused-machine"
-        )
       end
     end
   end
@@ -2096,7 +2086,7 @@ function angelsmods.functions.tech_uses_science_pack(tech_name, pack)
 end
 
 -------------------------------------------------------------------------------
--- SET ELEVATED RAIL COLLISION FOR BUILDINGS --------------------------------------------
+-- SET ELEVATED RAIL COLLISION FOR BUILDINGS ----------------------------------
 -------------------------------------------------------------------------------
 function angelsmods.functions.set_building_collision_mask(b_type, layers_to_add)
   -- Function can also be used for adding other collision layers
@@ -2143,4 +2133,21 @@ function angelsmods.functions.patch_self_recycling_recipes(updated_items)
       end
     end
   end
+end
+
+-------------------------------------------------------------------------------
+-- CHECK IF RECIPE HAS CATEGORY -----------------------------------------------
+-------------------------------------------------------------------------------
+function angelsmods.functions.has_recipe_category(recipe_name, category)
+  if type(recipe_name) == "string" and type(category) == "string" then
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      for _, category_name in pairs(recipe.categories or {}) do
+        if category_name == category then
+          return true
+        end
+      end
+    end
+  end
+  return false
 end

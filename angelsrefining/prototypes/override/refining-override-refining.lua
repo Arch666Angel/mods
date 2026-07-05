@@ -1,12 +1,5 @@
 local OV = angelsmods.functions.OV
 
--- manual crafting
-for _, character in pairs(data.raw.character) do
-  if character.crafting_categories then
-    table.insert(character.crafting_categories, "angels-manual-crafting")
-  end
-end
-
 -------------------------------------------------------------------------------
 -- SAPHIRITE ------------------------------------------------------------------
 -------------------------------------------------------------------------------

@@ -128,7 +128,7 @@ if angelsmods.trigger.smelting_products["glass"].board then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("angels-glass-fiber-board", "electronics-with-fluid")
+    OV.add_recipe_category("angels-glass-fiber-board", "electronics-with-fluid")
   end
 else
   OV.disable_recipe({ "angels-glass-fiber-board" })

@@ -5,10 +5,12 @@ local OV = angelsmods.functions.OV
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   for k, v in pairs(data.raw.recipe) do
-    if v.category == "bob-mixing-furnace" then --alien-blue-alloy, alien-orange-alloy
-      data.raw.recipe[v.name].category = "angels-blast-smelting"
-    elseif v.category == "bob-chemical-furnace" then -- silicon-nitride, silicon-carbide, lithium-cobalt-oxide
-      data.raw.recipe[v.name].category = "angels-chemical-smelting"
+    if angelsmods.functions.has_recipe_category(v, "bob-mixing-furnace") then
+      --alien-blue-alloy, alien-orange-alloy
+      data.raw.recipe[v.name].categories = { "angels-blast-smelting" }
+    elseif angelsmods.functions.has_recipe_category(v, "bob-chemical-furnace") then
+      -- silicon-nitride, silicon-carbide, lithium-cobalt-oxide
+      data.raw.recipe[v.name].categories = { "angels-chemical-smelting" }
     end
   end
 

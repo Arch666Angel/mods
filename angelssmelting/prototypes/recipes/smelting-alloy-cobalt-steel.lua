@@ -4,7 +4,7 @@ if mods["bobplates"] then
     {
       type = "recipe",
       name = "angels-liquid-molten-cobalt-steel",
-      category = "angels-induction-smelting-3",
+      categories = { "angels-induction-smelting-3" },
       subgroup = "angels-alloys-casting",
       energy_required = 4,
       enabled = false,
@@ -23,7 +23,7 @@ if mods["bobplates"] then
       type = "recipe",
       name = "angels-plate-cobalt-steel",
       localised_name = { "item-name.bob-cobalt-steel-alloy" },
-      category = "angels-casting-3",
+      categories = { "angels-casting-3" },
       subgroup = "angels-alloys-casting",
       energy_required = 4,
       enabled = false,

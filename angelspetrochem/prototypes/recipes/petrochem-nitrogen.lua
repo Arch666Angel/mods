@@ -4,7 +4,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-compressed-air",
-    category = "angels-petrochem-air-filtering",
+    categories = { "angels-petrochem-air-filtering" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 6,
     enabled = false,
@@ -24,7 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-air-separation",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-nitrate-processing",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -80,7 +80,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-nitrogen-monoxide",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -116,7 +116,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-nitrogen-dioxide",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -142,7 +142,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-ammonia",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-ammonium-chloride",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -200,7 +200,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-urea",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -230,7 +230,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-nitric-acid",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -262,7 +262,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sodium-nitrate-acid-processing",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -294,7 +294,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-melamine",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-nitrogen",
     energy_required = 2,
     enabled = false,
@@ -326,7 +326,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-monochloramine",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
@@ -352,7 +352,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-hydrazine",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
@@ -390,7 +390,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-methylamine",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
@@ -420,7 +420,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-dimethylamine",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
@@ -450,7 +450,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-dimethylhydrazine",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 4,
     enabled = false,
@@ -480,7 +480,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-dinitrogen-tetroxide",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
@@ -512,7 +512,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-ammonium-nitrate",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
@@ -536,7 +536,7 @@ data:extend({
     type = "recipe",
     name = "angels-solid-ammonium-perchlorate",
     localised_name = { "item-name.angels-solid-ammonium-perchlorate" },
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-rocket",
     energy_required = 2,
     enabled = false,
@@ -564,7 +564,7 @@ data:extend({
     type = "recipe",
     name = "angels-rocket-oxidizer-capsule",
     localised_name = { "item-name.angels-rocket-oxidizer-capsule" },
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
     enabled = false,
@@ -583,7 +583,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-fuel-capsule",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-petrochem-fuel",
     energy_required = 4.5,
     enabled = false,
@@ -603,7 +603,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-rocket-booster",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,
     enabled = false,
@@ -622,7 +622,7 @@ data:extend({
     type = "recipe",
     name = "angels-rocket-booster-2",
     localised_name = { "item-name.angels-rocket-booster" },
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     subgroup = "angels-petrochem-fuel",
     energy_required = 1,
     enabled = false,

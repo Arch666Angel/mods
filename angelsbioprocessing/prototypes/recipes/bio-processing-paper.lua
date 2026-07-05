@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-cellulose-fiber-raw-wood",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     auto_recycle = false,
@@ -24,7 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-wood-pellets",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     hide_from_signal_gui = true,
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-wood-bricks",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     hide_from_signal_gui = true,
@@ -60,7 +60,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-gas-carbon-dioxide-from-wood",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     auto_recycle = false,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-wood-charcoal",
-    category = "smelting",
+    categories = { "smelting" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     auto_recycle = false,
@@ -107,7 +107,7 @@ data:extend({
     type = "recipe",
     name = "angels-carbon-from-charcoal",
     localised_name = { "item-name.angels-solid-carbon" },
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-wood",
     enabled = false,
     auto_recycle = false,
@@ -134,7 +134,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-wood-pulp",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-paper",
     enabled = false,
     auto_recycle = false,
@@ -162,7 +162,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-pulping-liquor",
-    category = "angels-advanced-chemistry",
+    categories = { "angels-advanced-chemistry" },
     subgroup = "angels-bio-liquor",
     enabled = false,
     auto_recycle = false,
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-brown-liquor-recovery",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-liquor",
     enabled = false,
     auto_recycle = false,
@@ -226,7 +226,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sulfite-pulping",
-    category = "angels-advanced-chemistry",
+    categories = { "angels-advanced-chemistry" },
     subgroup = "angels-bio-paper",
     enabled = false,
     auto_recycle = false,
@@ -259,7 +259,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-white-liquor",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-liquor",
     enabled = false,
     auto_recycle = false,
@@ -287,7 +287,7 @@ data:extend({
     type = "recipe",
     name = "angels-liquid-green-liquor",
     localised_name = { "recipe-name.angels-kraft-recovery" },
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-liquor",
     enabled = false,
     auto_recycle = false,
@@ -313,7 +313,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-kraft-causting",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-bio-liquor",
     enabled = false,
     auto_recycle = false,
@@ -341,7 +341,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-kraft-cooking-washing",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-paper",
     enabled = false,
     auto_recycle = false,
@@ -374,7 +374,7 @@ data:extend({
     type = "recipe",
     name = "angels-solid-paper",
     localised_name = { "recipe-name.angels-solid-paper" },
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-paper",
     enabled = false,
     hide_from_signal_gui = true,
@@ -398,7 +398,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-paper-2",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-paper",
     enabled = false,
     auto_recycle = false,
@@ -431,7 +431,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-sodium-hypochlorite-decomposition",
-    category = "angels-chemical-smelting",
+    categories = { "angels-chemical-smelting" },
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
@@ -453,7 +453,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-solid-paper-3",
-    category = "chemistry",
+    categories = { "chemistry" },
     subgroup = "angels-bio-paper",
     enabled = false,
     auto_recycle = false,

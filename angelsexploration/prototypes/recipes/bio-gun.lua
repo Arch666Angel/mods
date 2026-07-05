@@ -16,7 +16,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-bio-ammo",
-    category = "crafting-with-fluid",
+    categories = { "crafting-with-fluid" },
     energy_required = 10,
     enabled = false,
     ingredients = {

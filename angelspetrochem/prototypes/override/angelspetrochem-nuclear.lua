@@ -39,7 +39,7 @@ OV.patch_recipes({
   {
     name = "uranium-fuel-cell",
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     ingredients = {
       { "!!" },
       { type = "item", name = "uranium-235", amount = 1 },

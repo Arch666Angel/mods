@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore1-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,
@@ -28,7 +28,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore2-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore3-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore4-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,
@@ -106,7 +106,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore5-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,
@@ -131,7 +131,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore6-pure-processing",
-    category = "angels-ore-sorting-4",
+    categories = { "angels-ore-sorting-4" },
     subgroup = "angels-ore-sorting-t4",
     energy_required = 2,
     enabled = false,

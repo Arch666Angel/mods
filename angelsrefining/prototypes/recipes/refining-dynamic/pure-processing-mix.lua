@@ -4,7 +4,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-pure-mix1-processing", --tungsten
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-5",
+    categories = { "angels-ore-sorting-5" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -27,7 +27,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-pure-mix2-processing", --platinum
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-5",
+    categories = { "angels-ore-sorting-5" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,
@@ -50,7 +50,7 @@ data:extend({
     type = "recipe",
     name = "angels-ore-pure-mix3-processing",
     localised_name = { "item-name.angels-void" },
-    category = "angels-ore-sorting-5",
+    categories = { "angels-ore-sorting-5" },
     subgroup = "angels-ore-sorting-advanced",
     energy_required = 1.5,
     enabled = false,

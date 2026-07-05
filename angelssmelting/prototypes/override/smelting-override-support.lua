@@ -21,7 +21,7 @@ if angelsmods.trigger.sintering_tech and mods["bobrevamp"] then
   OV.patch_recipes({
     {
       name = "bob-heat-shield-tile",
-      category = "angels-sintering-4",
+      categories = { "angels-sintering-4" },
     },
   })
   OV.add_prereq("bob-heat-shield", "angels-powder-metallurgy-4")

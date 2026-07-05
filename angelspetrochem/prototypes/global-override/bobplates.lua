@@ -223,31 +223,31 @@ if mods["bobplates"] then
   OV.patch_recipes({
     {
       name = "bob-aluminium-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "lithium-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "bob-lithium-perchlorate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "bob-nickel-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "bob-silicon-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "bob-titanium-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
     {
       name = "bob-zinc-plate",
-      category = "angels-petrochem-electrolyser",
+      categories = { "angels-petrochem-electrolyser" },
     },
   })
   angelsmods.functions.hide("bob-electrolyser")

@@ -17,7 +17,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     subgroup = "angels-power-nuclear-processing",
     energy_required = 120, --180
     ingredients = {
@@ -66,7 +66,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     subgroup = "angels-power-nuclear-processing",
     energy_required = 210, --540
     ingredients = {
@@ -116,7 +116,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
     ingredients = {
@@ -165,7 +165,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-processing",
     energy_required = 20,
     ingredients = {
@@ -224,7 +224,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 700, --7000
     ingredients = {
@@ -252,7 +252,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "centrifuging",
+    categories = { "centrifuging" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --120
     ingredients = {
@@ -302,7 +302,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 80, --1200
     ingredients = {
@@ -329,7 +329,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 110, --330
     ingredients = {
@@ -380,7 +380,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 260,
     ingredients = {
@@ -438,7 +438,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 500, --1000
     ingredients = {
@@ -467,7 +467,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 900,
     ingredients =
@@ -499,7 +499,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 400, --450
     ingredients = {
@@ -556,7 +556,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, -- 1000
     ingredients = {
@@ -621,7 +621,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 150, --1500
     ingredients = {
@@ -648,7 +648,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {
@@ -704,7 +704,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     subgroup = "angels-power-nuclear-fuel-cell",
     energy_required = 800, --6000
     ingredients = {
@@ -765,7 +765,7 @@ data:extend({
     energy_required = 90,
     enabled = false,
     hide_from_signal_gui = true,
-    category = "angels-centrifuging-2",
+    categories = { "angels-centrifuging-2" },
     ingredients = {
       { type = "item", name = "angels-plutonium-239", amount = 1 },
       { type = "item", name = "rocket-fuel", amount = 1 },
@@ -780,7 +780,7 @@ data:extend({
     localised_name = { "item-name.angels-nuclear-fuel-2" },
     energy_required = 90,
     enabled = false,
-    category = "angels-centrifuging-3",
+    categories = { "angels-centrifuging-3" },
     ingredients = {
       { type = "item", name = "angels-plutonium-239", amount = 2 },
       { type = "item", name = "rocket-fuel", amount = 3 },
@@ -794,7 +794,7 @@ data:extend({
     type = "recipe",
     name = "angels-atomic-bomb",
     localised_name = { "item-name.atomic-bomb" },
-    category = "angels-advanced-chemistry",
+    categories = { "angels-advanced-chemistry" },
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
@@ -824,7 +824,7 @@ data:extend({
     type = "recipe",
     name = "angels-atomic-bomb-2",
     localised_name = { "item-name.atomic-bomb" },
-    category = "angels-advanced-chemistry",
+    categories = { "angels-advanced-chemistry" },
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,

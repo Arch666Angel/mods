@@ -5,7 +5,7 @@ for _, category in pairs(data.raw["module-category"]) do
   end
 end
 
-local function add_category(entity, add_category_name)
+local function add_module_category(entity, add_category_name)
   local found = false
   for _, category_name in pairs(entity.allowed_module_categories) do
     if category_name == add_category_name then
@@ -18,7 +18,7 @@ local function add_category(entity, add_category_name)
   end
 end
 
-local function remove_category(entity, remove_category_name)
+local function remove_module_category(entity, remove_category_name)
   for i, category_name in pairs(entity.allowed_module_categories) do
     if category_name == remove_category_name then
       table.remove(entity.allowed_module_categories, i)
@@ -38,9 +38,9 @@ for _, entity_category in pairs({
   for _, entity in pairs(data.raw[entity_category]) do
     if entity.allowed_module_categories then
       if angelsmods.refining.productivity_exception[entity.name] then
-        add_category(entity, "angels-bio-yield")
+        add_module_category(entity, "angels-bio-yield")
       else
-        remove_category(entity, "angels-bio-yield")
+        remove_module_category(entity, "angels-bio-yield")
       end
     else
       entity.allowed_module_categories = table.deepcopy(module_categories)

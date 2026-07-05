@@ -44,7 +44,7 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
         name = "bob-silver-oxide",
         subgroup = "angels-silver",
         order = "e[silver-oxide]",
-        category = "angels-powder-mixing-3",
+        categories = { "angels-powder-mixing-3" },
       },
     })
   end
@@ -138,8 +138,8 @@ if angelsmods.trigger.smelting_products["silver"].wire then
   OV.add_prereq("advanced-circuit", "angels-silver-smelting-1")
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("angels-wire-silver", "electronics")
-    OV.add_additional_category("angels-wire-silver-2", "electronics")
+    OV.add_recipe_category("angels-wire-silver", "electronics")
+    OV.add_recipe_category("angels-wire-silver-2", "electronics")
   end
 else
   angelsmods.functions.hide("angels-wire-silver")

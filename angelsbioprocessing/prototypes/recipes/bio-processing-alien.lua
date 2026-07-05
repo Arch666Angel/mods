@@ -4,7 +4,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-alien-spores",
-    category = "angels-water-treatment",
+    categories = { "angels-water-treatment" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-alien-bacteria",
-    category = "angels-bio-processing",
+    categories = { "angels-bio-processing" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -41,7 +41,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-alien-goo",
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -74,7 +74,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-substrate-dish",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 5,
@@ -91,7 +91,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-seeded-dish",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 2,
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-seed",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -126,7 +126,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-egg-shell-seed",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -144,7 +144,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-enhancer",
-    category = "advanced-crafting",
+    categories = { "advanced-crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     auto_recycle = false,
@@ -163,7 +163,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-grindstone",
-    category = "crafting",
+    categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-intermediate",
     enabled = false,
     energy_required = 2,
@@ -180,7 +180,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-powder-from-dust",
-    category = "angels-powderizing-1",
+    categories = { "angels-powderizing-1" },
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
     auto_recycle = false,
@@ -211,7 +211,7 @@ data:extend({
     type = "recipe",
     name = "angels-crystal-powder-slurry",
     localised_name = { "fluid-name.angels-crystal-slurry" },
-    category = "angels-liquifying",
+    categories = { "angels-liquifying" },
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
     auto_recycle = false,
