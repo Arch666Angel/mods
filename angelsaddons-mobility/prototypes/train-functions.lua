@@ -98,7 +98,7 @@ local function append_speed_cap_to_train_locale_description(train_prototype)
   end
 
   -- Convert the tile/tick speed to km/h, discarding any digits after the decimal.
-  local speed_cap = tostring(math.floor(train_prototype.max_speed * 216 * 100) / 100)
+  local speed_cap = tostring(math.floor((train_prototype.max_speed or 1.5) * 216 * 100) / 100)
 
   if train_prototype.localised_description then
     if type(train_prototype.localised_description) == "string" then
@@ -396,7 +396,7 @@ local function generate_train_entities(ref_entity)
       copy.icons = add_tier_number(copy.icons, i, angelsmods.addons.mobility[train_type].number_tint)
       copy.minable.result = name
       copy.max_health = ref_entity.max_health * multiplier
-      copy.max_speed = ref_entity.max_speed * multiplier
+      copy.max_speed = (ref_entity.max_speed or 1.5) * multiplier
       copy.friction_force = ref_entity.friction_force / multiplier
       copy.air_resistance = ref_entity.air_resistance / multiplier
       copy.weight = ref_entity.weight * multiplier

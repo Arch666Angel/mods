@@ -225,6 +225,5 @@ funcs.generate_train_entities({
     },
     match_volume_to_activity = true,
   },
-  crash_trigger = crash_trigger(),
   impact_category = "wood",
 })
