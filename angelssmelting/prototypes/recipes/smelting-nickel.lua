@@ -157,8 +157,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-molten-nickel",
-    categories = { "angels-induction-smelting-2",
-    subgroup = "angels-nickel-casting" },
+    categories = { "angels-induction-smelting-2" },
+    subgroup = "angels-nickel-casting",
     energy_required = 4,
     enabled = false,
     auto_recycle = false,

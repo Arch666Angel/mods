@@ -158,8 +158,8 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-dust-processing",
-    categories = { "angels-ore-sorting-3",
-    subgroup = "angels-ore-sorting-t3" },
+    categories = { "angels-ore-sorting-3" },
+    subgroup = "angels-ore-sorting-t3",
     energy_required = 1.5,
     allow_decomposition = false,
     enabled = false,
