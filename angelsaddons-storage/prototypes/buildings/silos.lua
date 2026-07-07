@@ -1,10 +1,10 @@
 circuit_connector_definitions["angels-silo"] =
-  circuit_connector_definitions.create_single(universal_connector_template, {
+  circuit_connector_definitions.create_vector(universal_connector_template, {{
     variation = 3,
     main_offset = util.by_pixel(-43, -21.125),
     shadow_offset = util.by_pixel(-43, -21.125),
     show_shadow = true,
-  })
+  }})
 
 if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
   -----------------------------------------------------------------------------
