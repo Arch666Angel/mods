@@ -130,7 +130,7 @@ data:extend({
     collision_box = { { -2.5, -4 }, { 2.5, 4 } },
     selection_box = { { -2.5, -4 }, { 2.5, 4 } },
     effectivity = 0.7,
-    braking_power = "1000kW",
+    braking_force = (1000 * 1000) / 60,
     energy_source = {
       type = "burner",
       effectivity = 0.75,
@@ -157,7 +157,7 @@ data:extend({
     },
     consumption = "1400kW",
     terrain_friction_modifier = 0.2,
-    friction = 0.01,
+    friction_force = 0.01,
     light = {
       {
         type = "oriented",

@@ -55,7 +55,7 @@ data:extend({
     collision_box = { { -0.5, -1 }, { 0.5, 1 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     effectivity = 0.06,
-    braking_power = "100W",
+    braking_force = (100 * 1000) / 60,
     energy_source = {
       type = "burner",
       fuel_categories = { "chemical" },
@@ -74,7 +74,7 @@ data:extend({
     },
     consumption = "10kW",
     terrain_friction_modifier = 0.2,
-    friction = 0.0046, -- 50 km/h top speed on grass
+    friction_force = 0.0046, -- 50 km/h top speed on grass
     light = {
       {
         type = "oriented",
@@ -352,7 +352,7 @@ data:extend({
     selection_box = { { -1.55, -1.5 }, { 1.55, 3 } },
     drawing_box_vertical_extension = 1.5,
     effectivity = 0.7,
-    braking_power = "1000kW",
+    braking_force = (1000 * 1000) / 60,
     energy_source = {
       type = "burner",
       fuel_categories = { "chemical" },
@@ -371,7 +371,7 @@ data:extend({
     },
     consumption = "1200kW",
     terrain_friction_modifier = 0.2,
-    friction = 0.002,
+    friction_force = 0.002,
     light = {
       {
         type = "oriented",

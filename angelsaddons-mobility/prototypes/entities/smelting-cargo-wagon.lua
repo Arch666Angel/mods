@@ -25,8 +25,6 @@ funcs.generate_train_items({
   stack_size = 5,
 })
 
---- braking_force OR braking_power, but diagnostics wants both to be compliant.
----@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "cargo-wagon",
   name = "angels-smelting-cargo-wagon",

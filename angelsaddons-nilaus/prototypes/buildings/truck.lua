@@ -69,7 +69,7 @@ data:extend({
     collision_box = { { -1.5, -2.25 }, { 1.5, 2.25 } },
     selection_box = { { -1.5, -2.25 }, { 1.5, 2.25 } },
     effectivity = 3,
-    braking_power = "160kW",
+    braking_force = (160 * 1000) / 60,
     burner = {
       effectivity = 2,
       fuel_inventory_size = 2,
@@ -94,7 +94,7 @@ data:extend({
     },
     consumption = "40kW",
     terrain_friction_modifier = 1,
-    friction = 0.003,
+    friction_force = 0.003,
     light = {
       {
         type = "oriented",
@@ -428,7 +428,7 @@ data:extend({
     collision_box = { { -1.5, -2.25 }, { 1.5, 2.25 } },
     selection_box = { { -1.5, -2.25 }, { 1.5, 2.25 } },
     effectivity = 5,
-    braking_power = "620kW",
+    braking_force = (620 * 1000) / 60,
     burner = {
       effectivity = 2,
       fuel_inventory_size = 2,
@@ -453,7 +453,7 @@ data:extend({
     },
     consumption = "60kW",
     terrain_friction_modifier = 1,
-    friction = 0.0015,
+    friction_force = 0.0015,
     light = {
       {
         type = "oriented",
