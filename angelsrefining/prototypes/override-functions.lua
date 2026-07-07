@@ -724,12 +724,12 @@ local function adjust_recipe(recipe) -- check a recipe for basic adjustments bas
           item.name = new
         end
         if replace[item.name] then
-          if item.probability then
-            if replace[item.name].probability and replace[item.name].probability ~= item.probability then
-              --update probability if it exists in both cases
-              replace[item.name].probability = item.probability
+          if item.independent_probability then
+            if replace[item.name].independent_probability and replace[item.name].independent_probability ~= item.independent_probability then
+              --update independent_probability if it exists in both cases
+              replace[item.name].independent_probability = item.independent_probability
             else
-              --skip, don't touch recipes that add a probability to a static
+              --skip, don't touch recipes that add a independent_probability to a static
               replace[item.name .. "-p"] = item
             end
           elseif item.amount ~= replace[item.name].amount then --check both have amount and update old to new

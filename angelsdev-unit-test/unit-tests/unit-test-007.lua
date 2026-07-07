@@ -77,7 +77,7 @@ local unit_test_007 = function()
     for _, rocket_silo_product in pairs(rocket_silo_recipe.products) do
       if
         rocket_silo_product.type == "item"
-        and (rocket_silo_product.amount or (rocket_silo_product.amount_min and rocket_silo_product.probability))
+        and (rocket_silo_product.amount or (rocket_silo_product.amount_min and rocket_silo_product.independent_probability))
       then
         table.insert(items_to_ignore, rocket_silo_product.name)
       end

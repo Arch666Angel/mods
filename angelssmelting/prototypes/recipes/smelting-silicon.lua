@@ -268,7 +268,7 @@ data:extend({
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
-        probability = 0.80,
+        independent_probability = 0.80,
       },
     },
     main_product = "angels-mono-silicon",

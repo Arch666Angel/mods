@@ -34,7 +34,7 @@ data:extend({
           name = "angels-thermal-water",
           amount_min = 20,
           amount_max = 20,
-          probability = 1,
+          independent_probability = 1,
           temperature = 100,
         },
       },

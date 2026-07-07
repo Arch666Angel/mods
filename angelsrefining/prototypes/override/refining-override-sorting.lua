@@ -874,8 +874,8 @@ if angelsmods.functions.is_special_vanilla() then
       },
       results = {
         { "!!" },
-        { type = "item", name = "angels-ore1", amount = 1, probability = 0.4 },
-        { type = "item", name = "angels-ore4", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore1", amount = 1, independent_probability = 0.4 },
+        { type = "item", name = "angels-ore4", amount = 1, independent_probability = 0.4 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "angels-ore1",
@@ -892,8 +892,8 @@ if angelsmods.functions.is_special_vanilla() then
       },
       results = {
         { "!!" },
-        { type = "item", name = "angels-ore2", amount = 1, probability = 0.4 },
-        { type = "item", name = "angels-ore3", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore2", amount = 1, independent_probability = 0.4 },
+        { type = "item", name = "angels-ore3", amount = 1, independent_probability = 0.4 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "angels-ore2",
@@ -916,8 +916,8 @@ else
       },
       results = {
         { "!!" },
-        { type = "item", name = "angels-ore1", amount = 1, probability = 0.4 },
-        { type = "item", name = "angels-ore6", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore1", amount = 1, independent_probability = 0.4 },
+        { type = "item", name = "angels-ore6", amount = 1, independent_probability = 0.4 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "angels-ore1",
@@ -934,8 +934,8 @@ else
       },
       results = {
         { "!!" },
-        { type = "item", name = "angels-ore2", amount = 1, probability = 0.4 },
-        { type = "item", name = "angels-ore4", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore2", amount = 1, independent_probability = 0.4 },
+        { type = "item", name = "angels-ore4", amount = 1, independent_probability = 0.4 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "angels-ore2",
@@ -952,8 +952,8 @@ else
       },
       results = {
         { "!!" },
-        { type = "item", name = "angels-ore3", amount = 1, probability = 0.4 },
-        { type = "item", name = "angels-ore5", amount = 1, probability = 0.4 },
+        { type = "item", name = "angels-ore3", amount = 1, independent_probability = 0.4 },
+        { type = "item", name = "angels-ore5", amount = 1, independent_probability = 0.4 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "angels-ore3",

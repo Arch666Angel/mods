@@ -78,11 +78,11 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-token-bio", amount = 16 },
-      { type = "item", name = "angels-temperate-1-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-temperate-2-seed", amount = 5, probability = 0.3 },
-      { type = "item", name = "angels-temperate-3-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-temperate-4-seed", amount = 5, probability = 0.1 },
-      { type = "item", name = "angels-temperate-5-seed", amount = 5, probability = 0.05 },
+      { type = "item", name = "angels-temperate-1-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-temperate-2-seed", amount = 5, independent_probability = 0.3 },
+      { type = "item", name = "angels-temperate-3-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-temperate-4-seed", amount = 5, independent_probability = 0.1 },
+      { type = "item", name = "angels-temperate-5-seed", amount = 5, independent_probability = 0.05 },
     },
     icons = {
       {
@@ -141,11 +141,11 @@ data:extend({
       { type = "item", name = "angels-temperate-garden", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-temperate-1-seed", amount = 5, probability = 0.8 },
-      { type = "item", name = "angels-temperate-2-seed", amount = 5, probability = 0.6 },
-      { type = "item", name = "angels-temperate-3-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-temperate-4-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-temperate-5-seed", amount = 5, probability = 0.1 },
+      { type = "item", name = "angels-temperate-1-seed", amount = 5, independent_probability = 0.8 },
+      { type = "item", name = "angels-temperate-2-seed", amount = 5, independent_probability = 0.6 },
+      { type = "item", name = "angels-temperate-3-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-temperate-4-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-temperate-5-seed", amount = 5, independent_probability = 0.1 },
     },
     icons = {
       {
@@ -256,11 +256,11 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-token-bio", amount = 16 },
-      { type = "item", name = "angels-desert-1-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-desert-2-seed", amount = 5, probability = 0.3 },
-      { type = "item", name = "angels-desert-3-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-desert-4-seed", amount = 5, probability = 0.1 },
-      { type = "item", name = "angels-desert-5-seed", amount = 5, probability = 0.05 },
+      { type = "item", name = "angels-desert-1-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-desert-2-seed", amount = 5, independent_probability = 0.3 },
+      { type = "item", name = "angels-desert-3-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-desert-4-seed", amount = 5, independent_probability = 0.1 },
+      { type = "item", name = "angels-desert-5-seed", amount = 5, independent_probability = 0.05 },
     },
     icons = {
       {
@@ -319,11 +319,11 @@ data:extend({
       { type = "item", name = "angels-desert-garden", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-desert-1-seed", amount = 5, probability = 0.8 },
-      { type = "item", name = "angels-desert-2-seed", amount = 5, probability = 0.6 },
-      { type = "item", name = "angels-desert-3-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-desert-4-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-desert-5-seed", amount = 5, probability = 0.1 },
+      { type = "item", name = "angels-desert-1-seed", amount = 5, independent_probability = 0.8 },
+      { type = "item", name = "angels-desert-2-seed", amount = 5, independent_probability = 0.6 },
+      { type = "item", name = "angels-desert-3-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-desert-4-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-desert-5-seed", amount = 5, independent_probability = 0.1 },
     },
     icons = {
       {
@@ -433,11 +433,11 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-token-bio", amount = 16 },
-      { type = "item", name = "angels-swamp-1-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-swamp-2-seed", amount = 5, probability = 0.3 },
-      { type = "item", name = "angels-swamp-3-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-swamp-4-seed", amount = 5, probability = 0.1 },
-      { type = "item", name = "angels-swamp-5-seed", amount = 5, probability = 0.05 },
+      { type = "item", name = "angels-swamp-1-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-swamp-2-seed", amount = 5, independent_probability = 0.3 },
+      { type = "item", name = "angels-swamp-3-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-swamp-4-seed", amount = 5, independent_probability = 0.1 },
+      { type = "item", name = "angels-swamp-5-seed", amount = 5, independent_probability = 0.05 },
     },
     icons = {
       {
@@ -496,11 +496,11 @@ data:extend({
       { type = "item", name = "angels-swamp-garden", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-swamp-1-seed", amount = 5, probability = 0.8 },
-      { type = "item", name = "angels-swamp-2-seed", amount = 5, probability = 0.6 },
-      { type = "item", name = "angels-swamp-3-seed", amount = 5, probability = 0.4 },
-      { type = "item", name = "angels-swamp-4-seed", amount = 5, probability = 0.2 },
-      { type = "item", name = "angels-swamp-5-seed", amount = 5, probability = 0.1 },
+      { type = "item", name = "angels-swamp-1-seed", amount = 5, independent_probability = 0.8 },
+      { type = "item", name = "angels-swamp-2-seed", amount = 5, independent_probability = 0.6 },
+      { type = "item", name = "angels-swamp-3-seed", amount = 5, independent_probability = 0.4 },
+      { type = "item", name = "angels-swamp-4-seed", amount = 5, independent_probability = 0.2 },
+      { type = "item", name = "angels-swamp-5-seed", amount = 5, independent_probability = 0.1 },
     },
     icons = {
       {
@@ -686,9 +686,9 @@ data:extend({
       { type = "fluid", name = "angels-water-mineralized", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-temperate-garden", amount = 1, probability = 0.01 },
-      { type = "item", name = "angels-desert-garden", amount = 1, probability = 0.01 },
-      { type = "item", name = "angels-swamp-garden", amount = 1, probability = 0.01 },
+      { type = "item", name = "angels-temperate-garden", amount = 1, independent_probability = 0.01 },
+      { type = "item", name = "angels-desert-garden", amount = 1, independent_probability = 0.01 },
+      { type = "item", name = "angels-swamp-garden", amount = 1, independent_probability = 0.01 },
     },
     icons = {
       {

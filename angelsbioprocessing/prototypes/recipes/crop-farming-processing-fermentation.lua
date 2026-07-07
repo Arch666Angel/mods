@@ -91,7 +91,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 50 },
-      { type = "item", name = "angels-solid-compost", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-solid-compost", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-liquid-acetic-acid",
     always_show_products = true,
@@ -122,7 +122,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 50 },
-      { type = "item", name = "angels-solid-compost", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-solid-compost", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-gas-ethanol",
     always_show_products = true,

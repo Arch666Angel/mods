@@ -73,9 +73,9 @@ return function(spawner_name, unit_name, evolution_factor)
   if loot and (#loot > 0) then
     local loot_description = { "", { "tips-and-tricks-description.angels-native-inhabitants-unit-loot" } }
     for _, drop in pairs(loot) do
-      local min = tnt.number_to_string(drop.count_min or 1)
-      local max = tnt.number_to_string(drop.count_max or 1)
-      local prob = tnt.number_to_string((drop.probability or 1) * 100)
+      local min = tnt.number_to_string(drop.amount_min or 1)
+      local max = tnt.number_to_string(drop.amount_max or 1)
+      local prob = tnt.number_to_string((drop.independent_probability or 1) * 100)
       local drop_description = { "tips-and-tricks-description.angels-native-inhabitants-unit-loot-item" }
       if prob == "100" then
         if min == max then

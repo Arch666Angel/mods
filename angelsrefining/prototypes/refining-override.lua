@@ -153,8 +153,8 @@ if data.raw.item["y-res1"] then
         { type = "fluid", name = "angels-mineral-sludge", amount = 50 },
       },
       results = {
-        { type = "item", name = "y-res1", amount = 1, probability = 0.5 },
-        { type = "item", name = "y-res2", amount = 1, probability = 0.5 },
+        { type = "item", name = "y-res1", amount = 1, independent_probability = 0.5 },
+        { type = "item", name = "y-res2", amount = 1, independent_probability = 0.5 },
       },
       icons = angelsmods.functions.create_liquid_recipe_icon({
         "y-res1",

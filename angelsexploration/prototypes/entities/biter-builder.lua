@@ -1361,10 +1361,11 @@ local function make_loot(loot_data)
           min, max = min / max, 1
         end
         table.insert(loot_proto, {
-          item = loot_item.item,
-          probability = prob < 1 and prob or nil,
-          count_min = min,
-          count_max = max,
+          type = "item",
+          name = loot_item.item,
+          independent_probability = prob < 1 and prob or nil,
+          amount_min = min,
+          amount_max = max,
         })
       end
     end

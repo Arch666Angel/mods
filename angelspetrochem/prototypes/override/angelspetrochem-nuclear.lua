@@ -19,7 +19,7 @@ OV.patch_recipes({
     name = "uranium-processing",
     hide_from_signal_gui = true,
     results = {
-      { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.000055 },
+      { type = "item", name = "angels-uranium-234", amount = 1, independent_probability = 0.000055 },
     },
     crafting_machine_tint = {
       primary = tint_colors.green,

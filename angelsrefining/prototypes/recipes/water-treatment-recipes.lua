@@ -300,7 +300,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-water-heavy-mud", amount = 200 },
-      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
+      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, independent_probability = 0.5 },
     },
     main_product = "angels-water-heavy-mud",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -323,7 +323,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-water-concentrated-mud", amount = 200 },
-      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
+      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, independent_probability = 0.5 },
     },
     main_product = "angels-water-concentrated-mud",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -346,7 +346,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-water-light-mud", amount = 200 },
-      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
+      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, independent_probability = 0.5 },
     },
     main_product = "angels-water-light-mud",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -369,7 +369,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-water-thin-mud", amount = 200 },
-      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
+      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, independent_probability = 0.5 },
     },
     main_product = "angels-water-thin-mud",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -392,7 +392,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-water-saline", amount = 200 },
-      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, probability = 0.5 },
+      { type = "item", name = "angels-solid-mud", amount_min = 0, amount_max = 3, independent_probability = 0.5 },
     },
     main_product = "angels-water-saline",
     icons = angelsmods.functions.add_number_icon_layer(
@@ -457,12 +457,12 @@ data:extend({
       { type = "fluid", name = "water", amount = 25 },
     },
     results = {
-      { type = "item", name = "angels-geode-blue", amount = 2, probability = 0.75 },
-      { type = "item", name = "angels-geode-cyan", amount = 1, probability = 0.6 },
-      { type = "item", name = "angels-geode-lightgreen", amount = 1, probability = 0.6 },
-      { type = "item", name = "angels-geode-purple", amount = 1, probability = 0.75 },
-      { type = "item", name = "angels-geode-red", amount = 2, probability = 0.75 },
-      { type = "item", name = "angels-geode-yellow", amount = 1, probability = 1 },
+      { type = "item", name = "angels-geode-blue", amount = 2, independent_probability = 0.75 },
+      { type = "item", name = "angels-geode-cyan", amount = 1, independent_probability = 0.6 },
+      { type = "item", name = "angels-geode-lightgreen", amount = 1, independent_probability = 0.6 },
+      { type = "item", name = "angels-geode-purple", amount = 1, independent_probability = 0.75 },
+      { type = "item", name = "angels-geode-red", amount = 2, independent_probability = 0.75 },
+      { type = "item", name = "angels-geode-yellow", amount = 1, independent_probability = 1 },
     },
     icon = "__angelsrefininggraphics__/graphics/icons/geode-blue.png",
     icon_size = 32,

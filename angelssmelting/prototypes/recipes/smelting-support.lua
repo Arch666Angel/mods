@@ -282,7 +282,7 @@ data:extend({
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 20 },
     },
     results = {
-      { type = "item", name = "angels-mold-non-expendable", amount = 1, probability = 0.975 },
+      { type = "item", name = "angels-mold-non-expendable", amount = 1, independent_probability = 0.975 },
       { type = "fluid", name = "angels-water-red-waste", amount = 20 },
     },
     icons = angelsmods.functions.add_number_icon_layer({

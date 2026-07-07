@@ -23,7 +23,7 @@ data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-ref
 
 -- oil
 data.raw["resource"]["crude-oil"]["minable"].results = {
-  { type = "fluid", name = "angels-liquid-multi-phase-oil", amount_min = 10, amount_max = 10, probability = 1 },
+  { type = "fluid", name = "angels-liquid-multi-phase-oil", amount_min = 10, amount_max = 10, independent_probability = 1 },
 }
 move_item("crude-oil", "angels-petrochem-raw-fluids", "bb", "fluid")
 angelsmods.functions.hide("petroleum-gas")

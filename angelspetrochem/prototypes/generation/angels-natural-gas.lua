@@ -73,7 +73,7 @@ angelsmods.functions.add_resource("make", {
 -- name = "angels-gas-natural-1",
 -- amount_min = 20,
 -- amount_max = 20,
--- probability = 1
+-- independent_probability = 1
 -- },
 -- }
 -- },

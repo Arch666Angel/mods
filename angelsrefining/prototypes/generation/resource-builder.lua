@@ -855,7 +855,7 @@ function angelsmods.functions.make_resource()
             name = input.output_name,
             amount_min = input.output_min,
             amount_max = input.output_max,
-            probability = input.output_probability,
+            independent_probability = input.output_probability,
             temperature = input.temperature,
           },
         },

@@ -88,9 +88,9 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-temperate-tree", amount = 1, probability = 0.25 },
-      { type = "item", name = "angels-swamp-tree", amount = 1, probability = 0.25 },
-      { type = "item", name = "angels-desert-tree", amount = 1, probability = 0.25 },
+      { type = "item", name = "angels-temperate-tree", amount = 1, independent_probability = 0.25 },
+      { type = "item", name = "angels-swamp-tree", amount = 1, independent_probability = 0.25 },
+      { type = "item", name = "angels-desert-tree", amount = 1, independent_probability = 0.25 },
     },
     icons = {
       {
@@ -272,7 +272,7 @@ data:extend({
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
-        probability = 0.9,
+        independent_probability = 0.9,
       },
     },
     main_product = "wood",
@@ -305,7 +305,7 @@ data:extend({
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
-        probability = 0.95,
+        independent_probability = 0.95,
       },
     },
     main_product = "wood",
@@ -338,7 +338,7 @@ data:extend({
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
-        probability = 0.99,
+        independent_probability = 0.99,
       },
     },
     main_product = "wood",
@@ -438,7 +438,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-temperate-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-temperate-tree", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-temperate-tree",
     allow_productivity = true,
@@ -723,7 +723,7 @@ data:extend({
       { type = "fluid", name = "angels-water-light-mud", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-swamp-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-swamp-tree", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-swamp-tree",
     allow_productivity = true,
@@ -954,7 +954,7 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-desert-tree", amount = 1, probability = 0.5 },
+      { type = "item", name = "angels-desert-tree", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-desert-tree",
     allow_productivity = true,

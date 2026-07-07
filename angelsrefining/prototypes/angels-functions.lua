@@ -1761,7 +1761,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
         type = "item",
         name = void_output_item,
         amount = void_output_amount,
-        probability = void_output_probability ~= 1 and void_output_probability or nil,
+        independent_probability = void_output_probability ~= 1 and void_output_probability or nil,
       },
     }
     recipe.main_product = void_output_item

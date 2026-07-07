@@ -228,8 +228,8 @@ end
 local function update_loot_table(loot_table)
   for _, loot in pairs(loot_table or {}) do
     if loot_to_be_converted[loot.item] then
-      --loot.count_min = ((loot.count_min == nil and 1) or loot.count_min) * loot_to_be_converted[loot.item].rate
-      loot.count_max = ((loot.count_max == nil and 1) or loot.count_max) * loot_to_be_converted[loot.item].rate
+      --loot.amount_min = ((loot.amount_min == nil and 1) or loot.amount_min) * loot_to_be_converted[loot.item].rate
+      loot.amount_max = ((loot.amount_max == nil and 1) or loot.amount_max) * loot_to_be_converted[loot.item].rate
       loot.item = loot_to_be_converted[loot.item].name
     end
   end

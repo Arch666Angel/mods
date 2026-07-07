@@ -9,53 +9,53 @@ if mods["bobores"] then
 
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
-      { name = "bob-diamond-ore", probability = bobmods.gems.DiamondRatio }
+      { name = "bob-diamond-ore", independent_probability = bobmods.gems.DiamondRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
-      { name = "bob-emerald-ore", probability = bobmods.gems.EmeraldRatio }
+      { name = "bob-emerald-ore", independent_probability = bobmods.gems.EmeraldRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
-      { name = "bob-amethyst-ore", probability = bobmods.gems.AmethystRatio }
+      { name = "bob-amethyst-ore", independent_probability = bobmods.gems.AmethystRatio }
     )
-    bobmods.lib.resource.add_result("infinite-gem-ore", { name = "bob-ruby-ore", probability = bobmods.gems.RubyRatio })
+    bobmods.lib.resource.add_result("infinite-gem-ore", { name = "bob-ruby-ore", independent_probability = bobmods.gems.RubyRatio })
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
-      { name = "bob-sapphire-ore", probability = bobmods.gems.SapphireRatio }
+      { name = "bob-sapphire-ore", independent_probability = bobmods.gems.SapphireRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-gem-ore",
-      { name = "bob-topaz-ore", probability = bobmods.gems.TopazRatio }
+      { name = "bob-topaz-ore", independent_probability = bobmods.gems.TopazRatio }
     )
   end
 
   if bobmods.ores.settings.GemsFromOtherOres == true then
     bobmods.lib.resource.add_result(
       "infinite-coal",
-      { name = "bob-diamond-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.DiamondRatio }
+      { name = "bob-diamond-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.DiamondRatio }
     )
 
     bobmods.lib.resource.add_result(
       "infinite-quartz",
-      { name = "bob-emerald-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.EmeraldRatio }
+      { name = "bob-emerald-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.EmeraldRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-quartz",
-      { name = "bob-amethyst-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.AmethystRatio }
+      { name = "bob-amethyst-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.AmethystRatio }
     )
 
     bobmods.lib.resource.add_result(
       "infinite-bauxite-ore",
-      { name = "bob-ruby-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.RubyRatio }
+      { name = "bob-ruby-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.RubyRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-bauxite-ore",
-      { name = "bob-sapphire-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.SapphireRatio }
+      { name = "bob-sapphire-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.SapphireRatio }
     )
     bobmods.lib.resource.add_result(
       "infinite-bauxite-ore",
-      { name = "bob-topaz-ore", probability = bobmods.ores.settings.GemProbability * bobmods.gems.TopazRatio }
+      { name = "bob-topaz-ore", independent_probability = bobmods.ores.settings.GemProbability * bobmods.gems.TopazRatio }
     )
     angelsmods.functions.remove_resource("infinite-gem-ore")
   end
@@ -63,7 +63,7 @@ if mods["bobores"] then
   if bobmods.ores.settings.LeadGivesNickel == true then
     bobmods.lib.resource.add_result(
       "infinite-lead-ore",
-      { name = "bob-nickel-ore", probability = bobmods.ores.settings.LeadNickelRatio }
+      { name = "bob-nickel-ore", independent_probability = bobmods.ores.settings.LeadNickelRatio }
     )
     if bobmods.ores.nickel.enabled == false then
       angelsmods.functions.remove_resource("infinite-nickel-ore")
@@ -77,13 +77,13 @@ if mods["bobores"] then
     if bobmods.ores.nickel.enabled then
       bobmods.lib.resource.add_result(
         "infinite-nickel-ore",
-        { name = "bob-cobalt-ore", probability = bobmods.ores.settings.NickelCobaltRatio }
+        { name = "bob-cobalt-ore", independent_probability = bobmods.ores.settings.NickelCobaltRatio }
       )
     else
       if bobmods.ores.settings.LeadGivesNickel == true then
         bobmods.lib.resource.add_result("infinite-lead-ore", {
           name = "bob-cobalt-ore",
-          probability = bobmods.ores.settings.LeadNickelRatio * bobmods.ores.settings.NickelCobaltRatio,
+          independent_probability = bobmods.ores.settings.LeadNickelRatio * bobmods.ores.settings.NickelCobaltRatio,
         })
       end
     end
