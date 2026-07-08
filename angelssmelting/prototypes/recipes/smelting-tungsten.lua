@@ -48,7 +48,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-tungsten-oxide"),
       1,
@@ -122,7 +121,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-tungsten-hexafluoride", amount = 60 },
     },
     main_product = "angels-gas-tungsten-hexafluoride",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       { { "__angelssmeltinggraphics__/graphics/icons/molecule-tungsten-hexafluoride.png", 72 } },
       "WFF"
@@ -145,7 +143,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-ammonium-paratungstate", amount = 24 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-ammonium-paratungstate"),
       1,
@@ -189,7 +186,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-tungsten-oxide"),
       2,

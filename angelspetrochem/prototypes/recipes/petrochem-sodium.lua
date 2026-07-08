@@ -19,7 +19,6 @@ data:extend({
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
       "angels-solid-sodium",
@@ -247,7 +246,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
     },
     main_product = "angels-liquid-aqueous-sodium-hydroxide",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       { "angels-solid-sodium-carbonate" },
       { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }
@@ -278,7 +276,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
     },
     main_product = "angels-liquid-aqueous-sodium-hydroxide",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       { "angels-solid-sodium-hydroxide" },
       { { 151, 212, 255 }, { 255, 255, 255 }, { 255, 255, 255 } }

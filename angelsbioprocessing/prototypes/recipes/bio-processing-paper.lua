@@ -15,7 +15,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-cellulose-fiber", amount = 4 },
     },
-    always_show_products = true,
     show_amount_in_title = false,
     icon = "__angelsbioprocessinggraphics__/graphics/icons/cellulose-fiber-raw-wood.png",
     icon_size = 32,
@@ -72,7 +71,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 70 },
     },
-    always_show_products = true,
     show_amount_in_title = false,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
@@ -177,7 +175,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-pulping-liquor", amount = 100 },
     },
     main_product = "angels-liquid-pulping-liquor",
-    always_show_products = true,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-pulping-liquor",
       "angels-gas-sulfur-dioxide",
@@ -274,7 +271,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-white-liquor", amount = 40 },
     },
     main_product = "angels-liquid-white-liquor",
-    always_show_products = true,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-white-liquor",
       "water",
@@ -300,7 +296,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-green-liquor", amount = 40 }, --+energy gain
     },
     main_product = "angels-liquid-green-liquor",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-green-liquor",
@@ -329,7 +324,6 @@ data:extend({
       { type = "item", name = "angels-solid-limestone", amount = 4 },
     },
     main_product = "angels-liquid-white-liquor",
-    always_show_products = true,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-white-liquor",
       "water",
@@ -355,7 +349,6 @@ data:extend({
       { type = "item", name = "angels-solid-wood-pulp", amount = 40 },
       { type = "fluid", name = "angels-liquid-black-liquor", amount_min = 35, amount_max = 40 },
     },
-    always_show_products = true,
     icons = AF.add_number_icon_layer(
       AF.get_object_icons("angels-solid-wood-pulp"),
       3,
@@ -385,7 +378,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-paper", amount = 3 },
     },
-    always_show_products = true,
     show_amount_in_title = false,
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(

@@ -442,7 +442,6 @@ data:extend({
     },
     main_product = "angels-temperate-tree",
     allow_productivity = true,
-    always_show_products = true,
     show_amount_in_title = false,
     icons = {
       {
@@ -539,7 +538,6 @@ data:extend({
       { type = "item", name = "angels-bio-resin", amount = 10 },
     },
     main_product = "angels-bio-resin",
-    always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
@@ -560,7 +558,6 @@ data:extend({
     },
     main_product = "angels-liquid-resin",
     allow_productivity = true,
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       "angels-bio-resin",
     }),
@@ -590,7 +587,6 @@ data:extend({
     },
     main_product = "angels-liquid-resin",
     allow_productivity = true,
-    always_show_products = true,
     show_amount_in_title = false,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       mods["bobplates"] and { "__bobplates__/graphics/icons/resin.png", 32 } or "angels-solid-resin",
@@ -619,7 +615,6 @@ data:extend({
       { type = "item", name = "angels-solid-resin", amount = 1 },
     },
     main_product = "angels-solid-resin",
-    always_show_products = true,
     order = "c[processing]-b[solid-resin]-b[wood-reprocessing]",
     crafting_machine_tint = {
       primary = { r = 240 / 255, g = 157 / 255, b = 14 / 255, a = 1 },
@@ -727,7 +722,6 @@ data:extend({
     },
     main_product = "angels-swamp-tree",
     allow_productivity = true,
-    always_show_products = true,
     show_amount_in_title = false,
     icons = {
       {
@@ -824,7 +818,6 @@ data:extend({
       { type = "item", name = "angels-bio-plastic", amount = 10 },
     },
     main_product = "angels-bio-plastic",
-    always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
@@ -845,7 +838,6 @@ data:extend({
     },
     main_product = "angels-liquid-plastic",
     allow_productivity = true,
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       "angels-bio-plastic",
     }),
@@ -958,7 +950,6 @@ data:extend({
     },
     main_product = "angels-desert-tree",
     allow_productivity = true,
-    always_show_products = true,
     show_amount_in_title = false,
     icons = {
       {
@@ -1054,7 +1045,6 @@ data:extend({
       { type = "item", name = "angels-bio-rubber", amount = 10 },
     },
     main_product = "angels-bio-rubber",
-    always_show_products = true,
     order = "b[arboretum]-c[tree-processing]",
   },
   {
@@ -1075,7 +1065,6 @@ data:extend({
     },
     main_product = "angels-liquid-rubber",
     allow_productivity = true,
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }, {
       "angels-bio-rubber",
     }),

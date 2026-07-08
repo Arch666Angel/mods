@@ -17,7 +17,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-fermentation-raw", amount = 75 },
     },
-    always_show_products = true,
     order = "a",
     icons = {
       {
@@ -55,7 +54,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-fermentation-raw", amount = 100 },
     },
-    always_show_products = true,
     order = "b",
     icons = {
       {
@@ -94,7 +92,6 @@ data:extend({
       { type = "item", name = "angels-solid-compost", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-liquid-acetic-acid",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-acid.png", 72 },
     }, "COH"),
@@ -125,7 +122,6 @@ data:extend({
       { type = "item", name = "angels-solid-compost", amount = 1, independent_probability = 0.5 },
     },
     main_product = "angels-gas-ethanol",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-ethanol.png", 72 },
     }, "COH"),
@@ -156,7 +152,6 @@ data:extend({
       { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
     },
     main_product = "angels-gas-ethylene",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
     }, "CHH"),
@@ -196,7 +191,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-acetic-acid",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-acid.png", 72 },
     }, "COH"),
@@ -227,7 +221,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-acetic-anhydride", amount = 150 },
     },
     main_product = "angels-liquid-acetic-anhydride",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-acetic-anhydride.png", 72 },
     }, "COH"),
@@ -258,7 +251,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-cellulose-acetate-mixture", amount = 100 },
     },
     main_product = "angels-liquid-cellulose-acetate-mixture",
-    always_show_products = true,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-cellulose-acetate-mixture",
       "angels-liquid-acetic-anhydride",
@@ -286,7 +278,6 @@ data:extend({
       { type = "fluid", name = "angels-water-yellow-waste", amount = 20 },
     },
     main_product = "angels-liquid-cellulose-acetate",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-cellulose-acetate.png", 72 },
     }, "COH"),
@@ -317,7 +308,6 @@ data:extend({
     },
     main_product = "angels-liquid-plastic",
     allow_productivity = true,
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 1, angelsmods.bioprocessing.number_tint),
     }),
@@ -355,7 +345,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-propionic-acid",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelsbioprocessinggraphics__/graphics/icons/molecule-propionic-acid.png", 72 },
     }, "COH"),
@@ -387,7 +376,6 @@ data:extend({
     },
     main_product = "angels-liquid-plastic",
     allow_productivity = true,
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 2, angelsmods.bioprocessing.number_tint),
     }),

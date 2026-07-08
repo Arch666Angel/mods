@@ -27,7 +27,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
@@ -56,7 +55,6 @@ data:extend({
     results = {
       { type = "item", name = "sulfur", amount = 3 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/solid-sulfur.png", 32 },
     }, "SSS"),
@@ -83,7 +81,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 60 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
     }, "SOO"),
@@ -110,7 +107,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 50 },
       { type = "item", name = "angels-void", amount = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72 },
     }, "SOO"),
@@ -137,7 +133,6 @@ data:extend({
     results = {
       { type = "fluid", name = "sulfuric-acid", amount = 60 },
     },
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfuric-acid.png", 72 },
     }, "SHO"),
@@ -167,7 +162,6 @@ data:extend({
       { type = "item", name = "angels-solid-calcium-sulfate", amount = 1 },
     },
     main_product = "angels-liquid-hydrofluoric-acid",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
@@ -201,7 +195,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     main_product = "angels-liquid-hydrofluoric-acid",
-    always_show_products = true,
     show_amount_in_title = false,
     icons = AF.create_liquid_recipe_icon(
       {
@@ -235,7 +228,6 @@ data:extend({
       { type = "fluid", name = "angels-water-greenyellow-waste", amount = 50 },
     },
     main_product = "angels-gas-hydrogen-fluoride",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },
     }, "FHH"),
@@ -283,7 +275,6 @@ data:extend({
       { type = "item", name = "angels-filter-lime-used", amount = 1, ignored_by_productivity = 1 },
       { type = "fluid", name = "angels-water-yellow-waste", amount = 20 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       "angels-filter-lime",
     }, "SSS"),
@@ -307,7 +298,6 @@ data:extend({
       { type = "item", name = "angels-filter-frame", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
     },
     main_product = "angels-gas-acid",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       "angels-gas-acid",
     }, "SSF"),
@@ -331,7 +321,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-enriched-hydrogen-sulfide", amount = 50, temperature = 100 },
     },
     main_product = "angels-gas-enriched-hydrogen-sulfide",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-sulfide.png", 72 },
     }, "SWsWs"),

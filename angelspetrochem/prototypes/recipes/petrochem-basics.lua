@@ -16,7 +16,6 @@ data:extend({
     results = {
       { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         "steam",
@@ -44,7 +43,6 @@ data:extend({
     results = {
       { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         "steam",
@@ -74,7 +72,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen", amount = 40 },
       { type = "item", name = "angels-slag", amount = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
@@ -112,7 +109,6 @@ data:extend({
       { type = "item", name = "angels-slag", amount = 1 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
@@ -146,7 +142,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 60 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
@@ -183,7 +178,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen", amount = 60 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
@@ -218,7 +212,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-water-purified", amount = 100 },
     },
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       "angels-water-purified",
     }, "WsWsWs"),
@@ -244,7 +237,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       { { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 } },
       "CCOc"
@@ -274,7 +266,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       { { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 } },
       "COcOc"
@@ -335,7 +326,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
@@ -368,7 +358,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       "angels-water-purified",
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 },
@@ -404,7 +393,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-methane", amount = 70 },
       { type = "item", name = "angels-solid-coke", amount = 6 }, --COKE
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
@@ -449,7 +437,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       "angels-liquid-mineral-oil",
       "angels-liquid-ngl",
@@ -488,7 +475,6 @@ data:extend({
       -- {type="fluid", name="angels-gas-hydrogen", amount=1},
       -- {type="fluid", name="angels-gas-methane", amount=1},
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
       "angels-gas-synthesis",
@@ -947,7 +933,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
       { type = "fluid", name = "angels-gas-deuterium", amount = 60 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/deuterium.png", 64 },
@@ -988,7 +973,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-deuterium", amount = 60 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/deuterium.png", 64 },

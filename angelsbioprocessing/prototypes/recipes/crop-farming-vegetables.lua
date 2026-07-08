@@ -16,7 +16,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-temperate-1", amount_min = 40, amount_max = 60 },
     },
-    always_show_products = true,
     allow_productivity = true,
     main_product = "angels-temperate-1",
     icon_size = 32,
@@ -41,7 +40,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-temperate-2", amount_min = 40, amount_max = 60 },
     },
-    always_show_products = true,
     main_product = "angels-temperate-2",
     allow_productivity = true,
     icon_size = 32,
@@ -254,7 +252,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-desert-1", amount_min = 30, amount_max = 40 },
     },
-    always_show_products = true,
     main_product = "angels-desert-1",
     allow_productivity = true,
     icon_size = 32,
@@ -279,7 +276,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-desert-2", amount_min = 30, amount_max = 40 },
     },
-    always_show_products = true,
     main_product = "angels-desert-2",
     allow_productivity = true,
     icon_size = 32,
@@ -474,7 +470,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-swamp-1", amount_min = 40, amount_max = 50 },
     },
-    always_show_products = true,
     main_product = "angels-swamp-1",
     allow_productivity = true,
     icon_size = 32,
@@ -499,7 +494,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-swamp-2", amount_min = 40, amount_max = 50 },
     },
-    always_show_products = true,
     main_product = "angels-swamp-2",
     allow_productivity = true,
     icon_size = 32,

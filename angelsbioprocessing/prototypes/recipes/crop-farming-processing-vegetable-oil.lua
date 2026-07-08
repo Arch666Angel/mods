@@ -14,7 +14,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-raw-vegetable-oil", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 255, 184, 062 }, { 255, 184, 062 }, { 255, 221, 061, 0.8 }, { 255, 221, 061, 0.8 } },
@@ -39,7 +38,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-raw-vegetable-oil", amount = 40 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 255, 184, 062 }, { 255, 184, 062 }, { 255, 221, 061, 0.8 }, { 255, 221, 061, 0.8 } },
@@ -64,7 +62,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-raw-vegetable-oil", amount = 30 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 255, 184, 062 }, { 255, 184, 062 }, { 255, 221, 061, 0.8 }, { 255, 221, 061, 0.8 } },
@@ -140,7 +137,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-fuel-oil", amount = 70 },
       { type = "fluid", name = "angels-liquid-mineral-oil", amount = 30 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-fuel-oil",
       "angels-liquid-mineral-oil",

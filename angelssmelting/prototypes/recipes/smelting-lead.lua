@@ -91,7 +91,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hexafluorosilicic-acid", amount = 60 },
     },
     main_product = "angels-liquid-hexafluorosilicic-acid",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-hexafluorosilicic-acid.png", 72 },
     }, "SiFF"),

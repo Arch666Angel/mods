@@ -15,7 +15,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-bio-alien-processed-meat", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-bio-alien-processed-meat",
     order = "d[meat]",
   },
@@ -39,7 +38,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-biter-small-egg", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-biter-small-egg",
     order = "a[small]-a[experiment]",
   },
@@ -61,7 +59,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-biter-medium-egg", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-biter-medium-egg",
     order = "b[medium]-a[experiment]",
   },
@@ -84,7 +81,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-biter-big-egg", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-biter-big-egg",
     order = "c[big]-a[experiment]",
   },
@@ -132,7 +128,6 @@ data:extend({
       },
     },
     allow_productivity = true,
-    always_show_products = true,
     main_product = "angels-biter-small-egg",
     icons = {
       {
@@ -195,7 +190,6 @@ data:extend({
       },
     },
     allow_productivity = true,
-    always_show_products = true,
     main_product = "angels-biter-medium-egg",
     icons = {
       {
@@ -250,7 +244,6 @@ data:extend({
       },
     },
     allow_productivity = true,
-    always_show_products = true,
     main_product = "angels-biter-big-egg",
     icons = {
       {

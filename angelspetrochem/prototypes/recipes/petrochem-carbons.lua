@@ -19,7 +19,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-condensates", amount = 30 },
       { type = "fluid", name = "angels-water-yellow-waste", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-liquid-condensates",
       "angels-gas-raw-1",
@@ -46,7 +45,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-acid", amount = 20 },
       { type = "fluid", name = "angels-liquid-ngl", amount = 80 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-liquid-ngl",
       "angels-gas-acid",
@@ -70,7 +68,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-ethane", amount = 30, fluidbox_index = 2 },
       { type = "fluid", name = "angels-gas-butane", amount = 20, fluidbox_index = 3 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
@@ -97,7 +94,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-butane", amount = 20 },
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
@@ -135,7 +131,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-butane", amount = 70 },
       { type = "fluid", name = "angels-liquid-naphtha", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
@@ -173,7 +168,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-butane", amount = 50 },
       { type = "fluid", name = "angels-liquid-toluene", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
@@ -212,7 +206,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-naphtha", amount = 50 },
       { type = "fluid", name = "angels-gas-methane", amount = 30 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       "angels-liquid-naphtha",
@@ -234,7 +227,6 @@ data:extend({
     enabled = false,
     hide_from_signal_gui = true,
     energy_required = 2,
-    always_show_products = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-multi-phase-oil", amount = 100 },
     },
@@ -272,7 +264,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-naphtha", amount = 50 },
       { type = "item", name = "angels-solid-oil-residual", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-naphtha",
       "angels-liquid-mineral-oil",
@@ -304,7 +295,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-naphtha", amount = 70 },
       { type = "item", name = "angels-solid-oil-residual", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
         "angels-liquid-naphtha",
@@ -343,7 +333,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-naphtha", amount = 30 },
       { type = "item", name = "angels-solid-oil-residual", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
         "angels-liquid-naphtha",
@@ -382,7 +371,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-naphtha", amount = 10 },
       { type = "item", name = "angels-solid-oil-residual", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
         "angels-liquid-naphtha",
@@ -419,7 +407,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-synthesis", amount = 150 },
       { type = "fluid", name = "angels-gas-residual", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-gas-synthesis",
     }, { { 196, 075, 085 }, { 170, 071, 081 }, { 148, 066, 075 } }),
@@ -447,7 +434,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-mineral-oil", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-mineral-oil",
     }, {
@@ -479,7 +465,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-residual", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-gas-synthesis",
     }, { { 063, 189, 063 }, { 058, 173, 58 }, { 053, 159, 053 } }),
@@ -507,7 +492,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-residual", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-gas-synthesis",
     }, { { 237, 212, 104 }, { 239, 210, 093 }, { 247, 216, 081 } }),
@@ -534,7 +518,6 @@ data:extend({
     results = {
       { type = "fluid", name = "lubricant", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "lubricant",
     }, { { 063, 189, 063 }, { 058, 173, 58 }, { 053, 159, 053 } }),
@@ -557,7 +540,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 40 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 60 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 },
@@ -585,7 +567,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-gas-synthesis",
     }, { { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }),
@@ -622,7 +603,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },
@@ -660,7 +640,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-liquid-naphtha",
     }, { { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }),
@@ -696,7 +675,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
     }, { { 210, 120, 210 }, { 175, 100, 175 }, { 140, 080, 140 } }),
@@ -724,7 +702,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 150 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-gas-synthesis",
     }, { { 064, 000, 064 }, { 128, 000, 128 }, { 192, 000, 192 } }),
@@ -747,7 +724,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-residual", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-gas-residual",
     }, { { 064, 000, 064 }, { 128, 000, 128 }, { 192, 000, 192 } }),
@@ -771,7 +747,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-methanol", amount = 80 },
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
     }, "CHWs"),
@@ -801,7 +776,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
     main_product = "angels-gas-ethylene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
     }, "CHWs"),
@@ -829,7 +803,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-benzene", amount = 80 },
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
     }, "CHWs"),
@@ -868,7 +841,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-butadiene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/butadiene.png", 72 },
     }, "CHWs"),
@@ -904,7 +876,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72 },
     }, { { 196, 075, 085 }, { 170, 071, 081 }, { 148, 066, 075 } }),
@@ -937,7 +908,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-benzene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
     }, "CHH"),
@@ -969,7 +939,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-polyethylene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       {
         icon = "__angelspetrochemgraphics__/graphics/icons/molecules/polyethylene.png",
@@ -1008,7 +977,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-methanol",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
     }, "COH"),
@@ -1043,7 +1011,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene-oxide.png", 72 },
     }, "COH"),
@@ -1080,7 +1047,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-toluene",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-toluene",
     }, { { 196, 075, 085 }, { 170, 071, 081 }, { 148, 066, 075 } }),
@@ -1116,7 +1082,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       "angels-liquid-toluene",
     }, "CHH"),
@@ -1153,7 +1118,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-formaldehyde",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/formaldehyde.png", 72 },
     }, "COH"),
@@ -1185,7 +1149,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-styrene",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/styrene.png", 72 },
     }, "CHH"),
@@ -1218,7 +1181,6 @@ data:extend({
       },
     },
     main_product = "angels-liquid-phenol",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/phenol.png", 72 },
     }, "COH"),
@@ -1243,7 +1205,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
     },
     main_product = "angels-gas-propene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72 },
     }, "CHWs"),
@@ -1276,7 +1237,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 20, ignored_by_productivity = 20 },
     },
     main_product = "angels-liquid-ethylbenzene",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylbenzene.png", 72 },
     }, "CHH"),
@@ -1307,7 +1267,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-ethylene-carbonate", amount = 90 },
       --{ type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 }
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene-carbonate.png", 72 },
     }, "COH"),
@@ -1344,7 +1303,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/phenol.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
@@ -1374,7 +1332,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-bisphenol-a", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/bisphenol_a.png", 72 },
     }, "COH"),

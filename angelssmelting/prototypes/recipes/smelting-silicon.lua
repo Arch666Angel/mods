@@ -53,7 +53,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
     },
     main_product = "angels-liquid-trichlorosilane",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-trichlorosilane.png", 72 },
     }, "SiHCl"),
@@ -78,7 +77,6 @@ data:extend({
       { type = "item", name = "angels-solid-aluminium-oxide", amount = 6 },
     },
     main_product = "angels-gas-silane",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelssmeltinggraphics__/graphics/icons/molecule-silane.png", 72 },
     }, "SiHH"),

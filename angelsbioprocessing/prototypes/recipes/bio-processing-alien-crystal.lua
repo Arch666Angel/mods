@@ -139,7 +139,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-crystal-splinter-harmonic",
     order = "d[harmonizing]",
   },
@@ -382,7 +381,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-crystal-shard-harmonic",
     order = "d[harmonizing]",
   },
@@ -624,7 +622,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-crystal-full-harmonic", amount = 1 },
     },
-    always_show_products = true,
     main_product = "angels-crystal-full-harmonic",
     order = "d[harmonizing]",
   },

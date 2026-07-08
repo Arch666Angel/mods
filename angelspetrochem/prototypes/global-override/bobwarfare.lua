@@ -21,7 +21,6 @@ if mods["bobwarfare"] then
     angelsmods.functions.move_item("bob-sulfuric-nitric-acid", "angels-petrochem-nitrogen-fluids", "oa", "fluid")
 
     OV.patch_recipes({ { name = "bob-sulfuric-nitric-acid", subgroup = "angels-petrochem-rocket", order = "ia" } })
-    data.raw["recipe"]["bob-sulfuric-nitric-acid"].always_show_products = true
 
     hide_sulfuric_nitric_acid_mixture = true -- with petrochem we can actualy use 3 inputs instead of making a submixture first
     if hide_sulfuric_nitric_acid_mixture then
@@ -53,7 +52,6 @@ if mods["bobwarfare"] then
       }),
     },
   })
-  data.raw["recipe"]["bob-nitroglycerin"].always_show_products = true
 
   OV.remove_unlock("bob-nitroglycerin-processing", "bob-glycerol")
   OV.add_prereq("bob-nitroglycerin-processing", "angels-explosives-1")

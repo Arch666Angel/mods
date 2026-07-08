@@ -27,7 +27,6 @@ data:extend({
       { type = "item", name = "angels-plutonium-239", amount = 8 },
     },
     main_product = "angels-plutonium-239",
-    always_show_products = true,
     show_amount_in_title = false,
     icons = {
       { -- need to have something as bottom layer
@@ -236,7 +235,6 @@ data:extend({
       { type = "item", name = "angels-uranium-fuel-cell", amount = 100 },
     },
     main_product = "angels-uranium-fuel-cell",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "a[uranium]-b",
     crafting_machine_tint = {
@@ -313,7 +311,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-mixed-oxide-cell", amount = 20 },
     },
-    always_show_products = true,
     show_amount_in_title = false,
     order = "b[AMOX]-a",
     crafting_machine_tint = {
@@ -451,7 +448,6 @@ data:extend({
       { type = "item", name = "angels-thorium-fuel-cell", amount = 15 },
     },
     main_product = "angels-thorium-fuel-cell",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "c[thorium]-a",
     crafting_machine_tint = {
@@ -482,7 +478,6 @@ data:extend({
       {type = "item", name = "angels-thorium-fuel-cell", amount = 10},
     },
     main_product = "angels-thorium-fuel-cell",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "c[thorium]-b",
     crafting_machine_tint = 
@@ -633,7 +628,6 @@ data:extend({
       { type = "item", name = "angels-deuterium-fuel-cell", amount = 1 },
     },
     main_product = "angels-deuterium-fuel-cell",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "d[deuterium]-a",
     --crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-gas-deuterium"),

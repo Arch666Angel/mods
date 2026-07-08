@@ -87,7 +87,6 @@ if mods["bobplates"] then
     angelsmods.functions.create_liquid_fluid_icon(nil, { { 237, 212, 104 }, { 247, 216, 081 }, { 247, 216, 081 } })
   OV.barrel_overrides("bob-liquid-fuel", "acid")
 
-  data.raw["recipe"]["bob-liquid-fuel"].always_show_products = true
   data.raw["recipe"]["bob-liquid-fuel"].icon = nil
   data.raw["recipe"]["bob-liquid-fuel"].icons = angelsmods.functions.create_liquid_recipe_icon(
     { "bob-liquid-fuel" },

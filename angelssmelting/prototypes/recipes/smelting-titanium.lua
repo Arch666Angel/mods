@@ -50,7 +50,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
         { "__angelssmeltinggraphics__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },
@@ -78,7 +77,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-titanium-tetrachloride", amount = 120 },
     },
     main_product = "angels-liquid-titanium-tetrachloride",
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.create_liquid_recipe_icon({
         { "__angelssmeltinggraphics__/graphics/icons/molecule-titanium-tetrachloride.png", 72 },

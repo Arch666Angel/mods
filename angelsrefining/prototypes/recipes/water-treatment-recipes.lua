@@ -15,7 +15,6 @@ data:extend({
       { type = "fluid", name = "angels-water-mineralized", amount = 100 },
     },
     main_product = "angels-water-mineralized",
-    always_show_products = true,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "water",--[[,"angels-stone-crushed"]]
       "angels-water-mineralized",
@@ -37,7 +36,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 100 },
     },
     main_product = "angels-water-purified",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-saline",
       "angels-water-purified",
@@ -59,7 +57,6 @@ data:extend({
       { type = "fluid", name = "angels-mineral-sludge", amount = 20 },
       { type = "fluid", name = "angels-water-purified", amount = 30 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-purified",
       "angels-mineral-sludge",
@@ -82,7 +79,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 70 },
       { type = "item", name = "sulfur", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-mineralized",
       "angels-water-purified",
@@ -109,7 +105,6 @@ data:extend({
       { type = "fluid", name = "angels-water-mineralized", amount = 20 },
       { type = "fluid", name = "angels-water-purified", amount = 70 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-mineralized",
       "angels-water-purified",
@@ -136,7 +131,6 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 20 },
       { type = "fluid", name = "angels-water-purified", amount = 70 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-saline",
       "angels-water-purified",
@@ -164,7 +158,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 70 },
       --{type="item", name="angels-fluorite-ore", amount=1},
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-water-mineralized",
       "angels-water-purified",
@@ -193,7 +186,6 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 400 },
     },
     main_product = "angels-water-saline",
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 039, 112, 194 }, { 168, 173, 173 }, { 070, 133, 232 }, { 185, 185, 185, 0.8 } },
@@ -220,7 +212,6 @@ data:extend({
       { type = "fluid", name = "angels-water-saline", amount = 1000 },
     },
     main_product = "angels-water-saline",
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 039, 112, 194 }, { 168, 173, 173 }, { 070, 133, 232 }, { 185, 185, 185, 0.8 } },

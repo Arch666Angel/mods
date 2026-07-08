@@ -56,7 +56,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hexachloroplatinic-acid", amount = 60 },
     },
     main_product = "angels-liquid-hexachloroplatinic-acid",
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(nil, { { 230, 191, 163 }, { 092, 218, 079 }, { 086, 112, 192 } }),
     crafting_machine_tint = AF.get_fluid_recipe_tint("angels-liquid-molten-platinum"),
     order = "d[liquid-hexachloroplatinic-acid]",

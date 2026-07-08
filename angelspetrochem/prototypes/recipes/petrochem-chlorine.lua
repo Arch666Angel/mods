@@ -18,7 +18,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen", amount = 60 },
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
@@ -42,7 +41,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png", 72 },
     }, "ClClH"),
@@ -68,7 +66,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-chlorine", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72 },
@@ -96,7 +93,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-chlor-methane", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/chloromethane.png", 72 },
     }, "CClH"),
@@ -123,7 +119,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
     }, "ClHO"),
@@ -151,7 +146,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 70 },
       { type = "item", name = "angels-solid-sodium-sulfate", amount = 3 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrochloric-acid.png", 72 },
     }, "ClHO"),
@@ -180,7 +174,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-ferric-chloride-solution", amount = 40 },
     },
     main_product = "angels-liquid-ferric-chloride-solution",
-    always_show_products = true,
     --icon = "__angelspetrochemgraphics__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
@@ -207,7 +200,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-cupric-chloride-solution", amount = 40 },
     },
     main_product = "angels-liquid-cupric-chloride-solution",
-    always_show_products = true,
     --icon = "__angelspetrochemgraphics__/graphics/icons/inter-chemistry-21.png",
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
@@ -234,7 +226,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 50 },
     },
     main_product = "angels-gas-allylchlorid",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/allyl-chloride.png", 72 },
     }, "CClH"),
@@ -263,7 +254,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-epichlorohydrin", amount = 90 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72 },
     }, "CClC"),
@@ -290,7 +280,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-glycerol", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
     }, "COH"),
@@ -317,7 +306,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-perchloric-acid", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/perchloric-acid.png", 72 },
     }, "ClHO"),

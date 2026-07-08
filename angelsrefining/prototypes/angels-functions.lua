@@ -1766,7 +1766,6 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     }
     recipe.main_product = void_output_item
     recipe.show_amount_in_title = false
-    recipe.always_show_products = void_output_amount * void_output_probability > 0
     recipe.always_show_made_in = true
     recipe.allow_decomposition = false
     recipe.allow_as_intermediate = false

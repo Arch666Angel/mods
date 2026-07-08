@@ -14,7 +14,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 80 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -39,7 +38,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 70 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -64,7 +62,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -89,7 +86,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 40 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -114,7 +110,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -139,7 +134,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nutrient-pulp", amount = 60 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(
       nil,
       { { 214, 135, 010 }, nil, { 239, 168, 044 } },
@@ -166,7 +160,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-acetone", amount = 40 },
       { type = "fluid", name = "angels-gas-synthesis", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-fuel-oil",
       "angels-gas-synthesis",
@@ -190,7 +183,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-glycerol", amount = 40 },
       --{type="fluid", name="angels-gas-synthesis", amount=10},
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       "angels-liquid-fuel-oil",
       --"angels-gas-synthesis",
@@ -214,7 +206,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-ethanol", amount = 30 },
       { type = "fluid", name = "angels-gas-butane", amount = 10 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/acetone.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/butane.png", 72 },

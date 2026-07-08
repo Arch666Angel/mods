@@ -17,7 +17,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-puffer-atmosphere", amount = 60 },
     },
     main_product = "angels-gas-puffer-atmosphere",
-    always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon(
       nil,
       { { 194, 227, 091 }, { 184, 239, 000 }, { 156, 207, 000 } }
@@ -1388,7 +1387,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-crystal-shard-raw", amount = 1, independent_probability = 0.4 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-crystal-shard-raw"),
       1,
@@ -1413,7 +1411,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-crystal-shard-raw", amount = 1 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-crystal-shard-raw"),
       2,

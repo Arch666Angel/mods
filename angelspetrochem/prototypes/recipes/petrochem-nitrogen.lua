@@ -13,7 +13,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-compressed-air", amount = 200 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon(
       { "angels-gas-compressed-air" },
       { { 180, 180, 225 }, { 150, 150, 187 }, { 120, 120, 150 } }
@@ -36,7 +35,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-nitrogen", amount = 50 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72 },
@@ -64,7 +62,6 @@ data:extend({
       { type = "fluid", name = "angels-gas-nitrogen-monoxide", amount = 40 },
       { type = "fluid", name = "angels-gas-nitrogen-dioxide", amount = 20 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
@@ -102,7 +99,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-nitrogen-monoxide",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-oxide.png", 72 },
     }, "NOO"),
@@ -128,7 +124,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-nitrogen-dioxide", amount = 100 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen-dioxide.png", 72 },
     }, "NOO"),
@@ -164,7 +159,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-ammonia",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
     }, "NHH"),
@@ -186,7 +180,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-ammonium-chloride", amount = 100 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonium-chloride.png", 72 },
     }, "NHCl"),
@@ -214,7 +207,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 20 },
     },
     main_product = "angels-gas-urea",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/urea.png", 72 },
       "angels-water-purified",
@@ -242,7 +234,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png", 72 },
@@ -274,7 +265,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 40 },
     },
-    always_show_products = true,
     icons = AF.create_liquid_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png", 72 },
@@ -315,7 +305,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-melamine",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/melamine.png", 72 },
     }, "CHN"),
@@ -338,7 +327,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-monochloramine", amount = 50 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/chloramine.png", 72 },
     }, "NHCl"),
@@ -375,7 +363,6 @@ data:extend({
       },
     },
     main_product = "angels-gas-hydrazine",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrazine.png", 72 },
     }, "NHH"),
@@ -404,7 +391,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     main_product = "angels-gas-methylamine",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methylamine.png", 72 },
       "angels-water-purified",
@@ -434,7 +420,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     main_product = "angels-gas-dimethylamine",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylamine.png", 72 },
       "angels-water-purified",
@@ -464,7 +449,6 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     main_product = "angels-gas-dimethylhydrazine",
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/dimethylhydrazine.png", 72 },
       "angels-water-purified",
@@ -500,7 +484,6 @@ data:extend({
         ignored_by_stats = 1,
       },
     },
-    always_show_products = true,
     main_product = "angels-gas-dinitrogen-tetroxide",
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/dinitrogen-tetroxide.png", 72 },

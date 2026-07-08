@@ -14,7 +14,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-water-purified", amount = 100 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       {
         "angels-water-purified",

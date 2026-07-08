@@ -33,7 +33,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-plastic", amount = 10 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
     }),
@@ -55,7 +54,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-plastic", amount = 20 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
     }),
@@ -81,7 +79,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-plastic", amount = 30 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 255, 255 }, { 255, 255, 255 } }, {
       AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
     }),
@@ -125,7 +122,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-resin", amount = 10 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       AF.add_number_icon_layer({}, 1, angelsmods.petrochem.number_tint),
     }),
@@ -147,7 +143,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-resin", amount = 20 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       AF.add_number_icon_layer({}, 2, angelsmods.petrochem.number_tint),
     }),
@@ -173,7 +168,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-resin", amount = 40 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
     }),
@@ -217,7 +211,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-liquid-rubber", amount = 10 },
     },
-    always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 193, 197, 255 }, { 193, 197, 255 } }),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-rubber",

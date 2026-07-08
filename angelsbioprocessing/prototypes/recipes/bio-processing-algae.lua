@@ -178,7 +178,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
     }, "COH"),
@@ -242,7 +241,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
     },
-    always_show_products = true,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
     }, "NHH"),

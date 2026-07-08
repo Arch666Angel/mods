@@ -224,7 +224,6 @@ data:extend({
       { type = "fluid", name = "angels-crystal-slurry", amount = 1 },
     },
     main_product = "angels-crystal-slurry",
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },

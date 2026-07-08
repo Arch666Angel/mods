@@ -215,7 +215,6 @@ data:extend({
         scale = 0.5,
       },
     }, angelsmods.functions.get_object_icons("angels-ore8-crushed"), { 10, 10 }, 0.5),
-    always_show_products = true,
     show_amount_in_title = false,
     order = "g",
   },
@@ -263,7 +262,6 @@ data:extend({
         scale = 0.5,
       },
     }, angelsmods.functions.get_object_icons("angels-ore9-crushed"), { 10, 10 }, 0.5),
-    always_show_products = true,
     show_amount_in_title = false,
     order = "i",
   },
@@ -439,7 +437,6 @@ data:extend({
       { type = "fluid", name = "angels-ore8-sludge", amount = 6 },
     },
     main_product = "angels-ore8-sludge",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
       "angels-ore8-sludge",
@@ -488,7 +485,6 @@ data:extend({
       { type = "fluid", name = "angels-ore9-sludge", amount = 6 },
     },
     main_product = "angels-ore9-sludge",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "i",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({
@@ -536,7 +532,6 @@ data:extend({
       { type = "item", name = "angels-ore1-crystal", amount = 2 },
     },
     main_product = "angels-ore1-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "a[angels-ore1-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore1"] }),
@@ -557,7 +552,6 @@ data:extend({
       { type = "item", name = "angels-ore2-crystal", amount = 2 },
     },
     main_product = "angels-ore2-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "b[angels-ore2-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore2"] }),
@@ -578,7 +572,6 @@ data:extend({
       { type = "item", name = "angels-ore3-crystal", amount = 2 },
     },
     main_product = "angels-ore3-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "c[angels-ore3-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore3"] }),
@@ -599,7 +592,6 @@ data:extend({
       { type = "item", name = "angels-ore4-crystal", amount = 2 },
     },
     main_product = "angels-ore4-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "d[angels-ore4-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore4"] }),
@@ -620,7 +612,6 @@ data:extend({
       { type = "item", name = "angels-ore5-crystal", amount = 2 },
     },
     main_product = "angels-ore5-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "e[angels-ore5-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore5"] }),
@@ -641,7 +632,6 @@ data:extend({
       { type = "item", name = "angels-ore6-crystal", amount = 2 },
     },
     main_product = "angels-ore6-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     order = "f[angels-ore6-crystal]",
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "sulfuric-acid", ore_tints["ore6"] }),
@@ -668,7 +658,6 @@ data:extend({
       { type = "fluid", name = "angels-ore8-solution", amount = 60 },
     },
     main_product = "angels-ore8-solution",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-ore8-solution", "sulfuric-acid" }),
     order = "g",
@@ -743,7 +732,6 @@ data:extend({
       { type = "item", name = "angels-ore8-crystal", amount = 6 },
     },
     main_product = "angels-ore8-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore8-anode-sludge"),
     order = "h",
@@ -767,7 +755,6 @@ data:extend({
       { type = "fluid", name = "angels-ore9-solution", amount = 60 },
     },
     main_product = "angels-ore9-solution",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-ore9-solution", "sulfuric-acid" }),
     order = "i",
@@ -842,7 +829,6 @@ data:extend({
       { type = "item", name = "angels-ore9-crystal", amount = 6 },
     },
     main_product = "angels-ore9-crystal",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-ore9-anode-sludge"),
     order = "j",
@@ -865,7 +851,6 @@ data:extend({
       { type = "item", name = "angels-ore1-pure", amount = 4 },
     },
     main_product = "angels-ore1-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore1"] }, 0.6),
     order = "a[angels-ore1-pure]",
@@ -885,7 +870,6 @@ data:extend({
       { type = "item", name = "angels-ore2-pure", amount = 4 },
     },
     main_product = "angels-ore2-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore2"] }, 0.6),
     order = "b[angels-ore2-pure]",
@@ -905,7 +889,6 @@ data:extend({
       { type = "item", name = "angels-ore3-pure", amount = 4 },
     },
     main_product = "angels-ore3-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore3"] }, 0.6),
     order = "c[angels-ore3-pure]",
@@ -925,7 +908,6 @@ data:extend({
       { type = "item", name = "angels-ore4-pure", amount = 4 },
     },
     main_product = "angels-ore4-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore4"] }, 0.6),
     order = "d[angels-ore4-pure]",
@@ -945,7 +927,6 @@ data:extend({
       { type = "item", name = "angels-ore5-pure", amount = 4 },
     },
     main_product = "angels-ore5-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore5"] }, 0.6),
     order = "e[angels-ore5-pure]",
@@ -965,7 +946,6 @@ data:extend({
       { type = "item", name = "angels-ore6-pure", amount = 4 },
     },
     main_product = "angels-ore6-pure",
-    always_show_products = true,
     show_amount_in_title = false,
     crafting_machine_tint = angelsmods.functions.get_recipe_tints({ angelsmods.refining.ore_tints["ore6"] }, 0.6),
     order = "f[angels-ore6-pure]",
@@ -1095,7 +1075,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-slag-slurry", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 142, 079, 028 }, { 107, 062, 021 }, { 075, 040, 015 } },
@@ -1119,7 +1098,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-slag-slurry", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 142, 079, 028 }, { 107, 062, 021 }, { 075, 040, 015 } },
@@ -1241,7 +1219,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1266,7 +1243,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 20 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1291,7 +1267,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 30 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1316,7 +1291,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 40 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1341,7 +1315,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1366,7 +1339,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
@@ -1392,7 +1364,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-crystal-slurry", amount = 50 },
     },
-    always_show_products = true,
     icons = angelsmods.functions.create_liquid_recipe_icon(
       nil,
       { { 184, 231, 043 }, { 080, 172, 033 }, { 055, 126, 017 } },
