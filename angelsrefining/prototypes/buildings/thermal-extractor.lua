@@ -61,15 +61,6 @@ data:extend({
       height = 12,
     },
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-    base_picture = {
-      sheet = {
-        filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
-        priority = "extra-high",
-        width = 288,
-        height = 288,
-        shift = { 0, 0 },
-      },
-    },
     graphics_set = {
       animation = {
         north = {
@@ -81,6 +72,18 @@ data:extend({
           filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
           frame_count = 16,
           animation_speed = 0.5,
+        },
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
+            priority = "extra-high",
+            width = 288,
+            height = 288,
+            shift = { 0, 0 },
+          },
         },
       },
     },
@@ -155,15 +158,6 @@ data:extend({
       height = 12,
     },
     monitor_visualization_tint = { r = 78, g = 173, b = 255 },
-    base_picture = {
-      sheet = {
-        filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
-        priority = "extra-high",
-        width = 288,
-        height = 288,
-        shift = { 0, 0 },
-      },
-    },
     graphics_set = {
       animation = {
         north = {
@@ -175,6 +169,18 @@ data:extend({
           filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-animation.png",
           frame_count = 16,
           animation_speed = 0.5,
+        },
+      },
+      working_visualisations = {
+        {
+          always_draw = true,
+          animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/thermal-extractor/thermal-extractor-base.png",
+            priority = "extra-high",
+            width = 288,
+            height = 288,
+            shift = { 0, 0 },
+          },
         },
       },
     },
