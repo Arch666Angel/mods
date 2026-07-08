@@ -70,9 +70,8 @@ local function polypictures1()
     north = {
       filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
-      width = 128,
-      height = 128,
-      scale = 0.5,
+      width = 1,
+      height = 1,
       shift = { 0, 0 },
     },
     east = {
@@ -94,9 +93,8 @@ local function polypictures1()
     west = {
       filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
-      width = 128,
-      height = 128,
-      scale = 0.5,
+      width = 1,
+      height = 1,
       shift = { 0, 0 },
     },
   }
@@ -107,9 +105,8 @@ local function polypictures2()
     north = {
       filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
-      width = 128,
-      height = 128,
-      scale = 0.5,
+      width = 1,
+      height = 1,
       shift = { 0, 0 },
     },
     east = {
@@ -144,9 +141,8 @@ local function polypictures3()
     north = {
       filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
-      width = 128,
-      height = 128,
-      scale = 0.5,
+      width = 1,
+      height = 1,
       shift = { 0, 0 },
     },
     east = {
