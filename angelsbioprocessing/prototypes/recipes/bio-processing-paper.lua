@@ -15,7 +15,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-cellulose-fiber", amount = 4 },
     },
-    show_amount_in_title = false,
     icon = "__angelsbioprocessinggraphics__/graphics/icons/cellulose-fiber-raw-wood.png",
     icon_size = 32,
     order = "b",
@@ -71,7 +70,6 @@ data:extend({
     results = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 70 },
     },
-    show_amount_in_title = false,
     icons = AF.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
     }, "COcOc"),
@@ -296,7 +294,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-green-liquor", amount = 40 }, --+energy gain
     },
     main_product = "angels-liquid-green-liquor",
-    show_amount_in_title = false,
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-green-liquor",
       "angels-liquid-black-liquor",
@@ -378,7 +375,6 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-paper", amount = 3 },
     },
-    show_amount_in_title = false,
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(
       AF.get_object_icons("angels-solid-paper"),

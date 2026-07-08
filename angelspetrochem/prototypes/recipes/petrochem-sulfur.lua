@@ -195,7 +195,6 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     main_product = "angels-liquid-hydrofluoric-acid",
-    show_amount_in_title = false,
     icons = AF.create_liquid_recipe_icon(
       {
         { "__angelspetrochemgraphics__/graphics/icons/molecules/hydrofluoric-acid.png", 72 },

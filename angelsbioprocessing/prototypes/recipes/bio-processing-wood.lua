@@ -442,7 +442,6 @@ data:extend({
     },
     main_product = "angels-temperate-tree",
     allow_productivity = true,
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-temperate.png",
@@ -587,7 +586,6 @@ data:extend({
     },
     main_product = "angels-liquid-resin",
     allow_productivity = true,
-    show_amount_in_title = false,
     icons = angelsmods.functions.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       mods["bobplates"] and { "__bobplates__/graphics/icons/resin.png", 32 } or "angels-solid-resin",
     }),
@@ -722,7 +720,6 @@ data:extend({
     },
     main_product = "angels-swamp-tree",
     allow_productivity = true,
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-swamp.png",
@@ -950,7 +947,6 @@ data:extend({
     },
     main_product = "angels-desert-tree",
     allow_productivity = true,
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/tree-desert.png",

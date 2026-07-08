@@ -18,7 +18,6 @@ data:extend({
       { type = "item", name = "angels-token-bio", amount = 32 },
     },
     main_product = "angels-token-bio",
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/temperate-garden.png",
@@ -59,7 +58,6 @@ data:extend({
     },
     main_product = "angels-temperate-garden",
     allow_productivity = true,
-    show_amount_in_title = false,
     order = "ba",
   },
   {
@@ -200,7 +198,6 @@ data:extend({
       { type = "item", name = "angels-token-bio", amount = 32 },
     },
     main_product = "angels-token-bio",
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/desert-garden.png",
@@ -235,7 +232,6 @@ data:extend({
     },
     main_product = "angels-desert-garden",
     allow_productivity = true,
-    show_amount_in_title = false,
     order = "ba",
   },
   {
@@ -376,7 +372,6 @@ data:extend({
       { type = "item", name = "angels-token-bio", amount = 32 },
     },
     main_product = "angels-token-bio",
-    show_amount_in_title = false,
     icons = {
       {
         icon = "__angelsbioprocessinggraphics__/graphics/icons/swamp-garden.png",
@@ -411,7 +406,6 @@ data:extend({
     },
     main_product = "angels-swamp-garden",
     allow_productivity = true,
-    show_amount_in_title = false,
     order = "ba",
   },
   {

@@ -49,7 +49,6 @@ OV.patch_recipes({
     results = {
       { type = "item", name = "uranium-fuel-cell", amount = 15 },
     },
-    show_amount_in_title = false,
     crafting_machine_tint = {
       primary = tint_colors.green,
       secondary = tint_colors.green,

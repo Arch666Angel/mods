@@ -3,7 +3,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-temperate-1",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-temperate",
     enabled = false,
@@ -39,7 +38,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-temperate-2",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-temperate",
     enabled = false,
@@ -182,7 +180,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-desert-1",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-desert",
     enabled = false,
@@ -218,7 +215,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-desert-2",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-desert",
     enabled = false,
@@ -363,7 +359,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-swamp-1",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-swamp",
     enabled = false,
@@ -398,7 +393,6 @@ data:extend({
   {
     type = "recipe",
     name = "angels-sorting-swamp-2",
-    show_amount_in_title = false,
     categories = { "angels-bio-processor" },
     subgroup = "angels-farming-swamp",
     enabled = false,
