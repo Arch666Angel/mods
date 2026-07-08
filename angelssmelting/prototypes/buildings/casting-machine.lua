@@ -166,7 +166,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = get_graphics_set(),
     graphics_set_flipped = get_graphics_set(true),
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
@@ -223,7 +223,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = get_graphics_set(),
     graphics_set_flipped = get_graphics_set(true),
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
@@ -280,7 +280,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = get_graphics_set(),
     graphics_set_flipped = get_graphics_set(true),
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
@@ -336,7 +336,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = get_graphics_set(),
     graphics_set_flipped = get_graphics_set(true),
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = angels_casting_machine_fluid_boxes(),
     impact_category = "metal",
     working_sound = {

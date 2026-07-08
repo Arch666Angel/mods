@@ -87,7 +87,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = {
       {
         production_type = "input",
@@ -183,7 +183,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = {
       {
         production_type = "input",
@@ -277,7 +277,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-leaching-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = {
       {
         production_type = "input",

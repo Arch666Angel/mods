@@ -40,7 +40,7 @@ data:extend({
         percent = 30,
       },
     },
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
     fluid_boxes = {
       {
         production_type = "input",
