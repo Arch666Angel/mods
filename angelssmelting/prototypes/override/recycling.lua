@@ -89,6 +89,7 @@ local updated_recipes = {
   "bob-vehicle-big-turret-equipment-1",
   "bob-vehicle-big-turret-equipment-2",
   "centrifuge",
+  "power-armor-mk2",
   "processing-unit",
   "tank",
 }
