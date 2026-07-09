@@ -39,7 +39,7 @@ data:extend({
     stack_size = 500,
   },
   {
-    type = "tool",
+    type = "item",
     name = "angels-token-bio",
     icon = "__angelsbioprocessinggraphics__/graphics/icons/token-bio.png",
     icon_size = 32,

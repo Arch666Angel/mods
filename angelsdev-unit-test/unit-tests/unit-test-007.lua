@@ -139,7 +139,6 @@ local unit_test_007 = function()
 
   -- Check items that do not have a purpose specified in their ItemPrototype (such as being placeable as a tile or being fuel)
   local item_filters = {}
-  table.insert(item_filters, { filter = "tool", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "selection-tool", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "fuel", invert = true, mode = "and" })
   table.insert(item_filters, { filter = "place-result", invert = true, mode = "and" })

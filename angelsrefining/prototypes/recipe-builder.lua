@@ -6,7 +6,6 @@ local fallbacks = {
 
 local item_subtypes = { -- add additional item subtypes here as necessary for recipes
   "item",
-  "tool",
   "ammo",
 }
 

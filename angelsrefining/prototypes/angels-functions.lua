@@ -1426,7 +1426,7 @@ function angelsmods.functions.add_flag(entity, flag) -- Adds a flag to an item/f
     return
   end
 
-  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
+  for _, type in pairs({ "item", "item-with-entity-data", "fluid" }) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
       if to_add.flags then
@@ -1452,7 +1452,7 @@ function angelsmods.functions.remove_flag(entity, flag_to_remove) -- Removes a f
     return
   end
 
-  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
+  for _, type in pairs({ "item", "item-with-entity-data", "fluid" }) do
     local to_remove = data.raw[type][entity]
     if to_remove and to_remove.flags then
       for i, f in pairs(to_remove.flags) do
@@ -1476,7 +1476,7 @@ function angelsmods.functions.hide(entity)
     return
   end
 
-  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do --list of things to hide
+  for _, type in pairs({ "item", "item-with-entity-data", "fluid" }) do --list of things to hide
     local to_add = data.raw[type][entity] or nil
     if to_add then
       to_add.hidden = true
@@ -1526,7 +1526,7 @@ function angelsmods.functions.unhide(entity)
     return
   end
 
-  for _, type in pairs({ "item", "tool", "item-with-entity-data", "fluid" }) do
+  for _, type in pairs({ "item", "item-with-entity-data", "fluid" }) do
     local to_remove = data.raw[type][entity]
     if to_remove then
       to_remove.hidden = false
