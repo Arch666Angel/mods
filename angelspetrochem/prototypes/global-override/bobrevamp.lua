@@ -55,9 +55,11 @@ if mods["bobrevamp"] then
     --OV.remove_unlock("lithium-processing", "sodium-chlorate")
     OV.disable_recipe({ "bob-sodium-chlorate", "bob-sodium-perchlorate" })
     --make pre-reqs match new unlock point
-    OV.add_prereq("bob-lithium-processing", "angels-chlorine-processing-4")
-    OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
-
+    if data.raw.technology["lithium-processing"] then
+      OV.add_prereq("lithium-processing", "angels-chlorine-processing-4")
+    else
+      OV.add_prereq("bob-lithium-processing", "angels-chlorine-processing-4")
+    end
     OV.converter_fluid("bob-carbon-dioxide", "angels-gas-carbon-dioxide")
 
     OV.global_replace_item("bob-sodium-carbonate", "angels-solid-sodium-carbonate")

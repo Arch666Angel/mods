@@ -234,19 +234,36 @@ if mods["bobplates"] then
   OV.global_replace_item("bob-lithium-chloride", "angels-solid-lithium")
   angelsmods.functions.hide("bob-lithium-chloride")
   OV.hide_recipe("bob-lithium-chloride")
-  OV.remove_unlock("bob-lithium-processing", "bob-lithium-chloride")
   OV.remove_prereq("bob-lithium-processing", "logistic-science-pack")
   OV.remove_prereq("bob-lithium-processing", "bob-electrolysis-1")
   OV.remove_prereq("bob-lithium-processing", "bob-chemical-processing-1")
-  OV.add_prereq("bob-lithium-processing", "angels-water-treatment-3")
-  OV.add_prereq("bob-lithium-processing", "angels-thermal-water-extraction-2")
   OV.remove_unlock("angels-water-treatment-3", "angels-solid-lithium")
-  OV.add_unlock("bob-lithium-processing", "angels-solid-lithium")
-  if angelsmods.bioprocessing then
-    OV.add_unlock("bob-lithium-processing", "angels-algae-brown-burning")
-    OV.add_prereq("bob-lithium-processing", "angels-bio-processing-green")
+  if mods["space-age"] then
+    OV.remove_unlock("lithium-processing", "bob-lithium-chloride")
+    OV.add_prereq("lithium-processing", "angels-water-treatment-3")
+    OV.patch_recipes({
+      {
+        name = "angels-solid-lithium",
+        ingredients = {
+          { type = "fluid", name = "lithium-brine", amount = "angels-thermal-water" },
+        },
+      }
+    })
+    OV.add_unlock("lithium-processing", "angels-solid-lithium")
+    if angelsmods.bioprocessing then
+      OV.add_unlock("lithium-processing", "angels-algae-brown-burning")
+      OV.add_prereq("lithium-processing", "angels-bio-processing-green")
+    end  
+  else
+    OV.remove_unlock("bob-lithium-processing", "bob-lithium-chloride")
+    OV.add_prereq("bob-lithium-processing", "angels-water-treatment-3")
+    OV.add_prereq("bob-lithium-processing", "angels-thermal-water-extraction-2")
+    OV.add_unlock("bob-lithium-processing", "angels-solid-lithium")
+    if angelsmods.bioprocessing then
+      OV.add_unlock("bob-lithium-processing", "angels-algae-brown-burning")
+      OV.add_prereq("bob-lithium-processing", "angels-bio-processing-green")
+    end
   end
-  OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes({
