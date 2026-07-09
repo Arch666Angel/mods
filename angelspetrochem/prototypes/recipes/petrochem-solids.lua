@@ -228,6 +228,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 1 },
       { type = "fluid", name = "angels-gas-methane", amount = 100 },
@@ -249,6 +250,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 1 },
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
@@ -274,6 +276,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 1 },
       { type = "fluid", name = "angels-liquid-fuel-oil", amount = 50 },
@@ -299,6 +302,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-coke", amount = 1 },
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
@@ -324,6 +328,7 @@ data:extend({
     subgroup = "angels-petrochem-fuel",
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrazine", amount = 50 },
     },

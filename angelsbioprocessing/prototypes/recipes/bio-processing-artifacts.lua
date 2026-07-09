@@ -30,6 +30,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-red", amount = 1 },
@@ -74,6 +75,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-yellow", amount = 1 },
@@ -118,6 +120,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-orange", amount = 1 },
@@ -162,6 +165,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-blue", amount = 1 },
@@ -206,6 +210,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-purple", amount = 1 },
@@ -250,6 +255,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-green", amount = 1 },
@@ -293,6 +299,7 @@ data:extend({
     categories = { "crafting" },
     subgroup = "angels-bio-processing-alien-small",
     enabled = false,
+    auto_recycle = false,
     energy_required = 5,
     ingredients = {
       { type = "item", name = "angels-alien-pre-artifact-base", amount = 1 },
