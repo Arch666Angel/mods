@@ -166,7 +166,6 @@ data:extend({
           name = "water",
           amount_min = 1500, -- amount of water it produces each 'tick'
           amount_max = 1500,
-          independent_probability = 1,
         },
       },
     },

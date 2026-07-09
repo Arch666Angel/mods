@@ -331,8 +331,8 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-americium-241", amount = 1 },
-      { type = "item", name = "angels-americium-241", amount = 1, independent_probability = 0.95 },
-      { type = "item", name = "angels-curium-245", amount = 1, independent_probability = 0.05 },
+      { type = "item", name = "angels-americium-241", amount = 1, shared_probability = { min = 0.00, max = 0.95 }},
+      { type = "item", name = "angels-curium-245", amount = 1, shared_probability = { min = 0.95, max = 1.00 }},
       { type = "item", name = "uranium-238", amount = 1 },
       { type = "item", name = "angels-slag", amount = 5, ignored_by_productivity = 5 },
     },
@@ -384,8 +384,8 @@ data:extend({
     results = {
       { type = "item", name = "angels-plutonium-239", amount = 2 },
       { type = "item", name = "angels-slag", amount = 4, ignored_by_productivity = 4 },
-      { type = "item", name = "angels-curium-245", amount = 3, independent_probability = 0.45 },
-      { type = "item", name = "uranium-235", amount = 1, independent_probability = 0.2 },
+      { type = "item", name = "angels-curium-245", amount = 3, shared_probability = { min = 0.00, max = 0.45 }},
+      { type = "item", name = "uranium-235", amount = 1, shared_probability = { min = 0.45, max = 0.65 }},
       { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
     },
     icons = {
@@ -499,8 +499,8 @@ data:extend({
       { type = "item", name = "angels-slag", amount = 5, ignored_by_productivity = 5 },
       { type = "item", name = "angels-neptunium-240", amount = 1 },
       { type = "item", name = "angels-thorium-232", amount = 2 },
-      { type = "item", name = "angels-uranium-234", amount = 1, independent_probability = 0.05 },
-      { type = "item", name = "angels-curium-245", amount = 1, independent_probability = 0.25 }, --p=0.1 (0.5 is self sustaining)
+      { type = "item", name = "angels-uranium-234", amount = 1, shared_probability = { min = 0.00, max = 0.05 }},
+      { type = "item", name = "angels-curium-245", amount = 1, shared_probability = { min = 0.05, max = 0.30 }}, --p=0.1 (0.5 is self sustaining)
     },
     icons = {
       { -- need to have something as bottom layer
@@ -556,14 +556,14 @@ data:extend({
     results = {
       { type = "item", name = "angels-slag", amount = 10, ignored_by_productivity = 10 },
       { type = "item", name = "angels-neptunium-240", amount = 3 }, --2
-      { type = "item", name = "angels-uranium-234", amount = 2, independent_probability = 0.05 },
+      { type = "item", name = "angels-uranium-234", amount = 2, shared_probability = { min = 0.00, max = 0.05 }},
       { type = "fluid", name = "angels-water-greenyellow-waste", amount = 60, ignored_by_productivity = 60 },
       {
         type = "item",
         name = "angels-muon-fusion-catalyst",
         amount = 1,
         ignored_by_productivity = 1,
-        independent_probability = 4 / 30,
+        shared_probability = { min = 0.05, max = 0.05 + 4 / 30 },
       },
     },
     icons = {

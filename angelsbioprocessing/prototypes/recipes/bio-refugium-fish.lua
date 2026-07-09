@@ -63,21 +63,12 @@ data:extend({
       { type = "fluid", name = "angels-liquid-fish-atmosphere", amount = 100 },
     },
     results = {
-      { type = "item", name = "raw-fish", amount = 2, ignored_by_productivity = 2, ignored_by_stats = 2 },
+      { type = "item", name = "raw-fish", amount = 3, ignored_by_productivity = 3, ignored_by_stats = 3 },
       {
         type = "item",
         name = "raw-fish",
         amount = 1,
-        independent_probability = 0.75,
-        ignored_by_productivity = 1,
-        ignored_by_stats = 1,
-        show_details_in_recipe_tooltip = false,
-      },
-      {
-        type = "item",
-        name = "raw-fish",
-        amount = 1,
-        independent_probability = 0.50,
+        independent_probability = 0.25,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
         show_details_in_recipe_tooltip = false,

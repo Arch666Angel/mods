@@ -34,8 +34,8 @@ data:extend({
       },
     },
     loot = {
-      { type = "item", name = "stone", independent_probability = 1, amount_min = 5, amount_max = 10 },
-      { type = "item", name = "coal", independent_probability = 1, amount_min = 5, amount_max = 10 },
+      { type = "item", name = "stone", amount_min = 5, amount_max = 10 },
+      { type = "item", name = "coal", amount_min = 5, amount_max = 10 },
     },
     count_as_rock_for_filtered_deconstruction = true,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
@@ -97,7 +97,7 @@ data:extend({
   -- },
   -- loot =
   -- {
-  -- {item = "stone", independent_probability = 1, amount_min = 5, amount_max = 10}
+  -- {item = "stone", amount_min = 5, amount_max = 10}
   -- },
   -- mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
   -- render_layer = "object",

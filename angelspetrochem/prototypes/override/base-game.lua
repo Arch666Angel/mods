@@ -22,8 +22,8 @@ data.raw["assembling-machine"]["oil-refinery"].icons = util.table.deepcopy(data.
 data.raw["assembling-machine"]["oil-refinery"].fast_replaceable_group = "oil-refinery"
 
 -- oil
-data.raw["resource"]["crude-oil"]["minable"].results = {
-  { type = "fluid", name = "angels-liquid-multi-phase-oil", amount_min = 10, amount_max = 10, independent_probability = 1 },
+data.raw["resource"]["crude-oil"].minable.results = {
+  { type = "fluid", name = "angels-liquid-multi-phase-oil", amount = 10 },
 }
 move_item("crude-oil", "angels-petrochem-raw-fluids", "bb", "fluid")
 angelsmods.functions.hide("petroleum-gas")
