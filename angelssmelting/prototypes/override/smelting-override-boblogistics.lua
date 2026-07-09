@@ -34,6 +34,8 @@ if mods["boblogistics"] and mods["bobplates"] then
   OV.disable_recipe({ "bob-aluminium-pipe", "bob-aluminium-pipe-to-ground" })
   OV.global_replace_item("bob-aluminium-pipe", "bob-brass-pipe")
   OV.global_replace_item("bob-aluminium-pipe-to-ground", "bob-brass-pipe-to-ground")
+  OV.remove_unlock("recycling", "bob-aluminium-pipe-recycling")
+  OV.remove_unlock("recycling", "bob-aluminium-pipe-to-ground-recycling")
   data.raw.recipe["bob-aluminium-pipe-recycling"] = nil
   data.raw.recipe["bob-aluminium-pipe-to-ground-recycling"] = nil
 

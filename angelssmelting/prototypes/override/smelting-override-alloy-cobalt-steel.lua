@@ -25,6 +25,8 @@ if mods["bobplates"] then
     OV.disable_recipe({ "bob-cobalt-steel-bearing-ball", "bob-cobalt-steel-bearing", "bob-cobalt-steel-gear-wheel" })
     OV.global_replace_item("bob-cobalt-steel-gear-wheel", "bob-brass-gear-wheel")
     OV.global_replace_item("bob-cobalt-steel-bearing", "bob-brass-bearing")
+    OV.remove_unlock("recycling", "bob-cobalt-steel-bearing-recycling")
+    OV.remove_unlock("recycling", "bob-cobalt-steel-gear-wheel-recycling")
     data.raw.recipe["bob-cobalt-steel-bearing-recycling"] = nil
     data.raw.recipe["bob-cobalt-steel-gear-wheel-recycling"] = nil
   else
