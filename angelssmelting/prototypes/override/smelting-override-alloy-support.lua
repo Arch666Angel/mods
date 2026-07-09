@@ -4,13 +4,13 @@ local OV = angelsmods.functions.OV
 -- ALLOY HANDLING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
-  for k, v in pairs(data.raw.recipe) do
-    if angelsmods.functions.has_recipe_category(v, "bob-mixing-furnace") then
+  for recipe_name, recipe in pairs(data.raw.recipe) do
+    if angelsmods.functions.has_recipe_category(recipe_name, "bob-mixing-furnace") then
       --alien-blue-alloy, alien-orange-alloy
-      data.raw.recipe[v.name].categories = { "angels-blast-smelting" }
-    elseif angelsmods.functions.has_recipe_category(v, "bob-chemical-furnace") then
+      recipe.categories = { "angels-blast-smelting" }
+    elseif angelsmods.functions.has_recipe_category(recipe_name, "bob-chemical-furnace") then
       -- silicon-nitride, silicon-carbide, lithium-cobalt-oxide
-      data.raw.recipe[v.name].categories = { "angels-chemical-smelting" }
+      recipe.categories = { "angels-chemical-smelting" }
     end
   end
 
