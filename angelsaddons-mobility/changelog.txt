@@ -5,6 +5,7 @@ Date: ???
     - Fixed air resistance of Petrochemical gas wagon and Petrochemical fluid wagon (1310)
   Changes:
     - Increased the capacity of Petrochemical gas wagon and Petrochemical fluid wagon (1287)
+    - Updated for Factorio 2.1 (1315)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 04.01.26
