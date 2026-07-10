@@ -326,11 +326,13 @@ function angelsmods.migration.replace_quick_bar_slot(items_to_replace)
   items_to_replace = items_to_replace or {}
 
   for _, player in pairs(game.players) do
-    for i = 1, 100 do
-      for _, item_to_replace in pairs(items_to_replace) do
-        local slot = player.get_quick_bar_slot(i)
-        if slot and (slot.name == item_to_replace[1]) then
-          player.set_quick_bar_slot(i, item_to_replace[2])
+    for i = 1, 10, 1 do
+      for j = 1, player.quick_bar_width, 1 do
+        for _, item_to_replace in pairs(items_to_replace) do
+          local slot = player.get_quick_bar_slot(i, j)
+          if slot and (slot.name == item_to_replace[1]) then
+            player.set_quick_bar_slot(i, j, item_to_replace[2])
+          end
         end
       end
     end
