@@ -348,7 +348,7 @@ local function p_merge_item_lists(base, patch)
               end
               for j, v in pairs(add_list[l]) do
                 if not p_blocked[j] then
-                  add_list[k].j = prioritize(add_list[k].j, v)
+                  add_list[k][j] = prioritize(add_list[k].j, v)
                 end
               end
               add_list[l] = nil
@@ -360,7 +360,7 @@ local function p_merge_item_lists(base, patch)
               end
               for j, v in pairs(add_list[k]) do
                 if not p_blocked[j] then
-                  add_list[l].j = v
+                  add_list[l][j] = v
                 end
               end
               add_list[k] = nil
