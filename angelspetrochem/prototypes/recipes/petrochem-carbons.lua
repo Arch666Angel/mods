@@ -589,7 +589,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 40 },
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 }, --Co
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1, ignored_by_stats = 1 }, --Co
     },
     results = {
       { type = "fluid", name = "angels-gas-methane", amount = 60 },
@@ -597,10 +597,18 @@ data:extend({
       { type = "fluid", name = "angels-gas-butane", amount = 20 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-blue",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -628,16 +636,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 150 },
       { type = "fluid", name = "angels-gas-carbon-monoxide", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-red", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-red", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-red",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -662,17 +678,25 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-synthesis", amount = 100 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 40 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Zn and Al
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Zn and Al
     },
     results = {
       { type = "fluid", name = "angels-water-purified", amount = 20 },
       { type = "fluid", name = "angels-gas-methanol", amount = 80 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -827,17 +851,25 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 60 },
       { type = "fluid", name = "steam", amount = 60 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Ag
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Ag
     },
     results = {
       { type = "fluid", name = "angels-gas-butadiene", amount = 80 },
       { type = "fluid", name = "angels-gas-residual", amount = 20 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-butadiene",
@@ -864,16 +896,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
       { type = "fluid", name = "steam", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-red", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-red", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-gas-propene", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-red",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_liquid_recipe_icon({
@@ -895,16 +935,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-methane", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-benzene", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-benzene",
@@ -926,16 +974,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 }, --Ti OR Cr
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1, ignored_by_stats = 1 }, --Ti OR Cr
     },
     results = {
       { type = "fluid", name = "angels-liquid-polyethylene", amount = 50 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-blue",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-liquid-polyethylene",
@@ -964,16 +1020,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Zinc, Copper, Aluminium
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Zinc, Aluminium
     },
     results = {
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-methanol",
@@ -999,16 +1063,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 100 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-ethylene-oxide", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -1034,16 +1106,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Aluminium
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Aluminium
     },
     results = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-liquid-toluene",
@@ -1069,17 +1149,25 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-benzene", amount = 100 },
       { type = "fluid", name = "angels-gas-chlor-methane", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Aluminium
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Aluminium
     },
     results = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 50 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({
@@ -1105,16 +1193,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-methanol", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Ag, Or FeO & Mo and/or V
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Ag, Or FeO & Mo and/or V
     },
     results = {
       { type = "fluid", name = "angels-gas-formaldehyde", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-formaldehyde",
@@ -1136,16 +1232,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-ethylbenzene", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-liquid-styrene", amount = 50 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-liquid-styrene",
@@ -1168,16 +1272,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-benzene", amount = 50 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-yellow", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-yellow", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-liquid-phenol", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-yellow",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-liquid-phenol",
@@ -1261,11 +1373,25 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-ethylene-oxide", amount = 100 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 100 },
-      --{ type = "item", name = "angels-catalyst-metal-green", amount = 1 } --ideally a zinc catalyst
+      --{ type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 } --ideally a zinc catalyst
     },
     results = {
       { type = "fluid", name = "angels-liquid-ethylene-carbonate", amount = 90 },
-      --{ type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 }
+      --[[{
+        type = "item",
+        name = "angels-catalyst-metal-green",
+        amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
+      },--]]
     },
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/ethylene-carbonate.png", 72 },
@@ -1290,17 +1416,25 @@ data:extend({
       { type = "fluid", name = "angels-gas-benzene", amount = 50 },
       { type = "fluid", name = "angels-gas-propene", amount = 50 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 20 },
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-phenol", amount = 60 },
       { type = "fluid", name = "angels-gas-acetone", amount = 60 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-blue",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = angelsmods.functions.create_gas_recipe_icon({

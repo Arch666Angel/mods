@@ -372,12 +372,12 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
+      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1 },
       -- {type="item", name="iron-ore", amount=1},
       -- {type="item", name="copper-ore", amount=1},
     },
     results = {
-      { type = "item", name = "angels-catalyst-metal-red", amount = 10 },
+      { type = "item", name = "angels-catalyst-metal-red", amount = 1 },
     },
     icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-red.png",
     icon_size = 32,
@@ -392,12 +392,12 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
+      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_stats = 1 },
       -- {type="item", name="angels-bauxite-ore", amount=1},
       -- {type="item", name="angels-silver-ore", amount=1},
     },
     results = {
-      { type = "item", name = "angels-catalyst-metal-green", amount = 10 },
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
     },
     icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-green.png",
     icon_size = 32,
@@ -412,12 +412,12 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
+      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_stats = 1 },
       -- {type="item", name="angels-rutile-ore", amount=1},
       -- {type="item", name="angels-cobalt-ore", amount=1},
     },
     results = {
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 10 },
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 },
     },
     icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-blue.png",
     icon_size = 32,
@@ -432,12 +432,12 @@ data:extend({
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 10, ignored_by_stats = 10 },
+      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_stats = 1 },
       -- {type="item", name="angels-tungsten-ore", amount=1},
       -- {type="item", name="angels-nickel-ore", amount=1},
     },
     results = {
-      { type = "item", name = "angels-catalyst-metal-yellow", amount = 10 },
+      { type = "item", name = "angels-catalyst-metal-yellow", amount = 1 },
     },
     icon = "__angelspetrochemgraphics__/graphics/icons/catalyst-metal-yellow.png",
     icon_size = 32,

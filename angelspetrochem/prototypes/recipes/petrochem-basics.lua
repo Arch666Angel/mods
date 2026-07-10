@@ -422,7 +422,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "coal", amount = 5 },
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-red", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-red", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-liquid-naphtha", amount = 60 },
@@ -431,10 +431,18 @@ data:extend({
       { type = "item", name = "angels-solid-coke", amount = 6 }, --COKE
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-red",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = AF.create_gas_recipe_icon({

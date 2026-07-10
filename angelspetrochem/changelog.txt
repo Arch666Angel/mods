@@ -3,6 +3,8 @@ Version: 2.1.0
 Date: ???
   Changes:
     - Updated for Factorio 2.1 (1315)
+    - Changed recipes using petrochem catalysts to have a chance of returning the catalyst (1316)
+      - Increased the ore required to create catalysts to compensate
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 04.06.2026

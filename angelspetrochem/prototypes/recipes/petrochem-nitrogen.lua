@@ -86,16 +86,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 60 },
       { type = "fluid", name = "angels-gas-oxygen", amount = 40 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-nitrogen-monoxide", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-nitrogen-monoxide",
@@ -146,16 +154,24 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-hydrogen", amount = 50 },
       { type = "fluid", name = "angels-gas-nitrogen", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-red", amount = 1 }, --Fe
+      { type = "item", name = "angels-catalyst-metal-red", amount = 1, ignored_by_stats = 1 }, --Fe
     },
     results = {
       { type = "fluid", name = "angels-gas-ammonia", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-red",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-ammonia",
@@ -292,16 +308,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-urea", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 }, --Pl
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1, ignored_by_stats = 1 }, --Pl
     },
     results = {
       { type = "fluid", name = "angels-gas-melamine", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-blue",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-melamine",
@@ -349,17 +373,25 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "angels-gas-monochloramine", amount = 50 },
       { type = "fluid", name = "angels-gas-ammonia", amount = 200 },
-      { type = "item", name = "angels-catalyst-metal-blue", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-blue", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-hydrazine", amount = 100 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 100 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-blue",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-hydrazine",
@@ -472,16 +504,24 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-nitrogen-dioxide", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-yellow", amount = 1 },
+      { type = "item", name = "angels-catalyst-metal-yellow", amount = 1, ignored_by_stats = 1 },
     },
     results = {
       { type = "fluid", name = "angels-gas-dinitrogen-tetroxide", amount = 50 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-yellow",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     main_product = "angels-gas-dinitrogen-tetroxide",

@@ -13,7 +13,7 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-gas-acid", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-green", amount = 1 }, --Al
+      { type = "item", name = "angels-catalyst-metal-green", amount = 1, ignored_by_stats = 1 }, --Al
     },
     results = {
       { type = "fluid", name = "angels-gas-hydrogen-sulfide", amount = 60 },
@@ -21,10 +21,18 @@ data:extend({
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 20 },
       {
         type = "item",
-        name = "angels-catalyst-metal-carrier",
+        name = "angels-catalyst-metal-green",
         amount = 1,
         ignored_by_productivity = 1,
         ignored_by_stats = 1,
+        shared_probability = { min = 0.0, max = 0.9 },
+      },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        shared_probability = { min = 0.9, max = 1.0 },
       },
     },
     icons = AF.create_gas_recipe_icon({

@@ -9,6 +9,7 @@ Date: ???
       - Increased chance of crystals from queen butchering
       - Improved Factorian fish petting
       - Improved Wood sawing 2 and 3 recipes
+      - Changed recipes using petrochem catalysts to have a chance of returning the catalyst (1316)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 01.06.2026
