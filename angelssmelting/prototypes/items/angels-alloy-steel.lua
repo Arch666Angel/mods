@@ -33,6 +33,7 @@ data:extend({
     flow_color = { r = 187 / 255, g = 192 / 255, b = 199 / 255 },
     max_temperature = 1370,
     auto_barrel = false,
+    draw_as_glow = true,
   },
   {
     type = "item",

@@ -35,6 +35,7 @@ if mods["bobplates"] then
       flow_color = { r = 204 / 256, g = 153 / 256, b = 102 / 256 },
       max_temperature = 0,
       auto_barrel = false,
+      draw_as_glow = true,
     },
     {
       type = "item",
