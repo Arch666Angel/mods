@@ -411,6 +411,10 @@ local function generate_train_entities(ref_entity)
         copy.capacity = math.floor(ref_entity.capacity * i)
       end
 
+      if i < angelsmods.addons.mobility[train_type].tier_amount then
+        copy.next_upgrade = ref_entity.name.."-".. (i + 1)
+      end
+
       copy.additional_pastable_entities = generate_additional_pastable_entities(copy.name)
       table.insert(entities, copy)
     end

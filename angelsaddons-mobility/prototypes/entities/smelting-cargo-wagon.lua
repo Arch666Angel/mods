@@ -50,7 +50,7 @@ funcs.generate_train_entities({
   joint_distance = 4,
   energy_per_hit_point = 5,
   equipment_grid = "angels-smelting-cargo-wagon",
-  fast_replaceable_group = "angels-smelting-cargo-wagon",
+  fast_replaceable_group = "cargo-wagon",
   allow_robot_dispatch_in_automatic_mode = true,
   minimap_representation = cargo_minimap_representation,
   selected_minimap_representation = cargo_selected_minimap_representation,

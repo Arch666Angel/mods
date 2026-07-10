@@ -50,7 +50,7 @@ funcs.generate_train_entities({
   joint_distance = 4,
   energy_per_hit_point = 6,
   equipment_grid = "angels-petro-oil-wagon",
-  fast_replaceable_group = "angels-petro-oil-wagon",
+  fast_replaceable_group = "fluid-wagon",
   minimap_representation = fluid_minimap_representation,
   selected_minimap_representation = fluid_selected_minimap_representation,
   allow_manual_color = true,
