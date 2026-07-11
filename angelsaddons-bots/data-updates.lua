@@ -188,4 +188,22 @@ if mods["angelsrefining"] then
     angelsmods.functions.OV.add_prereq("angels-construction-robots-3", "angels-titanium-smelting-1")
     angelsmods.functions.OV.add_prereq("angels-construction-robots-3", "angels-stone-smelting-3")
   end
+
+  if mods["recycler"] then
+    angelsmods.functions.patch_recycling_recipes({
+      "angels-cargo-box",
+      "angels-cargo-hub",
+      "angels-cargo-roboport",
+      "angels-charging-station",
+      "angels-construction-zone-expander",
+      "angels-construction-zone-expander-2",
+      "angels-construction-zone-expander-3",
+      "angels-relay-station",
+      "angels-relay-station-2",
+      "angels-relay-station-3",
+      "angels-zone-expander",
+      "angels-zone-expander-2",
+      "angels-zone-expander-3",
+    })
+  end
 end
