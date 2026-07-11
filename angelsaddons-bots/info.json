@@ -8,6 +8,7 @@
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "Adds slow but powerful bots, new robot infrastructure buildings including chests, roboports, and zone expanders.",
   "dependencies": [
-    "base >= 2.1.0"
+    "base >= 2.1.0",
+    "(?) angelsrefining"
   ]
 }
