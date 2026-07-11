@@ -159,7 +159,7 @@ if mods["bobplates"] then
   OV.disable_technology({ "oil-processing-2", "oil-processing-3", "oil-processing-4" })
 
   --hide disabled
-  OV.hide_recipe({
+  OV.disable_recipe({
     "bob-oil-processing",
     "bob-hydrogen-sulfide",
     "bob-sulfur-dioxide",
@@ -179,6 +179,7 @@ if mods["bobplates"] then
     "carbon",
     "bob-resin-oil",
   })
+
   -- plastics -----------------------------------------------------------------
   OV.remove_unlock("plastics", "plastic-bar")
 
