@@ -44,7 +44,7 @@ if mods["bobwarfare"] then
         { type = "fluid", name = "sulfuric-acid", amount = 15 },
         { type = "fluid", name = "angels-liquid-nitric-acid", amount = 15 },
       } or nil,
-      categories = { hide_sulfuric_nitric_acid_mixture and "angels-advanced-chemistry" or nil },
+      categories = hide_sulfuric_nitric_acid_mixture and { "angels-advanced-chemistry" } or nil,
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "angels-liquid-glycerol",
         "sulfuric-acid",
