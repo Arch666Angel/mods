@@ -164,7 +164,7 @@ data:extend({
     prerequisites = {
       "flammables",
       "military-science-pack",
-      "angels-sulfur-processing-1",
+      "sulfur-processing",
     },
     effects = {
       {

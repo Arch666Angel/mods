@@ -49,7 +49,7 @@ data:extend({
       --"angels-metallurgy-5",
       "angels-ore-processing-4",
       "angels-platinum-smelting-1",
-      "angels-sulfur-processing-1",
+      "sulfur-processing",
     },
     effects = {
       {

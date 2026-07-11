@@ -184,7 +184,6 @@ OV.hide_recipe({
   "solid-fuel-from-heavy-oil",
   "light-oil-cracking",
   "heavy-oil-cracking",
-  "sulfuric-acid",
 })
 OV.remove_unlock("flammables", "solid-fuel-from-petroleum-gas")
 OV.remove_unlock("flammables", "solid-fuel-from-light-oil")

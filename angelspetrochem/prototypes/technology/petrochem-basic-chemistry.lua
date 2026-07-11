@@ -330,20 +330,14 @@ data:extend({
   },
   {
     type = "technology",
-    name = "angels-sulfur-processing-1",
-    icons = angelsmods.functions.create_gas_tech_icon("SSS"),
+    name = "angels-sulfur-processing-2",
+    icons = angelsmods.functions.create_gas_tech_icon("SSF"),
     prerequisites = {
-      "angels-water-treatment-2",
+      "sulfur-processing",
+      "angels-advanced-chemistry-1",
+      "angels-gas-processing",
     },
     effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "angels-gas-sulfur-dioxide",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-liquid-sulfuric-acid",
-      },
       {
         type = "unlock-recipe",
         recipe = "angels-gas-sulfur-dioxide-calcium-sulfate",
@@ -356,27 +350,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-gas-hydrogen-fluoride",
       },
-    },
-    unit = {
-      count = 50,
-      ingredients = {
-        { "automation-science-pack", 1 },
-        { "logistic-science-pack", 1 },
-      },
-      time = 15,
-    },
-    order = "c-a",
-  },
-  {
-    type = "technology",
-    name = "angels-sulfur-processing-2",
-    icons = angelsmods.functions.create_gas_tech_icon("SSF"),
-    prerequisites = {
-      "angels-sulfur-processing-1",
-      "angels-advanced-chemistry-1",
-      "angels-gas-processing",
-    },
-    effects = {
       {
         type = "unlock-recipe",
         recipe = "angels-gas-acid-catalyst",
@@ -490,7 +463,7 @@ data:extend({
     icons = angelsmods.functions.create_gas_tech_icon("NNN"),
     prerequisites = {
       "angels-nitrogen-processing-1",
-      "angels-sulfur-processing-1",
+      "sulfur-processing",
       "angels-advanced-chemistry-1",
       "angels-water-treatment-2",
     },
@@ -774,7 +747,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     icon_size = 128,
     prerequisites = {
-      "angels-sulfur-processing-1",
+      "sulfur-processing",
       "chemical-science-pack",
       "angels-chlorine-processing-1",
     },

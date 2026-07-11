@@ -893,7 +893,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-bio-farm-1",
-      "angels-sulfur-processing-1",
+      "sulfur-processing",
     },
     effects = {
       {

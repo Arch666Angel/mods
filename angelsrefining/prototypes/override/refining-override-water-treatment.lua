@@ -61,7 +61,7 @@ else
       "angels-sodium-nitrate-acid-processing",
     })
     angelsmods.functions.hide("angels-solid-sodium-nitrate")
-    OV.remove_prereq("angels-nitrogen-processin-2", "angels-sulfur-processing-1")
+    OV.remove_prereq("angels-nitrogen-processin-2", "sulfur-processing")
   end
   if angelsmods.bioprocessing then
     OV.disable_recipe({

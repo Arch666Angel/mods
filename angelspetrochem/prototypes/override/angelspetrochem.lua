@@ -293,17 +293,27 @@ end
 -----------------------------------------------------------------------------
 -- SULFURIC ACID ------------------------------------------------------------
 -----------------------------------------------------------------------------
+local sulfur = data.raw.technology["sulfur-processing"]
+sulfur.icon = nil
+sulfur.icons = angelsmods.functions.create_gas_tech_icon("SSS")
+sulfur.unit = {
+  count = 50,
+  ingredients = {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack", 1 },
+  },
+  time = 15,
+}
+OV.disable_recipe("sulfur")
+OV.disable_recipe("sulfuric-acid")
+
 if angelsmods.trigger.early_sulfuric_acid == true then
   -- Sulfur 1
-  OV.set_science_pack("angels-sulfur-processing-1", "logistic-science-pack", 0)
+  OV.set_science_pack("sulfur-processing", "logistic-science-pack", 0)
 
-  OV.remove_prereq("angels-sulfur-processing-1", "angels-water-treatment-2")
-  OV.add_prereq("angels-sulfur-processing-1", "angels-basic-chemistry-2")
+  OV.add_prereq("sulfur-processing", "angels-basic-chemistry-2")
 
-  OV.remove_unlock("angels-sulfur-processing-1", "angels-gas-sulfur-dioxide")
-  OV.remove_unlock("angels-sulfur-processing-1", "angels-gas-sulfur-dioxide-calcium-sulfate")
-  OV.remove_unlock("angels-sulfur-processing-1", "angels-liquid-hydrofluoric-acid")
-  OV.remove_unlock("angels-sulfur-processing-1", "angels-gas-hydrogen-fluoride")
+  OV.add_unlock("sulfur-processing", "angels-liquid-sulfuric-acid")
 
   -- Sulfur 2
   OV.remove_prereq("angels-sulfur-processing-2", "angels-advanced-chemistry-1")
@@ -311,10 +321,10 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_prereq("angels-sulfur-processing-2", "angels-water-treatment-2")
 
   OV.add_unlock("angels-sulfur-processing-2", "angels-gas-sulfur-dioxide")
-  OV.add_unlock("angels-sulfur-processing-2", "angels-gas-sulfur-dioxide-calcium-sulfate")
-  OV.add_unlock("angels-sulfur-processing-2", "angels-liquid-hydrofluoric-acid")
-  OV.add_unlock("angels-sulfur-processing-2", "angels-gas-hydrogen-fluoride")
 
+  OV.remove_unlock("angels-sulfur-processing-2", "angels-gas-sulfur-dioxide-calcium-sulfate")
+  OV.remove_unlock("angels-sulfur-processing-2", "angels-liquid-hydrofluoric-acid")
+  OV.remove_unlock("angels-sulfur-processing-2", "angels-gas-hydrogen-fluoride")
   OV.remove_unlock("angels-sulfur-processing-2", "angels-gas-acid-catalyst")
   OV.remove_unlock("angels-sulfur-processing-2", "angels-solid-sulfur")
   OV.remove_unlock("angels-sulfur-processing-2", "angels-hydrogen-fluoride-dissolving")
@@ -328,6 +338,9 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_prereq("angels-sulfur-processing-3", "angels-advanced-chemistry-1")
   OV.add_prereq("angels-sulfur-processing-3", "angels-gas-processing")
 
+  OV.add_unlock("angels-sulfur-processing-3", "angels-gas-sulfur-dioxide-calcium-sulfate")
+  OV.add_unlock("angels-sulfur-processing-3", "angels-liquid-hydrofluoric-acid")
+  OV.add_unlock("angels-sulfur-processing-3", "angels-gas-hydrogen-fluoride")
   OV.add_unlock("angels-sulfur-processing-3", "angels-gas-acid-catalyst")
   OV.add_unlock("angels-sulfur-processing-3", "angels-solid-sulfur")
   OV.add_unlock("angels-sulfur-processing-3", "angels-hydrogen-fluoride-dissolving")
@@ -349,6 +362,11 @@ if angelsmods.trigger.early_sulfuric_acid == true then
   OV.add_prereq("angels-slag-processing-1", "logistic-science-pack")
   OV.add_prereq("angels-bio-fermentation", "logistic-science-pack")
 else
+  -- Sulfur 1
+  OV.add_unlock("sulfur-processing", "angels-gas-sulfur-dioxide")
+  OV.add_unlock("sulfur-processing", "angels-liquid-sulfuric-acid")
+  OV.add_prereq("sulfur-processing", "angels-water-treatment-2")
+
   -- Hide sulfur 4
   OV.disable_technology("angels-sulfur-processing-4")
 end

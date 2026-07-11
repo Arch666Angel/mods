@@ -37,5 +37,7 @@ if angelsmods.trigger.refinery_products["rubyte"] then
   OV.add_prereq("angels-ore-leaching", "angels-nitrogen-processing-2")
 end
 if angelsmods.trigger.early_sulfuric_acid then
+  OV.add_prereq("angels-ore-leaching", "angels-sulfur-processing-3")
+else
   OV.add_prereq("angels-ore-leaching", "angels-sulfur-processing-2")
 end

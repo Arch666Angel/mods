@@ -29,10 +29,6 @@ OV.disable_recipe({ "coal-liquefaction" })
 -- plastic
 OV.disable_recipe({ "plastic-bar" })
 
--- sulfur
-OV.global_replace_technology("sulfur-processing", "angels-sulfur-processing-1")
-OV.disable_recipe("sulfur")
-
 -- Balance/fix rocket fuel
 OV.add_prereq("rocket-fuel", "angels-nitrogen-processing-4")
 OV.add_unlock("rocket-fuel", "angels-rocket-oxidizer-capsule")
