@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ???
+Date: 12.07.2026
   Changes:
     - Updated for Factorio 2.1 (1315)
     - Changed recipes using petrochem catalysts to have a chance of returning the catalyst (1316)

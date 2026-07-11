@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ???
+Date: 12.07.2026
   Changes:
     - Updated for Factorio 2.1 (1315)
       - Removed T2 seeds from garden loot and T1 Garden processing
