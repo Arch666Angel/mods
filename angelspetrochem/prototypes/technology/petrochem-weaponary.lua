@@ -60,9 +60,9 @@ data:extend({
   },
   {
     type = "technology",
-    name = "angels-explosives-1",
-    icon = "__angelspetrochemgraphics__/graphics/technology/tnt-tech.png",
-    icon_size = 128,
+    name = "angels-explosives-2",
+    icon = "__base__/graphics/technology/explosives.png",
+    icon_size = 256,
     prerequisites = {
       "explosives",
       "angels-nitrogen-processing-2",
@@ -92,11 +92,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "angels-explosives-2",
-    icon = "__angelspetrochemgraphics__/graphics/technology/tnt-tech.png",
-    icon_size = 128,
+    name = "angels-explosives-3",
+    icon = "__base__/graphics/technology/explosives.png",
+    icon_size = 256,
     prerequisites = {
-      "angels-explosives-1",
+      "angels-explosives-2",
       "angels-advanced-chemistry-3",
     },
     effects = {

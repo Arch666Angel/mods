@@ -54,7 +54,7 @@ if mods["bobwarfare"] then
   })
 
   OV.remove_unlock("bob-nitroglycerin-processing", "bob-glycerol")
-  OV.add_prereq("bob-nitroglycerin-processing", "angels-explosives-1")
+  OV.add_prereq("bob-nitroglycerin-processing", "angels-explosives-2")
 
   -----------------------------------------------------------------------------
   -- GLYCEROL -----------------------------------------------------------------

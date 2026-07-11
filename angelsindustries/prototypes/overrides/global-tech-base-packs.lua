@@ -182,7 +182,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-plastic-1", "green", "orange")
   --AI.pack_replace("angels-resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   --AI.pack_replace("angels-rocket-booster-1", "green", "orange")
-  AI.pack_replace("rocket-explosives-1", "green", "orange")
+  AI.pack_replace("rocket-explosives-2", "green", "orange")
   --INDUSTRIES
   AI.pack_replace("tech-blue-circuit", "blue", "orange")
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")
