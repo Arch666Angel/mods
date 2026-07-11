@@ -118,6 +118,7 @@ data:extend({
       emissions_per_minute = { pollution = -35 },
     },
     energy_usage = "150kW",
+    tall = true,
     circuit_connector = circuit_connector_definitions["angels-bio-refugium-fish"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
@@ -221,6 +222,7 @@ data:extend({
       emissions_per_minute = { pollution = -30 },
     },
     energy_usage = "150kW",
+    tall = true,
     circuit_connector = circuit_connector_definitions["angels-bio-refugium-puffer"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {

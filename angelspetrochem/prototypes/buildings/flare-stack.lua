@@ -30,6 +30,7 @@ data:extend({
     source_inventory_size = 0,
     crafting_speed = 2,
     show_recipe_icon = false,
+    tall = true,
     resistances = {
       {
         type = "fire",
