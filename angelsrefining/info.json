@@ -1,12 +1,12 @@
 {
   "name": "angelsrefining",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "factorio_version": "2.1",
   "title": "Angel's Refining",
   "author": "Arch666Angel",
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
-  "description": "Adds ore refining to the game. Compound ores have to be refined before you are able to smelt and cast them into plates. Works best (has more functionality) in conjunction with Angel's industries and/or Bob's mods and supports additional mods like Yuoki Industries.",
+  "description": "Adds ore refining to the game. Compound ores have to be refined before you are able to smelt and cast them into plates. Works best (has more functionality) in conjunction with Angel's Smelting and/or Bob's mods.",
   "dependencies": [
     "base >= 2.1.0",
     "~ angelsrefininggraphics >= 2.1.0",
