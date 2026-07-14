@@ -117,24 +117,28 @@ local unit_test_007 = function()
   end
 
   -- Populate fluid_recipes_to_ignore with voiding and barreling recipes
-  local recipe_filters = {}
-  table.insert(recipe_filters, {
-    filter = "category",
-    invert = false,
-    mode = "or",
-    category = "angels-chemical-void",
-  })
-  table.insert(recipe_filters, {
-    filter = "category",
-    invert = false,
-    mode = "or",
-    category = "angels-water-void",
-  })
+  if script.active_mods["angelsrefining"] then
+    local recipe_filters = {}
+    if script.active_mods["angelspetrochem"] then
+      table.insert(recipe_filters, {
+        filter = "category",
+        invert = false,
+        mode = "or",
+        category = "angels-chemical-void",
+      })
+    end
+    table.insert(recipe_filters, {
+      filter = "category",
+      invert = false,
+      mode = "or",
+      category = "angels-water-void",
+    })
 
-  local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
+    local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
 
-  for recipe_name, recipe in pairs(recipe_prototypes) do
-    fluid_recipes_to_ignore[recipe_name] = true
+    for recipe_name, recipe in pairs(recipe_prototypes) do
+      fluid_recipes_to_ignore[recipe_name] = true
+    end
   end
 
   -- Check items that do not have a purpose specified in their ItemPrototype (such as being placeable as a tile or being fuel)
