@@ -1689,6 +1689,7 @@ end
 function angelsmods.functions.make_void(fluid_name, void_category, void_amount) -- categories: chemical (fluid, flare-stack)
   --LOCAL DEFINITIONS                                                           --             water (fluild, clarifier)
   local recipe = {} --             bio (item, compost)
+  local void_icons
   local void_input_amount -- amount(optional): amount of input/output, default 1
   local void_input_type
   local void_input_subgroup
@@ -1705,7 +1706,24 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 5
-      void_output_item = "angels-water-void"
+      void_icons = {
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-recipe-mid.png",
+          icon_size = 750,
+          scale = 32 / 750,
+        },
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
+          icon_size = 64,
+          scale = 0.7 * 0.5,
+        },
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 0.4,
+          shift = { 9.6, 9.6 },
+        },
+      }
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name--[[,"water"]])
@@ -1715,7 +1733,18 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "fluid"
       void_input_subgroup = data.raw.fluid[fluid_name].subgroup or "angels-void"
       void_process_time = 1
-      void_output_item = "angels-chemical-void"
+      void_icons = {
+        {
+          icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
+          icon_size = 64,
+        },
+        {
+          icon = "__angelsrefininggraphics__/graphics/icons/void.png",
+          icon_size = 32,
+          scale = 0.4,
+          shift = { 9.6, 9.6 },
+        },
+      }
       void_output_amount = void_amount < 1 and void_amount or 1
       void_output_probability = 0
       void_tint = angelsmods.functions.get_fluid_recipe_tint(fluid_name)
@@ -1729,6 +1758,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       void_input_type = "item"
       void_input_subgroup = data.raw.item[fluid_name].subgroup or "angels-void"
       void_process_time = 1
+      void_icons = util.table.deepcopy(get_icons("angels-solid-compost"))
       void_output_item = "angels-solid-compost"
       void_output_amount = void_amount < 1 and 1 / void_amount or 1
       void_output_probability = 1
@@ -1756,15 +1786,17 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
         amount = void_input_amount,
       },
     }
-    recipe.results = {
-      {
-        type = "item",
-        name = void_output_item,
-        amount = void_output_amount,
-        independent_probability = void_output_probability ~= 1 and void_output_probability or nil,
-      },
-    }
-    recipe.main_product = void_output_item
+    if void_output_item then
+      recipe.results = {
+        {
+          type = "item",
+          name = void_output_item,
+          amount = void_output_amount,
+          independent_probability = void_output_probability ~= 1 and void_output_probability or nil,
+        },
+      }
+      recipe.main_product = void_output_item
+    end
     recipe.always_show_made_in = true
     recipe.allow_decomposition = false
     recipe.allow_as_intermediate = false
@@ -1781,9 +1813,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     --recipe.order = recipe.order .. "[" .. fluid_name .. "]"
     recipe.order = string.len(recipe.order) <= 200 and recipe.order or recipe.order:sub(1, 200) -- order limited to 200 characters
 
-    recipe.icons = util.table.deepcopy(
-      get_icons(void_output_item) or { { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 } }
-    )
+    recipe.icons = void_icons or { { icon = "__angelsrefininggraphics__/graphics/icons/void.png", icon_size = 32 } }
     local fluid_icon = util.table.deepcopy(get_icons(fluid_name) or {})
     for _, iconLayer in pairs(fluid_icon) do
       table.insert(recipe.icons, {

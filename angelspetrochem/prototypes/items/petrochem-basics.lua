@@ -218,25 +218,4 @@ data:extend({
     flow_color = angelsmods.functions.flow_color("Hd"), --{r = 196 / 255, g = 196 / 255, b = 156 / 255},
     max_temperature = 0,
   },
-  --VOID
-  {
-    type = "item",
-    name = "angels-chemical-void",
-    icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/flare-stack.png",
-        icon_size = 64,
-      },
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
-        icon_size = 32,
-        scale = 0.4,
-        shift = { 9.6, 9.6 },
-      },
-    },
-    hidden = true,
-    subgroup = "angels-void",
-    order = "zzz[chemical-void]",
-    stack_size = 200,
-  },
 })

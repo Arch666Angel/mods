@@ -7,8 +7,6 @@ local recipes_to_ignore = {
   ["rocket-part"] = true, -- base game. Recipe is hidden from player crafting but item is hidden
 }
 local products_to_ignore = {
-  ["angels-chemical-void"] = true,
-  ["angels-water-void"] = true,
   ["void"] = true, -- Bob's void
 }
 

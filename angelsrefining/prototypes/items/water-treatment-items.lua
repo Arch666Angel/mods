@@ -283,31 +283,4 @@ data:extend({
     flow_color = mud_blending(0.2, 0.9), --{r = 0.7, g = 0.7, b = 0.6},
     max_temperature = 0,
   },
-  --VOID
-  {
-    type = "item",
-    name = "angels-water-void",
-    icons = {
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/angels-gas/gas-recipe-mid.png",
-        icon_size = 750,
-        scale = 32 / 750,
-      },
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/clarifier.png",
-        icon_size = 64,
-        scale = 0.7 * 0.5,
-      },
-      {
-        icon = "__angelsrefininggraphics__/graphics/icons/void.png",
-        icon_size = 32,
-        scale = 0.4,
-        shift = { 9.6, 9.6 },
-      },
-    },
-    hidden = true,
-    subgroup = "angels-void",
-    order = "zzz[water-void]",
-    stack_size = 200,
-  },
 })

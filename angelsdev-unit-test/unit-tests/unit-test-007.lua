@@ -119,16 +119,16 @@ local unit_test_007 = function()
   -- Populate fluid_recipes_to_ignore with voiding and barreling recipes
   local recipe_filters = {}
   table.insert(recipe_filters, {
-    filter = "has-product-item",
+    filter = "category",
     invert = false,
     mode = "or",
-    elem_filters = { { filter = "name", name = "angels-chemical-void" } },
+    category = "angels-chemical-void",
   })
   table.insert(recipe_filters, {
-    filter = "has-product-item",
+    filter = "category",
     invert = false,
     mode = "or",
-    elem_filters = { { filter = "name", name = "angels-water-void" } },
+    category = "angels-water-void",
   })
 
   local recipe_prototypes = prototypes.get_recipe_filtered(recipe_filters)
