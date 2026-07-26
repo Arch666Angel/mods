@@ -138,6 +138,14 @@ local function calculate_science_pack_level()
     science_pack_level["sct-bio-science-pack"] = science_pack_level["angels-token-bio"]
   end
 
+  if script.active_mods["omnimatter_energy"] then
+    science_pack_level["energy-science-pack"] = 1
+  end
+
+  if script.active_mods["omnimatter_science"] then
+    science_pack_level["omni-pack"] = 250
+  end
+
   if script.active_mods["SpaceMod"] then
     technologies_to_ignore["space-assembly"] = true
     technologies_to_ignore["protection-fields"] = true
