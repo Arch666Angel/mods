@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -f "`which 7za 2>&1`" ]; then
+	archive_command="7za -bso0 -mx1 a"
+else
+	archive_command="zip -q -r"
+fi
+
 function process() {
   dirname="$(cd "$(dirname "$1")"; pwd -P)/$(basename "$1")"
   ignores="build.sh modportal/ .DS_Store README.md .git/ .gitignore"
@@ -23,7 +29,8 @@ function process() {
   fi
   $(eval $cmd)
   cd "${dirname}/../"
-  zip -q -r "${release}.zip" "${release}/"
+  rm -f "${release}.zip"
+  $archive_command "${release}.zip" "${release}"
   rm -rf "${release}/"
   echo "Released ${release}"
 }
