@@ -416,6 +416,16 @@ local function generate_train_entities(ref_entity)
       end
 
       copy.additional_pastable_entities = generate_additional_pastable_entities(copy.name)
+
+      if mods["quality"] then
+        copy.quality_affects_max_speed = true
+        if ref_entity.type == "cargo-wagon" then
+          copy.quality_affects_inventory_size = true
+        elseif ref_entity.type == "fluid-wagon" then
+          copy.quality_affects_capacity = true
+        end
+      end
+
       table.insert(entities, copy)
     end
   else
