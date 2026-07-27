@@ -3,6 +3,7 @@ Version: 2.1.2
 Date: ???
   Bugfixes:
     - Fixed entity flipping (1323)
+    - Fixed Flare stack flipped graphics (1322)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 14.07.2026
