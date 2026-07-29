@@ -15,7 +15,7 @@ if angelsmods.industries.components then
       },
     },
     {
-      name = "cargo-robot",
+      name = "angels-cargo-robot",
       ingredients = {
         { "!!" },
         { type = "item", name = "motor-2", amount = 1 },
@@ -25,10 +25,10 @@ if angelsmods.industries.components then
       },
     },
     {
-      name = "cargo-robot-2",
+      name = "angels-cargo-robot-2",
       ingredients = {
         { "!!" },
-        { type = "item", name = "cargo-robot", amount = 1 },
+        { type = "item", name = "angels-cargo-robot", amount = 1 },
         { type = "item", name = "motor-3", amount = 1 },
         { type = "item", name = "circuit-orange-loaded", amount = 2 },
         { type = "item", name = "cable-harness-3", amount = 2 },
@@ -59,7 +59,7 @@ if angelsmods.industries.components then
       ingredients = {
         { "!!" },
         { type = "item", name = "flying-robot-frame", amount = 1 },
-        { type = "item", name = "cargo-robot-2", amount = 1 },
+        { type = "item", name = "angels-cargo-robot-2", amount = 1 },
       },
     },
     -- roboports
@@ -193,25 +193,25 @@ if angelsmods.industries.components then
   OV.remove_prereq("angels-construction-robots", "engine")
   OV.remove_science_pack("angels-construction-robots", "logistic-science-pack")
 
-  OV.add_prereq("cargo-robots", "tech-green-circuit")
-  --OV.add_prereq("cargo-robots", "angels-components-cabling-2")
-  OV.add_prereq("cargo-robots", "angels-components-mechanical-2")
+  OV.add_prereq("angels-cargo-robots", "tech-green-circuit")
+  --OV.add_prereq("angels-cargo-robots", "angels-components-cabling-2")
+  OV.add_prereq("angels-cargo-robots", "angels-components-mechanical-2")
 
-  OV.add_prereq("cargo-robots-2", "tech-orange-circuit")
-  OV.remove_prereq("cargo-robots-2", "advanced-circuit")
-  OV.remove_unlock("cargo-robots-3", "cargo-robot-2")
-  OV.add_unlock("cargo-robots-2", "cargo-robot-2")
-  OV.add_prereq("cargo-robots-2", "angels-components-mechanical-3")
+  OV.add_prereq("angels-cargo-robots-2", "tech-orange-circuit")
+  OV.remove_prereq("angels-cargo-robots-2", "advanced-circuit")
+  OV.remove_unlock("angels-cargo-robots-3", "angels-cargo-robot-2")
+  OV.add_unlock("angels-cargo-robots-2", "angels-cargo-robot-2")
+  OV.add_prereq("angels-cargo-robots-2", "angels-components-mechanical-3")
 
   OV.add_prereq("angels-construction-robots-2", "tech-orange-circuit")
 
-  OV.add_prereq("cargo-robots-3", "tech-blue-circuit")
-  --OV.add_prereq("cargo-robots-3", "angels-components-cabling-3")
-  OV.remove_prereq("cargo-robots-3", "electric-engine")
-  --OV.remove_science_pack("cargo-robots-3", "chemical-science-pack")
+  OV.add_prereq("angels-cargo-robots-3", "tech-blue-circuit")
+  --OV.add_prereq("angels-cargo-robots-3", "angels-components-cabling-3")
+  OV.remove_prereq("angels-cargo-robots-3", "electric-engine")
+  --OV.remove_science_pack("angels-cargo-robots-3", "chemical-science-pack")
 
   OV.add_prereq("angels-construction-robots-3", "tech-blue-circuit")
 
-  OV.add_prereq("logistic-robotics", "cargo-robots-2")
+  OV.add_prereq("logistic-robotics", "angels-cargo-robots-2")
   OV.add_prereq("construction-robotics", "angels-construction-robots")
 end

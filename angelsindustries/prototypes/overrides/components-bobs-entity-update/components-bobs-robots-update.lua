@@ -52,14 +52,14 @@ if angelsmods.industries.components then
         name = "construction-robot",
         ingredients = {
           { type = "item", name = "bob-robot-brain", amount = 1 },
-          { type = "item", name = "bob-robot-tool", amount = 1 },
+          { type = "item", name = "bob-robot-tool-construction", amount = 1 },
         },
       },
       {
         name = "logistic-robot",
         ingredients = {
           { type = "item", name = "bob-robot-brain", amount = 1 },
-          { type = "item", name = "bob-robot-tool", amount = 1 },
+          { type = "item", name = "bob-robot-tool-logistic", amount = 1 },
         },
       },
     })

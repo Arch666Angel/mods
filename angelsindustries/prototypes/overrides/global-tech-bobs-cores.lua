@@ -149,7 +149,7 @@ if angelsmods.industries.tech then
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
-    AI.core_replace("bob-repair-pack-4", "basic", "enhance")
+    AI.core_replace("bob-repair-pack-4", "processing", "enhance")
     AI.core_replace("bob-repair-pack-5", "processing", "enhance")
   end
 
@@ -284,6 +284,8 @@ if angelsmods.industries.tech then
       )
     end
   end
+
+	OV.remove_science_pack("military", "datacore-war-1")
 
   OV.execute()
 end
