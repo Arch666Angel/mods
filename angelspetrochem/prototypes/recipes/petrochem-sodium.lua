@@ -11,7 +11,7 @@ data:extend({
     auto_recycle = false,
     hide_from_signal_gui = true,
     ingredients = {
-      { type = "item", name = "angels-solid-salt", amount = 10 },
+      { type = "item", name = "angels-solid-salt", amount = 25 }, --was 10
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
     },
     results = {
@@ -41,12 +41,13 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
+      { type = "fluid", name = "angels-water-purified", amount = 50} -- was 0
     },
     results = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
-      { type = "fluid", name = "steam", amount = 50 },
-      --{type = "fluid", name = "angels-gas-oxygen", amount = 50} --excluded for complexity reasons
+      { type = "fluid", name = "steam", amount = 50 }, --was pure water
+      --{type = "fluid", name = "angels-gas-oxygen", amount = 50} --excluded for complexity
     },
     main_product = "angels-solid-sodium",
     icons = angelsmods.functions.create_solid_recipe_icon({ "angels-solid-sodium-hydroxide" }, "angels-solid-sodium"),
@@ -96,7 +97,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-solid-sodium-carbonate", amount = 5 },
+      { type = "item", name = "angels-solid-sodium-carbonate", amount = 10 }, --was 5
     },
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
@@ -124,8 +125,8 @@ data:extend({
       { type = "item", name = "angels-catalyst-metal-green", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-solid-sodium-cyanide", amount = 5 },
-      { type = "fluid", name = "angels-gas-hydrogen", amount = 30 },
+      { type = "item", name = "angels-solid-sodium-cyanide", amount = 6 }, --was 5
+      { type = "fluid", name = "angels-gas-hydrogen", amount = 40 }, --was 30
       {
         type = "item",
         name = "angels-catalyst-metal-carrier",
@@ -161,7 +162,7 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 10 }, --was5
     },
     main_product = "angels-solid-sodium-hydroxide",
     icons = angelsmods.functions.create_solid_recipe_icon({ "angels-solid-sodium" }, "angels-solid-sodium-hydroxide"),
@@ -183,11 +184,11 @@ data:extend({
     enabled = false,
     hide_from_signal_gui = true,
     ingredients = {
-      { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
+      { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 70 }, --was 50
     },
     results = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
-      { type = "fluid", name = "angels-water-purified", amount = 50 },
+      { type = "fluid", name = "angels-water-purified", amount = 20 }, --was 50
     },
     main_product = "angels-solid-sodium-hydroxide",
     icons = angelsmods.functions.create_solid_recipe_icon(
@@ -212,8 +213,8 @@ data:extend({
       { type = "fluid", name = "sulfuric-acid", amount = 80 },
     },
     results = {
-      { type = "item", name = "angels-solid-sodium-sulfate", amount = 2 },
-      { type = "fluid", name = "angels-water-purified", amount = 60 },
+      { type = "item", name = "angels-solid-sodium-sulfate", amount = 5 }, --was 2
+      { type = "fluid", name = "angels-water-purified", amount = 70 }, -- was 60
     },
     main_product = "angels-solid-sodium-sulfate",
     icon_size = 32,
@@ -242,9 +243,9 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
+      { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 75 }, --was 50
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
-      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
+      { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 25 }, --was 50
     },
     main_product = "angels-liquid-aqueous-sodium-hydroxide",
     always_show_products = true,
