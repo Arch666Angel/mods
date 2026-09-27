@@ -107,7 +107,7 @@ data:extend({
     name = "angels-nuclear-fuel",
     icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-fuel.png",
     icon_size = 64,
-    fuel_category = "chemical",
+    fuel_categories = { "chemical" },
     fuel_value = "1.4641GJ", --1.21*1.21
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 1.15,
@@ -120,7 +120,7 @@ data:extend({
     name = "angels-nuclear-fuel-2",
     icon = "__angelspetrochemgraphics__/graphics/icons/thorium-fuel.png",
     icon_size = 64,
-    fuel_category = "chemical",
+    fuel_categories = { "chemical" },
     fuel_value = "2.1962GJ", --1.21*(1.21*1.5)
     fuel_acceleration_multiplier = 2.5,
     fuel_top_speed_multiplier = 1.15,
@@ -145,7 +145,7 @@ data:extend({
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "a[uranium]-a",
-    fuel_category = "nuclear",
+    fuel_categories = { "nuclear" },
     burnt_result = "depleted-uranium-fuel-cell",
     fuel_value = "1.5GJ",
     fuel_glow_color = util.color("6aff00"), -- Green with hint of yellow
@@ -161,7 +161,7 @@ data:extend({
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "b[AMOX]-a",
-    fuel_category = "nuclear",
+    fuel_categories = { "nuclear" },
     burnt_result = "angels-depleted-mixed-oxide-cell",
     fuel_value = "8GJ",
     fuel_glow_color = util.color("ff9500"), -- Orange, slightly yellow
@@ -184,7 +184,7 @@ data:extend({
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "c[thorium]-a",
-    fuel_category = "nuclear",
+    fuel_categories = { "nuclear" },
     burnt_result = "angels-depleted-thorium-fuel-cell",
     fuel_value = "15GJ", --down from 50
     fuel_glow_color = util.color("ff190d"), -- Red, slightly towards orange
@@ -207,7 +207,7 @@ data:extend({
     icon_size = 64,
     subgroup = "angels-power-nuclear-fuel-cell",
     order = "d[deuterium]-a",
-    fuel_category = "nuclear",
+    fuel_categories = { "nuclear" },
     burnt_result = "angels-depleted-deuterium-fuel-cell",
     fuel_value = "80GJ",
     fuel_glow_color = util.color("00d5ff"), -- cyan per Lovely_Santa
