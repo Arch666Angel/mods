@@ -10,6 +10,6 @@
   "dependencies": [
     "angelsrefining >= 2.1.0",
     "angelspetrochem >= 2.1.0",
-    "~ angelssmeltinggraphics >= 2.1.0"
+    "~ angelssmeltinggraphics >= 2.1.1"
   ]
 }
