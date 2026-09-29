@@ -20,7 +20,7 @@ if mods["bobrevamp"] then
   -----------------------------------------------------------------------------
   -- REGULAR MODE -------------------------------------------------------------
   -----------------------------------------------------------------------------
-  OV.disable_recipe("bob-petroleum-gas-sweetening")
+  OV.disable_recipe({ "bob-petroleum-gas-sweetening", "bob-solid-fuel-from-sour-gas" })
 
   angelsmods.functions.hide("bob-sour-gas")
 
