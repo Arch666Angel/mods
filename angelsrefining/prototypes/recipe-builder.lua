@@ -29,8 +29,6 @@ RB.set_fallback = function(i_type, i_name, fb_list, i_condition) -- i_type eithe
   if parent then
     if parent[i_name] ~= nil then
       -- fallback already exists
-    elseif check_raw_for(i_type, i_name) and (not i_condition or i_condition(i_type, i_name)) then
-      parent[i_name] = nil
     else
       local sentinel = true
       for _, fb in pairs(fb_list) do
