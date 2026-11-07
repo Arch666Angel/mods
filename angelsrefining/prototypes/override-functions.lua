@@ -414,24 +414,26 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
   end
 end
 
-ov_functions.add_recipe_category = function(recipe_name, category)
+ov_functions.add_recipe_category = function(recipe, category)
   if type(recipe) == "table" then
     for _, rec in pairs(recipe) do
-      ov_functions.add_recipe_category(rec, category)
+      if type(rec) == "string" then
+        ov_functions.add_recipe_category(rec, category)
+      end
     end
   elseif data.raw["recipe-category"][category] then
-    local recipe = data.raw.recipe[recipe_name]
-    if recipe then
-      recipe.categories = recipe.categories or { "crafting" }
+    local prototype = data.raw.recipe[recipe]
+    if prototype then
+      prototype.categories = prototype.categories or { "crafting" }
       local found = false
-      for _, category_name in pairs(recipe.categories) do
+      for _, category_name in pairs(prototype.categories) do
         if category_name == category then
           found = true
           break
         end
       end
       if not found then
-        table.insert(recipe.categories, category)
+        table.insert(prototype.categories, category)
       end
     end
   end
@@ -440,13 +442,18 @@ end
 ov_functions.remove_recipe_category = function(recipe, category)
   if type(recipe) == "table" then
     for _, rec in pairs(recipe) do
-      remove_recipe_category(rec, category)
+      if type(rec) == "string" then
+        remove_recipe_category(rec, category)
+      end
     end
   else
-    recipe.categories = recipe.categories or { "crafting" }
-    for ek = #tech.effects, 1, -1 do
-      if recipe.categories[ek] == category then
-        table.remove(recipe.categories, ek)
+    local prototype = data.raw.recipe[recipe]
+    if prototype then
+      prototype.categories = prototype.categories or { "crafting" }
+      for ek = #tech.effects, 1, -1 do
+        if prototype.categories[ek] == category then
+          table.remove(prototype.categories, ek)
+        end
       end
     end
   end
