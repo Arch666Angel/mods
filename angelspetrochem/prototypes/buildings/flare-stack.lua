@@ -1,3 +1,59 @@
+-- Connector sits on the front of the base, on the side away from the pipe
+circuit_connector_definitions["angels-flare-stack"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 18,
+      main_offset = util.by_pixel(-16, 14),
+      shadow_offset = util.by_pixel(-15.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(16, 14),
+      shadow_offset = util.by_pixel(16.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(-16, 14),
+      shadow_offset = util.by_pixel(-15.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(-16, 14),
+      shadow_offset = util.by_pixel(-15.5, 19),
+      show_shadow = true,
+    },
+  })
+circuit_connector_definitions["angels-flare-stack-flipped"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 18,
+      main_offset = util.by_pixel(16, 14),
+      shadow_offset = util.by_pixel(16.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(16, 14),
+      shadow_offset = util.by_pixel(16.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(16, 14),
+      shadow_offset = util.by_pixel(16.5, 19),
+      show_shadow = true,
+    },
+    {
+      variation = 18,
+      main_offset = util.by_pixel(-16, 14),
+      shadow_offset = util.by_pixel(-15.5, 19),
+      show_shadow = true,
+    },
+  })
+
 data:extend({
   {
     type = "item",
@@ -58,6 +114,9 @@ data:extend({
       emissions_per_minute = { pollution = 15 },
     },
     energy_usage = "30kW",
+    circuit_connector = circuit_connector_definitions["angels-flare-stack"],
+    circuit_connector_flipped = circuit_connector_definitions["angels-flare-stack-flipped"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
